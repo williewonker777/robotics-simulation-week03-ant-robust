@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# Raw working output is staged into artifacts/ after validation.
+logs/
+outputs/
+
+# Generated office lock files and local scratch.
+~$*.pptx
+tmp/

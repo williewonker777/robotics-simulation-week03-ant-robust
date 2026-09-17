@@ -1,0 +1,33 @@
+course_stack:
+  python: "3.11.16"
+  isaac_sim: "5.1.0"
+  isaac_lab: "2.3.0"
+  torch: "2.7.0+cu128"
+  rsl_rl: "3.0.1"
+
+fair_budget:
+  num_envs: 4096
+  num_steps_per_env: 32
+  max_iterations: 1000
+  seeds: [42, 43, 44]
+
+training_variants:
+  baseline:
+    task: Week03-Ant-Baseline-v0
+    change: none
+  friction:
+    task: Week03-Ant-Friction-v0
+    change: randomized contact friction
+  robust:
+    task: Week03-Ant-Robust-v0
+    change: friction, torso mass/COM, reset state, sensor noise, interval pushes
+
+evaluation:
+  num_envs: 100
+  seed: 24
+  max_steps: 960
+  tasks:
+    id: Week03-Ant-Baseline-v0
+    low_friction: Week03-Ant-Test-LowFriction-v0
+    heavy: Week03-Ant-Test-Heavy-v0
+    push: Week03-Ant-Test-Push-v0
