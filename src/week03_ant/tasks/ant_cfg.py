@@ -11,8 +11,12 @@ from isaaclab.managers import EventTermCfg as EventTerm
 from isaaclab.managers import TerminationTermCfg as DoneTerm
 from isaaclab.managers import SceneEntityCfg
 from isaaclab.terrains import (
+    HfDiscreteObstaclesTerrainCfg,
     HfPyramidSlopedTerrainCfg,
+    HfPyramidStairsTerrainCfg,
     HfRandomUniformTerrainCfg,
+    HfSteppingStonesTerrainCfg,
+    HfWaveTerrainCfg,
     MeshPlaneTerrainCfg,
     MeshPyramidStairsTerrainCfg,
     TerrainGeneratorCfg,
@@ -80,6 +84,77 @@ MILD_TERRAIN_GENERATOR_CFG = MULTI_TERRAIN_GENERATOR_CFG.replace(
     difficulty_range=(0.0, 0.45),
 )
 
+# A deliberately broader distribution for the second robustness pass.  In addition to the
+# original flat/rough/slope/stairs set, this includes undulating ground, discrete blocks, and
+# stepping stones with shallow gaps.  The ranges stay within a scale the Ant can physically
+# negotiate while exposing different contact patterns during the same rollout.
+COMPLEX_TERRAIN_GENERATOR_CFG = TerrainGeneratorCfg(
+    seed=45,
+    curriculum=True,
+    size=(8.0, 8.0),
+    border_width=8.0,
+    num_rows=8,
+    num_cols=7,
+    horizontal_scale=0.1,
+    vertical_scale=0.005,
+    slope_threshold=0.75,
+    difficulty_range=(0.0, 1.0),
+    color_scheme="height",
+    use_cache=True,
+    sub_terrains={
+        "flat": MeshPlaneTerrainCfg(proportion=1.0 / 7.0),
+        "rough": HfRandomUniformTerrainCfg(
+            proportion=1.0 / 7.0,
+            noise_range=(0.01, 0.09),
+            noise_step=0.01,
+            downsampled_scale=0.2,
+            border_width=0.25,
+        ),
+        "slope": HfPyramidSlopedTerrainCfg(
+            proportion=1.0 / 7.0,
+            slope_range=(0.05, 0.28),
+            platform_width=1.2,
+            border_width=0.25,
+        ),
+        "stairs": HfPyramidStairsTerrainCfg(
+            proportion=1.0 / 7.0,
+            step_height_range=(0.025, 0.08),
+            step_width=0.5,
+            platform_width=1.2,
+            border_width=0.25,
+        ),
+        "waves": HfWaveTerrainCfg(
+            proportion=1.0 / 7.0,
+            amplitude_range=(0.025, 0.10),
+            num_waves=4,
+            border_width=0.25,
+        ),
+        "obstacles": HfDiscreteObstaclesTerrainCfg(
+            proportion=1.0 / 7.0,
+            obstacle_height_mode="choice",
+            obstacle_width_range=(0.35, 0.75),
+            obstacle_height_range=(0.06, 0.20),
+            num_obstacles=18,
+            platform_width=1.5,
+            border_width=0.25,
+        ),
+        "stepping_stones": HfSteppingStonesTerrainCfg(
+            proportion=1.0 / 7.0,
+            stone_height_max=0.12,
+            stone_width_range=(0.55, 0.90),
+            stone_distance_range=(0.15, 0.35),
+            holes_depth=-0.20,
+            platform_width=1.5,
+            border_width=0.25,
+        ),
+    },
+)
+
+COMPLEX_MILD_TERRAIN_GENERATOR_CFG = COMPLEX_TERRAIN_GENERATOR_CFG.replace(
+    seed=46,
+    difficulty_range=(0.0, 0.35),
+)
+
 MULTI_TERRAIN_IMPORTER_CFG = TerrainImporterCfg(
     prim_path="/World/ground",
     terrain_type="generator",
@@ -99,6 +174,14 @@ MULTI_TERRAIN_IMPORTER_CFG = TerrainImporterCfg(
 
 MILD_TERRAIN_IMPORTER_CFG = MULTI_TERRAIN_IMPORTER_CFG.replace(
     terrain_generator=MILD_TERRAIN_GENERATOR_CFG,
+)
+
+COMPLEX_TERRAIN_IMPORTER_CFG = MULTI_TERRAIN_IMPORTER_CFG.replace(
+    terrain_generator=COMPLEX_TERRAIN_GENERATOR_CFG,
+)
+
+COMPLEX_MILD_TERRAIN_IMPORTER_CFG = COMPLEX_TERRAIN_IMPORTER_CFG.replace(
+    terrain_generator=COMPLEX_MILD_TERRAIN_GENERATOR_CFG,
 )
 
 
@@ -142,6 +225,20 @@ class MildTerrainSceneCfg(MultiTerrainSceneCfg):
     """Training distribution concentrated on the moderate demo range."""
 
     terrain = MILD_TERRAIN_IMPORTER_CFG
+
+
+@configclass
+class ComplexTerrainSceneCfg(MySceneCfg):
+    """Seven-family terrain distribution used by the complex v2 task."""
+
+    terrain = COMPLEX_TERRAIN_IMPORTER_CFG
+
+
+@configclass
+class ComplexMildTerrainSceneCfg(ComplexTerrainSceneCfg):
+    """Lower-difficulty warm-up distribution for the complex terrain curriculum."""
+
+    terrain = COMPLEX_MILD_TERRAIN_IMPORTER_CFG
 
 
 @configclass
@@ -407,3 +504,27 @@ class MildTerrainPostureAntEnvCfg(MildTerrainAntEnvCfg):
     """Moderate curriculum with elevation-independent fall detection."""
 
     terminations: TerrainPostureTerminationsCfg = TerrainPostureTerminationsCfg()
+
+
+@configclass
+class ComplexTerrainPostureAntEnvCfg(TerrainPostureAntEnvCfg):
+    """Complex terrain evaluation with posture termination and sensor/dynamics randomization."""
+
+    scene: ComplexTerrainSceneCfg = ComplexTerrainSceneCfg(
+        num_envs=4096,
+        env_spacing=8.0,
+        clone_in_fabric=True,
+    )
+    observations: RobustTerrainObservationCfg = RobustTerrainObservationCfg()
+    events: RobustEventCfg = RobustEventCfg()
+
+
+@configclass
+class ComplexMildTerrainPostureAntEnvCfg(ComplexTerrainPostureAntEnvCfg):
+    """Mild complex curriculum used for warm-starting the full v2 terrain task."""
+
+    scene: ComplexMildTerrainSceneCfg = ComplexMildTerrainSceneCfg(
+        num_envs=4096,
+        env_spacing=8.0,
+        clone_in_fabric=True,
+    )

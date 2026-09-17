@@ -96,10 +96,70 @@ This is a measurable improvement in survival and completion, not a claim of
 universal terrain robustness. The terrain families and difficulty range remain
 the same as v0.
 
+## 복잡 지형 확장 (v2)
+
+v2는 동일한 60D/8D 정책 인터페이스에서 지형군을 7개로 확장했다.
+기존 flat, random rough, slope, stairs에 다음 세 지형을 추가했다.
+
+- **waves** — 높이 진폭이 증가하는 4-wave 높이장
+- **obstacles** — 양/음 높이의 불연속 블록 18개
+- **stepping_stones** — 최대 0.20 m의 얕은 gap을 가진 징검다리
+
+복잡 지형은 `size=(8, 8) m`, 8개 난이도 row와 7개 지형 column으로 생성된다.
+`ComplexMildTerrainPostureAntEnvCfg`에서 `difficulty_range=(0.0, 0.35)`로
+1,200 iteration warm-up한 뒤, `ComplexTerrainPostureAntEnvCfg`에서 전체
+`(0.0, 1.0)` 범위를 2,200 iteration 추가 학습했다. v1 checkpoint로 초기화하고
+전복 각도 종료(`1.2 rad`), friction/torso mass·COM randomization, observation
+noise, 간헐 push를 함께 사용했다.
+
+생존/완주를 기준으로 선택한 checkpoint:
+
+```text
+artifacts/terrain_demo/runs/terrain_complex_full_seed42/model_5500.pt
+```
+
+SHA-256:
+
+```text
+a3d686242df439ee4a04e36a20e0162481382d9ae1a85fc44a93e473f510994d
+```
+
+seed 24, 100개 환경에서의 비교 후보는 다음과 같다. 각 행은 해당 checkpoint의
+첫 episode만 집계한 값이다.
+
+| Checkpoint | Mean return | Return std | Mean length | Full-length |
+|---|---:|---:|---:|---:|
+| mild warm-up `model_3999` | 29.87 | 18.67 | 636.89 | 32/100 |
+| full `model_5000` | 32.46 | 18.68 | 663.61 | 34/100 |
+| **full `model_5500` (selected)** | **31.82** | **18.84** | **675.92** | **41/100** |
+| full `model_6000` | 32.29 | 18.70 | 662.14 | 32/100 |
+| full `model_6198` | 31.93 | 18.66 | 643.13 | 34/100 |
+
+선택 정책의 seed-24 지형별 결과:
+
+| Terrain | Episodes | Mean return | Mean length | Full length |
+|---|---:|---:|---:|---:|
+| flat | 15 | 29.52 | 508.9 | 5 |
+| rough | 14 | 42.28 | 727.9 | 5 |
+| slope | 14 | 28.26 | 631.4 | 5 |
+| stairs | 15 | 34.52 | 663.1 | 4 |
+| waves | 14 | 37.92 | 638.2 | 3 |
+| obstacles | 14 | 37.02 | 703.9 | 7 |
+| stepping_stones | 14 | 13.17 | 870.9 | 12 |
+
+다섯 평가 seed(7, 24, 42, 43, 44)의 평균은 return `33.29` (seed-mean population
+std `1.54`), episode length `690.5/960` (seed-mean std `32.3`), 완주 `40.6/100`이다.
+징검다리에서 오래 버티는 대신 return이 낮은 것은 gap/height를 넘나들며 진행 보상과
+에너지·행동 패널티가 함께 작용하기 때문이다. 따라서 이 결과는 v1의 동일한 네
+지형보다 더 넓은 분포에서 생존성이 개선됐다는 증거이지, 관측하지 않은 극한 지형에
+대한 보편적 보장은 아니다. 원시 JSON과 console log는 [`evaluations/`](evaluations)
+및 [`../console/`](../console)에 보관했다.
+
 ## Live demo
 
-This command opens four environments (flat, rough, slope, stairs) and switches
-the following camera every seven seconds:
+This command opens one environment per configured terrain family and switches the
+following camera every seven seconds. For v1 it opens four environments; for v2 it
+opens seven:
 
 ```bash
 ./scripts/run_terrain_demo.sh \
@@ -108,6 +168,18 @@ the following camera every seven seconds:
   --seed 7 \
   --cycle-seconds 7 \
   --checkpoint artifacts/terrain_demo/runs/terrain_posture_full_seed42/model_2800.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
+복잡 지형 v2 데모:
+
+```bash
+./scripts/run_terrain_demo.sh \
+  --task Week03-Ant-Terrain-Complex-Posture-v2 \
+  --device cuda:0 \
+  --seed 7 \
+  --cycle-seconds 7 \
+  --checkpoint artifacts/terrain_demo/runs/terrain_complex_full_seed42/model_5500.pt \
   --kit_args=--/renderer/multiGpu/enabled=false
 ```
 
@@ -159,6 +231,36 @@ Evaluation:
   --seed 24 --max_steps 960 \
   --checkpoint artifacts/terrain_demo/runs/terrain_posture_full_seed42/model_2800.pt \
   --output artifacts/terrain_demo/evaluations/terrain_posture_full_2800_seed24.json \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
+v2 복잡 지형 학습과 평가:
+
+```bash
+# v1 checkpoint에서 mild 복잡 지형 warm-up (1,200 iterations)
+./scripts/run_train.sh \
+  --task Week03-Ant-Terrain-Complex-Mild-Train-v2 \
+  --headless --device cuda:1 --num_envs 4096 \
+  --seed 42 --max_iterations 1200 \
+  --run_name terrain_complex_mild_seed42 --resume \
+  --load_run <v1-run-folder> --checkpoint model_2800.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+
+# full difficulty 추가 학습 (2,200 iterations)
+./scripts/run_train.sh \
+  --task Week03-Ant-Terrain-Complex-Posture-v2 \
+  --headless --device cuda:1 --num_envs 4096 \
+  --seed 42 --max_iterations 2200 \
+  --run_name terrain_complex_full_seed42 --resume \
+  --load_run <mild-run-folder> --checkpoint model_3999.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+
+./scripts/run_evaluate.sh \
+  --task Week03-Ant-Terrain-Complex-Posture-v2 \
+  --headless --device cuda:1 --num_envs 100 \
+  --seed 24 --max_steps 960 \
+  --checkpoint artifacts/terrain_demo/runs/terrain_complex_full_seed42/model_5500.pt \
+  --output artifacts/terrain_demo/evaluations/terrain_complex_full_5500_seed24.json \
   --kit_args=--/renderer/multiGpu/enabled=false
 ```
 

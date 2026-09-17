@@ -2,7 +2,7 @@
 # Copyright (c) 2026, Robotics Simulation Week 03 Team.
 # SPDX-License-Identifier: BSD-3-Clause
 
-"""Run a continuous four-terrain GUI demo for a trained Ant checkpoint."""
+"""Run a continuous multi-terrain GUI demo for a trained Ant checkpoint."""
 
 from __future__ import annotations
 
@@ -16,10 +16,15 @@ from isaaclab.app import AppLauncher
 import cli_args  # isort: skip
 
 
-parser = argparse.ArgumentParser(description="Show Ant on flat, rough, slope, and stair terrain patches.")
+parser = argparse.ArgumentParser(description="Show Ant on each terrain family in the selected task.")
 parser.add_argument("--task", default="Week03-Ant-Terrain-v0")
 parser.add_argument("--agent", default="rsl_rl_cfg_entry_point")
-parser.add_argument("--num_envs", type=int, default=4)
+parser.add_argument(
+    "--num_envs",
+    type=int,
+    default=None,
+    help="Number of preview environments; defaults to one per configured terrain family.",
+)
 parser.add_argument("--seed", type=int, default=7)
 parser.add_argument("--cycle-seconds", type=float, default=7.0, help="Seconds to follow each terrain environment.")
 parser.add_argument(
@@ -39,8 +44,6 @@ AppLauncher.add_app_launcher_args(parser)
 args_cli, hydra_args = parser.parse_known_args()
 if not args_cli.checkpoint:
     parser.error("--checkpoint is required")
-if args_cli.num_envs != 4:
-    parser.error("the terrain demo requires --num_envs 4")
 
 sys.argv = [sys.argv[0]] + hydra_args
 app_launcher = AppLauncher(args_cli)
@@ -62,9 +65,19 @@ import week03_ant  # noqa: F401
 
 @hydra_task_config(args_cli.task, args_cli.agent)
 def main(env_cfg, agent_cfg: RslRlBaseRunnerCfg):
-    """Load the checkpoint and continuously render the four terrain families."""
+    """Load the checkpoint and continuously render each configured terrain family."""
     agent_cfg = cli_args.update_rsl_rl_cfg(agent_cfg, args_cli)
-    env_cfg.scene.num_envs = args_cli.num_envs
+    terrain_generator = getattr(env_cfg.scene.terrain, "terrain_generator", None)
+    if terrain_generator is None:
+        raise ValueError("the selected task must use a procedural terrain generator")
+    terrain_names = list(terrain_generator.sub_terrains)
+    num_envs = args_cli.num_envs if args_cli.num_envs is not None else len(terrain_names)
+    if num_envs != len(terrain_names):
+        raise ValueError(
+            f"the terrain demo needs one environment per terrain family: "
+            f"expected {len(terrain_names)}, got {num_envs}"
+        )
+    env_cfg.scene.num_envs = num_envs
     env_cfg.seed = args_cli.seed
     env_cfg.sim.device = args_cli.device if args_cli.device is not None else env_cfg.sim.device
     agent_cfg.device = env_cfg.sim.device
@@ -88,7 +101,7 @@ def main(env_cfg, agent_cfg: RslRlBaseRunnerCfg):
     started = time.monotonic()
     active_env = -1
 
-    print("[DEMO] env 0=flat, env 1=random rough, env 2=slope, env 3=stairs")
+    print("[DEMO] " + ", ".join(f"env {i}={name}" for i, name in enumerate(terrain_names)))
     print(f"[DEMO] checkpoint={checkpoint}")
     print("[DEMO] Close the Isaac Sim window to stop.")
 
@@ -99,10 +112,10 @@ def main(env_cfg, agent_cfg: RslRlBaseRunnerCfg):
                 actions = policy(observations)
                 observations, _, _, _ = env.step(actions)
             elapsed = time.monotonic() - started
-            next_env = int(elapsed / args_cli.cycle_seconds) % args_cli.num_envs
+            next_env = int(elapsed / args_cli.cycle_seconds) % num_envs
             if next_env != active_env:
                 active_env = next_env
-                print(f"[DEMO] Following env {active_env}: {('flat', 'random rough', 'slope', 'stairs')[active_env]}")
+                print(f"[DEMO] Following env {active_env}: {terrain_names[active_env]}")
             robot_position = env.unwrapped.scene["robot"].data.root_pos_w[active_env].detach().cpu().tolist()
             eye = (robot_position[0] - 4.0, robot_position[1] + 4.0, robot_position[2] + 2.5)
             target = (robot_position[0], robot_position[1], robot_position[2] + 0.15)

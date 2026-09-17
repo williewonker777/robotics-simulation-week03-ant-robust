@@ -89,6 +89,29 @@ terrain curriculum을 추가하고 별도 정책을 학습했습니다. 선택 �
   --kit_args=--/renderer/multiGpu/enabled=false
 ```
 
+### v2: 복잡 지형 확장
+
+v1의 네 지형에 **파도, 불연속 장애물, 징검다리**를 더해 flat/rough/slope/stairs/
+waves/obstacles/stepping-stones의 7개 지형군으로 확장했습니다. 60D 관측과 8D
+행동 인터페이스는 유지하고, v1 정책을 낮은 난이도(0–0.35)로 warm-up한 뒤 전체
+난이도 curriculum에서 2,200 iteration 추가 학습했습니다. 생존을 기준으로 선택한
+`model_5500.pt`는 seed 24의 100-env 평가에서 평균 `675.92/960` step, 완주
+`41/100`, return `31.82 ± 18.84`를 기록했습니다. 다섯 seed(7, 24, 42, 43, 44)의
+평균은 `690.5/960` step, `40.6/100` 완주였습니다. 이는 더 넓은 지형 분포에서의
+측정 결과이며 임의의 극한 지형까지 보장한다는 의미는 아닙니다.
+
+7개 지형을 순서대로 따라가는 v2 데모(환경 수는 지형 설정에서 자동 결정):
+
+```bash
+./scripts/run_terrain_demo.sh \
+  --task Week03-Ant-Terrain-Complex-Posture-v2 \
+  --device cuda:0 \
+  --seed 7 \
+  --cycle-seconds 7 \
+  --checkpoint artifacts/terrain_demo/runs/terrain_complex_full_seed42/model_5500.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
 ![Training curves](artifacts/plots/training_curves.png)
 
 ![Evaluation returns](artifacts/plots/evaluation_returns.png)
