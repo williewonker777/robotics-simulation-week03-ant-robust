@@ -18,6 +18,10 @@ _TASKS = {
     "Week03-Ant-Terrain-Posture-Mild-Train-v1": "MildTerrainPostureAntEnvCfg",
     "Week03-Ant-Terrain-Complex-Posture-v2": "ComplexTerrainPostureAntEnvCfg",
     "Week03-Ant-Terrain-Complex-Mild-Train-v2": "ComplexMildTerrainPostureAntEnvCfg",
+    "Week03-Ant-Terrain-Extreme-Posture-v3": "ExtremeTerrainPostureAntEnvCfg",
+    "Week03-Ant-Terrain-Extreme-Mild-Train-v3": "ExtremeMildTerrainPostureAntEnvCfg",
+    "Week03-Ant-Terrain-Extreme-Approach-Train-v3": "ExtremeApproachTerrainPostureAntEnvCfg",
+    "Week03-Ant-Terrain-Extreme-Ramp-Train-v3": "ExtremeRampTerrainPostureAntEnvCfg",
 }
 
 for task_id, cfg_name in _TASKS.items():

@@ -1,15 +1,21 @@
 """Ant environment variants used for the robustness experiment and demo.
 
-All variants preserve the course task's 60-dimensional observation and
-8-dimensional action spaces. The terrain extension also reports base height
-relative to the local terrain origin so elevated patches keep the same semantic
-observation as the original ground plane.
+The course and v0--v2 terrain variants preserve the 60-dimensional observation
+and 8-dimensional action spaces. The v3 extreme terrain variant appends a
+54-dimensional local height scan (114D total) while retaining the same action
+interface. Terrain variants report base height relative to the local terrain
+origin so elevated patches keep the same semantic observation as the original
+ground plane.
 """
 
 import isaaclab.sim as sim_utils
 from isaaclab.managers import EventTermCfg as EventTerm
+from isaaclab.managers import ObservationGroupCfg as ObsGroup
+from isaaclab.managers import ObservationTermCfg as ObsTerm
+from isaaclab.managers import RewardTermCfg as RewTerm
 from isaaclab.managers import TerminationTermCfg as DoneTerm
 from isaaclab.managers import SceneEntityCfg
+from isaaclab.sensors import RayCasterCfg, patterns
 from isaaclab.terrains import (
     HfDiscreteObstaclesTerrainCfg,
     HfPyramidSlopedTerrainCfg,
@@ -17,6 +23,9 @@ from isaaclab.terrains import (
     HfRandomUniformTerrainCfg,
     HfSteppingStonesTerrainCfg,
     HfWaveTerrainCfg,
+    MeshBoxTerrainCfg,
+    MeshGapTerrainCfg,
+    MeshPitTerrainCfg,
     MeshPlaneTerrainCfg,
     MeshPyramidStairsTerrainCfg,
     TerrainGeneratorCfg,
@@ -29,6 +38,7 @@ from isaaclab_tasks.manager_based.classic.ant.ant_env_cfg import (
     EventCfg,
     MySceneCfg,
     ObservationsCfg,
+    RewardsCfg,
     TerminationsCfg,
 )
 import isaaclab_tasks.manager_based.classic.humanoid.mdp as mdp
@@ -155,6 +165,94 @@ COMPLEX_MILD_TERRAIN_GENERATOR_CFG = COMPLEX_TERRAIN_GENERATOR_CFG.replace(
     difficulty_range=(0.0, 0.35),
 )
 
+# Extreme v3 terrain set.  The three mesh terrains (pit, gap, and stacked boxes) create
+# discontinuous contact and elevation changes that height-field roughness alone cannot expose.
+# Difficulty is still curriculum-controlled so the policy sees recoverable examples before the
+# largest gaps and steps.
+EXTREME_TERRAIN_GENERATOR_CFG = TerrainGeneratorCfg(
+    seed=47,
+    curriculum=True,
+    size=(8.0, 8.0),
+    border_width=8.0,
+    num_rows=8,
+    num_cols=10,
+    horizontal_scale=0.1,
+    vertical_scale=0.005,
+    slope_threshold=0.75,
+    difficulty_range=(0.0, 1.0),
+    color_scheme="height",
+    use_cache=True,
+    sub_terrains={
+        "flat": MeshPlaneTerrainCfg(proportion=0.1),
+        "rough": HfRandomUniformTerrainCfg(
+            proportion=0.1,
+            noise_range=(0.02, 0.14),
+            noise_step=0.01,
+            downsampled_scale=0.2,
+            border_width=0.25,
+        ),
+        "steep_slope": HfPyramidSlopedTerrainCfg(
+            proportion=0.1,
+            slope_range=(0.10, 0.42),
+            platform_width=1.0,
+            border_width=0.25,
+        ),
+        "deep_stairs": HfPyramidStairsTerrainCfg(
+            proportion=0.1,
+            step_height_range=(0.05, 0.14),
+            step_width=0.45,
+            platform_width=1.0,
+            border_width=0.25,
+        ),
+        "waves": HfWaveTerrainCfg(
+            proportion=0.1,
+            amplitude_range=(0.06, 0.16),
+            num_waves=5,
+            border_width=0.25,
+        ),
+        "obstacles": HfDiscreteObstaclesTerrainCfg(
+            proportion=0.1,
+            obstacle_height_mode="choice",
+            obstacle_width_range=(0.40, 0.90),
+            obstacle_height_range=(0.10, 0.28),
+            num_obstacles=22,
+            platform_width=1.4,
+            border_width=0.25,
+        ),
+        "stepping_stones": HfSteppingStonesTerrainCfg(
+            proportion=0.1,
+            stone_height_max=0.18,
+            stone_width_range=(0.45, 0.80),
+            stone_distance_range=(0.25, 0.50),
+            holes_depth=-0.35,
+            platform_width=1.4,
+            border_width=0.25,
+        ),
+        "pit": MeshPitTerrainCfg(
+            proportion=0.1,
+            pit_depth_range=(0.20, 0.55),
+            platform_width=1.4,
+            double_pit=True,
+        ),
+        "gap": MeshGapTerrainCfg(
+            proportion=0.1,
+            gap_width_range=(0.25, 0.65),
+            platform_width=1.4,
+        ),
+        "boxes": MeshBoxTerrainCfg(
+            proportion=0.1,
+            box_height_range=(0.18, 0.45),
+            platform_width=1.8,
+            double_box=True,
+        ),
+    },
+)
+
+EXTREME_MILD_TERRAIN_GENERATOR_CFG = EXTREME_TERRAIN_GENERATOR_CFG.replace(
+    seed=48,
+    difficulty_range=(0.0, 0.25),
+)
+
 MULTI_TERRAIN_IMPORTER_CFG = TerrainImporterCfg(
     prim_path="/World/ground",
     terrain_type="generator",
@@ -183,6 +281,25 @@ COMPLEX_TERRAIN_IMPORTER_CFG = MULTI_TERRAIN_IMPORTER_CFG.replace(
 COMPLEX_MILD_TERRAIN_IMPORTER_CFG = COMPLEX_TERRAIN_IMPORTER_CFG.replace(
     terrain_generator=COMPLEX_MILD_TERRAIN_GENERATOR_CFG,
 )
+
+EXTREME_TERRAIN_IMPORTER_CFG = MULTI_TERRAIN_IMPORTER_CFG.replace(
+    terrain_generator=EXTREME_TERRAIN_GENERATOR_CFG,
+)
+
+EXTREME_MILD_TERRAIN_IMPORTER_CFG = EXTREME_TERRAIN_IMPORTER_CFG.replace(
+    terrain_generator=EXTREME_MILD_TERRAIN_GENERATOR_CFG,
+    max_init_terrain_level=2,
+)
+
+# Intermediate hand-off stage.  The generator still contains the complete extreme range, but
+# resets initially sample only the first five rows.  This avoids destroying the warm-start policy
+# when discontinuous pits/gaps are introduced, while exposing more than the mild warm-up range.
+EXTREME_APPROACH_TERRAIN_IMPORTER_CFG = EXTREME_TERRAIN_IMPORTER_CFG.replace(max_init_terrain_level=4)
+
+# Final ramp stage: only the last generator row (the most destructive geometry) is held out
+# during this pass.  It gives the policy a stable bridge from the approach stage to full reset
+# coverage instead of switching all environments to row 7 at once.
+EXTREME_RAMP_TERRAIN_IMPORTER_CFG = EXTREME_TERRAIN_IMPORTER_CFG.replace(max_init_terrain_level=6)
 
 
 def base_height_above_terrain_origin(env, asset_cfg: SceneEntityCfg = SceneEntityCfg("robot")):
@@ -239,6 +356,45 @@ class ComplexMildTerrainSceneCfg(ComplexTerrainSceneCfg):
     """Lower-difficulty warm-up distribution for the complex terrain curriculum."""
 
     terrain = COMPLEX_MILD_TERRAIN_IMPORTER_CFG
+
+
+@configclass
+class ExtremeTerrainSceneCfg(MySceneCfg):
+    """Ten-family terrain distribution used by the extreme v3 task."""
+
+    terrain = EXTREME_TERRAIN_IMPORTER_CFG
+    # A small body-mounted scan gives the policy short-horizon preview of pits, gaps, and
+    # box edges.  The scanner is intentionally kept local (1.6 x 1.0 m) so it remains useful
+    # under yaw randomization and does not leak the terrain generator's privileged map.
+    height_scanner = RayCasterCfg(
+        prim_path="{ENV_REGEX_NS}/Robot/torso",
+        offset=RayCasterCfg.OffsetCfg(pos=(0.0, 0.0, 2.0)),
+        ray_alignment="yaw",
+        pattern_cfg=patterns.GridPatternCfg(resolution=0.2, size=[1.6, 1.0]),
+        mesh_prim_paths=["/World/ground"],
+        debug_vis=False,
+    )
+
+
+@configclass
+class ExtremeMildTerrainSceneCfg(ExtremeTerrainSceneCfg):
+    """Recoverable warm-up range for the extreme terrain curriculum."""
+
+    terrain = EXTREME_MILD_TERRAIN_IMPORTER_CFG
+
+
+@configclass
+class ExtremeApproachTerrainSceneCfg(ExtremeTerrainSceneCfg):
+    """Intermediate reset range before exposing every extreme terrain row."""
+
+    terrain = EXTREME_APPROACH_TERRAIN_IMPORTER_CFG
+
+
+@configclass
+class ExtremeRampTerrainSceneCfg(ExtremeTerrainSceneCfg):
+    """Final curriculum ramp covering terrain rows 0--6."""
+
+    terrain = EXTREME_RAMP_TERRAIN_IMPORTER_CFG
 
 
 @configclass
@@ -310,6 +466,22 @@ class RobustTerrainObservationCfg(RobustObservationCfg):
 
 
 @configclass
+class ExtremeTerrainObservationCfg(RobustTerrainObservationCfg):
+    """Noisy proprioception plus a clipped local height scan for discontinuities."""
+
+    @configclass
+    class PolicyCfg(RobustTerrainObservationCfg.PolicyCfg):
+        height_scan = ObsTerm(
+            func=mdp.height_scan,
+            params={"sensor_cfg": SceneEntityCfg("height_scanner")},
+            noise=Unoise(n_min=-0.05, n_max=0.05),
+            clip=(-1.0, 1.0),
+        )
+
+    policy: PolicyCfg = PolicyCfg()
+
+
+@configclass
 class TerrainTerminationsCfg(TerminationsCfg):
     """Detect a fall relative to the current terrain patch."""
 
@@ -326,6 +498,22 @@ class TerrainPostureTerminationsCfg(TerminationsCfg):
     torso_height = DoneTerm(
         func=mdp.bad_orientation,
         params={"limit_angle": 1.2},
+    )
+
+
+@configclass
+class ExtremeRewardsCfg(RewardsCfg):
+    """Leave enough reward margin for the high-energy recovery motions in v3."""
+
+    # The v0/v1 energy terms strongly discourage the impulses needed to clear a gap or climb
+    # a tall step.  These are still penalties, just small enough that survival and progress can
+    # win when a recovery motion is the correct behavior.
+    action_l2 = RewTerm(func=mdp.action_l2, weight=-0.002)
+    energy = RewTerm(func=mdp.power_consumption, weight=-0.02, params={"gear_ratio": {".*": 15.0}})
+    joint_pos_limits = RewTerm(
+        func=mdp.joint_pos_limits_penalty_ratio,
+        weight=-0.05,
+        params={"threshold": 0.99, "gear_ratio": {".*": 15.0}},
     )
 
 
@@ -527,4 +715,53 @@ class ComplexMildTerrainPostureAntEnvCfg(ComplexTerrainPostureAntEnvCfg):
         num_envs=4096,
         env_spacing=8.0,
         clone_in_fabric=True,
+    )
+
+
+@configclass
+class ExtremeTerrainPostureAntEnvCfg(TerrainPostureAntEnvCfg):
+    """Extreme terrain task with posture termination and recovery-friendly rewards."""
+
+    scene: ExtremeTerrainSceneCfg = ExtremeTerrainSceneCfg(
+        num_envs=4096,
+        env_spacing=8.0,
+        # RayCaster reset bookkeeping needs materialized environment prims (Fabric cloning
+        # exposes only env_0 to the sensor's parent-prim lookup).
+        clone_in_fabric=False,
+    )
+    observations: ExtremeTerrainObservationCfg = ExtremeTerrainObservationCfg()
+    rewards: ExtremeRewardsCfg = ExtremeRewardsCfg()
+    events: RobustEventCfg = RobustEventCfg()
+
+
+@configclass
+class ExtremeMildTerrainPostureAntEnvCfg(ExtremeTerrainPostureAntEnvCfg):
+    """Mild extreme terrain curriculum used for the v3 warm-up phase."""
+
+    scene: ExtremeMildTerrainSceneCfg = ExtremeMildTerrainSceneCfg(
+        num_envs=4096,
+        env_spacing=8.0,
+        clone_in_fabric=False,
+    )
+
+
+@configclass
+class ExtremeApproachTerrainPostureAntEnvCfg(ExtremeTerrainPostureAntEnvCfg):
+    """Intermediate v3 curriculum stage covering terrain rows 0--4."""
+
+    scene: ExtremeApproachTerrainSceneCfg = ExtremeApproachTerrainSceneCfg(
+        num_envs=4096,
+        env_spacing=8.0,
+        clone_in_fabric=False,
+    )
+
+
+@configclass
+class ExtremeRampTerrainPostureAntEnvCfg(ExtremeTerrainPostureAntEnvCfg):
+    """Final v3 ramp before the full row-7 extreme reset distribution."""
+
+    scene: ExtremeRampTerrainSceneCfg = ExtremeRampTerrainSceneCfg(
+        num_envs=4096,
+        env_spacing=8.0,
+        clone_in_fabric=False,
     )

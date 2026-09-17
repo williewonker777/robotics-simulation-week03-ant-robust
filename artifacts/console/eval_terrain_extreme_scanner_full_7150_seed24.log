@@ -1,0 +1,749 @@
+Loading user config located at: '/mnt/ssd970/robotics_simulation_class/env/lib/python3.11/site-packages/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /mnt/ssd970/robotics_simulation_class/env/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20260917_201935.log
+2026-09-17T11:19:35Z [45ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-09-17T11:19:36Z [297ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-09-17T11:19:36Z [398ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-09-17T11:19:40Z [4,314ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: AMD Ryzen 7 9800X3D 8-Core Processor (RADV RAPHAEL_MENDOCINO)
+2026-09-17T11:19:40Z [4,315ms] [Warning] [gpu.foundation.plugin] Skipping unsupported non-NVIDIA GPU: AMD Ryzen 7 9800X3D 8-Core Processor (RADV RAPHAEL_MENDOCINO)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.173.02    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5080          | Yes: 0 |     | 16303   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2c02      | 941a2833.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | NVIDIA GeForce RTX 5070          |        |     | 12227   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2f04      | 8f16c27a.. |
+|     |                                  |        |     |            | 5         |            |
+|---------------------------------------------------------------------------------------------|
+| 2   | AMD Ryzen 7 9800X3D 8-Core Pro.. |        |     | 10753   MB | 1002      | 0          |
+|     |                                  |        |     |            | 13c0      | 00000000.. |
+|     |                                  |        |     |            | b         |            |
+|=============================================================================================|
+| OS: 24.04.4 LTS (Noble Numbat) ubuntu, Version: 24.04.4, Kernel: 7.0.0-31-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101011 (1.21.1.11)
+| Processor: AMD Ryzen 7 9800X3D 8-Core Processor
+| Cores: 8 | Logical Cores: 16
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 31236 | Free Memory: 22297
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 7125
+|---------------------------------------------------------------------------------------------|
+2026-09-17T11:19:40Z [4,535ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-09-17T11:19:40Z [4,535ms] [Warning] [gpu.foundation.plugin] Detected IOMMU is enabled. Running CUDA peer-to-peer bandwidth and latency validation.
+Unidirectional P2P=Enabled Bandwidth (P2P Writes) Matrix (GB/s)
+   D\D     0      1 
+     0 821.50   6.11 
+     1   6.41 557.82 
+P2P=Enabled Latency (P2P Writes) Matrix (us)
+   GPU     0      1 
+     0   2.07 110.49 
+     1  15.76   2.06 
+
+   CPU     0      1 
+     0   1.77   4.73 
+     1   4.71   1.84 
+2026-09-17T11:19:40Z [4,821ms] [Warning] [gpu.foundation.plugin] CUDA peer-to-peer observed bandwidth: 6.1 GB/s.
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /mnt/ssd970/robotics_simulation_class/src/IsaacLab_RS/apps/isaaclab.python.headless.kit
+[INFO]: Parsing configuration from: week03_ant.tasks.ant_cfg:ExtremeTerrainPostureAntEnvCfg
+[INFO]: Parsing configuration from: week03_ant.tasks.agents.rsl_rl_ppo_cfg:Week03AntPPORunnerCfg
+2026-09-17T11:19:40Z [4,821ms] [Warning] [gpu.foundation.plugin] CUDA peer-to-peer observed latency: 110.5 us.
+2026-09-17T11:19:40Z [4,821ms] [Warning] [gpu.foundation.plugin] Please verify if observed bandwidth and latency are expected.
+2026-09-17T11:19:40Z [4,835ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it
+2026-09-17T11:19:42Z [7,250ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/front_left_leg).
+2026-09-17T11:19:42Z [7,250ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/front_left_foot).
+2026-09-17T11:19:42Z [7,250ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/front_right_leg).
+2026-09-17T11:19:42Z [7,250ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/front_right_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/front_right_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/front_right_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/front_right_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/front_right_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_foot).
+/mnt/ssd970/robotics_simulation_class/env/lib/python3.11/site-packages/rsl_rl/utils/utils.py:244: UserWarning: The observation configuration dictionary 'obs_groups' must contain the 'policy' key. As an observation group with the name 'policy' was found, this is assumed to be the observation set. Consider adding the 'policy' key to the 'obs_groups' dictionary for clarity. This behavior will be removed in a future version.
+  warnings.warn(
+/mnt/ssd970/robotics_simulation_class/env/lib/python3.11/site-packages/rsl_rl/utils/utils.py:290: UserWarning: The observation configuration dictionary 'obs_groups' must contain the 'critic' key. As the configuration for 'critic' is missing, the observations from the 'policy' set are used. Consider adding the 'critic' key to the 'obs_groups' dictionary for clarity. This behavior will be removed in a future version.
+  warnings.warn(
+Setting seed: 24
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 24
+	Physics step-size     : 0.008333333333333333
+	Rendering step-size   : 0.016666666666666666
+	Environment step-size : 0.016666666666666666
+[INFO] Generating terrains based on curriculum took : 0.399820 seconds
+[INFO]: Time taken for scene creation : 1.379817 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 100
+	Environment spacing   : 8.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.404286 seconds
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Event Manager:  <EventManager> contains 3 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++---------+---------------------------+
+|  Index  | Name                      |
++---------+---------------------------+
+|    0    | reset_base                |
+|    1    | reset_robot_joints        |
++---------+---------------------------+
++--------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++----------+---------------------------+
+|  Index   | Name                      |
++----------+---------------------------+
+|    0     | physics_material          |
+|    1     | torso_mass                |
+|    2     | torso_com                 |
++----------+---------------------------+
++----------------------------------------------+
+|    Active Event Terms in Mode: 'interval'    |
++-------+------------+-------------------------+
+| Index | Name       | Interval time range (s) |
++-------+------------+-------------------------+
+|   0   | push_robot |        (4.0, 8.0)       |
++-------+------------+-------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 1 active terms.
++----------------------------------+
+|  Active Action Terms (shape: 8)  |
++-------+--------------+-----------+
+| Index | Name         | Dimension |
++-------+--------------+-----------+
+|   0   | joint_effort |         8 |
++-------+--------------+-----------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++------------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (114,)) |
++-----------+------------------------------------+-----------+
+|   Index   | Name                               |   Shape   |
++-----------+------------------------------------+-----------+
+|     0     | base_height                        |    (1,)   |
+|     1     | base_lin_vel                       |    (3,)   |
+|     2     | base_ang_vel                       |    (3,)   |
+|     3     | base_yaw_roll                      |    (2,)   |
+|     4     | base_angle_to_target               |    (1,)   |
+|     5     | base_up_proj                       |    (1,)   |
+|     6     | base_heading_proj                  |    (1,)   |
+|     7     | joint_pos_norm                     |    (8,)   |
+|     8     | joint_vel_rel                      |    (8,)   |
+|     9     | feet_body_forces                   |   (24,)   |
+|     10    | actions                            |    (8,)   |
+|     11    | height_scan                        |   (54,)   |
++-----------+------------------------------------+-----------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++---------------------------------+
+|     Active Termination Terms    |
++-------+--------------+----------+
+| Index | Name         | Time Out |
++-------+--------------+----------+
+|   0   | time_out     |   True   |
+|   1   | torso_height |  False   |
++-------+--------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 7 active terms.
++-----------------------------------+
+|        Active Reward Terms        |
++-------+------------------+--------+
+| Index | Name             | Weight |
++-------+------------------+--------+
+|   0   | progress         |    1.0 |
+|   1   | alive            |    0.5 |
+|   2   | upright          |    0.1 |
+|   3   | move_to_target   |    0.5 |
+|   4   | action_l2        | -0.002 |
+|   5   | energy           |  -0.02 |
+|   6   | joint_pos_limits |  -0.05 |
++-------+------------------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 policy :  ['policy']
+	 critic :  ['policy']
+--------------------------------------------------------------------------------
+Actor MLP: MLP(
+  (0): Linear(in_features=114, out_features=400, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=400, out_features=200, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=200, out_features=100, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=100, out_features=8, bias=True)
+)
+Critic MLP: MLP(
+  (0): Linear(in_features=114, out_features=400, bias=True)
+  (1): ELU(alpha=1.0)
+  (2): Linear(in_features=400, out_features=200, bias=True)
+  (3): ELU(alpha=1.0)
+  (4): Linear(in_features=200, out_features=100, bias=True)
+  (5): ELU(alpha=1.0)
+  (6): Linear(in_features=100, out_features=1, bias=True)
+)
+[INFO] Loading checkpoint: /home/wonker/robotics-simulation-week03-ant-robust/logs/rsl_rl/week03_ant/2026-09-17_20-18-09_terrain_extreme_scanner_full_seed42/model_7150.pt
+[INFO] All 100 episodes completed at step 960.
+WEEK03_EVALUATION_JSON_BEGIN
+{
+  "checkpoint": "/home/wonker/robotics-simulation-week03-ant-robust/logs/rsl_rl/week03_ant/2026-09-17_20-18-09_terrain_extreme_scanner_full_seed42/model_7150.pt",
+  "completed_episodes": 100,
+  "episode_length_mean": 598.79,
+  "episode_length_std": 345.8714875499281,
+  "episode_lengths": [
+    471.0,
+    26.0,
+    729.0,
+    822.0,
+    22.0,
+    258.0,
+    834.0,
+    424.0,
+    661.0,
+    478.0,
+    724.0,
+    647.0,
+    521.0,
+    877.0,
+    226.0,
+    237.0,
+    355.0,
+    775.0,
+    738.0,
+    462.0,
+    951.0,
+    352.0,
+    516.0,
+    676.0,
+    960.0,
+    960.0,
+    960.0,
+    960.0,
+    960.0,
+    435.0,
+    773.0,
+    960.0,
+    902.0,
+    395.0,
+    960.0,
+    960.0,
+    553.0,
+    960.0,
+    650.0,
+    960.0,
+    509.0,
+    960.0,
+    251.0,
+    521.0,
+    567.0,
+    240.0,
+    960.0,
+    641.0,
+    345.0,
+    264.0,
+    960.0,
+    665.0,
+    641.0,
+    742.0,
+    285.0,
+    960.0,
+    523.0,
+    13.0,
+    960.0,
+    737.0,
+    426.0,
+    960.0,
+    337.0,
+    960.0,
+    859.0,
+    960.0,
+    788.0,
+    960.0,
+    960.0,
+    960.0,
+    960.0,
+    16.0,
+    18.0,
+    960.0,
+    13.0,
+    18.0,
+    12.0,
+    9.0,
+    17.0,
+    960.0,
+    960.0,
+    55.0,
+    960.0,
+    960.0,
+    89.0,
+    232.0,
+    23.0,
+    126.0,
+    32.0,
+    59.0,
+    333.0,
+    960.0,
+    960.0,
+    653.0,
+    960.0,
+    635.0,
+    15.0,
+    960.0,
+    960.0,
+    960.0
+  ],
+  "episode_return_max": 78.58544158935547,
+  "episode_return_mean": 30.5969895754382,
+  "episode_return_min": -0.3434501886367798,
+  "episode_return_std": 21.872453208751992,
+  "episode_returns": [
+    36.47262191772461,
+    0.3613903522491455,
+    61.90467071533203,
+    71.23088073730469,
+    0.5805987119674683,
+    16.092782974243164,
+    78.58544158935547,
+    33.75301742553711,
+    60.53062057495117,
+    42.5921516418457,
+    45.43301773071289,
+    45.724525451660156,
+    36.50522232055664,
+    62.36080551147461,
+    16.034162521362305,
+    16.077579498291016,
+    25.091716766357422,
+    53.68971633911133,
+    53.87467956542969,
+    34.287330627441406,
+    54.26687240600586,
+    9.652137756347656,
+    33.529869079589844,
+    43.4831657409668,
+    55.45683288574219,
+    62.12600326538086,
+    59.55849838256836,
+    58.28952407836914,
+    61.601741790771484,
+    24.339561462402344,
+    34.900333404541016,
+    42.92759704589844,
+    44.48896026611328,
+    23.82515525817871,
+    50.56329345703125,
+    58.352821350097656,
+    20.03949546813965,
+    56.88636779785156,
+    33.18622589111328,
+    55.80913162231445,
+    34.948516845703125,
+    68.16385650634766,
+    15.599979400634766,
+    34.67993927001953,
+    36.30855178833008,
+    16.222488403320312,
+    60.03016662597656,
+    44.18687057495117,
+    24.572734832763672,
+    14.397298812866211,
+    48.859046936035156,
+    29.00733184814453,
+    44.33774948120117,
+    51.095611572265625,
+    19.303173065185547,
+    53.06726837158203,
+    26.587493896484375,
+    0.16953474283218384,
+    58.646366119384766,
+    43.456024169921875,
+    8.961312294006348,
+    19.678377151489258,
+    5.368830680847168,
+    16.004104614257812,
+    9.361260414123535,
+    17.30754852294922,
+    22.022563934326172,
+    14.657153129577637,
+    18.066007614135742,
+    18.953975677490234,
+    13.170479774475098,
+    0.09970491379499435,
+    0.5659233331680298,
+    21.49915313720703,
+    0.16496539115905762,
+    0.14324067533016205,
+    0.2131614238023758,
+    -0.20312020182609558,
+    0.054241713136434555,
+    14.940353393554688,
+    11.61699104309082,
+    1.440675139427185,
+    12.153162002563477,
+    18.286392211914062,
+    1.6922281980514526,
+    14.941067695617676,
+    1.0123021602630615,
+    1.9393072128295898,
+    1.0940313339233398,
+    -0.3434501886367798,
+    15.659187316894531,
+    57.66034698486328,
+    59.243408203125,
+    28.587636947631836,
+    24.32976722717285,
+    34.222450256347656,
+    0.12437506765127182,
+    44.869869232177734,
+    62.34801483154297,
+    69.68543243408203
+  ],
+  "max_steps": 960,
+  "num_envs": 100,
+  "seed": 24,
+  "task": "Week03-Ant-Terrain-Extreme-Posture-v3",
+  "terrain_breakdown": {
+    "boxes": {
+      "episode_length_mean": 739.6000366210938,
+      "episode_return_mean": 39.67304611206055,
+      "episode_return_std": 21.62688446044922,
+      "episodes": 10,
+      "full_length_episodes": 6
+    },
+    "deep_stairs": {
+      "episode_length_mean": 807.2999877929688,
+      "episode_return_mean": 42.097938537597656,
+      "episode_return_std": 13.040999412536621,
+      "episodes": 10,
+      "full_length_episodes": 5
+    },
+    "flat": {
+      "episode_length_mean": 472.5,
+      "episode_return_mean": 40.210418701171875,
+      "episode_return_std": 26.683202743530273,
+      "episodes": 10,
+      "full_length_episodes": 0
+    },
+    "gap": {
+      "episode_length_mean": 349.6000061035156,
+      "episode_return_mean": 6.383270740509033,
+      "episode_return_std": 6.662280082702637,
+      "episodes": 10,
+      "full_length_episodes": 3
+    },
+    "obstacles": {
+      "episode_length_mean": 648.6000366210938,
+      "episode_return_mean": 37.452964782714844,
+      "episode_return_std": 17.32478141784668,
+      "episodes": 10,
+      "full_length_episodes": 3
+    },
+    "pit": {
+      "episode_length_mean": 298.3000183105469,
+      "episode_return_mean": 5.064810752868652,
+      "episode_return_std": 7.764236927032471,
+      "episodes": 10,
+      "full_length_episodes": 3
+    },
+    "rough": {
+      "episode_length_mean": 556.2000122070312,
+      "episode_return_mean": 38.907875061035156,
+      "episode_return_std": 15.310223579406738,
+      "episodes": 10,
+      "full_length_episodes": 0
+    },
+    "steep_slope": {
+      "episode_length_mean": 773.0,
+      "episode_return_mean": 46.23041915893555,
+      "episode_return_std": 17.16901206970215,
+      "episodes": 10,
+      "full_length_episodes": 5
+    },
+    "stepping_stones": {
+      "episode_length_mean": 817.0,
+      "episode_return_mean": 15.038113594055176,
+      "episode_return_std": 5.135119438171387,
+      "episodes": 10,
+      "full_length_episodes": 6
+    },
+    "waves": {
+      "episode_length_mean": 525.7999877929688,
+      "episode_return_mean": 34.911041259765625,
+      "episode_return_std": 17.534658432006836,
+      "episodes": 10,
+      "full_length_episodes": 2
+    }
+  },
+  "terrain_levels": [
+    6,
+    7,
+    2,
+    1,
+    0,
+    7,
+    0,
+    5,
+    2,
+    4,
+    4,
+    4,
+    5,
+    2,
+    7,
+    7,
+    6,
+    3,
+    3,
+    5,
+    3,
+    6,
+    5,
+    4,
+    2,
+    2,
+    1,
+    2,
+    0,
+    6,
+    5,
+    4,
+    4,
+    6,
+    2,
+    0,
+    6,
+    0,
+    5,
+    1,
+    5,
+    0,
+    7,
+    5,
+    5,
+    7,
+    0,
+    4,
+    6,
+    5,
+    3,
+    4,
+    4,
+    2,
+    0,
+    1,
+    6,
+    7,
+    0,
+    1,
+    6,
+    3,
+    4,
+    5,
+    6,
+    5,
+    7,
+    0,
+    3,
+    3,
+    5,
+    7,
+    1,
+    2,
+    5,
+    3,
+    1,
+    2,
+    3,
+    7,
+    2,
+    4,
+    5,
+    2,
+    6,
+    7,
+    1,
+    5,
+    4,
+    3,
+    7,
+    2,
+    2,
+    6,
+    5,
+    5,
+    4,
+    0,
+    1,
+    0
+  ],
+  "terrain_type_indices": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9
+  ],
+  "terrain_type_names": [
+    "flat",
+    "rough",
+    "steep_slope",
+    "deep_stairs",
+    "waves",
+    "obstacles",
+    "stepping_stones",
+    "pit",
+    "gap",
+    "boxes"
+  ]
+}
+WEEK03_EVALUATION_JSON_END
+[INFO] Wrote evaluation: artifacts/terrain_demo/evaluations/terrain_extreme_scanner_full_7150_seed24.json
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/left_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_foot).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_leg).
+2026-09-17T11:19:42Z [7,251ms] [Warning] [omni.physx.plugin] Damping attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/Robot/joints/right_back_foot).

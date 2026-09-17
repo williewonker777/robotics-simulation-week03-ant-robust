@@ -155,6 +155,75 @@ std `1.54`), episode length `690.5/960` (seed-mean std `32.3`), 완주 `40.6/100
 대한 보편적 보장은 아니다. 원시 JSON과 console log는 [`evaluations/`](evaluations)
 및 [`../console/`](../console)에 보관했다.
 
+## 극한 지형 확장 (v3)
+
+v3는 단순한 높이장 지형을 넘어 **10개 지형군**을 한 분포에 넣었다.
+
+- `flat`, `rough`, `steep_slope`, `deep_stairs`, `waves`
+- `obstacles`, `stepping_stones`, `pit`, `gap`, `boxes`
+
+최대 난이도는 rough noise `0.14 m`, slope `0.42`, stairs step `0.14 m`, obstacle
+높이 `0.28 m`, stepping-stone hole `0.35 m`, pit 깊이 `0.55 m`, gap `0.65 m`, box
+높이 `0.45 m`까지 올라간다. 지형은 `8 x 8 m`, 8개 난이도 row, 10개 family column으로
+생성되며, `EXTREME_MILD` (row 0--2) → `EXTREME_APPROACH` (row 0--4) → full
+(row 0--7) 순서로 curriculum을 적용했다. row 0--6만 노출하는 `EXTREME_RAMP` 단계도
+구현했지만 full holdout 평가에서 선택 정책보다 낮아 대표 checkpoint로 사용하지 않았다.
+
+피트·갭의 단절 경계를 미리 보도록 torso에 1.6 x 1.0 m, 0.2 m 해상도의 54-ray
+height scanner를 추가했다. 따라서 정책 입력은 **114D (기존 60D + scan 54D)**,
+행동은 기존과 같은 8D이다. Isaac Lab 2.3에서 이 RayCaster와 Fabric cloning을 동시에
+사용하면 sensor parent가 `env_0`만 추적해 다중 환경 reset 시 CUDA assert가 발생하므로
+v3 scene은 의도적으로 `clone_in_fabric=False`를 사용한다.
+
+선택 checkpoint (전체 난이도 평가에서 episode length가 가장 높았던 모델):
+
+```text
+artifacts/terrain_demo/runs/terrain_extreme_full_seed42/model_7150.pt
+```
+
+SHA-256:
+
+```text
+22b41aed1a7f4c7e2b9e66b5cdb4a61125f4f8f64be52d1766255d5b5baec139
+```
+
+기존 60D 정책을 114D로 zero-pad하고 optimizer를 새로 시작하는 변환기는
+[`scripts/expand_checkpoint.py`](../../scripts/expand_checkpoint.py)다. v3 full run은
+scanner warm-start 후 holdout validation을 확인하며 진행했고, 마지막까지 무조건 학습한
+모델이 아니라 seed-24 episode length가 가장 좋은 `model_7150`을 선택했다.
+
+| Policy | Observation | Seed 24 return | Mean length | Full length |
+|---|---:|---:|---:|---:|
+| Extreme no-scan baseline (`model_6699`) | 60D | 19.41 | 447.05 | 23/100 |
+| Extreme scanner approach (`model_7000`) | 114D | 29.91 | 567.59 | 31/100 |
+| **Extreme scanner full (selected `model_7150`)** | **114D** | **30.60** | **598.79** | **33/100** |
+
+선택 정책의 seed-24 지형별 결과:
+
+| Terrain | Episodes | Mean return | Mean length | Full length |
+|---|---:|---:|---:|---:|
+| boxes | 10 | 39.67 | 739.6 | 6 |
+| deep_stairs | 10 | 42.10 | 807.3 | 5 |
+| flat | 10 | 40.21 | 472.5 | 0 |
+| gap | 10 | 6.38 | 349.6 | 3 |
+| obstacles | 10 | 37.45 | 648.6 | 3 |
+| pit | 10 | 5.07 | 298.3 | 3 |
+| rough | 10 | 38.91 | 556.2 | 0 |
+| steep_slope | 10 | 46.23 | 773.0 | 5 |
+| stepping_stones | 10 | 15.04 | 817.0 | 6 |
+| waves | 10 | 34.91 | 525.8 | 2 |
+
+다섯 평가 seed (7, 24, 42, 43, 44)의 평균은 return **27.33 ± 3.01**, episode
+length **581.10 ± 39.42 / 960**, full-length **32.8 ± 3.9 / 100**이다. 따라서
+스캐너와 curriculum이 같은 extreme 분포의 no-scan baseline보다 생존을 크게 늘렸지만,
+가장 깊은 pit과 넓은 gap은 여전히 실패율이 높은 지형이다. 이는 측정된 10개 family와
+난이도 범위에 대한 결과이지, 임의의 미지 지형을 보장하는 주장은 아니다. 원시 결과는
+[`evaluations/`](evaluations)의 `terrain_extreme_scanner_full_7150_seed*.json`에 있다.
+
+실행 확인용 seed-7 GUI 캡처 (wavy terrain과 deep stairs가 같은 장면에 보인다):
+
+![Extreme v3 GUI demo](extreme_demo_seed7.png)
+
 ## Live demo
 
 This command opens one environment per configured terrain family and switches the
@@ -180,6 +249,18 @@ opens seven:
   --seed 7 \
   --cycle-seconds 7 \
   --checkpoint artifacts/terrain_demo/runs/terrain_complex_full_seed42/model_5500.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
+극한 지형 v3 데모 (10개 환경을 7초마다 전환):
+
+```bash
+./scripts/run_terrain_demo.sh \
+  --task Week03-Ant-Terrain-Extreme-Posture-v3 \
+  --device cuda:0 \
+  --seed 7 \
+  --cycle-seconds 7 \
+  --checkpoint artifacts/terrain_demo/runs/terrain_extreme_full_seed42/model_7150.pt \
   --kit_args=--/renderer/multiGpu/enabled=false
 ```
 
@@ -261,6 +342,41 @@ v2 복잡 지형 학습과 평가:
   --seed 24 --max_steps 960 \
   --checkpoint artifacts/terrain_demo/runs/terrain_complex_full_seed42/model_5500.pt \
   --output artifacts/terrain_demo/evaluations/terrain_complex_full_5500_seed24.json \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
+v3 극한 지형 재현:
+
+```bash
+# v2 60D checkpoint를 scanner 입력(114D)으로 확장 (최초 1회)
+/mnt/ssd970/robotics_simulation_class/run-python scripts/expand_checkpoint.py \
+  artifacts/terrain_demo/runs/terrain_complex_full_seed42/model_5500.pt \
+  logs/rsl_rl/week03_ant/extreme_scanner_init/model_5500.pt
+
+# row 0--4 approach stage (warm-start directly from the expanded v2 policy)
+./scripts/run_train.sh \
+  --task Week03-Ant-Terrain-Extreme-Approach-Train-v3 \
+  --headless --device cuda:1 --num_envs 2048 \
+  --seed 42 --max_iterations 2200 \
+  --run_name terrain_extreme_scanner_approach_seed42 \
+  --resume --load_run extreme_scanner_init --checkpoint model_5500.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+
+# full row 0--7 training/evaluation
+./scripts/run_train.sh \
+  --task Week03-Ant-Terrain-Extreme-Posture-v3 \
+  --headless --device cuda:1 --num_envs 2048 \
+  --seed 42 --max_iterations 2500 \
+  --run_name terrain_extreme_scanner_full_seed42 \
+  --resume --load_run <approach-run-folder> --checkpoint model_7000.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+
+./scripts/run_evaluate.sh \
+  --task Week03-Ant-Terrain-Extreme-Posture-v3 \
+  --headless --device cuda:0 --num_envs 100 \
+  --seed 24 --max_steps 960 \
+  --checkpoint artifacts/terrain_demo/runs/terrain_extreme_full_seed42/model_7150.pt \
+  --output artifacts/terrain_demo/evaluations/terrain_extreme_scanner_full_7150_seed24.json \
   --kit_args=--/renderer/multiGpu/enabled=false
 ```
 

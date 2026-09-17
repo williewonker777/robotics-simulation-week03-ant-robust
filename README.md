@@ -112,6 +112,44 @@ waves/obstacles/stepping-stones의 7개 지형군으로 확장했습니다. 60D 
   --kit_args=--/renderer/multiGpu/enabled=false
 ```
 
+### v3: 극한 지형과 선행 스캔
+
+v3는 flat/rough/slope/stairs 수준을 넘어 waves, deep stairs, 불연속 장애물,
+stepping-stones, **pit/gap/boxes**를 포함한 10개 지형군으로 확장했습니다. 최대
+난이도는 pit 깊이 `0.55 m`, gap 폭 `0.65 m`, box 높이 `0.45 m`이며, 8개 난이도
+row를 mild → approach → full curriculum으로 노출합니다. torso 장착 54-ray
+height scanner를 추가해 정책 입력을 60D에서 **114D**로 늘렸고 행동은 8D를
+유지했습니다. RayCaster reset bookkeeping 때문에 v3 scene은 `clone_in_fabric=False`로
+설정했습니다.
+
+선택 checkpoint:
+
+```text
+artifacts/terrain_demo/runs/terrain_extreme_full_seed42/model_7150.pt
+```
+
+SHA-256: `22b41aed1a7f4c7e2b9e66b5cdb4a61125f4f8f64be52d1766255d5b5baec139`
+
+동일한 극한 분포(seed 24, 100 env)에서 no-scan 정책은 평균 `447.05/960` step,
+완주 `23/100`이었고, 선택 scanner 정책은 `598.79/960` step, `33/100`으로
+개선됐습니다. 다섯 seed(7, 24, 42, 43, 44)의 평균은 `581.10/960` step,
+`32.8/100` 완주입니다. pit과 gap은 여전히 가장 어려운 family이므로 이 수치는
+측정한 분포에 대한 검증 결과이지 임의의 미지 지형에 대한 보장은 아닙니다. 상세한
+지형별 breakdown, raw JSON, 재현 명령은
+[`artifacts/terrain_demo/README.md`](artifacts/terrain_demo/README.md)에 있습니다.
+
+10개 지형 v3 데모:
+
+```bash
+./scripts/run_terrain_demo.sh \
+  --task Week03-Ant-Terrain-Extreme-Posture-v3 \
+  --device cuda:0 \
+  --seed 7 \
+  --cycle-seconds 7 \
+  --checkpoint artifacts/terrain_demo/runs/terrain_extreme_full_seed42/model_7150.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
 ![Training curves](artifacts/plots/training_curves.png)
 
 ![Evaluation returns](artifacts/plots/evaluation_returns.png)
