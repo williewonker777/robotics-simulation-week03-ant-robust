@@ -11,5 +11,6 @@
 - [x] README final result table, commands, interpretation, limitations
 - [x] Five-minute PPT generated and reopened successfully
 - [x] Local tests and artifact-integrity audit pass
-- [ ] Fresh approval obtained for GitHub public repository creation and push
-- [ ] Public GitHub URL inserted into README/PPT/submission form
+- [x] Fresh approval obtained for GitHub public repository creation and push
+- [x] Public GitHub URL inserted into README/PPT
+- [ ] Public GitHub URL copied into the LMS submission form
