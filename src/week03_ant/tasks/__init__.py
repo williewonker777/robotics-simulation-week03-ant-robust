@@ -10,6 +10,10 @@ _TASKS = {
     "Week03-Ant-Test-LowFriction-v0": "LowFrictionAntEnvCfg",
     "Week03-Ant-Test-Heavy-v0": "HeavyAntEnvCfg",
     "Week03-Ant-Test-Push-v0": "PushAntEnvCfg",
+    "Week03-Ant-Terrain-v0": "TerrainAntEnvCfg",
+    "Week03-Ant-Terrain-Train-v0": "TerrainRobustAntEnvCfg",
+    "Week03-Ant-Terrain-Mild-Train-v0": "MildTerrainAntEnvCfg",
+    "Week03-Ant-Terrain-Demo-v0": "TerrainDemoAntEnvCfg",
 }
 
 for task_id, cfg_name in _TASKS.items():

@@ -131,7 +131,8 @@ def main(
                 if sleep_time > 0:
                     time.sleep(sleep_time)
 
-        result = accumulator.summary().to_dict()
+        summary = accumulator.summary()
+        result = summary.to_dict()
         result.update(
             {
                 "task": args_cli.task,
@@ -141,6 +142,29 @@ def main(
                 "max_steps": args_cli.max_steps,
             }
         )
+        terrain = getattr(env.unwrapped.scene, "terrain", None)
+        terrain_types = getattr(terrain, "terrain_types", None)
+        terrain_levels = getattr(terrain, "terrain_levels", None)
+        generator_cfg = getattr(getattr(terrain, "cfg", None), "terrain_generator", None)
+        if terrain_types is not None and generator_cfg is not None:
+            type_names = list(generator_cfg.sub_terrains)
+            result["terrain_type_indices"] = terrain_types.detach().cpu().tolist()
+            result["terrain_levels"] = terrain_levels.detach().cpu().tolist()
+            result["terrain_type_names"] = type_names
+            result["terrain_breakdown"] = {}
+            for type_index, type_name in enumerate(type_names):
+                mask = terrain_types == type_index
+                type_returns = summary.returns[mask]
+                type_lengths = summary.lengths[mask]
+                if type_returns.numel() == 0:
+                    continue
+                result["terrain_breakdown"][type_name] = {
+                    "episodes": int(type_returns.numel()),
+                    "episode_return_mean": float(type_returns.mean().item()),
+                    "episode_return_std": float(type_returns.std(unbiased=False).item()),
+                    "episode_length_mean": float(type_lengths.float().mean().item()),
+                    "full_length_episodes": int((type_lengths >= args_cli.max_steps).sum().item()),
+                }
         serialized = json.dumps(result, indent=2, sort_keys=True)
         print("WEEK03_EVALUATION_JSON_BEGIN")
         print(serialized)

@@ -1,0 +1,74 @@
+{
+  "checkpoint": "/home/wonker/robotics-simulation-week03-ant-robust/logs/rsl_rl/week03_ant/2026-09-17_15-26-34_terrain_mild_seed42/model_1598.pt",
+  "completed_episodes": 4,
+  "episode_length_mean": 833.0,
+  "episode_length_std": 219.3934821274324,
+  "episode_lengths": [
+    453.0,
+    960.0,
+    960.0,
+    959.0
+  ],
+  "episode_return_max": 56.119544982910156,
+  "episode_return_mean": 47.9651403427124,
+  "episode_return_min": 26.83011245727539,
+  "episode_return_std": 12.229153418390153,
+  "episode_returns": [
+    26.83011245727539,
+    56.119544982910156,
+    53.83224868774414,
+    55.07865524291992
+  ],
+  "max_steps": 960,
+  "num_envs": 4,
+  "seed": 7,
+  "task": "Week03-Ant-Terrain-v0",
+  "terrain_breakdown": {
+    "flat": {
+      "episode_length_mean": 453.0,
+      "episode_return_mean": 26.83011245727539,
+      "episode_return_std": 0.0,
+      "episodes": 1,
+      "full_length_episodes": 0
+    },
+    "rough": {
+      "episode_length_mean": 960.0,
+      "episode_return_mean": 56.119544982910156,
+      "episode_return_std": 0.0,
+      "episodes": 1,
+      "full_length_episodes": 1
+    },
+    "slope": {
+      "episode_length_mean": 960.0,
+      "episode_return_mean": 53.83224868774414,
+      "episode_return_std": 0.0,
+      "episodes": 1,
+      "full_length_episodes": 1
+    },
+    "stairs": {
+      "episode_length_mean": 959.0,
+      "episode_return_mean": 55.07865524291992,
+      "episode_return_std": 0.0,
+      "episodes": 1,
+      "full_length_episodes": 0
+    }
+  },
+  "terrain_levels": [
+    5,
+    0,
+    1,
+    1
+  ],
+  "terrain_type_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "terrain_type_names": [
+    "flat",
+    "rough",
+    "slope",
+    "stairs"
+  ]
+}

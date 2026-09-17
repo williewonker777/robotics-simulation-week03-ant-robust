@@ -1,20 +1,147 @@
-"""Ant environment variants used for the robustness experiment.
+"""Ant environment variants used for the robustness experiment and demo.
 
 All variants preserve the course task's 60-dimensional observation and
-8-dimensional action spaces. Only the physical/reset distributions or sensor
-noise change, keeping checkpoints mutually evaluable across every task.
+8-dimensional action spaces. The terrain extension also reports base height
+relative to the local terrain origin so elevated patches keep the same semantic
+observation as the original ground plane.
 """
 
+import isaaclab.sim as sim_utils
 from isaaclab.managers import EventTermCfg as EventTerm
+from isaaclab.managers import TerminationTermCfg as DoneTerm
 from isaaclab.managers import SceneEntityCfg
+from isaaclab.terrains import (
+    HfPyramidSlopedTerrainCfg,
+    HfRandomUniformTerrainCfg,
+    MeshPlaneTerrainCfg,
+    MeshPyramidStairsTerrainCfg,
+    TerrainGeneratorCfg,
+    TerrainImporterCfg,
+)
 from isaaclab.utils import configclass
 from isaaclab.utils.noise import AdditiveUniformNoiseCfg as Unoise
 from isaaclab_tasks.manager_based.classic.ant.ant_env_cfg import (
     AntEnvCfg,
     EventCfg,
+    MySceneCfg,
     ObservationsCfg,
+    TerminationsCfg,
 )
 import isaaclab_tasks.manager_based.classic.humanoid.mdp as mdp
+
+
+MULTI_TERRAIN_GENERATOR_CFG = TerrainGeneratorCfg(
+    seed=42,
+    curriculum=True,
+    size=(6.0, 6.0),
+    border_width=8.0,
+    num_rows=8,
+    num_cols=4,
+    horizontal_scale=0.1,
+    vertical_scale=0.005,
+    slope_threshold=0.75,
+    difficulty_range=(0.0, 1.0),
+    color_scheme="height",
+    use_cache=True,
+    sub_terrains={
+        "flat": MeshPlaneTerrainCfg(proportion=0.25),
+        "rough": HfRandomUniformTerrainCfg(
+            proportion=0.25,
+            noise_range=(0.005, 0.055),
+            noise_step=0.005,
+            downsampled_scale=0.2,
+            border_width=0.25,
+        ),
+        "slope": HfPyramidSlopedTerrainCfg(
+            proportion=0.25,
+            slope_range=(0.02, 0.16),
+            platform_width=1.5,
+            border_width=0.25,
+        ),
+        "stairs": MeshPyramidStairsTerrainCfg(
+            proportion=0.25,
+            step_height_range=(0.015, 0.065),
+            step_width=0.5,
+            platform_width=1.5,
+            border_width=0.5,
+            holes=False,
+        ),
+    },
+)
+
+DEMO_TERRAIN_GENERATOR_CFG = MULTI_TERRAIN_GENERATOR_CFG.replace(
+    seed=43,
+    num_rows=1,
+    difficulty_range=(0.25, 0.25),
+)
+
+MILD_TERRAIN_GENERATOR_CFG = MULTI_TERRAIN_GENERATOR_CFG.replace(
+    seed=44,
+    difficulty_range=(0.0, 0.45),
+)
+
+MULTI_TERRAIN_IMPORTER_CFG = TerrainImporterCfg(
+    prim_path="/World/ground",
+    terrain_type="generator",
+    terrain_generator=MULTI_TERRAIN_GENERATOR_CFG,
+    max_init_terrain_level=7,
+    collision_group=-1,
+    physics_material=sim_utils.RigidBodyMaterialCfg(
+        friction_combine_mode="average",
+        restitution_combine_mode="average",
+        static_friction=1.0,
+        dynamic_friction=1.0,
+        restitution=0.0,
+    ),
+    visual_material=None,
+    debug_vis=False,
+)
+
+MILD_TERRAIN_IMPORTER_CFG = MULTI_TERRAIN_IMPORTER_CFG.replace(
+    terrain_generator=MILD_TERRAIN_GENERATOR_CFG,
+)
+
+
+def base_height_above_terrain_origin(env, asset_cfg: SceneEntityCfg = SceneEntityCfg("robot")):
+    """Return torso height relative to the environment's terrain origin."""
+    asset = env.scene[asset_cfg.name]
+    return (asset.data.root_pos_w[:, 2] - env.scene.env_origins[:, 2]).unsqueeze(-1)
+
+
+def root_height_below_terrain_origin(
+    env,
+    minimum_height: float,
+    asset_cfg: SceneEntityCfg = SceneEntityCfg("robot"),
+):
+    """Terminate falls using local terrain height rather than world height."""
+    asset = env.scene[asset_cfg.name]
+    relative_height = asset.data.root_pos_w[:, 2] - env.scene.env_origins[:, 2]
+    return relative_height < minimum_height
+
+
+@configclass
+class MultiTerrainSceneCfg(MySceneCfg):
+    """Four reproducible terrain families arranged by generator column."""
+
+    terrain = MULTI_TERRAIN_IMPORTER_CFG
+
+
+@configclass
+class MultiTerrainDemoSceneCfg(MultiTerrainSceneCfg):
+    """Use the easiest row so four demo envs show one terrain family each."""
+
+    terrain = MULTI_TERRAIN_IMPORTER_CFG.replace(
+        terrain_generator=DEMO_TERRAIN_GENERATOR_CFG,
+        max_init_terrain_level=0,
+        debug_vis=True,
+    )
+
+
+@configclass
+class MildTerrainSceneCfg(MultiTerrainSceneCfg):
+    """Training distribution concentrated on the moderate demo range."""
+
+    terrain = MILD_TERRAIN_IMPORTER_CFG
 
 
 @configclass
@@ -57,6 +184,42 @@ class RobustObservationCfg(ObservationsCfg):
             self.actions.noise = Unoise(n_min=-0.01, n_max=0.01)
 
     policy: PolicyCfg = PolicyCfg()
+
+
+@configclass
+class TerrainObservationCfg(ObservationsCfg):
+    """Keep the original 60D observation but make height terrain-relative."""
+
+    @configclass
+    class PolicyCfg(ObservationsCfg.PolicyCfg):
+        def __post_init__(self):
+            super().__post_init__()
+            self.base_height.func = base_height_above_terrain_origin
+
+    policy: PolicyCfg = PolicyCfg()
+
+
+@configclass
+class RobustTerrainObservationCfg(RobustObservationCfg):
+    """Robust observation noise with terrain-relative torso height."""
+
+    @configclass
+    class PolicyCfg(RobustObservationCfg.PolicyCfg):
+        def __post_init__(self):
+            super().__post_init__()
+            self.base_height.func = base_height_above_terrain_origin
+
+    policy: PolicyCfg = PolicyCfg()
+
+
+@configclass
+class TerrainTerminationsCfg(TerminationsCfg):
+    """Detect a fall relative to the current terrain patch."""
+
+    torso_height = DoneTerm(
+        func=root_height_below_terrain_origin,
+        params={"minimum_height": 0.31},
+    )
 
 
 @configclass
@@ -188,3 +351,35 @@ class HeavyAntEnvCfg(AntEnvCfg):
 @configclass
 class PushAntEnvCfg(AntEnvCfg):
     events: PushEventCfg = PushEventCfg()
+
+
+@configclass
+class TerrainAntEnvCfg(AntEnvCfg):
+    """Evaluation terrain set with the course policy interface unchanged."""
+
+    scene: MultiTerrainSceneCfg = MultiTerrainSceneCfg(num_envs=4096, env_spacing=6.0, clone_in_fabric=True)
+    observations: TerrainObservationCfg = TerrainObservationCfg()
+    terminations: TerrainTerminationsCfg = TerrainTerminationsCfg()
+
+
+@configclass
+class TerrainRobustAntEnvCfg(RobustAntEnvCfg):
+    """Training terrain set plus the project domain-randomization terms."""
+
+    scene: MultiTerrainSceneCfg = MultiTerrainSceneCfg(num_envs=4096, env_spacing=6.0, clone_in_fabric=True)
+    observations: RobustTerrainObservationCfg = RobustTerrainObservationCfg()
+    terminations: TerrainTerminationsCfg = TerrainTerminationsCfg()
+
+
+@configclass
+class MildTerrainAntEnvCfg(TerrainAntEnvCfg):
+    """Moderate terrain curriculum used only to stabilize the visual demo."""
+
+    scene: MildTerrainSceneCfg = MildTerrainSceneCfg(num_envs=4096, env_spacing=6.0, clone_in_fabric=True)
+
+
+@configclass
+class TerrainDemoAntEnvCfg(TerrainAntEnvCfg):
+    """Four-env GUI layout: flat, rough, slope, and stairs from left to right."""
+
+    scene: MultiTerrainDemoSceneCfg = MultiTerrainDemoSceneCfg(num_envs=4, env_spacing=6.0, clone_in_fabric=True)

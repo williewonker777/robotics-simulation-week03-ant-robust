@@ -22,14 +22,15 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("source", type=Path)
     parser.add_argument("label")
-    parser.add_argument("variant", choices=("baseline", "friction", "robust"))
+    parser.add_argument("variant", choices=("baseline", "friction", "robust", "terrain"))
     parser.add_argument("seed", type=int)
+    parser.add_argument("--checkpoint", default="model_999.pt")
     parser.add_argument("--destination", type=Path, default=Path("artifacts/runs"))
     args = parser.parse_args()
 
     source = args.source.resolve()
     destination = (args.destination / args.label).resolve()
-    checkpoint = source / "model_999.pt"
+    checkpoint = source / args.checkpoint
     event_files = sorted(source.glob("events.out.tfevents.*"))
     if not checkpoint.is_file():
         raise FileNotFoundError(checkpoint)

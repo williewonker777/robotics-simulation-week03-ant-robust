@@ -65,6 +65,25 @@ randomization이 처음 보는 물리 조건의 일반화를 개선하는가**�
 [`EXPERIMENT_PLAN.md`](docs/EXPERIMENT_PLAN.md)와
 [`experiment_matrix.yaml`](configs/experiment_matrix.yaml)에 있습니다.
 
+## 추가: 다중 지형 보행 데모
+
+과제 본 실험과 별도로 flat, random rough, slope, stairs 네 지형을 포함하는 procedural
+terrain curriculum을 추가하고 별도 정책을 학습했습니다. 선택 정책은 100-env 평가에서
+평균 return `33.00`, 평균 episode length `595.15/960`을 기록했으며, 네 지형별 상세
+수치와 학습 재현 명령은
+[`artifacts/terrain_demo/README.md`](artifacts/terrain_demo/README.md)에 있습니다.
+
+네 지형을 순서대로 따라가는 라이브 GUI 데모:
+
+```bash
+./scripts/run_terrain_demo.sh \
+  --device cuda:0 \
+  --seed 7 \
+  --cycle-seconds 7 \
+  --checkpoint artifacts/terrain_demo/runs/terrain_mild_seed42/model_1598.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
 ![Training curves](artifacts/plots/training_curves.png)
 
 ![Evaluation returns](artifacts/plots/evaluation_returns.png)
@@ -177,6 +196,7 @@ scripts/                 train, play_one_episode, analysis and report commands
 configs/                 fair-budget experiment matrix
 artifacts/runs/          checkpoints, params, TensorBoard logs and manifests
 artifacts/evaluations/   per-checkpoint 100-env JSON and aggregate tables
+artifacts/terrain_demo/  multi-terrain checkpoint, evaluations and reproduction notes
 artifacts/plots/         learning and evaluation figures
 artifacts/videos/        same-seed qualitative rollout evidence
 report/                  five-minute PPT and speaker notes
