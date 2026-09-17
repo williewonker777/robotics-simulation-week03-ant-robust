@@ -73,14 +73,19 @@ terrain curriculum을 추가하고 별도 정책을 학습했습니다. 선택 �
 수치와 학습 재현 명령은
 [`artifacts/terrain_demo/README.md`](artifacts/terrain_demo/README.md)에 있습니다.
 
+후속 v1 정책은 지형 원점 기준의 조기 낙상 판정을 전복 각도 판정으로 바꾸고 전체 지형에서
+추가 학습했습니다. 선택 checkpoint는 평균 length `637.17/960`, 완주 `23/100`으로
+개선됐습니다.
+
 네 지형을 순서대로 따라가는 라이브 GUI 데모:
 
 ```bash
 ./scripts/run_terrain_demo.sh \
+  --task Week03-Ant-Terrain-Posture-v1 \
   --device cuda:0 \
   --seed 7 \
   --cycle-seconds 7 \
-  --checkpoint artifacts/terrain_demo/runs/terrain_mild_seed42/model_1598.pt \
+  --checkpoint artifacts/terrain_demo/runs/terrain_posture_full_seed42/model_2800.pt \
   --kit_args=--/renderer/multiGpu/enabled=false
 ```
 

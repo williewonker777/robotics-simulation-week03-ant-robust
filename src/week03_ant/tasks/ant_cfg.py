@@ -223,6 +223,16 @@ class TerrainTerminationsCfg(TerminationsCfg):
 
 
 @configclass
+class TerrainPostureTerminationsCfg(TerminationsCfg):
+    """Detect actual overturning without assuming a flat world-height floor."""
+
+    torso_height = DoneTerm(
+        func=mdp.bad_orientation,
+        params={"limit_angle": 1.2},
+    )
+
+
+@configclass
 class RobustEventCfg(FrictionEventCfg):
     """Randomize dynamics, resets, and intermittent disturbances."""
 
@@ -383,3 +393,17 @@ class TerrainDemoAntEnvCfg(TerrainAntEnvCfg):
     """Four-env GUI layout: flat, rough, slope, and stairs from left to right."""
 
     scene: MultiTerrainDemoSceneCfg = MultiTerrainDemoSceneCfg(num_envs=4, env_spacing=6.0, clone_in_fabric=True)
+
+
+@configclass
+class TerrainPostureAntEnvCfg(TerrainAntEnvCfg):
+    """Terrain task whose fall detector is independent of terrain elevation."""
+
+    terminations: TerrainPostureTerminationsCfg = TerrainPostureTerminationsCfg()
+
+
+@configclass
+class MildTerrainPostureAntEnvCfg(MildTerrainAntEnvCfg):
+    """Moderate curriculum with elevation-independent fall detection."""
+
+    terminations: TerrainPostureTerminationsCfg = TerrainPostureTerminationsCfg()
