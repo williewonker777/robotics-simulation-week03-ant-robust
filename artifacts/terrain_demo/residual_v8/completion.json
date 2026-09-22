@@ -1,0 +1,37 @@
+{
+  "completed_at": "2026-09-21T17:52:18.469087+00:00",
+  "cpu_tests_passed": 98,
+  "training_runs": 6,
+  "training_transitions": 589824000,
+  "primary_first_episodes": 3500,
+  "diagnostic_first_episodes_excluded_from_primary": 700,
+  "independent_metric_mismatches": 0,
+  "source_hashes_verified": 17,
+  "frozen_model_hashes_verified": 10,
+  "old_model_hashes_preserved": {
+    "v5": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+    "v6": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7",
+    "v5_traverse": "d02b5146a3c334d63fb4e362594f3488bfe4ab9bbabbd46c018bf35ef62dcd03"
+  },
+  "promotion": "FAIL",
+  "recommendation": "retain original v5",
+  "videos": 2,
+  "video_frames_each": 480,
+  "video_fps": 30,
+  "full_video_decode": "pass",
+  "static_checks": [
+    "compileall",
+    "shell syntax",
+    "git diff --check",
+    "viewer node syntax",
+    "all local links exist"
+  ],
+  "unavailable_tools": [
+    "ruff",
+    "mypy",
+    "pyright",
+    "python LSP"
+  ],
+  "new_dependencies": false,
+  "remote_git_operations": false
+}

@@ -1,0 +1,1734 @@
+{
+  "status": "pass",
+  "mismatches": 0,
+  "sources": {
+    "v9_sources": 35,
+    "legacy": {
+      "footmap_v7": {
+        "sources": 9,
+        "model_records": 10
+      },
+      "residual_v8": {
+        "sources": 17,
+        "model_records": 10
+      }
+    },
+    "parent_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e"
+  },
+  "checkpoints": [
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/frozen_v5_reference/model_0.pt",
+      "sha256": "94e6287c50260cfcabce2cdc73e93a1f5fdac4aed5e4e176b36943173935954f",
+      "mode": "feet",
+      "iteration": 0,
+      "reference": true
+    },
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/v9_feet_seed42/model_749.pt",
+      "sha256": "11259bea553d4844f1e86375150f44ea5f15b629792d3e25ee4c4d9f5b768f11",
+      "mode": "feet",
+      "iteration": 749,
+      "reference": false
+    },
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/v9_targets_seed42/model_749.pt",
+      "sha256": "5d470da861cef812bb699b984a6c4d9508c49f1367c0d0b6c7e924369d4a206c",
+      "mode": "targets",
+      "iteration": 749,
+      "reference": false
+    },
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/v9_guided_seed42/model_749.pt",
+      "sha256": "a757254a8c63398da3d947d8b1f4cf01b9827679b885091c34a654d37fb2b9a2",
+      "mode": "guided",
+      "iteration": 749,
+      "reference": false
+    },
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/v9_feet_seed43/model_749.pt",
+      "sha256": "f607166ce54f96d0d927e66c4612129ae914d23298dc32f709b37e292dd71b65",
+      "mode": "feet",
+      "iteration": 749,
+      "reference": false
+    },
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/v9_targets_seed43/model_749.pt",
+      "sha256": "3d77f4473c741bf5460ae55230c964f35e03d83ed8859511ba43b3af0e7ba2e8",
+      "mode": "targets",
+      "iteration": 749,
+      "reference": false
+    },
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/v9_guided_seed43/model_749.pt",
+      "sha256": "f740236da9368917ce390f3849f46879fcb47d7904a4b49062414312d09848f1",
+      "mode": "guided",
+      "iteration": 749,
+      "reference": false
+    },
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/v9_feet_seed44/model_749.pt",
+      "sha256": "9fa732714fe8abaa366a0a1036cbe1309d60ed100ffa038d86189b7611d76524",
+      "mode": "feet",
+      "iteration": 749,
+      "reference": false
+    },
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/v9_targets_seed44/model_749.pt",
+      "sha256": "8cc26a744f2c50615dc0426dad7ee8f9e31b8e9a6f69768ab3cb847b59ce2644",
+      "mode": "targets",
+      "iteration": 749,
+      "reference": false
+    },
+    {
+      "path": "artifacts/terrain_demo/foothold_v9/runs/v9_guided_seed44/model_749.pt",
+      "sha256": "453db38af4c4010b0ba4ce1977ea20ccff4607856b6d410279dca21249934791",
+      "mode": "guided",
+      "iteration": 749,
+      "reference": false
+    }
+  ],
+  "configs": {
+    "checked": [
+      "v9_feet_seed42",
+      "v9_targets_seed42",
+      "v9_guided_seed42",
+      "v9_feet_seed43",
+      "v9_targets_seed43",
+      "v9_guided_seed43",
+      "v9_feet_seed44",
+      "v9_targets_seed44",
+      "v9_guided_seed44"
+    ],
+    "count": 9,
+    "operational_configs_equal": true
+  },
+  "commands": {
+    "records": 43,
+    "required_pre_freeze": 19,
+    "primary_evaluations": 20,
+    "all_returncodes_zero": true,
+    "freeze_time": "2026-09-22T04:24:11.244459+00:00"
+  },
+  "raw_files": [
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/frozen_v5_reference__geometry64_reset38.json",
+      "sha256": "8008d6f8a67408a66f76baf92faa0a43c00b6c641c81202c218750679bb22e1b",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/frozen_v5_reference__geometry65_reset39.json",
+      "sha256": "65ddce4189e6e6c572a2cfd15d575ccab2d2790d029012d7371b68e58b6f5640",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_feet_seed42__geometry64_reset38.json",
+      "sha256": "c7bea7f1f9b29da4a031a6d323da7688752fc410d03a56211cdf53426f86b055",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_feet_seed42__geometry65_reset39.json",
+      "sha256": "080aeaf5deeb1ae1f659ab638151c8c9395e38667ba3b5f0f294fbc1ad2161b6",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_targets_seed42__geometry64_reset38.json",
+      "sha256": "e07657ff7ed56915b60cb162a6d718d2c081c750a54c5cfa2cd662aac08c3162",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_targets_seed42__geometry65_reset39.json",
+      "sha256": "8e5aae97060bd2a8a78a0ecd899133c200707fb8a88b7657acdf2bef4e1c4f3e",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_guided_seed42__geometry64_reset38.json",
+      "sha256": "e25204a6799e7be98ff426974a91324322bfd2e7083f490762344e68b69285e7",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_guided_seed42__geometry65_reset39.json",
+      "sha256": "9b307c62dc0666e3653603665276c870f147b0f162d6ebc5bdfd2fc010960cd5",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_feet_seed43__geometry64_reset38.json",
+      "sha256": "7d0ae768d8156abe96c88e7294cab2cf3f1bcf9ba72696117043f969668ec76d",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_feet_seed43__geometry65_reset39.json",
+      "sha256": "a775ded91af69b01a87ea5291ede93c1d038abe82ba3d165f5109d2b13c7bcbb",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_targets_seed43__geometry64_reset38.json",
+      "sha256": "138cf42e43b9fade4b184e95779d6b48bd4299dde73cd0a6c26bacf171ef4821",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_targets_seed43__geometry65_reset39.json",
+      "sha256": "4dd8c092689a0a9cb86ff3061c9c442c9a6d51348e2b0863fd4862799e1465eb",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_guided_seed43__geometry64_reset38.json",
+      "sha256": "776b3dde89e921b4652a9384123c702fdd9751da6a475bc8ecf9aca3902bf319",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_guided_seed43__geometry65_reset39.json",
+      "sha256": "5a9e9a3a36b91545c91d18c5b1a81cc8a493d25d4bf3985e82883443bab91bfc",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_feet_seed44__geometry64_reset38.json",
+      "sha256": "429ca99e120bb1c99a93ca1a7f381cae58859625d46d22f19a7dde02039ceb26",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_feet_seed44__geometry65_reset39.json",
+      "sha256": "11619123254323239b30de49743ef2b4d0a81668370b2dc5a643ff40c14c8fd5",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_targets_seed44__geometry64_reset38.json",
+      "sha256": "b28f92d2960d46e150b869ed987b01383e4f8b861325ed6e252241a7655d5e65",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_targets_seed44__geometry65_reset39.json",
+      "sha256": "ff1d002a15b34e876e5a99be6ab4d7c08cb19ec6f602282bf36b24270dd576ff",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_guided_seed44__geometry64_reset38.json",
+      "sha256": "3ba46eb4b809114669685d4f18eada1d4adf8a9d013b5c45696617b9d236fe99",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    },
+    {
+      "file": "artifacts/terrain_demo/foothold_v9/evaluations/v9_guided_seed44__geometry65_reset39.json",
+      "sha256": "b427c2838ab5287e2ca95f3c00a2671950248b94fa0e1e469b4dbd87e0ea76d6",
+      "episodes": 175,
+      "float32_thresholds": {
+        "one": 13.100000381469727,
+        "six": 53.099998474121094,
+        "period": 56.0
+      }
+    }
+  ],
+  "total_primary_first_episodes": 3500,
+  "totals": {
+    "frozen_v5": {
+      "n": 300,
+      "one": 264,
+      "six": 136,
+      "falls": 24,
+      "lane": 0,
+      "world": 0,
+      "flat_n": 50,
+      "flat_falls": 5
+    },
+    "feet": {
+      "n": 900,
+      "one": 734,
+      "six": 283,
+      "falls": 99,
+      "lane": 47,
+      "world": 0,
+      "flat_n": 150,
+      "flat_falls": 10
+    },
+    "targets": {
+      "n": 900,
+      "one": 741,
+      "six": 416,
+      "falls": 91,
+      "lane": 66,
+      "world": 0,
+      "flat_n": 150,
+      "flat_falls": 11
+    },
+    "guided": {
+      "n": 900,
+      "one": 763,
+      "six": 424,
+      "falls": 105,
+      "lane": 30,
+      "world": 0,
+      "flat_n": 150,
+      "flat_falls": 12
+    }
+  },
+  "seeds": {
+    "42": {
+      "feet": {
+        "n": 300,
+        "one": 240,
+        "six": 86,
+        "falls": 34,
+        "lane": 18,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 3
+      },
+      "targets": {
+        "n": 300,
+        "one": 241,
+        "six": 132,
+        "falls": 29,
+        "lane": 27,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 3
+      },
+      "guided": {
+        "n": 300,
+        "one": 252,
+        "six": 139,
+        "falls": 45,
+        "lane": 2,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 6
+      }
+    },
+    "43": {
+      "feet": {
+        "n": 300,
+        "one": 254,
+        "six": 94,
+        "falls": 37,
+        "lane": 4,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 4
+      },
+      "targets": {
+        "n": 300,
+        "one": 265,
+        "six": 145,
+        "falls": 28,
+        "lane": 7,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 5
+      },
+      "guided": {
+        "n": 300,
+        "one": 250,
+        "six": 128,
+        "falls": 31,
+        "lane": 20,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 4
+      }
+    },
+    "44": {
+      "feet": {
+        "n": 300,
+        "one": 240,
+        "six": 103,
+        "falls": 28,
+        "lane": 25,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 3
+      },
+      "targets": {
+        "n": 300,
+        "one": 235,
+        "six": 139,
+        "falls": 34,
+        "lane": 32,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 3
+      },
+      "guided": {
+        "n": 300,
+        "one": 261,
+        "six": 157,
+        "falls": 29,
+        "lane": 8,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 2
+      }
+    }
+  },
+  "per_family": {
+    "frozen_v5": {
+      "rough": {
+        "0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 10,
+          "one": 10,
+          "six": 7,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 10,
+          "one": 8,
+          "six": 1,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "slope": {
+        "0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 10,
+          "one": 10,
+          "six": 5,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "stairs": {
+        "0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 10,
+          "one": 10,
+          "six": 7,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "waves": {
+        "0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 10,
+          "one": 10,
+          "six": 9,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 10,
+          "one": 8,
+          "six": 5,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 10,
+          "one": 3,
+          "six": 1,
+          "falls": 7,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "obstacles": {
+        "0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 10,
+          "one": 9,
+          "six": 5,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 10,
+          "one": 10,
+          "six": 1,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "stepping_stones": {
+        "0": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 10,
+          "one": 4,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 10,
+          "one": 6,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 10,
+          "one": 5,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      }
+    },
+    "feet": {
+      "rough": {
+        "0": {
+          "n": 30,
+          "one": 25,
+          "six": 25,
+          "falls": 2,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 24,
+          "six": 24,
+          "falls": 1,
+          "lane": 5,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 29,
+          "six": 26,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 28,
+          "six": 2,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 23,
+          "six": 0,
+          "falls": 7,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "slope": {
+        "0": {
+          "n": 30,
+          "one": 23,
+          "six": 23,
+          "falls": 4,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 29,
+          "six": 28,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 30,
+          "six": 12,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 27,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 25,
+          "six": 0,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "stairs": {
+        "0": {
+          "n": 30,
+          "one": 23,
+          "six": 22,
+          "falls": 1,
+          "lane": 7,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 30,
+          "six": 9,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 28,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 28,
+          "six": 0,
+          "falls": 1,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 23,
+          "six": 0,
+          "falls": 6,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "waves": {
+        "0": {
+          "n": 30,
+          "one": 25,
+          "six": 25,
+          "falls": 4,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 22,
+          "six": 20,
+          "falls": 4,
+          "lane": 4,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 22,
+          "six": 13,
+          "falls": 6,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 21,
+          "six": 4,
+          "falls": 8,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 9,
+          "six": 0,
+          "falls": 20,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "obstacles": {
+        "0": {
+          "n": 30,
+          "one": 23,
+          "six": 23,
+          "falls": 2,
+          "lane": 5,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 28,
+          "six": 21,
+          "falls": 0,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 26,
+          "six": 5,
+          "falls": 2,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 23,
+          "six": 0,
+          "falls": 4,
+          "lane": 4,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 26,
+          "six": 0,
+          "falls": 3,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "stepping_stones": {
+        "0": {
+          "n": 30,
+          "one": 30,
+          "six": 1,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 30,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 21,
+          "six": 0,
+          "falls": 3,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 15,
+          "six": 0,
+          "falls": 5,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 18,
+          "six": 0,
+          "falls": 3,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      }
+    },
+    "targets": {
+      "rough": {
+        "0": {
+          "n": 30,
+          "one": 18,
+          "six": 18,
+          "falls": 4,
+          "lane": 8,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 24,
+          "six": 24,
+          "falls": 1,
+          "lane": 5,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 24,
+          "six": 24,
+          "falls": 1,
+          "lane": 5,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 29,
+          "six": 25,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 22,
+          "six": 13,
+          "falls": 7,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "slope": {
+        "0": {
+          "n": 30,
+          "one": 15,
+          "six": 15,
+          "falls": 3,
+          "lane": 12,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 28,
+          "six": 28,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 27,
+          "six": 22,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 29,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 28,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "stairs": {
+        "0": {
+          "n": 30,
+          "one": 21,
+          "six": 21,
+          "falls": 0,
+          "lane": 9,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 29,
+          "six": 28,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 28,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 30,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 24,
+          "six": 0,
+          "falls": 5,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "waves": {
+        "0": {
+          "n": 30,
+          "one": 21,
+          "six": 21,
+          "falls": 5,
+          "lane": 4,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 24,
+          "six": 24,
+          "falls": 4,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 25,
+          "six": 25,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 27,
+          "six": 21,
+          "falls": 3,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 16,
+          "six": 3,
+          "falls": 14,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "obstacles": {
+        "0": {
+          "n": 30,
+          "one": 23,
+          "six": 23,
+          "falls": 1,
+          "lane": 6,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 26,
+          "six": 25,
+          "falls": 1,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 26,
+          "six": 23,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 26,
+          "six": 8,
+          "falls": 2,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 25,
+          "six": 0,
+          "falls": 4,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "stepping_stones": {
+        "0": {
+          "n": 30,
+          "one": 30,
+          "six": 19,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 27,
+          "six": 6,
+          "falls": 2,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 25,
+          "six": 0,
+          "falls": 4,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 22,
+          "six": 0,
+          "falls": 5,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 22,
+          "six": 0,
+          "falls": 4,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      }
+    },
+    "guided": {
+      "rough": {
+        "0": {
+          "n": 30,
+          "one": 26,
+          "six": 26,
+          "falls": 3,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 29,
+          "six": 29,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 27,
+          "six": 27,
+          "falls": 1,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 27,
+          "six": 23,
+          "falls": 2,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 24,
+          "six": 8,
+          "falls": 6,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "slope": {
+        "0": {
+          "n": 30,
+          "one": 24,
+          "six": 24,
+          "falls": 5,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 24,
+          "six": 24,
+          "falls": 3,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 27,
+          "six": 20,
+          "falls": 2,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 27,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 25,
+          "six": 0,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "stairs": {
+        "0": {
+          "n": 30,
+          "one": 26,
+          "six": 25,
+          "falls": 1,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 29,
+          "six": 27,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 28,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 28,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 23,
+          "six": 0,
+          "falls": 6,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "waves": {
+        "0": {
+          "n": 30,
+          "one": 26,
+          "six": 26,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 24,
+          "six": 24,
+          "falls": 5,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 29,
+          "six": 29,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 25,
+          "six": 21,
+          "falls": 4,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 11,
+          "six": 1,
+          "falls": 19,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "obstacles": {
+        "0": {
+          "n": 30,
+          "one": 26,
+          "six": 25,
+          "falls": 3,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 25,
+          "six": 25,
+          "falls": 3,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 26,
+          "six": 18,
+          "falls": 3,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 28,
+          "six": 7,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 26,
+          "six": 1,
+          "falls": 2,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      },
+      "stepping_stones": {
+        "0": {
+          "n": 30,
+          "one": 27,
+          "six": 9,
+          "falls": 2,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "1": {
+          "n": 30,
+          "one": 29,
+          "six": 5,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "2": {
+          "n": 30,
+          "one": 23,
+          "six": 0,
+          "falls": 6,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "3": {
+          "n": 30,
+          "one": 23,
+          "six": 0,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        },
+        "4": {
+          "n": 30,
+          "one": 21,
+          "six": 0,
+          "falls": 4,
+          "lane": 4,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0
+        }
+      }
+    }
+  },
+  "promotion_gate": {
+    "passed": false,
+    "checks": {
+      "one_vs_frozen_v5": false,
+      "six_vs_frozen_v5": true,
+      "falls_vs_frozen_v5": false,
+      "one_vs_feet": true,
+      "six_vs_feet": true,
+      "falls_vs_feet": false,
+      "one_vs_targets": true,
+      "six_vs_targets": true,
+      "falls_vs_targets": false,
+      "zero_world_exit": true,
+      "flat_falls_vs_frozen_v5": true,
+      "guided_one_better_than_targets_majority": true
+    }
+  },
+  "auditor_fixes": [
+    "After the first final run, changed the family_breakdown check from JSON key order to set equality; the writer serializes that mapping alphabetically, while lane_family_names preserves semantic lane order."
+  ],
+  "method": "Standalone CPU audit; imports neither experiment summarizer. Strict crossings were recomputed from raw per-environment float32 distances, actual geometry thresholds, and terminal/lane/world flags."
+}

@@ -1,0 +1,186 @@
+{
+  "frozen_at": "2026-09-21T17:36:23.944014+00:00",
+  "parent_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "selection": "all final749 only; video and diagnostic seed42 predeclared; no post-eval selection",
+  "training_pairs": [
+    [
+      42,
+      51
+    ],
+    [
+      43,
+      58
+    ],
+    [
+      44,
+      59
+    ]
+  ],
+  "heldout_pairs": [
+    [
+      62,
+      36
+    ],
+    [
+      63,
+      37
+    ]
+  ],
+  "runs": [
+    {
+      "checkpoint": "artifacts/terrain_demo/residual_v8/runs/v8_blind_seed42/model_749.pt",
+      "sha256": "1a7f4b07f3579e5fcb1863e87f1c64a3e99f3536e68e3b48b92a5b2f9c327fec",
+      "mode": "blind",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 749,
+      "group": "residual_blind",
+      "policy_class": "ResidualActorCritic",
+      "base_bit_identical": true,
+      "residual_limit": 0.5,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_01-10-37_v8_blind_seed42"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/residual_v8/runs/v8_footmap_seed42/model_749.pt",
+      "sha256": "c79b241bf1450f198dad28d5b0787e73e5bc8abbedf184a08c8a78df70d8b055",
+      "mode": "footmap",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 749,
+      "group": "residual_footmap",
+      "policy_class": "ResidualActorCritic",
+      "base_bit_identical": true,
+      "residual_limit": 0.5,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_01-23-27_v8_footmap_seed42"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/residual_v8/runs/v8_blind_seed43/model_749.pt",
+      "sha256": "f3e5b6dfa331928cc9f303af86ca5385f4cbafc5c8c52e8e941f09950d3e0046",
+      "mode": "blind",
+      "training_seed": 43,
+      "training_geometry": 58,
+      "iteration": 749,
+      "group": "residual_blind",
+      "policy_class": "ResidualActorCritic",
+      "base_bit_identical": true,
+      "residual_limit": 0.5,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_01-39-12_v8_blind_seed43"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/residual_v8/runs/v8_footmap_seed43/model_749.pt",
+      "sha256": "187ef14fc3dd7c6dd574366e53f0321074f5223f621fc8add737db493c287a3d",
+      "mode": "footmap",
+      "training_seed": 43,
+      "training_geometry": 58,
+      "iteration": 749,
+      "group": "residual_footmap",
+      "policy_class": "ResidualActorCritic",
+      "base_bit_identical": true,
+      "residual_limit": 0.5,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_01-52-05_v8_footmap_seed43"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/residual_v8/runs/v8_blind_seed44/model_749.pt",
+      "sha256": "302f4967b5f261a582a144a69fd87c359bf645318344b14f3d149d0eb022de10",
+      "mode": "blind",
+      "training_seed": 44,
+      "training_geometry": 59,
+      "iteration": 749,
+      "group": "residual_blind",
+      "policy_class": "ResidualActorCritic",
+      "base_bit_identical": true,
+      "residual_limit": 0.5,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_02-07-51_v8_blind_seed44"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/residual_v8/runs/v8_footmap_seed44/model_749.pt",
+      "sha256": "8605c18a839d838bb806d6ac83c11eeb47321b9d8aaa0741f1c2b024a953875e",
+      "mode": "footmap",
+      "training_seed": 44,
+      "training_geometry": 59,
+      "iteration": 749,
+      "group": "residual_footmap",
+      "policy_class": "ResidualActorCritic",
+      "base_bit_identical": true,
+      "residual_limit": 0.5,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_02-20-43_v8_footmap_seed44"
+    }
+  ],
+  "device": "cuda:1",
+  "reference": {
+    "checkpoint": "artifacts/terrain_demo/residual_v8/runs/frozen_v5_reference/model_0.pt",
+    "sha256": "9ac4434d9282c560423125785062c8da0d5ae403ea0e076a811fab2cfe5eaee6",
+    "mode": "blind",
+    "training_seed": null,
+    "training_geometry": null,
+    "iteration": 0,
+    "group": "frozen_v5",
+    "policy_class": "ResidualActorCritic",
+    "base_bit_identical": true,
+    "residual_limit": 0.5,
+    "transitions": 0
+  },
+  "comparisons": [
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_footmap_seed42/model_749.pt",
+      "sha256": "c820326b234aa1acf8d62bb1a86c307b6bd558ea1a4de674160e6ab6e46391ef",
+      "mode": "footmap",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 749,
+      "group": "v7_footmap",
+      "policy_class": "FootMapActorCritic",
+      "base_bit_identical": null,
+      "residual_limit": null
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_footmap_seed43/model_749.pt",
+      "sha256": "ffb9a8bd348fd630b5dee8005e6d87d5bf19e03c56fb62670e223987b4b6730d",
+      "mode": "footmap",
+      "training_seed": 43,
+      "training_geometry": 58,
+      "iteration": 749,
+      "group": "v7_footmap",
+      "policy_class": "FootMapActorCritic",
+      "base_bit_identical": null,
+      "residual_limit": null
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_footmap_seed44/model_749.pt",
+      "sha256": "d9f2a1433fce17f8b97ff554f430a0a00868e25defd932ec5b057b973c9ab825",
+      "mode": "footmap",
+      "training_seed": 44,
+      "training_geometry": 59,
+      "iteration": 749,
+      "group": "v7_footmap",
+      "policy_class": "FootMapActorCritic",
+      "base_bit_identical": null,
+      "residual_limit": null
+    }
+  ],
+  "source_sha256": {
+    "src/week03_ant/footmap_math.py": "11ac8aa4aae318cc2dcc7c82743144f09c5a6e009e1713918fef961b8e5be79a",
+    "src/week03_ant/footmap_policy.py": "c855e38dd1ee9970eae1ee7f7e0996b5a0a95f5d020bdc273d0efd36b32e0d0d",
+    "src/week03_ant/tasks/footmap_v7_cfg.py": "791153ef9d4db4e58aaad8081a63630763ad4f617b329ec94f4e64e9c487a057",
+    "src/week03_ant/tasks/agents/rsl_rl_ppo_cfg.py": "2527ba19dcafb7acbccffbeccad7d92cab9a8154696249676f82c7e939dfa4b2",
+    "scripts/train.py": "a5460cad202c408d9f4a87d3549bd6e2caeed3c9335996b533d0b7f8ff904c12",
+    "scripts/play_one_episode.py": "ab8a6407a84ec54da5c4867b5df4eaaf111c089e6f766f3bf83739be9055535a",
+    "src/week03_ant/tasks/lanes.py": "584df4e7b7fec69d0537ce32eda1e9f66a403b35d31cd5ba544e37cdeddd1b51",
+    "src/week03_ant/tasks/rough_v5_cfg.py": "dbbf7ef32e34fd3faef74845427e03ea289395851ddf7618023a39d030db5668",
+    "scripts/run_footmap_experiment.py": "88b4816a60c1127a469e66e5c44550fc3bfc91d41e224428bede6c3d505f2c79",
+    "src/week03_ant/residual_policy.py": "5447414a12c3dfb81bef5f28ca953b673fea56e1f2c46c0b3e531a99aa9fbbe2",
+    "src/week03_ant/tasks/residual_v8.py": "415725e243946c942d53eec6171311e0d8554d1a1858ce0f9f3fa4104f6ad1cd",
+    "src/week03_ant/tasks/agents/residual_v8_cfg.py": "d11db6fe894f437ab289081dbc5320c4e408725c32b82d754e9d28cbfd25fa6d",
+    "scripts/residual_v8.py": "801e56cabdec39d9cc59675518c7c2fed81ed234fc701dff65759f3a3556a228",
+    "scripts/prepare_residual_checkpoint.py": "fdf81129228a24d14c82d2e1c94a21c9298b9ad86866f51199cd5207028cb0ee",
+    "scripts/run_residual_experiment.py": "491c09c8aa0f8de0e2ef8bf55e2c5cee11ca2e2e4aab79801bff08a27e7eea2a",
+    "scripts/summarize_footmap.py": "e66b8411ba57a12dda452b09bea173286ba0b995dcf7f32acc0651a05873efe3",
+    "scripts/summarize_residual.py": "e3f0a13f69ee7faf9df819c4c9b4dea33363b49faf9faa0b0fc38da1b7034c89"
+  }
+}

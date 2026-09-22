@@ -1,0 +1,2209 @@
+{
+  "fixed": {
+    "blind_reference": {
+      "runs": [
+        "lanes_seed24",
+        "lanes_seed25",
+        "lanes_seed26"
+      ],
+      "total_first_episodes": 525,
+      "terrain_episodes": 450,
+      "terrain_falls": 45,
+      "terrain_speed_mps": 3.007488601737552,
+      "flat_falls": 2,
+      "flat_episodes": 75,
+      "families": {
+        "flat": {
+          "episodes": 75,
+          "falls": 2,
+          "forward_speed_mps": 9.394278526306152,
+          "forward_distance_m": 149.6032918294271,
+          "one_terrain_tile_crossings": null,
+          "all_terrain_tiles_crossings": null,
+          "out_of_lane_exits": null,
+          "world_exits": null,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 1,
+              "one": null,
+              "six": null
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 1,
+              "one": null,
+              "six": null
+            }
+          }
+        },
+        "obstacles": {
+          "episodes": 75,
+          "falls": 6,
+          "forward_speed_mps": 3.242882013320923,
+          "forward_distance_m": 49.80617904663086,
+          "one_terrain_tile_crossings": 69,
+          "all_terrain_tiles_crossings": 41,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 15
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 13
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 13
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 4,
+              "one": 11,
+              "six": 0
+            }
+          }
+        },
+        "rough": {
+          "episodes": 75,
+          "falls": 2,
+          "forward_speed_mps": 3.7655157248179116,
+          "forward_distance_m": 60.15435536702474,
+          "one_terrain_tile_crossings": 73,
+          "all_terrain_tiles_crossings": 57,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 15
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 14
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 15
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 12
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 1
+            }
+          }
+        },
+        "slope": {
+          "episodes": 75,
+          "falls": 3,
+          "forward_speed_mps": 3.3348477681477866,
+          "forward_distance_m": 52.309319814046226,
+          "one_terrain_tile_crossings": 72,
+          "all_terrain_tiles_crossings": 35,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 15
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 14
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 6
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 0
+            }
+          }
+        },
+        "stairs": {
+          "episodes": 75,
+          "falls": 4,
+          "forward_speed_mps": 2.810464382171631,
+          "forward_distance_m": 44.668402353922524,
+          "one_terrain_tile_crossings": 69,
+          "all_terrain_tiles_crossings": 26,
+          "out_of_lane_exits": 2,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 14
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 12
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 13,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 13,
+              "six": 0
+            }
+          }
+        },
+        "stepping_stones": {
+          "episodes": 75,
+          "falls": 9,
+          "forward_speed_mps": 1.6311989227930705,
+          "forward_distance_m": 24.964150110880535,
+          "one_terrain_tile_crossings": 49,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 3,
+              "one": 8,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 2,
+              "one": 6,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 3,
+              "one": 6,
+              "six": 0
+            }
+          }
+        },
+        "waves": {
+          "episodes": 75,
+          "falls": 21,
+          "forward_speed_mps": 3.2600227991739907,
+          "forward_distance_m": 46.91592025756836,
+          "one_terrain_tile_crossings": 54,
+          "all_terrain_tiles_crossings": 42,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 3,
+              "one": 12,
+              "six": 12
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 14
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 4,
+              "one": 11,
+              "six": 10
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 4,
+              "one": 11,
+              "six": 6
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 9,
+              "one": 6,
+              "six": 0
+            }
+          }
+        }
+      },
+      "one_terrain_tile_crossings": 386,
+      "all_terrain_tiles_crossings": 201,
+      "out_of_lane_exits": 2,
+      "world_exits": 0,
+      "strict_success_rate": 0.8577777777777778
+    },
+    "selected": {
+      "runs": [
+        "lanes_seed24",
+        "lanes_seed25",
+        "lanes_seed26"
+      ],
+      "total_first_episodes": 525,
+      "terrain_episodes": 450,
+      "terrain_falls": 34,
+      "terrain_speed_mps": 2.6171397633022733,
+      "flat_falls": 3,
+      "flat_episodes": 75,
+      "families": {
+        "flat": {
+          "episodes": 75,
+          "falls": 3,
+          "forward_speed_mps": 10.609755516052246,
+          "forward_distance_m": 169.81053670247397,
+          "one_terrain_tile_crossings": null,
+          "all_terrain_tiles_crossings": null,
+          "out_of_lane_exits": null,
+          "world_exits": null,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 1,
+              "one": null,
+              "six": null
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 1,
+              "one": null,
+              "six": null
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 1,
+              "one": null,
+              "six": null
+            }
+          }
+        },
+        "obstacles": {
+          "episodes": 75,
+          "falls": 6,
+          "forward_speed_mps": 2.722148815790812,
+          "forward_distance_m": 42.5292599995931,
+          "one_terrain_tile_crossings": 67,
+          "all_terrain_tiles_crossings": 12,
+          "out_of_lane_exits": 2,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 13,
+              "six": 11
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 1
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 2,
+              "one": 12,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 2,
+              "one": 13,
+              "six": 0
+            }
+          }
+        },
+        "rough": {
+          "episodes": 75,
+          "falls": 1,
+          "forward_speed_mps": 3.0987753868103027,
+          "forward_distance_m": 49.57756423950195,
+          "one_terrain_tile_crossings": 74,
+          "all_terrain_tiles_crossings": 22,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 15
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 7
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            }
+          }
+        },
+        "slope": {
+          "episodes": 75,
+          "falls": 1,
+          "forward_speed_mps": 2.8886424700419107,
+          "forward_distance_m": 46.24209213256836,
+          "one_terrain_tile_crossings": 71,
+          "all_terrain_tiles_crossings": 20,
+          "out_of_lane_exits": 3,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 13,
+              "six": 13
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 13,
+              "six": 7
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            }
+          }
+        },
+        "stairs": {
+          "episodes": 75,
+          "falls": 3,
+          "forward_speed_mps": 2.483980894088745,
+          "forward_distance_m": 39.44269307454427,
+          "one_terrain_tile_crossings": 72,
+          "all_terrain_tiles_crossings": 6,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 6
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 2,
+              "one": 13,
+              "six": 0
+            }
+          }
+        },
+        "stepping_stones": {
+          "episodes": 75,
+          "falls": 4,
+          "forward_speed_mps": 1.6409094333648682,
+          "forward_distance_m": 25.536619186401367,
+          "one_terrain_tile_crossings": 61,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 4,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 12,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 9,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 2,
+              "one": 10,
+              "six": 0
+            }
+          }
+        },
+        "waves": {
+          "episodes": 75,
+          "falls": 19,
+          "forward_speed_mps": 2.8683815797170005,
+          "forward_distance_m": 41.838829040527344,
+          "one_terrain_tile_crossings": 56,
+          "all_terrain_tiles_crossings": 24,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 15,
+              "falls": 3,
+              "one": 12,
+              "six": 11
+            },
+            "1:0.4": {
+              "episodes": 15,
+              "falls": 1,
+              "one": 14,
+              "six": 12
+            },
+            "2:0.6": {
+              "episodes": 15,
+              "falls": 4,
+              "one": 11,
+              "six": 1
+            },
+            "3:0.8": {
+              "episodes": 15,
+              "falls": 6,
+              "one": 9,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 15,
+              "falls": 5,
+              "one": 10,
+              "six": 0
+            }
+          }
+        }
+      },
+      "one_terrain_tile_crossings": 401,
+      "all_terrain_tiles_crossings": 84,
+      "out_of_lane_exits": 9,
+      "world_exits": 0,
+      "strict_success_rate": 0.8911111111111111
+    }
+  },
+  "fresh": {
+    "blind_reference": {
+      "runs": [
+        "fresh_geometry51_seed31",
+        "fresh_geometry51_seed32",
+        "fresh_geometry56_seed33",
+        "fresh_geometry57_seed33"
+      ],
+      "total_first_episodes": 700,
+      "terrain_episodes": 600,
+      "terrain_falls": 46,
+      "terrain_speed_mps": 3.0269700785477958,
+      "flat_falls": 11,
+      "flat_episodes": 100,
+      "families": {
+        "flat": {
+          "episodes": 100,
+          "falls": 11,
+          "forward_speed_mps": 9.161015510559082,
+          "forward_distance_m": 144.8445930480957,
+          "one_terrain_tile_crossings": null,
+          "all_terrain_tiles_crossings": null,
+          "out_of_lane_exits": null,
+          "world_exits": null,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 1,
+              "one": null,
+              "six": null
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 4,
+              "one": null,
+              "six": null
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 1,
+              "one": null,
+              "six": null
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 5,
+              "one": null,
+              "six": null
+            }
+          }
+        },
+        "obstacles": {
+          "episodes": 100,
+          "falls": 5,
+          "forward_speed_mps": 3.388366222381592,
+          "forward_distance_m": 53.262895584106445,
+          "one_terrain_tile_crossings": 94,
+          "all_terrain_tiles_crossings": 54,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 20
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 18
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 16
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 18,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 4,
+              "one": 16,
+              "six": 0
+            }
+          }
+        },
+        "rough": {
+          "episodes": 100,
+          "falls": 4,
+          "forward_speed_mps": 3.6685912013053894,
+          "forward_distance_m": 58.733567237854004,
+          "one_terrain_tile_crossings": 96,
+          "all_terrain_tiles_crossings": 71,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 18,
+              "six": 18
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 19
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 19
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 12
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 3
+            }
+          }
+        },
+        "slope": {
+          "episodes": 100,
+          "falls": 9,
+          "forward_speed_mps": 3.249776303768158,
+          "forward_distance_m": 51.404314041137695,
+          "one_terrain_tile_crossings": 91,
+          "all_terrain_tiles_crossings": 47,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 18,
+              "six": 18
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 20
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 9
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 5,
+              "one": 15,
+              "six": 0
+            }
+          }
+        },
+        "stairs": {
+          "episodes": 100,
+          "falls": 5,
+          "forward_speed_mps": 2.7091864347457886,
+          "forward_distance_m": 43.361833572387695,
+          "one_terrain_tile_crossings": 95,
+          "all_terrain_tiles_crossings": 34,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 18
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 16
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 0
+            }
+          }
+        },
+        "stepping_stones": {
+          "episodes": 100,
+          "falls": 10,
+          "forward_speed_mps": 1.5918851494789124,
+          "forward_distance_m": 25.382211685180664,
+          "one_terrain_tile_crossings": 62,
+          "all_terrain_tiles_crossings": 2,
+          "out_of_lane_exits": 3,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 18,
+              "six": 2
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 8,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 6,
+              "one": 6,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 10,
+              "six": 0
+            }
+          }
+        },
+        "waves": {
+          "episodes": 100,
+          "falls": 13,
+          "forward_speed_mps": 3.5540151596069336,
+          "forward_distance_m": 54.25426769256592,
+          "one_terrain_tile_crossings": 86,
+          "all_terrain_tiles_crossings": 66,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 20
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 19
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 18,
+              "six": 17
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 18,
+              "six": 10
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 8,
+              "one": 11,
+              "six": 0
+            }
+          }
+        }
+      },
+      "one_terrain_tile_crossings": 524,
+      "all_terrain_tiles_crossings": 274,
+      "out_of_lane_exits": 5,
+      "world_exits": 0,
+      "strict_success_rate": 0.8733333333333333
+    },
+    "selected": {
+      "runs": [
+        "fresh_geometry51_seed31",
+        "fresh_geometry51_seed32",
+        "fresh_geometry56_seed33",
+        "fresh_geometry57_seed33"
+      ],
+      "total_first_episodes": 700,
+      "terrain_episodes": 600,
+      "terrain_falls": 62,
+      "terrain_speed_mps": 2.6325372457504272,
+      "flat_falls": 10,
+      "flat_episodes": 100,
+      "families": {
+        "flat": {
+          "episodes": 100,
+          "falls": 10,
+          "forward_speed_mps": 10.685994148254395,
+          "forward_distance_m": 168.1563835144043,
+          "one_terrain_tile_crossings": null,
+          "all_terrain_tiles_crossings": null,
+          "out_of_lane_exits": null,
+          "world_exits": null,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 3,
+              "one": null,
+              "six": null
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 5,
+              "one": null,
+              "six": null
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 2,
+              "one": null,
+              "six": null
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 0,
+              "one": null,
+              "six": null
+            }
+          }
+        },
+        "obstacles": {
+          "episodes": 100,
+          "falls": 7,
+          "forward_speed_mps": 2.856295168399811,
+          "forward_distance_m": 44.43325233459473,
+          "one_terrain_tile_crossings": 92,
+          "all_terrain_tiles_crossings": 14,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 13
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 19,
+              "six": 1
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 5,
+              "one": 15,
+              "six": 0
+            }
+          }
+        },
+        "rough": {
+          "episodes": 100,
+          "falls": 4,
+          "forward_speed_mps": 3.045900821685791,
+          "forward_distance_m": 48.72684097290039,
+          "one_terrain_tile_crossings": 96,
+          "all_terrain_tiles_crossings": 26,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 18,
+              "six": 17
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 7
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 2
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 0
+            }
+          }
+        },
+        "slope": {
+          "episodes": 100,
+          "falls": 12,
+          "forward_speed_mps": 2.8412522077560425,
+          "forward_distance_m": 43.98185634613037,
+          "one_terrain_tile_crossings": 87,
+          "all_terrain_tiles_crossings": 31,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 19
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 17,
+              "six": 12
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 18,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 7,
+              "one": 13,
+              "six": 0
+            }
+          }
+        },
+        "stairs": {
+          "episodes": 100,
+          "falls": 10,
+          "forward_speed_mps": 2.3452045917510986,
+          "forward_distance_m": 36.64633750915527,
+          "one_terrain_tile_crossings": 89,
+          "all_terrain_tiles_crossings": 4,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 3,
+              "one": 17,
+              "six": 4
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 4,
+              "one": 16,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 18,
+              "six": 0
+            }
+          }
+        },
+        "stepping_stones": {
+          "episodes": 100,
+          "falls": 8,
+          "forward_speed_mps": 1.5716100931167603,
+          "forward_distance_m": 24.488985061645508,
+          "one_terrain_tile_crossings": 79,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 4,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 18,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 20,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 2,
+              "one": 16,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 15,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 4,
+              "one": 10,
+              "six": 0
+            }
+          }
+        },
+        "waves": {
+          "episodes": 100,
+          "falls": 21,
+          "forward_speed_mps": 3.1349605917930603,
+          "forward_distance_m": 46.491936683654785,
+          "one_terrain_tile_crossings": 78,
+          "all_terrain_tiles_crossings": 44,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 20,
+              "falls": 0,
+              "one": 19,
+              "six": 18
+            },
+            "1:0.4": {
+              "episodes": 20,
+              "falls": 1,
+              "one": 19,
+              "six": 16
+            },
+            "2:0.6": {
+              "episodes": 20,
+              "falls": 5,
+              "one": 15,
+              "six": 9
+            },
+            "3:0.8": {
+              "episodes": 20,
+              "falls": 4,
+              "one": 16,
+              "six": 1
+            },
+            "4:1": {
+              "episodes": 20,
+              "falls": 11,
+              "one": 9,
+              "six": 0
+            }
+          }
+        }
+      },
+      "one_terrain_tile_crossings": 521,
+      "all_terrain_tiles_crossings": 119,
+      "out_of_lane_exits": 8,
+      "world_exits": 0,
+      "strict_success_rate": 0.8683333333333333
+    }
+  },
+  "ablations_selection_seed24": {
+    "actual": {
+      "runs": [
+        "lanes_seed24"
+      ],
+      "total_first_episodes": 175,
+      "terrain_episodes": 150,
+      "terrain_falls": 12,
+      "terrain_speed_mps": 2.567235549290975,
+      "flat_falls": 1,
+      "flat_episodes": 25,
+      "families": {
+        "flat": {
+          "episodes": 25,
+          "falls": 1,
+          "forward_speed_mps": 10.610387802124023,
+          "forward_distance_m": 169.646484375,
+          "one_terrain_tile_crossings": null,
+          "all_terrain_tiles_crossings": null,
+          "out_of_lane_exits": null,
+          "world_exits": null,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": null,
+              "six": null
+            }
+          }
+        },
+        "obstacles": {
+          "episodes": 25,
+          "falls": 2,
+          "forward_speed_mps": 2.6782596111297607,
+          "forward_distance_m": 41.52088928222656,
+          "one_terrain_tile_crossings": 23,
+          "all_terrain_tiles_crossings": 5,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 5
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            }
+          }
+        },
+        "rough": {
+          "episodes": 25,
+          "falls": 0,
+          "forward_speed_mps": 3.1067309379577637,
+          "forward_distance_m": 49.70769500732422,
+          "one_terrain_tile_crossings": 25,
+          "all_terrain_tiles_crossings": 7,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 5
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 2
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            }
+          }
+        },
+        "slope": {
+          "episodes": 25,
+          "falls": 0,
+          "forward_speed_mps": 2.9970006942749023,
+          "forward_distance_m": 47.95201110839844,
+          "one_terrain_tile_crossings": 24,
+          "all_terrain_tiles_crossings": 8,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 5
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 4,
+              "six": 3
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            }
+          }
+        },
+        "stairs": {
+          "episodes": 25,
+          "falls": 2,
+          "forward_speed_mps": 2.3910701274871826,
+          "forward_distance_m": 37.39154815673828,
+          "one_terrain_tile_crossings": 23,
+          "all_terrain_tiles_crossings": 1,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 1
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            }
+          }
+        },
+        "stepping_stones": {
+          "episodes": 25,
+          "falls": 1,
+          "forward_speed_mps": 1.5896110534667969,
+          "forward_distance_m": 25.741506576538086,
+          "one_terrain_tile_crossings": 22,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 4,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 3,
+              "six": 0
+            }
+          }
+        },
+        "waves": {
+          "episodes": 25,
+          "falls": 7,
+          "forward_speed_mps": 2.6407408714294434,
+          "forward_distance_m": 40.67809295654297,
+          "one_terrain_tile_crossings": 18,
+          "all_terrain_tiles_crossings": 7,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 4
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 3
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 3,
+              "one": 2,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 2,
+              "one": 3,
+              "six": 0
+            }
+          }
+        }
+      },
+      "one_terrain_tile_crossings": 135,
+      "all_terrain_tiles_crossings": 28,
+      "out_of_lane_exits": 2,
+      "world_exits": 0,
+      "strict_success_rate": 0.9
+    },
+    "zero": {
+      "runs": [
+        "ablation_zero_seed24"
+      ],
+      "total_first_episodes": 175,
+      "terrain_episodes": 150,
+      "terrain_falls": 33,
+      "terrain_speed_mps": 2.3168112436930337,
+      "flat_falls": 5,
+      "flat_episodes": 25,
+      "families": {
+        "flat": {
+          "episodes": 25,
+          "falls": 5,
+          "forward_speed_mps": 5.527765274047852,
+          "forward_distance_m": 83.29753875732422,
+          "one_terrain_tile_crossings": null,
+          "all_terrain_tiles_crossings": null,
+          "out_of_lane_exits": null,
+          "world_exits": null,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 1,
+              "one": null,
+              "six": null
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 1,
+              "one": null,
+              "six": null
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 1,
+              "one": null,
+              "six": null
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 2,
+              "one": null,
+              "six": null
+            }
+          }
+        },
+        "obstacles": {
+          "episodes": 25,
+          "falls": 8,
+          "forward_speed_mps": 2.534658908843994,
+          "forward_distance_m": 35.622013092041016,
+          "one_terrain_tile_crossings": 16,
+          "all_terrain_tiles_crossings": 2,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 1
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 1
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 3,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 4,
+              "one": 1,
+              "six": 0
+            }
+          }
+        },
+        "rough": {
+          "episodes": 25,
+          "falls": 3,
+          "forward_speed_mps": 2.712297201156616,
+          "forward_distance_m": 42.41486740112305,
+          "one_terrain_tile_crossings": 18,
+          "all_terrain_tiles_crossings": 3,
+          "out_of_lane_exits": 4,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 3
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 3,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 1,
+              "six": 0
+            }
+          }
+        },
+        "slope": {
+          "episodes": 25,
+          "falls": 6,
+          "forward_speed_mps": 2.470367670059204,
+          "forward_distance_m": 36.1053352355957,
+          "one_terrain_tile_crossings": 13,
+          "all_terrain_tiles_crossings": 2,
+          "out_of_lane_exits": 6,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 2,
+              "one": 3,
+              "six": 1
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 3,
+              "six": 1
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 2,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 1,
+              "six": 0
+            }
+          }
+        },
+        "stairs": {
+          "episodes": 25,
+          "falls": 3,
+          "forward_speed_mps": 2.3269946575164795,
+          "forward_distance_m": 36.58953094482422,
+          "one_terrain_tile_crossings": 11,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 11,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 4,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 2,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 1,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 2,
+              "one": 0,
+              "six": 0
+            }
+          }
+        },
+        "stepping_stones": {
+          "episodes": 25,
+          "falls": 4,
+          "forward_speed_mps": 1.3939077854156494,
+          "forward_distance_m": 21.868749618530273,
+          "one_terrain_tile_crossings": 14,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 3,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 2,
+              "one": 2,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 2,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 0,
+              "six": 0
+            }
+          }
+        },
+        "waves": {
+          "episodes": 25,
+          "falls": 9,
+          "forward_speed_mps": 2.4626412391662598,
+          "forward_distance_m": 34.66916275024414,
+          "one_terrain_tile_crossings": 14,
+          "all_terrain_tiles_crossings": 4,
+          "out_of_lane_exits": 2,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 3
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 2,
+              "one": 2,
+              "six": 1
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 3,
+              "one": 2,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 3,
+              "one": 1,
+              "six": 0
+            }
+          }
+        }
+      },
+      "one_terrain_tile_crossings": 86,
+      "all_terrain_tiles_crossings": 11,
+      "out_of_lane_exits": 27,
+      "world_exits": 0,
+      "strict_success_rate": 0.5733333333333334
+    },
+    "shuffle": {
+      "runs": [
+        "ablation_shuffle_seed24"
+      ],
+      "total_first_episodes": 175,
+      "terrain_episodes": 150,
+      "terrain_falls": 35,
+      "terrain_speed_mps": 2.209269086519877,
+      "flat_falls": 1,
+      "flat_episodes": 25,
+      "families": {
+        "flat": {
+          "episodes": 25,
+          "falls": 1,
+          "forward_speed_mps": 2.740827798843384,
+          "forward_distance_m": 43.72638702392578,
+          "one_terrain_tile_crossings": null,
+          "all_terrain_tiles_crossings": null,
+          "out_of_lane_exits": null,
+          "world_exits": null,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": null,
+              "six": null
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": null,
+              "six": null
+            }
+          }
+        },
+        "obstacles": {
+          "episodes": 25,
+          "falls": 3,
+          "forward_speed_mps": 2.4137723445892334,
+          "forward_distance_m": 36.65989303588867,
+          "one_terrain_tile_crossings": 22,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 2,
+              "one": 3,
+              "six": 0
+            }
+          }
+        },
+        "rough": {
+          "episodes": 25,
+          "falls": 3,
+          "forward_speed_mps": 2.763108730316162,
+          "forward_distance_m": 42.97027587890625,
+          "one_terrain_tile_crossings": 22,
+          "all_terrain_tiles_crossings": 1,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 1
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            }
+          }
+        },
+        "slope": {
+          "episodes": 25,
+          "falls": 3,
+          "forward_speed_mps": 2.563608407974243,
+          "forward_distance_m": 39.9337272644043,
+          "one_terrain_tile_crossings": 21,
+          "all_terrain_tiles_crossings": 1,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 1
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 3,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            }
+          }
+        },
+        "stairs": {
+          "episodes": 25,
+          "falls": 5,
+          "forward_speed_mps": 2.0102856159210205,
+          "forward_distance_m": 29.67194938659668,
+          "one_terrain_tile_crossings": 18,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 2,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 3,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 2,
+              "one": 2,
+              "six": 0
+            }
+          }
+        },
+        "stepping_stones": {
+          "episodes": 25,
+          "falls": 5,
+          "forward_speed_mps": 1.4830095767974854,
+          "forward_distance_m": 22.771862030029297,
+          "one_terrain_tile_crossings": 14,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 1,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 0,
+              "one": 5,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 1,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 2,
+              "one": 2,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 2,
+              "six": 0
+            }
+          }
+        },
+        "waves": {
+          "episodes": 25,
+          "falls": 16,
+          "forward_speed_mps": 2.021829843521118,
+          "forward_distance_m": 22.423696517944336,
+          "one_terrain_tile_crossings": 9,
+          "all_terrain_tiles_crossings": 0,
+          "out_of_lane_exits": 0,
+          "world_exits": 0,
+          "levels": {
+            "0:0.2": {
+              "episodes": 5,
+              "falls": 1,
+              "one": 4,
+              "six": 0
+            },
+            "1:0.4": {
+              "episodes": 5,
+              "falls": 2,
+              "one": 3,
+              "six": 0
+            },
+            "2:0.6": {
+              "episodes": 5,
+              "falls": 5,
+              "one": 0,
+              "six": 0
+            },
+            "3:0.8": {
+              "episodes": 5,
+              "falls": 4,
+              "one": 1,
+              "six": 0
+            },
+            "4:1": {
+              "episodes": 5,
+              "falls": 4,
+              "one": 1,
+              "six": 0
+            }
+          }
+        }
+      },
+      "one_terrain_tile_crossings": 106,
+      "all_terrain_tiles_crossings": 2,
+      "out_of_lane_exits": 4,
+      "world_exits": 0,
+      "strict_success_rate": 0.7066666666666667
+    }
+  },
+  "frozen_gate": {
+    "strict_success_increases": false,
+    "terrain_falls_not_increased": false,
+    "world_exits_zero": true,
+    "passed": false
+  },
+  "interpretation": "Fresh post-selection gate, not a matched-training causal depth experiment. Ablations are distribution shifts and establish reliance, not isolated causality. Repeated rollouts from one training seed do not measure training-seed uncertainty."
+}

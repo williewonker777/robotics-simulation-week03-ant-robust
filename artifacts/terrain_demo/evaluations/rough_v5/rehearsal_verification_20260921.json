@@ -1,0 +1,3283 @@
+{
+  "candidate_robustness": {
+    "heavy": {
+      "checkpoint_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "episode_return_mean": 145.61508529260755,
+      "episodes": 100,
+      "seed": 24,
+      "terminated_episodes": 4
+    },
+    "id": {
+      "checkpoint_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "episode_return_mean": 137.06708456397055,
+      "episodes": 100,
+      "seed": 24,
+      "terminated_episodes": 3
+    },
+    "lanes100_seed24": {
+      "checkpoint_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "episode_return_mean": 55.18101600076072,
+      "episodes": 100,
+      "one_tile_successes": 73,
+      "out_of_lane_exits": 1,
+      "seed": 24,
+      "six_tile_successes": 44,
+      "terminated_episodes": 11,
+      "terrain_episodes": 86,
+      "terrain_falls": 9,
+      "world_exits": 0
+    },
+    "low_friction": {
+      "checkpoint_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "episode_return_mean": 155.0316947516799,
+      "episodes": 100,
+      "seed": 24,
+      "terminated_episodes": 2
+    },
+    "push": {
+      "checkpoint_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "episode_return_mean": 135.20543824717402,
+      "episodes": 100,
+      "seed": 24,
+      "terminated_episodes": 5
+    }
+  },
+  "checkpoint_audit": {
+    "actor_all_finite": true,
+    "actor_changed_keys_from_deep1000": [
+      "actor.0.weight",
+      "actor.0.bias",
+      "actor.2.weight",
+      "actor.2.bias",
+      "actor.4.weight",
+      "actor.4.bias",
+      "actor.6.weight",
+      "actor.6.bias"
+    ],
+    "actor_input_dimensions": 60,
+    "actor_output_dimensions": 8,
+    "actor_tensor_count": 8,
+    "model_state_shapes": {
+      "actor.0.bias": [
+        400
+      ],
+      "actor.0.weight": [
+        400,
+        60
+      ],
+      "actor.2.bias": [
+        200
+      ],
+      "actor.2.weight": [
+        200,
+        400
+      ],
+      "actor.4.bias": [
+        100
+      ],
+      "actor.4.weight": [
+        100,
+        200
+      ],
+      "actor.6.bias": [
+        8
+      ],
+      "actor.6.weight": [
+        8,
+        100
+      ],
+      "critic.0.bias": [
+        400
+      ],
+      "critic.0.weight": [
+        400,
+        60
+      ],
+      "critic.2.bias": [
+        200
+      ],
+      "critic.2.weight": [
+        200,
+        400
+      ],
+      "critic.4.bias": [
+        100
+      ],
+      "critic.4.weight": [
+        100,
+        200
+      ],
+      "critic.6.bias": [
+        1
+      ],
+      "critic.6.weight": [
+        1,
+        100
+      ],
+      "std": [
+        8
+      ]
+    },
+    "nonactor_changed_keys": [],
+    "nonactor_exactly_unchanged_from_deep1000": true,
+    "nonactor_reference": "artifacts/terrain_demo/runs/rough_v5_recovery_deep1000_seed42/model_1000.pt",
+    "nonactor_reference_sha256": "3e5ee185de847683953b027663489087ea984945b417bed0e9f74992f07934b8",
+    "nonactor_tensor_count": 9,
+    "path": "artifacts/terrain_demo/runs/rough_v5_portal_rehearsal4_seed43/model_round_4.pt",
+    "selection_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+    "sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+    "sha256_matches_selection": true
+  },
+  "fixed_3seed_450terrain": {
+    "candidate": {
+      "episodes": 450,
+      "fall_rate": 0.07111111111111111,
+      "falls": 32,
+      "mean_forward_speed_mps": 3.036103025381097,
+      "one_tile_success_rate": 0.8955555555555555,
+      "one_tile_successes": 403,
+      "out_of_lane_exits": 3,
+      "six_tile_success_rate": 0.47555555555555556,
+      "six_tile_successes": 214,
+      "world_exits": 0
+    },
+    "delta": {
+      "episodes": 0,
+      "fall_rate": 0.0,
+      "falls": 0,
+      "mean_forward_speed_mps": 0.09701744668929502,
+      "one_tile_success_rate": 0.0755555555555556,
+      "one_tile_successes": 34,
+      "out_of_lane_exits": -5,
+      "six_tile_success_rate": 0.0377777777777778,
+      "six_tile_successes": 17,
+      "world_exits": 0
+    },
+    "per_family": {
+      "obstacles": {
+        "candidate": {
+          "episodes": 75,
+          "fall_rate": 0.08,
+          "falls": 6,
+          "mean_forward_speed_mps": 3.267284962201479,
+          "one_tile_success_rate": 0.9066666666666666,
+          "one_tile_successes": 68,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.5333333333333333,
+          "six_tile_successes": 40,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.026666666666666665,
+          "falls": 2,
+          "mean_forward_speed_mps": 0.0989377630764201,
+          "one_tile_success_rate": -0.026666666666666727,
+          "one_tile_successes": -2,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": -0.040000000000000036,
+          "six_tile_successes": -3,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 75,
+          "fall_rate": 0.05333333333333334,
+          "falls": 4,
+          "mean_forward_speed_mps": 3.168347199125059,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 70,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.5733333333333334,
+          "six_tile_successes": 43,
+          "world_exits": 0
+        }
+      },
+      "rough": {
+        "candidate": {
+          "episodes": 75,
+          "fall_rate": 0.05333333333333334,
+          "falls": 4,
+          "mean_forward_speed_mps": 3.6490724301114685,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 70,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.7333333333333333,
+          "six_tile_successes": 55,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.013333333333333329,
+          "falls": -1,
+          "mean_forward_speed_mps": 0.0661293262449778,
+          "one_tile_success_rate": 0.013333333333333308,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.05333333333333323,
+          "six_tile_successes": 4,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 75,
+          "fall_rate": 0.06666666666666667,
+          "falls": 5,
+          "mean_forward_speed_mps": 3.5829431038664907,
+          "one_tile_success_rate": 0.92,
+          "one_tile_successes": 69,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.68,
+          "six_tile_successes": 51,
+          "world_exits": 0
+        }
+      },
+      "slope": {
+        "candidate": {
+          "episodes": 75,
+          "fall_rate": 0.04,
+          "falls": 3,
+          "mean_forward_speed_mps": 3.3556570846502116,
+          "one_tile_success_rate": 0.96,
+          "one_tile_successes": 72,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.5466666666666666,
+          "six_tile_successes": 41,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.03182832662026058,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.05333333333333329,
+          "six_tile_successes": 4,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 75,
+          "fall_rate": 0.04,
+          "falls": 3,
+          "mean_forward_speed_mps": 3.323828758029951,
+          "one_tile_success_rate": 0.96,
+          "one_tile_successes": 72,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.49333333333333335,
+          "six_tile_successes": 37,
+          "world_exits": 0
+        }
+      },
+      "stairs": {
+        "candidate": {
+          "episodes": 75,
+          "fall_rate": 0.05333333333333334,
+          "falls": 4,
+          "mean_forward_speed_mps": 2.74850133109511,
+          "one_tile_success_rate": 0.9466666666666667,
+          "one_tile_successes": 71,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.3466666666666667,
+          "six_tile_successes": 26,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.08183815581141651,
+          "one_tile_success_rate": 0.013333333333333308,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": 0.06666666666666665,
+          "six_tile_successes": 5,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 75,
+          "fall_rate": 0.05333333333333334,
+          "falls": 4,
+          "mean_forward_speed_mps": 2.6666631752836936,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 70,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.28,
+          "six_tile_successes": 21,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones": {
+        "candidate": {
+          "episodes": 75,
+          "fall_rate": 0.08,
+          "falls": 6,
+          "mean_forward_speed_mps": 1.6063657635546444,
+          "one_tile_success_rate": 0.7466666666666667,
+          "one_tile_successes": 56,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.013333333333333334,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.013333333333333336,
+          "falls": 1,
+          "mean_forward_speed_mps": 0.3060356065126417,
+          "one_tile_success_rate": 0.4266666666666667,
+          "one_tile_successes": 32,
+          "out_of_lane_exits": -4,
+          "six_tile_success_rate": 0.013333333333333334,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 75,
+          "fall_rate": 0.06666666666666667,
+          "falls": 5,
+          "mean_forward_speed_mps": 1.3003301570420027,
+          "one_tile_success_rate": 0.32,
+          "one_tile_successes": 24,
+          "out_of_lane_exits": 5,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "waves": {
+        "candidate": {
+          "episodes": 75,
+          "fall_rate": 0.12,
+          "falls": 9,
+          "mean_forward_speed_mps": 3.5897365806736645,
+          "one_tile_success_rate": 0.88,
+          "one_tile_successes": 66,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.68,
+          "six_tile_successes": 51,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.026666666666666672,
+          "falls": -2,
+          "mean_forward_speed_mps": -0.002664498129949955,
+          "one_tile_success_rate": 0.026666666666666616,
+          "one_tile_successes": 2,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.08000000000000007,
+          "six_tile_successes": 6,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 75,
+          "fall_rate": 0.14666666666666667,
+          "falls": 11,
+          "mean_forward_speed_mps": 3.5924010788036145,
+          "one_tile_success_rate": 0.8533333333333334,
+          "one_tile_successes": 64,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.6,
+          "six_tile_successes": 45,
+          "world_exits": 0
+        }
+      }
+    },
+    "per_family_level": {
+      "obstacles/0:0.2": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 4.073044999440511,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9333333333333333,
+          "six_tile_successes": 14,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.03934102058410627,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 4.033703978856405,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9333333333333333,
+          "six_tile_successes": 14,
+          "world_exits": 0
+        }
+      },
+      "obstacles/1:0.4": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.894080893198649,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.04798369407653791,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.846097199122111,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        }
+      },
+      "obstacles/2:0.6": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.581938886642456,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.7333333333333333,
+          "six_tile_successes": 11,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.06666666666666667,
+          "falls": -1,
+          "mean_forward_speed_mps": 0.02540961736920222,
+          "one_tile_success_rate": 0.06666666666666665,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": -0.13333333333333341,
+          "six_tile_successes": -2,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.5565292692732537,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8666666666666667,
+          "six_tile_successes": 13,
+          "world_exits": 0
+        }
+      },
+      "obstacles/3:0.8": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.59190914721716,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.07717244715917682,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": -0.06666666666666667,
+          "six_tile_successes": -1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.514736700057983,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.06666666666666667,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        }
+      },
+      "obstacles/4:1": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.26666666666666666,
+          "falls": 4,
+          "mean_forward_speed_mps": 2.1954508845086176,
+          "one_tile_success_rate": 0.6666666666666666,
+          "one_tile_successes": 10,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.2,
+          "falls": 3,
+          "mean_forward_speed_mps": 0.30478203619307664,
+          "one_tile_success_rate": -0.20000000000000007,
+          "one_tile_successes": -3,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 1.890668848315541,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "rough/0:0.2": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.13333333333333333,
+          "falls": 2,
+          "mean_forward_speed_mps": 4.041629898436375,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8666666666666667,
+          "six_tile_successes": 13,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": -0.1027700748386291,
+          "one_tile_success_rate": -0.06666666666666665,
+          "one_tile_successes": -1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": -0.06666666666666665,
+          "six_tile_successes": -1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 4.1443999732750045,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9333333333333333,
+          "six_tile_successes": 14,
+          "world_exits": 0
+        }
+      },
+      "rough/1:0.4": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.208590428034465,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.0008516788482673121,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.2077387491861975,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        }
+      },
+      "rough/2:0.6": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.5466432253519695,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.8666666666666667,
+          "six_tile_successes": 13,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.01645139058431022,
+          "one_tile_success_rate": -0.06666666666666665,
+          "one_tile_successes": -1,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": -0.06666666666666665,
+          "six_tile_successes": -1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.5301918347676593,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9333333333333333,
+          "six_tile_successes": 14,
+          "world_exits": 0
+        }
+      },
+      "rough/3:0.8": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.313683255513509,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.7333333333333333,
+          "six_tile_successes": 11,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.06666666666666667,
+          "falls": -1,
+          "mean_forward_speed_mps": 0.18854232011017968,
+          "one_tile_success_rate": 0.06666666666666665,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.2666666666666666,
+          "six_tile_successes": 4,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.13333333333333333,
+          "falls": 2,
+          "mean_forward_speed_mps": 3.1251409354033295,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.4666666666666667,
+          "six_tile_successes": 7,
+          "world_exits": 0
+        }
+      },
+      "rough/4:1": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.1348153432210286,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.2,
+          "six_tile_successes": 3,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.06666666666666667,
+          "falls": -1,
+          "mean_forward_speed_mps": 0.22757131652076623,
+          "one_tile_success_rate": 0.1333333333333333,
+          "one_tile_successes": 2,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": 0.13333333333333336,
+          "six_tile_successes": 2,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.9072440267002624,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.06666666666666667,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        }
+      },
+      "slope/0:0.2": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 4.2298566667657145,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9333333333333333,
+          "six_tile_successes": 14,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.06666666666666667,
+          "falls": -1,
+          "mean_forward_speed_mps": 0.09267426819303903,
+          "one_tile_success_rate": 0.06666666666666665,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.06666666666666665,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.13333333333333333,
+          "falls": 2,
+          "mean_forward_speed_mps": 4.1371823985726754,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8666666666666667,
+          "six_tile_successes": 13,
+          "world_exits": 0
+        }
+      },
+      "slope/1:0.4": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.9874477704366047,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": -0.07616837819417288,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.063616148630778,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        }
+      },
+      "slope/2:0.6": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.4591737588246665,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8,
+          "six_tile_successes": 12,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.09885177612304696,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.20000000000000007,
+          "six_tile_successes": 3,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.3603219827016195,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.6,
+          "six_tile_successes": 9,
+          "world_exits": 0
+        }
+      },
+      "slope/3:0.8": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 2.8485448042551678,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": -0.02652597427368164,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 2.8750707785288494,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "slope/4:1": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.13333333333333333,
+          "falls": 2,
+          "mean_forward_speed_mps": 2.253262422968902,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 0.07030994125306878,
+          "one_tile_success_rate": -0.06666666666666665,
+          "one_tile_successes": -1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.1829524817158332,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stairs/0:0.2": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.7091981093088786,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8666666666666667,
+          "six_tile_successes": 13,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.01698791186014814,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": -0.06666666666666665,
+          "six_tile_successes": -1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.6922101974487305,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9333333333333333,
+          "six_tile_successes": 14,
+          "world_exits": 0
+        }
+      },
+      "stairs/1:0.4": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.2796315435777634,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8666666666666667,
+          "six_tile_successes": 13,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": -0.04582569557323746,
+          "one_tile_success_rate": -0.06666666666666665,
+          "one_tile_successes": -1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.4,
+          "six_tile_successes": 6,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.325457239151001,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.4666666666666667,
+          "six_tile_successes": 7,
+          "world_exits": 0
+        }
+      },
+      "stairs/2:0.6": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.566881608963013,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.09337782859802246,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.4735037803649904,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stairs/3:0.8": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.167820405960083,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.12210287253061969,
+          "one_tile_success_rate": 0.06666666666666665,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.0457175334294635,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stairs/4:1": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 2.0189749876658123,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.06666666666666667,
+          "falls": -1,
+          "mean_forward_speed_mps": 0.22254786164152862,
+          "one_tile_success_rate": 0.06666666666666665,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 1.7964271260242837,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/0:0.2": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.13333333333333333,
+          "falls": 2,
+          "mean_forward_speed_mps": 2.718482174289156,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.06666666666666667,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.2390989502832146,
+          "one_tile_success_rate": 0.06666666666666665,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": 0.06666666666666667,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.13333333333333333,
+          "falls": 2,
+          "mean_forward_speed_mps": 2.4793832240059412,
+          "one_tile_success_rate": 0.8,
+          "one_tile_successes": 12,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/1:0.4": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 2.7574615478515625,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.27819134394327794,
+          "one_tile_success_rate": 0.2666666666666667,
+          "one_tile_successes": 4,
+          "out_of_lane_exits": -4,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 2.4792702039082846,
+          "one_tile_success_rate": 0.7333333333333333,
+          "one_tile_successes": 11,
+          "out_of_lane_exits": 4,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/2:0.6": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 0.9524426509571182,
+          "one_tile_success_rate": 0.8,
+          "one_tile_successes": 12,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 0.48649468120258127,
+          "one_tile_success_rate": 0.7333333333333334,
+          "one_tile_successes": 11,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.46594796975453695,
+          "one_tile_success_rate": 0.06666666666666667,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/3:0.8": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.2,
+          "falls": 3,
+          "mean_forward_speed_mps": 0.7052344026895555,
+          "one_tile_success_rate": 0.4,
+          "one_tile_successes": 6,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.13333333333333336,
+          "falls": 2,
+          "mean_forward_speed_mps": 0.3468530827085602,
+          "one_tile_success_rate": 0.4,
+          "one_tile_successes": 6,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 0.3583813199809953,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/4:1": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.8982080419858297,
+          "one_tile_success_rate": 0.6666666666666666,
+          "one_tile_successes": 10,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.13333333333333333,
+          "falls": -2,
+          "mean_forward_speed_mps": 0.1795399744255738,
+          "one_tile_success_rate": 0.6666666666666666,
+          "one_tile_successes": 10,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.13333333333333333,
+          "falls": 2,
+          "mean_forward_speed_mps": 0.7186680675602559,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "waves/0:0.2": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.418085924784342,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.06990995407104439,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.348175970713298,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        }
+      },
+      "waves/1:0.4": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.082200988133748,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": -0.004217799504598219,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.086418787638347,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 15,
+          "world_exits": 0
+        }
+      },
+      "waves/2:0.6": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.06666666666666667,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.5426626205444336,
+          "one_tile_success_rate": 0.9333333333333333,
+          "one_tile_successes": 14,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8,
+          "six_tile_successes": 12,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.13333333333333336,
+          "falls": -2,
+          "mean_forward_speed_mps": 0.10969591836200454,
+          "one_tile_success_rate": 0.1333333333333333,
+          "one_tile_successes": 2,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.13333333333333341,
+          "six_tile_successes": 2,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.2,
+          "falls": 3,
+          "mean_forward_speed_mps": 3.432966702182429,
+          "one_tile_success_rate": 0.8,
+          "one_tile_successes": 12,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.6666666666666666,
+          "six_tile_successes": 10,
+          "world_exits": 0
+        }
+      },
+      "waves/3:0.8": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.13333333333333333,
+          "falls": 2,
+          "mean_forward_speed_mps": 3.3573728543115577,
+          "one_tile_success_rate": 0.8666666666666667,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.6,
+          "six_tile_successes": 9,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.13333333333333333,
+          "falls": 2,
+          "mean_forward_speed_mps": 0.0623118064396504,
+          "one_tile_success_rate": -0.1333333333333333,
+          "one_tile_successes": -2,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.26666666666666666,
+          "six_tile_successes": 4,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.2950610478719073,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.3333333333333333,
+          "six_tile_successes": 5,
+          "world_exits": 0
+        }
+      },
+      "waves/4:1": {
+        "candidate": {
+          "episodes": 15,
+          "fall_rate": 0.4,
+          "falls": 6,
+          "mean_forward_speed_mps": 2.5483605155942413,
+          "one_tile_success_rate": 0.6,
+          "one_tile_successes": 9,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.1333333333333333,
+          "falls": -2,
+          "mean_forward_speed_mps": -0.25102237001785355,
+          "one_tile_success_rate": 0.1333333333333333,
+          "one_tile_successes": 2,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 15,
+          "fall_rate": 0.5333333333333333,
+          "falls": 8,
+          "mean_forward_speed_mps": 2.799382885612095,
+          "one_tile_success_rate": 0.4666666666666667,
+          "one_tile_successes": 7,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      }
+    },
+    "reference": {
+      "episodes": 450,
+      "fall_rate": 0.07111111111111111,
+      "falls": 32,
+      "mean_forward_speed_mps": 2.939085578691802,
+      "one_tile_success_rate": 0.82,
+      "one_tile_successes": 369,
+      "out_of_lane_exits": 8,
+      "six_tile_success_rate": 0.43777777777777777,
+      "six_tile_successes": 197,
+      "world_exits": 0
+    }
+  },
+  "generated_at_utc": "2026-09-21T10:58:58.508571+00:00",
+  "json_integrity": {
+    "all_checked_files_pass": true,
+    "checked_file_count": 19,
+    "discrepancies": [],
+    "files": {
+      "reference_traverse1499__newgeom51_seed28.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 119,
+          "out_of_lane_exits": 3,
+          "six_tile_successes": 65,
+          "terrain_episodes": 150,
+          "terrain_falls": 14,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 28,
+        "terrain_generator_seed": 51
+      },
+      "reference_traverse1499__newgeom51_seed29.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 113,
+          "out_of_lane_exits": 4,
+          "six_tile_successes": 64,
+          "terrain_episodes": 150,
+          "terrain_falls": 18,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 29,
+        "terrain_generator_seed": 51
+      },
+      "reference_traverse1499__newgeom54_seed30.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 118,
+          "out_of_lane_exits": 3,
+          "six_tile_successes": 63,
+          "terrain_episodes": 150,
+          "terrain_falls": 15,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 30,
+        "terrain_generator_seed": 54
+      },
+      "reference_traverse1499__newgeom55_seed30.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 122,
+          "out_of_lane_exits": 1,
+          "six_tile_successes": 64,
+          "terrain_episodes": 150,
+          "terrain_falls": 14,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 30,
+        "terrain_generator_seed": 55
+      },
+      "selected_portal_rehearsal4__heavy.json": {
+        "derived": {
+          "episode_return_mean": 145.61508529260755,
+          "episodes": 100,
+          "terminated_episodes": 4
+        },
+        "expected_episodes": 100,
+        "ok": true,
+        "seed": 24,
+        "terrain_generator_seed": null
+      },
+      "selected_portal_rehearsal4__id.json": {
+        "derived": {
+          "episode_return_mean": 137.06708456397055,
+          "episodes": 100,
+          "terminated_episodes": 3
+        },
+        "expected_episodes": 100,
+        "ok": true,
+        "seed": 24,
+        "terrain_generator_seed": null
+      },
+      "selected_portal_rehearsal4__lanes100_seed24.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 73,
+          "out_of_lane_exits": 1,
+          "six_tile_successes": 44,
+          "terrain_episodes": 86,
+          "terrain_falls": 9,
+          "world_exits": 0
+        },
+        "expected_episodes": 100,
+        "ok": true,
+        "seed": 24,
+        "terrain_generator_seed": 51
+      },
+      "selected_portal_rehearsal4__lanes_seed24.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 130,
+          "out_of_lane_exits": 2,
+          "six_tile_successes": 68,
+          "terrain_episodes": 150,
+          "terrain_falls": 14,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 24,
+        "terrain_generator_seed": 51
+      },
+      "selected_portal_rehearsal4__lanes_seed25.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 135,
+          "out_of_lane_exits": 1,
+          "six_tile_successes": 69,
+          "terrain_episodes": 150,
+          "terrain_falls": 10,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 25,
+        "terrain_generator_seed": 51
+      },
+      "selected_portal_rehearsal4__lanes_seed26.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 138,
+          "out_of_lane_exits": 0,
+          "six_tile_successes": 77,
+          "terrain_episodes": 150,
+          "terrain_falls": 8,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 26,
+        "terrain_generator_seed": 51
+      },
+      "selected_portal_rehearsal4__low_friction.json": {
+        "derived": {
+          "episode_return_mean": 155.0316947516799,
+          "episodes": 100,
+          "terminated_episodes": 2
+        },
+        "expected_episodes": 100,
+        "ok": true,
+        "seed": 24,
+        "terrain_generator_seed": null
+      },
+      "selected_portal_rehearsal4__newgeom51_seed28.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 127,
+          "out_of_lane_exits": 1,
+          "six_tile_successes": 69,
+          "terrain_episodes": 150,
+          "terrain_falls": 16,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 28,
+        "terrain_generator_seed": 51
+      },
+      "selected_portal_rehearsal4__newgeom51_seed29.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 131,
+          "out_of_lane_exits": 0,
+          "six_tile_successes": 75,
+          "terrain_episodes": 150,
+          "terrain_falls": 16,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 29,
+        "terrain_generator_seed": 51
+      },
+      "selected_portal_rehearsal4__newgeom54_seed30.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 129,
+          "out_of_lane_exits": 1,
+          "six_tile_successes": 66,
+          "terrain_episodes": 150,
+          "terrain_falls": 14,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 30,
+        "terrain_generator_seed": 54
+      },
+      "selected_portal_rehearsal4__newgeom55_seed30.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 130,
+          "out_of_lane_exits": 0,
+          "six_tile_successes": 62,
+          "terrain_episodes": 150,
+          "terrain_falls": 15,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 30,
+        "terrain_generator_seed": 55
+      },
+      "selected_portal_rehearsal4__push.json": {
+        "derived": {
+          "episode_return_mean": 135.20543824717402,
+          "episodes": 100,
+          "terminated_episodes": 5
+        },
+        "expected_episodes": 100,
+        "ok": true,
+        "seed": 24,
+        "terrain_generator_seed": null
+      },
+      "selected_traverse1499__lanes_seed24.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 118,
+          "out_of_lane_exits": 4,
+          "six_tile_successes": 64,
+          "terrain_episodes": 150,
+          "terrain_falls": 14,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 24,
+        "terrain_generator_seed": 51
+      },
+      "selected_traverse1499__lanes_seed25.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 122,
+          "out_of_lane_exits": 1,
+          "six_tile_successes": 64,
+          "terrain_episodes": 150,
+          "terrain_falls": 13,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 25,
+        "terrain_generator_seed": 51
+      },
+      "selected_traverse1499__lanes_seed26.json": {
+        "derived": {
+          "invalid_strict_successes": 0,
+          "one_tile_successes": 129,
+          "out_of_lane_exits": 3,
+          "six_tile_successes": 69,
+          "terrain_episodes": 150,
+          "terrain_falls": 5,
+          "world_exits": 0
+        },
+        "expected_episodes": 175,
+        "ok": true,
+        "seed": 26,
+        "terrain_generator_seed": 51
+      }
+    }
+  },
+  "metric_semantics": {
+    "fixed_reference_checkpoint": "artifacts/terrain_demo/runs/rough_v5_traverse1499_seed42/model_1499.pt",
+    "new_reference_checkpoint": "artifacts/terrain_demo/runs/rough_v5_traverse1499_seed42/model_1499.pt",
+    "one_tile_threshold_m": 13.1,
+    "plane_family": "excluded/null",
+    "six_tile_threshold_m": 53.1,
+    "success_requires": "finite distance at/above threshold AND no terminal condition AND no full-footprint lane departure AND no world exit"
+  },
+  "new_paired_4case_600terrain": {
+    "candidate": {
+      "episodes": 600,
+      "fall_rate": 0.10166666666666667,
+      "falls": 61,
+      "mean_forward_speed_mps": 3.0046112153597746,
+      "one_tile_success_rate": 0.8616666666666667,
+      "one_tile_successes": 517,
+      "out_of_lane_exits": 2,
+      "six_tile_success_rate": 0.4533333333333333,
+      "six_tile_successes": 272,
+      "world_exits": 0
+    },
+    "delta": {
+      "episodes": 0,
+      "fall_rate": 0.0,
+      "falls": 0,
+      "mean_forward_speed_mps": 0.14613543354303227,
+      "one_tile_success_rate": 0.07500000000000007,
+      "one_tile_successes": 45,
+      "out_of_lane_exits": -9,
+      "six_tile_success_rate": 0.026666666666666616,
+      "six_tile_successes": 16,
+      "world_exits": 0
+    },
+    "per_family": {
+      "obstacles": {
+        "candidate": {
+          "episodes": 100,
+          "fall_rate": 0.13,
+          "falls": 13,
+          "mean_forward_speed_mps": 3.143148893382273,
+          "one_tile_success_rate": 0.87,
+          "one_tile_successes": 87,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.48,
+          "six_tile_successes": 48,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.03,
+          "falls": 3,
+          "mean_forward_speed_mps": 0.13873026554255574,
+          "one_tile_success_rate": -0.020000000000000018,
+          "one_tile_successes": -2,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": 0.04999999999999999,
+          "six_tile_successes": 5,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 100,
+          "fall_rate": 0.1,
+          "falls": 10,
+          "mean_forward_speed_mps": 3.0044186278397174,
+          "one_tile_success_rate": 0.89,
+          "one_tile_successes": 89,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.43,
+          "six_tile_successes": 43,
+          "world_exits": 0
+        }
+      },
+      "rough": {
+        "candidate": {
+          "episodes": 100,
+          "fall_rate": 0.04,
+          "falls": 4,
+          "mean_forward_speed_mps": 3.6755764495077585,
+          "one_tile_success_rate": 0.95,
+          "one_tile_successes": 95,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.75,
+          "six_tile_successes": 75,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.019999999999999997,
+          "falls": -2,
+          "mean_forward_speed_mps": 0.09358376153859638,
+          "one_tile_success_rate": 0.010000000000000009,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.07999999999999996,
+          "six_tile_successes": 8,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 100,
+          "fall_rate": 0.06,
+          "falls": 6,
+          "mean_forward_speed_mps": 3.581992687969162,
+          "one_tile_success_rate": 0.94,
+          "one_tile_successes": 94,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.67,
+          "six_tile_successes": 67,
+          "world_exits": 0
+        }
+      },
+      "slope": {
+        "candidate": {
+          "episodes": 100,
+          "fall_rate": 0.06,
+          "falls": 6,
+          "mean_forward_speed_mps": 3.178084530343849,
+          "one_tile_success_rate": 0.94,
+          "one_tile_successes": 94,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.48,
+          "six_tile_successes": 48,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.05,
+          "falls": -5,
+          "mean_forward_speed_mps": -0.042055301605780304,
+          "one_tile_success_rate": 0.05999999999999994,
+          "one_tile_successes": 6,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": -0.040000000000000036,
+          "six_tile_successes": -4,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 100,
+          "fall_rate": 0.11,
+          "falls": 11,
+          "mean_forward_speed_mps": 3.2201398319496293,
+          "one_tile_success_rate": 0.88,
+          "one_tile_successes": 88,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.52,
+          "six_tile_successes": 52,
+          "world_exits": 0
+        }
+      },
+      "stairs": {
+        "candidate": {
+          "episodes": 100,
+          "fall_rate": 0.1,
+          "falls": 10,
+          "mean_forward_speed_mps": 2.7720188440974414,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 90,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.33,
+          "six_tile_successes": 33,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.03,
+          "falls": 3,
+          "mean_forward_speed_mps": 0.13065981745062816,
+          "one_tile_success_rate": -0.020000000000000018,
+          "one_tile_successes": -2,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": -0.010000000000000009,
+          "six_tile_successes": -1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 100,
+          "fall_rate": 0.07,
+          "falls": 7,
+          "mean_forward_speed_mps": 2.641359026646813,
+          "one_tile_success_rate": 0.92,
+          "one_tile_successes": 92,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.34,
+          "six_tile_successes": 34,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones": {
+        "candidate": {
+          "episodes": 100,
+          "fall_rate": 0.11,
+          "falls": 11,
+          "mean_forward_speed_mps": 1.7067577415777566,
+          "one_tile_success_rate": 0.69,
+          "one_tile_successes": 69,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.01,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.07,
+          "falls": 7,
+          "mean_forward_speed_mps": 0.46645866411995507,
+          "one_tile_success_rate": 0.35999999999999993,
+          "one_tile_successes": 36,
+          "out_of_lane_exits": -7,
+          "six_tile_success_rate": 0.01,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 100,
+          "fall_rate": 0.04,
+          "falls": 4,
+          "mean_forward_speed_mps": 1.2402990774578015,
+          "one_tile_success_rate": 0.33,
+          "one_tile_successes": 33,
+          "out_of_lane_exits": 7,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "waves": {
+        "candidate": {
+          "episodes": 100,
+          "fall_rate": 0.17,
+          "falls": 17,
+          "mean_forward_speed_mps": 3.552080833249575,
+          "one_tile_success_rate": 0.82,
+          "one_tile_successes": 82,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.67,
+          "six_tile_successes": 67,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.06,
+          "falls": -6,
+          "mean_forward_speed_mps": 0.08943539421224633,
+          "one_tile_success_rate": 0.05999999999999994,
+          "one_tile_successes": 6,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.07000000000000006,
+          "six_tile_successes": 7,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 100,
+          "fall_rate": 0.23,
+          "falls": 23,
+          "mean_forward_speed_mps": 3.4626454390373285,
+          "one_tile_success_rate": 0.76,
+          "one_tile_successes": 76,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.6,
+          "six_tile_successes": 60,
+          "world_exits": 0
+        }
+      }
+    },
+    "per_family_level": {
+      "obstacles/0:0.2": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.2,
+          "falls": 4,
+          "mean_forward_speed_mps": 3.526623492491873,
+          "one_tile_success_rate": 0.8,
+          "one_tile_successes": 16,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8,
+          "six_tile_successes": 16,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.12678314366735055,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.2,
+          "falls": 4,
+          "mean_forward_speed_mps": 3.3998403488245224,
+          "one_tile_success_rate": 0.8,
+          "one_tile_successes": 16,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8,
+          "six_tile_successes": 16,
+          "world_exits": 0
+        }
+      },
+      "obstacles/1:0.4": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.9082581877708433,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 20,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.05,
+          "falls": -1,
+          "mean_forward_speed_mps": 0.07371579982616261,
+          "one_tile_success_rate": 0.050000000000000044,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.050000000000000044,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.8345423879446807,
+          "one_tile_success_rate": 0.95,
+          "one_tile_successes": 19,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.95,
+          "six_tile_successes": 19,
+          "world_exits": 0
+        }
+      },
+      "obstacles/2:0.6": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.506136405467987,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.6,
+          "six_tile_successes": 12,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.05,
+          "falls": -1,
+          "mean_forward_speed_mps": 0.23353288155558616,
+          "one_tile_success_rate": 0.09999999999999998,
+          "one_tile_successes": 2,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": 0.25,
+          "six_tile_successes": 5,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 3.2726035239124007,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.35,
+          "six_tile_successes": 7,
+          "world_exits": 0
+        }
+      },
+      "obstacles/3:0.8": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.2,
+          "falls": 4,
+          "mean_forward_speed_mps": 2.3918964625780825,
+          "one_tile_success_rate": 0.8,
+          "one_tile_successes": 16,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.05000000000000002,
+          "falls": 1,
+          "mean_forward_speed_mps": -0.007399998564419974,
+          "one_tile_success_rate": -0.04999999999999993,
+          "one_tile_successes": -1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": -0.05,
+          "six_tile_successes": -1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.15,
+          "falls": 3,
+          "mean_forward_speed_mps": 2.3992964611425025,
+          "one_tile_success_rate": 0.85,
+          "one_tile_successes": 17,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.05,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        }
+      },
+      "obstacles/4:1": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.25,
+          "falls": 5,
+          "mean_forward_speed_mps": 2.3828299186025794,
+          "one_tile_success_rate": 0.75,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.2,
+          "falls": 4,
+          "mean_forward_speed_mps": 0.26701950122810114,
+          "one_tile_success_rate": -0.19999999999999996,
+          "one_tile_successes": -4,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.1158104173744783,
+          "one_tile_success_rate": 0.95,
+          "one_tile_successes": 19,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "rough/0:0.2": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.515186476707458,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 20,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.06120624542236275,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.453980231285096,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 20,
+          "world_exits": 0
+        }
+      },
+      "rough/1:0.4": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 3.7699960714294796,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9,
+          "six_tile_successes": 18,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": -0.0005614701250613585,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 3.770557541554541,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9,
+          "six_tile_successes": 18,
+          "world_exits": 0
+        }
+      },
+      "rough/2:0.6": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 3.510967473983764,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9,
+          "six_tile_successes": 18,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.008296725247615822,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 3.5026707487361484,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9,
+          "six_tile_successes": 18,
+          "world_exits": 0
+        }
+      },
+      "rough/3:0.8": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.548745262622833,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9,
+          "six_tile_successes": 18,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.2242913365364072,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.35,
+          "six_tile_successes": 7,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.324453926086426,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.55,
+          "six_tile_successes": 11,
+          "world_exits": 0
+        }
+      },
+      "rough/4:1": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.0329869627952575,
+          "one_tile_success_rate": 0.95,
+          "one_tile_successes": 19,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.05,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.1,
+          "falls": -2,
+          "mean_forward_speed_mps": 0.17468597061165791,
+          "one_tile_success_rate": 0.04999999999999993,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.05,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 2.8583009921835996,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "slope/0:0.2": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.453782558441162,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 20,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": -0.02530317306518537,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.4790857315063475,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 20,
+          "world_exits": 0
+        }
+      },
+      "slope/1:0.4": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 3.5200318905615036,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9,
+          "six_tile_successes": 18,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.025050907388358024,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 3.4949809831731455,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.9,
+          "six_tile_successes": 18,
+          "world_exits": 0
+        }
+      },
+      "slope/2:0.6": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.377771997451782,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.5,
+          "six_tile_successes": 10,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": -0.09888731241226223,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": -0.19999999999999996,
+          "six_tile_successes": -4,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.4766593098640444,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.7,
+          "six_tile_successes": 14,
+          "world_exits": 0
+        }
+      },
+      "slope/3:0.8": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.15,
+          "falls": 3,
+          "mean_forward_speed_mps": 2.447221142312755,
+          "one_tile_success_rate": 0.85,
+          "one_tile_successes": 17,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": -0.02544469558810869,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.15,
+          "falls": 3,
+          "mean_forward_speed_mps": 2.4726658379008635,
+          "one_tile_success_rate": 0.85,
+          "one_tile_successes": 17,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "slope/4:1": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.091615062952042,
+          "one_tile_success_rate": 0.95,
+          "one_tile_successes": 19,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.25,
+          "falls": -5,
+          "mean_forward_speed_mps": -0.08569223435170192,
+          "one_tile_success_rate": 0.29999999999999993,
+          "one_tile_successes": 6,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.3,
+          "falls": 6,
+          "mean_forward_speed_mps": 2.1773072973037437,
+          "one_tile_success_rate": 0.65,
+          "one_tile_successes": 13,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stairs/0:0.2": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.9505894660949705,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.95,
+          "six_tile_successes": 19,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": -0.003906834125519065,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": -0.050000000000000044,
+          "six_tile_successes": -1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.9544963002204896,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 20,
+          "world_exits": 0
+        }
+      },
+      "stairs/1:0.4": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.15,
+          "falls": 3,
+          "mean_forward_speed_mps": 3.112166368961334,
+          "one_tile_success_rate": 0.85,
+          "one_tile_successes": 17,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.7,
+          "six_tile_successes": 14,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.01992016539854191,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.15,
+          "falls": 3,
+          "mean_forward_speed_mps": 3.0922462035627922,
+          "one_tile_success_rate": 0.85,
+          "one_tile_successes": 17,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.7,
+          "six_tile_successes": 14,
+          "world_exits": 0
+        }
+      },
+      "stairs/2:0.6": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 2.5548940778869786,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.18444594097472589,
+          "one_tile_success_rate": 0.050000000000000044,
+          "one_tile_successes": 1,
+          "out_of_lane_exits": -1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 2.3704481369122528,
+          "one_tile_success_rate": 0.85,
+          "one_tile_successes": 17,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stairs/3:0.8": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.236389661918987,
+          "one_tile_success_rate": 0.95,
+          "one_tile_successes": 19,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 0.20059788633476616,
+          "one_tile_success_rate": -0.050000000000000044,
+          "one_tile_successes": -1,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 2.035791775584221,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stairs/4:1": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.2,
+          "falls": 4,
+          "mean_forward_speed_mps": 2.0060546456249364,
+          "one_tile_success_rate": 0.8,
+          "one_tile_successes": 16,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 0.2522419286706261,
+          "one_tile_success_rate": -0.09999999999999998,
+          "one_tile_successes": -2,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 1.7538127169543103,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/0:0.2": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 2.9209193348884583,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.3388584971427919,
+          "one_tile_success_rate": 0.19999999999999996,
+          "one_tile_successes": 4,
+          "out_of_lane_exits": -4,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 2.5820608377456664,
+          "one_tile_success_rate": 0.8,
+          "one_tile_successes": 16,
+          "out_of_lane_exits": 4,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/1:0.4": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.8736623928971485,
+          "one_tile_success_rate": 0.95,
+          "one_tile_successes": 19,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.05,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.5118502298256753,
+          "one_tile_success_rate": 0.09999999999999998,
+          "one_tile_successes": 2,
+          "out_of_lane_exits": -3,
+          "six_tile_success_rate": 0.05,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 2.3618121630714732,
+          "one_tile_success_rate": 0.85,
+          "one_tile_successes": 17,
+          "out_of_lane_exits": 3,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/2:0.6": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.25,
+          "falls": 5,
+          "mean_forward_speed_mps": 1.171417590281947,
+          "one_tile_success_rate": 0.6,
+          "one_tile_successes": 12,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.25,
+          "falls": 5,
+          "mean_forward_speed_mps": 0.7574818634009198,
+          "one_tile_success_rate": 0.6,
+          "one_tile_successes": 12,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.4139357268810272,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/3:0.8": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 0.6841964087315968,
+          "one_tile_success_rate": 0.4,
+          "one_tile_successes": 8,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.3271208738386092,
+          "one_tile_success_rate": 0.4,
+          "one_tile_successes": 8,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 0.3570755348929876,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "stepping_stones/4:1": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.15,
+          "falls": 3,
+          "mean_forward_speed_mps": 0.8835929810896319,
+          "one_tile_success_rate": 0.5,
+          "one_tile_successes": 10,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.09999999999999999,
+          "falls": 2,
+          "mean_forward_speed_mps": 0.39698185639177835,
+          "one_tile_success_rate": 0.5,
+          "one_tile_successes": 10,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 0.48661112469785356,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        }
+      },
+      "waves/0:0.2": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.05,
+          "falls": 1,
+          "mean_forward_speed_mps": 4.175422556059701,
+          "one_tile_success_rate": 0.95,
+          "one_tile_successes": 19,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.95,
+          "six_tile_successes": 19,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.09999999999999999,
+          "falls": -2,
+          "mean_forward_speed_mps": 0.39668929607837233,
+          "one_tile_success_rate": 0.09999999999999998,
+          "one_tile_successes": 2,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.09999999999999998,
+          "six_tile_successes": 2,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.15,
+          "falls": 3,
+          "mean_forward_speed_mps": 3.7787332599813284,
+          "one_tile_success_rate": 0.85,
+          "one_tile_successes": 17,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.85,
+          "six_tile_successes": 17,
+          "world_exits": 0
+        }
+      },
+      "waves/1:0.4": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.103762674331665,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 20,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": -0.029161572456359863,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 4.132924246788025,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 1.0,
+          "six_tile_successes": 20,
+          "world_exits": 0
+        }
+      },
+      "waves/2:0.6": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 3.6625082969665526,
+          "one_tile_success_rate": 1.0,
+          "one_tile_successes": 20,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.95,
+          "six_tile_successes": 19,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.1,
+          "falls": -2,
+          "mean_forward_speed_mps": 0.039071438944625836,
+          "one_tile_success_rate": 0.09999999999999998,
+          "one_tile_successes": 2,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.1499999999999999,
+          "six_tile_successes": 3,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.1,
+          "falls": 2,
+          "mean_forward_speed_mps": 3.6234368580219267,
+          "one_tile_success_rate": 0.9,
+          "one_tile_successes": 18,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.8,
+          "six_tile_successes": 16,
+          "world_exits": 0
+        }
+      },
+      "waves/3:0.8": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.25,
+          "falls": 5,
+          "mean_forward_speed_mps": 3.2301981353828806,
+          "one_tile_success_rate": 0.75,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.45,
+          "six_tile_successes": 9,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": 0.0,
+          "falls": 0,
+          "mean_forward_speed_mps": 0.004206304092039481,
+          "one_tile_success_rate": 0.0,
+          "one_tile_successes": 0,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.15000000000000002,
+          "six_tile_successes": 3,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.25,
+          "falls": 5,
+          "mean_forward_speed_mps": 3.225991831290841,
+          "one_tile_success_rate": 0.75,
+          "one_tile_successes": 15,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": 0.3,
+          "six_tile_successes": 6,
+          "world_exits": 0
+        }
+      },
+      "waves/4:1": {
+        "candidate": {
+          "episodes": 20,
+          "fall_rate": 0.55,
+          "falls": 11,
+          "mean_forward_speed_mps": 2.5885125035070766,
+          "one_tile_success_rate": 0.4,
+          "one_tile_successes": 8,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.0,
+          "six_tile_successes": 0,
+          "world_exits": 0
+        },
+        "delta": {
+          "episodes": 0,
+          "fall_rate": -0.09999999999999998,
+          "falls": -2,
+          "mean_forward_speed_mps": 0.03637150440255876,
+          "one_tile_success_rate": 0.10000000000000003,
+          "one_tile_successes": 2,
+          "out_of_lane_exits": 0,
+          "six_tile_success_rate": -0.05,
+          "six_tile_successes": -1,
+          "world_exits": 0
+        },
+        "reference": {
+          "episodes": 20,
+          "fall_rate": 0.65,
+          "falls": 13,
+          "mean_forward_speed_mps": 2.552140999104518,
+          "one_tile_success_rate": 0.3,
+          "one_tile_successes": 6,
+          "out_of_lane_exits": 1,
+          "six_tile_success_rate": 0.05,
+          "six_tile_successes": 1,
+          "world_exits": 0
+        }
+      }
+    },
+    "reference": {
+      "episodes": 600,
+      "fall_rate": 0.10166666666666667,
+      "falls": 61,
+      "mean_forward_speed_mps": 2.8584757818167423,
+      "one_tile_success_rate": 0.7866666666666666,
+      "one_tile_successes": 472,
+      "out_of_lane_exits": 11,
+      "six_tile_success_rate": 0.4266666666666667,
+      "six_tile_successes": 256,
+      "world_exits": 0
+    }
+  },
+  "promotion_gate": {
+    "checks": {
+      "course_id_at_least_80pct_of_154_32": {
+        "candidate": 137.06708456397055,
+        "minimum": 123.456,
+        "pass": true
+      },
+      "new_paired_one_tile_success_improves": {
+        "candidate": 517,
+        "pass": true,
+        "reference": 472
+      },
+      "new_paired_terrain_falls_no_higher": {
+        "candidate": 61,
+        "pass": true,
+        "reference": 61
+      },
+      "zero_world_escape": {
+        "fixed_450": 0,
+        "lanes100": 0,
+        "new_600": 0,
+        "pass": true
+      }
+    },
+    "decision": "promote",
+    "integrity_required": true,
+    "pass": true
+  },
+  "schema_version": 1,
+  "scope": {
+    "candidate_files": 12,
+    "fixed_reference": "selected_traverse1499 seeds 24/25/26",
+    "new_reference_files": 4,
+    "read_only_verification_no_simulator_run": true,
+    "serial_batch_expected_files": 16,
+    "serial_batch_present_files": 16
+  },
+  "selection_manifest": {
+    "checkpoint": "artifacts/terrain_demo/runs/rough_v5_portal_rehearsal4_seed43/model_round_4.pt",
+    "checkpoint_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+    "criterion": "Max strict terrain one-tile successes on reset24; ties fewer terrainfalls. Preserve baseline as default until matched new tests have more successes and no more terrainfalls; courseID>=0.8*154.32; worldexit0.",
+    "no_further_tuning_on_new_validation": true,
+    "path": "artifacts/terrain_demo/evaluations/rough_v5/selection_rehearsal_20260921.json",
+    "selected": "portal_rehearsal4",
+    "status": "frozen_before_new_validation"
+  },
+  "status": "pass"
+}

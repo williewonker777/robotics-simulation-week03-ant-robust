@@ -1,0 +1,52 @@
+seed: 44
+device: cuda:1
+num_steps_per_env: 32
+max_iterations: 750
+empirical_normalization: null
+obs_groups: {}
+clip_actions: null
+save_interval: 250
+experiment_name: week03_ant_residual_v8
+run_name: v8_footmap_seed44
+logger: tensorboard
+neptune_project: isaaclab
+wandb_project: isaaclab
+resume: true
+load_run: v8_init_footmap_44
+load_checkpoint: model_0.pt
+class_name: OnPolicyRunner
+policy:
+  class_name: ResidualActorCritic
+  init_noise_std: 0.2
+  noise_std_type: scalar
+  actor_obs_normalization: false
+  critic_obs_normalization: false
+  actor_hidden_dims:
+  - 400
+  - 200
+  - 100
+  critic_hidden_dims:
+  - 400
+  - 200
+  - 100
+  activation: elu
+  input_mode: footmap
+  residual_limit: 0.5
+  require_config_match: true
+algorithm:
+  class_name: PPO
+  num_learning_epochs: 5
+  num_mini_batches: 4
+  learning_rate: 0.0001
+  schedule: fixed
+  gamma: 0.995
+  lam: 0.95
+  entropy_coef: 0.002
+  desired_kl: null
+  max_grad_norm: 1.0
+  value_loss_coef: 1.0
+  use_clipped_value_loss: true
+  clip_param: 0.2
+  normalize_advantage_per_mini_batch: false
+  rnd_cfg: null
+  symmetry_cfg: null

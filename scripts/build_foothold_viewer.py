@@ -1,0 +1,65 @@
+"""Build a local-only result page from audited frozen v9 metrics."""
+
+import json
+from pathlib import Path
+
+
+def main():
+    root = Path(__file__).resolve().parents[1]
+    directory = root / "artifacts/terrain_demo/foothold_v9"
+    summary = json.loads((directory / "summary.json").read_text())
+    names = {"frozen_v5": "기존 v5", "feet": "발 위치만 v9", "targets": "착지 후보 v9",
+             "guided": "후보+보상 v9"}
+    rows, bars, hard = [], [], []
+    for group, name in names.items():
+        row = summary["totals"][group]
+        values = [f"{row[key]}/{row['n']} ({100 * row[key] / row['n']:.1f}%)" for key in ("one", "six", "falls")]
+        rows.append(f"<tr><th>{name}</th>" + "".join(f"<td>{value}</td>" for value in values) + "</tr>")
+        rate = 100 * row["six"] / row["n"]
+        bars.append(f'<div class="barrow"><span>{name}</span><div class="track"><i style="width:{rate}%"></i></div>'
+                    f'<b>{rate:.1f}%</b></div>')
+        stone = summary["per_family"][group]["stepping_stones"]["4"]
+        hard.append(f"<tr><th>{name}</th><td>{stone['one']}/{stone['n']}</td>"
+                    f"<td>{stone['six']}/{stone['n']}</td><td>{stone['falls']}/{stone['n']}</td></tr>")
+    passed = summary["promotion_gate"]["passed"]
+    verdict = "전체 교체 기준 PASS" if passed else "전체 교체 기준 FAIL — 기존 v5 유지"
+    page = """<!doctype html><html lang="ko"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Ant v9 착지 후보 비교</title>
+<style>body{background:#101827;color:#e9eff8;font:16px system-ui;margin:24px auto;padding:0 20px;max-width:1300px}
+h1{font-size:28px}h2{margin-top:30px}a{color:#82ccff}table{width:100%;border-collapse:collapse;margin:16px 0}
+th,td{padding:12px;text-align:left;border-bottom:1px solid #344052}th{color:#c4dded}
+.verdict{padding:16px;background:#502a32;border-radius:10px;font-weight:bold}.videos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+video{width:100%;background:#000;border-radius:10px}button{padding:12px 20px;margin:8px 8px 0 0;border:0;border-radius:8px;cursor:pointer}
+.note{color:#b9c7d8;line-height:1.7}.barrow{display:flex;gap:12px;align-items:center;margin:12px 0}.barrow span{width:140px}
+.track{background:#253146;height:22px;width:60%;border-radius:4px;overflow:hidden}.track i{display:block;height:100%;background:#49b1e8}
+@media(max-width:750px){.videos{grid-template-columns:1fr}table{font-size:13px}th,td{padding:6px}}
+</style><h1>험지 보행: 착지 후보 + 지지면 보상 v9</h1>
+<p>고밀도 지형 스캔에서 발끝 착지 후보를 추출하고, 발 위치만 / 후보 추가 / 후보+학습 보상을 비교했습니다.</p>
+<div class="verdict">VERDICT</div>
+<h2>신규 지형에서 전체 비교</h2><table><thead><tr><th>정책</th><th>1타일 통과</th><th>6타일 통과</th><th>낙상</th></tr></thead><tbody>ROWS</tbody></table>
+<p class="note">학습된 각 방식은 3개 시드 합산, 기준 v5는 동일 조건당 한 번만 평가했습니다.
+험지 분모는 v5 300회 / 나머지 각 900회입니다. 평지를 포함한 총 3,500개 첫 에피소드,
+신규 지형 2개(64/65)이며 서로 독립적인 지형 3,500개를 뜻하지 않습니다.</p>
+<h2>연속 6타일 통과율</h2>BARS
+<h2>최고 난이도 1.0 돌다리</h2><table><thead><tr><th>정책</th><th>1타일</th><th>6타일</th><th>낙상</th></tr></thead><tbody>HARD</tbody></table>
+<h2>같은 조건의 16초 무편집 영상</h2>
+<p class="note">geometry64 / reset38 / 돌다리 난이도1.0. 후보+보상 모델은 결과 확인 전에 지정한 학습 시드42입니다.
+실패와 리셋을 제거하지 않았습니다. 영상은 별도 정성 사례이며 위 평가 횟수에 추가하지 않습니다.</p>
+<div class="videos"><div><h3>기존 v5</h3><video id="left" controls muted loop preload="metadata" src="videos/frozen_v5_stones10.mp4"></video></div>
+<div><h3>후보+보상 v9 (seed42)</h3><video id="right" controls muted loop preload="metadata" src="videos/guided_seed42_stones10.mp4"></video></div></div>
+<button id="play">처음부터 함께 재생</button><button id="pause">둘 다 정지</button>
+<p class="note">실제 RGB-D 카메라가 아닌 이상적 높이 레이캐스트입니다. 발끝 후보는 발 전체 접촉이나 관절 도달 가능성을 보증하지 않으며,
+낙상 방지·실물 적용도 보장하지 않습니다. 후보 없음은 안전을 뜻하지 않습니다. 지형별·시드별 수치를 함께 확인하세요.</p>
+<p><a href="summary.md">전체 수치</a> · <a href="summary.json">원시 집계 JSON</a> ·
+<a href="verification.json">검증 기록</a> · <a href="frozen.json">고정 체크포인트/조건</a> ·
+<a href="video_manifest.json">영상 조건</a> · <a href="../../../docs/FOOTHOLD_V9.md">구현 설명</a></p>
+<script>const videos=[document.getElementById('left'),document.getElementById('right')];
+document.getElementById('play').onclick=()=>{for(const v of videos){v.currentTime=0;v.play().catch(console.error);}};
+document.getElementById('pause').onclick=()=>videos.forEach(v=>v.pause());</script></html>"""
+    page = page.replace("VERDICT", verdict).replace("ROWS", "".join(rows)).replace("BARS", "".join(bars)).replace("HARD", "".join(hard))
+    (directory / "index.html").write_text(page)
+    print(directory / "index.html")
+
+
+if __name__ == "__main__":
+    main()

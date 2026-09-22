@@ -1,0 +1,35 @@
+{
+  "scope": "Predeclared one-environment qualitative videos; captions are current episode after resets, never first-episode benchmark success.",
+  "geometry": 66,
+  "reset": 40,
+  "family": "stepping_stones",
+  "level": 4,
+  "training_seed": 42,
+  "frames": [
+    {
+      "video": "frozen_v5_stones10_16s.mp4",
+      "time_s": 15.9,
+      "resets": 2,
+      "current_episode_forward_m": 8.3
+    },
+    {
+      "video": "anchored_seed42_stones10_16s.mp4",
+      "time_s": 15.9,
+      "resets": 1,
+      "current_episode_forward_m": 17.6
+    },
+    {
+      "video": "frozen_v5_stones10_64s.mp4",
+      "time_s": 63.9,
+      "resets": 2,
+      "current_episode_forward_m": 43.6
+    },
+    {
+      "video": "anchored_seed42_stones10_64s.mp4",
+      "time_s": 63.9,
+      "resets": 1,
+      "current_episode_forward_m": 68.1
+    }
+  ],
+  "inspection": "Four decoded frames inspected directly; no resimulation/reselection/cuts."
+}

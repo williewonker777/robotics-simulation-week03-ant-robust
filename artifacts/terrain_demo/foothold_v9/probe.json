@@ -1,0 +1,436 @@
+{
+  "status": "pass",
+  "observation_dimensions": 88,
+  "rays": 825,
+  "initial_available_per_foot": [
+    35,
+    35,
+    35,
+    35
+  ],
+  "initial_feet_env0": [
+    [
+      0.6669902801513672,
+      0.7821578979492188,
+      -0.32433295249938965
+    ],
+    [
+      -0.7636642456054688,
+      0.6493606567382812,
+      -0.35796448588371277
+    ],
+    [
+      -0.7273902893066406,
+      -0.5722885131835938,
+      -0.4340980350971222
+    ],
+    [
+      0.6886405944824219,
+      -0.567352294921875,
+      -0.46054336428642273
+    ]
+  ],
+  "stone_available_by_level": [
+    [
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true
+    ]
+  ],
+  "stone_support_cost_by_level": [
+    0.061378441751003265,
+    0.2773505747318268,
+    0.19827809929847717,
+    0.41681697964668274,
+    0.10973203182220459
+  ],
+  "stone_plateau_cells_by_level": [
+    264,
+    281,
+    214,
+    197,
+    206
+  ],
+  "reset_freshness": true,
+  "yaw_roll_pitch_finite": true,
+  "wrap_max_hint_error": 0.0,
+  "first_episode_availability": {
+    "rough:0": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "support_cost_sum": 0.12093183398246765
+    },
+    "rough:1": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        300.0,
+        300.0,
+        282.0,
+        288.0
+      ],
+      "support_cost_sum": 0.3500062823295593
+    },
+    "rough:2": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        211.0,
+        300.0,
+        300.0,
+        227.0
+      ],
+      "support_cost_sum": 4.337442874908447
+    },
+    "rough:3": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "support_cost_sum": 2.58347225189209
+    },
+    "rough:4": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        286.0,
+        300.0,
+        300.0,
+        292.0
+      ],
+      "support_cost_sum": 6.317554473876953
+    },
+    "slope:0": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        264.0,
+        300.0,
+        275.0,
+        253.0
+      ],
+      "support_cost_sum": 0.1899724155664444
+    },
+    "slope:1": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        297.0,
+        300.0,
+        300.0,
+        288.0
+      ],
+      "support_cost_sum": 6.491954803466797
+    },
+    "slope:2": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        221.0,
+        243.0,
+        220.0,
+        200.0
+      ],
+      "support_cost_sum": 10.995675086975098
+    },
+    "slope:3": {
+      "active_env_steps": 200,
+      "available_per_foot": [
+        88.0,
+        143.0,
+        126.0,
+        86.0
+      ],
+      "support_cost_sum": 4.236719131469727
+    },
+    "slope:4": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        151.0,
+        167.0,
+        161.0,
+        101.0
+      ],
+      "support_cost_sum": 7.397982120513916
+    },
+    "stairs:0": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        300.0,
+        300.0,
+        300.0,
+        290.0
+      ],
+      "support_cost_sum": 0.4874950349330902
+    },
+    "stairs:1": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        291.0,
+        300.0,
+        298.0,
+        280.0
+      ],
+      "support_cost_sum": 0.6416390538215637
+    },
+    "stairs:2": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        282.0,
+        300.0,
+        297.0,
+        272.0
+      ],
+      "support_cost_sum": 0.4919278919696808
+    },
+    "stairs:3": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        274.0,
+        300.0,
+        300.0,
+        244.0
+      ],
+      "support_cost_sum": 0.3275436460971832
+    },
+    "stairs:4": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        262.0,
+        300.0,
+        283.0,
+        236.0
+      ],
+      "support_cost_sum": 0.42951545119285583
+    },
+    "waves:0": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        290.0,
+        259.0,
+        268.0,
+        281.0
+      ],
+      "support_cost_sum": 0.37508270144462585
+    },
+    "waves:1": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        300.0,
+        300.0,
+        300.0,
+        297.0
+      ],
+      "support_cost_sum": 0.23652146756649017
+    },
+    "waves:2": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        293.0,
+        300.0,
+        300.0,
+        283.0
+      ],
+      "support_cost_sum": 1.0993943214416504
+    },
+    "waves:3": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        261.0,
+        300.0,
+        288.0,
+        219.0
+      ],
+      "support_cost_sum": 5.817347526550293
+    },
+    "waves:4": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        265.0,
+        274.0,
+        287.0,
+        267.0
+      ],
+      "support_cost_sum": 12.022393226623535
+    },
+    "obstacles:0": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        293.0,
+        295.0,
+        292.0,
+        287.0
+      ],
+      "support_cost_sum": 0.24802863597869873
+    },
+    "obstacles:1": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        300.0,
+        300.0,
+        283.0,
+        273.0
+      ],
+      "support_cost_sum": 0.3923488259315491
+    },
+    "obstacles:2": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        285.0,
+        300.0,
+        300.0,
+        274.0
+      ],
+      "support_cost_sum": 0.39035627245903015
+    },
+    "obstacles:3": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        287.0,
+        288.0,
+        298.0,
+        263.0
+      ],
+      "support_cost_sum": 9.367335319519043
+    },
+    "obstacles:4": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        247.0,
+        212.0,
+        253.0,
+        264.0
+      ],
+      "support_cost_sum": 23.903390884399414
+    },
+    "stepping_stones:0": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        252.0,
+        300.0,
+        278.0,
+        260.0
+      ],
+      "support_cost_sum": 15.216588020324707
+    },
+    "stepping_stones:1": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        300.0,
+        272.0,
+        278.0,
+        293.0
+      ],
+      "support_cost_sum": 17.832202911376953
+    },
+    "stepping_stones:2": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        260.0,
+        272.0,
+        260.0,
+        243.0
+      ],
+      "support_cost_sum": 81.84542083740234
+    },
+    "stepping_stones:3": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        271.0,
+        292.0,
+        285.0,
+        282.0
+      ],
+      "support_cost_sum": 167.30067443847656
+    },
+    "stepping_stones:4": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        254.0,
+        172.0,
+        188.0,
+        183.0
+      ],
+      "support_cost_sum": 85.36626434326172
+    },
+    "flat:0": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        295.0,
+        300.0,
+        300.0,
+        294.0
+      ],
+      "support_cost_sum": 0.016702139750123024
+    },
+    "flat:1": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "support_cost_sum": 0.01660911552608013
+    },
+    "flat:2": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        289.0,
+        300.0,
+        288.0,
+        289.0
+      ],
+      "support_cost_sum": 0.019084017723798752
+    },
+    "flat:3": {
+      "active_env_steps": 36,
+      "available_per_foot": [
+        10.0,
+        4.0,
+        5.0,
+        4.0
+      ],
+      "support_cost_sum": 0.03854885697364807
+    },
+    "flat:4": {
+      "active_env_steps": 300,
+      "available_per_foot": [
+        265.0,
+        283.0,
+        300.0,
+        291.0
+      ],
+      "support_cost_sum": 0.025362567976117134
+    }
+  },
+  "diagnostic_steps": 300,
+  "diagnostic_note": "Training-geometry scan availability; not benchmark or holdout success."
+}

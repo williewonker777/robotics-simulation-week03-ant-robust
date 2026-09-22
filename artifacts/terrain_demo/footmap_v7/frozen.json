@@ -1,0 +1,137 @@
+{
+  "frozen_at": "2026-09-21T15:34:48.680171+00:00",
+  "parent_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "selection": "final iteration only, all three seeds; representative seed42 predeclared",
+  "training_pairs": [
+    [
+      42,
+      51
+    ],
+    [
+      43,
+      58
+    ],
+    [
+      44,
+      59
+    ]
+  ],
+  "heldout_pairs": [
+    [
+      60,
+      34
+    ],
+    [
+      61,
+      35
+    ]
+  ],
+  "runs": [
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_blind_seed42/model_749.pt",
+      "sha256": "b69ae063ba849d0b95b77647f84439cde0916f35f2a2bee3eda255cc01856f72",
+      "mode": "blind",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 749,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_22-26-13_v7_blind_seed42"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_height_seed42/model_749.pt",
+      "sha256": "7e5bb194b7a1223e20e09583ec6af34e190040aabbc2c83894383561fbd0c681",
+      "mode": "height",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 749,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_22-39-23_v7_height_seed42"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_footmap_seed42/model_749.pt",
+      "sha256": "c820326b234aa1acf8d62bb1a86c307b6bd558ea1a4de674160e6ab6e46391ef",
+      "mode": "footmap",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 749,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_22-53-17_v7_footmap_seed42"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_blind_seed43/model_749.pt",
+      "sha256": "08843cd744920d586ace8ad045ebca9668a302cb123fd8532ab8cc94ef6b66c5",
+      "mode": "blind",
+      "training_seed": 43,
+      "training_geometry": 58,
+      "iteration": 749,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_23-09-03_v7_blind_seed43"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_height_seed43/model_749.pt",
+      "sha256": "8b237420a910124ae958c226f23f2cf615f5bc03a417d060ebe664780d125894",
+      "mode": "height",
+      "training_seed": 43,
+      "training_geometry": 58,
+      "iteration": 749,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_23-22-07_v7_height_seed43"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_footmap_seed43/model_749.pt",
+      "sha256": "ffb9a8bd348fd630b5dee8005e6d87d5bf19e03c56fb62670e223987b4b6730d",
+      "mode": "footmap",
+      "training_seed": 43,
+      "training_geometry": 58,
+      "iteration": 749,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_23-35-52_v7_footmap_seed43"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_blind_seed44/model_749.pt",
+      "sha256": "2a67ae44e63244413ece3b5b86ce76da833fe4e5369a3c31d422c59772dc6272",
+      "mode": "blind",
+      "training_seed": 44,
+      "training_geometry": 59,
+      "iteration": 749,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_23-51-57_v7_blind_seed44"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_height_seed44/model_749.pt",
+      "sha256": "3f5d4631fd4e667bcff1f9bc35ce5a8bca0c32b26139c8922009e4e2c0b0fe55",
+      "mode": "height",
+      "training_seed": 44,
+      "training_geometry": 59,
+      "iteration": 749,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-22_00-05-08_v7_height_seed44"
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/v7_footmap_seed44/model_749.pt",
+      "sha256": "d9f2a1433fce17f8b97ff554f430a0a00868e25defd932ec5b057b973c9ab825",
+      "mode": "footmap",
+      "training_seed": 44,
+      "training_geometry": 59,
+      "iteration": 749,
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-22_00-18-54_v7_footmap_seed44"
+    }
+  ],
+  "device": "cuda:1",
+  "reference": {
+    "checkpoint": "artifacts/terrain_demo/footmap_v7/runs/frozen_v5_reference/model_0.pt",
+    "sha256": "3899431af1525e6cb092262424845a45cbb4c84ed1893bd55c1500ec422e779e",
+    "mode": "blind",
+    "training_seed": null,
+    "training_geometry": null,
+    "iteration": 0,
+    "transitions": 0
+  },
+  "source_sha256": {
+    "src/week03_ant/footmap_policy.py": "c855e38dd1ee9970eae1ee7f7e0996b5a0a95f5d020bdc273d0efd36b32e0d0d",
+    "src/week03_ant/footmap_math.py": "11ac8aa4aae318cc2dcc7c82743144f09c5a6e009e1713918fef961b8e5be79a",
+    "src/week03_ant/tasks/footmap_v7_cfg.py": "791153ef9d4db4e58aaad8081a63630763ad4f617b329ec94f4e64e9c487a057",
+    "scripts/run_footmap_experiment.py": "88b4816a60c1127a469e66e5c44550fc3bfc91d41e224428bede6c3d505f2c79"
+  }
+}

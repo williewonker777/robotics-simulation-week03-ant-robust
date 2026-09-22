@@ -22,7 +22,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("source", type=Path)
     parser.add_argument("label")
-    parser.add_argument("variant", choices=("baseline", "friction", "robust", "terrain"))
+    parser.add_argument("variant", choices=("baseline", "friction", "robust", "terrain", "recovery", "rough_v5", "depth_v6"))
     parser.add_argument("seed", type=int)
     parser.add_argument("--checkpoint", default="model_999.pt")
     parser.add_argument("--destination", type=Path, default=Path("artifacts/runs"))

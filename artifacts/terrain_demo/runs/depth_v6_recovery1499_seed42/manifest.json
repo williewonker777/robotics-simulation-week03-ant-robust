@@ -1,0 +1,22 @@
+{
+  "actions": 8,
+  "checkpoint": "model_1499.pt",
+  "checkpoint_bytes": 5769781,
+  "checkpoint_sha256": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7",
+  "depth_sensor": "143 yaw-aligned vertical raycast heights + 143 validity bits; not rendered RGB-D",
+  "evaluation_summary": "../../evaluations/depth_v6/summary.json",
+  "event_files": [
+    "events.out.tfevents.1789989978.local-host.662737.0"
+  ],
+  "label": "depth_v6_recovery1499_seed42",
+  "original_60d_parent_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "policy_observation_dimensions": 346,
+  "seed": 42,
+  "selection_record": "../../evaluations/depth_v6/selection_frozen.json",
+  "source_run": "logs/rsl_rl/week03_ant_depth_v6/2026-09-21_20-26-11_depth143_recovery_20260921",
+  "status": "experimental; fresh overall promotion gate failed; retain prior v5 recommendation",
+  "train_iterations": 1500,
+  "training_transitions": 196608000,
+  "variant": "depth_v6",
+  "warm_start_sha256": "a5be8936688fcb09bc45bf85778a136d9e724f486b7c1ef9de88e62b38e269cf"
+}

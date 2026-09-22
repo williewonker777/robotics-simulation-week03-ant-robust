@@ -1,0 +1,108 @@
+{
+  "checkpoint_sha256": "d02b5146a3c334d63fb4e362594f3488bfe4ab9bbabbd46c018bf35ef62dcd03",
+  "source": "baseline_stones_gait.npz",
+  "seed": 24,
+  "terrain_seed": 51,
+  "first_episode_only": true,
+  "diagnostic_not_benchmark": true,
+  "sample_window": "after 2s, before first termination",
+  "tip_offsets_from_loaded_usd": [
+    [
+      0.4000000019927539,
+      0.4000000183964355,
+      0.0
+    ],
+    [
+      -0.39999998261301684,
+      0.400000002820991,
+      0.0
+    ],
+    [
+      -0.39999998261301684,
+      -0.400000002820991,
+      0.0
+    ],
+    [
+      0.4000000019927539,
+      -0.4000000183964355,
+      0.0
+    ]
+  ],
+  "levels": {
+    "0.2": {
+      "environments": 5,
+      "first_episode_active_samples_after_2s": 4195,
+      "last_active_distances_m": [
+        44.89234161376953,
+        25.8648681640625,
+        40.67543411254883,
+        37.5992317199707,
+        43.432132720947266
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.11084624553039332,
+      "torso_world_z_median": 0.47416919469833374,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.03814064362336114,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.37050059594755663
+    },
+    "0.4": {
+      "environments": 5,
+      "first_episode_active_samples_after_2s": 4195,
+      "last_active_distances_m": [
+        43.9051399230957,
+        31.09756851196289,
+        42.81138610839844,
+        44.53939437866211,
+        42.765750885009766
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.055542312276519665,
+      "torso_world_z_median": 0.4661007821559906,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.0366507747318236,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.3570917759237187
+    },
+    "0.6": {
+      "environments": 5,
+      "first_episode_active_samples_after_2s": 4195,
+      "last_active_distances_m": [
+        7.169221878051758,
+        6.738071441650391,
+        6.944509506225586,
+        7.5467529296875,
+        6.276054382324219
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.7637663885578069,
+      "torso_world_z_median": 0.3029696047306061,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.5582240762812872,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.19159713945172824
+    },
+    "0.8": {
+      "environments": 5,
+      "first_episode_active_samples_after_2s": 3356,
+      "last_active_distances_m": [
+        6.44032096862793,
+        7.725412368774414,
+        5.623151779174805,
+        -0.03984642028808594,
+        6.903100967407227
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.8194278903456496,
+      "torso_world_z_median": 0.2724348306655884,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.7275029797377831,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.05095351609058403
+    },
+    "1.0": {
+      "environments": 5,
+      "first_episode_active_samples_after_2s": 4195,
+      "last_active_distances_m": [
+        7.015037536621094,
+        7.150815963745117,
+        5.121681213378906,
+        6.165685653686523,
+        5.734724044799805
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.9046483909415971,
+      "torso_world_z_median": 0.3069140613079071,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.4928486293206198,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.1369487485101311
+    }
+  }
+}

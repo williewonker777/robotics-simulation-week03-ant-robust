@@ -1,0 +1,20 @@
+{
+  "label": "depth_v6_blind_reference",
+  "variant": "zero-expanded frozen60D reference, not a traineddepthpolicy",
+  "checkpoint": "model_0.pt",
+  "sha256": "a5be8936688fcb09bc45bf85778a136d9e724f486b7c1ef9de88e62b38e269cf",
+  "source": "artifacts/terrain_demo/runs/rough_v5_portal_rehearsal4_seed43/model_round_4.pt",
+  "source_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "input_dimensions": 346,
+  "zero_columns": "actor.0.weight[:,60:],critic.0.weight[:,60:]",
+  "actor_hidden_dims": [
+    400,
+    200,
+    100
+  ],
+  "actions": 8,
+  "action_std": 0.2,
+  "iter": 0,
+  "optimizer_reset": true,
+  "use": "paired blind reference in exactlysamev6 sensor/cloning/reset scene"
+}

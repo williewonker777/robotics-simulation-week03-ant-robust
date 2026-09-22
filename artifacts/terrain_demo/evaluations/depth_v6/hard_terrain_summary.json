@@ -1,0 +1,480 @@
+{
+  "schema_version": 1,
+  "analysis_type": "post-hoc difficulty subgroup of existing frozen fresh validation",
+  "new_evaluation_rollouts": false,
+  "policies_frozen_unchanged": true,
+  "levels": [
+    0.8,
+    1.0
+  ],
+  "families": [
+    "rough",
+    "slope",
+    "stairs",
+    "waves",
+    "obstacles",
+    "stepping_stones"
+  ],
+  "episodes_per_family_level_policy": 20,
+  "source_pairs": [
+    "fresh_geometry51_seed31",
+    "fresh_geometry51_seed32",
+    "fresh_geometry56_seed33",
+    "fresh_geometry57_seed33"
+  ],
+  "source_files": [
+    {
+      "policy": "blind_reference",
+      "pair": "fresh_geometry51_seed31",
+      "path": "artifacts/terrain_demo/evaluations/depth_v6/blind_reference__fresh_geometry51_seed31.json",
+      "sha256": "8c1e4c230d083657eba325feda30b423af8214e7fc90c94b11c95f2b6538c1a2",
+      "checkpoint_sha256": "a5be8936688fcb09bc45bf85778a136d9e724f486b7c1ef9de88e62b38e269cf"
+    },
+    {
+      "policy": "blind_reference",
+      "pair": "fresh_geometry51_seed32",
+      "path": "artifacts/terrain_demo/evaluations/depth_v6/blind_reference__fresh_geometry51_seed32.json",
+      "sha256": "d6ce80bf0c1aba23ca12cd2abe3e4f9705a8135966eaa9ff703619cd72d684c9",
+      "checkpoint_sha256": "a5be8936688fcb09bc45bf85778a136d9e724f486b7c1ef9de88e62b38e269cf"
+    },
+    {
+      "policy": "blind_reference",
+      "pair": "fresh_geometry56_seed33",
+      "path": "artifacts/terrain_demo/evaluations/depth_v6/blind_reference__fresh_geometry56_seed33.json",
+      "sha256": "4f65941550c47a5c04d2323c0fc22a7683a18150f11a809e953c0b871b6659b9",
+      "checkpoint_sha256": "a5be8936688fcb09bc45bf85778a136d9e724f486b7c1ef9de88e62b38e269cf"
+    },
+    {
+      "policy": "blind_reference",
+      "pair": "fresh_geometry57_seed33",
+      "path": "artifacts/terrain_demo/evaluations/depth_v6/blind_reference__fresh_geometry57_seed33.json",
+      "sha256": "aa4a4c350efbf125b4a77c7206e1a9d456c320a70b628219387f45f244cf0b45",
+      "checkpoint_sha256": "a5be8936688fcb09bc45bf85778a136d9e724f486b7c1ef9de88e62b38e269cf"
+    },
+    {
+      "policy": "selected",
+      "pair": "fresh_geometry51_seed31",
+      "path": "artifacts/terrain_demo/evaluations/depth_v6/selected__fresh_geometry51_seed31.json",
+      "sha256": "a63aae568866a531b2a9d598b322068b4636d208c47802345d1d014408c24bb7",
+      "checkpoint_sha256": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7"
+    },
+    {
+      "policy": "selected",
+      "pair": "fresh_geometry51_seed32",
+      "path": "artifacts/terrain_demo/evaluations/depth_v6/selected__fresh_geometry51_seed32.json",
+      "sha256": "196d9af4a688a848582d5ff384ebe1b62ee50cd2ed22fca6a953080064abdb60",
+      "checkpoint_sha256": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7"
+    },
+    {
+      "policy": "selected",
+      "pair": "fresh_geometry56_seed33",
+      "path": "artifacts/terrain_demo/evaluations/depth_v6/selected__fresh_geometry56_seed33.json",
+      "sha256": "7a515b7f5fcc3799d0a37cdcab8211b73de59ccf28a720fb8d72190a53d5c56e",
+      "checkpoint_sha256": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7"
+    },
+    {
+      "policy": "selected",
+      "pair": "fresh_geometry57_seed33",
+      "path": "artifacts/terrain_demo/evaluations/depth_v6/selected__fresh_geometry57_seed33.json",
+      "sha256": "fcae7c90d91c7f9749f0e92f3df04612bf7c757df40bd97691f2de2d299c919e",
+      "checkpoint_sha256": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7"
+    }
+  ],
+  "rows": [
+    {
+      "family": "rough",
+      "difficulty": 0.8,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 19,
+        "six": 12,
+        "falls": 1,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.95,
+        "mean_speed_mps": 3.308163344860077,
+        "mean_distance_m": 52.68488025665283
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 19,
+        "six": 0,
+        "falls": 1,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.95,
+        "mean_speed_mps": 2.8448051810264587,
+        "mean_distance_m": 45.26489734649658
+      }
+    },
+    {
+      "family": "rough",
+      "difficulty": 1.0,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 20,
+        "six": 3,
+        "falls": 0,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 1.0,
+        "mean_speed_mps": 3.0819477438926697,
+        "mean_distance_m": 49.311163902282715
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 20,
+        "six": 0,
+        "falls": 0,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 1.0,
+        "mean_speed_mps": 2.766598701477051,
+        "mean_distance_m": 44.26557922363281
+      }
+    },
+    {
+      "family": "slope",
+      "difficulty": 0.8,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 19,
+        "six": 0,
+        "falls": 1,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.95,
+        "mean_speed_mps": 2.8766888976097107,
+        "mean_distance_m": 45.010640144348145
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 20,
+        "six": 0,
+        "falls": 0,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 1.0,
+        "mean_speed_mps": 2.570612847805023,
+        "mean_distance_m": 41.12980556488037
+      }
+    },
+    {
+      "family": "slope",
+      "difficulty": 1.0,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 15,
+        "six": 0,
+        "falls": 5,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.75,
+        "mean_speed_mps": 1.7635538280010223,
+        "mean_distance_m": 27.788344383239746
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 13,
+        "six": 0,
+        "falls": 7,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.65,
+        "mean_speed_mps": 1.6815989911556244,
+        "mean_distance_m": 23.791635036468506
+      }
+    },
+    {
+      "family": "stairs",
+      "difficulty": 0.8,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 19,
+        "six": 0,
+        "falls": 1,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.95,
+        "mean_speed_mps": 2.1269485652446747,
+        "mean_distance_m": 33.987563610076904
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 16,
+        "six": 0,
+        "falls": 4,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.8,
+        "mean_speed_mps": 2.0630780160427094,
+        "mean_distance_m": 29.105489253997803
+      }
+    },
+    {
+      "family": "stairs",
+      "difficulty": 1.0,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 19,
+        "six": 0,
+        "falls": 1,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.95,
+        "mean_speed_mps": 1.8772458732128143,
+        "mean_distance_m": 29.491002082824707
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 18,
+        "six": 0,
+        "falls": 1,
+        "lane_exits": 1,
+        "world_exits": 0,
+        "strict_success_rate": 0.9,
+        "mean_speed_mps": 1.8743505775928497,
+        "mean_distance_m": 29.0458722114563
+      }
+    },
+    {
+      "family": "waves",
+      "difficulty": 0.8,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 18,
+        "six": 10,
+        "falls": 2,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.9,
+        "mean_speed_mps": 3.321785271167755,
+        "mean_distance_m": 51.76291370391846
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 16,
+        "six": 1,
+        "falls": 4,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.8,
+        "mean_speed_mps": 3.131130039691925,
+        "mean_distance_m": 46.27822399139404
+      }
+    },
+    {
+      "family": "waves",
+      "difficulty": 1.0,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 11,
+        "six": 0,
+        "falls": 8,
+        "lane_exits": 1,
+        "world_exits": 0,
+        "strict_success_rate": 0.55,
+        "mean_speed_mps": 2.8237777948379517,
+        "mean_distance_m": 34.60125160217285
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 9,
+        "six": 0,
+        "falls": 11,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.45,
+        "mean_speed_mps": 2.8122593760490417,
+        "mean_distance_m": 35.60960388183594
+      }
+    },
+    {
+      "family": "obstacles",
+      "difficulty": 0.8,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 18,
+        "six": 0,
+        "falls": 1,
+        "lane_exits": 1,
+        "world_exits": 0,
+        "strict_success_rate": 0.9,
+        "mean_speed_mps": 2.8197256922721863,
+        "mean_distance_m": 42.62517261505127
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 19,
+        "six": 0,
+        "falls": 1,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.95,
+        "mean_speed_mps": 2.4692264795303345,
+        "mean_distance_m": 39.150943756103516
+      }
+    },
+    {
+      "family": "obstacles",
+      "difficulty": 1.0,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 16,
+        "six": 0,
+        "falls": 4,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.8,
+        "mean_speed_mps": 2.3376230001449585,
+        "mean_distance_m": 35.13759088516235
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 15,
+        "six": 0,
+        "falls": 5,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.75,
+        "mean_speed_mps": 2.3301462531089783,
+        "mean_distance_m": 31.985723972320557
+      }
+    },
+    {
+      "family": "stepping_stones",
+      "difficulty": 0.8,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 6,
+        "six": 0,
+        "falls": 6,
+        "lane_exits": 2,
+        "world_exits": 0,
+        "strict_success_rate": 0.3,
+        "mean_speed_mps": 0.6680169254541397,
+        "mean_distance_m": 10.499570608139038
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 15,
+        "six": 0,
+        "falls": 0,
+        "lane_exits": 1,
+        "world_exits": 0,
+        "strict_success_rate": 0.75,
+        "mean_speed_mps": 0.9481946229934692,
+        "mean_distance_m": 15.171113967895508
+      }
+    },
+    {
+      "family": "stepping_stones",
+      "difficulty": 1.0,
+      "blind_reference": {
+        "episodes": 20,
+        "one": 10,
+        "six": 0,
+        "falls": 1,
+        "lane_exits": 0,
+        "world_exits": 0,
+        "strict_success_rate": 0.5,
+        "mean_speed_mps": 0.8170716017484665,
+        "mean_distance_m": 13.038437604904175
+      },
+      "selected": {
+        "episodes": 20,
+        "one": 10,
+        "six": 0,
+        "falls": 4,
+        "lane_exits": 3,
+        "world_exits": 0,
+        "strict_success_rate": 0.5,
+        "mean_speed_mps": 1.0277821570634842,
+        "mean_distance_m": 15.049557447433472
+      }
+    }
+  ],
+  "aggregates": {
+    "pooled": {
+      "blind_reference": {
+        "episodes": 240,
+        "one": 190,
+        "six": 25,
+        "falls": 31,
+        "lane_exits": 4,
+        "world_exits": 0,
+        "strict_success_rate": 0.7916666666666666,
+        "mean_speed_mps": 2.3185457115372023,
+        "mean_distance_m": 35.49487761656443
+      },
+      "selected": {
+        "episodes": 240,
+        "one": 190,
+        "six": 1,
+        "falls": 38,
+        "lane_exits": 5,
+        "world_exits": 0,
+        "strict_success_rate": 0.7916666666666666,
+        "mean_speed_mps": 2.2099819369614124,
+        "mean_distance_m": 32.987370471159615
+      }
+    },
+    "by_level": {
+      "0.8": {
+        "blind_reference": {
+          "episodes": 120,
+          "one": 99,
+          "six": 22,
+          "falls": 12,
+          "lane_exits": 3,
+          "world_exits": 0,
+          "strict_success_rate": 0.825,
+          "mean_speed_mps": 2.5202214494347572,
+          "mean_distance_m": 39.428456823031105
+        },
+        "selected": {
+          "episodes": 120,
+          "one": 105,
+          "six": 1,
+          "falls": 10,
+          "lane_exits": 1,
+          "world_exits": 0,
+          "strict_success_rate": 0.875,
+          "mean_speed_mps": 2.33784119784832,
+          "mean_distance_m": 36.01674564679464
+        }
+      },
+      "1.0": {
+        "blind_reference": {
+          "episodes": 120,
+          "one": 91,
+          "six": 3,
+          "falls": 19,
+          "lane_exits": 1,
+          "world_exits": 0,
+          "strict_success_rate": 0.7583333333333333,
+          "mean_speed_mps": 2.116869973639647,
+          "mean_distance_m": 31.56129841009776
+        },
+        "selected": {
+          "episodes": 120,
+          "one": 85,
+          "six": 0,
+          "falls": 28,
+          "lane_exits": 4,
+          "world_exits": 0,
+          "strict_success_rate": 0.7083333333333334,
+          "mean_speed_mps": 2.082122676074505,
+          "mean_distance_m": 29.957995295524597
+        }
+      }
+    }
+  },
+  "strict_definition": "13.1m (one tile) /53.1m (six tiles), no terminal condition or footprint lane/world exit in first episode; flat excluded",
+  "limitations": [
+    "20 episodes per family/level/policy; one training seed",
+    "Subset reuses existing fresh tests, not new independent evidence or model selection",
+    "Maximum difficulty1.0 means the current v6 configuration; no claim about v4 pits/gaps or arbitrary terrain",
+    "No matched-budget blind retraining control, so not isolated depth causality"
+  ]
+}

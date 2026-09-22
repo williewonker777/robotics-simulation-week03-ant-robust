@@ -17,6 +17,8 @@ def main() -> None:
     parser.add_argument("--extra-dims", type=int, default=54, help="number of appended observation features")
     parser.add_argument("--std", type=float, default=0.20, help="initial policy action-noise standard deviation")
     parser.add_argument("--learning-rate", type=float, default=2.0e-4)
+    parser.add_argument("--reset-iteration", action="store_true",
+                        help="Start a new fine-tuning run at iteration zero (legacy default preserves it).")
     args = parser.parse_args()
     if args.extra_dims <= 0:
         parser.error("--extra-dims must be positive")
@@ -44,6 +46,9 @@ def main() -> None:
             "expanded_from": str(args.source.resolve()),
         }
     )
+    if args.reset_iteration:
+        checkpoint["infos"]["source_iteration"] = checkpoint.get("iter")
+        checkpoint["iter"] = 0
 
     args.destination.parent.mkdir(parents=True, exist_ok=True)
     torch.save(checkpoint, args.destination)

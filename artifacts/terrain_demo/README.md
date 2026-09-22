@@ -349,7 +349,7 @@ v3 극한 지형 재현:
 
 ```bash
 # v2 60D checkpoint를 scanner 입력(114D)으로 확장 (최초 1회)
-/mnt/ssd970/robotics_simulation_class/run-python scripts/expand_checkpoint.py \
+../run-python scripts/expand_checkpoint.py \
   artifacts/terrain_demo/runs/terrain_complex_full_seed42/model_5500.pt \
   logs/rsl_rl/week03_ant/extreme_scanner_init/model_5500.pt
 
@@ -386,3 +386,90 @@ model_1598.pt` pattern as the moderate fine-tune above, with task
 `terrain_posture_full_seed42`. Checkpoints are saved every 50 iterations; the
 stored iteration-2,800 checkpoint was selected using evaluation seed 24; the
 other four seed files provide an additional post-selection robustness check.
+
+## Extreme recovery curriculum (v4)
+
+v4 keeps the v3 114D policy interface but changes the training curriculum for the
+discontinuous families that caused most failures.  The torso scanner is shifted
+`+0.60 m` in the forward direction (the tensor shape stays 54 rays), the
+overturning limit is widened to `1.42 rad`, and the effort/limit penalties are
+reduced so a jump or pit exit is not punished as a fall.  Geometry is learned
+without dynamics randomization first, then the policy is exposed to the full
+10-family distribution.  A short pit-focus repair stage over-samples pit/gap
+columns and adds a bounded torso-clearance term; its extra reward is used only
+during training and does not change the evaluation task.
+
+The selected checkpoint is the pit-focus model because it improved completion on
+the two discontinuity families without sacrificing the average result across
+held-out seeds:
+
+```text
+artifacts/terrain_demo/runs/terrain_extreme_recovery_seed42/model_9297.pt
+```
+
+SHA-256:
+
+```text
+4a7aefab1eb7ef57153ef8a88bdf25634487291407f77f713e2862a9d97bda54
+```
+
+Full v4 evaluation (100 environments, 960-step cap, robust dynamics events):
+
+| Checkpoint | Seeds | Return mean | Mean length | Full length |
+|---|---:|---:|---:|---:|
+| v3 scanner `model_7150` | 24 | 30.60 | 598.8 | 33/100 |
+| v4 approach `model_8848` | 24/25/26 | 38.48 ± 3.05 | 584.3 ± 23.3 | 26.7/100 |
+| **v4 pit-focus `model_9297` (selected)** | **24/25/26** | **39.24 ± 4.75** | **587.1 ± 12.1** | **27.7/100** |
+
+The selected seed-24 breakdown is: boxes `43.2 / 545.9` steps (3 full),
+deep-stairs `57.4 / 705.9` (5), flat `55.0 / 459.2` (0), gap
+`26.7 / 643.1` (5), obstacles `63.6 / 756.3` (6), pit `11.1 / 302.0` (3),
+rough `6.6 / 528.8` (0), steep-slope `59.5 / 632.2` (1), stepping-stones
+`23.3 / 810.7` (8), and waves `-20.8 / 609.1` (2).  The per-seed JSON files
+are in [`evaluations/`](evaluations), and the corresponding raw console logs
+are in [`../console/`](../console).  These are measured results on the listed
+procedural distribution, not a guarantee for arbitrary unseen geometry.
+
+Minimal v4 recovery-stage reproduction:
+
+```bash
+# Preserve the v3 scanner weights and reset PPO's stale optimizer state.
+../run-python scripts/prepare_recovery_checkpoint.py \
+  artifacts/terrain_demo/runs/terrain_extreme_full_seed42/model_7150.pt \
+  logs/rsl_rl/week03_ant/recovery_init/model_7150.pt \
+  --std 0.12 --learning-rate 7.5e-5
+
+# Warm-up, then approach, then the 10-family pit/gap repair stage.
+./scripts/run_train.sh --task Week03-Ant-Terrain-Extreme-Recovery-Mild-Train-v4 \
+  --headless --device cuda:1 --num_envs 4096 --max_iterations 700 --seed 42 \
+  --run_name recovery_mild_v4_seed42 --resume --load_run <recovery-init-run> \
+  --checkpoint model_7150.pt --kit_args=--/renderer/multiGpu/enabled=false
+
+./scripts/run_train.sh --task Week03-Ant-Terrain-Extreme-Recovery-Approach-Train-v4 \
+  --headless --device cuda:1 --num_envs 4096 --max_iterations 1000 --seed 42 \
+  --run_name recovery_approach_v4_seed42 --resume --load_run <mild-run> \
+  --checkpoint model_7849.pt --kit_args=--/renderer/multiGpu/enabled=false
+
+../run-python scripts/prepare_recovery_checkpoint.py \
+  logs/rsl_rl/week03_ant_recovery/<approach-run>/model_8848.pt \
+  logs/rsl_rl/week03_ant/recovery_pit_focus_init/model_8848.pt \
+  --std 0.10 --learning-rate 7.5e-5
+
+./scripts/run_train.sh --task Week03-Ant-Terrain-Extreme-Recovery-Pit-Focus-Train-v4 \
+  --headless --device cuda:1 --num_envs 4096 --max_iterations 450 --seed 42 \
+  --run_name recovery_pit_focus_v4_seed42 --resume \
+  --load_run <pit-focus-init-run> --checkpoint model_8848.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
+Evaluate the staged policy with the ordinary full v4 task (not the pit-focus
+training task):
+
+```bash
+./scripts/run_evaluate.sh \
+  --task Week03-Ant-Terrain-Extreme-Recovery-v4 \
+  --headless --device cuda:1 --num_envs 100 --seed 24 --max_steps 960 \
+  --checkpoint artifacts/terrain_demo/runs/terrain_extreme_recovery_seed42/model_9297.pt \
+  --output artifacts/terrain_demo/evaluations/terrain_extreme_recovery_9297_seed24.json \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```

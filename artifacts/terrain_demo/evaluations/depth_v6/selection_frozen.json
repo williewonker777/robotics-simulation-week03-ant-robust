@@ -1,0 +1,71 @@
+{
+  "frozen_at_utc": "2026-09-21T11:43:05.876622+00:00",
+  "selected_checkpoint": "artifacts/terrain_demo/runs/depth_v6_recovery1499_seed42/model_1499.pt",
+  "checkpoint_sha256": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7",
+  "selection_only": {
+    "reset_seed": 24,
+    "terrain_seed": 51,
+    "num_envs": 175,
+    "screened": [
+      {
+        "iteration": 500,
+        "sha256": "8bef851c48fa0afa765bc5f6df3c550992f189c411d0b1c9f7fd5c6638968936",
+        "one": 102,
+        "six": 47,
+        "terrain_falls": 22,
+        "stones": 17
+      },
+      {
+        "iteration": 1000,
+        "sha256": "5144cc8cb858a26ad2fbc7349927518db7582c1db8713dd8bf5f7acc3318cbb2",
+        "one": 125,
+        "six": 14,
+        "terrain_falls": 19,
+        "stones": 17
+      },
+      {
+        "iteration": 1499,
+        "sha256": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7",
+        "one": 135,
+        "six": 28,
+        "terrain_falls": 12,
+        "stones": 22
+      }
+    ]
+  },
+  "reason": "Highest strict one-tile and stone success, fewest terrain falls; six-tile speed tradeoff retained. No stabilization/rehearsal needed for first-stage strict gate.",
+  "frozen_before_fresh_evaluation": true,
+  "fresh_pairs": [
+    {
+      "terrain_seed": 51,
+      "reset_seed": 31
+    },
+    {
+      "terrain_seed": 51,
+      "reset_seed": 32
+    },
+    {
+      "terrain_seed": 56,
+      "reset_seed": 33
+    },
+    {
+      "terrain_seed": 57,
+      "reset_seed": 33
+    }
+  ],
+  "regression_seeds": [
+    24,
+    25,
+    26
+  ],
+  "gate": "More strict terrain successes, no higher total terrain falls, zero world exits on all four fresh paired runs aggregated. Report six-tile and family/flat tradeoffs separately.",
+  "no_further_training_after_freeze": true,
+  "promotion": "not_promoted_over_blind_v5_reference",
+  "post_selection_gate_result": {
+    "strict_success_increases": false,
+    "terrain_falls_not_increased": false,
+    "world_exits_zero": true,
+    "passed": false
+  },
+  "decision": "Keep depth1499 as a separate experimental 346D checkpoint for improved stepping-stone perception; preserve 60D v5 recommendation because fresh overall falls increased and one-tile success did not improve."
+}

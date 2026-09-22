@@ -1,0 +1,131 @@
+{
+  "time": "2026-09-22T05:13:11.485771+00:00",
+  "cpu_tests": 207,
+  "zero_coefficient_update_parity": "bit-exact state and base losses vs pinned PPO",
+  "upstream": {
+    "rsl_rl_version": "3.0.1",
+    "ppo_source": "../env/lib/python3.11/site-packages/rsl_rl/algorithms/ppo.py",
+    "ppo_sha256": "deafc8c947eba4df3e91b393869426cdab8d7b71e05974c3734125d2331d7d1c"
+  },
+  "smoke_train": {
+    "envs": 64,
+    "iterations": 2,
+    "log": "outputs/prior_v10_20260922/smoke64_train.log"
+  },
+  "smoke_eval": {
+    "envs": 35,
+    "geometry": 51,
+    "reset": 24,
+    "episodes": 35,
+    "file": "outputs/prior_v10_20260922/smoke35_eval.json"
+  },
+  "capacity": {
+    "envs": 4096,
+    "iterations": 2,
+    "transitions": 262144,
+    "checkpoint": {
+      "checkpoint": "logs/rsl_rl/week03_ant_prior_v10/2026-09-22_14-07-02_v10_capacity4096/model_1.pt",
+      "sha256": "44b73fcfddea4c95fd250a8341f1e3a7967fa725ff596620f662986b21b9d84d",
+      "mode": "anchored",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 1,
+      "group": "smoke",
+      "policy_class": "PriorActorCritic",
+      "teacher_coef": 0.02,
+      "reference_std": 0.2,
+      "teacher_parent_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "teacher_bit_identical": true
+    },
+    "config_checks": {
+      "agent seed": true,
+      "steps": true,
+      "iterations": true,
+      "experiment": true,
+      "policy class": true,
+      "input mode": true,
+      "prior mode": true,
+      "mode guard": true,
+      "actor normalization": true,
+      "critic normalization": true,
+      "actor widths": true,
+      "critic widths": true,
+      "environment seed": true,
+      "environment count": true,
+      "terrain seed": true,
+      "zero support reward": true,
+      "PPO class": true,
+      "teacher coefficient": true,
+      "learning rate": true,
+      "fixed schedule": true,
+      "no adaptive KL": true,
+      "gamma": true,
+      "lambda": true,
+      "entropy": true,
+      "epochs": true,
+      "mini batches": true,
+      "unchanged observations": true,
+      "unchanged rewards": true,
+      "unchanged actions": true,
+      "unchanged terminations": true,
+      "unchanged events": true,
+      "unchanged curriculum": true,
+      "unchanged robot": true,
+      "unchanged height_scanner": true,
+      "unchanged simulation": true,
+      "unchanged terrain except seed": true,
+      "unchanged episode_length_s": true,
+      "unchanged decimation": true,
+      "unchanged PPO except prior": true
+    }
+  },
+  "horizon_smoke": {
+    "geometry": 51,
+    "reset": 24,
+    "first_episodes": 10,
+    "seconds": 64,
+    "not_holdout": true,
+    "counts": {
+      "n": 10,
+      "one": 7,
+      "six": 0,
+      "falls": 2,
+      "lane": 0,
+      "world": 0,
+      "survival": 8,
+      "first_hit_one": {
+        "observed_n": 8,
+        "mean": 12.997916666666667,
+        "median": 11.6
+      },
+      "first_hit_six": {
+        "observed_n": 0,
+        "mean": null,
+        "median": null
+      },
+      "distance16": {
+        "observed_n": 9,
+        "mean": 14.219006008572048,
+        "median": 15.891761779785156
+      },
+      "final_distance": {
+        "observed_n": 10,
+        "mean": 29.63173427581787,
+        "median": 29.166505813598633
+      },
+      "maximum_distance": {
+        "observed_n": 10,
+        "mean": 29.71434917449951,
+        "median": 29.21196937561035
+      }
+    }
+  },
+  "old_sources_preserved": 35,
+  "source_candidates": 53,
+  "formal_training_started": false,
+  "final_test_log": "outputs/prior_v10_20260922/all_tests_pretrain_locked.log",
+  "reviewer_hardening": [
+    "Require complete primary audit before horizon diagnostic",
+    "Check horizon schema/task/predeclared heldout metadata"
+  ]
+}

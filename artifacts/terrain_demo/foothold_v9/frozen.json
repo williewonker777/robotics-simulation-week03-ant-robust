@@ -1,0 +1,197 @@
+{
+  "frozen_at": "2026-09-22T04:24:11.244459+00:00",
+  "parent_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "selection": "all final749 only; representative seed42 predeclared; no post-holdout selection",
+  "training_pairs": [
+    [
+      42,
+      51
+    ],
+    [
+      43,
+      58
+    ],
+    [
+      44,
+      59
+    ]
+  ],
+  "heldout_pairs": [
+    [
+      64,
+      38
+    ],
+    [
+      65,
+      39
+    ]
+  ],
+  "runs": [
+    {
+      "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/v9_feet_seed42/model_749.pt",
+      "sha256": "11259bea553d4844f1e86375150f44ea5f15b629792d3e25ee4c4d9f5b768f11",
+      "mode": "feet",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 749,
+      "group": "feet",
+      "policy_class": "FootholdActorCritic",
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_10-38-13_v9_feet_seed42",
+      "foothold_support_weight": 0.0
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/v9_targets_seed42/model_749.pt",
+      "sha256": "5d470da861cef812bb699b984a6c4d9508c49f1367c0d0b6c7e924369d4a206c",
+      "mode": "targets",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 749,
+      "group": "targets",
+      "policy_class": "FootholdActorCritic",
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_10-53-17_v9_targets_seed42",
+      "foothold_support_weight": 0.0
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/v9_guided_seed42/model_749.pt",
+      "sha256": "a757254a8c63398da3d947d8b1f4cf01b9827679b885091c34a654d37fb2b9a2",
+      "mode": "guided",
+      "training_seed": 42,
+      "training_geometry": 51,
+      "iteration": 749,
+      "group": "guided",
+      "policy_class": "FootholdActorCritic",
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_11-09-00_v9_guided_seed42",
+      "foothold_support_weight": -1.0
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/v9_feet_seed43/model_749.pt",
+      "sha256": "f607166ce54f96d0d927e66c4612129ae914d23298dc32f709b37e292dd71b65",
+      "mode": "feet",
+      "training_seed": 43,
+      "training_geometry": 58,
+      "iteration": 749,
+      "group": "feet",
+      "policy_class": "FootholdActorCritic",
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_11-31-53_v9_feet_seed43",
+      "foothold_support_weight": 0.0
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/v9_targets_seed43/model_749.pt",
+      "sha256": "3d77f4473c741bf5460ae55230c964f35e03d83ed8859511ba43b3af0e7ba2e8",
+      "mode": "targets",
+      "training_seed": 43,
+      "training_geometry": 58,
+      "iteration": 749,
+      "group": "targets",
+      "policy_class": "FootholdActorCritic",
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_11-47-03_v9_targets_seed43",
+      "foothold_support_weight": 0.0
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/v9_guided_seed43/model_749.pt",
+      "sha256": "f740236da9368917ce390f3849f46879fcb47d7904a4b49062414312d09848f1",
+      "mode": "guided",
+      "training_seed": 43,
+      "training_geometry": 58,
+      "iteration": 749,
+      "group": "guided",
+      "policy_class": "FootholdActorCritic",
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_12-04-01_v9_guided_seed43",
+      "foothold_support_weight": -1.0
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/v9_feet_seed44/model_749.pt",
+      "sha256": "9fa732714fe8abaa366a0a1036cbe1309d60ed100ffa038d86189b7611d76524",
+      "mode": "feet",
+      "training_seed": 44,
+      "training_geometry": 59,
+      "iteration": 749,
+      "group": "feet",
+      "policy_class": "FootholdActorCritic",
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_12-28-03_v9_feet_seed44",
+      "foothold_support_weight": 0.0
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/v9_targets_seed44/model_749.pt",
+      "sha256": "8cc26a744f2c50615dc0426dad7ee8f9e31b8e9a6f69768ab3cb847b59ce2644",
+      "mode": "targets",
+      "training_seed": 44,
+      "training_geometry": 59,
+      "iteration": 749,
+      "group": "targets",
+      "policy_class": "FootholdActorCritic",
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_12-44-31_v9_targets_seed44",
+      "foothold_support_weight": 0.0
+    },
+    {
+      "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/v9_guided_seed44/model_749.pt",
+      "sha256": "453db38af4c4010b0ba4ce1977ea20ccff4607856b6d410279dca21249934791",
+      "mode": "guided",
+      "training_seed": 44,
+      "training_geometry": 59,
+      "iteration": 749,
+      "group": "guided",
+      "policy_class": "FootholdActorCritic",
+      "transitions": 98304000,
+      "source_run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_13-00-12_v9_guided_seed44",
+      "foothold_support_weight": -1.0
+    }
+  ],
+  "device": "cuda:1",
+  "reference": {
+    "checkpoint": "artifacts/terrain_demo/foothold_v9/runs/frozen_v5_reference/model_0.pt",
+    "sha256": "94e6287c50260cfcabce2cdc73e93a1f5fdac4aed5e4e176b36943173935954f",
+    "mode": "feet",
+    "training_seed": null,
+    "training_geometry": null,
+    "iteration": 0,
+    "group": "frozen_v5",
+    "policy_class": "FootholdActorCritic",
+    "transitions": 0
+  },
+  "source_sha256": {
+    "src/week03_ant/footmap_math.py": "11ac8aa4aae318cc2dcc7c82743144f09c5a6e009e1713918fef961b8e5be79a",
+    "src/week03_ant/footmap_policy.py": "c855e38dd1ee9970eae1ee7f7e0996b5a0a95f5d020bdc273d0efd36b32e0d0d",
+    "src/week03_ant/tasks/footmap_v7_cfg.py": "791153ef9d4db4e58aaad8081a63630763ad4f617b329ec94f4e64e9c487a057",
+    "src/week03_ant/tasks/agents/rsl_rl_ppo_cfg.py": "2527ba19dcafb7acbccffbeccad7d92cab9a8154696249676f82c7e939dfa4b2",
+    "scripts/train.py": "a5460cad202c408d9f4a87d3549bd6e2caeed3c9335996b533d0b7f8ff904c12",
+    "scripts/play_one_episode.py": "ab8a6407a84ec54da5c4867b5df4eaaf111c089e6f766f3bf83739be9055535a",
+    "src/week03_ant/tasks/lanes.py": "584df4e7b7fec69d0537ce32eda1e9f66a403b35d31cd5ba544e37cdeddd1b51",
+    "src/week03_ant/tasks/rough_v5_cfg.py": "dbbf7ef32e34fd3faef74845427e03ea289395851ddf7618023a39d030db5668",
+    "scripts/run_footmap_experiment.py": "88b4816a60c1127a469e66e5c44550fc3bfc91d41e224428bede6c3d505f2c79",
+    "src/week03_ant/residual_policy.py": "5447414a12c3dfb81bef5f28ca953b673fea56e1f2c46c0b3e531a99aa9fbbe2",
+    "src/week03_ant/tasks/residual_v8.py": "415725e243946c942d53eec6171311e0d8554d1a1858ce0f9f3fa4104f6ad1cd",
+    "src/week03_ant/tasks/agents/residual_v8_cfg.py": "d11db6fe894f437ab289081dbc5320c4e408725c32b82d754e9d28cbfd25fa6d",
+    "scripts/residual_v8.py": "801e56cabdec39d9cc59675518c7c2fed81ed234fc701dff65759f3a3556a228",
+    "scripts/prepare_residual_checkpoint.py": "fdf81129228a24d14c82d2e1c94a21c9298b9ad86866f51199cd5207028cb0ee",
+    "scripts/run_residual_experiment.py": "491c09c8aa0f8de0e2ef8bf55e2c5cee11ca2e2e4aab79801bff08a27e7eea2a",
+    "scripts/summarize_footmap.py": "e66b8411ba57a12dda452b09bea173286ba0b995dcf7f32acc0651a05873efe3",
+    "scripts/summarize_residual.py": "e3f0a13f69ee7faf9df819c4c9b4dea33363b49faf9faa0b0fc38da1b7034c89",
+    "src/week03_ant/depth_math.py": "56c151aef78403eef5c8c33a131a6552e0b42bed7b937d81481b91c52f319229",
+    "src/week03_ant/evaluation.py": "eff80e53f9ad4716d1e68615cd7a4688ff4a4c6faed6a0878418fac479595a56",
+    "src/week03_ant/tasks/__init__.py": "08cd0cfed2243630d1e26ad5fde8af4b1796b7ad1367e054f5bf49c95e9a7d99",
+    "src/week03_ant/tasks/depth_v6_cfg.py": "6565c3294319ed40dede83f85d3025fb521cc006408637bfb13b7769ea9a8f7c",
+    "src/week03_ant/foothold_math.py": "e630fcaf7ed6968a19280c55fc1543818e5703e2936634bc96a12f56eb6d07c9",
+    "src/week03_ant/foothold_policy.py": "c10ddece2ebcb2f8b5adb967a2aebe5b9ac22078a69e779b00b5f308a4cf7ee5",
+    "src/week03_ant/tasks/foothold_v9.py": "88e770c4735e31662d6651453ad10fc3b207c67ca5423113310464bb069303ea",
+    "src/week03_ant/tasks/foothold_v9_cfg.py": "4b47398d40e1927db42b3334fe2e697146e6c3103e62ac58c1692b3de0eec5ea",
+    "src/week03_ant/tasks/agents/foothold_v9_cfg.py": "784989bc58cc143e3e0b4906d72aa47a4e44ff687324b36582bd853dc00b81a3",
+    "scripts/foothold_v9.py": "d1e04b5156e0d3a0fe06d001220ad168e695d755b7e5c38119e96f74399419ad",
+    "scripts/prepare_foothold_checkpoint.py": "f1d0694f93f066ae0683bb32eb888ece0ff2e21b97aabe373d630b79d53b7db7",
+    "scripts/probe_foothold.py": "1a6e88545e11031af821f72f9fe8f18b23760700472cb86fd9965b655ea0300d",
+    "scripts/run_foothold_experiment.py": "750fc00ef77dcbc550228f5a19e96ca83ad4b82057841e39140fc10d56f045e6",
+    "scripts/summarize_foothold.py": "cbd5ee07f6dd053a8d9e59a499fa3c9808bc4d83ba8b096bd734e2b7b9be2939",
+    "scripts/cli_args.py": "77bac7b249dba8734d838b0881935231e7fd2596692eb636b9c1bffaad8fcaf1",
+    "scripts/demo_terrains.py": "1557cb4abeadec5b94aa751165d32fa57c97db7dcdfb8f288503431916112aaa",
+    "scripts/render_foothold_comparison.py": "5f5e68151dcf7ee71e6a04133ac6440cc4434c8d5ea5f3ef9fa4a1c24eac0c76",
+    "scripts/build_foothold_viewer.py": "5b3fb16fd64b22f25cce4577de3e08f1a1ecbd10bb7349010fde8d6d7ae365a5"
+  }
+}

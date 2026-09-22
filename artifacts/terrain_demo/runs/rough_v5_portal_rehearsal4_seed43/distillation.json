@@ -1,0 +1,55 @@
+{
+  "method": "aggregated expert-labelled actor rehearsal (not PPO)",
+  "reference": {
+    "path": "artifacts/terrain_demo/runs/rough_v5_traverse1499_seed42/model_1499.pt",
+    "sha256": "d02b5146a3c334d63fb4e362594f3488bfe4ab9bbabbd46c018bf35ef62dcd03"
+  },
+  "stone": {
+    "path": "artifacts/terrain_demo/runs/rough_v5_recovery_deep1000_seed42/model_1000.pt",
+    "sha256": "3e5ee185de847683953b027663489087ea984945b417bed0e9f74992f07934b8"
+  },
+  "student_initial": {
+    "path": "artifacts/terrain_demo/runs/rough_v5_recovery_deep1000_seed42/model_1000.pt",
+    "sha256": "3e5ee185de847683953b027663489087ea984945b417bed0e9f74992f07934b8"
+  },
+  "arguments": {
+    "task": "Week03-Ant-Rough-Lanes-v5",
+    "agent": "rsl_rl_cfg_entry_point",
+    "reference_checkpoint": "artifacts/terrain_demo/runs/rough_v5_traverse1499_seed42/model_1499.pt",
+    "stone_checkpoint": "artifacts/terrain_demo/runs/rough_v5_recovery_deep1000_seed42/model_1000.pt",
+    "output_run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-48-13_portal_rehearsal_seed43",
+    "num_envs": 1024,
+    "seed": 43,
+    "rounds": 4,
+    "steps": 960,
+    "epochs": 3,
+    "batch_size": 4096,
+    "learning_rate": 0.0001,
+    "stone_start_distance": 3.0,
+    "experiment_name": null,
+    "run_name": null,
+    "resume": false,
+    "load_run": null,
+    "checkpoint": "artifacts/terrain_demo/runs/rough_v5_recovery_deep1000_seed42/model_1000.pt",
+    "logger": null,
+    "log_project_name": null,
+    "enable_cameras": false,
+    "xr": false,
+    "device": "cuda:0",
+    "cpu": false,
+    "verbose": false,
+    "info": false,
+    "rendering_mode": null,
+    "kit_args": "--/renderer/multiGpu/enabled=false",
+    "anim_recording_enabled": false,
+    "anim_recording_start_time": 0,
+    "anim_recording_stop_time": 10,
+    "headless": true,
+    "hide_ui": true,
+    "create_new_stage": false,
+    "physics_gpu": 0,
+    "active_gpu": 0
+  },
+  "teacher_routing": "stone teacher on stepping_stones, optionally after entrance-distance gate; reference elsewhere, training only",
+  "inference": "single 60D/8D student MLP; no lane identity or teachers"
+}

@@ -12,6 +12,14 @@ build/
 logs/
 outputs/
 
+# Agent runtime, credentials and raw machine-local telemetry are not publications.
+.omx/
+.env
+.env.*
+!.env.example
+artifacts/console/
+events.out.tfevents.*
+
 # Generated office lock files and local scratch.
 ~$*.pptx
 tmp/

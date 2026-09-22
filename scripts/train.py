@@ -187,6 +187,9 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
     env = RslRlVecEnvWrapper(env, clip_actions=agent_cfg.clip_actions)
 
     # create runner from rsl-rl
+    if agent_cfg.policy.class_name == "FootMapActorCritic":
+        from week03_ant.footmap_policy import register_footmap_policy
+        register_footmap_policy()
     if agent_cfg.class_name == "OnPolicyRunner":
         runner = OnPolicyRunner(env, agent_cfg.to_dict(), log_dir=log_dir, device=agent_cfg.device)
     elif agent_cfg.class_name == "DistillationRunner":
@@ -200,6 +203,9 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
         print(f"[INFO]: Loading model checkpoint from: {resume_path}")
         # load previously trained model
         runner.load(resume_path)
+        if agent_cfg.policy.class_name == "FootMapActorCritic":
+            if runner.alg.policy.input_mode != agent_cfg.policy.input_mode:
+                raise ValueError("v7 training mode does not match the loaded checkpoint")
 
     # dump the configuration into log-directory
     dump_yaml(os.path.join(log_dir, "params", "env.yaml"), env_cfg)

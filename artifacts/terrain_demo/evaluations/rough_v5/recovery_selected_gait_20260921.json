@@ -1,0 +1,74 @@
+{
+  "checkpoint_sha256": "3e5ee185de847683953b027663489087ea984945b417bed0e9f74992f07934b8",
+  "source": "deep1000_stones_gait.npz",
+  "diagnostic_not_benchmark": true,
+  "first_episode_only": true,
+  "window": "after2s",
+  "levels": {
+    "0.2": {
+      "last_active_distances_m": [
+        39.55213165283203,
+        35.21745300292969,
+        29.09356117248535,
+        43.715911865234375,
+        39.34910583496094
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.06933469283711445,
+      "torso_world_z_median": 0.5283668041229248,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.01975528931939842,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.38937037981136885
+    },
+    "0.4": {
+      "last_active_distances_m": [
+        38.42974090576172,
+        44.19306182861328,
+        37.99989318847656,
+        45.20786666870117,
+        42.537654876708984
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.013110846245530394,
+      "torso_world_z_median": 0.5192217826843262,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.020500595947556616,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.36877234803337305
+    },
+    "0.6": {
+      "last_active_distances_m": [
+        19.391357421875,
+        10.128822326660156,
+        6.873437881469727,
+        16.715452194213867,
+        14.303139686584473
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.5394517282479142,
+      "torso_world_z_median": 0.39338722825050354,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.43474374255065557,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.22598331346841477
+    },
+    "0.8": {
+      "last_active_distances_m": [
+        11.047218322753906,
+        14.470601081848145,
+        8.77094841003418,
+        10.337295532226562,
+        11.144617080688477
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.6283048211508554,
+      "torso_world_z_median": 0.38669484853744507,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.46358216692586834,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.21837739761534475
+    },
+    "1.0": {
+      "last_active_distances_m": [
+        5.14832878112793,
+        14.517862319946289,
+        12.617605209350586,
+        11.077518463134766,
+        17.537172317504883
+      ],
+      "stalled_time_fraction_vx_below_0_3": 0.533969010727056,
+      "torso_world_z_median": 0.38787925243377686,
+      "foot_bottom_below_top_minus_0_1_fraction": 0.44761620977353994,
+      "foot_bottom_above_top_plus_0_1_fraction": 0.2361740166865316
+    }
+  }
+}

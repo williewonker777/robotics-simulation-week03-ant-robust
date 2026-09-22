@@ -1,0 +1,66 @@
+[
+  {
+    "path": "artifacts/terrain_demo/rough_v5_reference_stones08_seed7.mp4",
+    "sha256": "2e75ca44a4231a49b45f1467fb779bfe0014a4c234532914387680dccba60291",
+    "frames": 480,
+    "fps": 30.0,
+    "duration_seconds": 16.0,
+    "resolution": [
+      1280,
+      720
+    ],
+    "full_decode_exit_code": 0,
+    "stderr": "",
+    "seed": 7,
+    "task": "Week03-Ant-Rough-Lanes-Demo-v5",
+    "family": "stepping_stones",
+    "difficulty": 0.8,
+    "num_envs": 1,
+    "illustrative_not_benchmark": true,
+    "checkpoint": "artifacts/terrain_demo/runs/rough_v5_traverse1499_seed42/model_1499.pt",
+    "checkpoint_sha256": "d02b5146a3c334d63fb4e362594f3488bfe4ab9bbabbd46c018bf35ef62dcd03",
+    "visually_inspected_frames": [
+      360,
+      477,
+      479
+    ],
+    "caption_at_frame477": {
+      "time_seconds_rounded": 15.9,
+      "resets": 0,
+      "episode_forward_m_rounded": 6.8
+    },
+    "note": "Illustrative same-seed 1-env comparison; final frame includes the 16-second automatic reset. Reset count is not a fall count. Full-footprint strict success is established by evaluation JSON, not video distance alone."
+  },
+  {
+    "path": "artifacts/terrain_demo/rough_v5_rehearsal_stones08_seed7.mp4",
+    "sha256": "88ad5b8b64d992a0472da5d3df0d0b047e1f93e4c8b03b24949126b50fddec0d",
+    "frames": 480,
+    "fps": 30.0,
+    "duration_seconds": 16.0,
+    "resolution": [
+      1280,
+      720
+    ],
+    "full_decode_exit_code": 0,
+    "stderr": "",
+    "seed": 7,
+    "task": "Week03-Ant-Rough-Lanes-Demo-v5",
+    "family": "stepping_stones",
+    "difficulty": 0.8,
+    "num_envs": 1,
+    "illustrative_not_benchmark": true,
+    "checkpoint": "artifacts/terrain_demo/runs/rough_v5_portal_rehearsal4_seed43/model_round_4.pt",
+    "checkpoint_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+    "visually_inspected_frames": [
+      360,
+      477,
+      479
+    ],
+    "caption_at_frame477": {
+      "time_seconds_rounded": 15.9,
+      "resets": 0,
+      "episode_forward_m_rounded": 19.2
+    },
+    "note": "Illustrative same-seed 1-env comparison; final frame includes the 16-second automatic reset. Reset count is not a fall count. Full-footprint strict success is established by evaluation JSON, not video distance alone."
+  }
+]

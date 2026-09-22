@@ -1,0 +1,19 @@
+{
+  "checkpoint": "artifacts/terrain_demo/runs/depth_v6_recovery1499_seed42/model_1499.pt",
+  "checkpoint_sha256": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7",
+  "iteration": 1499,
+  "actor_first_layer": [
+    400,
+    346
+  ],
+  "critic_first_layer": [
+    400,
+    346
+  ],
+  "actions": 8,
+  "all_parameters_finite": true,
+  "actor_height_weight_l2": 4.525190830230713,
+  "actor_validity_weight_l2": 0.42653441429138184,
+  "new_depth_weights_nonzero": 114400,
+  "caution": "Nonzero weights establish learning of new features, not useful terrain-perception causality; see rollout ablations."
+}

@@ -1,0 +1,83 @@
+{
+  "geometry": 60,
+  "reset_seed": 34,
+  "difficulty": 1.0,
+  "num_envs": 1,
+  "duration_s": 16,
+  "selection": "reference and predeclared seed42 final model, no alternate seed selection",
+  "statistical_use": "qualitative only; resets/failures uncut; episode distance resets on terminal or timeout",
+  "videos": [
+    {
+      "label": "frozen_v5",
+      "video": "artifacts/terrain_demo/footmap_v7/videos/frozen_v5_stones10.mp4",
+      "sha256": "aef37ece162b41c1b373b3694da731bc8ea3f45d8d1714aa8297903f8f580de1",
+      "metadata": {
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_read_frames": "480"
+      },
+      "full_decode": "pass",
+      "checkpoint_sha256": "3899431af1525e6cb092262424845a45cbb4c84ed1893bd55c1500ec422e779e",
+      "command": [
+        "../run-python",
+        "scripts/demo_terrains.py",
+        "--task",
+        "Week03-Ant-FootMap-Lanes-Demo-v7",
+        "--headless",
+        "--device",
+        "cuda:1",
+        "--seed",
+        "34",
+        "--family",
+        "stepping_stones",
+        "--level",
+        "4",
+        "--cycle-seconds",
+        "16",
+        "--checkpoint",
+        "artifacts/terrain_demo/footmap_v7/runs/frozen_v5_reference/model_0.pt",
+        "--record",
+        "artifacts/terrain_demo/footmap_v7/videos/frozen_v5_stones10.mp4",
+        "env.scene.terrain.terrain_generator.seed=60"
+      ]
+    },
+    {
+      "label": "footmap_seed42",
+      "video": "artifacts/terrain_demo/footmap_v7/videos/footmap_seed42_stones10.mp4",
+      "sha256": "0abddbe5f4a48215d81f75c0f54cb8b206a0ceb74bd723d505645e8584b58c1f",
+      "metadata": {
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_read_frames": "480"
+      },
+      "full_decode": "pass",
+      "checkpoint_sha256": "c820326b234aa1acf8d62bb1a86c307b6bd558ea1a4de674160e6ab6e46391ef",
+      "command": [
+        "../run-python",
+        "scripts/demo_terrains.py",
+        "--task",
+        "Week03-Ant-FootMap-Lanes-Demo-v7",
+        "--headless",
+        "--device",
+        "cuda:1",
+        "--seed",
+        "34",
+        "--family",
+        "stepping_stones",
+        "--level",
+        "4",
+        "--cycle-seconds",
+        "16",
+        "--checkpoint",
+        "artifacts/terrain_demo/footmap_v7/runs/v7_footmap_seed42/model_749.pt",
+        "--record",
+        "artifacts/terrain_demo/footmap_v7/videos/footmap_seed42_stones10.mp4",
+        "env.scene.terrain.terrain_generator.seed=60"
+      ]
+    }
+  ]
+}

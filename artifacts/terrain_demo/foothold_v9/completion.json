@@ -1,0 +1,55 @@
+{
+  "status": "completed",
+  "finished_at": "2026-09-22T04:40:12.037552+00:00",
+  "promotion": {
+    "passed": false,
+    "checks": {
+      "one_vs_frozen_v5": false,
+      "six_vs_frozen_v5": true,
+      "falls_vs_frozen_v5": false,
+      "one_vs_feet": true,
+      "six_vs_feet": true,
+      "falls_vs_feet": false,
+      "one_vs_targets": true,
+      "six_vs_targets": true,
+      "falls_vs_targets": false,
+      "zero_world_exit": true,
+      "flat_falls_vs_frozen_v5": true,
+      "guided_one_better_than_targets_majority": true
+    }
+  },
+  "recommended_model": "unchanged frozen_v5 parent",
+  "source_hashes_verified": 35,
+  "frozen_checkpoints": 10,
+  "trained_runs": 9,
+  "transitions": 884736000,
+  "primary_evaluations": 20,
+  "primary_first_episodes": 3500,
+  "cpu_tests_passed": 151,
+  "independent_audit": "independent_audit.json",
+  "independent_mismatches": 0,
+  "commands_successful": 43,
+  "videos_full_decode_passed": 2,
+  "video_frame_check": "480frames/30fps/1280x720 both",
+  "viewer_links_and_js": "pass",
+  "video_visual_15_9s": {
+    "frozen_v5_forward_m": 15.3,
+    "guided_seed42_forward_m": 15.9,
+    "resets_both": 0
+  },
+  "validation_gap": "Ruff/mypy/Pyright/LSP unavailable; no dependencies installed",
+  "no_post_holdout_training_or_selection": true,
+  "remaining_risks": [
+    "Higher falls/less one-tile success vs v5",
+    "No hard-stone six-tile successes",
+    "Ideal rays, endpoint heuristic not whole-capsule support or exact IK",
+    "Invalid candidates abstain with zero guidance",
+    "Only2freshmaps/3trainingseeds, no statistical-superiority claim"
+  ],
+  "remote_operations": false,
+  "commits": false,
+  "workflow_doctor": "pass",
+  "viewer_window_verified": "Ant v9 \ucc29\uc9c0 \ud6c4\ubcf4 \ube44\uad50 - Google Chrome",
+  "task_lifecycle": "review",
+  "our_gpu_jobs_ended": true
+}

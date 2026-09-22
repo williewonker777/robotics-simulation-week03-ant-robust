@@ -1,0 +1,54 @@
+{
+  "selected": "traverse1499",
+  "criterion": "Highest strict one-tile traversal success among final-stage candidates at seed 24, with course ID >=80% of robust reference; seeds25/26 and geometry52/53 are post-selection checks.",
+  "candidates": [
+    {
+      "candidate": "traverse1499",
+      "checkpoint": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-39-57_traverse_safe500_20260921/model_1499.pt",
+      "checkpoint_sha256": "d02b5146a3c334d63fb4e362594f3488bfe4ab9bbabbd46c018bf35ef62dcd03",
+      "selection_seed": 24,
+      "terrain_episodes": 150,
+      "safe_one_tile_crossings": 118,
+      "terrain_falls": 14,
+      "footprint_lane_exits": 4,
+      "course_id_return": 134.79706214349716,
+      "stepping_stones_crossings": 7
+    },
+    {
+      "candidate": "traverse1000",
+      "checkpoint": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-39-57_traverse_safe500_20260921/model_1000.pt",
+      "checkpoint_sha256": "ec928291e8790322db523cb8727ab3277df90db9d111db1f1b8943b6ecb55cb6",
+      "selection_seed": 24,
+      "terrain_episodes": 150,
+      "safe_one_tile_crossings": 112,
+      "terrain_falls": 19,
+      "footprint_lane_exits": 4,
+      "course_id_return": 144.770011857301,
+      "stepping_stones_crossings": 7
+    },
+    {
+      "candidate": "focus799",
+      "checkpoint": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-56-24_stones_focus_20260921/model_799.pt",
+      "checkpoint_sha256": "496a11d9ec793a3e4e49ade1ea9e6436ab5426c6b11b527ee7c46a2e48e7934f",
+      "selection_seed": 24,
+      "terrain_episodes": 150,
+      "safe_one_tile_crossings": 110,
+      "terrain_falls": 27,
+      "footprint_lane_exits": 3,
+      "course_id_return": 144.33425622373818,
+      "stepping_stones_crossings": 11
+    },
+    {
+      "candidate": "focus400",
+      "checkpoint": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-56-24_stones_focus_20260921/model_400.pt",
+      "checkpoint_sha256": "368ef122bc51bb9001f2222f0a65dfbc59c7b7c912b9f6f71af4455b6f0d5efd",
+      "selection_seed": 24,
+      "terrain_episodes": 150,
+      "safe_one_tile_crossings": 116,
+      "terrain_falls": 21,
+      "footprint_lane_exits": 1,
+      "course_id_return": 142.56920212216676,
+      "stepping_stones_crossings": 9
+    }
+  ]
+}

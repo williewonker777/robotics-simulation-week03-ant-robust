@@ -1,0 +1,57 @@
+{
+  "videos": [
+    {
+      "label": "depth",
+      "path": "artifacts/terrain_demo/depth_v6_stones08_seed7.mp4",
+      "sha256": "115039589a33622f4cde2852e42073f30c0c950fa16c243afe58e4cf8c246b30",
+      "checkpoint": "artifacts/terrain_demo/runs/depth_v6_recovery1499_seed42/model_1499.pt",
+      "checkpoint_sha256": "c6bc31fe1c18a093348927c101e0979c8c9aa0294a8573d4aa64d7b8b0d44fb7",
+      "frames": 480,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 16.0,
+      "full_decode": "passed",
+      "task": "Week03-Ant-Depth-Lanes-Demo-v6",
+      "family": "stepping_stones",
+      "difficulty": 0.8,
+      "level_index": 3,
+      "seed": 7,
+      "geometry_seed": 51
+    },
+    {
+      "label": "blind",
+      "path": "artifacts/terrain_demo/depth_v6_blind_stones08_seed7.mp4",
+      "sha256": "2ab34be465ee1a99892878ee59778a0184838e8c7c1be4ebc876a41b4df062a3",
+      "checkpoint": "artifacts/terrain_demo/runs/depth_v6_blind_reference/model_0.pt",
+      "checkpoint_sha256": "a5be8936688fcb09bc45bf85778a136d9e724f486b7c1ef9de88e62b38e269cf",
+      "frames": 480,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 16.0,
+      "full_decode": "passed",
+      "task": "Week03-Ant-Depth-Lanes-Demo-v6",
+      "family": "stepping_stones",
+      "difficulty": 0.8,
+      "level_index": 3,
+      "seed": 7,
+      "geometry_seed": 51
+    }
+  ],
+  "benchmark_inclusion": false,
+  "interpretation": "Uncut qualitative replay on one fixed seed, not included in benchmark totals. Last recorded frame includes the 16-second time-limit reset; frame477 precedes it.",
+  "inspected_frame_477": {
+    "caption_time_seconds": 15.9,
+    "depth_forward_m_rounded": 17.5,
+    "blind_forward_m_rounded": 14.0,
+    "both_reset_counts": 0,
+    "strict_success_claim_from_video": false
+  },
+  "inspected_frame_479": {
+    "caption_time_seconds": 16.0,
+    "both_reset_counts": 1,
+    "both_episode_distance_m": 0.0,
+    "interpretation": "normal episode timeout reset visible; not edited out"
+  }
+}

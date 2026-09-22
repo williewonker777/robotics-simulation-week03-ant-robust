@@ -1,0 +1,127 @@
+{
+  "selection_time_utc": "2026-09-21T10:51:02.244995+00:00",
+  "selected": "portal_rehearsal4",
+  "checkpoint": "artifacts/terrain_demo/runs/rough_v5_portal_rehearsal4_seed43/model_round_4.pt",
+  "checkpoint_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "status": "promoted_as_recommended_rough_v5_policy",
+  "criterion": "Max strict terrain one-tile successes on reset24; ties fewer terrainfalls. Preserve baseline as default until matched new tests have more successes and no more terrainfalls; courseID>=0.8*154.32; worldexit0.",
+  "candidates": [
+    {
+      "name": "rehearsal1",
+      "sha256": "d0cc32c36bdb33b8f1d3ad899c3fa2ff574f06c0906897c4597dc7cd9dc0526f",
+      "terrain_successes": 126,
+      "terrain_falls": 15,
+      "stones": 13,
+      "stone_levels": [
+        4,
+        5,
+        1,
+        2,
+        1
+      ],
+      "lane_exits": 1
+    },
+    {
+      "name": "rehearsal2",
+      "sha256": "7a12d27c495726b0c3baf7e3ea0934da211243b3e4071aebd200f26fbe743d7f",
+      "terrain_successes": 126,
+      "terrain_falls": 17,
+      "stones": 15,
+      "stone_levels": [
+        4,
+        4,
+        3,
+        2,
+        2
+      ],
+      "lane_exits": 3
+    },
+    {
+      "name": "rehearsal4",
+      "sha256": "ba9073d215e20682304e64093b7d00f391172ef9b27335d008a4533d178def67",
+      "terrain_successes": 127,
+      "terrain_falls": 15,
+      "stones": 15,
+      "stone_levels": [
+        4,
+        5,
+        3,
+        1,
+        2
+      ],
+      "lane_exits": 2
+    },
+    {
+      "name": "portal_rehearsal2",
+      "sha256": "7a90119efac9453ce03e666c5a5c8cb4191544027efe8e121c1496278787b315",
+      "terrain_successes": 130,
+      "terrain_falls": 15,
+      "stones": 18,
+      "stone_levels": [
+        4,
+        5,
+        3,
+        3,
+        3
+      ],
+      "lane_exits": 0
+    },
+    {
+      "name": "portal_rehearsal4",
+      "sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "terrain_successes": 130,
+      "terrain_falls": 14,
+      "stones": 17,
+      "stone_levels": [
+        3,
+        5,
+        3,
+        2,
+        4
+      ],
+      "lane_exits": 2
+    }
+  ],
+  "new_validation": [
+    {
+      "geometry_seed": 51,
+      "reset_seed": 28
+    },
+    {
+      "geometry_seed": 51,
+      "reset_seed": 29
+    },
+    {
+      "geometry_seed": 54,
+      "reset_seed": 30
+    },
+    {
+      "geometry_seed": 55,
+      "reset_seed": 30
+    }
+  ],
+  "no_further_tuning_on_new_validation": true,
+  "training_only_label_risk": "Distance gate can switch expert labels near onset; exported student has neither distance gate nor lane label. Contact can begin before torso reaches terrain due to1.1m footreach. Gate is exploratory, not claimed fully observable.",
+  "decision_time_utc": "2026-09-21T11:00:26.496798+00:00",
+  "previous_checkpoint_retained": "artifacts/terrain_demo/runs/rough_v5_traverse1499_seed42/model_1499.pt",
+  "verification": "artifacts/terrain_demo/evaluations/rough_v5/rehearsal_verification_20260921.json",
+  "reason": "All frozen promotion gates pass: new matched strict successes517>472/600 with terrainfalls61=61, ID137.067>=123.456, worldexit0. Fixed regression403>369/450 with falls32=32. Some family/flat-lane fall counts and100lane reward regress; documented. Not universal terrain safety.",
+  "fixed": {
+    "terrain_episodes": 450,
+    "reference_one_tile": 369,
+    "candidate_one_tile": 403,
+    "reference_falls": 32,
+    "candidate_falls": 32,
+    "reference_stones": 24,
+    "candidate_stones": 56
+  },
+  "new": {
+    "terrain_episodes": 600,
+    "reference_one_tile": 472,
+    "candidate_one_tile": 517,
+    "reference_falls": 61,
+    "candidate_falls": 61,
+    "reference_stones": 33,
+    "candidate_stones": 69
+  }
+}

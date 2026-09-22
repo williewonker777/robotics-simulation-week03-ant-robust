@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "actions": true,
+    "terminations": true,
+    "events": true,
+    "decimation": true,
+    "episode_length_s": true,
+    "sim": true,
+    "base_rewards": true,
+    "guided_reward": true,
+    "physical_scene": true,
+    "old_60d_observations": true,
+    "feet": true,
+    "PPO": true,
+    "num_steps": true,
+    "mode_guard": true,
+    "footmap_v7_source_preservation": true,
+    "residual_v8_source_preservation": true,
+    "smoke_eval": true
+  },
+  "all_passed": true,
+  "smoke_geometry": 51,
+  "smoke_reset": 24,
+  "note": "Compare saved actual v9 config with immutable v7 fixed-budget config; only declared scan/observation/shaping differs.",
+  "capacity_4096_two_iterations": "pass",
+  "profile_256_ten_iterations": "pass",
+  "capacity_iteration_1_steps_per_second": 95700,
+  "cpu_tests": 151,
+  "source_hash_count": 35,
+  "independent_review": "pretraining_review.md: no blocker"
+}

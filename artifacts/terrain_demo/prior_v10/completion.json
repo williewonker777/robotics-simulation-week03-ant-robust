@@ -1,0 +1,219 @@
+{
+  "status": "complete",
+  "scope": "Fixed v10 experiment, not complete hard-terrain recovery",
+  "completed_at": "2026-09-22T07:33:20.241504+00:00",
+  "training_runs": 6,
+  "training_transitions": 589824000,
+  "frozen_at": "2026-09-22T07:03:57.926864+00:00",
+  "frozen_checkpoints": 7,
+  "frozen_source_hashes_verified": 53,
+  "primary_first_episodes": 2450,
+  "separate_non_gating_horizon_first_episodes": 140,
+  "promotion_gate": {
+    "passed": false,
+    "checks": {
+      "one_vs_frozen_v5": true,
+      "six_vs_frozen_v5": true,
+      "falls_vs_frozen_v5": true,
+      "lane_vs_frozen_v5": false,
+      "one_vs_free": true,
+      "six_vs_free": true,
+      "falls_vs_free": true,
+      "lane_vs_free": true,
+      "zero_world_exit": true,
+      "flat_falls_vs_frozen_v5": true,
+      "fewer_falls_than_free_majority": true
+    }
+  },
+  "directional_gate": {
+    "passed": true,
+    "checks": {
+      "fewer_falls_than_free": true,
+      "fewer_lane_exits_than_free": true,
+      "joint_safety_improvement_majority": true,
+      "six_at_least_v5": true,
+      "zero_world_exit": true
+    }
+  },
+  "recommended_policy": "original frozen v5; no default replacement",
+  "primary_totals": {
+    "frozen_v5": {
+      "n": 300,
+      "one": 260,
+      "six": 132,
+      "falls": 30,
+      "lane": 0,
+      "world": 0,
+      "flat_n": 50,
+      "flat_falls": 4,
+      "speed_m_s": 2.9611025329544733
+    },
+    "free": {
+      "n": 900,
+      "one": 744,
+      "six": 422,
+      "falls": 96,
+      "lane": 61,
+      "world": 0,
+      "flat_n": 150,
+      "flat_falls": 13,
+      "speed_m_s": 3.2267941921214995
+    },
+    "anchored": {
+      "n": 900,
+      "one": 802,
+      "six": 454,
+      "falls": 73,
+      "lane": 15,
+      "world": 0,
+      "flat_n": 150,
+      "flat_falls": 3,
+      "speed_m_s": 3.1276969363270206
+    }
+  },
+  "horizon_totals": {
+    "frozen_v5": {
+      "n": 20,
+      "one": 13,
+      "six": 0,
+      "falls": 5,
+      "lane": 0,
+      "world": 0,
+      "survival": 15,
+      "first_hit_one": {
+        "observed_n": 15,
+        "mean": 13.032222222222222,
+        "median": 12.3
+      },
+      "first_hit_six": {
+        "observed_n": 0,
+        "mean": null,
+        "median": null
+      },
+      "distance16": {
+        "observed_n": 17,
+        "mean": 14.190395916209502,
+        "median": 14.674798011779785
+      },
+      "final_distance": {
+        "observed_n": 20,
+        "mean": 20.836239099502563,
+        "median": 21.910184860229492
+      },
+      "maximum_distance": {
+        "observed_n": 20,
+        "mean": 20.954207944869996,
+        "median": 22.218098640441895
+      }
+    },
+    "free": {
+      "n": 60,
+      "one": 19,
+      "six": 14,
+      "falls": 29,
+      "lane": 12,
+      "world": 0,
+      "survival": 31,
+      "first_hit_one": {
+        "observed_n": 46,
+        "mean": 9.986956521739131,
+        "median": 10.016666666666666
+      },
+      "first_hit_six": {
+        "observed_n": 23,
+        "mean": 51.66884057971014,
+        "median": 52.199999999999996
+      },
+      "distance16": {
+        "observed_n": 47,
+        "mean": 18.33226307402266,
+        "median": 17.852195739746094
+      },
+      "final_distance": {
+        "observed_n": 60,
+        "mean": 41.73087445894877,
+        "median": 42.15825271606445
+      },
+      "maximum_distance": {
+        "observed_n": 60,
+        "mean": 41.78796230951945,
+        "median": 42.1634521484375
+      }
+    },
+    "anchored": {
+      "n": 60,
+      "one": 23,
+      "six": 15,
+      "falls": 31,
+      "lane": 5,
+      "world": 0,
+      "survival": 29,
+      "first_hit_one": {
+        "observed_n": 48,
+        "mean": 10.799652777777778,
+        "median": 10.341666666666667
+      },
+      "first_hit_six": {
+        "observed_n": 21,
+        "mean": 56.719047619047615,
+        "median": 57.18333333333333
+      },
+      "distance16": {
+        "observed_n": 49,
+        "mean": 16.58693348631567,
+        "median": 17.463077545166016
+      },
+      "final_distance": {
+        "observed_n": 60,
+        "mean": 39.81793084144592,
+        "median": 43.51162910461426
+      },
+      "maximum_distance": {
+        "observed_n": 60,
+        "mean": 39.90923601786296,
+        "median": 43.52122116088867
+      }
+    }
+  },
+  "validation": {
+    "cpu_tests": 207,
+    "zero_coefficient_ppo_update_parity": "bit-exact",
+    "independent_raw_audit": "pass",
+    "compileall": "pass",
+    "shell_syntax": "pass",
+    "git_diff_check": "pass",
+    "all_frozen_files_whitespace": "pass",
+    "viewer_js_syntax": "pass",
+    "viewer_local_links": 12,
+    "workflow_doctor": "pass",
+    "logged_commands": 49,
+    "all_command_returncodes_zero": true,
+    "videos_full_decode_passed": 4,
+    "browser_title_verified": true,
+    "project_gpu_jobs_remaining": 0,
+    "standalone_lint_typecheck_gap": "Ruff/mypy/Pyright not installed; none claimed or added"
+  },
+  "artifacts": {
+    "frozen.json": "5075c9e2811e19b68dc9a51be20f17d5a90d8336e8fa7e17be947f3f69eb022f",
+    "summary.json": "ac3a4d6d4bf4feb694bc07f52150e89b546e0387705fcac987909d95460cf13a",
+    "horizon_summary.json": "093beadde8673b89b6aa2c86d0b2955c9ab583308afa381cc2acd9fb1530d97a",
+    "independent_audit.json": "d384de294dbf407b4847a6d5cd1eea5b4ee9d94035c4f9a6a20c8a9917f2879f",
+    "independent_review.md": "73bfb86f579644dd8fabc58ee5d14829f27fe5fc3dc9eb27e2fb8df1f4ebb995",
+    "video_manifest.json": "ea8fd7a6970868eb0809f8048d86777cfefa59e563fb9d82573468c08d94d66c",
+    "visual_inspection.json": "de96a4e41961e4bce93ef31f7ba65824bc7683b047629c4656d754061082d727",
+    "training_telemetry.json": "12b38d65ebf429be02778cd88d4bcc64171ddeed376e793b29ff7867919c07c2",
+    "index.html": "86cef2f06fab35f239d0a86843a5217cd6fe5303f519781694933f659dad8fee"
+  },
+  "report_sha256": "4e9946737ea08f814062b068926e006dee3ad3aff09e6933a2520616c9c1f4c6",
+  "simplifications": [
+    "Reused unchanged v9 sensing/physics and legacy train/eval/demo entrypoints",
+    "Teacher is training-only; student-only inference; no new dependency"
+  ],
+  "remaining_risks": [
+    "Lane exits15/900 versus baseline0/300 prevent promotion",
+    "Hard-stone64s falls31/60; primary fall advantage does not persist",
+    "Two maps only, ideal simulation scan rather than real RGB-D",
+    "88D experiment task is not the original60D interface"
+  ],
+  "runtime_note": "OMX custom checkpoint write hit native mutex error after an external runtime update; working notepad and experiment status/TASK records preserved progress. No active OMX workflow was used."
+}

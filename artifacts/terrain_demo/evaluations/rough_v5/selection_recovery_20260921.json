@@ -1,0 +1,125 @@
+{
+  "selected": "deep1000",
+  "selected_artifact": "artifacts/terrain_demo/runs/rough_v5_recovery_deep1000_seed42/model_1000.pt",
+  "checkpoint_sha256": "3e5ee185de847683953b027663489087ea984945b417bed0e9f74992f07934b8",
+  "selection_time_utc": "2026-09-21T10:29:48.450303+00:00",
+  "selection_reset_seed": 24,
+  "criterion": "Before seeds25/26/geometry52/53: maximize strict terrain crossing at seed24; require stone>=18/25 and courseID>=0.8*154.32; ties prefer fewer falls/exits. Compare deep1000 with stabilize400/799. Report fall/timing/speed tradeoffs explicitly.",
+  "post_selection_status": "not_promoted_as_default",
+  "post_selection_checks": [
+    "reset25",
+    "reset26",
+    "generator52/reset27",
+    "generator53/reset27",
+    "courseOOD"
+  ],
+  "candidates": [
+    {
+      "candidate": "deep500",
+      "checkpoint": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-01-40_recovery_deep_20260921/model_500.pt",
+      "checkpoint_sha256": "f064d2e42e3ce5ddd0f7eca6aabd935cda7be1feae9bb3ec1cbd5a97ce78116f",
+      "terrain_successes": 116,
+      "terrain_episodes": 150,
+      "stone_successes": 13,
+      "stone_successes_by_level": [
+        4,
+        5,
+        1,
+        2,
+        1
+      ],
+      "terrain_falls": 24,
+      "lane_exits": 2,
+      "all_family_first2s_falls": 14,
+      "course_id_return": null
+    },
+    {
+      "candidate": "deep1000",
+      "checkpoint": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-01-40_recovery_deep_20260921/model_1000.pt",
+      "checkpoint_sha256": "3e5ee185de847683953b027663489087ea984945b417bed0e9f74992f07934b8",
+      "terrain_successes": 129,
+      "terrain_episodes": 150,
+      "stone_successes": 20,
+      "stone_successes_by_level": [
+        4,
+        5,
+        4,
+        2,
+        5
+      ],
+      "terrain_falls": 19,
+      "lane_exits": 0,
+      "all_family_first2s_falls": 10,
+      "course_id_return": 152.26684394687413
+    },
+    {
+      "candidate": "deep1499",
+      "checkpoint": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-01-40_recovery_deep_20260921/model_1499.pt",
+      "checkpoint_sha256": "83f7c028183e50803786df9f836fc2c96f0d9835c20ae72edd65836757fc8849",
+      "terrain_successes": 120,
+      "terrain_episodes": 150,
+      "stone_successes": 19,
+      "stone_successes_by_level": [
+        4,
+        4,
+        5,
+        3,
+        3
+      ],
+      "terrain_falls": 24,
+      "lane_exits": 4,
+      "all_family_first2s_falls": 11,
+      "course_id_return": null
+    },
+    {
+      "candidate": "stabilize400",
+      "checkpoint": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-21-13_recovery_stabilize_20260921/model_400.pt",
+      "checkpoint_sha256": "a0b752fc7344e68ad8d0ba33e69a7f43f6bda82d2d0fbd8509365e8b4971ba7c",
+      "terrain_successes": 112,
+      "terrain_episodes": 150,
+      "stone_successes": 13,
+      "stone_successes_by_level": [
+        3,
+        5,
+        2,
+        1,
+        2
+      ],
+      "terrain_falls": 28,
+      "lane_exits": 2,
+      "all_family_first2s_falls": 12,
+      "course_id_return": null
+    },
+    {
+      "candidate": "stabilize799",
+      "checkpoint": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-21-13_recovery_stabilize_20260921/model_799.pt",
+      "checkpoint_sha256": "4b63a210e4341d8cf93cf4b2294e38329699b0e6bb497bd0109506bae45e83fc",
+      "terrain_successes": 126,
+      "terrain_episodes": 150,
+      "stone_successes": 17,
+      "stone_successes_by_level": [
+        4,
+        5,
+        4,
+        2,
+        2
+      ],
+      "terrain_falls": 19,
+      "lane_exits": 1,
+      "all_family_first2s_falls": 11,
+      "course_id_return": null
+    }
+  ],
+  "rejected_stabilization_note": "The composite stronger-fall/sampling/noise/trap trial did not beat deep1000; not a causal ablation of trap_weight. Selected model uses original swing-only formula.",
+  "reason": "Stones55/75 improved, but overall366/450vs369/450 and terrainfalls67/450vs32/450. Need non-stone stabilization; preserve previous default.",
+  "next_validation_reserve": {
+    "reset_seeds": [
+      28,
+      29
+    ],
+    "geometry_seeds": [
+      54,
+      55
+    ]
+  }
+}

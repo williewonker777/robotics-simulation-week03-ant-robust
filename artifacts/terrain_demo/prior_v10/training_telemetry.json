@@ -1,0 +1,588 @@
+{
+  "scope": "Training-state telemetry, not held-out performance or model selection. Student states differ across arms.",
+  "all_final749": true,
+  "runs": {
+    "v10_free_seed42": {
+      "group": "free",
+      "training_seed": 42,
+      "metrics": {
+        "Loss/value_function": {
+          "n": 750,
+          "last_step": 749,
+          "first": 4.636767387390137,
+          "last": 2.487177848815918,
+          "last100_mean": 3.0365070128440856
+        },
+        "Loss/surrogate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0003522040497045964,
+          "last": -0.004848005715757608,
+          "last100_mean": -0.004025040352717042
+        },
+        "Loss/entropy": {
+          "n": 750,
+          "last_step": 749,
+          "first": -1.5244081020355225,
+          "last": -1.4195640087127686,
+          "last100_mean": -1.5537790536880494
+        },
+        "Loss/prior_loss": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0017201341688632965,
+          "last": 1.1476585865020752,
+          "last100_mean": 1.078919107913971
+        },
+        "Loss/prior_mse": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.00013761072477791458,
+          "last": 0.09181268513202667,
+          "last100_mean": 0.08631352819502354
+        },
+        "Loss/weighted_prior": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0,
+          "last": 0.0,
+          "last100_mean": 0.0
+        },
+        "Loss/action_mean_abs_gt1_fraction": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.10273323208093643,
+          "last": 0.20295314490795135,
+          "last100_mean": 0.19982093408703805
+        },
+        "Loss/student_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6315585374832153,
+          "last": 0.8986312747001648,
+          "last100_mean": 0.8918693709373474
+        },
+        "Loss/teacher_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6309828162193298,
+          "last": 0.8230049014091492,
+          "last100_mean": 0.8195061177015305
+        },
+        "Loss/prior_action_difference_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.011047612875699997,
+          "last": 0.3030044734477997,
+          "last100_mean": 0.29368256866931913
+        },
+        "Loss/learning_rate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 9.999999747378752e-05,
+          "last": 9.999999747378752e-05,
+          "last100_mean": 9.999999747378752e-05
+        },
+        "Policy/mean_noise_std": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.19987696409225464,
+          "last": 0.20591792464256287,
+          "last100_mean": 0.20239240497350694
+        },
+        "Perf/total_fps": {
+          "n": 750,
+          "last_step": 749,
+          "first": 64061.0,
+          "last": 94879.0,
+          "last100_mean": 94255.7
+        }
+      }
+    },
+    "v10_anchored_seed42": {
+      "group": "anchored",
+      "training_seed": 42,
+      "metrics": {
+        "Loss/value_function": {
+          "n": 750,
+          "last_step": 749,
+          "first": 4.636721134185791,
+          "last": 2.441300630569458,
+          "last100_mean": 2.523484888076782
+        },
+        "Loss/surrogate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.00036539119901135564,
+          "last": -0.005099072586745024,
+          "last100_mean": -0.0036453048003750156
+        },
+        "Loss/entropy": {
+          "n": 750,
+          "last_step": 749,
+          "first": -1.5242063999176025,
+          "last": -2.1646924018859863,
+          "last100_mean": -2.221678078174591
+        },
+        "Loss/prior_loss": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0017165334429591894,
+          "last": 0.29173707962036133,
+          "last100_mean": 0.28262108355760573
+        },
+        "Loss/prior_mse": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.00013732266961596906,
+          "last": 0.023338966071605682,
+          "last100_mean": 0.022609686851501463
+        },
+        "Loss/weighted_prior": {
+          "n": 750,
+          "last_step": 749,
+          "first": 3.4330667403992265e-05,
+          "last": 0.005834741517901421,
+          "last100_mean": 0.005652421568520367
+        },
+        "Loss/action_mean_abs_gt1_fraction": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.10273818671703339,
+          "last": 0.17771396040916443,
+          "last100_mean": 0.17388684719800948
+        },
+        "Loss/student_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6315596103668213,
+          "last": 0.8419286608695984,
+          "last100_mean": 0.8326171582937241
+        },
+        "Loss/teacher_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6309828162193298,
+          "last": 0.8300437927246094,
+          "last100_mean": 0.8201819163560867
+        },
+        "Loss/prior_action_difference_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.01103799045085907,
+          "last": 0.15277069807052612,
+          "last100_mean": 0.1503495417535305
+        },
+        "Loss/learning_rate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 9.999999747378752e-05,
+          "last": 9.999999747378752e-05,
+          "last100_mean": 9.999999747378752e-05
+        },
+        "Policy/mean_noise_std": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.1998879313468933,
+          "last": 0.1875128597021103,
+          "last100_mean": 0.1858359158039093
+        },
+        "Perf/total_fps": {
+          "n": 750,
+          "last_step": 749,
+          "first": 65322.0,
+          "last": 93402.0,
+          "last100_mean": 93836.63
+        }
+      }
+    },
+    "v10_free_seed43": {
+      "group": "free",
+      "training_seed": 43,
+      "metrics": {
+        "Loss/value_function": {
+          "n": 750,
+          "last_step": 749,
+          "first": 4.664760589599609,
+          "last": 2.764256477355957,
+          "last100_mean": 2.943424389362335
+        },
+        "Loss/surrogate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0002626379719004035,
+          "last": -0.004797148052603006,
+          "last100_mean": -0.003909609694237588
+        },
+        "Loss/entropy": {
+          "n": 750,
+          "last_step": 749,
+          "first": -1.5221161842346191,
+          "last": -1.260381817817688,
+          "last100_mean": -1.3452327692508697
+        },
+        "Loss/prior_loss": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0018396629020571709,
+          "last": 1.0952119827270508,
+          "last100_mean": 1.000066346526146
+        },
+        "Loss/prior_mse": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.00014717303565703332,
+          "last": 0.08761695772409439,
+          "last100_mean": 0.08000530734658241
+        },
+        "Loss/weighted_prior": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0,
+          "last": 0.0,
+          "last100_mean": 0.0
+        },
+        "Loss/action_mean_abs_gt1_fraction": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.10297203063964844,
+          "last": 0.21650466322898865,
+          "last100_mean": 0.2126230204105377
+        },
+        "Loss/student_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6318693161010742,
+          "last": 0.9040621519088745,
+          "last100_mean": 0.892670355439186
+        },
+        "Loss/teacher_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.631035566329956,
+          "last": 0.8293881416320801,
+          "last100_mean": 0.8241902101039886
+        },
+        "Loss/prior_action_difference_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.011347652412950993,
+          "last": 0.29600128531455994,
+          "last100_mean": 0.28277852237224577
+        },
+        "Loss/learning_rate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 9.999999747378752e-05,
+          "last": 9.999999747378752e-05,
+          "last100_mean": 9.999999747378752e-05
+        },
+        "Policy/mean_noise_std": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.20002597570419312,
+          "last": 0.20937418937683105,
+          "last100_mean": 0.20689488917589188
+        },
+        "Perf/total_fps": {
+          "n": 750,
+          "last_step": 749,
+          "first": 65420.0,
+          "last": 97487.0,
+          "last100_mean": 97082.45
+        }
+      }
+    },
+    "v10_anchored_seed43": {
+      "group": "anchored",
+      "training_seed": 43,
+      "metrics": {
+        "Loss/value_function": {
+          "n": 750,
+          "last_step": 749,
+          "first": 4.6648077964782715,
+          "last": 2.1673223972320557,
+          "last100_mean": 2.463064670562744
+        },
+        "Loss/surrogate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.00023131906345952302,
+          "last": -0.004565828945487738,
+          "last100_mean": -0.003727390187777928
+        },
+        "Loss/entropy": {
+          "n": 750,
+          "last_step": 749,
+          "first": -1.5222476720809937,
+          "last": -2.38327693939209,
+          "last100_mean": -2.3940442109107973
+        },
+        "Loss/prior_loss": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0018297563074156642,
+          "last": 0.2812383770942688,
+          "last100_mean": 0.27587358504533765
+        },
+        "Loss/prior_mse": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.000146380509249866,
+          "last": 0.022499071434140205,
+          "last100_mean": 0.022069886885583402
+        },
+        "Loss/weighted_prior": {
+          "n": 750,
+          "last_step": 749,
+          "first": 3.6595123674487695e-05,
+          "last": 0.005624767392873764,
+          "last100_mean": 0.005517471595667302
+        },
+        "Loss/action_mean_abs_gt1_fraction": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.10297012329101562,
+          "last": 0.17153148353099823,
+          "last100_mean": 0.16867139473557471
+        },
+        "Loss/student_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6318736672401428,
+          "last": 0.8245110511779785,
+          "last100_mean": 0.8195358216762543
+        },
+        "Loss/teacher_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.631035566329956,
+          "last": 0.8155293464660645,
+          "last100_mean": 0.8135270899534226
+        },
+        "Loss/prior_action_difference_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.011317898519337177,
+          "last": 0.14999668300151825,
+          "last100_mean": 0.1485547210276127
+        },
+        "Loss/learning_rate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 9.999999747378752e-05,
+          "last": 9.999999747378752e-05,
+          "last100_mean": 9.999999747378752e-05
+        },
+        "Policy/mean_noise_std": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.20001693069934845,
+          "last": 0.18424582481384277,
+          "last100_mean": 0.18316590890288353
+        },
+        "Perf/total_fps": {
+          "n": 750,
+          "last_step": 749,
+          "first": 66627.0,
+          "last": 96804.0,
+          "last100_mean": 96208.66
+        }
+      }
+    },
+    "v10_free_seed44": {
+      "group": "free",
+      "training_seed": 44,
+      "metrics": {
+        "Loss/value_function": {
+          "n": 750,
+          "last_step": 749,
+          "first": 4.433669567108154,
+          "last": 3.8214786052703857,
+          "last100_mean": 3.0410528492927553
+        },
+        "Loss/surrogate": {
+          "n": 750,
+          "last_step": 749,
+          "first": -0.001462145010009408,
+          "last": -0.004232151433825493,
+          "last100_mean": -0.0041116110677830876
+        },
+        "Loss/entropy": {
+          "n": 750,
+          "last_step": 749,
+          "first": -1.5284384489059448,
+          "last": -1.306679129600525,
+          "last100_mean": -1.4438305854797364
+        },
+        "Loss/prior_loss": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.001609050203114748,
+          "last": 1.1546732187271118,
+          "last100_mean": 1.1207620620727539
+        },
+        "Loss/prior_mse": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.00012872401566710323,
+          "last": 0.09237385541200638,
+          "last100_mean": 0.0896609652787447
+        },
+        "Loss/weighted_prior": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0,
+          "last": 0.0,
+          "last100_mean": 0.0
+        },
+        "Loss/action_mean_abs_gt1_fraction": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.10295619815587997,
+          "last": 0.21999530494213104,
+          "last100_mean": 0.21607668176293374
+        },
+        "Loss/student_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6314623355865479,
+          "last": 0.938602864742279,
+          "last100_mean": 0.9357038432359696
+        },
+        "Loss/teacher_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6309009194374084,
+          "last": 0.8407468199729919,
+          "last100_mean": 0.8333982229232788
+        },
+        "Loss/prior_action_difference_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.01069270446896553,
+          "last": 0.3039298951625824,
+          "last100_mean": 0.2993810319900513
+        },
+        "Loss/learning_rate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 9.999999747378752e-05,
+          "last": 9.999999747378752e-05,
+          "last100_mean": 9.999999747378752e-05
+        },
+        "Policy/mean_noise_std": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.19970911741256714,
+          "last": 0.2092660367488861,
+          "last100_mean": 0.2052985057234764
+        },
+        "Perf/total_fps": {
+          "n": 750,
+          "last_step": 749,
+          "first": 65869.0,
+          "last": 97805.0,
+          "last100_mean": 97468.92
+        }
+      }
+    },
+    "v10_anchored_seed44": {
+      "group": "anchored",
+      "training_seed": 44,
+      "metrics": {
+        "Loss/value_function": {
+          "n": 750,
+          "last_step": 749,
+          "first": 4.433533668518066,
+          "last": 2.4925544261932373,
+          "last100_mean": 2.57646932721138
+        },
+        "Loss/surrogate": {
+          "n": 750,
+          "last_step": 749,
+          "first": -0.0014272560365498066,
+          "last": -0.004384228028357029,
+          "last100_mean": -0.0038554561900673435
+        },
+        "Loss/entropy": {
+          "n": 750,
+          "last_step": 749,
+          "first": -1.5287604331970215,
+          "last": -2.121795177459717,
+          "last100_mean": -2.1503301429748536
+        },
+        "Loss/prior_loss": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.0016109127318486571,
+          "last": 0.307761549949646,
+          "last100_mean": 0.30597111344337463
+        },
+        "Loss/prior_mse": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.00012887301272712648,
+          "last": 0.02462092600762844,
+          "last100_mean": 0.024477689061313868
+        },
+        "Loss/weighted_prior": {
+          "n": 750,
+          "last_step": 749,
+          "first": 3.221825318178162e-05,
+          "last": 0.006155231036245823,
+          "last100_mean": 0.0061194221395999195
+        },
+        "Loss/action_mean_abs_gt1_fraction": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.10295238345861435,
+          "last": 0.18077392876148224,
+          "last100_mean": 0.18056051045656205
+        },
+        "Loss/student_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6314514875411987,
+          "last": 0.85053950548172,
+          "last100_mean": 0.8497903561592102
+        },
+        "Loss/teacher_action_mean_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.6309009194374084,
+          "last": 0.8194422125816345,
+          "last100_mean": 0.816907924413681
+        },
+        "Loss/prior_action_difference_rms": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.010697385296225548,
+          "last": 0.1569099873304367,
+          "last100_mean": 0.1564379572868347
+        },
+        "Loss/learning_rate": {
+          "n": 750,
+          "last_step": 749,
+          "first": 9.999999747378752e-05,
+          "last": 9.999999747378752e-05,
+          "last100_mean": 9.999999747378752e-05
+        },
+        "Policy/mean_noise_std": {
+          "n": 750,
+          "last_step": 749,
+          "first": 0.19969621300697327,
+          "last": 0.19000141322612762,
+          "last100_mean": 0.1890033380687237
+        },
+        "Perf/total_fps": {
+          "n": 750,
+          "last_step": 749,
+          "first": 67110.0,
+          "last": 96129.0,
+          "last100_mean": 96401.25
+        }
+      }
+    }
+  }
+}
