@@ -6,6 +6,23 @@ randomization이 처음 보는 물리 조건의 일반화를 개선하는가**�
 
 > 공개 저장소 URL: https://github.com/williewonker777/robotics-simulation-week03-ant-robust
 
+## 최신 험지 실험 안내 — 2026-09-22
+
+- **[전체 진행 과정·결과·실패 사례 (v0~v10)](docs/EXPERIMENT_HISTORY.md)**
+- 현재 권장 모델은 **v5 portal-rehearsal round4**입니다. 최초 과제 모델이 아니라,
+  험지 복구 학습을 거친 60D 기준선입니다. v6~v10은 별도 센서/학습 방법을 시험했지만
+  사전 정의한 전체 교체 기준을 통과하지 못했습니다.
+- 최신 [v10 실험 방법·16초/64초 결과](docs/PRIOR_V10.md) ·
+  [16초 집계](artifacts/terrain_demo/prior_v10/summary.md) ·
+  [64초 고난도 진단](artifacts/terrain_demo/prior_v10/horizon_summary.md) ·
+  [영상 비교 페이지](artifacts/terrain_demo/prior_v10/index.html)
+- **[공개 파일 범위·검증·재현 시 주의사항](docs/PUBLICATION.md)**:
+  코드, 평가 데이터, 선택/비교 모델, 영상, 계획과 검토 기록을 포함합니다.
+  로컬 실행 로그, TensorBoard 원본, 에이전트 상태와 자격증명은 제외합니다.
+
+아래 원래 과제의 동일-budget PPO 결과와 후속 험지 실험은 서로 다른 실험입니다.
+v6 이후의 깊이 정보는 이상적인 ray/height scan이며 실제 RGB-D 카메라 검증은 아닙니다.
+
 ## 결론
 
 가설은 **지지되었지만 효과의 크기는 조건별로 달랐습니다.** Baseline과 Robust를 각각
@@ -150,9 +167,207 @@ SHA-256: `22b41aed1a7f4c7e2b9e66b5cdb4a61125f4f8f64be52d1766255d5b5baec139`
   --kit_args=--/renderer/multiGpu/enabled=false
 ```
 
+### v4: 극한 지형 회복 curriculum
+
+v3의 114D scanner 인터페이스를 유지하면서 scanner를 진행 방향으로 `0.60 m`
+이동하고, geometry-only warm-up → approach → 전체 10개 지형 순서의 회복 curriculum을
+추가했습니다. 전복 판정은 `1.42 rad`로 완화하고, gap/pit을 넘는 데 필요한 토크의
+행동·에너지 패널티를 낮췄습니다. 마지막 pit-focus 단계는 pit/gap을 더 자주 보여주고
+bounded clearance 보상을 사용해 단절 지형의 회복을 보강합니다.
+
+선택 checkpoint:
+
+```text
+artifacts/terrain_demo/runs/terrain_extreme_recovery_seed42/model_9297.pt
+```
+
+seed 24/25/26의 100-env full 평가에서 평균 episode length는 `587.1/960`, 완주는
+평균 `27.7/100`이었고, v4 approach 대비 gap 평균 길이는 `692.6 → 722.6`, pit은
+`224.1 → 272.2` step으로 늘었습니다. seed 24에서는 10개 family 중 pit `3/10`,
+gap `5/10`, stepping-stones `8/10`이 960 step을 완료했습니다. 이 결과는 저장된
+procedural 분포에 대한 측정치이며 임의의 미지 지형을 보장하지 않습니다. 상세 breakdown,
+재현 명령과 SHA-256은 [`artifacts/terrain_demo/README.md`](artifacts/terrain_demo/README.md)에
+있습니다.
+
+10개 극한 지형 v4 데모:
+
+```bash
+./scripts/run_terrain_demo.sh \
+  --task Week03-Ant-Terrain-Extreme-Recovery-v4 \
+  --device cuda:0 --seed 7 --cycle-seconds 7 \
+  --checkpoint artifacts/terrain_demo/runs/terrain_extreme_recovery_seed42/model_9297.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
 ![Training curves](artifacts/plots/training_curves.png)
 
 ![Evaluation returns](artifacts/plots/evaluation_returns.png)
+
+### v5: 과제 호환 60D 험지 보행 재개 (2026-09-21)
+
+무한 반복 레인에서 재학습하고, 생존뿐 아니라 **실제 8 m 험지 구간 통과 + 16초 무낙상 +
+발까지 포함한 레인 유지**를 검사했습니다. 3 seed의 험지 450 episode에서 기존 v5 대비
+낙상률 **16.0% → 7.1%**, 통과율 **65.1% → 82.0%**, 전진 속도 **2.94 m/s**입니다.
+요철·경사·계단·장애물·파도 통과율은 **85.3–96.0%**지만, 징검다리는 **32.0%**이며
+난이도 0.8/1.0은 아직 통과하지 못했습니다. 전체 6개 타일 완주율은 별도로 **43.8%**입니다.
+
+과제 평지 return은 **134.80 ± 29.67**로 원래 robust 정책의 **87.3%**를 유지합니다.
+새 지형 seed 52/53에서도 통과율 **77.3% / 78.0%**를 확인했습니다.
+[상세 결과·한계·재현 명령](docs/ROUGH_V5.md),
+[7개 지형 영상](artifacts/terrain_demo/rough_v5_selected_seed7.mp4).
+
+
+### v5 후속: 징검다리 복구 검증 완료
+
+발이 돌 사이에 빠져 정체하는 원인을 진단하고, 복구 동작과 기존 안정형 동작을
+**단일 60D/8D 정책**으로 함께 학습했습니다. 평가 지형과 성공 기준은 바꾸지 않았습니다.
+
+- 기존 3-seed 벤치마크: 험지 통과 **369/450 → 403/450 (89.6%)**,
+  징검다리 **24/75 → 56/75 (74.7%)**. 전체 험지 낙상은 **32회로 동일**.
+- 선택 후 새 시드·지형: 통과 **472/600 → 517/600 (86.2%)**,
+  징검다리 **33/100 → 69/100**. 전체 험지 낙상은 **61회로 동일**.
+- 평지 ID return **137.07 ± 26.83**, 기존 robust의 **88.8%** 유지.
+- 권장 체크포인트: [`rough_v5_portal_rehearsal4_seed43/model_round_4.pt`](artifacts/terrain_demo/runs/rough_v5_portal_rehearsal4_seed43/model_round_4.pt).
+  이전 모델은 그대로 보존했습니다. 원래 과제의 equal-budget 실험과 별개인 후속 학습입니다.
+
+**일부 실패는 남아 있습니다.** 난이도 0.8 징검다리 통과는 40%이고, 전체 6개 타일
+통과는 징검다리에서 1/75에 그칩니다. 일부 지형·평탄 레인의 낙상도 소폭 늘어
+모든 지형의 안전성을 보장하지 않습니다.
+
+[상세 결과·재현 명령·한계](docs/ROUGH_RECOVERY.md) ·
+[개선 모델 보행 영상](artifacts/terrain_demo/rough_v5_rehearsal_stones08_seed7.mp4) ·
+[동일 조건의 기존 모델 영상](artifacts/terrain_demo/rough_v5_reference_stones08_seed7.mp4)
+
+```bash
+./scripts/run_terrain_demo.sh --task Week03-Ant-Rough-Lanes-Demo-v5 \
+  --device cuda:0 --seed 7 --cycle-seconds 8 \
+  --checkpoint artifacts/terrain_demo/runs/rough_v5_traverse1499_seed42/model_1499.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
+### v7: 논문 기반 발 위치 지도 비교 (2026-09-22)
+
+높이맵 CNN과 **4개 발 위치 지도**를 구현하고, 무지형/높이맵/높이맵+발지도에
+각각3학습seed·동일750iteration을 적용했습니다(총8억8,473만6천step). 모델을 먼저
+고정한 뒤 신규지형2종, 총3,500firstepisode를 평가했습니다.
+
+- 높이맵→발지도: strict통과755→760/900, 낙상108→85/900,6타일144→216/900.
+- 그러나 기존v5의6타일45%보다 새발지도24%가 낮아 **교체gate FAIL, 권장v5유지**.
+- 최고난도돌다리: 높이맵18/30→발지도16/30. 고난도극복완료를 주장하지 않습니다.
+- 514D/8D의 별도실험이며 실제RGB-D카메라·GRU·residual정책은 아닙니다.
+
+[비교 영상·그래프](artifacts/terrain_demo/footmap_v7/index.html) ·
+[설계·한계·재현](docs/FOOTMAP_V7.md) ·
+[전체결과](artifacts/terrain_demo/footmap_v7/summary.md) ·
+[모든seed·지형수치](artifacts/terrain_demo/footmap_v7/summary.json) ·
+[독립재계산검증](artifacts/terrain_demo/footmap_v7/verification.json)
+
+### v8: 기존 보행 고정 + 지형 잔차 정책 (2026-09-22)
+
+기존 v5 actor는 고정하고 `0.5*tanh` 행동 평균 보정(각 성분 ±0.5 이내)만 추가 학습했다.
+무지형/지형 잔차 ×3학습seed, 각750iter(총589,824,000transition).
+새 지형62/63에서 기존 v5/v7도 같은 조건으로 재평가한3,500first-episode 결과다.
+
+| 방식 | 1타일 통과 | 6타일 통과 | 낙상 |
+|---|---:|---:|---:|
+| 기존 v5 |259/300 (86.3%)|136/300 (45.3%)|32/300 (10.7%)|
+| 발 지도 v7 |753/900 (83.7%)|219/900 (24.3%)|94/900 (10.4%)|
+| 무지형 잔차 v8 |712/900 (79.1%)|374/900 (41.6%)|99/900 (11.0%)|
+| 지형 잔차 v8 |747/900 (83.0%)|370/900 (41.1%)|96/900 (10.7%)|
+
+연속 통과는 v7보다 회복했지만 기존 v5를 넘지 못했고, 최고난도 돌다리도
+12/30 통과에 그쳤다. **전체 교체 기준 FAIL, 권장 v5 유지.**
+고정 가중치와 제한된 보정은 폐루프 안전 보장이 아니다. 실제 RGB-D가 아닌
+이상적 레이캐스트이며 이전 v7 표와 평가 지형이 다르다.
+
+[비교 영상·그래프](artifacts/terrain_demo/residual_v8/index.html) ·
+[구현·검증 설명](docs/RESIDUAL_V8.md) ·
+[전체 결과](artifacts/terrain_demo/residual_v8/summary.md) ·
+[시드·지형별 수치](artifacts/terrain_demo/residual_v8/summary.json)
+
+### v9: 명시적 착지 후보 + 지지면 보상 (2026-09-22)
+
+825개 고밀도 지형 ray에서 발끝 착지 후보를 추출하는 **88D MLP**를 추가했다.
+발 위치만/후보 관측/후보+보상의3조건×3seed를각750iter 학습하고,
+모든 최종모델 고정 후 새 지형64/65에서3,500개 첫 에피소드를 평가했다.
+
+| 방식 | 1타일 통과 | 6타일 통과 | 낙상 |
+|---|---:|---:|---:|
+| 기존 v5 |264/300 (88.0%)|136/300 (45.3%)|24/300 (8.0%)|
+| 발 위치만 |734/900 (81.6%)|283/900 (31.4%)|99/900 (11.0%)|
+| 착지 후보 |741/900 (82.3%)|416/900 (46.2%)|91/900 (10.1%)|
+| 후보+보상 |763/900 (84.8%)|424/900 (47.1%)|105/900 (11.7%)|
+
+연속6타일은 개선됐지만 낙상과1타일 통과가 회귀하여 **교체 기준 FAIL,
+기존 v5 유지**다. 최고난도 돌다리1타일은 v5 5/10, 후보22/30,
+후보+보상21/30이나 고난도6타일은 모두0이다. 후보 관측만 대비 보상 추가는
+낙상이91→105/900으로 늘었다. 실제RGB-D/정확한IK/전체발캡슐 지지계획이
+아니며, 후보 없음은 비용0으로 기권한다. 이전표와 평가 지형도 다르다.
+
+151CPU테스트 및 독립20rawJSON/3500episode 재계산에서 불일치0.
+[16초 무편집 비교](artifacts/terrain_demo/foothold_v9/index.html) ·
+[설계·수치·한계](docs/FOOTHOLD_V9.md) ·
+[전체 결과](artifacts/terrain_demo/foothold_v9/summary.md) ·
+[독립 감사](artifacts/terrain_demo/foothold_v9/independent_review.md)
+
+### v10: 학습 중에만 기존 v5 행동을 참조 (2026-09-22)
+
+기존 동작을 실행 시 고정하는 v8 대신, **88D 착지 후보 학생을 PPO로 학습하면서
+v5 행동 평균과의 차이에만 보조 손실**을 주었습니다. λ0/0.02 각각3seed·750iteration,
+총589,824,000step. 모든 최종 모델을 고정한 뒤 새 지도2개에서2,450firstepisode를 평가했습니다.
+
+| 정책 | 6타일 통과 | 낙상 | 레인이탈 |
+|---|---:|---:|---:|
+| 기존 v5 |132/300 (44.0%)|30/300 (10.0%)|0/300|
+| 후보 관측 / prior 없음 |422/900 (46.9%)|96/900 (10.7%)|61/900 (6.8%)|
+| 후보 관측 / v5 prior |454/900 (50.4%)|73/900 (8.1%)|15/900 (1.7%)|
+
+전체16초 평가에서는 개선됐지만 **v5 대비 레인이탈 때문에 교체 기준 FAIL, 권장 v5 유지**입니다.
+별도64초 최고난도 돌다리는6타일이 v5 **0/20**, prior없음 **14/60**, prior **15/60**입니다.
+그러나 prior의 낙상이 **31/60 (51.7%)**로 높아 장시간 안정성·완전 극복은 해결되지 않았습니다.
+64초 표본은 기본 평가와 합치지 않았고, 실패 시드도 그대로 보존했습니다.
+
+207CPUtests·53고정소스·7모델·6설정·기본/64초 원시 배열 독립 감사 통과.
+실제 RGB-D가 아닌 이상적 레이캐스트이며, 실행 시 teacher는 호출하지 않습니다.
+[16초·64초 무편집 비교](artifacts/terrain_demo/prior_v10/index.html) ·
+[방법·전체 결과·한계](docs/PRIOR_V10.md) ·
+[독립 감사](artifacts/terrain_demo/prior_v10/independent_review.md)
+
+### v6: 깊이 지형 관측 추가 학습
+
+기존 60D에 **143-ray 지형 높이 + 143개 유효성 값**을 추가한 별도 **346D** 정책을
+4,096개 환경에서 1,500 iteration 학습했습니다. 렌더링 RGB-D 카메라가 아니라
+이상적인 raycast 높이/깊이 스캔이며, 기존 v0–v5와 원래 과제 모델은 보존했습니다.
+
+모델 선택 후 고정한 신규 지형·초기조건 600개 험지 episode에서, 같은 v6 scene의
+기존 정책 대비 징검다리 통과는 **62/100 → 79/100**으로 개선됐습니다.
+난이도 0.8은 **6/20 → 15/20**입니다. 하지만 전체 통과는 **524/600 → 521/600**,
+낙상은 **46 → 62회**, 6개 타일 연속 완주는 **274 → 119회**로 악화됐습니다.
+따라서 **전체 지형용 권장 정책은 기존 v5를 유지**하고, v6는 깊이 학습 실험 모델로
+별도 제공합니다. 모든 험지를 해결했다는 의미는 아닙니다.
+
+선별 seed24에서 정상 깊이 입력의 통과는 135/150, 입력 제거는 86/150,
+다른 환경의 깊이로 교체하면 106/150입니다. 정책의 깊이 입력 의존성은 확인되지만,
+동일 예산의 무센서 재학습 대조군이 없으므로 개선을 깊이만의 인과효과로 단정하지 않습니다.
+
+[설계·검증·재현 명령](docs/DEPTH_V6.md) ·
+[346D 체크포인트](artifacts/terrain_demo/runs/depth_v6_recovery1499_seed42/model_1499.pt) ·
+[실제 센서 관측](artifacts/terrain_demo/depth_v6_sensor_scan.png) ·
+[깊이 모델 보행 영상](artifacts/terrain_demo/depth_v6_stones08_seed7.mp4) ·
+[동일 v6 scene의 기존 정책 영상](artifacts/terrain_demo/depth_v6_blind_stones08_seed7.mp4)
+
+**고난도 비교:** 기존 신규 검증에서 난이도0.8만 보면 통과99→105/120,
+최대난이도1.0은91→85/120이고 낙상19→28회로 악화됐습니다.
+[최대난이도 6개 지형 비교 영상](artifacts/terrain_demo/depth_v6_hard/index.html) ·
+[난이도별 상세 집계](artifacts/terrain_demo/evaluations/depth_v6/hard_terrain_summary.md).
+새 학습이나 독립 평가 표본을 추가한 결과는 아닙니다.
+
+```bash
+./scripts/run_terrain_demo.sh --task Week03-Ant-Depth-Lanes-Demo-v6 \
+  --device cuda:0 --seed 7 --cycle-seconds 8 \
+  --checkpoint artifacts/terrain_demo/runs/depth_v6_recovery1499_seed42/model_1499.pt \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
 
 ## 환경
 
@@ -164,13 +379,26 @@ SHA-256: `22b41aed1a7f4c7e2b9e66b5cdb4a61125f4f8f64be52d1766255d5b5baec139`
 - GPUs used: NVIDIA GeForce RTX 5080 / RTX 5070
 
 ```bash
-source /mnt/ssd970/robotics_simulation_class/activate.sh
+source ../activate.sh
 python -m pip install --no-deps -e .
 python -m pip install -r requirements-report.txt  # PPT를 다시 만들 때만 필요
 ```
 
 다른 설치 위치에서는 `ROBOTICS_SIM_CLASS_ROOT`를 course environment root로 지정하면
 됩니다.
+
+### 작업 경로
+
+이 공개 저장소가 이 수업의 **canonical task workspace**입니다. 모든 Robotics
+Simulation Week 03 태스크의 소스, 학습 로그, 체크포인트, 평가 결과와 데모 산출물은
+다음 경로에서 생성·실행합니다.
+
+```text
+.
+```
+
+실행 스크립트는 자신의 저장소 루트를 자동으로 계산하므로 위 디렉터리에서 바로
+호출하면 새 결과도 `logs/`, `artifacts/` 아래에 이 저장소와 함께 남습니다.
 
 ## 학습 재현
 

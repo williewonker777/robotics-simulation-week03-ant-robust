@@ -1,0 +1,7 @@
+# Hard-terrain comparison (requested 2026-09-21)
+
+Read-only policy comparison; no training, policy selection, physics, source or benchmark changes.
+Frozen policies: original v5 zero-expanded blind reference and depth-v6 iteration1499, in identical v6 scene. Preserve all prior models/results.
+Numerical evidence: subgroup analysis of the four pre-existing fresh generator/reset pairs 51/31,51/32,56/33,57/33, selecting only difficulties0.8 and1.0 for all six mesh families. This is NOT new independent evaluation data. Each family/level20episodes perpolicy, pooled240perpolicy. Strictone13.1m andsix53.1m with no termination/lane/world exit. Report counts, denominators, falls, six-tile and lane exits rather than survival alone.
+Visualization: before viewing any new recordings, fix all six families rough,slope,stairs,waves,obstacles,stepping_stones at maximum configured difficulty1.0 (level4), generator56/reset33, one environment each, same16seconds for both policies. Record12uncutvideos, oneGPUjob at a time. Do not replace unfavorable clips or count qualitative video episodes into numerical benchmarks. This maximum is within current v6 distribution, not arbitrary/extreme-v4/pit/gap capability.
+Independent CPU audit of raw per-episode arrays and result summary. Full video decode, hashes, sensor/interface preserved. Show local-browser side-by-side videos with explicit family/level/seed and high-difficulty tables; leave existing comparison page intact. No dependency/install/remote/commit.

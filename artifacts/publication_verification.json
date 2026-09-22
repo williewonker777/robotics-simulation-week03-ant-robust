@@ -1,0 +1,44 @@
+{
+  "schema": "week03-ant-publication-verification-v1",
+  "checked_at": "2026-09-22T07:53:59.497950+00:00",
+  "status": "pass_with_documented_whitespace_warnings",
+  "publication_scope": "Source, selected experiment models, evaluations, public metadata copies, videos, plans and documentation; excludes raw console/TensorBoard/runtime.",
+  "cpu_tests": {
+    "passed": 207,
+    "command": "../run-python -m pytest -q",
+    "fresh_before_and_after_metadata_export": true
+  },
+  "original_v10_full_independent_audit": {
+    "status": "pass",
+    "includes_primary_and_separate_64s_horizon": true,
+    "performed_before_metadata_export": true
+  },
+  "metadata_only_byte_transform_checks": 370,
+  "json_jsonl_nonstring_value_identity_checks": 319,
+  "frozen_source_plan_hash_checks": 53,
+  "frozen_checkpoint_record_checks": 37,
+  "byte_identical_published_plans": 7,
+  "published_relative_links": 177,
+  "compileall": "pass",
+  "shell_syntax": "pass",
+  "git_diff_check": {
+    "status": "warnings",
+    "returncode": 2,
+    "warning_counts_by_extension": {
+      ".csv": 141,
+      ".md": 7,
+      ".py": 2
+    },
+    "details": "Existing generated CSV CRLF, intentional Markdown hard breaks, and two blank-at-EOF warnings in frozen prior tests; retained to preserve experiment bytes. Compilation and all207 tests pass. No whitespace-clean claim."
+  },
+  "source_and_model_bytes_changed_by_metadata_export": false,
+  "largest_included_file_bytes": 29136398,
+  "secret_review": "Heuristic text and checkpoint metadata scan: no credential signatures found; not a completeness guarantee. Some immutable model metadata retains nonsecret mount paths.",
+  "not_run": [
+    "Ruff",
+    "Mypy",
+    "Pyright",
+    "new GPU training/evaluation"
+  ],
+  "scientific_decision": "No result changed. v6-v10 promotion gates remain FAIL; recommended frozen v5 retained."
+}
