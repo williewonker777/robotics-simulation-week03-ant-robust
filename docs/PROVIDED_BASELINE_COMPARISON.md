@@ -192,5 +192,6 @@ done
 이를 오류 없는 런타임이라고 주장하지 않으며 원시 로그는 로컬에 보존합니다.
 
 [전체 결과](../artifacts/provided_baseline_comparison_20260930/summary.json) ·
-[로컬 준비 검증](../artifacts/provided_baseline_comparison_20260930/verification.json) ·
+[첨부·native 표시 검증](../artifacts/provided_baseline_comparison_20260930/native_video_verification.json) ·
+[첨부 전 로컬 준비 검증](../artifacts/provided_baseline_comparison_20260930/verification.json) ·
 [공개·테스트 제약](PUBLICATION.md) · [원래 모델 선택 가이드](FINAL_SUBMISSION.md)

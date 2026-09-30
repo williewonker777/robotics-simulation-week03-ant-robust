@@ -3,12 +3,16 @@
 ## 기본 제공 코드 기준 비교 — 이번 갱신
 
 제공 코드로 직접 학습한 Baseline42를 과제/험지 두 비교의 기준으로 명시했습니다.
-새 과제800회·험지/평탄1,400회, 총2,200 first episodes와16초 비교 MP42개, 개별 원본4개를 추가합니다.
+새 과제800회·험지/평탄1,400회, 총2,200 first episodes와16초 비교 MP42개, 개별 원본4개를 추가했습니다.
 과제는 동일-budget Baseline42↔Robust42이며, 험지는 관측 의미/보상/종료와 추가학습이 다른 별도 전이 비교입니다.
 기존3seed+10.8%와 과거 v5→v5 수치/모델/영상은 당시 기록으로 보존합니다.
 새 checkpoint 학습·재선별·의존성 추가는 없습니다. 공개 JSON은 checkpoint 경로만 상대경로로 바꾸고 수치/배열을 보존합니다.
 [비교 정의·재현·한계](PROVIDED_BASELINE_COMPARISON.md)와
 [이번 평가·영상 증거](../artifacts/provided_baseline_comparison_20260930/)를 참고하세요.
+사용자 최신 승인 후 새 나란히 비교 MP42개를 GitHub 영구 첨부로 올렸습니다.
+[새 첨부 URL·해시](../artifacts/provided_baseline_comparison_20260930/video_attachments.json)와
+[이번 native 표시 검증](../artifacts/provided_baseline_comparison_20260930/native_video_verification.json)은
+앞선 원본 첨부/검증과 별도입니다. 임시 signed 재생 URL·자격증명은 공개하지 않습니다.
 아래 README/MP4 항목은 앞선 게시 시점의 기록입니다.
 
 ## README MP4 플레이어 — 추가 반영

@@ -89,6 +89,7 @@ v5는 관측의 높이·목표·방향 의미와 보상·종료 조건이 바뀌
 
 ## 비교 영상
 
+**아래 재생 버튼으로 README 안에서 볼 수 있습니다.**
 **두 영상 모두 왼쪽은 제공 코드 Baseline seed42입니다.**
 새로 녹화한 전체 **16초**를 같은 재생 속도로 나란히 배치했습니다.
 영상은 정성 데모이며, 위100/600episode 결과를 대신하지 않습니다.
@@ -99,7 +100,7 @@ v5는 관측의 높이·목표·방향 의미와 보상·종료 조건이 바뀌
 두 모델의 PPO 예산은 같으며 reset 후 화면도 포함됩니다.
 
 <!-- NATIVE_VIDEO_LOW_FRICTION -->
-[저마찰 비교 MP4](artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_robust_low_friction.mp4)
+https://github.com/user-attachments/assets/8ded3f05-2d7b-4f9c-8737-58ea6ae81ed1
 
 <details>
 <summary>자동재생 GIF 미리보기 · 6 fps</summary>
@@ -114,7 +115,7 @@ v5는 관측의 높이·목표·방향 의미와 보상·종료 조건이 바뀌
 영상의 `resets`는 낙상 수가 아니며 마지막에는16초 자동 reset이 포함됩니다.
 
 <!-- NATIVE_VIDEO_STONES08 -->
-[징검다리 비교 MP4](artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_v5_stones08.mp4)
+https://github.com/user-attachments/assets/7411e0a8-c948-463c-88c9-77b626ea608d
 
 <details>
 <summary>자동재생 GIF 미리보기 · 6 fps</summary>
@@ -124,7 +125,8 @@ v5는 관측의 높이·목표·방향 의미와 보상·종료 조건이 바뀌
 </details>
 
 [비교·개별 원본 MP4](artifacts/provided_baseline_comparison_20260930/videos/) ·
-[영상 조건·해시·전체 decode](artifacts/provided_baseline_comparison_20260930/media_manifest.json)
+[영상 조건·해시·전체 decode](artifacts/provided_baseline_comparison_20260930/media_manifest.json) ·
+[첨부·표시 검증](artifacts/provided_baseline_comparison_20260930/native_video_verification.json)
 
 ## 빠른 실행
 

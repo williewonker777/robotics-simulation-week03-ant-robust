@@ -1,0 +1,42 @@
+{
+  "schema": "week03-provided-baseline-native-video-verification-v1",
+  "checked_at": "2026-09-30T08:41:43.554427+00:00",
+  "status": "github_gfm_render_and_anonymous_media_passed_interactive_playback_not_tested",
+  "base_local_commit": "1da58b156cb606a57f1e7b1044d49b509b64b036",
+  "scope": "New provided-code-baseline comparison attachments in README; original source/checkpoints/evaluation and old attachments unchanged.",
+  "github_gfm_render_http_status": 200,
+  "native_video_players": 2,
+  "videos": [
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_robust_low_friction.mp4",
+      "attachment_url": "https://github.com/user-attachments/assets/8ded3f05-2d7b-4f9c-8737-58ea6ae81ed1",
+      "native_video_controls_in_github_gfm_render": true,
+      "anonymous_media_http_status": 200,
+      "uploaded_bytes_match": true,
+      "bytes": 6087927,
+      "sha256": "e9ceecd9741f5ef92b25374748944c93d7114d2810537f974eebe31e1cdd02c9"
+    },
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_v5_stones08.mp4",
+      "attachment_url": "https://github.com/user-attachments/assets/7411e0a8-c948-463c-88c9-77b626ea608d",
+      "native_video_controls_in_github_gfm_render": true,
+      "anonymous_media_http_status": 200,
+      "uploaded_bytes_match": true,
+      "bytes": 1415102,
+      "sha256": "0d0b2dbc3a2ffb6ce4ce2f27e74683ced2fae1153643d259716dc6b408d4e5bc"
+    }
+  ],
+  "credential_or_cookie_used_for_render_and_media_verification": false,
+  "temporary_signed_media_urls_published": false,
+  "interactive_browser_playback_tested": false,
+  "remote_main_publication_verified_by_this_record": false,
+  "publication_note": "Pre-push render/media verification. Final push, live public README and remote-main SHA verification are recorded separately in ignored local evidence and final report.",
+  "validation_method": "Anonymous GitHub GFM markdown rendering contains both expected video controls; anonymous GET of each generated media src matches committed comparison MP4 SHA256 and byte count. Temporary signed src values excluded from publication.",
+  "independent_final_review": {
+    "role": "code-reviewer",
+    "decision": "APPROVE",
+    "issues": 0,
+    "scope": "stableURL/file/hash mapping, staged text secret heuristic, native metadata caveats, links/whitespace"
+  },
+  "protected_parent_snapshot_files": 1836
+}
