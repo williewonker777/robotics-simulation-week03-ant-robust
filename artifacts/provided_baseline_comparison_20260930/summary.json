@@ -1,0 +1,488 @@
+{
+  "assignment_equal_budget_transitions_per_model": 131072000,
+  "base_commit": "f7b2d3606d37afa0b5649cff2cb328eee4c02ea2",
+  "baseline_alias": "BaselineAntEnvCfg is an empty AntEnvCfg subclass; Week03AntPPORunnerCfg changes only experiment_name.",
+  "baseline_definition": "Project-trained seed42 checkpoint from unmodified supplied AntEnvCfg and AntPPORunnerCfg; NOT instructor-supplied pretrained weights.",
+  "course": {
+    "baseline_ood_mean": 136.4217284466823,
+    "historical_results_note": "Fresh paired runs are separate from original canonical 3seed experiment; some Robust values differ. Source/checkpoint/history unchanged. Execution variation cause not isolated.",
+    "ood_relative_gain_percent": 14.306376163927492,
+    "robust_ood_mean": 155.93873408759634,
+    "rows": [
+      {
+        "baseline_length_mean": 951.17,
+        "baseline_return_mean": 144.8929452252388,
+        "baseline_return_std": 15.121048550091427,
+        "episodes_per_model": 100,
+        "evaluation_seed": 24,
+        "relative_gain_percent": 6.505437051594454,
+        "robust_length_mean": 930.06,
+        "robust_return_mean": 154.31886456906796,
+        "robust_return_std": 29.315619133135346,
+        "scenario": "id",
+        "task": "Isaac-Ant-v0",
+        "training_seed": 42
+      },
+      {
+        "baseline_length_mean": 942.55,
+        "baseline_return_mean": 132.96729927122593,
+        "baseline_return_std": 19.789936191183855,
+        "episodes_per_model": 100,
+        "evaluation_seed": 24,
+        "relative_gain_percent": 21.599360662091872,
+        "robust_length_mean": 928.11,
+        "robust_return_mean": 161.68738580346107,
+        "robust_return_std": 30.226800156921392,
+        "scenario": "low_friction",
+        "task": "Week03-Ant-Test-LowFriction-v0",
+        "training_seed": 42
+      },
+      {
+        "baseline_length_mean": 916.82,
+        "baseline_return_mean": 133.01326451689005,
+        "baseline_return_std": 30.863249205148485,
+        "episodes_per_model": 100,
+        "evaluation_seed": 24,
+        "relative_gain_percent": 16.863780812500018,
+        "robust_length_mean": 933.64,
+        "robust_return_mean": 155.44432989656926,
+        "robust_return_std": 27.81345265374223,
+        "scenario": "heavy",
+        "task": "Week03-Ant-Test-Heavy-v0",
+        "training_seed": 42
+      },
+      {
+        "baseline_length_mean": 942.35,
+        "baseline_return_mean": 143.2846215519309,
+        "baseline_return_std": 21.161608962426286,
+        "episodes_per_model": 100,
+        "evaluation_seed": 24,
+        "relative_gain_percent": 5.164451656206404,
+        "robust_length_mean": 919.23,
+        "robust_return_mean": 150.68448656275868,
+        "robust_return_std": 34.99016004480845,
+        "scenario": "push",
+        "task": "Week03-Ant-Test-Push-v0",
+        "training_seed": 42
+      }
+    ],
+    "std_semantics": "Episode return population standard deviation, not confidence interval."
+  },
+  "evaluated_at": "2026-09-30T07:32:30.237173+00:00",
+  "models": {
+    "provided_baseline_seed42": {
+      "checkpoint": "artifacts/runs/baseline_seed42/model_999.pt",
+      "sha256": "f4a88747c8d56905c4889b0fb0708d4e924a81dc676d92561d2921e8b2bdf83b"
+    },
+    "robust_seed42": {
+      "checkpoint": "artifacts/runs/robust_seed42/model_999.pt",
+      "sha256": "58dc882b6fa38f95ea2bd2d4d5f874836e5e043e0b5ae5c62290180122b57864"
+    },
+    "rough_v5_rehearsal4": {
+      "checkpoint": "artifacts/terrain_demo/runs/rough_v5_portal_rehearsal4_seed43/model_round_4.pt",
+      "sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e"
+    }
+  },
+  "provided_source_files": {
+    "source/isaaclab_tasks/isaaclab_tasks/manager_based/classic/ant/__init__.py": {
+      "matches_source_git_head": true,
+      "sha256": "c7c87196ba2ccda19387ad4c57a9570ce637619c47a0726dde4459eb307eda4c"
+    },
+    "source/isaaclab_tasks/isaaclab_tasks/manager_based/classic/ant/agents/rsl_rl_ppo_cfg.py": {
+      "matches_source_git_head": true,
+      "sha256": "9d3ae28bc6bdf8078d36829c7a68113feab40ed36c0418ce8a42b045a8c1a109"
+    },
+    "source/isaaclab_tasks/isaaclab_tasks/manager_based/classic/ant/ant_env_cfg.py": {
+      "matches_source_git_head": true,
+      "sha256": "fd17a386c8482f0d22fa2f0b5959514e0ba6aff5dcefd59a46c87ce749e59c44"
+    }
+  },
+  "raw_evaluation_files": [
+    "artifacts/provided_baseline_comparison_20260930/evaluations/provided_baseline_seed42__heavy.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/provided_baseline_seed42__id.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/provided_baseline_seed42__low_friction.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/provided_baseline_seed42__push.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/provided_baseline_seed42__terrain_geom51_seed28.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/provided_baseline_seed42__terrain_geom51_seed29.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/provided_baseline_seed42__terrain_geom54_seed30.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/provided_baseline_seed42__terrain_geom55_seed30.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/robust_seed42__heavy.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/robust_seed42__id.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/robust_seed42__low_friction.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/robust_seed42__push.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/rough_v5_rehearsal4__terrain_geom51_seed28.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/rough_v5_rehearsal4__terrain_geom51_seed29.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/rough_v5_rehearsal4__terrain_geom54_seed30.json",
+    "artifacts/provided_baseline_comparison_20260930/evaluations/rough_v5_rehearsal4__terrain_geom55_seed30.json"
+  ],
+  "runtime_diagnostics": {
+    "all_18_simulation_processes_exit_zero": true,
+    "evaluation_processes": 16,
+    "raw_console_published": false,
+    "single_environment_stones_video_log_message": "Both one-env terrain demo logs emit isaacsim.core.cloner: Failed to clone in Fabric. Source env0 then runs and each full480-frame video completes; no simulator source changes, root cause not isolated. This is not a claim of error-free runtime logs.",
+    "video_only_processes": 2
+  },
+  "schema": "week03-provided-code-comparison-v1",
+  "source_isaaclab_commit": "f50046758743fb7bc913032d1caafc0d7e536164",
+  "terrain_transfer": {
+    "caveat": "Same unchanged v5 evaluation for both policies; v5 changes lane height/target/heading observation semantics, reward and termination versus stock Isaac-Ant-v0, and the v5 policy has additional training. This is transfer performance, not original assignment reward or equal-budget causal evidence.",
+    "models": {
+      "provided_baseline_seed42": {
+        "families": {
+          "flat": {
+            "episodes": 100,
+            "falls": 8,
+            "lane_exits": 0,
+            "return_mean": 129.89539693359285,
+            "return_std": 39.080728725267136,
+            "speed_mean_mps": 8.508335428796578,
+            "strict_one_tile": null,
+            "strict_six_tiles": null,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "episodes": 100,
+            "falls": 48,
+            "lane_exits": 6,
+            "return_mean": 13.513150575514883,
+            "return_std": 9.323044108843515,
+            "speed_mean_mps": 1.4051712391195779,
+            "strict_one_tile": 21,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "rough": {
+            "episodes": 100,
+            "falls": 32,
+            "lane_exits": 15,
+            "return_mean": 21.16289097443223,
+            "return_std": 13.183224048895445,
+            "speed_mean_mps": 1.7115789462990927,
+            "strict_one_tile": 38,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "slope": {
+            "episodes": 100,
+            "falls": 61,
+            "lane_exits": 17,
+            "return_mean": 17.83426555611193,
+            "return_std": 14.63079387613263,
+            "speed_mean_mps": 2.0428482349249624,
+            "strict_one_tile": 25,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "stairs": {
+            "episodes": 100,
+            "falls": 36,
+            "lane_exits": 6,
+            "return_mean": 14.679299866557121,
+            "return_std": 9.880836212422766,
+            "speed_mean_mps": 1.1101736922131338,
+            "strict_one_tile": 21,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "episodes": 100,
+            "falls": 20,
+            "lane_exits": 0,
+            "return_mean": 10.823861809633673,
+            "return_std": 4.2230222193817495,
+            "speed_mean_mps": 0.6092087183948525,
+            "strict_one_tile": 1,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "waves": {
+            "episodes": 100,
+            "falls": 84,
+            "lane_exits": 7,
+            "return_mean": 12.204705964028836,
+            "return_std": 10.15771902507668,
+            "speed_mean_mps": 1.9435099374219675,
+            "strict_one_tile": 8,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          }
+        },
+        "flat": {
+          "episodes": 100,
+          "falls": 8,
+          "lane_exits": 0,
+          "return_mean": 129.89539693359285,
+          "return_std": 39.080728725267136,
+          "speed_mean_mps": 8.508335428796578,
+          "strict_one_tile": null,
+          "strict_six_tiles": null,
+          "world_exits": 0
+        },
+        "stone_difficulties": {
+          "0.2": {
+            "episodes": 20,
+            "falls": 6,
+            "lane_exits": 0,
+            "return_mean": 11.418353587388992,
+            "return_std": 4.490827118209642,
+            "speed_mean_mps": 0.8643695661386311,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "0.4": {
+            "episodes": 20,
+            "falls": 6,
+            "lane_exits": 0,
+            "return_mean": 11.18019073009491,
+            "return_std": 4.056817686870101,
+            "speed_mean_mps": 0.7282735004049704,
+            "strict_one_tile": 1,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "0.6": {
+            "episodes": 20,
+            "falls": 2,
+            "lane_exits": 0,
+            "return_mean": 10.523084127902985,
+            "return_std": 3.2185685844373095,
+            "speed_mean_mps": 0.4045866747080169,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "0.8": {
+            "episodes": 20,
+            "falls": 5,
+            "lane_exits": 0,
+            "return_mean": 9.200540838949383,
+            "return_std": 5.509674288557709,
+            "speed_mean_mps": 0.6543467470673231,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "1.0": {
+            "episodes": 20,
+            "falls": 1,
+            "lane_exits": 0,
+            "return_mean": 11.797139763832092,
+            "return_std": 2.7704317246405505,
+            "speed_mean_mps": 0.3944671036553209,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          }
+        },
+        "terrain": {
+          "episodes": 600,
+          "falls": 281,
+          "lane_exits": 51,
+          "return_mean": 15.036362457713112,
+          "return_std": 11.306299834559699,
+          "speed_mean_mps": 1.4704151280622644,
+          "strict_one_tile": 114,
+          "strict_six_tiles": 0,
+          "world_exits": 0
+        }
+      },
+      "rough_v5_rehearsal4": {
+        "families": {
+          "flat": {
+            "episodes": 100,
+            "falls": 12,
+            "lane_exits": 0,
+            "return_mean": 128.06567270100118,
+            "return_std": 38.86547953912662,
+            "speed_mean_mps": 9.065705142225555,
+            "strict_one_tile": null,
+            "strict_six_tiles": null,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "episodes": 100,
+            "falls": 14,
+            "lane_exits": 0,
+            "return_mean": 45.86387359781191,
+            "return_std": 18.662706431083734,
+            "speed_mean_mps": 3.1457292216811537,
+            "strict_one_tile": 86,
+            "strict_six_tiles": 51,
+            "world_exits": 0
+          },
+          "rough": {
+            "episodes": 100,
+            "falls": 4,
+            "lane_exits": 1,
+            "return_mean": 55.94339813740924,
+            "return_std": 13.895371019670126,
+            "speed_mean_mps": 3.678992396468208,
+            "strict_one_tile": 95,
+            "strict_six_tiles": 75,
+            "world_exits": 0
+          },
+          "slope": {
+            "episodes": 100,
+            "falls": 7,
+            "lane_exits": 0,
+            "return_mean": 49.493771656304595,
+            "return_std": 16.192906789133698,
+            "speed_mean_mps": 3.1970778641427167,
+            "strict_one_tile": 93,
+            "strict_six_tiles": 51,
+            "world_exits": 0
+          },
+          "stairs": {
+            "episodes": 100,
+            "falls": 6,
+            "lane_exits": 0,
+            "return_mean": 41.88326126798987,
+            "return_std": 15.33546984627357,
+            "speed_mean_mps": 2.7665410040873035,
+            "strict_one_tile": 94,
+            "strict_six_tiles": 35,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "episodes": 100,
+            "falls": 11,
+            "lane_exits": 0,
+            "return_mean": 23.857894015312194,
+            "return_std": 17.08666573433005,
+            "speed_mean_mps": 1.700221955187452,
+            "strict_one_tile": 69,
+            "strict_six_tiles": 3,
+            "world_exits": 0
+          },
+          "waves": {
+            "episodes": 100,
+            "falls": 20,
+            "lane_exits": 1,
+            "return_mean": 48.93960658341646,
+            "return_std": 18.23344419309129,
+            "speed_mean_mps": 3.438178499057614,
+            "strict_one_tile": 79,
+            "strict_six_tiles": 64,
+            "world_exits": 0
+          }
+        },
+        "flat": {
+          "episodes": 100,
+          "falls": 12,
+          "lane_exits": 0,
+          "return_mean": 128.06567270100118,
+          "return_std": 38.86547953912662,
+          "speed_mean_mps": 9.065705142225555,
+          "strict_one_tile": null,
+          "strict_six_tiles": null,
+          "world_exits": 0
+        },
+        "stone_difficulties": {
+          "0.2": {
+            "episodes": 20,
+            "falls": 0,
+            "lane_exits": 0,
+            "return_mean": 45.09089260101318,
+            "return_std": 4.640620432218703,
+            "speed_mean_mps": 2.950651216506958,
+            "strict_one_tile": 20,
+            "strict_six_tiles": 2,
+            "world_exits": 0
+          },
+          "0.4": {
+            "episodes": 20,
+            "falls": 1,
+            "lane_exits": 0,
+            "return_mean": 41.67412104606628,
+            "return_std": 10.276231799100758,
+            "speed_mean_mps": 2.8152443573899464,
+            "strict_one_tile": 19,
+            "strict_six_tiles": 1,
+            "world_exits": 0
+          },
+          "0.6": {
+            "episodes": 20,
+            "falls": 5,
+            "lane_exits": 0,
+            "return_mean": 10.761126008629798,
+            "return_std": 4.52703218188055,
+            "speed_mean_mps": 1.1581834875559642,
+            "strict_one_tile": 11,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "0.8": {
+            "episodes": 20,
+            "falls": 2,
+            "lane_exits": 0,
+            "return_mean": 11.828660091757774,
+            "return_std": 4.986735100551942,
+            "speed_mean_mps": 0.6886518350669316,
+            "strict_one_tile": 8,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          },
+          "1.0": {
+            "episodes": 20,
+            "falls": 3,
+            "lane_exits": 0,
+            "return_mean": 9.934670329093933,
+            "return_std": 2.9884361936194885,
+            "speed_mean_mps": 0.8883788794174595,
+            "strict_one_tile": 11,
+            "strict_six_tiles": 0,
+            "world_exits": 0
+          }
+        },
+        "terrain": {
+          "episodes": 600,
+          "falls": 62,
+          "lane_exits": 2,
+          "return_mean": 44.33030087637405,
+          "return_std": 19.465387633207516,
+          "speed_mean_mps": 2.9877901567707412,
+          "strict_one_tile": 516,
+          "strict_six_tiles": 279,
+          "world_exits": 0
+        }
+      }
+    },
+    "pairs": [
+      {
+        "episodes_per_model": 175,
+        "flat_per_model": 25,
+        "generator_seed": 51,
+        "matched_fields_checked": 15,
+        "reset_seed": 28,
+        "terrain_per_model": 150
+      },
+      {
+        "episodes_per_model": 175,
+        "flat_per_model": 25,
+        "generator_seed": 51,
+        "matched_fields_checked": 15,
+        "reset_seed": 29,
+        "terrain_per_model": 150
+      },
+      {
+        "episodes_per_model": 175,
+        "flat_per_model": 25,
+        "generator_seed": 54,
+        "matched_fields_checked": 15,
+        "reset_seed": 30,
+        "terrain_per_model": 150
+      },
+      {
+        "episodes_per_model": 175,
+        "flat_per_model": 25,
+        "generator_seed": 55,
+        "matched_fields_checked": 15,
+        "reset_seed": 30,
+        "terrain_per_model": 150
+      }
+    ],
+    "success_definition": "First-episode distance >= clearance threshold, no terminal fall/overturn, no footprint-lane exit, no world exit; flat excluded."
+  },
+  "total_completed_first_episodes": 2200
+}

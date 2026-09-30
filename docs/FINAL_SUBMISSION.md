@@ -1,5 +1,10 @@
 # Week 03 최종 제출·실행 안내 — 2026-09-30
 
+> **2026-09-30 비교 갱신:** 아래 선택 표는 원래 실험 당시 결과입니다.
+> 기본 제공 코드 Baseline42와의 **새 짝 평가·비교 영상**은
+> [이번 비교 가이드](PROVIDED_BASELINE_COMPARISON.md)와 [README](../README.md)에 있습니다.
+> 새 단일-seed 재평가와 과거3seed/모델 선택 수치를 섞지 않습니다.
+
 ## 1. 제출 모델과 선택 근거
 
 **원래 Ant 과제에는 `artifacts/runs/robust_seed42/model_999.pt`를 사용합니다.**

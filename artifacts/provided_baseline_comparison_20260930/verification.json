@@ -1,0 +1,68 @@
+{
+  "schema": "week03-provided-baseline-local-publication-verification-v1",
+  "checked_at": "2026-09-30T08:10:45.945567+00:00",
+  "status": "local_preparation_passed_native_upload_and_remote_publication_pending_fresh_approval",
+  "scope": "New provided-code baseline comparison only; no new training or model promotion. Historical artifacts unchanged.",
+  "local_checks": {
+    "checked_at": "2026-09-30T08:10:48.813326+00:00",
+    "status": "local_ready_remote_upload_pending_approval",
+    "base_commit": "f7b2d3606d37afa0b5649cff2cb328eee4c02ea2",
+    "frozen_previous_files_preserved": 416,
+    "other_previous_checksum_files_preserved": 1798,
+    "relative_markdown_links_checked": 442,
+    "targeted_anchors_checked": 8,
+    "document_bash_blocks_checked": 26,
+    "python_ast_files_checked": 264,
+    "json_parse_files_checked": 1114,
+    "public_new_files_scope_checked": 38,
+    "fresh_metrics_match_readme": true,
+    "new_text_credentials_and_machine_paths_heuristic_pass": true,
+    "remote_operations_performed_for_new_request": false,
+    "github_native_video_render_verification": "pending fresh approval/upload"
+  },
+  "completed_first_episodes": 2200,
+  "independent_raw_audit": {
+    "status": "APPROVE",
+    "issues": 0,
+    "course_episodes": 800,
+    "terrain_and_flat_episodes": 1400,
+    "terrain_matched_fields": 15
+  },
+  "independent_document_and_visual_review": {
+    "status": "APPROVE",
+    "issues": 0,
+    "resolved_low_issue": "Moved course plot legend above axes to remove annotation overlap."
+  },
+  "cpu_regression_before_edits": {
+    "passed": 147
+  },
+  "isolated_public_checkout_cpu_subset": {
+    "passed": 147,
+    "package_origin_verified_in_isolated_checkout": true,
+    "files": [
+      "tests/test_evaluation.py",
+      "tests/test_command_math.py",
+      "tests/test_contact_math.py",
+      "tests/test_direction_math.py",
+      "tests/test_posture_math.py",
+      "tests/test_history_gate.py",
+      "tests/test_hybrid_gate.py"
+    ]
+  },
+  "media_full_decode_audit": {
+    "paired_mp4": 2,
+    "individual_source_mp4": 4,
+    "gif_previews": 2,
+    "all_duration_seconds": 16,
+    "paired_files_under_10MB": true
+  },
+  "limitations": [
+    "Not a new independent holdout; selected single-seed course comparison, historical3seed research separate.",
+    "v5 has changed observation semantics/reward/termination and extra training; separate transfer test.",
+    "Actual initial-state/mesh bytes not dumped; matched seeds/config/assignment verified.",
+    "Two1-env stone demos log Fabric clone errors; source env0 runs,480frames each,exit0; root cause not isolated.",
+    "New native upload/render/anonymous retrieval/public-live checks and remote push have not yet run.",
+    "Interactive browser playback not tested; remote verification requires separate fresh approval.",
+    "Full2056 suite depends on local original evidence; portable subset147. Ruff/Mypy/Pyright not installed."
+  ]
+}

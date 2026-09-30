@@ -1,0 +1,149 @@
+{
+  "schema": "week03-provided-code-comparison-media-v1",
+  "paired_low_friction": {
+    "training_seed": 42,
+    "evaluation_seed": 24,
+    "num_envs": 100,
+    "visible_environment": 0,
+    "max_steps": 960,
+    "note": "Video from the same fresh100-env evaluation; includes resets, aggregate metrics use only each first episode."
+  },
+  "paired_stones": {
+    "geometry_seed": 51,
+    "reset_seed": 7,
+    "family": "stepping_stones",
+    "difficulty": 0.8,
+    "num_envs": 1,
+    "seconds": 16,
+    "note": "Different task semantics and extra v5 training: separate transfer demo, not equal-budget assignment comparison. Reset counter is not a fall count."
+  },
+  "videos_and_previews": [
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_low_friction.mp4",
+      "sha256": "5accc920c7872104564cf34eb8933e50e0de2be375ae763bf71c1165d8609237",
+      "bytes": 7837999,
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": 60.0,
+      "duration_seconds": 16.0,
+      "decoded_frames": 960,
+      "full_decode_passed": true
+    },
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/videos/robust_low_friction.mp4",
+      "sha256": "6181788813c412a3a762f06c7a4e28db75de3e4bc984031148e484ccdb5953c0",
+      "bytes": 8075007,
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": 60.0,
+      "duration_seconds": 16.0,
+      "decoded_frames": 960,
+      "full_decode_passed": true
+    },
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_robust_low_friction.mp4",
+      "sha256": "e9ceecd9741f5ef92b25374748944c93d7114d2810537f974eebe31e1cdd02c9",
+      "bytes": 6087927,
+      "codec": "h264",
+      "width": 1280,
+      "height": 452,
+      "fps": 60.0,
+      "duration_seconds": 16.0,
+      "decoded_frames": 960,
+      "full_decode_passed": true,
+      "source_files": [
+        "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_low_friction.mp4",
+        "artifacts/provided_baseline_comparison_20260930/videos/robust_low_friction.mp4"
+      ],
+      "source_sha256": [
+        "5accc920c7872104564cf34eb8933e50e0de2be375ae763bf71c1165d8609237",
+        "6181788813c412a3a762f06c7a4e28db75de3e4bc984031148e484ccdb5953c0"
+      ],
+      "selection": "Predeclared models/conditions; one recording each; all frames retained, including any resets.",
+      "time_scale": 1.0,
+      "operation": "Side-by-side downscale to640x360 each with clear Baseline/model labels, no cut or speed change."
+    },
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/low_friction_preview.gif",
+      "sha256": "e67ccc604ad85d81df485ff618f6d3476e6b9fa7d775208e481c53c4fdcd84b8",
+      "bytes": 6146714,
+      "decoded_frames": 96,
+      "width": 640,
+      "height": 226,
+      "duration_seconds": 16.0,
+      "source_file": "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_robust_low_friction.mp4",
+      "time_scale": 1.0
+    },
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_stones08.mp4",
+      "sha256": "7f92e21a109ee17be19f8a7981a79c5c7c3e86cf7f15ec4abf2ab0a1b303fa8e",
+      "bytes": 2650256,
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "decoded_frames": 480,
+      "full_decode_passed": true
+    },
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/videos/rough_v5_stones08.mp4",
+      "sha256": "8b1d02a9b0a3c49e88591d23db678780e9208a6fff2cde6db021b1d3aa88c1a0",
+      "bytes": 7275687,
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "decoded_frames": 480,
+      "full_decode_passed": true
+    },
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_v5_stones08.mp4",
+      "sha256": "0d0b2dbc3a2ffb6ce4ce2f27e74683ced2fae1153643d259716dc6b408d4e5bc",
+      "bytes": 1415102,
+      "codec": "h264",
+      "width": 1280,
+      "height": 452,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "decoded_frames": 480,
+      "full_decode_passed": true,
+      "source_files": [
+        "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_stones08.mp4",
+        "artifacts/provided_baseline_comparison_20260930/videos/rough_v5_stones08.mp4"
+      ],
+      "source_sha256": [
+        "7f92e21a109ee17be19f8a7981a79c5c7c3e86cf7f15ec4abf2ab0a1b303fa8e",
+        "8b1d02a9b0a3c49e88591d23db678780e9208a6fff2cde6db021b1d3aa88c1a0"
+      ],
+      "selection": "Predeclared models/conditions; one recording each; all frames retained, including any resets.",
+      "time_scale": 1.0,
+      "operation": "Side-by-side downscale to640x360 each with clear Baseline/model labels, no cut or speed change."
+    },
+    {
+      "file": "artifacts/provided_baseline_comparison_20260930/stones08_preview.gif",
+      "sha256": "36709e8f74d18856a6aa4c7aa01908bbadfea827cf7193e1f44f929f06de24de",
+      "bytes": 3997588,
+      "decoded_frames": 96,
+      "width": 640,
+      "height": 226,
+      "duration_seconds": 16.0,
+      "source_file": "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_v5_stones08.mp4",
+      "time_scale": 1.0
+    }
+  ],
+  "encoding": {
+    "codec": "libx264",
+    "preset": "medium",
+    "crf": 23,
+    "pixel_format": "yuv420p",
+    "faststart": true,
+    "frame_rate": "same as source (60 or30)",
+    "time_scale": 1.0,
+    "filter": "[0:v]scale=640:360:flags=lanczos[l];[1:v]scale=640:360:flags=lanczos[r];[l][r]hstack=inputs=2,pad=1280:452:0:72:color=black[b];[b][2:v]overlay=0:0:shortest=1:format=auto[v]",
+    "third_input": "matching PNG under video_layouts/"
+  }
+}
