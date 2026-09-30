@@ -1,5 +1,16 @@
 # 공개 범위와 검증 — 최종 정리 2026-09-30
 
+## README MP4 플레이어 — 추가 반영
+
+사용자 승인 후 기존 저마찰 비교·v5 험지 MP4 두 개를 GitHub 첨부로 업로드하고,
+반환된 URL을 README의 독립 문단에 넣었습니다. 원본 영상은 재인코딩하거나 편집하지
+않았으며, GIF 미리보기는 접힌 보조 항목으로 유지합니다. issue/PR/comment는 만들지 않았습니다.
+[첨부 URL·원본 해시](../artifacts/readme_media/video_attachments_20260930.json)와
+[이번 영상 표시 검증](../artifacts/readme_inline_video_verification_20260930.json)을 참고하세요.
+GitHub의 첨부 업로드는 공개 REST 명세가 확인되지 않은 공식 CLI 구현을 따랐으며,
+서비스의 영구 첨부와 Git 저장소에 보존한 원본 MP4를 구분합니다.
+이전 README/GIF 검증은 당시 기록으로 유지하고 현재 snapshot의 체크섬만 갱신합니다.
+
 ## README 표현 정리 — 2026-09-30 후속 작업
 
 README를 최종 모델·결과표·그래프·영상·실행 명령 중심으로 줄였습니다.

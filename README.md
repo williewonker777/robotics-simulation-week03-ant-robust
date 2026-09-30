@@ -56,16 +56,23 @@ Baseline/Robust는 각각 seed42/43/44, friction-only는 seed42입니다.
 
 ## 주행 영상
 
-**미리보기를 누르면 원본 MP4로 이동합니다.** 두 GIF는 기존 약 16초 영상 전체를
-낮은 해상도·6 fps로 변환한 정성 데모이며, 위 100/300episode 집계를 대신하지 않습니다.
-원본 영상은 변경하지 않았습니다. [변환 기록](artifacts/readme_media/manifest.json)
+**아래 재생 버튼으로 README 안에서 영상을 볼 수 있습니다.**
+기존 약 16초의 원본 MP4를 그대로 첨부했습니다. 영상은 정성 데모이며,
+위 100/300episode 집계를 대신하지 않습니다. [영상 첨부 기록](artifacts/readme_media/video_attachments_20260930.json)
 
 ### 저마찰: Baseline vs Robust
 
 왼쪽 **Baseline seed42**, 오른쪽 **Robust seed42** — 같은 조건의 주행 비교입니다.
 영상 안의 누적보상은 해당 1환경 주행값이며 결과표의 평균과 다릅니다.
 
+https://github.com/user-attachments/assets/a5ec9894-7599-41d1-8e35-d3d4f8a93283
+
+<details>
+<summary>자동재생 GIF 미리보기 · 6 fps</summary>
+
 [![저마찰 환경에서 Baseline과 Robust의 실제 주행 비교](artifacts/readme_media/low_friction_comparison.gif)](artifacts/videos/comparison_low_friction_seed42.mp4)
+
+</details>
 
 [원본 비교 영상 · MP4](artifacts/videos/comparison_low_friction_seed42.mp4)
 
@@ -73,7 +80,14 @@ Baseline/Robust는 각각 seed42/43/44, friction-only는 seed42입니다.
 
 과제 제출 모델이 아닌 **v5 데모 모델**의 난이도 0.8 징검다리 주행입니다.
 
+https://github.com/user-attachments/assets/2b172615-49c5-4dad-8457-022b679414da
+
+<details>
+<summary>자동재생 GIF 미리보기 · 6 fps</summary>
+
 [![v5 복구 모델의 징검다리 주행](artifacts/readme_media/stepping_stones_v5.gif)](artifacts/terrain_demo/rough_v5_rehearsal_stones08_seed7.mp4)
+
+</details>
 
 [복구 모델 원본 · MP4](artifacts/terrain_demo/rough_v5_rehearsal_stones08_seed7.mp4) ·
 [동일 조건의 이전 v5 · MP4](artifacts/terrain_demo/rough_v5_reference_stones08_seed7.mp4) ·

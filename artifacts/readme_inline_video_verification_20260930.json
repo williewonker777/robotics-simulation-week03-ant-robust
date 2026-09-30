@@ -1,0 +1,267 @@
+{
+  "schema": "week03-ant-readme-native-video-verification-v1",
+  "checked_at": "2026-09-30T06:50:16.462966+00:00",
+  "status": "pass_with_explicit_interactive_playback_limit",
+  "base_commit": "c6da733e9a0d3e854a9daa0cf4f1d015a44e8ff2",
+  "scope": "Native README MP4 rendering, anonymous media integrity and preserved scientific evidence; no new training, simulation or model selection.",
+  "readme_lines": 180,
+  "previous_readme_lines": 166,
+  "preserved_frozen_files": {
+    "files": 415,
+    "by_extension": {
+      ".pt": 83,
+      ".mp4": 48,
+      ".md": 20,
+      ".py": 264
+    },
+    "changed": 0
+  },
+  "evaluation_table_checks": [
+    {
+      "variant": "baseline",
+      "scenario": "id",
+      "episodes": 300,
+      "return": "139.38 \u00b1 27.81"
+    },
+    {
+      "variant": "robust",
+      "scenario": "id",
+      "episodes": 300,
+      "return": "144.36 \u00b1 33.31"
+    },
+    {
+      "variant": "submission_robust_seed42",
+      "scenario": "id",
+      "episodes": 100,
+      "return": "156.15 \u00b1 27.93"
+    },
+    {
+      "variant": "baseline",
+      "scenario": "low_friction",
+      "episodes": 300,
+      "return": "129.37 \u00b1 25.95"
+    },
+    {
+      "variant": "robust",
+      "scenario": "low_friction",
+      "episodes": 300,
+      "return": "152.84 \u00b1 30.67"
+    },
+    {
+      "variant": "submission_robust_seed42",
+      "scenario": "low_friction",
+      "episodes": 100,
+      "return": "162.01 \u00b1 30.79"
+    },
+    {
+      "variant": "baseline",
+      "scenario": "heavy",
+      "episodes": 300,
+      "return": "127.90 \u00b1 32.20"
+    },
+    {
+      "variant": "robust",
+      "scenario": "heavy",
+      "episodes": 300,
+      "return": "143.19 \u00b1 31.86"
+    },
+    {
+      "variant": "submission_robust_seed42",
+      "scenario": "heavy",
+      "episodes": 100,
+      "return": "154.30 \u00b1 28.06"
+    },
+    {
+      "variant": "baseline",
+      "scenario": "push",
+      "episodes": 300,
+      "return": "139.53 \u00b1 25.65"
+    },
+    {
+      "variant": "robust",
+      "scenario": "push",
+      "episodes": 300,
+      "return": "143.58 \u00b1 32.97"
+    },
+    {
+      "variant": "submission_robust_seed42",
+      "scenario": "push",
+      "episodes": 100,
+      "return": "153.04 \u00b1 32.02"
+    }
+  ],
+  "scenario_gain_checks": [
+    {
+      "scenario": "id",
+      "percent": 3.5721428266861865
+    },
+    {
+      "scenario": "low_friction",
+      "percent": 18.144918869828143
+    },
+    {
+      "scenario": "heavy",
+      "percent": 11.961863895917336
+    },
+    {
+      "scenario": "push",
+      "percent": 2.8997922496175166
+    }
+  ],
+  "aggregate_ood_gain_percent": 10.791134611749964,
+  "selected_model": "artifacts/runs/robust_seed42/model_999.pt",
+  "highest_observed_equal_weight_id_ood_mean": 156.37661273002624,
+  "paired_terrain_raw_array_checks": [
+    {
+      "model": "reference_traverse1499",
+      "episodes": 600,
+      "one_tile": 472,
+      "six_tiles": 256,
+      "falls": 61,
+      "stone_episodes": 100,
+      "stone_six_tiles": 0
+    },
+    {
+      "model": "selected_portal_rehearsal4",
+      "episodes": 600,
+      "one_tile": 517,
+      "six_tiles": 272,
+      "falls": 61,
+      "stone_episodes": 100,
+      "stone_six_tiles": 1
+    }
+  ],
+  "derived_previews": [
+    {
+      "file": "artifacts/readme_media/low_friction_comparison.gif",
+      "bytes": 5040087,
+      "dimensions": [
+        640,
+        210
+      ],
+      "decoded_frames": 96,
+      "duration_seconds": 16.0,
+      "source_duration_seconds": 15.983333333333333,
+      "source_sha256_matches": true
+    },
+    {
+      "file": "artifacts/readme_media/stepping_stones_v5.gif",
+      "bytes": 7177321,
+      "dimensions": [
+        640,
+        360
+      ],
+      "decoded_frames": 96,
+      "duration_seconds": 16.0,
+      "source_duration_seconds": 16.0,
+      "source_sha256_matches": true
+    }
+  ],
+  "published_relative_markdown_paths_checked": 410,
+  "readme_outgoing_and_inbound_anchors_checked": 7,
+  "readme_final_guide_bash_blocks_checked": 13,
+  "bash_script_syntax_checks": 6,
+  "fresh_portable_unit_tests": {
+    "tests": 147,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 5.474,
+    "isolated_public_checkout": true,
+    "source_package_origin_checked": true,
+    "not_complete_suite": true
+  },
+  "independent_review": {
+    "role": "code-reviewer",
+    "decision": "APPROVE",
+    "issues": 0,
+    "scope": "README and media presentation with supporting evaluation evidence",
+    "initial_low_issues": 1,
+    "resolved_low_issues": 1,
+    "remaining_issues": 0,
+    "correction": "Previous README length now reflects the recorded base commit (166); original 663-line length is separately historical."
+  },
+  "visual_validation": {
+    "gif_preview_frames_inspected_previously": true,
+    "interactive_browser_playback_verified": false,
+    "limitation": "No enabled computer-use browser; GitHub renderer HTML and anonymously retrieved media are checked instead of interactive playback."
+  },
+  "not_run": [
+    "new simulator evaluation",
+    "new training",
+    "interactive browser playback",
+    "full original-local test suite",
+    "Ruff/Mypy/Pyright (not installed)"
+  ],
+  "snapshot_integrity_command": "sha256sum -c artifacts/PUBLICATION_SHA256SUMS",
+  "remote_publication_verified_by_this_record": false,
+  "native_video_validation": {
+    "checked_at": "2026-09-30T06:47:43.618114+00:00",
+    "anonymous_rendered_video_controls": 2,
+    "permanent_url_prepublication_http_status": 404,
+    "videos": [
+      {
+        "source": "artifacts/videos/comparison_low_friction_seed42.mp4",
+        "attachment_url": "https://github.com/user-attachments/assets/a5ec9894-7599-41d1-8e35-d3d4f8a93283",
+        "anonymous_renderer_video_controls": true,
+        "anonymous_video_src_http_status": 200,
+        "downloaded_bytes": 6106555,
+        "sha256": "9ae9f37ef24ae502270331e031c3b7af7f296454e2d7c6f8df9190a5e4078682",
+        "original_bytes_exactly_match": true,
+        "decoded_frames": 959,
+        "duration_seconds": 15.983333333333333,
+        "codec": "h264",
+        "dimensions": [
+          1280,
+          420
+        ]
+      },
+      {
+        "source": "artifacts/terrain_demo/rough_v5_rehearsal_stones08_seed7.mp4",
+        "attachment_url": "https://github.com/user-attachments/assets/2b172615-49c5-4dad-8457-022b679414da",
+        "anonymous_renderer_video_controls": true,
+        "anonymous_video_src_http_status": 200,
+        "downloaded_bytes": 7294927,
+        "sha256": "88ad5b8b64d992a0472da5d3df0d0b047e1f93e4c8b03b24949126b50fddec0d",
+        "original_bytes_exactly_match": true,
+        "decoded_frames": 480,
+        "duration_seconds": 16.0,
+        "codec": "h264",
+        "dimensions": [
+          1280,
+          720
+        ]
+      }
+    ],
+    "method": "Anonymous POST /markdown with repository context, then anonymous GET of each generated video src and complete H.264 decoding. Temporary signed media URLs are not stored in README or this record.",
+    "public_repository_main_page_checked_at_this_prepublication_snapshot": false,
+    "not_a_claim_of_direct_attachment_page_access": true
+  },
+  "historical_reports_not_modified": [
+    "artifacts/publication_verification_20260930.json",
+    "artifacts/readme_verification_20260930.json",
+    "artifacts/readme_media/manifest.json"
+  ],
+  "original_pre_cleanup_readme_lines": 663,
+  "previous_snapshot_preservation": {
+    "checksummed_files": 1799,
+    "unchanged_files": 1797,
+    "changed_existing_paths": [
+      "README.md",
+      "docs/PUBLICATION.md"
+    ],
+    "only_presentation_documents_changed": true
+  },
+  "local_integrity_precheck_recovery": {
+    "path": "artifacts/terrain_demo/adaptive_posture_v13/summary.json",
+    "malformed_numeric_token_backed_up": true,
+    "recovered_from_previous_git_blob_and_publication_checksum": true,
+    "published_evidence_bytes_unchanged": true,
+    "cause_not_determined": true,
+    "raw_backup_kept_ignored": true
+  },
+  "new_publication_text_signature_scan": {
+    "files": 4,
+    "credential_or_temporary_signed_url_hits": 0,
+    "not_a_completeness_guarantee": true
+  }
+}
