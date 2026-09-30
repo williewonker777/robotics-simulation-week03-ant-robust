@@ -1,0 +1,69 @@
+{
+  "schema": "week03-ant-readme-previews-v1",
+  "created_date": "2026-09-30",
+  "new_simulation_or_training": false,
+  "previews": [
+    {
+      "source": "artifacts/videos/comparison_low_friction_seed42.mp4",
+      "source_sha256": "9ae9f37ef24ae502270331e031c3b7af7f296454e2d7c6f8df9190a5e4078682",
+      "preview": "artifacts/readme_media/low_friction_comparison.gif",
+      "preview_sha256": "45165b13ceeeedd1e6bc84cafcb82b21b92bfdd5cedfbef5ea393f97286c8fe0",
+      "preview_bytes": 5040087,
+      "preview_fps": 6,
+      "preview_width": 640,
+      "entire_source_duration_preserved": true,
+      "motion_not_sped_up": true,
+      "source_video_unchanged": true,
+      "conversion_command": [
+        "<existing-course-ffmpeg>",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-nostdin",
+        "-y",
+        "-threads",
+        "2",
+        "-i",
+        "artifacts/videos/comparison_low_friction_seed42.mp4",
+        "-filter_complex",
+        "fps=6,scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=64:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3",
+        "-an",
+        "-loop",
+        "0",
+        "artifacts/readme_media/low_friction_comparison.gif"
+      ],
+      "purpose": "Qualitative, lower-resolution looping preview; not a quantitative success/return estimate."
+    },
+    {
+      "source": "artifacts/terrain_demo/rough_v5_rehearsal_stones08_seed7.mp4",
+      "source_sha256": "88ad5b8b64d992a0472da5d3df0d0b047e1f93e4c8b03b24949126b50fddec0d",
+      "preview": "artifacts/readme_media/stepping_stones_v5.gif",
+      "preview_sha256": "408126dbc0176050e950f227dd4519f2f582b9d0ce459394142cc44f8b3db45b",
+      "preview_bytes": 7177321,
+      "preview_fps": 6,
+      "preview_width": 640,
+      "entire_source_duration_preserved": true,
+      "motion_not_sped_up": true,
+      "source_video_unchanged": true,
+      "conversion_command": [
+        "<existing-course-ffmpeg>",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-nostdin",
+        "-y",
+        "-threads",
+        "2",
+        "-i",
+        "artifacts/terrain_demo/rough_v5_rehearsal_stones08_seed7.mp4",
+        "-filter_complex",
+        "fps=6,scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=64:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3",
+        "-an",
+        "-loop",
+        "0",
+        "artifacts/readme_media/stepping_stones_v5.gif"
+      ],
+      "purpose": "Qualitative, lower-resolution looping preview; not a quantitative success/return estimate."
+    }
+  ]
+}

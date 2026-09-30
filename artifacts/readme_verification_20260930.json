@@ -1,0 +1,203 @@
+{
+  "schema": "week03-ant-readme-verification-v1",
+  "checked_at": "2026-09-30T04:44:03.856297+00:00",
+  "status": "pass_with_explicit_rendering_limit",
+  "base_commit": "8a24245f7c73d3b2aa08a7d02e1706b4c5997b5c",
+  "scope": "README presentation and derived video previews only; no new simulation, training, result or policy selection.",
+  "readme_lines": 166,
+  "previous_readme_lines": 663,
+  "preserved_frozen_files": {
+    "files": 415,
+    "by_extension": {
+      ".pt": 83,
+      ".mp4": 48,
+      ".md": 20,
+      ".py": 264
+    },
+    "changed": 0
+  },
+  "evaluation_table_checks": [
+    {
+      "variant": "baseline",
+      "scenario": "id",
+      "episodes": 300,
+      "return": "139.38 \u00b1 27.81"
+    },
+    {
+      "variant": "robust",
+      "scenario": "id",
+      "episodes": 300,
+      "return": "144.36 \u00b1 33.31"
+    },
+    {
+      "variant": "submission_robust_seed42",
+      "scenario": "id",
+      "episodes": 100,
+      "return": "156.15 \u00b1 27.93"
+    },
+    {
+      "variant": "baseline",
+      "scenario": "low_friction",
+      "episodes": 300,
+      "return": "129.37 \u00b1 25.95"
+    },
+    {
+      "variant": "robust",
+      "scenario": "low_friction",
+      "episodes": 300,
+      "return": "152.84 \u00b1 30.67"
+    },
+    {
+      "variant": "submission_robust_seed42",
+      "scenario": "low_friction",
+      "episodes": 100,
+      "return": "162.01 \u00b1 30.79"
+    },
+    {
+      "variant": "baseline",
+      "scenario": "heavy",
+      "episodes": 300,
+      "return": "127.90 \u00b1 32.20"
+    },
+    {
+      "variant": "robust",
+      "scenario": "heavy",
+      "episodes": 300,
+      "return": "143.19 \u00b1 31.86"
+    },
+    {
+      "variant": "submission_robust_seed42",
+      "scenario": "heavy",
+      "episodes": 100,
+      "return": "154.30 \u00b1 28.06"
+    },
+    {
+      "variant": "baseline",
+      "scenario": "push",
+      "episodes": 300,
+      "return": "139.53 \u00b1 25.65"
+    },
+    {
+      "variant": "robust",
+      "scenario": "push",
+      "episodes": 300,
+      "return": "143.58 \u00b1 32.97"
+    },
+    {
+      "variant": "submission_robust_seed42",
+      "scenario": "push",
+      "episodes": 100,
+      "return": "153.04 \u00b1 32.02"
+    }
+  ],
+  "scenario_gain_checks": [
+    {
+      "scenario": "id",
+      "percent": 3.5721428266861865
+    },
+    {
+      "scenario": "low_friction",
+      "percent": 18.144918869828143
+    },
+    {
+      "scenario": "heavy",
+      "percent": 11.961863895917336
+    },
+    {
+      "scenario": "push",
+      "percent": 2.8997922496175166
+    }
+  ],
+  "aggregate_ood_gain_percent": 10.791134611749964,
+  "selected_model": "artifacts/runs/robust_seed42/model_999.pt",
+  "highest_observed_equal_weight_id_ood_mean": 156.37661273002624,
+  "paired_terrain_raw_array_checks": [
+    {
+      "model": "reference_traverse1499",
+      "episodes": 600,
+      "one_tile": 472,
+      "six_tiles": 256,
+      "falls": 61,
+      "stone_episodes": 100,
+      "stone_six_tiles": 0
+    },
+    {
+      "model": "selected_portal_rehearsal4",
+      "episodes": 600,
+      "one_tile": 517,
+      "six_tiles": 272,
+      "falls": 61,
+      "stone_episodes": 100,
+      "stone_six_tiles": 1
+    }
+  ],
+  "derived_previews": [
+    {
+      "file": "artifacts/readme_media/low_friction_comparison.gif",
+      "bytes": 5040087,
+      "dimensions": [
+        640,
+        210
+      ],
+      "decoded_frames": 96,
+      "duration_seconds": 16.0,
+      "source_duration_seconds": 15.983333333333333,
+      "source_sha256_matches": true
+    },
+    {
+      "file": "artifacts/readme_media/stepping_stones_v5.gif",
+      "bytes": 7177321,
+      "dimensions": [
+        640,
+        360
+      ],
+      "decoded_frames": 96,
+      "duration_seconds": 16.0,
+      "source_duration_seconds": 16.0,
+      "source_sha256_matches": true
+    }
+  ],
+  "published_relative_markdown_paths_checked": 412,
+  "readme_outgoing_and_inbound_anchors_checked": 7,
+  "readme_final_guide_bash_blocks_checked": 13,
+  "bash_script_syntax_checks": 6,
+  "fresh_portable_unit_tests": {
+    "tests": 147,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 1.147,
+    "isolated_public_checkout": true,
+    "source_package_origin_checked": true,
+    "not_complete_suite": true
+  },
+  "independent_review": {
+    "role": "code-reviewer",
+    "decision": "APPROVE",
+    "issues": 0,
+    "scope": "README and media presentation with supporting evaluation evidence"
+  },
+  "visual_validation": {
+    "preview_frames_inspected": true,
+    "local_html_generated": true,
+    "live_browser_render_verified": false,
+    "limitation": "Computer-use browser inventory is empty; GitHub layout was not directly inspected. Relative Markdown images and MP4 links use documented GitHub syntax."
+  },
+  "not_run": [
+    "new simulator evaluation",
+    "new training",
+    "GitHub/browser rendering",
+    "full original-local test suite",
+    "Ruff/Mypy/Pyright (not installed)"
+  ],
+  "snapshot_integrity_command": "sha256sum -c artifacts/PUBLICATION_SHA256SUMS",
+  "remote_publication_verified_by_this_record": false,
+  "original_snapshot_preservation": {
+    "previous_checksummed_files": 1795,
+    "unchanged": 1793,
+    "changed_existing_paths": [
+      "README.md",
+      "docs/PUBLICATION.md"
+    ],
+    "only_presentation_documents_changed": true
+  }
+}

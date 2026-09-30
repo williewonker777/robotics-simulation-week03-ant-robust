@@ -1,5 +1,15 @@
 # 공개 범위와 검증 — 최종 정리 2026-09-30
 
+## README 표현 정리 — 2026-09-30 후속 작업
+
+README를 최종 모델·결과표·그래프·영상·실행 명령 중심으로 줄였습니다.
+기존 두 MP4의 전체 시간축을 유지한 저해상도 GIF 미리보기를 추가했으며,
+원본 영상·모델·실험 소스·계획·평가 데이터는 변경하지 않았습니다.
+[미리보기 변환 기록](../artifacts/readme_media/manifest.json)과
+[README 후속 검증](../artifacts/readme_verification_20260930.json)을 별도로 보존합니다.
+기존 `publication_verification_20260930.json`은 앞선 제출 정리 시점의 검증 기록입니다.
+현재 파일의 무결성은 갱신된 `PUBLICATION_SHA256SUMS`로 확인합니다.
+
 ## 이번 공개 준비 범위: v0–v24 + 과제 제출 안내
 
 - 과제 제출 선택은 **Robust seed42 `model_999.pt`**입니다. 험지 기본 v5와 구분한
