@@ -1,0 +1,47 @@
+{
+  "completed_utc": "2026-09-28T05:42:40.902778+00:00",
+  "reviewer": "independent native code-reviewer",
+  "verdict": "APPROVE",
+  "remaining_issues": 0,
+  "raw_files": 32,
+  "first_episodes": 2960,
+  "successful_gpu_commands": 49,
+  "scored_commands": 32,
+  "scored_retries": 0,
+  "recomputed_standalone_audit_matches_saved_except_timestamp": true,
+  "pooled_passes": {
+    "evaluations": [
+      "ramped_vs_no_cost",
+      "history_ramped_vs_history_immediate"
+    ],
+    "horizon": [
+      "history_ramped_vs_history_immediate"
+    ]
+  },
+  "no_matching_parent_pooled_pass": true,
+  "all_primary_secondary_per_map_family_level_paired_values_match": true,
+  "history_flat_and_initial_pairing": true,
+  "source_model_cache_ledger_training_links_verified": true,
+  "legacy_sources": 197,
+  "legacy_models": 18,
+  "new_frozen_definitions": 14,
+  "summary_sha256": "b5d98e1cb4cda3342c8e73818718e234ecbd0c347b82ec7c2d93ae6edfbf1d67",
+  "independent_raw_audit_sha256": "b65572df322f424cde9c3b6b9aae964e2da8d849843cd0cff945fd68bd9e711c",
+  "freeze_sha256": "c39b93b1e40b2fd482987efed01f4075efc96f3c51e0a6098a3d2db7af8fe49d",
+  "document_sha256": {
+    "README.md": "9ad14e4073672ff7a3cc9f9dd75d13214c100de8b13f2e19a2aedfca9a2943ff",
+    "docs/CONTACT_CONTINUATION_V21.md": "8a3def6acfbd0afbd27e9b4cd33c50627cbf611c82989224e6a7515104cd5e1e",
+    "docs/EXPERIMENT_HISTORY.md": "346c8224b3fd8192cd76c34249500f98e0b23f78d6782536e6792a270ac06140",
+    "docs/PUBLICATION.md": "9c03d18540a64f7ef735cadd2e8317b1fed992afe3cf2d390616478bfa9871cc",
+    "docs/experiment_plans/manifest.json": "2234576c2abaa66c401d4efbaeffedad1bb33ed445ec038d57338b7ce56a9f78"
+  },
+  "cpu_evidence_verified": {
+    "tests": 1303,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "console_seconds": 29.35,
+    "xml_seconds": 29.103
+  },
+  "scope": "Read-only review of completed actual evidence and4updated documents; reviewer independently verified tensors/scalars earlier and reran reviewed stdlib arithmetic against full scored matrix. Historical single-seed/two-map experiment; no causal/generalization/promotion claim."
+}

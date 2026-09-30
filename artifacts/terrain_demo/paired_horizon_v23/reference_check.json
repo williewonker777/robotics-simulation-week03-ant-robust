@@ -1,0 +1,56 @@
+{
+  "created_utc": "2026-09-28T10:53:39.393500+00:00",
+  "reported_by": "native researcher /root/seed_replication_refs",
+  "recorded_by": "leader from completed primary-source specialist checks",
+  "verification_date": "2026-09-28",
+  "sources": [
+    {
+      "title": "Time Limits in Reinforcement Learning",
+      "authors": "Pardo et al.",
+      "venue": "ICML2018",
+      "url": "https://proceedings.mlr.press/v80/pardo18a/pardo18a.pdf",
+      "sections": [
+        "1",
+        "2",
+        "2.4",
+        "3"
+      ],
+      "evidence": "Distinguishes task deadlines from externally imposed cutoffs; a remaining-time feature matters when deadline is part of the task. Hopper photo-finish example illustrates short-horizon performance need not persist.",
+      "limits": "Learning objective/bootstrapping paper, not validation of this paired evaluation or a v22 timeout bug. Does not justify changing frozen observations/policies."
+    },
+    {
+      "title": "Deep Reinforcement Learning at the Edge of the Statistical Precipice",
+      "authors": "Agarwal et al.",
+      "venue": "NeurIPS2021",
+      "url": "https://papers.nips.cc/paper/2021/file/f514cec81cb148559cf475e7426eed5e-Paper.pdf",
+      "sections": [
+        "2",
+        "3"
+      ],
+      "evidence": "Distinguishes independent training runs from tasks/evaluation episodes and motivates uncertainty-aware few-run interpretation.",
+      "limits": "No sufficient-three-seed guarantee; repeated windows and history variants are not training replicates."
+    }
+  ],
+  "design_inferences": [
+    "Simulated16/64s, not host wall time, observed from one physical64s trajectory.",
+    "Cutoffs are not falls; surviving until cutoff is not indefinite safety.",
+    "Keep identical initial population and all first-episode rows, no reset episode substitution.",
+    "2800firstepisodes with5600 dependent window observations, not5600independent episodes.",
+    "Fixed53.1m final-distance and safety criterion at bothwindows; no newtraining or seed selection."
+  ],
+  "deferred_alternatives": [
+    {
+      "intervention": "fixed global PPO learning rate1e-4 to1e-5",
+      "urls": [
+        "https://arxiv.org/pdf/1707.06347",
+        "https://arxiv.org/pdf/2006.05990"
+      ],
+      "decision": "Plausible update-sensitivity diagnostic, but deferred to resolve duration/population confound first. Factor10 is engineering choice, not literature guarantee or diagnosed failure cause."
+    },
+    {
+      "intervention": "preserve learned initial exploration std",
+      "decision": "Separate intervention, not part of v23; retaining initial value and freezing subsequent std learning are different."
+    }
+  ],
+  "verification_limits": "Original PDFs and relevant sections checked by researcher; PDF bytes not locally cryptographically pinned. This record is literature provenance, not local experiment outcome validation."
+}

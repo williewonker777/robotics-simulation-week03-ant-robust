@@ -1,0 +1,177 @@
+{
+  "completed_utc": "2026-09-28T08:31:58.369231+00:00",
+  "status": "complete",
+  "experiment": "v22 no-cost continuation RNG sensitivity, fixed parent and terrain, seeds51/52/53",
+  "outcome": "All12 primary pooled gates fail; all6 matching-parent comparisons fail on both maps. Secondary6pooled gates pass,5on both maps; retain existing default and do not select/promote a seed.",
+  "pooled_passes": {
+    "evaluations": [],
+    "horizon": [
+      "seed52_vs_parent",
+      "seed53_vs_parent",
+      "history_seed53_vs_history_parent",
+      "seed52_vs_seed51",
+      "history_seed53_vs_history_seed51",
+      "history_seed53_vs_history_seed52"
+    ]
+  },
+  "per_map_passes": {
+    "evaluations": {
+      "geometry115_reset75": [
+        "history_seed53_vs_history_seed51",
+        "history_seed53_vs_history_seed52"
+      ],
+      "geometry116_reset76": []
+    },
+    "horizon": {
+      "geometry115_reset75": [
+        "seed51_vs_parent",
+        "seed52_vs_parent",
+        "seed53_vs_parent",
+        "history_seed51_vs_history_parent",
+        "history_seed53_vs_history_parent",
+        "seed52_vs_seed51",
+        "history_seed53_vs_history_seed51",
+        "history_seed53_vs_history_seed52"
+      ],
+      "geometry116_reset76": [
+        "seed52_vs_parent",
+        "history_seed53_vs_history_parent",
+        "seed52_vs_seed51",
+        "history_seed53_vs_history_seed51",
+        "history_seed53_vs_history_seed52"
+      ]
+    }
+  },
+  "both_map_passes": {
+    "evaluations": [],
+    "horizon": [
+      "history_seed53_vs_history_parent",
+      "history_seed53_vs_history_seed51",
+      "history_seed53_vs_history_seed52",
+      "seed52_vs_parent",
+      "seed52_vs_seed51"
+    ]
+  },
+  "new_main_training_transitions": 98304000,
+  "new_development_training_transitions": 835584,
+  "new_total_environment_training_transitions": 99139584,
+  "reused_main_training_transitions": 0,
+  "training_seeds": [
+    51,
+    52,
+    53
+  ],
+  "independent_fourth_seed51_replicate": false,
+  "full_seed51_recorded_replay_passed": true,
+  "development_evaluation_episodes": 280,
+  "holdout_first_episodes": 2960,
+  "holdout_raw_files": 32,
+  "gpu_commands": 53,
+  "gpu_failures": 0,
+  "scored_retries": 0,
+  "cpu_tests": {
+    "created_utc": "2026-09-28T08:28:53.473391+00:00",
+    "tests": 1501,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 30.042,
+    "log": "outputs/seed_continuation_v22_20260928/final_pytest.log",
+    "log_sha256": "5c0bceac5e20fdb256d3e901fd88248993b2fe2c0faba6b9af29bbe66f8188b4",
+    "xml": "outputs/seed_continuation_v22_20260928/final_pytest.xml",
+    "xml_sha256": "2f15a036ee16c3aecd18b74338a854d576ff307775330e1276605d6ba7dce109",
+    "experiment_source_sha256": {
+      "src/week03_ant/seed_study_v22.py": "187f11598f4c75c2f33d93adf798b411137e35e5873da16dbfd619824ab874b4",
+      "src/week03_ant/tasks/seed_continuation_v22.py": "0a99d800b1086a68a1e5a4bccdac4b3dc45f8e5f2da9302a3bad307127204ca0",
+      "src/week03_ant/tasks/seed_continuation_v22_cfg.py": "39011389d0056aa0052a21f397a80d6c4c835ceaccad22c8375fa394c2382e32",
+      "scripts/seed_continuation_v22.py": "cad2dbc8c25298d66b4262fddc6e8bb21c4c2cd6cfd4c880c5690d2c41159cbc",
+      "scripts/run_seed_training_v22.py": "295899c192c1d6f81937de10e3d5dce34bfe172baa4e6b7773c879b259538eef",
+      "tests/test_seed_training_v22.py": "bea381924d23a2fc899338147c386e7c3c8d263c06ab9e60db8641004e684345",
+      "tests/test_seed_harness_v22.py": "ef7a6ec459c1370031bfbcc71220c03b7c9573d47b4636f37e7ea01575f9d5a8",
+      "docs/experiment_plans/seed_continuation_v22.md": "b96dad8f2dacacf39e4c410b3b26485046b0dda89de7e48dff5347e50ec9de59",
+      "scripts/evaluate_seed_v22.py": "88fbd24cd86775cd260d0ac81e58c29c7b1c9d82c48cea6d1106083bd416907f",
+      "scripts/run_seed_eval_v22.py": "58608a0777f602b0de34b985a18a0abec36c25f5e649c88cd96d1b316da2f035",
+      "scripts/summarize_seed_v22.py": "3c19fc38170130a27e73fc9d7c6e19be45d5c9387fbfa66a67c6cf940ceff584",
+      "tests/test_seed_eval_v22.py": "d17b7d9536d9b1997e66f448271a5d5c1c1e28f5fd448d83c74f2b99c195d73c"
+    },
+    "static_validation_sha256": "28cc037ab0d740612b2055e5fd3c82058b34d7735621059670c895657e08f6a9",
+    "prior_pre_main_validation_sha256": "690ac346b482881bbd65729700474f262747daf895376af86a79c60033c9ebef",
+    "legacy_sources_verified": 213,
+    "legacy_models_verified": 19
+  },
+  "experimental_definition_sha256": {
+    "src/week03_ant/seed_study_v22.py": "187f11598f4c75c2f33d93adf798b411137e35e5873da16dbfd619824ab874b4",
+    "src/week03_ant/tasks/seed_continuation_v22.py": "0a99d800b1086a68a1e5a4bccdac4b3dc45f8e5f2da9302a3bad307127204ca0",
+    "src/week03_ant/tasks/seed_continuation_v22_cfg.py": "39011389d0056aa0052a21f397a80d6c4c835ceaccad22c8375fa394c2382e32",
+    "scripts/seed_continuation_v22.py": "cad2dbc8c25298d66b4262fddc6e8bb21c4c2cd6cfd4c880c5690d2c41159cbc",
+    "scripts/run_seed_training_v22.py": "295899c192c1d6f81937de10e3d5dce34bfe172baa4e6b7773c879b259538eef",
+    "tests/test_seed_training_v22.py": "bea381924d23a2fc899338147c386e7c3c8d263c06ab9e60db8641004e684345",
+    "tests/test_seed_harness_v22.py": "ef7a6ec459c1370031bfbcc71220c03b7c9573d47b4636f37e7ea01575f9d5a8",
+    "docs/experiment_plans/seed_continuation_v22.md": "b96dad8f2dacacf39e4c410b3b26485046b0dda89de7e48dff5347e50ec9de59",
+    "scripts/evaluate_seed_v22.py": "88fbd24cd86775cd260d0ac81e58c29c7b1c9d82c48cea6d1106083bd416907f",
+    "scripts/run_seed_eval_v22.py": "58608a0777f602b0de34b985a18a0abec36c25f5e649c88cd96d1b316da2f035",
+    "scripts/summarize_seed_v22.py": "3c19fc38170130a27e73fc9d7c6e19be45d5c9387fbfa66a67c6cf940ceff584",
+    "tests/test_seed_eval_v22.py": "d17b7d9536d9b1997e66f448271a5d5c1c1e28f5fd448d83c74f2b99c195d73c"
+  },
+  "post_experiment_verifier_sha256": {
+    "scripts/audit_seed_v22_raw.py": "9d24e151a100fd49faa917d2762145149c313eef1b14b90b53bb751487c4b3ef",
+    "tests/test_seed_raw_audit_v22.py": "56cecbfd1263f2b78d5e8bd9480b6c236b6234e6c2deb1be024f9e89ba4bf38c"
+  },
+  "legacy_sources_verified": 213,
+  "legacy_models_verified": 19,
+  "evidence_sha256": {
+    "artifacts/terrain_demo/seed_continuation_v22/capacity.json": "44f93d347b7384713d9e0d6e1df8d1f0f487f1ba28f7ac54f66c328326d16cf7",
+    "artifacts/terrain_demo/seed_continuation_v22/cpu_validation.json": "690ac346b482881bbd65729700474f262747daf895376af86a79c60033c9ebef",
+    "artifacts/terrain_demo/seed_continuation_v22/development.json": "8a18ad2f608dce82805d5421133d5fa0ed927f9d97457fcca0e6cf752460f22f",
+    "artifacts/terrain_demo/seed_continuation_v22/document_validation.json": "abe558aea5bffefc25c2264b8ee1808f1bb98f5869d70c9fba5c4c12c87bee58",
+    "artifacts/terrain_demo/seed_continuation_v22/evaluation_inputs.json": "cac101c0b8004c50576aedbafb20ddb10283fd6ac5985669e5bdfafbb80be4a7",
+    "artifacts/terrain_demo/seed_continuation_v22/final_cpu_validation.json": "5e5ef5e9b8d84af851fd5bf7895c576732c6cb1dec0abc8998cf066437b82ab0",
+    "artifacts/terrain_demo/seed_continuation_v22/frozen.json": "2c86bdcc401432a78d7752b72fd9b756c0e73c01bced14df96c869c697784d61",
+    "artifacts/terrain_demo/seed_continuation_v22/full_replay.json": "cfffec5668b8215243e9dae408cbfe47623524c4874f3fdebb8e284b25f09df8",
+    "artifacts/terrain_demo/seed_continuation_v22/historical_references.json": "5b1780d62bda81004a8704f30124034a50a6f8567e32af06fd34a743e08694ed",
+    "artifacts/terrain_demo/seed_continuation_v22/implementation_review.json": "318049c5e8b0ae03b9f5121d035f716703a2e9a1b302f4f5089175d47dc3352c",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_final_review.json": "434fe2a2e850b22f2ef6cf3837810ab682987e374fa14eedb42c4c7395eb0c3d",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_full_replay_audit.json": "24f48d8acd645f4ebebce0a29338975b62693b37b22dff69682b5bd8090bbc88",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_raw_audit.json": "914f023369b54c9d8a46c2fa4a69263374a79c0dc2aa2263fd18718276f68a3c",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_replay_audit.json": "cf63630b1495b08f70b5a0fa7b3f63ca3e976962c543f22b4862e065426479cc",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_tensor_audit.json": "d0647f850b17a64993d7473c7e070d7d9ce257cee82a44f4da497e101807b415",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_verifier_review.json": "c7dec19cb7aa8e41d0e40054d66a590f096053c70613804b9276c2e6819d4b4d",
+    "artifacts/terrain_demo/seed_continuation_v22/initial_shared.json": "b17b22d3107d5faba92b93d39c66904252bd398bfd66b38a3450841e8f8d68f4",
+    "artifacts/terrain_demo/seed_continuation_v22/preflight.json": "4b5fd3c80e794fede123d1f7b867b1340dab0fbced76f02af8478961b2e328d5",
+    "artifacts/terrain_demo/seed_continuation_v22/preholdout_ledger.json": "acf8bd2fb606b8a9bcd97425b8acd41d1b2a539a9f0eec56bac3d7d8c48a4d79",
+    "artifacts/terrain_demo/seed_continuation_v22/reference_check.json": "77f4e08dec55a41aed8cede3bdb19b50fc04e3c2fa0b87e7a9d4a6e9eb7d8585",
+    "artifacts/terrain_demo/seed_continuation_v22/static_validation.json": "28cc037ab0d740612b2055e5fd3c82058b34d7735621059670c895657e08f6a9",
+    "artifacts/terrain_demo/seed_continuation_v22/summary.json": "9a077b6ca36635973a5b062375b2d2a9a8f01c753120af9754899e8e198ec588",
+    "artifacts/terrain_demo/seed_continuation_v22/terrain_cache.json": "b20d8bd9d3f6009f8f274077f8797360d02492c9b31dc1a1d8fe23fe58cdd30f",
+    "artifacts/terrain_demo/seed_continuation_v22/trained_models.json": "30edde72837a9ab60ce6233fbff9d74b473c81fa0ac68a4c2f0dcad5cd8c6540",
+    "artifacts/terrain_demo/seed_continuation_v22/training_cache.json": "c6d8748a875355fcc52e471632a96d3de7979059752d77f55f1e76ffc7bd9de9",
+    "artifacts/terrain_demo/seed_continuation_v22/training_frozen.json": "026e30f7e25f93b67914cf1ba801093e24c62c71d04253747c31db26639a485b",
+    "artifacts/terrain_demo/seed_continuation_v22/training_validation.json": "fe5ffe66053fd5d03772615f8b5db6040dd2ebae50da91ae6bee32c3a1b6ce19",
+    "artifacts/terrain_demo/seed_continuation_v22/summary.md": "ddd3688423b1929af7fa57bd03d50b8a0bf8a669567cb9f202a2bb54e858c541",
+    "artifacts/terrain_demo/seed_continuation_v22/commands.jsonl": "c5195fdfdf6742bd842d2e47c3a265b4159922414030132a4e9651fea35e3b96"
+  },
+  "document_sha256": {
+    "README.md": "03e0fa2bd5f867fc732a94f04a214b2be4854a2870af49828aaa0e1fea28e08b",
+    "docs/SEED_CONTINUATION_V22.md": "1d7e4a983ce015b80a7d17118d05e03d8f72d44100209b412c0a95e2b5e17fbe",
+    "docs/EXPERIMENT_HISTORY.md": "6e6f5a21df0bf8d7e26f9c214f91e541d4a75ff0d7fc7f97232d29aac3b2b9ca",
+    "docs/PUBLICATION.md": "f2ee3bae2b4cae63ab0b0971cd4b4ddb8188eeae8dc88f56352a12d8c213a416",
+    "docs/experiment_plans/seed_continuation_v22.md": "b96dad8f2dacacf39e4c410b3b26485046b0dda89de7e48dff5347e50ec9de59",
+    "docs/experiment_plans/manifest.json": "99dd9ea5c00784ca24e5d1975ba145c5577ab818669322c4ea2b52d4380ce8e2"
+  },
+  "local_document_links_checked": 208,
+  "plan_copies_exact": 18,
+  "workflow_doctor": "PASS",
+  "default_changed": false,
+  "new_dependencies": false,
+  "commits": false,
+  "remote_git_github_operations": false,
+  "gpu_experiment_jobs_finished": true,
+  "stop_condition": "One fixed three-seed study and32-file matrix complete; independent verification and reporting finished. No tuning, seed/checkpoint selection or outcome-driven retries.",
+  "remaining_risks": [
+    "Three continuation seeds share one parent, initialization and training terrain; not initialization/distribution robustness.",
+    "Two holdout maps and20secondary episodes percontroller; no statistical significance or general superiority claim.",
+    "Exactseed51 proves endpoint and recorded sequences, not every unrecorded simulator state or platform-general determinism; old/new51 are one realization.",
+    "No physicalrobot safety or causal mechanism guarantee.",
+    "Older separate demo/publication work remains under activeTASK298."
+  ]
+}

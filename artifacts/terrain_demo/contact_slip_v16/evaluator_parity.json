@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-09-23T02:16:55.290608+00:00",
+  "reference_path": "outputs/directional_stability_v15_20260923/final_smoke_control.json",
+  "reference_sha256": "3da909e8e08e0d0a97a79c0ea3e3053a6a75eb51445eef111476ac2d99b1f749",
+  "new_path": "outputs/contact_slip_v16_20260923/legacy_parity_v15_control.json",
+  "new_sha256": "81cf2cdeacf2b516f0228f72fb204289a8c54288c9a9e635f020f5f468305cf1",
+  "equal_fields": [
+    "forward_distance",
+    "episode_lengths",
+    "episode_terminated",
+    "episode_out_of_lane",
+    "episode_world_exit",
+    "episode_strict_one_tile_success",
+    "episode_strict_all_tiles_success",
+    "episode_full_horizon_survival",
+    "episode_alpha_sum",
+    "episode_v10_target_steps",
+    "episode_switch_steps",
+    "episode_switch_to_v10",
+    "history_switch_events",
+    "episode_return",
+    "initial_state_sha256",
+    "initial_prefix_sha256",
+    "initial_rng_sha256",
+    "posture_telemetry"
+  ],
+  "exact_reference_parity": true,
+  "development_only": true,
+  "sensor_probe_path": "outputs/contact_slip_v16_20260923/probe_stage_v3.json",
+  "sensor_probe_sha256": "86ccc722040d43b0b0f5c11a7592d228a78ab1b471324084806c3dc4556d8926",
+  "two_live_collision_prims": [
+    "/World/ground/terrain/mesh",
+    "/World/flatPlane/GroundPlane/CollisionPlane"
+  ],
+  "all_family_contact_seen_in_8step_zero_action_pilot": true,
+  "notes": "Sensor-enabled eval exactly reproduces frozen v15-control initial state, RNG, physical outcomes, routing and posture telemetry on geometry51/reset24; contact telemetry is added only."
+}

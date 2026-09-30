@@ -1,0 +1,89 @@
+{
+  "created_utc": "2026-09-28T07:08:04.355582+00:00",
+  "stages": {
+    "preflight": {
+      "initial": {
+        "path": "outputs/contact_continuation_v21_20260928/preflight_attempt01_no_cost_initial.json",
+        "sha256": "93e4978287c944665874055296c072f60448b057efdc48ec81647eba31623c06"
+      },
+      "schedule": {
+        "path": "outputs/contact_continuation_v21_20260928/preflight_attempt01_no_cost_schedule.json",
+        "sha256": "cd317b07a7863c273ecbe6db6ac1ad16e7f1775b08c650a6fff7e5d6a4bc4857"
+      },
+      "rollout": {
+        "path": "outputs/contact_continuation_v21_20260928/preflight_attempt01_no_cost_initial_contact_rollout.json",
+        "sha256": "0be749922d35edd7d3773e5995b9b49ca5f74f50410a6c31625c6296ce3c7012"
+      },
+      "checkpoint": {
+        "path": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-46-43_v21_preflight_no_cost/model_1.pt",
+        "sha256": "d20044076118276a9a0f13674d0f8c39449acda990a7f1d14301bb3fa0b7b542"
+      }
+    },
+    "capacity": {
+      "initial": {
+        "path": "outputs/contact_continuation_v21_20260928/capacity_attempt01_no_cost_initial.json",
+        "sha256": "fba27978fb78ceb1e6693a34d572cff79749c146275c2c870451f389a37f7254"
+      },
+      "schedule": {
+        "path": "outputs/contact_continuation_v21_20260928/capacity_attempt01_no_cost_schedule.json",
+        "sha256": "eeaedc9d3dce6c4fe41f33e7545ed873c3434732ace687cc259253efeaf3a184"
+      },
+      "rollout": {
+        "path": "outputs/contact_continuation_v21_20260928/capacity_attempt01_no_cost_initial_contact_rollout.json",
+        "sha256": "5f3002117cbb218cae87a8becf2ec21974865099f02074fd529360990435e035"
+      },
+      "checkpoint": {
+        "path": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-47-17_v21_capacity_no_cost/model_1.pt",
+        "sha256": "4026d4df8a6584299b27d4bcbb00174ff9fe4dfd4dd73dca0ef4fa16abd0e031"
+      }
+    },
+    "main": {
+      "initial": {
+        "path": "artifacts/terrain_demo/contact_continuation_v21/training/no_cost_initial.json",
+        "sha256": "f1aa7a774b2d6507cb2d0c72324e75b7239af0219f26762c8085e9d8f5a0a9ff"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/contact_continuation_v21/training/no_cost_schedule.json",
+        "sha256": "37c306a97105fb2ebdd703e86c6f502ebb9632a7a2fe9c09ba239690db639140"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/contact_continuation_v21/training/no_cost_initial_contact_rollout.json",
+        "sha256": "f0baa9ed82eb5258d46bd76cf5bda1b8b5efe08c36ef843a60c6a7c2615bea11"
+      },
+      "checkpoint": {
+        "path": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-48-22_v21_paired_no_cost/model_249.pt",
+        "sha256": "298f96135dad68c5d45b081187cad57d932e56d6967c84e24a099f79f2460aee"
+      }
+    }
+  },
+  "sha256": {
+    "logs/rsl_rl/week03_ant_contact_continuation_v21/v21_init/model_0.pt": "10d8485d6d18f1dd6c01724ff69fc6a2ced3bbcd3d7b0db1285b7097cb5c21bd",
+    "artifacts/terrain_demo/contact_continuation_v21/frozen.json": "c39b93b1e40b2fd482987efed01f4075efc96f3c51e0a6098a3d2db7af8fe49d",
+    "artifacts/terrain_demo/contact_continuation_v21/training_frozen.json": "11869d7371940da69d4d9da4397373bd6c8de6dff15860f36f6b032fd24cd7cb",
+    "artifacts/terrain_demo/contact_continuation_v21/training_validation.json": "0a3a387e67b0941a64914c9d55c8f3563787c559e50a932b371081c30c8df578",
+    "artifacts/terrain_demo/contact_continuation_v21/trained_models.json": "e946ecb4b26e3ae707073d8b17ea9ebe9c6701378920196805a2ded6e314ba0e",
+    "artifacts/terrain_demo/contact_continuation_v21/training_cache.json": "bf1a98416d94e320ddd43e212281144b89fe803b23782e6519396f73729da4ac",
+    "artifacts/terrain_demo/contact_continuation_v21/initial_shared.json": "573745d27fbe4ee75a28b6b06c92cbe78a6c7339ff65cf8c8450d25d6b9879f4",
+    "artifacts/terrain_demo/contact_continuation_v21/preflight.json": "f60d09e05ab409adf65ac66df658529a08ba1febcfc555b8e71be678cafeb112",
+    "outputs/contact_continuation_v21_20260928/preflight_attempt01_no_cost_initial.json": "93e4978287c944665874055296c072f60448b057efdc48ec81647eba31623c06",
+    "outputs/contact_continuation_v21_20260928/preflight_attempt01_no_cost_schedule.json": "cd317b07a7863c273ecbe6db6ac1ad16e7f1775b08c650a6fff7e5d6a4bc4857",
+    "outputs/contact_continuation_v21_20260928/preflight_attempt01_no_cost_initial_contact_rollout.json": "0be749922d35edd7d3773e5995b9b49ca5f74f50410a6c31625c6296ce3c7012",
+    "outputs/contact_continuation_v21_20260928/preflight_attempt01_no_cost.log": "b1dae0c47ea08b853b433e19bc296247b2f59d13802eace13ac21f91fac4b93c",
+    "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-46-43_v21_preflight_no_cost/events.out.tfevents.1790570809.wonker-System-Product-Name.537724.0": "e7af8d10831b05a8a1570a8ae76b3bb0b31485d053adbeaaf40ed41d2e0795f7",
+    "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-46-43_v21_preflight_no_cost/model_1.pt": "d20044076118276a9a0f13674d0f8c39449acda990a7f1d14301bb3fa0b7b542",
+    "artifacts/terrain_demo/contact_continuation_v21/capacity.json": "1fc83db8406daccb2529c1b2db164bc6486ab2a30415c6439af49581ca89be66",
+    "outputs/contact_continuation_v21_20260928/capacity_attempt01_no_cost_initial.json": "fba27978fb78ceb1e6693a34d572cff79749c146275c2c870451f389a37f7254",
+    "outputs/contact_continuation_v21_20260928/capacity_attempt01_no_cost_schedule.json": "eeaedc9d3dce6c4fe41f33e7545ed873c3434732ace687cc259253efeaf3a184",
+    "outputs/contact_continuation_v21_20260928/capacity_attempt01_no_cost_initial_contact_rollout.json": "5f3002117cbb218cae87a8becf2ec21974865099f02074fd529360990435e035",
+    "outputs/contact_continuation_v21_20260928/capacity_attempt01_no_cost.log": "b300f43b863cabc58265f26143f7f40d4ea5dd9f5c8c19b2789030b71ed1f8ac",
+    "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-47-17_v21_capacity_no_cost/events.out.tfevents.1790570845.wonker-System-Product-Name.540410.0": "015d05923800daae9a2458440c3e1d625d5941c3fbd8b2168fca2f6b80233171",
+    "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-47-17_v21_capacity_no_cost/model_1.pt": "4026d4df8a6584299b27d4bcbb00174ff9fe4dfd4dd73dca0ef4fa16abd0e031",
+    "artifacts/terrain_demo/contact_continuation_v21/training/no_cost_initial.json": "f1aa7a774b2d6507cb2d0c72324e75b7239af0219f26762c8085e9d8f5a0a9ff",
+    "artifacts/terrain_demo/contact_continuation_v21/training/no_cost_schedule.json": "37c306a97105fb2ebdd703e86c6f502ebb9632a7a2fe9c09ba239690db639140",
+    "artifacts/terrain_demo/contact_continuation_v21/training/no_cost_initial_contact_rollout.json": "f0baa9ed82eb5258d46bd76cf5bda1b8b5efe08c36ef843a60c6a7c2615bea11",
+    "outputs/contact_continuation_v21_20260928/train_no_cost.log": "071abaa792475b5f568ba96715ed817fbb7346254b8ee142f08f31bf98f7db11",
+    "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-48-22_v21_paired_no_cost/events.out.tfevents.1790570909.wonker-System-Product-Name.544191.0": "e5b747b1474c16c82d7e9166e2ab5bff8d3d254cfea96894fb981a3e4589fbd0",
+    "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-48-22_v21_paired_no_cost/model_249.pt": "298f96135dad68c5d45b081187cad57d932e56d6967c84e24a099f79f2460aee"
+  },
+  "disclosure": "Historical model1 hashes are newly pinned now; they were not v21-era frozen checkpoint hashes."
+}

@@ -1,0 +1,26 @@
+{
+  "completed_utc": "2026-09-23T11:25:30.964649+00:00",
+  "models": {
+    "always": {
+      "checkpoint": "artifacts/terrain_demo/terrain_style_v18/runs/always/model_249.pt",
+      "sha256": "f56241ba31ea76953e1226f3ac3335fb1d5aeb2cfc3e0e7527f0c118d6fa4b3d",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_style_v18/2026-09-23_20-01-42_v18_paired_always/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "5be62ee01ee3dffc0ae336428e06de10966f3b6940bfdf99209e0dd23b7d9014",
+      "exposure_sha256": "a070f6802c0bcdb3e54e6e5e1c40272a8deacaf8d966c183a97e2cc8af7e6b77"
+    },
+    "gated": {
+      "checkpoint": "artifacts/terrain_demo/terrain_style_v18/runs/gated/model_249.pt",
+      "sha256": "dbb606d0ce59bead1989cd4670eb9724293ee7f7457c4af609246a442bab5e0b",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_style_v18/2026-09-23_20-13-56_v18_paired_gated/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "9daaa695f9306c1f83334acd641f552ea3b6ca9fafc2241c2404e0918c9c0600",
+      "exposure_sha256": "f4b6f074e8d3425381736710987aa1477edfcb2ba6bf3e3979fc5add3ffb6e97"
+    }
+  },
+  "total_training_transitions": 65536000,
+  "training_freeze_sha256": "8278cfb0f55c69c36a52fad5cdeb3660967ab1dde3e135a180bc080cbdb31b27",
+  "training_validation_sha256": "6b993544059181013cd3c7d60f85f3d60995c55067f3eddbe477f95a2eb37e73"
+}

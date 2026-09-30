@@ -1,0 +1,356 @@
+{
+  "schema": "week03_ant_other_terrain_gallery_validation_v1",
+  "verified_utc": "2026-09-22T10:49:39.003321+00:00",
+  "purpose": "Qualitative videos only; excluded from all original benchmark counts and policy selection.",
+  "predeclared": {
+    "path": "predeclared.json",
+    "sha256": "fbe063285442f94823faeac875253b52e87eccc6de2813720f2eb4d8391071ef"
+  },
+  "commands": {
+    "path": "commands.jsonl",
+    "sha256": "c0c5c41248ed7a6cecfe4885e320e81bab44bfb99efb620f2ee96f14b1b2b9d5"
+  },
+  "modes": [
+    "v5",
+    "v10",
+    "hybrid"
+  ],
+  "families": [
+    "rough",
+    "slope",
+    "stairs",
+    "waves",
+    "obstacles"
+  ],
+  "num_envs": 5,
+  "one_env_per_family": true,
+  "difficulty": 1.0,
+  "geometry_seed": 68,
+  "reset_seed": 42,
+  "policy_seed": 42,
+  "seconds": 16,
+  "fps": 30,
+  "frames_per_video": 480,
+  "resolution": [
+    1280,
+    720
+  ],
+  "initial_state_exactly_paired": true,
+  "initial_state_sha256": {
+    "root_state": "a712ea0cc147422c779d9ef96b34757dbb862092c3896bfebb5cfd8afdcfce63",
+    "joint_pos": "8e2243735c1fa6bfc7b560081a70b159604f6beffdc566ebed66c6ffcaebab58",
+    "joint_vel": "24d5b3bf2366f248693c6116abf1c18d7a6d0442e98d52285b072f0952444812",
+    "observations": "57d3f8c892faee49fa93cae7073b871be0c8035d1a7848f526e7546dbec4bbba"
+  },
+  "camera_render_does_not_advance_physics": true,
+  "frozen_source_files_unchanged": 63,
+  "additional_pinned_source_files_unchanged": 3,
+  "original_models_unchanged": 4,
+  "new_training_transitions": 0,
+  "gate_config": {
+    "span_enter": 0.12,
+    "edge_enter": 0.08,
+    "exit_ratio": 0.6,
+    "min_coverage": 0.9,
+    "enter_steps": 2,
+    "min_dwell_seconds": 0.5,
+    "clear_seconds": 0.3,
+    "blend_seconds": 0.15
+  },
+  "renderer_note": "All physics and policies used cuda:1. The v5 run kept the default RTX multi-GPU setting; v10/hybrid explicitly disabled RTX multi-GPU. Command ledger preserves this rendering-resource difference. Initial states and physics settings were identical.",
+  "limitations": [
+    "Five environments, one per family; one fixed qualitative seed, not a new benchmark.",
+    "All 960 steps shown, including falls/resets/timeouts; later episodes are not first-episode successes.",
+    "Existing stepping-stone videos use ten environments, not this five-environment batch.",
+    "Ideal height-raycast input, not a real RGB-D camera."
+  ],
+  "render_manifests": [
+    {
+      "mode": "v5",
+      "path": "v5/manifest.json",
+      "sha256": "b6e8f1fe6e97e59f532e22fbcddcab7a6609b10af325e49d51b2565e09b9254b"
+    },
+    {
+      "mode": "v10",
+      "path": "v10/manifest.json",
+      "sha256": "7e7b9478d68ae94a7f7df0b3c0cc78bda0e3446c375e510799de4ba2f53d7015"
+    },
+    {
+      "mode": "hybrid",
+      "path": "hybrid/manifest.json",
+      "sha256": "808813cf0fa51255937b09699123fc3deaa3154da248cfa91124bb559aa14b50"
+    }
+  ],
+  "videos": [
+    {
+      "mode": "v5",
+      "family": "rough",
+      "env_id": 0,
+      "difficulty": 1.0,
+      "path": "v5/rough.mp4",
+      "sha256": "83277938d8596f186f72062eb3483120967355ba9d37990d3bcc35052d4ca308",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "v5",
+      "family": "slope",
+      "env_id": 1,
+      "difficulty": 1.0,
+      "path": "v5/slope.mp4",
+      "sha256": "098abc6f29c129e32131d3a36b04116736afee5cd192b7cd1caa8397174ef71f",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "v5",
+      "family": "stairs",
+      "env_id": 2,
+      "difficulty": 1.0,
+      "path": "v5/stairs.mp4",
+      "sha256": "783e8396a8e93ad261c5f3b92277e74a20f76a33127d24d5fa1b53e21d5aaf2b",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "v5",
+      "family": "waves",
+      "env_id": 3,
+      "difficulty": 1.0,
+      "path": "v5/waves.mp4",
+      "sha256": "5440fb26426cdef2b26605f8e1f93d4118c3a41278a3dffa21be2e9a360d6c19",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "v5",
+      "family": "obstacles",
+      "env_id": 4,
+      "difficulty": 1.0,
+      "path": "v5/obstacles.mp4",
+      "sha256": "f9390802ecc75f2d5e1ece4e65d719efb9d24cfccc59c2f7d9f6d4c10daf8d0f",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "v10",
+      "family": "rough",
+      "env_id": 0,
+      "difficulty": 1.0,
+      "path": "v10/rough.mp4",
+      "sha256": "44d9ecb3027568f775167360cdc4bdfe52f92452058874dfeb80c805d2f8b77b",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "v10",
+      "family": "slope",
+      "env_id": 1,
+      "difficulty": 1.0,
+      "path": "v10/slope.mp4",
+      "sha256": "32fd5bfbf6ccc06296567ee225509ff8f5056ea65975b18bcdd3b4eb700fcd5e",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "v10",
+      "family": "stairs",
+      "env_id": 2,
+      "difficulty": 1.0,
+      "path": "v10/stairs.mp4",
+      "sha256": "f8d1a3efd7741832936533200f3a243bf27f3f25a82b17d665228c7b0e7faf88",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "v10",
+      "family": "waves",
+      "env_id": 3,
+      "difficulty": 1.0,
+      "path": "v10/waves.mp4",
+      "sha256": "f804a2e92dc242189f6a511225d8e914338cfa6cd8d3b36b4297a94d61e93e92",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "v10",
+      "family": "obstacles",
+      "env_id": 4,
+      "difficulty": 1.0,
+      "path": "v10/obstacles.mp4",
+      "sha256": "fd26c60a4947ec5a9b430cd25fa17889d6c73936538a670721f39210bce8dfcb",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "hybrid",
+      "family": "rough",
+      "env_id": 0,
+      "difficulty": 1.0,
+      "path": "hybrid/rough.mp4",
+      "sha256": "7e7567bb0f9f56175f12995e1f010ab587654da794443d69e9b03724b5721e1c",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "hybrid",
+      "family": "slope",
+      "env_id": 1,
+      "difficulty": 1.0,
+      "path": "hybrid/slope.mp4",
+      "sha256": "1c847b63e57ca3cc5277256ff6814604a18b4e9dbade2a7675210413a4e65fc1",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "hybrid",
+      "family": "stairs",
+      "env_id": 2,
+      "difficulty": 1.0,
+      "path": "hybrid/stairs.mp4",
+      "sha256": "ff759ec36edcdda8a5186ab30bdc93b9a7d9940728d54e094d0a555cf6cbb9a2",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "hybrid",
+      "family": "waves",
+      "env_id": 3,
+      "difficulty": 1.0,
+      "path": "hybrid/waves.mp4",
+      "sha256": "07cc6dc778e100742def7602ee50dd185200f6e7f01c52d547496ecc04ae405a",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    },
+    {
+      "mode": "hybrid",
+      "family": "obstacles",
+      "env_id": 4,
+      "difficulty": 1.0,
+      "path": "hybrid/obstacles.mp4",
+      "sha256": "9fec3a6e750ef796f25f17b60759ada2ad732990bcc71a9c8a67ba4e6d9a17fe",
+      "probe": {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1",
+        "duration": "16.000000",
+        "nb_frames": "480"
+      },
+      "full_decode_exit_code": 0,
+      "full_decode_errors": 0
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "completed_utc": "2026-09-23T09:39:57.860785+00:00",
+  "models": {
+    "fixed": {
+      "checkpoint": "artifacts/terrain_demo/learning_progress_v17/runs/fixed/model_249.pt",
+      "sha256": "f73688065614d69448ffadc0d1601ae03a92368ee78a8869211501fbce211c36",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_lp_v17/2026-09-23_18-18-56_v17_paired_fixed/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "9716d9cc7613f2db706a92c20688ba23a2797f6097d812d371d5658fa49f91fc",
+      "initial_pairing_verified": true,
+      "sampling_sha256": "51cbd9ebfd4d560cd1e2aeb543c2c1847b01baf900c2daa26387bd150f47ce9b"
+    },
+    "lp": {
+      "checkpoint": "artifacts/terrain_demo/learning_progress_v17/runs/lp/model_249.pt",
+      "sha256": "9ce08505996a6b711cef720965cff2adb8a6d23f4ccb250b3e189396668b7f5b",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_lp_v17/2026-09-23_18-29-29_v17_paired_lp/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "ce29e059856a6afd28823c5a8f751cade8c501bd563bb1b9535f7b62cd405763",
+      "initial_pairing_verified": true,
+      "sampling_sha256": "96fcac2b3784b6813a274ffe01fb70ed54a6215cd88edd6ad44b6a7f90b8be2a"
+    }
+  },
+  "total_training_transitions": 65536000,
+  "training_freeze_sha256": "635914e792e73b8bbf9637881ec7413dc40d9592e7b605842607e65691c8527e",
+  "training_validation_sha256": "f7c87c190b736f56bda99221913945120f88483d6a2028da70c151dc0de401e5"
+}

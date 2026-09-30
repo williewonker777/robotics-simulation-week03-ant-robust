@@ -1,0 +1,219 @@
+{
+  "created_utc": "2026-09-28T13:53:07.309365+00:00",
+  "records": {
+    "low51": {
+      "initial": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low51_initial.json",
+        "sha256": "4a9c9a2cd616e4894c58aeb5e44c8e8955ba907cd23a8a81e879b4572991154c"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low51_schedule.json",
+        "sha256": "e932eeb47b6bb2e3302cb5522803ddd3c9d43482d4f5f0ae2fec1e95de7cbc93"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low51_initial_contact_rollout.json",
+        "sha256": "7724d2f8ac233c124595f09e8948013e6dbb151636c33468de5884ad55967be6"
+      },
+      "lr": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low51_initial_lr.json",
+        "sha256": "04bdcb489de79223af56e1083bd890179e7bb5b88896395fcaa7b30ce2d773b4"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/lr_continuation_v24_20260928/train_low51.log",
+        "text_log_sha256": "2ee85b00b95d9151adeae3e743ce28663105c3276b840abd13428ceec02a0e90",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-22-19_v24_main_low51/events.out.tfevents.1790601747.wonker-System-Product-Name.1714910.0": "a373d7d81d9e8f3c6dc96710b570be178ea6c1163aca91519412414736a193cc"
+        }
+      },
+      "coefficient_step_mass": 0.0,
+      "realized_penalty_sum": -0.0
+    },
+    "low52": {
+      "initial": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low52_initial.json",
+        "sha256": "75e06c5a53bcbf18bdbb957c04eaf7435fad99ed10f44ff9325df0528a3aa38d"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low52_schedule.json",
+        "sha256": "2dbbca9175d81794faf3f89a0ceb8871873ed687f479adaa2f3c53f9aeefdf62"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low52_initial_contact_rollout.json",
+        "sha256": "3403e98082bf3cf9e9eb7f121c643be248ce480c73bea0a65cad9984b8b2f33f"
+      },
+      "lr": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low52_initial_lr.json",
+        "sha256": "04bdcb489de79223af56e1083bd890179e7bb5b88896395fcaa7b30ce2d773b4"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/lr_continuation_v24_20260928/train_low52.log",
+        "text_log_sha256": "d4c4711be499d5cd672fd3d4e5a718d941d170542db988c4ed5701bf6c7ee392",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-32-37_v24_main_low52/events.out.tfevents.1790602365.wonker-System-Product-Name.1733590.0": "b6378b3a002b36383284075a5604fb22b6ae98d4434dbb3059c09299e2533b3c"
+        }
+      },
+      "coefficient_step_mass": 0.0,
+      "realized_penalty_sum": -0.0
+    },
+    "low53": {
+      "initial": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low53_initial.json",
+        "sha256": "ac28d93a867d1d90d927bfed5ab22113b84a71a8ff3e1495b92ece3afc0a3089"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low53_schedule.json",
+        "sha256": "ae37699ea4e8e59503455a3c8ee70eb760ebd75e664062ab8796e38001ee5bbe"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low53_initial_contact_rollout.json",
+        "sha256": "549ec84c74656d403920948d2bc44ce2dd7d2a01dfce07791e1934bc6a7d2f5f"
+      },
+      "lr": {
+        "path": "artifacts/terrain_demo/lr_continuation_v24/training/low53_initial_lr.json",
+        "sha256": "04bdcb489de79223af56e1083bd890179e7bb5b88896395fcaa7b30ce2d773b4"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/lr_continuation_v24_20260928/train_low53.log",
+        "text_log_sha256": "3a49afbc92d729d7279eb16498dfc24b610895b61c1ef525ba00a9aaac536548",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-42-55_v24_main_low53/events.out.tfevents.1790602983.wonker-System-Product-Name.1752082.0": "db55b34970339fa272a82521ba50e719f34b95cdc7b82a4f4d3945397db89205"
+        }
+      },
+      "coefficient_step_mass": 0.0,
+      "realized_penalty_sum": -0.0
+    }
+  },
+  "same_seed_capacity_initial_pairing": true,
+  "actual_random_horizons_paired": true,
+  "historical_references_sha256": "55df216e8ece908d9d6941352414b4ecc8422089028edf92cdafcd86369b8c47",
+  "full_replay_sha256": "92eedd317cb630fc53d5a3c7cab52f3487a585e4b5e2a879667cef0d95e93d2e"
+}

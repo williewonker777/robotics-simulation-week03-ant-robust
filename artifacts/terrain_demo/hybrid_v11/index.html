@@ -1,0 +1,34 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Ant v11 — 깊이 기반 v5/v10 전환 비교</title>
+<style>body{font:16px system-ui;background:#101827;color:#e9eff8;max-width:1450px;margin:28px auto;padding:0 20px;line-height:1.7}
+h1{font-size:28px}h2{margin-top:32px}a{color:#86d2ff}.verdict{background:#343146;padding:16px;border-radius:10px}
+table{border-collapse:collapse;width:100%;margin:16px 0}td,th{text-align:left;border-bottom:1px solid #405066;padding:10px}
+.videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}video{width:100%;background:black;border-radius:8px}
+button{padding:12px 18px;border:0;border-radius:8px;margin:10px 10px 0 0;cursor:pointer}.note{color:#bdccdf}
+@media(max-width:900px){.videos{grid-template-columns:1fr}table{font-size:12px}th,td{padding:5px}}
+</style></head><body><h1>Ant v11: 평탄 구간 v5 · 거친 구간 v10</h1>
+<p>고정 모델 + 825-ray 깊이 선택기. 재학습 없이 히스테리시스와 0.15초 행동 전환을 적용했습니다.</p>
+<div class="verdict"><strong>전체 교체 기준 FAIL — 기존 v5 유지</strong><br>
+16초 6타일 통과율은 개선됐지만 낙상과 레인 이탈이 v5보다 많았습니다. 깊이 전환만으로 험지 안정성 문제가 해결되지는 않았습니다.</div>
+<h2>16초 / 전체 험지</h2><table><thead><tr><th>정책</th><th>1타일</th><th>6타일</th><th>낙상</th><th>레인 이탈</th></tr></thead><tbody><tr><th>기존 v5</th><td>263/300 (87.7%)</td><td>133/300 (44.3%)</td><td>23/300 (7.7%)</td><td>0/300 (0.0%)</td></tr><tr><th>v10 anchored</th><td>814/900 (90.4%)</td><td>438/900 (48.7%)</td><td>67/900 (7.4%)</td><td>11/900 (1.2%)</td></tr><tr><th>깊이 전환 hybrid</th><td>805/900 (89.4%)</td><td>451/900 (50.1%)</td><td>81/900 (9.0%)</td><td>2/900 (0.2%)</td></tr></tbody></table>
+<p class="note">평지 제외 분모: v5 300회, v10/hybrid 각각 900회. 평지 포함 총 2,450개 첫 에피소드.
+geometry/reset 68/42·69/43. v10/hybrid 세 학습 seed 42·43·44를 모두 포함했습니다.
+두 지도이며 수천 개 독립 지도는 아닙니다. 초기 검증 실패 뒤 같은 조건 전체 배치를 한 번 재실행한 attempt02 결과입니다.</p>
+<h2>64초 / 최고 난도 1.0 돌다리만</h2><table><thead><tr><th>정책</th><th>1타일</th><th>6타일</th><th>낙상</th><th>레인 이탈</th></tr></thead><tbody><tr><th>기존 v5</th><td>7/20 (35.0%)</td><td>1/20 (5.0%)</td><td>7/20 (35.0%)</td><td>2/20 (10.0%)</td></tr><tr><th>v10 anchored</th><td>25/60 (41.7%)</td><td>15/60 (25.0%)</td><td>26/60 (43.3%)</td><td>8/60 (13.3%)</td></tr><tr><th>깊이 전환 hybrid</th><td>28/60 (46.7%)</td><td>14/60 (23.3%)</td><td>21/60 (35.0%)</td><td>9/60 (15.0%)</td></tr></tbody></table>
+<p class="note">총 140개 첫 에피소드. 16초 평가와 합치지 않았습니다. 최종 거리 13.1m/53.1m를 넘고
+첫 에피소드에 낙상·레인 이탈·world exit가 없어야 1/6타일 성공입니다. 도중 도달 뒤 넘어지면 성공이 아닙니다.</p>
+<h2>선택기는 실제로 전환했는가?</h2><p>험지의 평균 v10 혼합 비중 69.99%, 평지 0%.
+험지 전환 1654회, 전환 후 0.5초 이내 낙상 1회. 이 시간적 연관성은 원인 증명이 아닙니다.</p>
+<h2>사전 지정 16초 무편집 영상</h2>
+<p><a href="other_terrains/index.html"><strong>새 영상: 계단·장애물·요철·경사·파도형 지형의 v5/v10/hybrid 동시 비교</strong></a> — 정성 자료이며 아래 수치 집계와 별도입니다.</p>
+<p class="note">세 영상 모두 geometry68/reset42, 돌다리1.0, 10환경 중 env0를 따라갑니다.
+좋은 사례를 고르지 않았고 실패·리셋을 그대로 포함합니다. 영상은 별도 정성 실행으로 통계에 추가하지 않습니다.
+alpha=0은 v5, alpha=1은 v10입니다. 리셋 후 이동을 첫 에피소드 성공으로 보지 마세요.</p>
+<div class="videos"><section><h3>기존 v5</h3><video controls muted preload="metadata" src="attempt02/videos/v5_seed42_stones10.mp4"></video></section><section><h3>v10 anchored / seed42</h3><video controls muted preload="metadata" src="attempt02/videos/v10_seed42_stones10.mp4"></video></section><section><h3>깊이 전환 / seed42</h3><video controls muted preload="metadata" src="attempt02/videos/hybrid_seed42_stones10.mp4"></video></section></div><button id="play">처음부터 함께 재생</button><button id="pause">모두 정지</button>
+<p class="note">이상적인 높이 레이캐스트이며 실제 RGB-D 센서가 아닙니다. 모델의 거친 지형 적합성과 전환 안정성을 보장하지 않습니다.</p>
+<p><a href="attempt02/summary.md">수치 요약</a> · <a href="attempt02/summary.json">seed·지형별 데이터</a> ·
+<a href="attempt02/independent_audit_final.json">독립 감사</a> · <a href="attempt02/video_manifest.json">영상 조건</a> ·
+<a href="frozen.json">원본 동결</a> · <a href="recovery_amendment.json">초기 실패·재시도 기록</a> ·
+<a href="../../../docs/HYBRID_V11.md">방법·결과·한계</a></p>
+<script>document.getElementById('play').onclick=()=>document.querySelectorAll('video').forEach(v=>{v.currentTime=0;v.play().catch(console.error);});
+document.getElementById('pause').onclick=()=>document.querySelectorAll('video').forEach(v=>v.pause());</script></body></html>

@@ -1,0 +1,187 @@
+{
+  "auditor_sha256": "78bc37fdafbaac119d4a00e3c3d6bbb041e7450417df1aba4af2bc76a4aa6f10",
+  "scope": "attempt02_development",
+  "passed": true,
+  "mismatches": [],
+  "limitations": [
+    "No raw per-step sensor/action recording: coverage/feature extrema and action RMS values are type/range checked, not recomputed.",
+    "Alpha/target occupancy is independently reconstructed from switch events; temporal association does not prove causation.",
+    "Two fresh maps are not thousands of independent maps; depth is ideal simulator raycasting."
+  ],
+  "recovery": {
+    "amendment_sha256": "c0e2de503bac9183e476a67d883bc92808ee293aaf42e8999bb0c794afa049bc",
+    "created_at": "2026-09-22T09:11:53.394081+00:00",
+    "excluded_original_evaluations": [
+      "artifacts/terrain_demo/hybrid_v11/evaluations/v5_seed42__geometry68_reset42.json",
+      "artifacts/terrain_demo/hybrid_v11/evaluations/v5_seed42__geometry69_reset43.json",
+      "artifacts/terrain_demo/hybrid_v11/evaluations/v10_seed42__geometry68_reset42.json"
+    ],
+    "overlay_sha256": {
+      "outputs/hybrid_v11_20260922/run_attempt02.py": "6f5e2ea615f2fc565d48501a44fc796f20ab7ce218c82e242ae4bddad507ddac",
+      "outputs/hybrid_v11_20260922/independent_audit_attempt02.py": "78bc37fdafbaac119d4a00e3c3d6bbb041e7450417df1aba4af2bc76a4aa6f10"
+    },
+    "whole_batch_retry": 1,
+    "original_artifacts_unchanged": true
+  },
+  "development": {
+    "preset": "cautious",
+    "trials": [
+      {
+        "mode": "v5",
+        "preset": "balanced",
+        "path": "artifacts/terrain_demo/hybrid_v11/development/v5_balanced.json",
+        "sha256": "98c1629869c7d69c704c0a87542634afd57b1fb149b011bdcefa6c150982e5ca",
+        "metrics": {
+          "n": 150,
+          "flat_n": 25,
+          "flat_falls": 1,
+          "flat_world": 0,
+          "one": 122,
+          "six": 60,
+          "falls": 21,
+          "lane": 2,
+          "world": 0,
+          "survival": 129,
+          "switches": 0,
+          "near_switch_fall": 0,
+          "mean_final_distance": 44.405571149190266,
+          "mean_v10_duty": 0.0,
+          "mean_max_action_jump": 1.7993906300421756,
+          "mean_action_disagreement": 0.15260439728400316,
+          "uncertain_steps": 102,
+          "flat_mean_v10_duty": 0.0
+        }
+      },
+      {
+        "mode": "v10",
+        "preset": "balanced",
+        "path": "artifacts/terrain_demo/hybrid_v11/development/v10_balanced.json",
+        "sha256": "3c6bfb6c9833d7f8675027fefbbc8cdd20820c4929bdb9698dbcc0ec6dfdc14c",
+        "metrics": {
+          "n": 150,
+          "flat_n": 25,
+          "flat_falls": 1,
+          "flat_world": 0,
+          "one": 129,
+          "six": 69,
+          "falls": 18,
+          "lane": 1,
+          "world": 0,
+          "survival": 132,
+          "switches": 0,
+          "near_switch_fall": 0,
+          "mean_final_distance": 47.00554799397786,
+          "mean_v10_duty": 1.0,
+          "mean_max_action_jump": 1.809446096217563,
+          "mean_action_disagreement": 0.14477939843067997,
+          "uncertain_steps": 80,
+          "flat_mean_v10_duty": 1.0
+        }
+      },
+      {
+        "mode": "hybrid",
+        "preset": "cautious",
+        "path": "artifacts/terrain_demo/hybrid_v11/development/hybrid_cautious.json",
+        "sha256": "b0fbb2bf67ff36db5bec607810f7f15a9faea2a189211cae00a9c89e9412dc7a",
+        "metrics": {
+          "n": 150,
+          "flat_n": 25,
+          "flat_falls": 1,
+          "flat_world": 0,
+          "one": 133,
+          "six": 68,
+          "falls": 16,
+          "lane": 0,
+          "world": 0,
+          "survival": 134,
+          "switches": 271,
+          "near_switch_fall": 0,
+          "mean_final_distance": 47.522698129018146,
+          "mean_v10_duty": 0.6759434854444893,
+          "mean_max_action_jump": 1.8167070603057875,
+          "mean_action_disagreement": 0.14519243609196691,
+          "uncertain_steps": 98,
+          "flat_mean_v10_duty": 0.0
+        }
+      },
+      {
+        "mode": "hybrid",
+        "preset": "balanced",
+        "path": "artifacts/terrain_demo/hybrid_v11/development/hybrid_balanced.json",
+        "sha256": "1aa1b6467f25c7ac60c5d62494574e73182edaa64f648ce6c01990516b0a55bc",
+        "metrics": {
+          "n": 150,
+          "flat_n": 25,
+          "flat_falls": 1,
+          "flat_world": 0,
+          "one": 130,
+          "six": 69,
+          "falls": 19,
+          "lane": 0,
+          "world": 0,
+          "survival": 131,
+          "switches": 229,
+          "near_switch_fall": 1,
+          "mean_final_distance": 46.733028958638506,
+          "mean_v10_duty": 0.5618113421210685,
+          "mean_max_action_jump": 1.8156533400726262,
+          "mean_action_disagreement": 0.1460978597265939,
+          "uncertain_steps": 98,
+          "flat_mean_v10_duty": 0.0
+        }
+      },
+      {
+        "mode": "hybrid",
+        "preset": "selective",
+        "path": "artifacts/terrain_demo/hybrid_v11/development/hybrid_selective.json",
+        "sha256": "c3b91b36fb4638c061468727deef7a5df6dd80a040a44c27c111fb5bf799d80f",
+        "metrics": {
+          "n": 150,
+          "flat_n": 25,
+          "flat_falls": 1,
+          "flat_world": 0,
+          "one": 128,
+          "six": 68,
+          "falls": 22,
+          "lane": 0,
+          "world": 0,
+          "survival": 128,
+          "switches": 144,
+          "near_switch_fall": 0,
+          "mean_final_distance": 45.9242980448405,
+          "mean_v10_duty": 0.4441410796235847,
+          "mean_max_action_jump": 1.815734935428757,
+          "mean_action_disagreement": 0.14685979529679913,
+          "uncertain_steps": 98,
+          "flat_mean_v10_duty": 0.0
+        }
+      }
+    ],
+    "rank": [
+      133,
+      -16,
+      0,
+      68,
+      0
+    ]
+  },
+  "command_labels": [
+    "dev_v5_balanced",
+    "dev_v10_balanced",
+    "dev_hybrid_cautious",
+    "dev_hybrid_balanced",
+    "dev_hybrid_selective"
+  ],
+  "counts": {
+    "recovery_overlay_files": 2,
+    "aborted_attempt01_files": 3,
+    "aborted_attempt01_commands": 8,
+    "model_files": 4,
+    "teacher_identity_models": 3,
+    "source_files": 63,
+    "archived_source_files": 53,
+    "episode_files": 5,
+    "episodes": 875,
+    "successful_commands": 5
+  }
+}

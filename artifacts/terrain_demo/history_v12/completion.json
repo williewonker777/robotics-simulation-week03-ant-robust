@@ -1,0 +1,70 @@
+{
+  "schema": "week03_ant_history_completion_v1",
+  "verified_utc": "2026-09-22T11:30:55.647773+00:00",
+  "status": "implementation_verified_paired_benchmark_blocked",
+  "implementation": {
+    "history_seconds": 1,
+    "stored_features": 8,
+    "new_training_transitions": 0,
+    "cpu_tests_passed": 343,
+    "independent_history_tests_passed": 70,
+    "gpu_smoke_final_json": "preflight_smoke_process_boundary.json",
+    "gpu_smoke_first_episodes": 35,
+    "synthetic_trace_switches": {
+      "instant": 6,
+      "history": 2
+    },
+    "synthetic_trace_is_navigation_evidence": false
+  },
+  "preserved": {
+    "frozen_original_sources": 63,
+    "frozen_additive_sources": 6,
+    "models": 4,
+    "old_benchmark_results_changed": false
+  },
+  "paired_benchmark": {
+    "completed": false,
+    "expected_files": 16,
+    "produced_baseline_files": 2,
+    "produced_baseline_first_episodes": 350,
+    "valid_paired_cohorts": 0,
+    "v11_holdout_files": 0,
+    "v12_holdout_files": 0,
+    "reason": "Same root/joint state, different initial observations in first v5/v10 pair; stopped before v11/v12, no automatic retry.",
+    "all_partial_outputs_excluded_from_v12_performance_claims": true,
+    "initial_state_sha256": {
+      "v10": {
+        "root_state": "6ff777532c154a89f0cf49049a6e309b8c39b7988a769273a19c5c47b0625d79",
+        "joint_pos": "774d3ed9022db12253fddcf4c4c0eccefb0ff841198482b36ca1953985772585",
+        "joint_vel": "5540c6dbdc7d09b303f5ad90ed2e87b2da0dd2684c45f8705e3c0e8085df3508",
+        "observations": "ee23ec3dda7a9d44cebda7cdda38004f5d0b04f3229e2f8b39211644b568ab30"
+      },
+      "v5": {
+        "root_state": "6ff777532c154a89f0cf49049a6e309b8c39b7988a769273a19c5c47b0625d79",
+        "joint_pos": "774d3ed9022db12253fddcf4c4c0eccefb0ff841198482b36ca1953985772585",
+        "joint_vel": "5540c6dbdc7d09b303f5ad90ed2e87b2da0dd2684c45f8705e3c0e8085df3508",
+        "observations": "667ba40b108ee040c22865efbe47c0447c6b4121eb56855bb7661bcf108e5eab"
+      }
+    },
+    "failed_record_sha256": "d7756e9dba75756b76da381452cde4eceb9302b53bd16cc682d1a366e0b7b21d",
+    "commands_sha256": "aa2290800210977cb6a91e4b9f0e3250d1f2317960b20e01a7d8ec0736a78f99",
+    "preserved_outputs": [
+      {
+        "path": "evaluations/v10__geometry72_reset46.json",
+        "sha256": "b4a277e87d5c53f58b62eda4451111b440a3357cdd431e1820c2582e24f3a59f"
+      },
+      {
+        "path": "evaluations/v5__geometry72_reset46.json",
+        "sha256": "744124d61f15f86bb0f7475201f1ddea3f467ace6042a14119e6fe83fb992a93"
+      }
+    ]
+  },
+  "remaining_gaps": [
+    "Actual navigation improvement versus v11 unverified",
+    "Initial-observation mismatch cause not established",
+    "Ruff/mypy/pyright unavailable",
+    "Feature history is not a recurrent actor or world map; ideal rays are not real RGB-D"
+  ],
+  "docs_local_links_verified": 11,
+  "remote_git_operations": 0
+}

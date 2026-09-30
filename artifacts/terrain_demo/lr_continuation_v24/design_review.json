@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-09-28T12:47:13.704500+00:00",
+  "verdict": "APPROVE for implementation",
+  "reported_by": "native critic /root/v24_design_review",
+  "recorded_by": "leader from completed specialist review",
+  "plan_sha256": "79f300f70359d1856b234e1a257cd7de2804833ad0154bc47c3ea505d9bc342f",
+  "issues": 0,
+  "scope": "Preregistered fixed-global-LR study design and preserved historical references; not implementation/runtime/GPU approval.",
+  "resolved_initial_findings": [
+    "Every high capacity must replay its same-seed v22 record, not seed51 only.",
+    "Pair high/low same-seed pre-learning state with only declared LR projected; never pair post-learning consequences.",
+    "Check actual fixed LR at every PPO update and Adam step and persist complete evidence.",
+    "Require whole-evaluator allowlisted AST equivalence, exhaustive14 bindings,18 comparisons, fail-closed postfreeze behavior."
+  ],
+  "verified_legacy": {
+    "source_paths": 237,
+    "checkpoint_paths": 22
+  },
+  "budgets": {
+    "gpu_commands": 52,
+    "new_training_transitions": 132677632,
+    "low_main_transitions": 98304000,
+    "holdout_first_episodes": 4900,
+    "dependent_holdout_window_observations": 9800
+  },
+  "remaining": "Implementation, CPU/static tests, independent code review and all GPU/runtime validation pending."
+}

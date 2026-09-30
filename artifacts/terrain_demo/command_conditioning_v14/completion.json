@@ -1,0 +1,47 @@
+{
+  "completed_utc": "2026-09-22T15:27:30.015758+00:00",
+  "request": "Implement/train/test another paper-inspired method",
+  "method": "Walk These Ways-inspired joint actor/critic command+clearance+validity access;91D vsmasked91D,samev13reward",
+  "implementation_and_declared_study_complete": true,
+  "overall_performance_promotion": false,
+  "training_transitions": 65536000,
+  "evaluation_files": 24,
+  "evaluation_first_episodes": 2220,
+  "judgments": {
+    "evaluations": {
+      "actor_conditioned_vs_masked": false,
+      "hybrid_conditioned_vs_masked": false
+    },
+    "horizon": {
+      "actor_conditioned_vs_masked": true,
+      "hybrid_conditioned_vs_masked": false
+    }
+  },
+  "cpu_tests": "631 passed in 18.48s",
+  "cpu_log_sha256": "84d66336d59ea201bbe49c58ed96ed20b2b6421a5398b37959194eec838041e9",
+  "compileall": true,
+  "ast_static_checks": true,
+  "git_diff_check": true,
+  "optional_static_tools_unavailable": [
+    "ruff",
+    "mypy",
+    "pyflakes",
+    "pyright"
+  ],
+  "local_doc_links_checked": 129,
+  "summary_sha256": "3a85b6300ec9fa75bb20f6abc0f833db8b1c70c3090209354cd31e60c181abce",
+  "independent_final_audit_sha256": "9f5f80920c1d06d8c5c56585100512add180aa4e4c94b05dc774c613e7894250",
+  "final_review_sha256": "1860df8d10d1d4e720b067443ce549af90b1d1a13adc1aa8f33d749726e25ca4",
+  "documentation_sha256": {
+    "README.md": "3c90a276a0993d4092ba9a7671e8fc29561115fa392f2bb6410613d9eefc464f",
+    "docs/COMMAND_CONDITIONING_V14.md": "abc4c742c8de87b659140bf5290185f5ab333c1b8e1882a683846fef6b438b3b",
+    "docs/EXPERIMENT_HISTORY.md": "b7026ddc3ab9a12392202136bcb894e6f7d407435f8a46de756395087d55498b",
+    "docs/PUBLICATION.md": "9854a7550700ec18387427326f3bd419d29aa2098135f78ad63d1aa11fc9714a",
+    "docs/experiment_plans/command_conditioning_v14.md": "38eb5d8571e42bd547250667f124e8b980cd9d20f4c158453482ed0fa6cb2aca"
+  },
+  "default_policy_changed": false,
+  "new_dependencies": false,
+  "project_remote_git_operations": false,
+  "gpu_job_remaining": false,
+  "scope_note": "Currentpaper-inspiredstudycomplete; priorhybriddefault-demo/publicationrequest remainsseparate, notclosedbythisexperiment."
+}

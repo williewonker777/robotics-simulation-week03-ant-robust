@@ -1,0 +1,46 @@
+{
+  "arm": "no_cost",
+  "created_utc": "2026-09-28T13:22:08.906831+00:00",
+  "source_initial_audit": "artifacts/terrain_demo/lr_continuation_v24/training/high51_initial.json",
+  "rollout": {
+    "samples": 8000,
+    "sampled_rows": 32721503,
+    "valid_rows": 32721503,
+    "invalid_rows": 0,
+    "invalid_fraction": 0.0,
+    "excluded_done_rows": 38020,
+    "excluded_wrap_rows": 16827,
+    "reward": -0.1198793062648153,
+    "bounded_cost": 0.1198793062648153,
+    "contact_fraction": 0.15171568109742506,
+    "no_contact_fraction": 0.5900337296046531,
+    "contacted_tip_speed": 1.2256144056866611,
+    "terrain_contact_fraction": 0.13235374905194194,
+    "flat_contact_fraction": 0.01936193198479,
+    "per_foot_contact_fraction": [
+      0.15808433746319053,
+      0.1613766070856676,
+      0.21357115470583948,
+      0.0738306262142859
+    ],
+    "per_target_per_foot_contact_fraction": [
+      [
+        0.13528905140378797,
+        0.0227952860010857
+      ],
+      [
+        0.14567081818328398,
+        0.015705788712318477
+      ],
+      [
+        0.19047780787605847,
+        0.023093346890457653
+      ],
+      [
+        0.05797731984543469,
+        0.015853306381998226
+      ]
+    ]
+  },
+  "passive_post_action": true
+}

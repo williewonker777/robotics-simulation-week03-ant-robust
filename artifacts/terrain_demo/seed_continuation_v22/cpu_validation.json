@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-09-28T07:15:33.080931+00:00",
+  "tests": 1501,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 31.504,
+  "log": "outputs/seed_continuation_v22_20260928/pre_main_pytest.log",
+  "log_sha256": "5c0bceac5e20fdb256d3e901fd88248993b2fe2c0faba6b9af29bbe66f8188b4",
+  "xml": "outputs/seed_continuation_v22_20260928/pre_main_pytest.xml",
+  "xml_sha256": "a34f7b8bfc7486e70c490ee963479aeb994907d789260cec480ba3d5af18d921",
+  "static_validation_sha256": "28cc037ab0d740612b2055e5fd3c82058b34d7735621059670c895657e08f6a9",
+  "earlier_runs": [
+    "pre_gpu_pytest.log",
+    "pre_gpu_pytest_attempt02.log"
+  ],
+  "reason": "First suite observed an in-progress independent verifier test regex mismatch; preserved failed evidence, repaired test. Later independent review removed an unintended serialization-container equality criterion from unfrozen verifier, added bindings/regressions; all12 frozen definitions unchanged."
+}

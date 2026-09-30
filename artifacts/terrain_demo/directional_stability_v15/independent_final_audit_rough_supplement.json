@@ -1,0 +1,724 @@
+{
+  "verdict": "CORRECTED_ROUGH_PARTITION_CLEAR",
+  "correction": "The prior independent audit's primary 350-row totals were descriptive all-terrain values. Fixed promotion checks use 300 non-flat rough rows plus separate 50 flat rows; world is counted once as rough_world + flat_world.",
+  "primary": {
+    "rough_totals": {
+      "v14": {
+        "n": 300,
+        "one": 268,
+        "six": 133,
+        "falls": 24,
+        "lane": 8,
+        "world": 0
+      },
+      "control": {
+        "n": 300,
+        "one": 268,
+        "six": 160,
+        "falls": 30,
+        "lane": 2,
+        "world": 0
+      },
+      "stable": {
+        "n": 300,
+        "one": 275,
+        "six": 158,
+        "falls": 21,
+        "lane": 3,
+        "world": 0
+      },
+      "history_original": {
+        "n": 300,
+        "one": 266,
+        "six": 149,
+        "falls": 29,
+        "lane": 2,
+        "world": 0
+      },
+      "history_control": {
+        "n": 300,
+        "one": 267,
+        "six": 155,
+        "falls": 32,
+        "lane": 1,
+        "world": 0
+      },
+      "history_stable": {
+        "n": 300,
+        "one": 270,
+        "six": 149,
+        "falls": 26,
+        "lane": 2,
+        "world": 0
+      }
+    },
+    "flat_totals": {
+      "v14": {
+        "n": 50,
+        "one": 45,
+        "six": 45,
+        "falls": 5,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": 10.45925511673792,
+        "mean_duty": 1.0
+      },
+      "control": {
+        "n": 50,
+        "one": 47,
+        "six": 47,
+        "falls": 3,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": 9.961144877207094,
+        "mean_duty": 1.0
+      },
+      "stable": {
+        "n": 50,
+        "one": 47,
+        "six": 47,
+        "falls": 3,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": 10.083410298938887,
+        "mean_duty": 1.0
+      },
+      "history_original": {
+        "n": 50,
+        "one": 45,
+        "six": 45,
+        "falls": 5,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": 8.717657560922673,
+        "mean_duty": 0.0
+      },
+      "history_control": {
+        "n": 50,
+        "one": 45,
+        "six": 45,
+        "falls": 5,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": 8.717657560922673,
+        "mean_duty": 0.0
+      },
+      "history_stable": {
+        "n": 50,
+        "one": 45,
+        "six": 45,
+        "falls": 5,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": 8.717657560922673,
+        "mean_duty": 0.0
+      }
+    },
+    "per_map_partition": {
+      "v14/geometry96": {
+        "rough": {
+          "n": 150,
+          "one": 131,
+          "six": 71,
+          "falls": 14,
+          "lane": 5,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 22,
+          "six": 22,
+          "falls": 3,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "v14/geometry97": {
+        "rough": {
+          "n": 150,
+          "one": 137,
+          "six": 62,
+          "falls": 10,
+          "lane": 3,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 23,
+          "six": 23,
+          "falls": 2,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "control/geometry96": {
+        "rough": {
+          "n": 150,
+          "one": 133,
+          "six": 79,
+          "falls": 16,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 23,
+          "six": 23,
+          "falls": 2,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "control/geometry97": {
+        "rough": {
+          "n": 150,
+          "one": 135,
+          "six": 81,
+          "falls": 14,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 24,
+          "six": 24,
+          "falls": 1,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "stable/geometry96": {
+        "rough": {
+          "n": 150,
+          "one": 142,
+          "six": 82,
+          "falls": 7,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 23,
+          "six": 23,
+          "falls": 2,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "stable/geometry97": {
+        "rough": {
+          "n": 150,
+          "one": 133,
+          "six": 76,
+          "falls": 14,
+          "lane": 2,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 24,
+          "six": 24,
+          "falls": 1,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_original/geometry96": {
+        "rough": {
+          "n": 150,
+          "one": 130,
+          "six": 75,
+          "falls": 17,
+          "lane": 2,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 23,
+          "six": 23,
+          "falls": 2,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_original/geometry97": {
+        "rough": {
+          "n": 150,
+          "one": 136,
+          "six": 74,
+          "falls": 12,
+          "lane": 0,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 22,
+          "six": 22,
+          "falls": 3,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_control/geometry96": {
+        "rough": {
+          "n": 150,
+          "one": 132,
+          "six": 75,
+          "falls": 17,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 23,
+          "six": 23,
+          "falls": 2,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_control/geometry97": {
+        "rough": {
+          "n": 150,
+          "one": 135,
+          "six": 80,
+          "falls": 15,
+          "lane": 0,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 22,
+          "six": 22,
+          "falls": 3,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_stable/geometry96": {
+        "rough": {
+          "n": 150,
+          "one": 135,
+          "six": 71,
+          "falls": 14,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 23,
+          "six": 23,
+          "falls": 2,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_stable/geometry97": {
+        "rough": {
+          "n": 150,
+          "one": 135,
+          "six": 78,
+          "falls": 12,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 25,
+          "one": 22,
+          "six": 22,
+          "falls": 3,
+          "lane": 0,
+          "world": 0
+        }
+      }
+    },
+    "actor_stable_vs_control": {
+      "passed": false,
+      "checks": {
+        "one_not_lower": true,
+        "six_not_lower": false,
+        "falls_not_higher": true,
+        "lane_not_higher": false,
+        "world_zero_including_flat": true,
+        "flat_falls_not_higher": true,
+        "flat_speed_strictly_higher": true
+      }
+    },
+    "hybrid_stable_vs_control": {
+      "passed": false,
+      "checks": {
+        "one_not_lower": true,
+        "six_not_lower": false,
+        "falls_not_higher": true,
+        "lane_not_higher": false,
+        "world_zero_including_flat": true,
+        "flat_falls_not_higher": true,
+        "flat_speed_not_lower": true,
+        "fixed_v5_flat_branch": true,
+        "flat_lane_not_higher": true,
+        "strict_terrain_gain": true,
+        "fixed_v5_per_environment_flat_raw_identity": true
+      },
+      "flat_expected_identity_observed": true
+    },
+    "family_level_partition_verified": true
+  },
+  "secondary": {
+    "rough_totals": {
+      "v14": {
+        "n": 20,
+        "one": 4,
+        "six": 3,
+        "falls": 12,
+        "lane": 4,
+        "world": 0
+      },
+      "control": {
+        "n": 20,
+        "one": 10,
+        "six": 9,
+        "falls": 4,
+        "lane": 5,
+        "world": 0
+      },
+      "stable": {
+        "n": 20,
+        "one": 10,
+        "six": 8,
+        "falls": 8,
+        "lane": 3,
+        "world": 0
+      },
+      "history_original": {
+        "n": 20,
+        "one": 10,
+        "six": 5,
+        "falls": 10,
+        "lane": 0,
+        "world": 0
+      },
+      "history_control": {
+        "n": 20,
+        "one": 11,
+        "six": 11,
+        "falls": 7,
+        "lane": 2,
+        "world": 0
+      },
+      "history_stable": {
+        "n": 20,
+        "one": 6,
+        "six": 6,
+        "falls": 11,
+        "lane": 2,
+        "world": 0
+      }
+    },
+    "flat_totals": {
+      "v14": {
+        "n": 0,
+        "one": 0,
+        "six": 0,
+        "falls": 0,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": null,
+        "mean_duty": null
+      },
+      "control": {
+        "n": 0,
+        "one": 0,
+        "six": 0,
+        "falls": 0,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": null,
+        "mean_duty": null
+      },
+      "stable": {
+        "n": 0,
+        "one": 0,
+        "six": 0,
+        "falls": 0,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": null,
+        "mean_duty": null
+      },
+      "history_original": {
+        "n": 0,
+        "one": 0,
+        "six": 0,
+        "falls": 0,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": null,
+        "mean_duty": null
+      },
+      "history_control": {
+        "n": 0,
+        "one": 0,
+        "six": 0,
+        "falls": 0,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": null,
+        "mean_duty": null
+      },
+      "history_stable": {
+        "n": 0,
+        "one": 0,
+        "six": 0,
+        "falls": 0,
+        "lane": 0,
+        "world": 0,
+        "mean_speed": null,
+        "mean_duty": null
+      }
+    },
+    "per_map_partition": {
+      "v14/geometry96": {
+        "rough": {
+          "n": 10,
+          "one": 2,
+          "six": 2,
+          "falls": 5,
+          "lane": 2,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "v14/geometry97": {
+        "rough": {
+          "n": 10,
+          "one": 2,
+          "six": 1,
+          "falls": 7,
+          "lane": 2,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "control/geometry96": {
+        "rough": {
+          "n": 10,
+          "one": 5,
+          "six": 4,
+          "falls": 3,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "control/geometry97": {
+        "rough": {
+          "n": 10,
+          "one": 5,
+          "six": 5,
+          "falls": 1,
+          "lane": 4,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "stable/geometry96": {
+        "rough": {
+          "n": 10,
+          "one": 4,
+          "six": 3,
+          "falls": 6,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "stable/geometry97": {
+        "rough": {
+          "n": 10,
+          "one": 6,
+          "six": 5,
+          "falls": 2,
+          "lane": 2,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_original/geometry96": {
+        "rough": {
+          "n": 10,
+          "one": 4,
+          "six": 1,
+          "falls": 6,
+          "lane": 0,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_original/geometry97": {
+        "rough": {
+          "n": 10,
+          "one": 6,
+          "six": 4,
+          "falls": 4,
+          "lane": 0,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_control/geometry96": {
+        "rough": {
+          "n": 10,
+          "one": 5,
+          "six": 5,
+          "falls": 4,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_control/geometry97": {
+        "rough": {
+          "n": 10,
+          "one": 6,
+          "six": 6,
+          "falls": 3,
+          "lane": 1,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_stable/geometry96": {
+        "rough": {
+          "n": 10,
+          "one": 4,
+          "six": 4,
+          "falls": 4,
+          "lane": 2,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      },
+      "history_stable/geometry97": {
+        "rough": {
+          "n": 10,
+          "one": 2,
+          "six": 2,
+          "falls": 7,
+          "lane": 0,
+          "world": 0
+        },
+        "flat": {
+          "n": 0,
+          "one": 0,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0
+        }
+      }
+    },
+    "actor_stable_vs_control": {
+      "passed": false,
+      "checks": {
+        "one_not_lower": true,
+        "six_not_lower": false,
+        "falls_not_higher": false,
+        "lane_not_higher": true,
+        "world_zero_including_flat": true,
+        "strict_terrain_gain": true
+      }
+    },
+    "hybrid_stable_vs_control": {
+      "passed": false,
+      "checks": {
+        "one_not_lower": false,
+        "six_not_lower": false,
+        "falls_not_higher": false,
+        "lane_not_higher": true,
+        "world_zero_including_flat": true,
+        "strict_terrain_gain": false
+      }
+    },
+    "family_level_partition_verified": true
+  },
+  "frozen_summary_agreement": true,
+  "raw_hybrid_flat_identity": true,
+  "outcome": "All four fixed comparisons remain FAIL."
+}

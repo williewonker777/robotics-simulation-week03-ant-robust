@@ -1,0 +1,4936 @@
+{
+  "verdict": "INTEGRITY_CLEAR_PERFORMANCE_REPORTED_SEPARATELY",
+  "scope": "Independent raw first-episode audit; no universal/statistical/real-robot claim.",
+  "created_utc": "2026-09-23T01:58:34.587696+09:00",
+  "provenance": {
+    "v15_sources": 17,
+    "legacy_sources": 106,
+    "legacy_reference_models": 8,
+    "new_final_models": 2,
+    "all_hashes_match": true,
+    "command_records": 38,
+    "preholdout_prefix_lines": 14,
+    "holdout_cache_96_97_exact": true
+  },
+  "files": [
+    {
+      "path": "evaluations/v14__geometry96_reset60.json",
+      "sha256": "b4ec9e550859e3af9bfdcfe4b1175446ecce5d8d6eda18e3e4087d1e62f513aa",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/v14__geometry97_reset61.json",
+      "sha256": "34c3ce70de241097eb0d4b55da6eb80fc0bf672fae8068b988be6138c753c688",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/control__geometry96_reset60.json",
+      "sha256": "90b769d906fb8d5ec9c15d4901a0c5bb5354676ffe40054451a8f7261a40c0bd",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/control__geometry97_reset61.json",
+      "sha256": "7952d1f41badc693d43326b2ac6c11e1e7713f6d90c390310ad9aa45a23d299f",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/stable__geometry96_reset60.json",
+      "sha256": "a11596f4d32f215aa19d6ebc58d9f57e0c54453e71ac293c0cf6108c20892b62",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/stable__geometry97_reset61.json",
+      "sha256": "2280a116494fb53e2bd261a0060d1720a37c275412f97f5d8eb5f6cbedbb7b87",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/history_original__geometry96_reset60.json",
+      "sha256": "c494fa9d5a22e8d811e1e403198c8f6c45ef9d804ad06d9ef14507a0fd96df65",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/history_original__geometry97_reset61.json",
+      "sha256": "c148738a7cfa9918de6a33b04ab46a3d67f44bb451dd316f045f2eb546440ef2",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/history_control__geometry96_reset60.json",
+      "sha256": "dc18760d5abe69d80177055fa6b0822893107d6bcf217e9e63bac7a1d590dbae",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/history_control__geometry97_reset61.json",
+      "sha256": "5b3ff6c03889628d13057dbc5a530bb16a0d3e767ea88f1fb9d1f0634762ff61",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/history_stable__geometry96_reset60.json",
+      "sha256": "a23d0baf4834fbaf18e50c0dbb3bb4c57912e484f2405d5e63256439a017e937",
+      "episodes": 175
+    },
+    {
+      "path": "evaluations/history_stable__geometry97_reset61.json",
+      "sha256": "50f1316a9a13ec35128bd5eed13ac39bdff68ad5b1b0026d3d64adc2a81f0eaf",
+      "episodes": 175
+    },
+    {
+      "path": "horizon/v14__geometry96_reset60.json",
+      "sha256": "f6fc05f34a4047d7f2e4430f622427f0b95509ac1b846eaa8a1a80cb15a92885",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/v14__geometry97_reset61.json",
+      "sha256": "01bf4bcd586503553501c09fd8c75c9d5916cddf8fcdb5129fec2f2fd39f1c01",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/control__geometry96_reset60.json",
+      "sha256": "c6c76b185328b61d13505779d5e86b1cba395010291e9611e5eeaf99943e9554",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/control__geometry97_reset61.json",
+      "sha256": "5ba84befd0f595bf52b927bcd667f5821d9d48108381cb553da858506d7648a9",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/stable__geometry96_reset60.json",
+      "sha256": "c8f07167462aa606e8630e30929711776e3216c9d88046de345d715331f2f5db",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/stable__geometry97_reset61.json",
+      "sha256": "9ad54464820c13249b6a437ae4be2ec0312f611ce3fc5df1ef305a4da7ea6491",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/history_original__geometry96_reset60.json",
+      "sha256": "049ccc81aaa2b9ca292e98b6fd9f267d68406a1be59c3c0c408fb31ae5a35a8e",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/history_original__geometry97_reset61.json",
+      "sha256": "aae4e07f56a7d63b1f45586664c197ff171df6839e0c98c6952b16f62acd0ae3",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/history_control__geometry96_reset60.json",
+      "sha256": "391e50e2d3ae33642d5bb9eb43911529ffd2dded31734d13b7c39f6208ccc5ac",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/history_control__geometry97_reset61.json",
+      "sha256": "a028e87c5f827d91ebb524b1fa4db3213161aac445fe8afd627ef135155217f1",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/history_stable__geometry96_reset60.json",
+      "sha256": "397b35887856781b2dd78dcddfa8734d72f17d113f9d90ef954002f25303167c",
+      "episodes": 10
+    },
+    {
+      "path": "horizon/history_stable__geometry97_reset61.json",
+      "sha256": "7e172f88afbded8d7e3ca5eb6c723d95568c786a72efb16ea5332036384b91f8",
+      "episodes": 10
+    }
+  ],
+  "initial_pairing": {
+    "scenario_map_conditions": 4,
+    "all_six_controllers_exact_root_joint_91d_prefix_rng_pairing": true
+  },
+  "hybrid_flat_raw_identity": {
+    "maps": 2,
+    "controllers": [
+      "history_original",
+      "history_control",
+      "history_stable"
+    ],
+    "all_fields_exact": true
+  },
+  "primary_16s": {
+    "totals": {
+      "v14": {
+        "n": 350,
+        "one": 313,
+        "six": 178,
+        "falls": 29,
+        "lane": 8,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 5,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": 10.45925511673792
+      },
+      "control": {
+        "n": 350,
+        "one": 315,
+        "six": 207,
+        "falls": 33,
+        "lane": 2,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 3,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": 9.961144877207094
+      },
+      "stable": {
+        "n": 350,
+        "one": 322,
+        "six": 205,
+        "falls": 24,
+        "lane": 3,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 3,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": 10.083410298938887
+      },
+      "history_original": {
+        "n": 350,
+        "one": 311,
+        "six": 194,
+        "falls": 34,
+        "lane": 2,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 5,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": 8.717657560922673,
+        "flat_mean_v10_duty": 0.0
+      },
+      "history_control": {
+        "n": 350,
+        "one": 312,
+        "six": 200,
+        "falls": 37,
+        "lane": 1,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 5,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": 8.717657560922673,
+        "flat_mean_v10_duty": 0.0
+      },
+      "history_stable": {
+        "n": 350,
+        "one": 315,
+        "six": 194,
+        "falls": 31,
+        "lane": 2,
+        "world": 0,
+        "flat_n": 50,
+        "flat_falls": 5,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": 8.717657560922673,
+        "flat_mean_v10_duty": 0.0
+      }
+    },
+    "family": {
+      "v14": {
+        "rough": {
+          "n": 50,
+          "one": 44,
+          "six": 36,
+          "falls": 5,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope": {
+          "n": 50,
+          "one": 47,
+          "six": 25,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs": {
+          "n": 50,
+          "one": 45,
+          "six": 18,
+          "falls": 3,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves": {
+          "n": 50,
+          "one": 42,
+          "six": 28,
+          "falls": 6,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles": {
+          "n": 50,
+          "one": 49,
+          "six": 23,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones": {
+          "n": 50,
+          "one": 41,
+          "six": 3,
+          "falls": 6,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat": {
+          "n": 50,
+          "one": 45,
+          "six": 45,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 50,
+          "flat_falls": 5,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 10.45925511673792
+        }
+      },
+      "control": {
+        "rough": {
+          "n": 50,
+          "one": 45,
+          "six": 37,
+          "falls": 4,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope": {
+          "n": 50,
+          "one": 46,
+          "six": 30,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs": {
+          "n": 50,
+          "one": 46,
+          "six": 19,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves": {
+          "n": 50,
+          "one": 46,
+          "six": 40,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles": {
+          "n": 50,
+          "one": 43,
+          "six": 31,
+          "falls": 6,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones": {
+          "n": 50,
+          "one": 42,
+          "six": 3,
+          "falls": 8,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat": {
+          "n": 50,
+          "one": 47,
+          "six": 47,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 50,
+          "flat_falls": 3,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.961144877207094
+        }
+      },
+      "stable": {
+        "rough": {
+          "n": 50,
+          "one": 43,
+          "six": 37,
+          "falls": 6,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope": {
+          "n": 50,
+          "one": 46,
+          "six": 27,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs": {
+          "n": 50,
+          "one": 48,
+          "six": 19,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves": {
+          "n": 50,
+          "one": 47,
+          "six": 37,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles": {
+          "n": 50,
+          "one": 47,
+          "six": 29,
+          "falls": 1,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones": {
+          "n": 50,
+          "one": 44,
+          "six": 9,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat": {
+          "n": 50,
+          "one": 47,
+          "six": 47,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 50,
+          "flat_falls": 3,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 10.083410298938887
+        }
+      },
+      "history_original": {
+        "rough": {
+          "n": 50,
+          "one": 44,
+          "six": 39,
+          "falls": 6,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope": {
+          "n": 50,
+          "one": 46,
+          "six": 26,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs": {
+          "n": 50,
+          "one": 46,
+          "six": 18,
+          "falls": 3,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves": {
+          "n": 50,
+          "one": 46,
+          "six": 36,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles": {
+          "n": 50,
+          "one": 45,
+          "six": 26,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones": {
+          "n": 50,
+          "one": 39,
+          "six": 4,
+          "falls": 7,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat": {
+          "n": 50,
+          "one": 45,
+          "six": 45,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 50,
+          "flat_falls": 5,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 8.717657560922673
+        }
+      },
+      "history_control": {
+        "rough": {
+          "n": 50,
+          "one": 44,
+          "six": 38,
+          "falls": 6,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope": {
+          "n": 50,
+          "one": 45,
+          "six": 29,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs": {
+          "n": 50,
+          "one": 47,
+          "six": 20,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves": {
+          "n": 50,
+          "one": 44,
+          "six": 39,
+          "falls": 6,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles": {
+          "n": 50,
+          "one": 42,
+          "six": 27,
+          "falls": 8,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones": {
+          "n": 50,
+          "one": 45,
+          "six": 2,
+          "falls": 4,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat": {
+          "n": 50,
+          "one": 45,
+          "six": 45,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 50,
+          "flat_falls": 5,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 8.717657560922673
+        }
+      },
+      "history_stable": {
+        "rough": {
+          "n": 50,
+          "one": 44,
+          "six": 39,
+          "falls": 6,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope": {
+          "n": 50,
+          "one": 46,
+          "six": 27,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs": {
+          "n": 50,
+          "one": 47,
+          "six": 19,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves": {
+          "n": 50,
+          "one": 46,
+          "six": 38,
+          "falls": 4,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles": {
+          "n": 50,
+          "one": 45,
+          "six": 25,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones": {
+          "n": 50,
+          "one": 42,
+          "six": 1,
+          "falls": 4,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat": {
+          "n": 50,
+          "one": 45,
+          "six": 45,
+          "falls": 5,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 50,
+          "flat_falls": 5,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 8.717657560922673
+        }
+      }
+    },
+    "family_level": {
+      "v14": {
+        "rough/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level2": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 8,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 1,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 5,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 8,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level3": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 1,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 1,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level2": {
+          "n": 10,
+          "one": 8,
+          "six": 7,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 3,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 7,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 6,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level4": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 2,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 1,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level2": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 1,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level3": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 1,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 1,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 10.288017722655987
+        },
+        "flat/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 1,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 10.10762050662722
+        },
+        "flat/level2": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 2,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.167804737488167
+        },
+        "flat/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 11.29549207687378
+        },
+        "flat/level4": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 1,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 11.437340540044447
+        }
+      },
+      "control": {
+        "rough/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 7,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 2,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level3": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level4": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 1,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 9,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level3": {
+          "n": 10,
+          "one": 5,
+          "six": 3,
+          "falls": 4,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level4": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 2,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 1,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level2": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 10.161017894744873
+        },
+        "flat/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 1,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.383888781421325
+        },
+        "flat/level2": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 2,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 8.554123011535527
+        },
+        "flat/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 10.897567558288575
+        },
+        "flat/level4": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 10.809127140045167
+        }
+      },
+      "stable": {
+        "rough/level0": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 2,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 7,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 9,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 8,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 8,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 2,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level4": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 5,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level1": {
+          "n": 10,
+          "one": 8,
+          "six": 4,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level4": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 10.672705554962159
+        },
+        "flat/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 1,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.37706585441317
+        },
+        "flat/level2": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 2,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 8.642235167258802
+        },
+        "flat/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 11.110466003417969
+        },
+        "flat/level4": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 10.614578914642333
+        }
+      },
+      "history_original": {
+        "rough/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 8,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 4,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 6,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 7,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 1,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level4": {
+          "n": 10,
+          "one": 6,
+          "six": 0,
+          "falls": 3,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 7,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 8,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 7,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 2,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 2,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 2,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level2": {
+          "n": 10,
+          "one": 6,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level3": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level4": {
+          "n": 10,
+          "one": 6,
+          "six": 0,
+          "falls": 2,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.864949703216553
+        },
+        "flat/level1": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 2,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 7.8967477513211115
+        },
+        "flat/level2": {
+          "n": 10,
+          "one": 7,
+          "six": 7,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 3,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 6.959206822319965
+        },
+        "flat/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.107997941970826
+        },
+        "flat/level4": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.759385585784912
+        }
+      },
+      "history_control": {
+        "rough/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 2,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 8,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level3": {
+          "n": 10,
+          "one": 8,
+          "six": 1,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level4": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level3": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 2,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level0": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level1": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 8,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 3,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 1,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 1,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level2": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 0,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level4": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.864949703216553
+        },
+        "flat/level1": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 2,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 7.8967477513211115
+        },
+        "flat/level2": {
+          "n": 10,
+          "one": 7,
+          "six": 7,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 3,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 6.959206822319965
+        },
+        "flat/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.107997941970826
+        },
+        "flat/level4": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.759385585784912
+        }
+      },
+      "history_stable": {
+        "rough/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "rough/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 3,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 7,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "slope/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 9,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level2": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stairs/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level3": {
+          "n": 10,
+          "one": 9,
+          "six": 8,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "waves/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 1,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 9,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level1": {
+          "n": 10,
+          "one": 9,
+          "six": 8,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level2": {
+          "n": 10,
+          "one": 9,
+          "six": 7,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 1,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "obstacles/level4": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level0": {
+          "n": 10,
+          "one": 9,
+          "six": 1,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level1": {
+          "n": 10,
+          "one": 10,
+          "six": 0,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level2": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 1,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level3": {
+          "n": 10,
+          "one": 8,
+          "six": 0,
+          "falls": 1,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "stepping_stones/level4": {
+          "n": 10,
+          "one": 7,
+          "six": 0,
+          "falls": 1,
+          "lane": 1,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        },
+        "flat/level0": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.864949703216553
+        },
+        "flat/level1": {
+          "n": 10,
+          "one": 8,
+          "six": 8,
+          "falls": 2,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 2,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 7.8967477513211115
+        },
+        "flat/level2": {
+          "n": 10,
+          "one": 7,
+          "six": 7,
+          "falls": 3,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 3,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 6.959206822319965
+        },
+        "flat/level3": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.107997941970826
+        },
+        "flat/level4": {
+          "n": 10,
+          "one": 10,
+          "six": 10,
+          "falls": 0,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 10,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": 9.759385585784912
+        }
+      }
+    },
+    "actor_stable_vs_control": {
+      "passed": false,
+      "checks": {
+        "one_not_lower": true,
+        "six_not_lower": false,
+        "falls_not_higher": true,
+        "lane_not_higher": false,
+        "world_zero_including_flat": true,
+        "flat_falls_not_higher": true,
+        "flat_speed_strictly_higher": true
+      }
+    },
+    "hybrid_stable_vs_control": {
+      "passed": false,
+      "checks": {
+        "one_not_lower": true,
+        "six_not_lower": false,
+        "falls_not_higher": true,
+        "lane_not_higher": false,
+        "world_zero_including_flat": true,
+        "flat_falls_not_higher": true,
+        "flat_speed_not_lower": true,
+        "fixed_v5_flat_branch": true,
+        "flat_lane_not_higher": true,
+        "strict_terrain_gain": true,
+        "fixed_v5_per_environment_flat_raw_identity": true
+      }
+    },
+    "telemetry": {
+      "v14": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 159169,
+              "valid_steps": 159169,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.677696259334802,
+                "absolute_heading_error": 0.2938981579886324,
+                "absolute_yaw_error": 2.6635364657870007,
+                "reward": -0.5871399373122406
+              },
+              "sums": {
+                "absolute_lateral_velocity": 107868.2359020611,
+                "absolute_heading_error": 46779.47590889263,
+                "absolute_yaw_error": 423952.4357228511,
+                "reward": -93454.47668205202
+              }
+            },
+            {
+              "active_steps": 157760,
+              "valid_steps": 157760,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.6658086852370575,
+                "absolute_heading_error": 0.29474003246283326,
+                "absolute_yaw_error": 2.662459743626357,
+                "reward": -0.5853203426464697
+              },
+              "sums": {
+                "absolute_lateral_velocity": 105037.9781829982,
+                "absolute_heading_error": 46498.18752133657,
+                "absolute_yaw_error": 420029.6491544941,
+                "reward": -92340.13725590706
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 159169,
+              "valid_steps": 159099,
+              "body_clearance_sum": 78977.41482403874,
+              "absolute_body_error_sum": 14085.790723860264,
+              "reward_sum": -61027.24777041044,
+              "foot_clearance_sum": 79939.28789953142,
+              "foot_samples": 636388,
+              "low_speed_steps": 14301,
+              "valid_coverage": 0.9995602158711809,
+              "body_clearance_mean": 0.49640421890796765,
+              "absolute_body_error_mean": 0.08853475335395108
+            },
+            {
+              "active_steps": 157760,
+              "valid_steps": 157628,
+              "body_clearance_sum": 78121.32609331608,
+              "absolute_body_error_sum": 13804.903694182634,
+              "reward_sum": -59402.49086807882,
+              "foot_clearance_sum": 78271.61477977037,
+              "foot_samples": 630494,
+              "low_speed_steps": 14527,
+              "valid_coverage": 0.9991632860040568,
+              "body_clearance_mean": 0.4956056417217504,
+              "absolute_body_error_mean": 0.08757900686542133
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 0,
+              "alpha_sum": 159169.0,
+              "v10_target_steps": 159169
+            },
+            {
+              "switches": 0,
+              "alpha_sum": 157760.0,
+              "v10_target_steps": 157760
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "control": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 157031,
+              "valid_steps": 157031,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.6526635816350114,
+                "absolute_heading_error": 0.31162528125523264,
+                "absolute_yaw_error": 2.5732971463214582,
+                "reward": -0.5813373354211537
+              },
+              "sums": {
+                "absolute_lateral_velocity": 102488.41488772747,
+                "absolute_heading_error": 48934.82954079044,
+                "absolute_yaw_error": 404087.4241840049,
+                "reward": -91287.98311851919
+              }
+            },
+            {
+              "active_steps": 158047,
+              "valid_steps": 158047,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.64728678059286,
+                "absolute_heading_error": 0.31260266510293905,
+                "absolute_yaw_error": 2.57442955916818,
+                "reward": -0.5807076894049077
+              },
+              "sums": {
+                "absolute_lateral_velocity": 102301.73381235974,
+                "absolute_heading_error": 49405.913411524205,
+                "absolute_yaw_error": 406880.86853785336,
+                "reward": -91779.10818737745
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 157031,
+              "valid_steps": 156974,
+              "body_clearance_sum": 76868.37675562501,
+              "absolute_body_error_sum": 13181.116935521364,
+              "reward_sum": -54460.46513477415,
+              "foot_clearance_sum": 76557.97961277515,
+              "foot_samples": 627893,
+              "low_speed_steps": 13018,
+              "valid_coverage": 0.9996370143474855,
+              "body_clearance_mean": 0.48968859018452104,
+              "absolute_body_error_mean": 0.08397006469556337
+            },
+            {
+              "active_steps": 158047,
+              "valid_steps": 157916,
+              "body_clearance_sum": 77101.31234577298,
+              "absolute_body_error_sum": 13356.15100055933,
+              "reward_sum": -54377.577587896674,
+              "foot_clearance_sum": 76130.09190540016,
+              "foot_samples": 631649,
+              "low_speed_steps": 13075,
+              "valid_coverage": 0.9991711326377597,
+              "body_clearance_mean": 0.48824256152494355,
+              "absolute_body_error_mean": 0.08457756655791263
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 0,
+              "alpha_sum": 157031.0,
+              "v10_target_steps": 157031
+            },
+            {
+              "switches": 0,
+              "alpha_sum": 158047.0,
+              "v10_target_steps": 158047
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "stable": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 161012,
+              "valid_steps": 161012,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.6546746597933603,
+                "absolute_heading_error": 0.305477023895508,
+                "absolute_yaw_error": 2.646829250324424,
+                "reward": -0.5781368346259184
+              },
+              "sums": {
+                "absolute_lateral_velocity": 105410.47632264852,
+                "absolute_heading_error": 49185.466571463534,
+                "absolute_yaw_error": 426171.2712532362,
+                "reward": -93086.96801678836
+              }
+            },
+            {
+              "active_steps": 158399,
+              "valid_steps": 158399,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.6470116491593412,
+                "absolute_heading_error": 0.3143134552974763,
+                "absolute_yaw_error": 2.6441504426401896,
+                "reward": -0.5795468165671372
+              },
+              "sums": {
+                "absolute_lateral_velocity": 102485.99821519048,
+                "absolute_heading_error": 49786.93700566495,
+                "absolute_yaw_error": 418830.78596376337,
+                "reward": -91799.63619741797
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 161012,
+              "valid_steps": 160925,
+              "body_clearance_sum": 78814.50536713004,
+              "absolute_body_error_sum": 13842.16904208064,
+              "reward_sum": -58283.328520387324,
+              "foot_clearance_sum": 80740.06494612992,
+              "foot_samples": 643695,
+              "low_speed_steps": 13958,
+              "valid_coverage": 0.9994596676024148,
+              "body_clearance_mean": 0.48975923795016335,
+              "absolute_body_error_mean": 0.08601627492360193
+            },
+            {
+              "active_steps": 158399,
+              "valid_steps": 158268,
+              "body_clearance_sum": 77695.67543360591,
+              "absolute_body_error_sum": 13477.40024831891,
+              "reward_sum": -55938.42903413269,
+              "foot_clearance_sum": 79598.54768583924,
+              "foot_samples": 633060,
+              "low_speed_steps": 14446,
+              "valid_coverage": 0.9991729745768597,
+              "body_clearance_mean": 0.4909120948871908,
+              "absolute_body_error_mean": 0.08515556049434447
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 0,
+              "alpha_sum": 161012.0,
+              "v10_target_steps": 161012
+            },
+            {
+              "switches": 0,
+              "alpha_sum": 158399.0,
+              "v10_target_steps": 158399
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "history_original": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 153662,
+              "valid_steps": 153662,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5686316213913977,
+                "absolute_heading_error": 0.31795953599259885,
+                "absolute_yaw_error": 2.6848153725627957,
+                "reward": -0.5500828408190571
+              },
+              "sums": {
+                "absolute_lateral_velocity": 87377.07220624495,
+                "absolute_heading_error": 48858.29821969473,
+                "absolute_yaw_error": 412554.0997787443,
+                "reward": -84526.82948593795
+              }
+            },
+            {
+              "active_steps": 155796,
+              "valid_steps": 155796,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5608862798526477,
+                "absolute_heading_error": 0.31841445345312086,
+                "absolute_yaw_error": 2.6753848439987795,
+                "reward": -0.547069844409302
+              },
+              "sums": {
+                "absolute_lateral_velocity": 87383.8388559231,
+                "absolute_heading_error": 49607.69819018242,
+                "absolute_yaw_error": 416814.2571556339,
+                "reward": -85231.29347959161
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 153662,
+              "valid_steps": 153605,
+              "body_clearance_sum": 74458.4779740274,
+              "absolute_body_error_sum": 14439.205598503351,
+              "reward_sum": -63809.955109564326,
+              "foot_clearance_sum": 73468.12415352091,
+              "foot_samples": 614416,
+              "low_speed_steps": 14005,
+              "valid_coverage": 0.9996290559800081,
+              "body_clearance_mean": 0.484739936681927,
+              "absolute_body_error_mean": 0.09400218481496925
+            },
+            {
+              "active_steps": 155796,
+              "valid_steps": 155665,
+              "body_clearance_sum": 75583.98027259111,
+              "absolute_body_error_sum": 14794.42729100585,
+              "reward_sum": -65087.695854849495,
+              "foot_clearance_sum": 74228.84978993982,
+              "foot_samples": 622630,
+              "low_speed_steps": 15053,
+              "valid_coverage": 0.9991591568461321,
+              "body_clearance_mean": 0.48555539313648616,
+              "absolute_body_error_mean": 0.0950401650403485
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 219,
+              "alpha_sum": 95507.88891762495,
+              "v10_target_steps": 95916
+            },
+            {
+              "switches": 234,
+              "alpha_sum": 96312.44447535276,
+              "v10_target_steps": 96745
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "history_control": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 154157,
+              "valid_steps": 154157,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5755942567471296,
+                "absolute_heading_error": 0.3355729242393884,
+                "absolute_yaw_error": 2.6364553458118247,
+                "reward": -0.5524449993497145
+              },
+              "sums": {
+                "absolute_lateral_velocity": 88731.88383736726,
+                "absolute_heading_error": 51730.91528197139,
+                "absolute_yaw_error": 406428.04674431344,
+                "reward": -85163.26376475394
+              }
+            },
+            {
+              "active_steps": 155607,
+              "valid_steps": 155607,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5651382162344579,
+                "absolute_heading_error": 0.33433626922772663,
+                "absolute_yaw_error": 2.642257083186878,
+                "reward": -0.5476123855926875
+              },
+              "sums": {
+                "absolute_lateral_velocity": 87939.46241359529,
+                "absolute_heading_error": 52025.06384571886,
+                "absolute_yaw_error": 411153.69794346055,
+                "reward": -85212.32048492134
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 154157,
+              "valid_steps": 154100,
+              "body_clearance_sum": 75841.26783409715,
+              "absolute_body_error_sum": 13441.166641324759,
+              "reward_sum": -57664.53297753968,
+              "foot_clearance_sum": 77240.57622110099,
+              "foot_samples": 616390,
+              "low_speed_steps": 13418,
+              "valid_coverage": 0.9996302470857632,
+              "body_clearance_mean": 0.4921561832193196,
+              "absolute_body_error_mean": 0.0872236641228083
+            },
+            {
+              "active_steps": 155607,
+              "valid_steps": 155476,
+              "body_clearance_sum": 76614.51097431779,
+              "absolute_body_error_sum": 13686.04504302144,
+              "reward_sum": -58589.48367061311,
+              "foot_clearance_sum": 77144.60720335692,
+              "foot_samples": 621867,
+              "low_speed_steps": 14216,
+              "valid_coverage": 0.9991581355594543,
+              "body_clearance_mean": 0.49277387490235014,
+              "absolute_body_error_mean": 0.08802673752232783
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 218,
+              "alpha_sum": 96111.44447327405,
+              "v10_target_steps": 96517
+            },
+            {
+              "switches": 236,
+              "alpha_sum": 95699.00003153831,
+              "v10_target_steps": 96120
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "history_stable": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 154794,
+              "valid_steps": 154794,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.573898186496549,
+                "absolute_heading_error": 0.33970252365467646,
+                "absolute_yaw_error": 2.697547633229161,
+                "reward": -0.5518741531867378
+              },
+              "sums": {
+                "absolute_lateral_velocity": 88835.9958805468,
+                "absolute_heading_error": 52583.912446601986,
+                "absolute_yaw_error": 417564.1883380747,
+                "reward": -85426.80766838789
+              }
+            },
+            {
+              "active_steps": 156941,
+              "valid_steps": 156941,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5654790958653628,
+                "absolute_heading_error": 0.3403607648457742,
+                "absolute_yaw_error": 2.6922388351679816,
+                "reward": -0.5466349979919551
+              },
+              "sums": {
+                "absolute_lateral_velocity": 88746.8547842059,
+                "absolute_heading_error": 53416.55879566065,
+                "absolute_yaw_error": 422522.65503009816,
+                "reward": -85789.44321985543
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 154794,
+              "valid_steps": 154737,
+              "body_clearance_sum": 76332.070050776,
+              "absolute_body_error_sum": 13589.186893343925,
+              "reward_sum": -58705.98223231819,
+              "foot_clearance_sum": 79094.81299306452,
+              "foot_samples": 618944,
+              "low_speed_steps": 14076,
+              "valid_coverage": 0.9996317686732044,
+              "body_clearance_mean": 0.4933019901560454,
+              "absolute_body_error_mean": 0.08782118622788296
+            },
+            {
+              "active_steps": 156941,
+              "valid_steps": 156806,
+              "body_clearance_sum": 77510.71206906438,
+              "absolute_body_error_sum": 13727.538742899895,
+              "reward_sum": -59224.099527697734,
+              "foot_clearance_sum": 80029.77859811485,
+              "foot_samples": 627190,
+              "low_speed_steps": 14512,
+              "valid_coverage": 0.9991398041302145,
+              "body_clearance_mean": 0.4943096059402343,
+              "absolute_body_error_mean": 0.0875447287916272
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 231,
+              "alpha_sum": 96784.33336446434,
+              "v10_target_steps": 97182
+            },
+            {
+              "switches": 241,
+              "alpha_sum": 97262.4444764331,
+              "v10_target_steps": 97663
+            }
+          ],
+          "aggregate": {}
+        }
+      }
+    }
+  },
+  "secondary_64s": {
+    "totals": {
+      "v14": {
+        "n": 20,
+        "one": 4,
+        "six": 3,
+        "falls": 12,
+        "lane": 4,
+        "world": 0,
+        "flat_n": 0,
+        "flat_falls": 0,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": null
+      },
+      "control": {
+        "n": 20,
+        "one": 10,
+        "six": 9,
+        "falls": 4,
+        "lane": 5,
+        "world": 0,
+        "flat_n": 0,
+        "flat_falls": 0,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": null
+      },
+      "stable": {
+        "n": 20,
+        "one": 10,
+        "six": 8,
+        "falls": 8,
+        "lane": 3,
+        "world": 0,
+        "flat_n": 0,
+        "flat_falls": 0,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": null
+      },
+      "history_original": {
+        "n": 20,
+        "one": 10,
+        "six": 5,
+        "falls": 10,
+        "lane": 0,
+        "world": 0,
+        "flat_n": 0,
+        "flat_falls": 0,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": null,
+        "flat_mean_v10_duty": null
+      },
+      "history_control": {
+        "n": 20,
+        "one": 11,
+        "six": 11,
+        "falls": 7,
+        "lane": 2,
+        "world": 0,
+        "flat_n": 0,
+        "flat_falls": 0,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": null,
+        "flat_mean_v10_duty": null
+      },
+      "history_stable": {
+        "n": 20,
+        "one": 6,
+        "six": 6,
+        "falls": 11,
+        "lane": 2,
+        "world": 0,
+        "flat_n": 0,
+        "flat_falls": 0,
+        "flat_lane": 0,
+        "flat_world": 0,
+        "flat_mean_episode_speed": null,
+        "flat_mean_v10_duty": null
+      }
+    },
+    "family": {
+      "v14": {
+        "stepping_stones": {
+          "n": 20,
+          "one": 4,
+          "six": 3,
+          "falls": 12,
+          "lane": 4,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "control": {
+        "stepping_stones": {
+          "n": 20,
+          "one": 10,
+          "six": 9,
+          "falls": 4,
+          "lane": 5,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "stable": {
+        "stepping_stones": {
+          "n": 20,
+          "one": 10,
+          "six": 8,
+          "falls": 8,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "history_original": {
+        "stepping_stones": {
+          "n": 20,
+          "one": 10,
+          "six": 5,
+          "falls": 10,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "history_control": {
+        "stepping_stones": {
+          "n": 20,
+          "one": 11,
+          "six": 11,
+          "falls": 7,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "history_stable": {
+        "stepping_stones": {
+          "n": 20,
+          "one": 6,
+          "six": 6,
+          "falls": 11,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      }
+    },
+    "family_level": {
+      "v14": {
+        "stepping_stones/level4": {
+          "n": 20,
+          "one": 4,
+          "six": 3,
+          "falls": 12,
+          "lane": 4,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "control": {
+        "stepping_stones/level4": {
+          "n": 20,
+          "one": 10,
+          "six": 9,
+          "falls": 4,
+          "lane": 5,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "stable": {
+        "stepping_stones/level4": {
+          "n": 20,
+          "one": 10,
+          "six": 8,
+          "falls": 8,
+          "lane": 3,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "history_original": {
+        "stepping_stones/level4": {
+          "n": 20,
+          "one": 10,
+          "six": 5,
+          "falls": 10,
+          "lane": 0,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "history_control": {
+        "stepping_stones/level4": {
+          "n": 20,
+          "one": 11,
+          "six": 11,
+          "falls": 7,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      },
+      "history_stable": {
+        "stepping_stones/level4": {
+          "n": 20,
+          "one": 6,
+          "six": 6,
+          "falls": 11,
+          "lane": 2,
+          "world": 0,
+          "flat_n": 0,
+          "flat_falls": 0,
+          "flat_lane": 0,
+          "flat_world": 0,
+          "flat_mean_episode_speed": null
+        }
+      }
+    },
+    "actor_stable_vs_control": {
+      "passed": false,
+      "checks": {
+        "one_not_lower": true,
+        "six_not_lower": false,
+        "falls_not_higher": false,
+        "lane_not_higher": true,
+        "world_zero_including_flat": true,
+        "strict_terrain_gain": true
+      }
+    },
+    "hybrid_stable_vs_control": {
+      "passed": false,
+      "checks": {
+        "one_not_lower": false,
+        "six_not_lower": false,
+        "falls_not_higher": false,
+        "lane_not_higher": true,
+        "world_zero_including_flat": true,
+        "strict_terrain_gain": false
+      }
+    },
+    "telemetry": {
+      "v14": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 25775,
+              "valid_steps": 25775,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5599251815191979,
+                "absolute_heading_error": 0.38955165758998056,
+                "absolute_yaw_error": 2.3758153696192355,
+                "reward": -0.5244497383346151
+              },
+              "sums": {
+                "absolute_lateral_velocity": 14432.071553657326,
+                "absolute_heading_error": 10040.69397438175,
+                "absolute_yaw_error": 61236.64115193579,
+                "reward": -13517.692005574703
+              }
+            },
+            {
+              "active_steps": 23221,
+              "valid_steps": 23221,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.6099219550447404,
+                "absolute_heading_error": 0.4352014958939995,
+                "absolute_yaw_error": 2.6565342819595155,
+                "reward": -0.5777514421759145
+              },
+              "sums": {
+                "absolute_lateral_velocity": 14162.997718093917,
+                "absolute_heading_error": 10105.813936154562,
+                "absolute_yaw_error": 61687.382561381906,
+                "reward": -13415.966238766909
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 25775,
+              "valid_steps": 25775,
+              "body_clearance_sum": 11592.955477803946,
+              "absolute_body_error_sum": 3770.046093404293,
+              "reward_sum": -19905.659908102134,
+              "foot_clearance_sum": 11301.929214656353,
+              "foot_samples": 103096,
+              "low_speed_steps": 15321,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.4497751882756138,
+              "absolute_body_error_mean": 0.14626754969560787
+            },
+            {
+              "active_steps": 23221,
+              "valid_steps": 23221,
+              "body_clearance_sum": 10428.936667203903,
+              "absolute_body_error_sum": 3408.49171680212,
+              "reward_sum": -17642.277858961363,
+              "foot_clearance_sum": 11727.217260807753,
+              "foot_samples": 92883,
+              "low_speed_steps": 12835,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.4491166042463246,
+              "absolute_body_error_mean": 0.14678488078903235
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 0,
+              "alpha_sum": 25775.0,
+              "v10_target_steps": 25775
+            },
+            {
+              "switches": 0,
+              "alpha_sum": 23221.0,
+              "v10_target_steps": 23221
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "control": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 28823,
+              "valid_steps": 28823,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5479821409104473,
+                "absolute_heading_error": 0.3948715000759627,
+                "absolute_yaw_error": 2.3522277014005684,
+                "reward": -0.5136022992144931
+              },
+              "sums": {
+                "absolute_lateral_velocity": 15794.489247461821,
+                "absolute_heading_error": 11381.381246689474,
+                "absolute_yaw_error": 67798.25903746858,
+                "reward": -14803.559070259333
+              }
+            },
+            {
+              "active_steps": 34593,
+              "valid_steps": 34593,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5947459051707462,
+                "absolute_heading_error": 0.40559962455461185,
+                "absolute_yaw_error": 2.520300731122118,
+                "reward": -0.5572454891772606
+              },
+              "sums": {
+                "absolute_lateral_velocity": 20574.045097571623,
+                "absolute_heading_error": 14030.907812217687,
+                "absolute_yaw_error": 87184.76319170743,
+                "reward": -19276.793207108974
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 28823,
+              "valid_steps": 28823,
+              "body_clearance_sum": 12974.364286363125,
+              "absolute_body_error_sum": 4000.5699379742146,
+              "reward_sum": -21889.491135035263,
+              "foot_clearance_sum": 11932.98785674572,
+              "foot_samples": 115289,
+              "low_speed_steps": 17424,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.4501392737176257,
+              "absolute_body_error_mean": 0.13879783291032213
+            },
+            {
+              "active_steps": 34593,
+              "valid_steps": 34593,
+              "body_clearance_sum": 15558.270545989275,
+              "absolute_body_error_sum": 4949.131647706032,
+              "reward_sum": -25806.42222236754,
+              "foot_clearance_sum": 16203.30282318592,
+              "foot_samples": 138372,
+              "low_speed_steps": 20150,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.4497519887257328,
+              "absolute_body_error_mean": 0.14306743120590962
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 0,
+              "alpha_sum": 28823.0,
+              "v10_target_steps": 28823
+            },
+            {
+              "switches": 0,
+              "alpha_sum": 34593.0,
+              "v10_target_steps": 34593
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "stable": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 21719,
+              "valid_steps": 21719,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5290813622000411,
+                "absolute_heading_error": 0.6930333218342757,
+                "absolute_yaw_error": 2.4859626741263066,
+                "reward": -0.5270057275216878
+              },
+              "sums": {
+                "absolute_lateral_velocity": 11491.118105622692,
+                "absolute_heading_error": 15051.990716918634,
+                "absolute_yaw_error": 53992.62331934925,
+                "reward": -11446.037396043539
+              }
+            },
+            {
+              "active_steps": 33553,
+              "valid_steps": 33553,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5954563803617965,
+                "absolute_heading_error": 0.37730631078499705,
+                "absolute_yaw_error": 2.7207052894244734,
+                "reward": -0.577117743539877
+              },
+              "sums": {
+                "absolute_lateral_velocity": 19979.347930279357,
+                "absolute_heading_error": 12659.758645769005,
+                "absolute_yaw_error": 91287.82457605936,
+                "reward": -19364.031648993492
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 21719,
+              "valid_steps": 21719,
+              "body_clearance_sum": 9357.763352692127,
+              "absolute_body_error_sum": 3461.45184764266,
+              "reward_sum": -16923.758559113718,
+              "foot_clearance_sum": 8862.426787808537,
+              "foot_samples": 86868,
+              "low_speed_steps": 13197,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.43085608696036315,
+              "absolute_body_error_mean": 0.1593743656541581
+            },
+            {
+              "active_steps": 33553,
+              "valid_steps": 33553,
+              "body_clearance_sum": 15121.369806408882,
+              "absolute_body_error_sum": 4737.377100914717,
+              "reward_sum": -24728.02771872586,
+              "foot_clearance_sum": 17197.35977821052,
+              "foot_samples": 134205,
+              "low_speed_steps": 18164,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.4506711711742283,
+              "absolute_body_error_mean": 0.14119086522560476
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 0,
+              "alpha_sum": 21719.0,
+              "v10_target_steps": 21719
+            },
+            {
+              "switches": 0,
+              "alpha_sum": 33553.0,
+              "v10_target_steps": 33553
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "history_original": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 23804,
+              "valid_steps": 23804,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.4664237232409074,
+                "absolute_heading_error": 0.39051734075876704,
+                "absolute_yaw_error": 2.1249440852130888,
+                "reward": -0.4553838325362359
+              },
+              "sums": {
+                "absolute_lateral_velocity": 11102.75030802656,
+                "absolute_heading_error": 9295.87477942169,
+                "absolute_yaw_error": 50582.16900441237,
+                "reward": -10839.95674969256
+              }
+            },
+            {
+              "active_steps": 27681,
+              "valid_steps": 27681,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5454184578299283,
+                "absolute_heading_error": 0.3946455328553137,
+                "absolute_yaw_error": 2.4721952954813284,
+                "reward": -0.5353764349678891
+              },
+              "sums": {
+                "absolute_lateral_velocity": 15097.728331190243,
+                "absolute_heading_error": 10924.182994967938,
+                "absolute_yaw_error": 68432.83797421865,
+                "reward": -14819.75509634614
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 23804,
+              "valid_steps": 23804,
+              "body_clearance_sum": 10253.359195113182,
+              "absolute_body_error_sum": 3765.1128827631474,
+              "reward_sum": -19841.360749637744,
+              "foot_clearance_sum": 14724.518111407757,
+              "foot_samples": 95212,
+              "low_speed_steps": 15738,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.4307410181109554,
+              "absolute_body_error_mean": 0.15817143684940124
+            },
+            {
+              "active_steps": 27681,
+              "valid_steps": 27681,
+              "body_clearance_sum": 12180.25684505701,
+              "absolute_body_error_sum": 4231.573196411133,
+              "reward_sum": -21697.500463384018,
+              "foot_clearance_sum": 14266.902736991644,
+              "foot_samples": 110718,
+              "low_speed_steps": 15967,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.44002228405971644,
+              "absolute_body_error_mean": 0.1528692314732536
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 11,
+              "alpha_sum": 22985.000001095235,
+              "v10_target_steps": 23021
+            },
+            {
+              "switches": 17,
+              "alpha_sum": 26590.00000216812,
+              "v10_target_steps": 26626
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "history_control": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 29068,
+              "valid_steps": 29068,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.6168038358113962,
+                "absolute_heading_error": 0.42859814708144556,
+                "absolute_yaw_error": 2.6360286780939264,
+                "reward": -0.5812876378696756
+              },
+              "sums": {
+                "absolute_lateral_velocity": 17929.253899365664,
+                "absolute_heading_error": 12458.490939363459,
+                "absolute_yaw_error": 76624.08161483426,
+                "reward": -16896.86905759573
+              }
+            },
+            {
+              "active_steps": 30051,
+              "valid_steps": 30051,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5994167431502389,
+                "absolute_heading_error": 0.4119604395729021,
+                "absolute_yaw_error": 2.5984665767614583,
+                "reward": -0.5711713379271228
+              },
+              "sums": {
+                "absolute_lateral_velocity": 18013.07254840783,
+                "absolute_heading_error": 12379.823169605283,
+                "absolute_yaw_error": 78086.51909825858,
+                "reward": -17164.26987604797
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 29068,
+              "valid_steps": 29068,
+              "body_clearance_sum": 12934.291903048754,
+              "absolute_body_error_sum": 4261.573490649462,
+              "reward_sum": -22081.254521751714,
+              "foot_clearance_sum": 14268.88495953381,
+              "foot_samples": 116268,
+              "low_speed_steps": 15755,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.44496669543995987,
+              "absolute_body_error_mean": 0.1466070417864821
+            },
+            {
+              "active_steps": 30051,
+              "valid_steps": 30051,
+              "body_clearance_sum": 13451.32963514328,
+              "absolute_body_error_sum": 4372.864012479782,
+              "reward_sum": -22921.712058603873,
+              "foot_clearance_sum": 15121.069201514125,
+              "foot_samples": 120198,
+              "low_speed_steps": 16658,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.4476167061043985,
+              "absolute_body_error_mean": 0.14551475865960475
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 20,
+              "alpha_sum": 28039.00000280142,
+              "v10_target_steps": 28071
+            },
+            {
+              "switches": 20,
+              "alpha_sum": 28900.33333605528,
+              "v10_target_steps": 28930
+            }
+          ],
+          "aggregate": {}
+        }
+      },
+      "history_stable": {
+        "direction": {
+          "maps": [
+            {
+              "active_steps": 28849,
+              "valid_steps": 28849,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5971065443129956,
+                "absolute_heading_error": 0.39009053075069966,
+                "absolute_yaw_error": 2.717118284799457,
+                "reward": -0.5780125829406064
+              },
+              "sums": {
+                "absolute_lateral_velocity": 17225.92669688561,
+                "absolute_heading_error": 11253.721721626935,
+                "absolute_yaw_error": 78386.14539817953,
+                "reward": -16675.085005253553
+              }
+            },
+            {
+              "active_steps": 23814,
+              "valid_steps": 23814,
+              "invalid_steps": 0,
+              "valid_coverage": 1.0,
+              "means": {
+                "absolute_lateral_velocity": 0.5039728820386434,
+                "absolute_heading_error": 0.3718965072057492,
+                "absolute_yaw_error": 2.3335946719835414,
+                "reward": -0.48380122567788475
+              },
+              "sums": {
+                "absolute_lateral_velocity": 12001.610212868254,
+                "absolute_heading_error": 8856.34342259771,
+                "absolute_yaw_error": 55572.223518616054,
+                "reward": -11521.242388293147
+              }
+            }
+          ],
+          "aggregate": {}
+        },
+        "posture": {
+          "maps": [
+            {
+              "active_steps": 28849,
+              "valid_steps": 28849,
+              "body_clearance_sum": 12910.970752298832,
+              "absolute_body_error_sum": 4121.500910311937,
+              "reward_sum": -21386.37265712966,
+              "foot_clearance_sum": 14448.195835098624,
+              "foot_samples": 115389,
+              "low_speed_steps": 15359,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.44753616251165834,
+              "absolute_body_error_mean": 0.14286460225005848
+            },
+            {
+              "active_steps": 23814,
+              "valid_steps": 23814,
+              "body_clearance_sum": 10054.051847308874,
+              "absolute_body_error_sum": 4095.487795740366,
+              "reward_sum": -18638.36904600038,
+              "foot_clearance_sum": 11394.455636441708,
+              "foot_samples": 95250,
+              "low_speed_steps": 14467,
+              "valid_coverage": 1.0,
+              "body_clearance_mean": 0.4221908057154982,
+              "absolute_body_error_mean": 0.17197815552785614
+            }
+          ],
+          "aggregate": {}
+        },
+        "routing": {
+          "maps": [
+            {
+              "switches": 23,
+              "alpha_sum": 27723.000003241003,
+              "v10_target_steps": 27759
+            },
+            {
+              "switches": 15,
+              "alpha_sum": 22769.00000181049,
+              "v10_target_steps": 22805
+            }
+          ],
+          "aggregate": {}
+        }
+      }
+    }
+  },
+  "limitations": [
+    "One training seed and two maps are exploratory, not universal or statistically significant.",
+    "Direction/posture telemetry is conditional on visited valid states, not matched-state causal evidence.",
+    "Secondary 64s diagnostic cannot override a primary 16s failure.",
+    "World-Z angular velocity is not Euler yaw derivative under tilt; ideal depth does not establish real-camera or robot safety."
+  ]
+}

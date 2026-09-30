@@ -1,0 +1,46 @@
+{
+  "arm": "no_cost",
+  "created_utc": "2026-09-28T13:53:04.618806+00:00",
+  "source_initial_audit": "artifacts/terrain_demo/lr_continuation_v24/training/low53_initial.json",
+  "rollout": {
+    "samples": 8000,
+    "sampled_rows": 32720863,
+    "valid_rows": 32720863,
+    "invalid_rows": 0,
+    "invalid_fraction": 0.0,
+    "excluded_done_rows": 38194,
+    "excluded_wrap_rows": 17718,
+    "reward": -0.11997093305502507,
+    "bounded_cost": 0.11997093305502507,
+    "contact_fraction": 0.1508219502599647,
+    "no_contact_fraction": 0.5923072805745199,
+    "contacted_tip_speed": 1.2426105726760024,
+    "terrain_contact_fraction": 0.13154563173397532,
+    "flat_contact_fraction": 0.019276318151814405,
+    "per_foot_contact_fraction": [
+      0.1573232992475121,
+      0.15897475333022668,
+      0.21323120881464097,
+      0.07375853922264537
+    ],
+    "per_target_per_foot_contact_fraction": [
+      [
+        0.1344715174324225,
+        0.022851781721694962
+      ],
+      [
+        0.1432884307258857,
+        0.0156863225823102
+      ],
+      [
+        0.19052749794438337,
+        0.022703711038748103
+      ],
+      [
+        0.057895081997614214,
+        0.01586345728597626
+      ]
+    ]
+  },
+  "passive_post_action": true
+}

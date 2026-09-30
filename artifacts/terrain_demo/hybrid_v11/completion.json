@@ -1,0 +1,62 @@
+{
+  "completed_at": "2026-09-22T09:42:17.755325+00:00",
+  "implementation_and_test_status": "COMPLETE",
+  "promotion_passed": false,
+  "recommended_default": "frozen_v5",
+  "new_training_transitions": 0,
+  "tests_passed": 269,
+  "tests_log": "outputs/hybrid_v11_20260922/final_tests.log",
+  "compileall": "PASS",
+  "git_diff_check": "PASS for currenttrackedchanges; newtexttrailingwhitespace separatelychecked",
+  "static_analysis_gap": "ruff,mypy,pyright notinstalled; AST/compile, targetedregressions andindependentcodereview used instead. No dependenciesadded.",
+  "viewer_validation": {
+    "local_links": 10,
+    "javascript_syntax": "PASS"
+  },
+  "independent_audit": {
+    "recovery_overlay_files": 2,
+    "aborted_attempt01_files": 3,
+    "aborted_attempt01_commands": 8,
+    "model_files": 4,
+    "teacher_identity_models": 3,
+    "source_files": 63,
+    "archived_source_files": 53,
+    "episode_files": 33,
+    "episodes": 3465,
+    "successful_commands": 39
+  },
+  "aborted_attempt01": {
+    "heldout_files": 3,
+    "episodes_excluded": 525,
+    "unchanged_and_preserved": true,
+    "cause": "unconfirmed startup observation mismatch"
+  },
+  "attempt02": "One same-condition operational retry, no tuning or source/model changes; exact pairing passed.",
+  "media": {
+    "videos": 3,
+    "frames_each": 480,
+    "seconds_each": 16,
+    "full_decode": "PASS"
+  },
+  "gpu_jobs_remaining": 0,
+  "git_commit_or_remote_operations": false,
+  "changed_code": [
+    "src/week03_ant/hybrid_gate.py",
+    "src/week03_ant/hybrid_telemetry.py",
+    "scripts/evaluate_hybrid.py",
+    "scripts/probe_hybrid_scan.py",
+    "scripts/run_hybrid_experiment.py",
+    "scripts/summarize_hybrid.py",
+    "tests/test_hybrid_gate.py",
+    "tests/test_hybrid_telemetry.py",
+    "tests/test_hybrid_summary.py"
+  ],
+  "reuse": "Existing frozen actors,825rayencoder,task,scene,physics andHorizonEpisodeTracker reused; no newpolicy/dependency.",
+  "risks": [
+    "Overallfalls/lanecriteria fail despitebetter six-tile progress.",
+    "Two maps andidealdepth only; no realRGBD/hardware safety claim.",
+    "Excludedattemptinitialobservationissue cause notfixed/proven.",
+    "Unknownscan holds currentmode, notaguaranteedfailsafe."
+  ],
+  "workflow_doctor": "PASS"
+}

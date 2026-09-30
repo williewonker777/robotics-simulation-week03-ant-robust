@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-09-28T11:18:36.018142+00:00",
+  "reviewer": "/root/v23_harness_summary",
+  "recorded_by": "leader from native independent read-only review",
+  "verdict": "APPROVE standalone verifier implementation; actual complete runtime audit pending",
+  "post_experiment_verifier_sha256": {
+    "scripts/audit_paired_horizon_v23_raw.py": "65e4ad1d101cc648a946f0448091ca62e2d20af6b07f2c3d721538b9aeac5b04",
+    "tests/test_paired_horizon_raw_v23.py": "27dfc5ef9c5cec09548a89c65eb3b53c973d69e6e9cbf34df337ff65983d7104"
+  },
+  "cpu_tests": 85,
+  "static_checks": [
+    "pyflakes",
+    "mypy bounded",
+    "compileall",
+    "git diff --check"
+  ],
+  "initial_findings": [
+    "Development group proof swaps could bypass full64 control parity.",
+    "Individually valid hit times could put first-six before first-one."
+  ],
+  "resolution": [
+    "Require group phase/instrumented contract before processing and exactly2full64parity checks.",
+    "Reject first-one later than first-six; formerly accepted mutations now reproduced as rejected.",
+    "Also require window16primary/window64secondary report labels."
+  ],
+  "scope": "Stdlib-only independent arithmetic,12 full-mixed comparisons per window/subgroups/seed ranges,parent once,49 duration selectors,float32 threshold and real terminated flags,29 command and hash provenance. No independent simulator reconstruction."
+}

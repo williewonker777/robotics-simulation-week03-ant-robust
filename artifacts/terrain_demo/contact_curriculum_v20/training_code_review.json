@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-09-28T03:18:44.689378+00:00",
+  "reviewer_role": "code-reviewer",
+  "verdict": "APPROVE",
+  "scope": "v20 training source, not GPU/evaluation/outcome",
+  "source_sha256": {
+    "src/week03_ant/contact_curriculum_v20.py": "55bb8ac7fbb5315b15b3d8112e5b65f362358f9a4585113f2a823c8bb2a85c58",
+    "src/week03_ant/curriculum_study_v20.py": "26b7d444cbd6bc627e38c725bdcdadeab4454d801a227d92abb839e412f30129",
+    "src/week03_ant/tasks/contact_curriculum_v20.py": "7ee3329d5be7c59200dba738e49343581c11a16d35c622a8d35abec5f7e81dab",
+    "src/week03_ant/tasks/contact_curriculum_v20_cfg.py": "b43ec3eccc9e58df3ea5320c991c0cd1052cf1f288bf178407a1dffc80d380e5",
+    "scripts/contact_curriculum_v20.py": "ed96b5c8771e4f8a729e8bfd18f6bfa749b952368e131da3f9cd06eca3db9bc8",
+    "scripts/run_curriculum_training_v20.py": "5cd0952250ba031da62da72fbacdb55f27c668bf199a45e79ba0acbcf7548365",
+    "tests/test_contact_curriculum_v20.py": "7b849822bb24ae0b8f1bd3ed176dc16f9f47a5eacd3133116674d7456ae1827b",
+    "tests/test_curriculum_training_v20.py": "acc1bd4d5a6a2b0e32a7337439e0f2f935ce84e1e9358aab0e6030358a3a5079",
+    "tests/test_curriculum_harness_v20.py": "fac6ff092e9eea80117673b9316c0cfde4337832564103571dd5e2c6304d6050",
+    "docs/experiment_plans/contact_curriculum_v20.md": "fd905b119773883dad1cca93969b5938ac50cbdd20b2664016792c05f4613e70"
+  },
+  "targeted_tests": 52,
+  "remaining_issues": 0,
+  "conditions": [
+    "paired preflight",
+    "paired capacity",
+    "training freeze"
+  ],
+  "repairs": [
+    "raw evidence before audit, including learn failure",
+    "infrastructure-only documented development retries"
+  ]
+}

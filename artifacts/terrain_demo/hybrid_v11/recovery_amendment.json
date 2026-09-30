@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-09-22T09:11:53.394081+00:00",
+  "max_full_batch_retry": 1,
+  "attempt02_path": "artifacts/terrain_demo/hybrid_v11/attempt02",
+  "model_config_unchanged": true,
+  "original_artifacts_sha256": {
+    "artifacts/terrain_demo/hybrid_v11/evaluations/v10_seed42__geometry68_reset42.json": "c5f669c407c84f1b6624f3f74a2df3cc84f78c51ef4df47a1611f922f7500776",
+    "artifacts/terrain_demo/hybrid_v11/evaluations/v5_seed42__geometry68_reset42.json": "ce8b7c27f1770f8f14e9acb5c79624db5c10b561aacc398674618c29aad36b13",
+    "artifacts/terrain_demo/hybrid_v11/evaluations/v5_seed42__geometry69_reset43.json": "9a7f9a950b6f7077b3d1cc2853325c80fa750c1a8240b1540b3091dccd1f77b9",
+    "artifacts/terrain_demo/hybrid_v11/commands.jsonl": "43b688392b710b3fb21ce3c9d034a244713e5a10693b2606895c9b1c3bbaa716",
+    "artifacts/terrain_demo/hybrid_v11/frozen.json": "31d67ce2c24d09b24356fe48065dfe5027b882ce305d20f6b7f3c81f845daa41"
+  },
+  "overlay_sha256": {
+    "outputs/hybrid_v11_20260922/run_attempt02.py": "6f5e2ea615f2fc565d48501a44fc796f20ab7ce218c82e242ae4bddad507ddac",
+    "outputs/hybrid_v11_20260922/independent_audit_attempt02.py": "78bc37fdafbaac119d4a00e3c3d6bbb041e7450417df1aba4af2bc76a4aa6f10"
+  },
+  "status_attempt01": "ABORTED_VALIDITY_FAILURE; all3partial heldout files excluded from final metrics",
+  "reason": "Exact initial observation SHA differs between originalv5 andv10 at geometry68/reset42; root/joint states identical. Cause unconfirmed. Three diagnostic initial-only recaptures are mutually bit-identical; they cannot prove what differed in the original untensored observation.",
+  "same_conditions": {
+    "holdouts": [
+      [
+        68,
+        42
+      ],
+      [
+        69,
+        43
+      ]
+    ],
+    "primary_files": 14,
+    "horizon_files": 14,
+    "preset": "cautious",
+    "policy_seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "rules": [
+    "Run whole28-file heldout batch from scratch once in attempt02. No reused originalholdout files.",
+    "Keep original63source/PLAN/model/config freeze unchanged; only artifact/log destinations differ.",
+    "Exact initial state AND observation SHA checks remain mandatory. Abort at first repeated mismatch.",
+    "No threshold/seed/map/model selection or change based on either performance results.",
+    "Preserve original3JSON and original8command ledger records byte-for-byte at their currentpaths.",
+    "Retry remains same-condition operational replication, not a newly unused holdout."
+  ],
+  "diagnostic_only_files": [
+    "outputs/hybrid_v11_20260922/probe_initial_observations.py",
+    "outputs/hybrid_v11_20260922/initial_v5_a.pt",
+    "outputs/hybrid_v11_20260922/initial_v10_a.pt",
+    "outputs/hybrid_v11_20260922/initial_v5_b.pt"
+  ],
+  "review": "Independent code-reviewer approved a single same-condition whole-batch retry; additionalretries/hashrelaxationprohibited."
+}

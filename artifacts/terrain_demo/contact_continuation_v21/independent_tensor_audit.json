@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-09-28T05:01:31.082495+00:00",
+  "verdict": "PASS",
+  "reviewer": "independent native code-reviewer",
+  "method": "Independent CPU checkpoint deserialization and raw log/schedule validation, no production validation imports",
+  "final": {
+    "sha256": "298f96135dad68c5d45b081187cad57d932e56d6967c84e24a099f79f2460aee",
+    "source_copy_equal": true,
+    "iteration": 249,
+    "finite_policy_tensors": 33,
+    "policy_values": 400631,
+    "std_min": 0.1722848564,
+    "std_max": 0.2202703655,
+    "v5_teacher_equal_tensors": 8,
+    "actor_tensors_changed_from_parent": 9,
+    "finite_adam_states": 19,
+    "finite_adam_tensors": 57,
+    "adam_values": 550253,
+    "all_adam_steps": 5000
+  },
+  "main": {
+    "iterations": 250,
+    "transitions": 32768000,
+    "finite_scalar_tags": 38,
+    "finite_scalar_values": 9500,
+    "contact_slip_episode_reward_always_zero": true,
+    "reward_calls": 8000,
+    "valid_reward_rows": 32768000,
+    "nonzero_raw_mean_steps": 8000,
+    "exactly_zero_coefficients_scaled_rewards_dt_penalty": true,
+    "raw_dt_arithmetic_verified": true,
+    "historical_initial_state_rng_policy_config_contact_pairing": true,
+    "actual_horizon_pairing": true,
+    "actual_horizon_sha256": "a3188ddd990cb8e5d582853dc38049a1df3cf44164c8069af60fd811834237d2",
+    "horizon_nonzero": 4093,
+    "horizon_minimum": 0,
+    "horizon_maximum": 959
+  },
+  "training_validation_sha256": "0a3a387e67b0941a64914c9d55c8f3563787c559e50a932b371081c30c8df578",
+  "trained_models_sha256": "e946ecb4b26e3ae707073d8b17ea9ebe9c6701378920196805a2ded6e314ba0e",
+  "limitations": "Finite learned parameters do not prove improved behavior; initialization/horizon comparisons use recorded instrumented hashes. One training seed and historical cohort remain limitations."
+}

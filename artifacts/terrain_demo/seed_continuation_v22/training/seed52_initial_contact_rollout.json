@@ -1,0 +1,46 @@
+{
+  "arm": "no_cost",
+  "created_utc": "2026-09-28T07:34:37.330776+00:00",
+  "source_initial_audit": "artifacts/terrain_demo/seed_continuation_v22/training/seed52_initial.json",
+  "rollout": {
+    "samples": 8000,
+    "sampled_rows": 32720789,
+    "valid_rows": 32720789,
+    "invalid_rows": 0,
+    "invalid_fraction": 0.0,
+    "excluded_done_rows": 38296,
+    "excluded_wrap_rows": 17725,
+    "reward": -0.12153841405830833,
+    "bounded_cost": 0.12153841405830833,
+    "contact_fraction": 0.15232013110719442,
+    "no_contact_fraction": 0.5871904366002421,
+    "contacted_tip_speed": 1.2556140363791646,
+    "terrain_contact_fraction": 0.13284331547287886,
+    "flat_contact_fraction": 0.01947681535820017,
+    "per_foot_contact_fraction": [
+      0.15582399683909057,
+      0.16219798773474328,
+      0.21642070377509445,
+      0.07483783655507291
+    ],
+    "per_target_per_foot_contact_fraction": [
+      [
+        0.13305623826713076,
+        0.02276775842568931
+      ],
+      [
+        0.14634512977200193,
+        0.01585285772126269
+      ],
+      [
+        0.19315286570966383,
+        0.023267838063320556
+      ],
+      [
+        0.05881902926628545,
+        0.016018807267893887
+      ]
+    ]
+  },
+  "passive_post_action": true
+}

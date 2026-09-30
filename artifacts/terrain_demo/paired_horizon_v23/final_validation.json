@@ -1,0 +1,155 @@
+{
+  "completed_utc": "2026-09-28T11:55:07.624457+00:00",
+  "status": "complete",
+  "experiment": "v23 same-first-episode paired16s/64s evaluation, unchanged all-seed v22 models",
+  "outcome": "All6 matching-parent gates fail at primary16s pooled and both maps. At64s history51/53 parent comparisons pass both maps; history52 pooled pass fails each map. Report late gains and late losses separately, retain default.",
+  "pooled_passes": {
+    "16": [
+      "history_seed53_vs_history_seed51",
+      "history_seed53_vs_history_seed52"
+    ],
+    "64": [
+      "history_seed51_vs_history_parent",
+      "history_seed52_vs_history_parent",
+      "history_seed53_vs_history_parent",
+      "history_seed53_vs_history_seed52"
+    ]
+  },
+  "per_map_passes": {
+    "16": {
+      "geometry117_reset77": [
+        "history_seed53_vs_history_seed51",
+        "history_seed53_vs_history_seed52"
+      ],
+      "geometry118_reset78": [
+        "history_seed53_vs_history_seed51",
+        "history_seed53_vs_history_seed52"
+      ]
+    },
+    "64": {
+      "geometry117_reset77": [
+        "history_seed51_vs_history_parent",
+        "history_seed53_vs_history_parent"
+      ],
+      "geometry118_reset78": [
+        "history_seed51_vs_history_parent",
+        "history_seed53_vs_history_parent",
+        "history_seed53_vs_history_seed51",
+        "history_seed53_vs_history_seed52"
+      ]
+    }
+  },
+  "both_map_passes": {
+    "16": [
+      "history_seed53_vs_history_seed51",
+      "history_seed53_vs_history_seed52"
+    ],
+    "64": [
+      "history_seed51_vs_history_parent",
+      "history_seed53_vs_history_parent"
+    ]
+  },
+  "new_training_transitions": 0,
+  "new_optimizer_steps": 0,
+  "holdout_physical_rollouts": 16,
+  "holdout_first_episodes": 2800,
+  "dependent_holdout_window_observations": 5600,
+  "development_first_episodes": 350,
+  "development_window_observations": 630,
+  "gpu_commands": 29,
+  "gpu_failures": 0,
+  "scored_retries": 0,
+  "cpu_validation": {
+    "created_utc": "2026-09-28T11:53:45.072589+00:00",
+    "tests": 1673,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 31.885,
+    "test_timestamp": "2026-09-28T20:44:30.344990+09:00",
+    "source_sha256": {
+      "src/week03_ant/paired_horizon_study_v23.py": "4a02639464ccc2c42da9076cd0d38270d37d6eaa519fcc388313da86182754be",
+      "src/week03_ant/paired_horizon_v23.py": "f1db92018b0032cc7de39ab155514dfc3358959c768740d9fa0f128cb424ce2b",
+      "scripts/evaluate_paired_horizon_v23.py": "eb1e6ad0375fd0f867de7712953e8257edf41dc2e024f18c4aeb233c5119533a",
+      "tests/test_paired_horizon_v23.py": "fb331cdf6dbdcf630094e027071e69777050df56606280eff017fb488f67900a",
+      "scripts/run_paired_horizon_v23.py": "4d843ff7fd6c33c2b11c0489ec3341ef696c0da0dadf017426d9709417be188e",
+      "scripts/summarize_paired_horizon_v23.py": "69ffedca58c73cb79ae673af85bdb9af557c7d35e7da9baf61ca8c8842787501",
+      "tests/test_paired_horizon_study_v23.py": "4b200086511a38b479a75176b6ff811aa5d038033be289155eb8b8a0a693ba2d",
+      "docs/experiment_plans/paired_horizon_v23.md": "9cad43bfb5cdac74c841d84580a41c830c37d75589e304d909b9be36cd64dd4e"
+    },
+    "log": "outputs/paired_horizon_v23_20260928/final_pytest.log",
+    "log_sha256": "d327cd969601ada33979c4ed8b699df23b7587605eb2ff37462f0ec4f2eb2929",
+    "xml": "outputs/paired_horizon_v23_20260928/final_pytest.xml",
+    "xml_sha256": "2d4a1fba750ebe9065a6bd844ccb15a7a14bff4010d62f9e12729077fd24913f"
+  },
+  "static_python_files": 9,
+  "experimental_definition_sha256": {
+    "src/week03_ant/paired_horizon_study_v23.py": "4a02639464ccc2c42da9076cd0d38270d37d6eaa519fcc388313da86182754be",
+    "src/week03_ant/paired_horizon_v23.py": "f1db92018b0032cc7de39ab155514dfc3358959c768740d9fa0f128cb424ce2b",
+    "scripts/evaluate_paired_horizon_v23.py": "eb1e6ad0375fd0f867de7712953e8257edf41dc2e024f18c4aeb233c5119533a",
+    "tests/test_paired_horizon_v23.py": "fb331cdf6dbdcf630094e027071e69777050df56606280eff017fb488f67900a",
+    "scripts/run_paired_horizon_v23.py": "4d843ff7fd6c33c2b11c0489ec3341ef696c0da0dadf017426d9709417be188e",
+    "scripts/summarize_paired_horizon_v23.py": "69ffedca58c73cb79ae673af85bdb9af557c7d35e7da9baf61ca8c8842787501",
+    "tests/test_paired_horizon_study_v23.py": "4b200086511a38b479a75176b6ff811aa5d038033be289155eb8b8a0a693ba2d",
+    "docs/experiment_plans/paired_horizon_v23.md": "9cad43bfb5cdac74c841d84580a41c830c37d75589e304d909b9be36cd64dd4e"
+  },
+  "post_experiment_verifier_sha256": {
+    "scripts/audit_paired_horizon_v23_raw.py": "65e4ad1d101cc648a946f0448091ca62e2d20af6b07f2c3d721538b9aeac5b04",
+    "tests/test_paired_horizon_raw_v23.py": "27dfc5ef9c5cec09548a89c65eb3b53c973d69e6e9cbf34df337ff65983d7104"
+  },
+  "legacy_sources_verified": 227,
+  "legacy_checkpoint_paths_verified": 22,
+  "model_sha256": {
+    "parent": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+    "seed51": "298f96135dad68c5d45b081187cad57d932e56d6967c84e24a099f79f2460aee",
+    "seed52": "7a7ec701a6477b88cfd368f38b0d20087daacfb0981d3e88d21e176a290c3e97",
+    "seed53": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65"
+  },
+  "default_policy_changed": false,
+  "default_v5_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "document_sha256": {
+    "README.md": "090b1de7f46b6db6eba9760a3a71d53964f5035294375ae8ef0bcaf79b17a811",
+    "docs/PAIRED_HORIZON_V23.md": "88f3dab86c23ddc853fcad500af5ff79c5623b8a1f2ac7cb380202295c81ed60",
+    "docs/EXPERIMENT_HISTORY.md": "2c4165c8faffcf4212296a6c6e46a8f97598a74153d5e69bbb57b918f6e8bbea",
+    "docs/PUBLICATION.md": "e2aaee7587c899c62e5a0b008700ea30f0db4a59be6330bdd05c92215ddc93eb",
+    "docs/experiment_plans/paired_horizon_v23.md": "9cad43bfb5cdac74c841d84580a41c830c37d75589e304d909b9be36cd64dd4e",
+    "docs/experiment_plans/manifest.json": "fdbbf2c0adf304f577d13c53aadab2c6fb253033c5de2b13ed1671f33e9637e1"
+  },
+  "local_document_links_checked": 215,
+  "plan_copies_verified": 19,
+  "result_table_rows_verified": 24,
+  "evidence_sha256": {
+    "artifacts/terrain_demo/paired_horizon_v23/auditor_review.json": "35672efa1b3deafafceadcbbf2dc54509dead996735c3e354ab9c29680e6b2e3",
+    "artifacts/terrain_demo/paired_horizon_v23/design_review.json": "0bc6844dbef5d4422e530e28f4dc3e4c845a366fe9d9c79fceec3748c3e1afef",
+    "artifacts/terrain_demo/paired_horizon_v23/development.json": "6edbd220869ffed04c94ec0f75d0ced64678b3fdaec6a7c4531d4ede3c0e5f1d",
+    "artifacts/terrain_demo/paired_horizon_v23/document_validation.json": "7407ce10ffab4e4bdcfa0e44e93639907ed3c0c8a6a827776215b55b36529ef2",
+    "artifacts/terrain_demo/paired_horizon_v23/evaluation_inputs.json": "d65082e18fb0fbf29a73d7e555332b5167ed57cc4ab3c9a918184db979d0a391",
+    "artifacts/terrain_demo/paired_horizon_v23/final_cpu_validation.json": "c030a3a8f3773bf433d4cf400892ba37fd7d64d65df1de61860f11c024bf6b9c",
+    "artifacts/terrain_demo/paired_horizon_v23/frozen.json": "22a7d0db0085d4edb971764ec9ef389cda5e77e043aae55b3928c45185d3dbf3",
+    "artifacts/terrain_demo/paired_horizon_v23/historical_references.json": "a3d9e0c3407b0de9da5784f22a227bff37ac4fb69954e6cc41f1a6c6bd6d59d0",
+    "artifacts/terrain_demo/paired_horizon_v23/implementation_review.json": "f3f32c9d5508ef06d169f702190449ade5ff03cf22e67867f2b4df8206e1d30e",
+    "artifacts/terrain_demo/paired_horizon_v23/independent_development_audit.json": "2c0e3a718d1c35742ed3495b3c6c5c7e06a125d9a7d7a3fc446ec0d64b994f5c",
+    "artifacts/terrain_demo/paired_horizon_v23/independent_final_review.json": "0a1306fdd5d6cf9ccdc74451fe813131d6edc0b71ddff59edaf96be7b08ea04f",
+    "artifacts/terrain_demo/paired_horizon_v23/independent_policy_audit.json": "5d30abb353f158874cc21385205e9f92c16b66383cef729ef4b7f6edd07190d8",
+    "artifacts/terrain_demo/paired_horizon_v23/independent_raw_audit.json": "081467160c395ef7a2bacdb5a52b2e962ef1c849cfaecc1ce81b902e5c3d9d87",
+    "artifacts/terrain_demo/paired_horizon_v23/pre_gpu_validation.json": "d7fed494161b7a3c678c4db7ff1502d910c7a4516dd794cdfa3a43fa3005bf1e",
+    "artifacts/terrain_demo/paired_horizon_v23/preholdout_ledger.json": "b67479b4add5c2b470cbac6cbad215fba71537680327a8252b7d9385243c8f9f",
+    "artifacts/terrain_demo/paired_horizon_v23/reference_check.json": "4ac843fc05a79827ab665394bf3ed4da5bfa1c88b7ee8fc48d414fba7115011b",
+    "artifacts/terrain_demo/paired_horizon_v23/static_validation.json": "5bdd35b28344b2a21df91d48739c53a4848975de1826f4e61ba1dfb21482244a",
+    "artifacts/terrain_demo/paired_horizon_v23/summary.json": "609ba42d723dba5de0ebe2e59a2c760311af83546d34b725b3b3b04e48477ae9",
+    "artifacts/terrain_demo/paired_horizon_v23/terrain_cache.json": "10fb5fe852e1f2120f95cf98d7ceb026d1e35757f26f6a3079d4190b84794451",
+    "artifacts/terrain_demo/paired_horizon_v23/commands.jsonl": "ba06a94264cd17d3d9d3e5db2b9ea7f48897bd333c0347f37717ed172e64cdd1",
+    "artifacts/terrain_demo/paired_horizon_v23/summary.md": "a66d6b535f555c1e072a3e84398b45427c5efae23a635bbac0216eab7181c312"
+  },
+  "workflow_doctor": "PASS",
+  "workflow_doctor_log_sha256": "21ab9926688f0af4e3b3280347c63f6a6b24dedf8ad0c3869af15b5b74340c07",
+  "remaining_risks": [
+    "Three continuation seeds share one parent and training terrain; only two fresh evaluation maps.",
+    "Window observations are dependent; history combinations are not additional independent training runs.",
+    "Short16s primary failures remain; longer64s results do not establish indefinite safety or justify automatic promotion.",
+    "Passivity and replay verify declared evidence, not every unrecorded simulator state or cross-platform determinism.",
+    "Older separate demonstration/publication tasks remain active under TASK298; this fixed study is complete."
+  ],
+  "no_new_dependencies": true,
+  "no_commit_or_remote_git_github_operations": true
+}

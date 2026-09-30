@@ -1,0 +1,96 @@
+{
+  "verdict": "CLEAR",
+  "scope": "pre-holdout training integrity only; no locomotion performance claim",
+  "created_utc": "2026-09-23T01:28:47.663353+09:00",
+  "source_inventory": {
+    "legacy_sources_recomputed": 106,
+    "new_training_sources_recomputed": 12,
+    "reference_models_recomputed": 8,
+    "all_hashes_match": true
+  },
+  "shared_91d_warm_start": {
+    "checkpoint": "logs/rsl_rl/week03_ant_direction_v15/v15_init/model_0.pt",
+    "sha256": "043a2e5d75037d153aa6f83d1f93415d44eea257079f11aefe8a5ed8015ba951",
+    "tensors": 33,
+    "all_v14_tensors_preserved_except_std": true,
+    "learned_command_weights_preserved": true,
+    "std": 0.20000000298023224,
+    "fresh_adam": true,
+    "teacher_identity": true
+  },
+  "paired_actual_start": {
+    "full_root_joint_observation_prefix_policy_cpu_cuda_rng_pairing": true,
+    "control": "7f789e0f355c07a2eaed006885ebd6f9b1c76da0cfa5fe89c14fdb5673d7d223",
+    "stable": "ec6cff1b410bdd52683d73baee5c15defd14027684441eda548721fd673204cb"
+  },
+  "saved_config_pairing": {
+    "control": {
+      "env": "6eb0bd0fceaac80fdfac4fca0f9dc08f917f65df1cc72ca63ed0368582bd484b",
+      "agent": "93c585f2bfa5e75c8f4a54a407f1020f558f1d981657d20a1ff55d6157efb4b2"
+    },
+    "stable": {
+      "env": "82af6cbddbe5bc1a7b8a8de6d2cebd4e7ad0f3558ba46b117607ed9cdfda144a",
+      "agent": "a276c06a349c1654132da03b08b9ffcd66f8f816affbd4c9a15b238a945c7f2d"
+    },
+    "only_directional_reward_weight_differs": true
+  },
+  "training": {
+    "control": {
+      "initial_audit_sha256": "7f789e0f355c07a2eaed006885ebd6f9b1c76da0cfa5fe89c14fdb5673d7d223",
+      "saved_yaml_sha256": {
+        "env": "6eb0bd0fceaac80fdfac4fca0f9dc08f917f65df1cc72ca63ed0368582bd484b",
+        "agent": "93c585f2bfa5e75c8f4a54a407f1020f558f1d981657d20a1ff55d6157efb4b2"
+      },
+      "iterations": 250,
+      "transitions": 32768000,
+      "scalar_tags": 38,
+      "all_event_scalars_finite": true,
+      "checkpoint": "artifacts/terrain_demo/directional_stability_v15/runs/control/model_249.pt",
+      "checkpoint_sha256": "4aa169eba098e7ab69e82958485879db2f34910c6cb4a6d0367f33efef3bc3ec",
+      "final_model_and_adam_finite": true,
+      "final_teacher_identity": true
+    },
+    "stable": {
+      "initial_audit_sha256": "ec6cff1b410bdd52683d73baee5c15defd14027684441eda548721fd673204cb",
+      "saved_yaml_sha256": {
+        "env": "82af6cbddbe5bc1a7b8a8de6d2cebd4e7ad0f3558ba46b117607ed9cdfda144a",
+        "agent": "a276c06a349c1654132da03b08b9ffcd66f8f816affbd4c9a15b238a945c7f2d"
+      },
+      "iterations": 250,
+      "transitions": 32768000,
+      "scalar_tags": 38,
+      "all_event_scalars_finite": true,
+      "checkpoint": "artifacts/terrain_demo/directional_stability_v15/runs/stable/model_249.pt",
+      "checkpoint_sha256": "a282516fcc090d47652d2260e7c547883cd33d5b1e7d07cc262f2d87c60382c3",
+      "final_model_and_adam_finite": true,
+      "final_teacher_identity": true
+    },
+    "total_transitions": 65536000
+  },
+  "terrain_cache_95": {
+    "tiles": 240,
+    "exact_frozen_snapshot": true
+  },
+  "legacy_v14_evaluator_parity": {
+    "exact_fields": 18,
+    "passed": true
+  },
+  "chronology": {
+    "records": 12,
+    "train_order": [
+      "control",
+      "stable"
+    ],
+    "all_recorded_commands_succeeded_and_logs_hash": true
+  },
+  "final_model_smokes": {
+    "passed": true,
+    "controllers": [
+      "control",
+      "stable",
+      "history_stable"
+    ],
+    "exact_initial_pairing": true
+  },
+  "remaining_pre_holdout_blockers": []
+}

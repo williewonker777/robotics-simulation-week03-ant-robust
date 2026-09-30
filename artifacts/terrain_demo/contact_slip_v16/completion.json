@@ -1,0 +1,52 @@
+{
+  "completed_utc": "2026-09-23T03:31:55.952145+00:00",
+  "request_status": "one_preregistered_v16_method_tested_and_reported",
+  "scope": "Local paired contact-conditioned foot-tip slip experiment; not a demonstrated overall performance improvement or completion of separate hybrid publication branch",
+  "integrity_verdict": "PASS",
+  "performance_promotion": "FAIL",
+  "primary_actor_passed": false,
+  "primary_hybrid_passed": false,
+  "secondary_actor_passed": false,
+  "secondary_hybrid_passed": false,
+  "training_transitions": 65536000,
+  "scored_files": 24,
+  "first_episodes": 2220,
+  "reference": {
+    "control_checkpoint": "artifacts/terrain_demo/contact_slip_v16/runs/control/model_249.pt",
+    "slip_checkpoint": "artifacts/terrain_demo/contact_slip_v16/runs/slip/model_249.pt"
+  },
+  "artifact_sha256": {
+    "summary.json": "0f81fbbc19184689e4b1006be5b1c42830d174112c3c57a216def9c40369503c",
+    "summary.md": "dfa35856e6c471bbdbf490d77db22b6853c8a9652446f8cb70e84a90f96719af",
+    "training_validation.json": "36cd802a3ae37e7552fe18468a83b636ff791bf15b86ddf67453c6367efee8f1",
+    "training_independent_review.md": "1374bf0efa442f699c1f41d88e2c50cefaa3b0efd6d439100782acb0012dc227",
+    "independent_final_audit.json": "43353f6e2614755550ed3f459553f1be7cb293248c1218e480cf769cdadf83f8",
+    "independent_final_audit.md": "6582a4b116b1a966b6ee540e6db495be98c0db1065bb432c8f3c9ce68e87ed11",
+    "final_validation.json": "a21bd635daf2ee14d109a44e505505218a3659495f977e02e8c79add863d162a",
+    "frozen.json": "2db9e0a9aa08709762e60e5493c47da52fcddc0ccd6380294863604d8cabdc5b",
+    "evaluation_inputs.json": "7c78787c34c304f8ee6ce8bb358df4b30c025862246738a783aa403f1be3b3ac",
+    "preholdout_ledger.json": "da5e595a70cabbb380d7a93ff7d36a2989ef99f04a572d2acf36b552402ab1d0"
+  },
+  "document_sha256": {
+    "README.md": "1d8ea247d137442f8d1a23b6f8928032061adb89c7784a0f93c2c91c06e05e9e",
+    "docs/CONTACT_SLIP_V16.md": "4d30c06b317e450348858a215a2973d6168465c7446d175e90a25499ed4d40b2",
+    "docs/EXPERIMENT_HISTORY.md": "64b69dc8e5785018e01f6fd664ef588a01aca78c01cc17421f1f32d502cfbe61",
+    "docs/PUBLICATION.md": "c33adfa3577f9a4cab853ca162e8b361cdd0d61b286e388d53dac6293a4f9d0b",
+    "docs/experiment_plans/manifest.json": "2aa82a8a6701db2e88b9cf83dd3694b339354e2a390a88d4996fabce06cffa9d"
+  },
+  "cpu_test_count": 884,
+  "checked_local_doc_links": 148,
+  "default_controller_changed": false,
+  "prior_sources_and_models_preserved": true,
+  "dependencies_added": false,
+  "remote_operations_performed": false,
+  "local_commit_performed": false,
+  "limitations": [
+    "one training seed and two fresh maps",
+    "ideal ray/height scan, not real RGB-D",
+    "foot-tip speed proxy, not actual contact-point slip",
+    "independent raw audit did not rerun physics",
+    "optional static tools unavailable"
+  ],
+  "remaining_separate_scope": "TASK-298 remains active for previously requested hybrid-default/demo/publication work; this v16 experiment is finished."
+}

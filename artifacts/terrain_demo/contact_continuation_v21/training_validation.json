@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-09-28T04:58:42.175352+00:00",
+  "records": {
+    "no_cost": {
+      "initial": {
+        "path": "artifacts/terrain_demo/contact_continuation_v21/training/no_cost_initial.json",
+        "sha256": "f1aa7a774b2d6507cb2d0c72324e75b7239af0219f26762c8085e9d8f5a0a9ff"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/contact_continuation_v21/training/no_cost_schedule.json",
+        "sha256": "37c306a97105fb2ebdd703e86c6f502ebb9632a7a2fe9c09ba239690db639140"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/contact_continuation_v21/training/no_cost_initial_contact_rollout.json",
+        "sha256": "f0baa9ed82eb5258d46bd76cf5bda1b8b5efe08c36ef843a60c6a7c2615bea11"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/contact_continuation_v21_20260928/train_no_cost.log",
+        "text_log_sha256": "071abaa792475b5f568ba96715ed817fbb7346254b8ee142f08f31bf98f7db11",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-48-22_v21_paired_no_cost/events.out.tfevents.1790570909.wonker-System-Product-Name.544191.0": "e5b747b1474c16c82d7e9166e2ab5bff8d3d254cfea96894fb981a3e4589fbd0"
+        }
+      },
+      "coefficient_step_mass": 0.0,
+      "realized_penalty_sum": -0.0
+    }
+  },
+  "historical_initial_pairing": true,
+  "actual_random_horizons_paired": true,
+  "historical_references_sha256": "d7a566bb202b9107d3c4698acd54849ade261758c76bc9b368dcf3a18de5440f"
+}

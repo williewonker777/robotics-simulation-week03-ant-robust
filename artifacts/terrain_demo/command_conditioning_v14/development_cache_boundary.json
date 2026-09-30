@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-09-22T14:24:36.593530+00:00",
+  "scored_episodes": 0,
+  "training_iterations": 0,
+  "failure_log": "outputs/command_conditioning_v14_20260922/development_harness.log",
+  "failure_log_sha256": "3bfb817eac7eab917e5a25c6820f22b4c86f513b759d9af5e208be308121d18e",
+  "cause": "Historical development geometry51 has multiple cache configurations per tile seed; strict inventory rejected them before training/scoring. New85 has exactly240unique tiles.",
+  "repair": "Keep existing51 cache untouched, exact frozen prefix/outcome parity still mandatory; pin85fortraining and86/87forholdouts. Continue new smoke phase, no rerun/overwrite of preparation."
+}

@@ -1,0 +1,155 @@
+{
+  "created_utc": "2026-09-28T07:16:14.266106+00:00",
+  "reviewer": "independent code-reviewer native agent",
+  "source": "Previously executed read-only CPU verification and implementation reviews in this session; current evidence hash links rechecked at preservation.",
+  "source_sha256": {
+    "src/week03_ant/seed_study_v22.py": "187f11598f4c75c2f33d93adf798b411137e35e5873da16dbfd619824ab874b4",
+    "src/week03_ant/tasks/seed_continuation_v22.py": "0a99d800b1086a68a1e5a4bccdac4b3dc45f8e5f2da9302a3bad307127204ca0",
+    "src/week03_ant/tasks/seed_continuation_v22_cfg.py": "39011389d0056aa0052a21f397a80d6c4c835ceaccad22c8375fa394c2382e32",
+    "scripts/seed_continuation_v22.py": "cad2dbc8c25298d66b4262fddc6e8bb21c4c2cd6cfd4c880c5690d2c41159cbc",
+    "scripts/run_seed_training_v22.py": "295899c192c1d6f81937de10e3d5dce34bfe172baa4e6b7773c879b259538eef",
+    "tests/test_seed_training_v22.py": "bea381924d23a2fc899338147c386e7c3c8d263c06ab9e60db8641004e684345",
+    "tests/test_seed_harness_v22.py": "ef7a6ec459c1370031bfbcc71220c03b7c9573d47b4636f37e7ea01575f9d5a8",
+    "docs/experiment_plans/seed_continuation_v22.md": "b96dad8f2dacacf39e4c410b3b26485046b0dda89de7e48dff5347e50ec9de59",
+    "scripts/evaluate_seed_v22.py": "88fbd24cd86775cd260d0ac81e58c29c7b1c9d82c48cea6d1106083bd416907f",
+    "scripts/run_seed_eval_v22.py": "58608a0777f602b0de34b985a18a0abec36c25f5e649c88cd96d1b316da2f035",
+    "scripts/summarize_seed_v22.py": "3c19fc38170130a27e73fc9d7c6e19be45d5c9387fbfa66a67c6cf940ceff584",
+    "tests/test_seed_eval_v22.py": "d17b7d9536d9b1997e66f448271a5d5c1c1e28f5fd448d83c74f2b99c195d73c"
+  },
+  "training_freeze_sha256": "026e30f7e25f93b67914cf1ba801093e24c62c71d04253747c31db26639a485b",
+  "passed": true,
+  "scope": "Initialization and six development runs only. No active main training files inspected.",
+  "evidence_sha256": {
+    "artifacts/terrain_demo/seed_continuation_v22/historical_references.json": "5b1780d62bda81004a8704f30124034a50a6f8567e32af06fd34a743e08694ed",
+    "artifacts/terrain_demo/seed_continuation_v22/initial_shared.json": "b17b22d3107d5faba92b93d39c66904252bd398bfd66b38a3450841e8f8d68f4",
+    "artifacts/terrain_demo/seed_continuation_v22/preflight.json": "4b5fd3c80e794fede123d1f7b867b1340dab0fbced76f02af8478961b2e328d5",
+    "artifacts/terrain_demo/seed_continuation_v22/capacity.json": "44f93d347b7384713d9e0d6e1df8d1f0f487f1ba28f7ac54f66c328326d16cf7",
+    "artifacts/terrain_demo/seed_continuation_v22/training_cache.json": "c6d8748a875355fcc52e471632a96d3de7979059752d77f55f1e76ffc7bd9de9",
+    "artifacts/terrain_demo/seed_continuation_v22/training_frozen.json": "026e30f7e25f93b67914cf1ba801093e24c62c71d04253747c31db26639a485b"
+  },
+  "expected_main_sha256": {
+    "artifacts/terrain_demo/seed_continuation_v22/expected_main/seed51_initial.json": "70ab6a3b42e730d42a7533c41c6966ff6333885f642f877610a3f4312b9f757e",
+    "artifacts/terrain_demo/seed_continuation_v22/expected_main/seed52_initial.json": "241c5d158a60e71e01d5be9da365cd21278b4301c510f5309ea546570f29cc90",
+    "artifacts/terrain_demo/seed_continuation_v22/expected_main/seed53_initial.json": "067c675e9f2d2b3c0391307895c35be98a1ae93c6a184222f80e1e307c743e13"
+  },
+  "initialization": {
+    "checkpoint": "logs/rsl_rl/week03_ant_seed_continuation_v22/v22_init/model_0.pt",
+    "sha256": "10d8485d6d18f1dd6c01724ff69fc6a2ced3bbcd3d7b0db1285b7097cb5c21bd",
+    "byte_equal_historical_init": true,
+    "policy_tensors": 33,
+    "nonstd_tensors_equal_v16_parent": 32,
+    "std": 0.2,
+    "optimizer_state_empty": true,
+    "adam_learning_rate": 0.0001,
+    "iteration": 0,
+    "infos_equal_historical": true,
+    "teacher_tensors_exact_original_v5": 8
+  },
+  "provenance_counts": {
+    "historical_reference_files": 27,
+    "new_frozen_definitions": 12,
+    "legacy_sources": 213,
+    "legacy_models": 19,
+    "training_cache_tiles": 240,
+    "training_cache_files": 720
+  },
+  "development": {
+    "preflight": {
+      "num_envs": 256,
+      "iterations": 2,
+      "seeds": [
+        51,
+        52,
+        53
+      ],
+      "reward_calls_per_run": 64,
+      "transitions_all_three": 49152,
+      "actual_saved_requested_seeds_verified": true,
+      "common_nonseed_configuration_and_policy_equal": true,
+      "distinct_root_state_hashes": 3,
+      "distinct_cuda_rng_hashes": 3,
+      "distinct_actual_horizon_hashes": 3,
+      "all_reward_rows_valid": true,
+      "raw_cost_nonzero_and_applied_penalty_exactly_zero": true,
+      "all38scalar_tags_have_two_finite_values": true,
+      "seed51": {
+        "new_checkpoint": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-11-04_v22_preflight_seed51/model_1.pt",
+        "new_checkpoint_sha256": "d20044076118276a9a0f13674d0f8c39449acda990a7f1d14301bb3fa0b7b542",
+        "historical_checkpoint": {
+          "path": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-46-43_v21_preflight_no_cost/model_1.pt",
+          "sha256": "d20044076118276a9a0f13674d0f8c39449acda990a7f1d14301bb3fa0b7b542"
+        },
+        "recursive_equal_tensors": 90,
+        "recursive_equal_values": 950884,
+        "model_optimizer_infos_exact": true,
+        "non_timing_scalar_tags_exact": 33,
+        "timing_scalar_tags_excluded_from_exact_comparison": 5,
+        "reward_schedule_json_exact": true,
+        "passive_contact_dictionary_exact": true,
+        "initial_and_actual_horizon_evidence_exact": true
+      }
+    },
+    "capacity": {
+      "num_envs": 4096,
+      "iterations": 2,
+      "seeds": [
+        51,
+        52,
+        53
+      ],
+      "reward_calls_per_run": 64,
+      "transitions_all_three": 786432,
+      "actual_saved_requested_seeds_verified": true,
+      "common_nonseed_configuration_and_policy_equal": true,
+      "distinct_root_state_hashes": 3,
+      "distinct_cuda_rng_hashes": 3,
+      "distinct_actual_horizon_hashes": 3,
+      "all_reward_rows_valid": true,
+      "raw_cost_nonzero_and_applied_penalty_exactly_zero": true,
+      "all38scalar_tags_have_two_finite_values": true,
+      "seed51": {
+        "new_checkpoint": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-11-50_v22_capacity_seed51/model_1.pt",
+        "new_checkpoint_sha256": "4026d4df8a6584299b27d4bcbb00174ff9fe4dfd4dd73dca0ef4fa16abd0e031",
+        "historical_checkpoint": {
+          "path": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-47-17_v21_capacity_no_cost/model_1.pt",
+          "sha256": "4026d4df8a6584299b27d4bcbb00174ff9fe4dfd4dd73dca0ef4fa16abd0e031"
+        },
+        "recursive_equal_tensors": 90,
+        "recursive_equal_values": 950884,
+        "model_optimizer_infos_exact": true,
+        "non_timing_scalar_tags_exact": 33,
+        "timing_scalar_tags_excluded_from_exact_comparison": 5,
+        "reward_schedule_json_exact": true,
+        "passive_contact_dictionary_exact": true,
+        "initial_and_actual_horizon_evidence_exact": true
+      }
+    }
+  },
+  "method": {
+    "cpu_only": true,
+    "cuda_visible_devices": "",
+    "torch_threads": 1,
+    "production_validator_imports": false,
+    "checkpoint_comparison": "Independent recursive exact tensor dtype/shape/value and container/scalar equality.",
+    "scalar_comparison": "Direct TensorBoard EventAccumulator decode; all33non-timing(step,value)sequences exact and all38tags finite/complete.",
+    "schedule_comparison": "Raw reward schedule JSON and passive contact dictionaries compared directly."
+  },
+  "limitations": [
+    "Initial simulator state/RNG/horizon comparisons use instrumented hash evidence, not separate live tensor recapture.",
+    "No cross-seed physical-state equality is claimed; each phase had three distinct root-state, CUDA-RNG and actual-horizon hashes.",
+    "Short replay demonstrates recorded development and endpoint compatibility, not full main replay or arbitrary-platform determinism.",
+    "No main training, holdout outcome, or final completion claim is made by this artifact."
+  ],
+  "capacity_to_main_projection": {
+    "runs": [
+      "seed51",
+      "seed52",
+      "seed53"
+    ],
+    "hash_pinned": true,
+    "only_changed_field": "normalized_parameters.agent.max_iterations",
+    "before": "2",
+    "after": "250",
+    "all_other_fields_exact": true
+  }
+}

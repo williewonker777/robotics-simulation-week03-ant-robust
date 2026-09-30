@@ -1,0 +1,61 @@
+{
+  "schema": "week03_ant_history_test_completion_v1",
+  "verified_utc": "2026-09-22T12:15:23.819732+00:00",
+  "status": "paired_benchmark_complete_primary_improvement_fail_secondary_pass",
+  "valid_evaluation_files": 16,
+  "valid_first_episodes": 1480,
+  "excluded_original_files": 2,
+  "excluded_original_first_episodes": 350,
+  "initial_only_probes_excluded": true,
+  "exact_initial_state_and_full_observations_paired": true,
+  "cache_tiles_unchanged": 480,
+  "cache_files_unchanged": 1440,
+  "frozen_v11_and_v12_sources_unchanged": 69,
+  "separately_pinned_video_sources_unchanged": 3,
+  "frozen_models_unchanged": 4,
+  "new_training_transitions": 0,
+  "threshold_tuning": false,
+  "cpu_tests_passed": 353,
+  "cpu_tests_wall_seconds": 7.84,
+  "cpu_test_log_local": "outputs/history_v12_20260922/final_tests.log",
+  "cpu_test_log_sha256": "1bb9ed9cd2927185ef9233406bf389a4ca5947b8949f0dd2d3c4d5015a99d869",
+  "compileall_passed": true,
+  "git_diff_check_passed": true,
+  "local_documentation_links_checked": 114,
+  "lint_typecheck_gap": "Ruff, mypy and Pyright are not installed; no dependency installed for this test task.",
+  "summary_sha256": "296608a5139952b854ee69a4557b49b3824117d6c494a4f7d20d0408e74f5256",
+  "summary_markdown_sha256": "e0b61149b46b547df39b8842e4c5d4ed5a9f69abba82f56ba1ded8af07be3471",
+  "independent_audit_sha256": "196b857f441646a8bce27fcfc1b84e6514f40a78afd0d456f77aa675083de5ac",
+  "independent_review_sha256": "72b7bf68b12c28080c7e7129b9869105dd0f2994edee820ea04859ffc71aaa0f",
+  "commands_sha256": "40db7aba331b0d3aefcdbb0472a78a996003152512b97a30f3ac3b24adb31423",
+  "serial_commands_exit0": 16,
+  "simulator_command_wall_seconds": 682.6254727109772,
+  "primary_result": {
+    "passed": false,
+    "checks": {
+      "fewer_switches_per_active_time": true,
+      "world_zero": true,
+      "one_not_lower": false,
+      "six_not_lower": false,
+      "falls_not_higher": true,
+      "lane_not_higher": true,
+      "flat_falls_not_higher": true
+    }
+  },
+  "secondary_result": {
+    "passed": true,
+    "checks": {
+      "fewer_switches_per_active_time": true,
+      "world_zero": true,
+      "one_not_lower": true,
+      "six_not_lower": true,
+      "falls_not_higher": true,
+      "lane_not_higher": true
+    }
+  },
+  "overall_performance_superiority_claimed": false,
+  "default_promotion": false,
+  "remote_operations": false,
+  "publication_status": "Local work only; previous GitHub demo cleanup/publication request remains separate and pending.",
+  "gpu_job_finished": true
+}

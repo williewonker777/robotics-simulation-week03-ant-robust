@@ -1,0 +1,74 @@
+{
+  "verified_utc": "2026-09-22T10:58:26.346049+00:00",
+  "videos_verified": 15,
+  "video_frames": 480,
+  "seconds": 16,
+  "fps": 30,
+  "resolution": [
+    1280,
+    720
+  ],
+  "frozen_sources_unchanged": 63,
+  "models_unchanged": 4,
+  "paired_initial_states": true,
+  "cpu_tests_passed": 273,
+  "compile_passed": true,
+  "gallery_js_syntax_passed": true,
+  "gallery_local_links_checked": 20,
+  "browser_visible_playback": {
+    "terrain_tabs_observed_advancing": [
+      "stairs",
+      "obstacles",
+      "rough",
+      "slope",
+      "waves",
+      "stepping_stones"
+    ],
+    "modes_per_tab": [
+      "v5",
+      "v10",
+      "hybrid"
+    ],
+    "errors_during_observed_playback": 0
+  },
+  "browser_control_validation_limit": "Visible-tab smoke reached all six terrain playback checks and pause check, then the selected terrain changed unexpectedly during restart validation. Cause not determined. A later background-control attempt could not connect because the dedicated browser was no longer running. Restart/auto-cycle end-to-end smoke was not completed; no browser left running claim.",
+  "visual_frames_inspected": [
+    {
+      "mode": "v5",
+      "family": "rough",
+      "sample_seconds": 8
+    },
+    {
+      "mode": "v5",
+      "family": "stairs",
+      "sample_seconds": 8
+    },
+    {
+      "mode": "v5",
+      "family": "obstacles",
+      "sample_seconds": 8
+    },
+    {
+      "mode": "hybrid",
+      "family": "slope",
+      "sample_seconds": 8
+    },
+    {
+      "mode": "hybrid",
+      "family": "waves",
+      "sample_seconds": 8
+    },
+    {
+      "mode": "hybrid",
+      "family": "stairs",
+      "sample_seconds": 8
+    }
+  ],
+  "qualitative_only": true,
+  "new_training_transitions": 0,
+  "remaining_validation_tools_unavailable": [
+    "ruff",
+    "mypy",
+    "pyright"
+  ]
+}

@@ -1,0 +1,556 @@
+{
+  "schema": "week03_ant_depth_switch_v11_v1",
+  "task": "Week03-Ant-Prior-Lanes-Eval-v10",
+  "mode": "hybrid",
+  "preset": "cautious",
+  "gate_config": {
+    "span_enter": 0.12,
+    "edge_enter": 0.08,
+    "exit_ratio": 0.6,
+    "min_coverage": 0.9,
+    "enter_steps": 2,
+    "min_dwell_seconds": 0.5,
+    "clear_seconds": 0.3,
+    "blend_seconds": 0.15
+  },
+  "policy_seed": 42,
+  "checkpoint": "artifacts/terrain_demo/prior_v10/runs/v10_anchored_seed42/model_749.pt",
+  "checkpoint_sha256": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1",
+  "v5_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "teacher_tensor_identity_verified": true,
+  "phase": "video",
+  "scenario": "stones",
+  "geometry_seed": 68,
+  "reset_seed": 42,
+  "num_envs": 10,
+  "initial_state_sha256": {
+    "root_state": "9cff5c120f9eaabb11c4473865cf448662a9049118e81f9de63eabf5bac9bfd9",
+    "joint_pos": "f18d883eecf290e9103df16852574091224dfd445c0dc6bfca9558a53977c73e",
+    "joint_vel": "fc739ecd6035ffef5f68667a91592c93c89cdee7a82f968fd06ef1af774d25ff",
+    "observations": "66391eb34129d59153dc3390a5e3c2968caaf1563980272628d8e59aea2d9316"
+  },
+  "condition": {
+    "seconds": 16,
+    "max_steps": 960,
+    "dt": 0.016666666666666666,
+    "snapshot_seconds": 8.0,
+    "one_threshold": 13.1,
+    "six_threshold": 53.1,
+    "footprint_margin": 1.1,
+    "observations": 88,
+    "v5_observations": 60,
+    "actions": 8
+  },
+  "family_names": [
+    "rough",
+    "slope",
+    "stairs",
+    "waves",
+    "obstacles",
+    "stepping_stones",
+    "flat"
+  ],
+  "difficulties": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "family_indices": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "level_indices": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "routing_inputs": "Only current ideal825-ray heights/validity; no terrain labels, maps or future state.",
+  "unknown_handling": "Hold requested policy, clear confirmation counters; an existing fade may continue. Not a safety guarantee.",
+  "switch_fall_interpretation": "Temporal association within0.5s, not proof of causation.",
+  "record": "artifacts/terrain_demo/hybrid_v11/attempt02/videos/hybrid_seed42_stones10.mp4",
+  "started_utc": "2026-09-22T09:37:19.141731+00:00",
+  "finished_utc": "2026-09-22T09:37:49.804644+00:00",
+  "wall_seconds": 30.66291353100678,
+  "forward_distance": [
+    17.36493682861328,
+    0.03240203857421875,
+    25.50597381591797,
+    17.137975692749023,
+    16.89362335205078,
+    19.20815658569336,
+    16.488962173461914,
+    21.05577278137207,
+    24.232624053955078,
+    18.514129638671875
+  ],
+  "episode_terminated": [
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "episode_lengths": [
+    960,
+    40,
+    960,
+    960,
+    960,
+    960,
+    960,
+    960,
+    960,
+    960
+  ],
+  "episode_out_of_lane": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "episode_world_exit": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "first_hit_one_seconds": [
+    11.016666666666666,
+    null,
+    8.95,
+    9.033333333333333,
+    9.766666666666666,
+    10.416666666666666,
+    11.3,
+    6.75,
+    8.716666666666667,
+    9.516666666666666
+  ],
+  "first_hit_six_seconds": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "maximum_distance_m": [
+    17.491321563720703,
+    0.06792259216308594,
+    25.50597381591797,
+    17.137975692749023,
+    16.91741180419922,
+    19.20815658569336,
+    16.488962173461914,
+    21.05577278137207,
+    24.232624053955078,
+    18.514129638671875
+  ],
+  "episode_return": [
+    13.651938438415527,
+    0.32889342308044434,
+    23.138399124145508,
+    11.740330696105957,
+    9.90236759185791,
+    16.787307739257812,
+    13.127055168151855,
+    16.99283218383789,
+    20.910892486572266,
+    15.311745643615723
+  ],
+  "episode_steps": [
+    960,
+    40,
+    960,
+    960,
+    960,
+    960,
+    960,
+    960,
+    960,
+    960
+  ],
+  "episode_strict_one_tile_success": [
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "episode_strict_all_tiles_success": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "aggregates": {
+    "episodes": 10,
+    "posture_terminations": 1,
+    "out_of_lane_exits": 0,
+    "world_exits": 0,
+    "distance_only_one_tile_hits": 9,
+    "distance_only_all_tiles_hits": 0,
+    "strict_one_tile_successes": 9,
+    "strict_all_tiles_successes": 0,
+    "strict_one_tile_success_rate": 0.9000000357627869,
+    "strict_all_tiles_success_rate": 0.0,
+    "final_forward_distance_mean_m": 17.643455505371094,
+    "maximum_forward_distance_mean_m": 17.662025451660156,
+    "full_horizon_survivals": 9
+  },
+  "distance_at_snapshot_m": [
+    11.288335800170898,
+    null,
+    11.750036239624023,
+    11.993019104003906,
+    11.55406379699707,
+    11.788009643554688,
+    8.835929870605469,
+    14.767229080200195,
+    12.3546724319458,
+    10.934623718261719
+  ],
+  "episode_full_horizon_survival": [
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "episode_active_steps": [
+    960,
+    40,
+    960,
+    960,
+    960,
+    960,
+    960,
+    960,
+    960,
+    960
+  ],
+  "episode_alpha_sum": [
+    897.0000000819564,
+    0.0,
+    892.0000000819564,
+    893.0000000819564,
+    896.0000000819564,
+    892.0000000819564,
+    887.0000000819564,
+    896.0000000819564,
+    900.0000000819564,
+    895.0000000819564
+  ],
+  "episode_v10_duty": [
+    0.9343750000853712,
+    0.0,
+    0.9291666667520379,
+    0.9302083334187046,
+    0.9333333334187046,
+    0.9291666667520379,
+    0.9239583334187046,
+    0.9333333334187046,
+    0.9375000000853713,
+    0.9322916667520379
+  ],
+  "episode_v10_target_steps": [
+    901,
+    0,
+    896,
+    897,
+    900,
+    896,
+    891,
+    900,
+    904,
+    899
+  ],
+  "episode_uncertain_steps": [
+    0,
+    23,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "episode_switch_count": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "episode_switch_steps": [
+    [
+      60
+    ],
+    [],
+    [
+      65
+    ],
+    [
+      64
+    ],
+    [
+      61
+    ],
+    [
+      65
+    ],
+    [
+      70
+    ],
+    [
+      61
+    ],
+    [
+      57
+    ],
+    [
+      62
+    ]
+  ],
+  "episode_switch_to_v10": [
+    [
+      true
+    ],
+    [],
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true
+    ]
+  ],
+  "episode_switch_seconds": [
+    [
+      0.9833333333333333
+    ],
+    [],
+    [
+      1.0666666666666667
+    ],
+    [
+      1.05
+    ],
+    [
+      1.0
+    ],
+    [
+      1.0666666666666667
+    ],
+    [
+      1.15
+    ],
+    [
+      1.0
+    ],
+    [
+      0.9333333333333333
+    ],
+    [
+      1.0166666666666666
+    ]
+  ],
+  "episode_first_switch_seconds": [
+    0.9833333333333333,
+    null,
+    1.0666666666666667,
+    1.05,
+    1.0,
+    1.0666666666666667,
+    1.15,
+    1.0,
+    0.9333333333333333,
+    1.0166666666666666
+  ],
+  "episode_last_switch_seconds": [
+    0.9833333333333333,
+    null,
+    1.0666666666666667,
+    1.05,
+    1.0,
+    1.0666666666666667,
+    1.15,
+    1.0,
+    0.9333333333333333,
+    1.0166666666666666
+  ],
+  "episode_fall_within_switch_window": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "episode_mean_action_disagreement_rms": [
+    0.18653779782526872,
+    0.26623837220116736,
+    0.1787820528441615,
+    0.19671206873353944,
+    0.20202226874336152,
+    0.1803200359636783,
+    0.18888592859954337,
+    0.18232663323083606,
+    0.18320824699390822,
+    0.18898094419652997
+  ],
+  "episode_max_action_jump_rms": [
+    2.2500923723048096,
+    0.6112312576768933,
+    2.1423581359825117,
+    2.258398884357334,
+    2.4698186574419196,
+    1.8742787670862922,
+    2.5427656043985296,
+    2.573086306227499,
+    2.063948151146498,
+    2.0498837898034625
+  ],
+  "episode_min_coverage": [
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "episode_max_enter_span": [
+    0.3450002372264862,
+    7.152557373046875e-07,
+    0.3450000286102295,
+    0.3400004208087921,
+    0.3400004208087921,
+    0.345000296831131,
+    0.3400004208087921,
+    0.3450000286102295,
+    0.3449999988079071,
+    0.3400004208087921
+  ],
+  "episode_max_enter_edge": [
+    0.3399999439716339,
+    7.152557373046875e-07,
+    0.3399999439716339,
+    0.3399999439716339,
+    0.3399999439716339,
+    0.3399994969367981,
+    0.3399999439716339,
+    0.3399999439716339,
+    0.3400001525878906,
+    0.3400001525878906
+  ],
+  "episode_max_retain_span": [
+    0.3450002670288086,
+    7.152557373046875e-07,
+    0.340000182390213,
+    0.3400003910064697,
+    0.3400003910064697,
+    0.3400004208087921,
+    0.340000182390213,
+    0.340000182390213,
+    0.3400004208087921,
+    0.3400004208087921
+  ],
+  "episode_max_retain_edge": [
+    0.33500027656555176,
+    7.152557373046875e-07,
+    0.33500006794929504,
+    0.3399997055530548,
+    0.3399999141693115,
+    0.3399996757507324,
+    0.3399996757507324,
+    0.3399996757507324,
+    0.3399997055530548,
+    0.3399999439716339
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "created_utc": "2026-09-22T14:26:28.173105+00:00",
+  "log_sha256": "fef5086917987080e261cea182622be1668a9881e64b3776ed06f3f396b57dc3",
+  "cause": "After both64envsmokes and one35envnonholdoutscoredprocess completed, parity auditor accessed nonexistent episode_returns. Actual frozen/evaluator field is episode_return.",
+  "repair": "Corrected field name, direct mandatory indexing; re-audit same existing raw result without any model/evaluator/scored process rerun."
+}

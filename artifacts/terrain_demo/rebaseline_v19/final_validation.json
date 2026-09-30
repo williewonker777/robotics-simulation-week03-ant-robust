@@ -1,0 +1,85 @@
+{
+  "created_utc": "2026-09-28T02:56:28.335777+00:00",
+  "status": "completed_with_documented_lint_warnings",
+  "new_training_transitions": 0,
+  "scored_files": 24,
+  "scored_first_episodes": 2220,
+  "gpu_jobs_remaining": [],
+  "tests": {
+    "passed": 1037,
+    "seconds": 29.34,
+    "log": "outputs/rebaseline_v19_20260928/final_pytest.log",
+    "sha256": "3fba1f730076f78fe91845cfc50fb33d59b1fc01548c3eaf28fcf748318f3be9",
+    "targeted_tests": 66
+  },
+  "mypy": {
+    "status": "pass",
+    "source_files": 6,
+    "flags": [
+      "--follow-imports=skip",
+      "--ignore-missing-imports"
+    ],
+    "external_imports_not_fully_checked": true,
+    "log_sha256": "ab35ee42183d4d6d3ba483825ab037d18a5a15622d03be01d82220b1564851ff"
+  },
+  "pyflakes": {
+    "status": "warnings",
+    "exit_code": 1,
+    "unused_import_diagnostics": 9,
+    "intentional_api_reexports": 5,
+    "registration_imports": 2,
+    "unnecessary_evaluator_imports": 2,
+    "source_preserved_after_freeze": true,
+    "log": "outputs/rebaseline_v19_20260928/pyflakes.log",
+    "log_sha256": "a61a1748401971227d79e15ce7d274a86d0db4423836ea2c6914db6dd0f3b8ac"
+  },
+  "unavailable_tools": [
+    "ruff",
+    "pyright"
+  ],
+  "compileall": "pass",
+  "python_ast": "pass",
+  "git_diff_check": "pass",
+  "new_file_whitespace": "pass",
+  "read_only_summary_exact_regeneration": true,
+  "plan_copies_byte_and_sha_match": 15,
+  "workflow_doctor": "pass",
+  "independent_audits": {
+    "independent_primary_audit.json": "3225873eea6be1ebfc372d7b717f5694d439b74281b871566c963d1d740eba06",
+    "independent_tensor_audit.json": "32350ecdc50b48b94cb0b633eaa4dda224e6fa40db652ae1cb1e8d9a85c97fec",
+    "independent_final_audit.json": "19a8749d0e02d36e4e2c63ae79cb36b0a9fa4b925501bbbc5747acc7159e170d"
+  },
+  "results_sha256": {
+    "summary.json": "dc0db6291caccf1cb6a7045d60ae308a4bc9c7d6f42010c57de484f0c343bacc",
+    "summary.md": "e834cb0c1324d72247bd648741c74fb69f8b01486b9f8dbc8814be19a56ec3ea",
+    "frozen.json": "d3a7c96591a10940061a62e988c11604f9df20ce4f19dde4b800b0ff61ea5f65",
+    "evaluation_inputs.json": "64684586b658ccfd5b088304c6e0be41bfcc8fffc8a589ca39eefc8791070036",
+    "commands.jsonl": "f8e6f828b0a9b348b88c6bb65a34b465495e6144cb6a4a3ccb70a87c960db7b9"
+  },
+  "interpretation": "Pooled 16s descriptive gates pass; per-map regressions remain. 64s single-policy gate fails lane exits; history pooled passes but each map gate fails. No automatic promotion, statistical superiority, causal attribution or hardware assurance.",
+  "verification_limits": [
+    "No independent GPU replay",
+    "Independent final audit covers core physical scoring, not every posture/contact telemetry aggregate"
+  ],
+  "default_policy_changed": false,
+  "new_dependencies": false,
+  "remote_git_operations": false,
+  "commits_created": false,
+  "new_code_files": [
+    "src/week03_ant/rebaseline_study_v19.py",
+    "scripts/evaluate_rebaseline_v19.py",
+    "scripts/run_rebaseline_v19.py",
+    "scripts/summarize_rebaseline_v19.py",
+    "tests/test_rebaseline_v19.py",
+    "tests/test_rebaseline_summary_v19.py"
+  ],
+  "result_documents": [
+    "docs/REBASELINE_V19.md",
+    "docs/REBASELINE_V19_REFERENCES.md",
+    "docs/experiment_plans/rebaseline_v19.md",
+    "README.md",
+    "docs/EXPERIMENT_HISTORY.md",
+    "docs/PUBLICATION.md",
+    "docs/experiment_plans/manifest.json"
+  ]
+}

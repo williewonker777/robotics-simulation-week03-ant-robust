@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-09-22T16:03:49.713511+00:00",
+  "passed": true,
+  "cpu_suite": "822 passed in 28.96s",
+  "cpu_log": "outputs/directional_stability_v15_20260923/cpu_training_freeze_r2.log",
+  "cpu_log_sha256": "f37a20cd83dbf48c8cac20e265332a287caa71c2994b20054a03b1cad731ac1f",
+  "compileall": true,
+  "diff_check": true,
+  "capacity_sha256": "f7824c14b4a760ab5b7b0a600dc0ebb9b1795f6af51302076033a8cc1c9f6590",
+  "evaluator_parity_sha256": "4fd635575d8eed5989bede13c69b1ee02294ee10206192273206d9597f68ac3c",
+  "review_sha256": "816b5c0c3cfe9f4ab4d45ccf73861fcc0ae54face2a8fe57869bd08457f15e04",
+  "review_supplement_sha256": "c62782f3661f9a618262d5fc6ca6ced84e3478068ce01e0e17e0637b57c4fbfa",
+  "legacy_source_count": 106,
+  "legacy_model_count": 8,
+  "static_analysis_gap": "Ruff/mypy/Pyright/pyflakes unavailable; no added dependencies.",
+  "development_failure_preserved": {
+    "path": "outputs/directional_stability_v15_20260923/cpu_training_freeze.log",
+    "sha256": "cd1383b5ad08305ffedcb1ea4dc8f6fe61303e654174c3f607d86f667f42ba4b",
+    "reason": "Full CPU run overlapped unfinished synthetic evidence fixtures; 14 failures. Settled fixtures now full822 PASS; no scored run failure/retry."
+  }
+}

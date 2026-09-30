@@ -1,0 +1,24 @@
+{
+  "completed_utc": "2026-09-22T14:54:34.953240+00:00",
+  "models": {
+    "masked": {
+      "checkpoint": "artifacts/terrain_demo/command_conditioning_v14/runs/masked/model_249.pt",
+      "sha256": "f4013a7bd352e46ce5919fce2d705542c889db44065008be1302a7a5fcaa0aad",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_command_v14/2026-09-22_23-34-16_v14_paired_masked/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "d153a3544964709abea1ced68a045608c285d301323fa939bdcb6009d089072d"
+    },
+    "conditioned": {
+      "checkpoint": "artifacts/terrain_demo/command_conditioning_v14/runs/conditioned/model_249.pt",
+      "sha256": "844e6a3b9c4bee914ce65faa08322f892ad91f6dc520b5bc5167aac5fd543b41",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_command_v14/2026-09-22_23-44-28_v14_paired_conditioned/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "f73c578e74a322f5e84dab144666de5b355340af8473988753594a159d7c0c28"
+    }
+  },
+  "training_validation_sha256": "50fecda725bea8f9fbe6f924826bce8253fd7636b25311a68f8977051819f01e",
+  "total_training_transitions": 65536000,
+  "training_freeze_sha256": "d942dabdbfdb5285b5b922a2beb39aeb3e9808adee3b7e0ac9bb0f74e8a2d32d"
+}

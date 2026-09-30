@@ -1,0 +1,561 @@
+{
+  "created_utc": "2026-09-28T13:11:46.240431+00:00",
+  "passed": true,
+  "phase": "development",
+  "cpu_only": true,
+  "production_validator_imports": false,
+  "source_sha256": {
+    "scripts/audit_lr_v24_training.py": "addda99e2288b60c1b6fb9bbce1596f5ec1fc7bafc21500d66f0afd77f4d7f5c",
+    "tests/test_lr_tensor_audit_v24.py": "5bf937cb92146b153bdcf9f83f9843f40f01f80dfde1d8ae6e96b48ea0ba60ef"
+  },
+  "evidence_sha256": {
+    "artifacts/terrain_demo/lr_continuation_v24/initial_shared.json": "c664129a30d865c532861773a918521199ce933c8e5be2100849265e64741ea6",
+    "artifacts/terrain_demo/lr_continuation_v24/historical_references.json": "55df216e8ece908d9d6941352414b4ecc8422089028edf92cdafcd86369b8c47",
+    "artifacts/terrain_demo/lr_continuation_v24/preflight.json": "e369bd4932ff0101e36499bb64bb77ec1a8a2328a61f3dd23bad16af2117a294",
+    "artifacts/terrain_demo/lr_continuation_v24/capacity.json": "689dd086e4dadf7ccfdb0fe9e202f44e981203503ce14e8e22272127707a1a37"
+  },
+  "initializers": {
+    "high_byte_identical": true,
+    "low_deserialized_change_only_empty_Adam_LR": true
+  },
+  "runs": {
+    "preflight/high51": {
+      "checkpoint": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-09-08_v24_preflight_high51/model_1.pt",
+      "checkpoint_sha256": "d20044076118276a9a0f13674d0f8c39449acda990a7f1d14301bb3fa0b7b542",
+      "tensors": {
+        "policy_tensors": 33,
+        "policy_values": 400631,
+        "teacher_tensors_exact_v5": 8,
+        "trainable_optimizer_states": 19,
+        "optimizer_parameter_entries": 27,
+        "adam_steps": 40,
+        "iteration": 1,
+        "learning_rate": 0.0001,
+        "std_min": 0.19837017357349396,
+        "std_max": 0.20329058170318604
+      },
+      "learning_rate_trace": {
+        "ppo_updates": 2,
+        "adam_steps": 40,
+        "checked_observations": 86,
+        "actor_critic_std_global_coverage": true,
+        "teacher_boundary_invariance_recorded": true
+      },
+      "scalar_tags": 38,
+      "finite_scalar_values": 76,
+      "transitions": 16384,
+      "raw_evidence": {
+        "initial": {
+          "path": "outputs/lr_continuation_v24_20260928/preflight_high51_initial.json",
+          "sha256": "c9ffc70086ee8f4beedc23beec5bf0e276315169b1c1e2c93c59e03cfa6de42d"
+        },
+        "schedule": {
+          "path": "outputs/lr_continuation_v24_20260928/preflight_high51_schedule.json",
+          "sha256": "cd317b07a7863c273ecbe6db6ac1ad16e7f1775b08c650a6fff7e5d6a4bc4857"
+        },
+        "rollout": {
+          "path": "outputs/lr_continuation_v24_20260928/preflight_high51_initial_contact_rollout.json",
+          "sha256": "739cc358a2adf197eaebf49e2242a18a2447709ec9c9901fa7a2dfc9e5ce8f3c"
+        },
+        "lr": {
+          "path": "outputs/lr_continuation_v24_20260928/preflight_high51_initial_lr.json",
+          "sha256": "e629bd78171815671410a83128a1568625c164a42a5c27aedea45410d10ca169"
+        }
+      },
+      "historical_replay": {
+        "whole_checkpoint_model_adam_metadata_exact": true,
+        "reward_contact_exact": true,
+        "exact_non_time_scalar_tags": [
+          "Episode_Reward/action_l2",
+          "Episode_Reward/adaptive_posture",
+          "Episode_Reward/alive",
+          "Episode_Reward/centering",
+          "Episode_Reward/contact_slip",
+          "Episode_Reward/energy",
+          "Episode_Reward/fall",
+          "Episode_Reward/foothold_support",
+          "Episode_Reward/joint_pos_limits",
+          "Episode_Reward/move_to_target",
+          "Episode_Reward/progress",
+          "Episode_Reward/stall",
+          "Episode_Reward/stone_body_height",
+          "Episode_Reward/stone_swing_clearance",
+          "Episode_Reward/upright",
+          "Episode_Termination/lane_departure",
+          "Episode_Termination/overturn",
+          "Episode_Termination/time_out",
+          "Episode_Termination/torso_height",
+          "Loss/action_mean_abs_gt1_fraction",
+          "Loss/entropy",
+          "Loss/learning_rate",
+          "Loss/prior_action_difference_rms",
+          "Loss/prior_loss",
+          "Loss/prior_mse",
+          "Loss/student_action_mean_rms",
+          "Loss/surrogate",
+          "Loss/teacher_action_mean_rms",
+          "Loss/value_function",
+          "Loss/weighted_prior",
+          "Policy/mean_noise_std",
+          "Train/mean_episode_length",
+          "Train/mean_reward"
+        ],
+        "time_only_exclusions": [
+          "Perf/collection time",
+          "Perf/learning_time",
+          "Perf/total_fps",
+          "Train/mean_episode_length/time",
+          "Train/mean_reward/time"
+        ]
+      }
+    },
+    "preflight/low51": {
+      "checkpoint": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-09-24_v24_preflight_low51/model_1.pt",
+      "checkpoint_sha256": "593ee2378e9c8142db192307cf0ada099ba088230df35a6dfd52f110211ccb5b",
+      "tensors": {
+        "policy_tensors": 33,
+        "policy_values": 400631,
+        "teacher_tensors_exact_v5": 8,
+        "trainable_optimizer_states": 19,
+        "optimizer_parameter_entries": 27,
+        "adam_steps": 40,
+        "iteration": 1,
+        "learning_rate": 1e-05,
+        "std_min": 0.19981910288333893,
+        "std_max": 0.20027542114257812
+      },
+      "learning_rate_trace": {
+        "ppo_updates": 2,
+        "adam_steps": 40,
+        "checked_observations": 86,
+        "actor_critic_std_global_coverage": true,
+        "teacher_boundary_invariance_recorded": true
+      },
+      "scalar_tags": 38,
+      "finite_scalar_values": 76,
+      "transitions": 16384,
+      "raw_evidence": {
+        "initial": {
+          "path": "outputs/lr_continuation_v24_20260928/preflight_low51_initial.json",
+          "sha256": "09a739f6631584f376bb6789077ddbf4d0dccc76b04797cc7505dff4a975a8fd"
+        },
+        "schedule": {
+          "path": "outputs/lr_continuation_v24_20260928/preflight_low51_schedule.json",
+          "sha256": "b44fa128b675b5b57375b47518e9fbd85362e66bd95f223fa0b55bbe65fc7ba9"
+        },
+        "rollout": {
+          "path": "outputs/lr_continuation_v24_20260928/preflight_low51_initial_contact_rollout.json",
+          "sha256": "f6ab7d5ce52ce5e51992fb085ed0499cb63548027032507c653a32e12abfd7ec"
+        },
+        "lr": {
+          "path": "outputs/lr_continuation_v24_20260928/preflight_low51_initial_lr.json",
+          "sha256": "c4093648fe5e43f4acfc307debab59bf5f5534e3c7b1bd606967fe89a6c4e262"
+        }
+      }
+    },
+    "capacity/high51": {
+      "checkpoint": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-09-40_v24_capacity_high51/model_1.pt",
+      "checkpoint_sha256": "4026d4df8a6584299b27d4bcbb00174ff9fe4dfd4dd73dca0ef4fa16abd0e031",
+      "tensors": {
+        "policy_tensors": 33,
+        "policy_values": 400631,
+        "teacher_tensors_exact_v5": 8,
+        "trainable_optimizer_states": 19,
+        "optimizer_parameter_entries": 27,
+        "adam_steps": 40,
+        "iteration": 1,
+        "learning_rate": 0.0001,
+        "std_min": 0.19988106191158295,
+        "std_max": 0.2013254165649414
+      },
+      "learning_rate_trace": {
+        "ppo_updates": 2,
+        "adam_steps": 40,
+        "checked_observations": 86,
+        "actor_critic_std_global_coverage": true,
+        "teacher_boundary_invariance_recorded": true
+      },
+      "scalar_tags": 38,
+      "finite_scalar_values": 76,
+      "transitions": 262144,
+      "raw_evidence": {
+        "initial": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high51_initial.json",
+          "sha256": "2ca49d5c29b0291873bbae7b4f362373e01e41077716c0e9ffee9680b403cce5"
+        },
+        "schedule": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high51_schedule.json",
+          "sha256": "eeaedc9d3dce6c4fe41f33e7545ed873c3434732ace687cc259253efeaf3a184"
+        },
+        "rollout": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high51_initial_contact_rollout.json",
+          "sha256": "52bd327c5f3a2cf26d7d88150c2097b01b971df0f6f35ed6f42531d17fce14d7"
+        },
+        "lr": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high51_initial_lr.json",
+          "sha256": "e629bd78171815671410a83128a1568625c164a42a5c27aedea45410d10ca169"
+        }
+      },
+      "historical_replay": {
+        "whole_checkpoint_model_adam_metadata_exact": true,
+        "reward_contact_exact": true,
+        "exact_non_time_scalar_tags": [
+          "Episode_Reward/action_l2",
+          "Episode_Reward/adaptive_posture",
+          "Episode_Reward/alive",
+          "Episode_Reward/centering",
+          "Episode_Reward/contact_slip",
+          "Episode_Reward/energy",
+          "Episode_Reward/fall",
+          "Episode_Reward/foothold_support",
+          "Episode_Reward/joint_pos_limits",
+          "Episode_Reward/move_to_target",
+          "Episode_Reward/progress",
+          "Episode_Reward/stall",
+          "Episode_Reward/stone_body_height",
+          "Episode_Reward/stone_swing_clearance",
+          "Episode_Reward/upright",
+          "Episode_Termination/lane_departure",
+          "Episode_Termination/overturn",
+          "Episode_Termination/time_out",
+          "Episode_Termination/torso_height",
+          "Loss/action_mean_abs_gt1_fraction",
+          "Loss/entropy",
+          "Loss/learning_rate",
+          "Loss/prior_action_difference_rms",
+          "Loss/prior_loss",
+          "Loss/prior_mse",
+          "Loss/student_action_mean_rms",
+          "Loss/surrogate",
+          "Loss/teacher_action_mean_rms",
+          "Loss/value_function",
+          "Loss/weighted_prior",
+          "Policy/mean_noise_std",
+          "Train/mean_episode_length",
+          "Train/mean_reward"
+        ],
+        "time_only_exclusions": [
+          "Perf/collection time",
+          "Perf/learning_time",
+          "Perf/total_fps",
+          "Train/mean_episode_length/time",
+          "Train/mean_reward/time"
+        ]
+      }
+    },
+    "capacity/low51": {
+      "checkpoint": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-09-59_v24_capacity_low51/model_1.pt",
+      "checkpoint_sha256": "5e7a6ad8053b64b1d869c6b748f76484118a8380b4565e52d0f7114542cdcfd3",
+      "tensors": {
+        "policy_tensors": 33,
+        "policy_values": 400631,
+        "teacher_tensors_exact_v5": 8,
+        "trainable_optimizer_states": 19,
+        "optimizer_parameter_entries": 27,
+        "adam_steps": 40,
+        "iteration": 1,
+        "learning_rate": 1e-05,
+        "std_min": 0.1998717039823532,
+        "std_max": 0.20022740960121155
+      },
+      "learning_rate_trace": {
+        "ppo_updates": 2,
+        "adam_steps": 40,
+        "checked_observations": 86,
+        "actor_critic_std_global_coverage": true,
+        "teacher_boundary_invariance_recorded": true
+      },
+      "scalar_tags": 38,
+      "finite_scalar_values": 76,
+      "transitions": 262144,
+      "raw_evidence": {
+        "initial": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low51_initial.json",
+          "sha256": "dd48b111c6559885add6dcb088fe855556ed7fd582c22f303f562069a0b4ce76"
+        },
+        "schedule": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low51_schedule.json",
+          "sha256": "e656b741c3a9816d480518afa2ef9c794e5a1bef2efdf1713d00dbc8dfb9f924"
+        },
+        "rollout": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low51_initial_contact_rollout.json",
+          "sha256": "fc0f9841ca0a797cbfcddcf377f836f84a3d25b42c39d65d7df445422e71ae5f"
+        },
+        "lr": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low51_initial_lr.json",
+          "sha256": "c4093648fe5e43f4acfc307debab59bf5f5534e3c7b1bd606967fe89a6c4e262"
+        }
+      }
+    },
+    "capacity/high52": {
+      "checkpoint": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-10-17_v24_capacity_high52/model_1.pt",
+      "checkpoint_sha256": "a9a10c38591665e735e9578470199833e46e3b7bdacfae804f8950ef8287f687",
+      "tensors": {
+        "policy_tensors": 33,
+        "policy_values": 400631,
+        "teacher_tensors_exact_v5": 8,
+        "trainable_optimizer_states": 19,
+        "optimizer_parameter_entries": 27,
+        "adam_steps": 40,
+        "iteration": 1,
+        "learning_rate": 0.0001,
+        "std_min": 0.20020966231822968,
+        "std_max": 0.20133675634860992
+      },
+      "learning_rate_trace": {
+        "ppo_updates": 2,
+        "adam_steps": 40,
+        "checked_observations": 86,
+        "actor_critic_std_global_coverage": true,
+        "teacher_boundary_invariance_recorded": true
+      },
+      "scalar_tags": 38,
+      "finite_scalar_values": 76,
+      "transitions": 262144,
+      "raw_evidence": {
+        "initial": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high52_initial.json",
+          "sha256": "abf5a62a825c02ff4aecb5f947bf9b359c33ad98f96a59bf073b36d1134184c7"
+        },
+        "schedule": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high52_schedule.json",
+          "sha256": "57a5449d3af6eacad5da784087a2e3c197febc8602bbf0813045c340e3baf179"
+        },
+        "rollout": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high52_initial_contact_rollout.json",
+          "sha256": "246354220dd02cae9dcc2d122637d49bda88c4637c350f530927144437d77792"
+        },
+        "lr": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high52_initial_lr.json",
+          "sha256": "e629bd78171815671410a83128a1568625c164a42a5c27aedea45410d10ca169"
+        }
+      },
+      "historical_replay": {
+        "whole_checkpoint_model_adam_metadata_exact": true,
+        "reward_contact_exact": true,
+        "exact_non_time_scalar_tags": [
+          "Episode_Reward/action_l2",
+          "Episode_Reward/adaptive_posture",
+          "Episode_Reward/alive",
+          "Episode_Reward/centering",
+          "Episode_Reward/contact_slip",
+          "Episode_Reward/energy",
+          "Episode_Reward/fall",
+          "Episode_Reward/foothold_support",
+          "Episode_Reward/joint_pos_limits",
+          "Episode_Reward/move_to_target",
+          "Episode_Reward/progress",
+          "Episode_Reward/stall",
+          "Episode_Reward/stone_body_height",
+          "Episode_Reward/stone_swing_clearance",
+          "Episode_Reward/upright",
+          "Episode_Termination/lane_departure",
+          "Episode_Termination/overturn",
+          "Episode_Termination/time_out",
+          "Episode_Termination/torso_height",
+          "Loss/action_mean_abs_gt1_fraction",
+          "Loss/entropy",
+          "Loss/learning_rate",
+          "Loss/prior_action_difference_rms",
+          "Loss/prior_loss",
+          "Loss/prior_mse",
+          "Loss/student_action_mean_rms",
+          "Loss/surrogate",
+          "Loss/teacher_action_mean_rms",
+          "Loss/value_function",
+          "Loss/weighted_prior",
+          "Policy/mean_noise_std",
+          "Train/mean_episode_length",
+          "Train/mean_reward"
+        ],
+        "time_only_exclusions": [
+          "Perf/collection time",
+          "Perf/learning_time",
+          "Perf/total_fps",
+          "Train/mean_episode_length/time",
+          "Train/mean_reward/time"
+        ]
+      }
+    },
+    "capacity/low52": {
+      "checkpoint": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-10-35_v24_capacity_low52/model_1.pt",
+      "checkpoint_sha256": "c980d3c9be20463d1c5b694621feeef48d48bffb51afe86b679723a0f98010ea",
+      "tensors": {
+        "policy_tensors": 33,
+        "policy_values": 400631,
+        "teacher_tensors_exact_v5": 8,
+        "trainable_optimizer_states": 19,
+        "optimizer_parameter_entries": 27,
+        "adam_steps": 40,
+        "iteration": 1,
+        "learning_rate": 1e-05,
+        "std_min": 0.19991610944271088,
+        "std_max": 0.20017586648464203
+      },
+      "learning_rate_trace": {
+        "ppo_updates": 2,
+        "adam_steps": 40,
+        "checked_observations": 86,
+        "actor_critic_std_global_coverage": true,
+        "teacher_boundary_invariance_recorded": true
+      },
+      "scalar_tags": 38,
+      "finite_scalar_values": 76,
+      "transitions": 262144,
+      "raw_evidence": {
+        "initial": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low52_initial.json",
+          "sha256": "d81cde2415cd1808fdcdaea49999a214130746967c4eb41d2199b0862bc8f84b"
+        },
+        "schedule": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low52_schedule.json",
+          "sha256": "7b54bf835a0a600f7163704447973c53305c7351ab3136783533a66763782c6b"
+        },
+        "rollout": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low52_initial_contact_rollout.json",
+          "sha256": "1c06db070db1e2e74113b4d7d270c19652eacff7c8cb12d8a47636c7cb9c4f7e"
+        },
+        "lr": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low52_initial_lr.json",
+          "sha256": "c4093648fe5e43f4acfc307debab59bf5f5534e3c7b1bd606967fe89a6c4e262"
+        }
+      }
+    },
+    "capacity/high53": {
+      "checkpoint": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-10-54_v24_capacity_high53/model_1.pt",
+      "checkpoint_sha256": "81f84c57a2092331a4f18a626689d0d7dbae5774dca76486c588617bde1d4877",
+      "tensors": {
+        "policy_tensors": 33,
+        "policy_values": 400631,
+        "teacher_tensors_exact_v5": 8,
+        "trainable_optimizer_states": 19,
+        "optimizer_parameter_entries": 27,
+        "adam_steps": 40,
+        "iteration": 1,
+        "learning_rate": 0.0001,
+        "std_min": 0.198927104473114,
+        "std_max": 0.2021048218011856
+      },
+      "learning_rate_trace": {
+        "ppo_updates": 2,
+        "adam_steps": 40,
+        "checked_observations": 86,
+        "actor_critic_std_global_coverage": true,
+        "teacher_boundary_invariance_recorded": true
+      },
+      "scalar_tags": 38,
+      "finite_scalar_values": 76,
+      "transitions": 262144,
+      "raw_evidence": {
+        "initial": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high53_initial.json",
+          "sha256": "6065428fe4350bc232e5d371f21313554a4e22a15f2be91799ac1c7ba532377a"
+        },
+        "schedule": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high53_schedule.json",
+          "sha256": "97d532dba6a2441b6f09c84490e176b1e4a2d09d0df64da47b24b623b095976f"
+        },
+        "rollout": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high53_initial_contact_rollout.json",
+          "sha256": "acd7e0d1a5e6757f01902c710980a51e91206024a0b6a309c0197110cf71b9e1"
+        },
+        "lr": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_high53_initial_lr.json",
+          "sha256": "e629bd78171815671410a83128a1568625c164a42a5c27aedea45410d10ca169"
+        }
+      },
+      "historical_replay": {
+        "whole_checkpoint_model_adam_metadata_exact": true,
+        "reward_contact_exact": true,
+        "exact_non_time_scalar_tags": [
+          "Episode_Reward/action_l2",
+          "Episode_Reward/adaptive_posture",
+          "Episode_Reward/alive",
+          "Episode_Reward/centering",
+          "Episode_Reward/contact_slip",
+          "Episode_Reward/energy",
+          "Episode_Reward/fall",
+          "Episode_Reward/foothold_support",
+          "Episode_Reward/joint_pos_limits",
+          "Episode_Reward/move_to_target",
+          "Episode_Reward/progress",
+          "Episode_Reward/stall",
+          "Episode_Reward/stone_body_height",
+          "Episode_Reward/stone_swing_clearance",
+          "Episode_Reward/upright",
+          "Episode_Termination/lane_departure",
+          "Episode_Termination/overturn",
+          "Episode_Termination/time_out",
+          "Episode_Termination/torso_height",
+          "Loss/action_mean_abs_gt1_fraction",
+          "Loss/entropy",
+          "Loss/learning_rate",
+          "Loss/prior_action_difference_rms",
+          "Loss/prior_loss",
+          "Loss/prior_mse",
+          "Loss/student_action_mean_rms",
+          "Loss/surrogate",
+          "Loss/teacher_action_mean_rms",
+          "Loss/value_function",
+          "Loss/weighted_prior",
+          "Policy/mean_noise_std",
+          "Train/mean_episode_length",
+          "Train/mean_reward"
+        ],
+        "time_only_exclusions": [
+          "Perf/collection time",
+          "Perf/learning_time",
+          "Perf/total_fps",
+          "Train/mean_episode_length/time",
+          "Train/mean_reward/time"
+        ]
+      }
+    },
+    "capacity/low53": {
+      "checkpoint": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-11-13_v24_capacity_low53/model_1.pt",
+      "checkpoint_sha256": "760c28244e1fb27d0ba62a7405875d928642ca4997159d0ccf7f7acb7a8c3bbe",
+      "tensors": {
+        "policy_tensors": 33,
+        "policy_values": 400631,
+        "teacher_tensors_exact_v5": 8,
+        "trainable_optimizer_states": 19,
+        "optimizer_parameter_entries": 27,
+        "adam_steps": 40,
+        "iteration": 1,
+        "learning_rate": 1e-05,
+        "std_min": 0.1998901069164276,
+        "std_max": 0.20024804770946503
+      },
+      "learning_rate_trace": {
+        "ppo_updates": 2,
+        "adam_steps": 40,
+        "checked_observations": 86,
+        "actor_critic_std_global_coverage": true,
+        "teacher_boundary_invariance_recorded": true
+      },
+      "scalar_tags": 38,
+      "finite_scalar_values": 76,
+      "transitions": 262144,
+      "raw_evidence": {
+        "initial": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low53_initial.json",
+          "sha256": "9bb6aeb956bdd8db31df89837916abc50d082c78c28ec538a180203b2cb0cef7"
+        },
+        "schedule": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low53_schedule.json",
+          "sha256": "b5b87d71b874ebfebb2c82928bcc9a373b18e1cb2233125eb94a0e568f04093c"
+        },
+        "rollout": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low53_initial_contact_rollout.json",
+          "sha256": "f8f06ecffccbc146a351f3629e41c4bd597ddb1b5424e4b2a86ff6c2e45a2904"
+        },
+        "lr": {
+          "path": "outputs/lr_continuation_v24_20260928/capacity_low53_initial_lr.json",
+          "sha256": "c4093648fe5e43f4acfc307debab59bf5f5534e3c7b1bd606967fe89a6c4e262"
+        }
+      }
+    }
+  },
+  "total_new_transitions": 1605632,
+  "limitation": "CPU deserialization/log verification; not an independent replay of simulator physics or evidence generation."
+}

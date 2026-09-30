@@ -1,0 +1,120 @@
+{
+  "created_utc": "2026-09-28T13:01:53.615258+00:00",
+  "passed": true,
+  "python_files": 15,
+  "source_sha256": {
+    "src/week03_ant/lr_study_v24.py": "f25e902c00f3ba80167f6c7291f9da2be6a6d64c62b3cc341c113e1026f24831",
+    "src/week03_ant/tasks/lr_continuation_v24.py": "74c0d31e88ec84354e833cf9cfec84ea30a9781f26068b4d99825fd7dca21c7e",
+    "src/week03_ant/tasks/lr_continuation_v24_cfg.py": "cfafa0573c70594473e2d44e504841e7d1a66389af0c68e23739d721956150a1",
+    "scripts/lr_continuation_v24.py": "bc37fbd73cb24faf97109dbe297507fd9e6450bdef63b611595708be447d72d9",
+    "scripts/run_lr_training_v24.py": "6e2d4fbd18c4bbf62cd98f966f97d6a6310e3e9c4eeaddef8bb23c2db7d6f09d",
+    "tests/test_lr_training_v24.py": "52f63597681bd73318ba1558eb2eb553cf1752ccec2b821f58797dba6c2c9edb",
+    "tests/test_lr_harness_v24.py": "023d2adf2f8f331a966dbe6e1f352ec3978b71f7c5e3352f36e4b9c6472e1876",
+    "docs/experiment_plans/lr_continuation_v24.md": "79f300f70359d1856b234e1a257cd7de2804833ad0154bc47c3ea505d9bc342f",
+    "scripts/evaluate_lr_v24.py": "6bb324c06a714c217adde8c9fb03dc7c1ae7598b4d27f31f35306b5e7a1b4961",
+    "scripts/run_lr_eval_v24.py": "097b1c27ad4dca9feecd2b5eb3a55345c3798b4e8227c37adf9305358a9fa637",
+    "scripts/summarize_lr_v24.py": "621801fec5047db96262c522e30e20a888c6f757d9a6eb5ac6b709c45c48747a",
+    "tests/test_lr_eval_v24.py": "2eb154620c7e1c515ade9001bf0c9581f265c7469c808c7805a63edea48df2e4"
+  },
+  "post_experiment_verifier_sha256": {
+    "scripts/audit_lr_v24_raw.py": "bfcef9a1366f0c642af389eed84eb0f2da78e17cfbde57d42a13650855cdb797",
+    "tests/test_lr_raw_audit_v24.py": "287497030885ae8406b4eb519fb0dd9b0167c8d080aaefbde20b17c93ba280f6",
+    "scripts/audit_lr_v24_training.py": "4188bf3cec88f8463dc02022788247c567fdb95b2c8e79aede2a3c8496ed327d",
+    "tests/test_lr_tensor_audit_v24.py": "9616c8a8eb0e14185f82eddc8309899e2bd5d3433f0601fa5395d3e5460b3517"
+  },
+  "checks": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "pyflakes",
+        "src/week03_ant/lr_study_v24.py",
+        "src/week03_ant/tasks/lr_continuation_v24.py",
+        "src/week03_ant/tasks/lr_continuation_v24_cfg.py",
+        "scripts/lr_continuation_v24.py",
+        "scripts/run_lr_training_v24.py",
+        "tests/test_lr_training_v24.py",
+        "tests/test_lr_harness_v24.py",
+        "scripts/evaluate_lr_v24.py",
+        "scripts/run_lr_eval_v24.py",
+        "scripts/summarize_lr_v24.py",
+        "tests/test_lr_eval_v24.py",
+        "scripts/audit_lr_v24_raw.py",
+        "tests/test_lr_raw_audit_v24.py",
+        "scripts/audit_lr_v24_training.py",
+        "tests/test_lr_tensor_audit_v24.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1302721140018548,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "mypy",
+        "--follow-imports=skip",
+        "--ignore-missing-imports",
+        "src/week03_ant/lr_study_v24.py",
+        "src/week03_ant/tasks/lr_continuation_v24.py",
+        "src/week03_ant/tasks/lr_continuation_v24_cfg.py",
+        "scripts/lr_continuation_v24.py",
+        "scripts/run_lr_training_v24.py",
+        "tests/test_lr_training_v24.py",
+        "tests/test_lr_harness_v24.py",
+        "scripts/evaluate_lr_v24.py",
+        "scripts/run_lr_eval_v24.py",
+        "scripts/summarize_lr_v24.py",
+        "tests/test_lr_eval_v24.py",
+        "scripts/audit_lr_v24_raw.py",
+        "tests/test_lr_raw_audit_v24.py",
+        "scripts/audit_lr_v24_training.py",
+        "tests/test_lr_tensor_audit_v24.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05660571299813455,
+      "stdout": "Success: no issues found in 15 source files\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "compileall",
+        "-q",
+        "src/week03_ant/lr_study_v24.py",
+        "src/week03_ant/tasks/lr_continuation_v24.py",
+        "src/week03_ant/tasks/lr_continuation_v24_cfg.py",
+        "scripts/lr_continuation_v24.py",
+        "scripts/run_lr_training_v24.py",
+        "tests/test_lr_training_v24.py",
+        "tests/test_lr_harness_v24.py",
+        "scripts/evaluate_lr_v24.py",
+        "scripts/run_lr_eval_v24.py",
+        "scripts/summarize_lr_v24.py",
+        "tests/test_lr_eval_v24.py",
+        "scripts/audit_lr_v24_raw.py",
+        "tests/test_lr_raw_audit_v24.py",
+        "scripts/audit_lr_v24_training.py",
+        "tests/test_lr_tensor_audit_v24.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.030861111998092383,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0022191380048752762,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "scope": "Available pyflakes/mypy(bounded, import skipping)/AST/compile/diff; no unavailable tool/dependency installation."
+}

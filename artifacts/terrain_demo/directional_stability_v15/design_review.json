@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-22T16:00:42.937194+00:00",
+  "role": "architect",
+  "agent": "/root/review_v15_design",
+  "verdict": "CLEAR",
+  "clarification_applied": "stable vs equal-budget control; history_stable vs history_control; original/v14 descriptive only",
+  "cautions": [
+    "COM velocity, stateless/RNG-free",
+    "RewardManager applies weight*dt once",
+    "invalid coverage and low-speed/falls must be reported",
+    "combined term is not component ablation"
+  ],
+  "performance_unproven": true
+}

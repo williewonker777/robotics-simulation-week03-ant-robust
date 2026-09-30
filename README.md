@@ -6,13 +6,168 @@ randomization이 처음 보는 물리 조건의 일반화를 개선하는가**�
 
 > 공개 저장소 URL: https://github.com/williewonker777/robotics-simulation-week03-ant-robust
 
-## 최신 험지 실험 안내 — 2026-09-22
+## 최종 과제 제출 / 실행 — 2026-09-30
 
-- **[전체 진행 과정·결과·실패 사례 (v0~v10)](docs/EXPERIMENT_HISTORY.md)**
-- 현재 권장 모델은 **v5 portal-rehearsal round4**입니다. 최초 과제 모델이 아니라,
-  험지 복구 학습을 거친 60D 기준선입니다. v6~v10은 별도 센서/학습 방법을 시험했지만
+**[최종 제출 가이드: 모델 선택·100환경 평가·GUI·재학습·실험 요약](docs/FINAL_SUBMISSION.md)**
+
+- **과제 제출 모델:** `artifacts/runs/robust_seed42/model_999.pt` (60D 관측 / 8D 행동).
+  기존 7개 동일-budget run 중 공개 ID+OOD 동등가중 종합 return이 가장 높았습니다.
+  ID **156.15 ± 27.93**, 저마찰 **162.01 ± 30.79**, 하중 **154.30 ± 28.06**,
+  외란 **153.04 ± 32.02** (각 100환경 첫 episode, 평가 seed24).
+  단일 최고 run 선택과 3seed 전체의 일반화 결론은 구분합니다. 비공개 성능 보장은 아닙니다.
+- **험지 데모 모델:** v5 portal-rehearsal round4. 지형 실험의 기본 모델이며,
+  원래 과제 최고 return 제출 모델과는 다릅니다. v11–v24까지 전체 승격 근거를 검토했고
+  후속 모델로 기본 설정을 교체하지 않았습니다.
+- 팀원 정보와 LMS URL 입력은 [제출 체크리스트](docs/SUBMISSION_CHECKLIST.md)에 남아 있습니다.
+
+기존 수업 환경에서 저장소 루트로 이동한 뒤, 제출 모델을 바로 평가하는 명령:
+
+```bash
+export ROBOTICS_SIM_CLASS_ROOT=/mnt/ssd970/robotics_simulation_class
+./scripts/run_evaluate.sh \
+  --task Week03-Ant-Baseline-v0 --headless --device cuda:0 \
+  --num_envs 100 --seed 24 --max_steps 960 \
+  --checkpoint artifacts/runs/robust_seed42/model_999.pt \
+  --output outputs/submission_eval/id.json \
+  --kit_args=--/renderer/multiGpu/enabled=false
+```
+
+설치와 체크섬, 공개 ID/OOD 4종 전체 평가, GUI/영상 및 험지 데모 명령은 위 가이드에 모았습니다.
+
+## 후속 험지 실험 기록 — v0~v24
+
+아래의 “당시 로컬/미푸시” 문구는 각 실험 완료 시점의 기록입니다.
+이번 정리의 공개 파일 범위와 검증은 [PUBLICATION.md](docs/PUBLICATION.md)를 봅니다.
+
+- **[v24 고정 전역 학습률 민감도](docs/LR_CONTINUATION_V24.md)**:
+  LR1e-4→1e-5의 동일예산 3seed 실험을 완료했습니다. 새 두 지도4,900첫 episode에서
+  16초 단독 6타일은 같은 seed의 high 대비 **+7/+7/+9회(각300회 중)** 늘었지만,
+  낙상·레인·평지 trade-off로 **low 대 high의6합산 gate는16/64초 모두FAIL**입니다.
+  64초 단독 차이도−11/−15/+24로 일관되지 않아 **기본정책 유지**입니다.
+  [전체18비교](artifacts/terrain_demo/lr_continuation_v24/summary.md),
+  [독립 원시 감사](artifacts/terrain_demo/lr_continuation_v24/independent_raw_audit.json).
+  9,800window는 독립 episode가 아니며 학습률이 과거 회귀의 원인이라고 단정하지 않습니다.
+
+- **[v23 같은 첫 episode의 16초·64초 짝 평가](docs/PAIRED_HORIZON_V23.md)**:
+  새 학습 없이 신규 두 지도 **2,800첫 episode·5,600의존 관측**을 완료했습니다.
+  16초의 부모 대비 여섯 비교는 모두FAIL이지만, 같은 주행의64초에서는
+  History seed51·53 대부모가 두 지도 모두PASS였습니다. 부모는 늦은 성공72회와
+  늦은 실패16회가 함께 나타났습니다. **평가 시간에 따른 차이를 기록하고 기본정책 유지**.
+  [전체 비교](artifacts/terrain_demo/paired_horizon_v23/summary.md),
+  [독립 원시 감사](artifacts/terrain_demo/paired_horizon_v23/independent_raw_audit.json).
+  두 시점은 독립 episode가 아니며 장시간 이득으로 주요16초 회귀를 상쇄하지 않습니다.
+
+- **[v22 무비용 추가학습의 seed 민감도](docs/SEED_CONTINUATION_V22.md)**:
+  같은 부모·훈련 지형에서 seed51/52/53을 각각 새로 학습하고 신규 두 지도
+  2,960회 평가했습니다. 16초 험지 6타일은 세 seed 모두 부모보다 낮았습니다
+  (164~171/300 대178/300; History168~172 대177). **주요12합산 gate 전부FAIL,
+  기본정책 유지**입니다. 별도64초 돌다리에서는 seed52 단독17/20 대부모7/20으로
+  개선됐지만 같은 seed의 History는4/20으로 낮아, 조건별 차이를 함께 기록했습니다.
+  [전체 비교](artifacts/terrain_demo/seed_continuation_v22/summary.md),
+  [독립 원시 감사](artifacts/terrain_demo/seed_continuation_v22/independent_raw_audit.json).
+  한 부모·한 훈련 지형의 3seed 서술적 결과이며 통계적 우월성을 주장하지 않습니다.
+
+- **[v21 무접촉비용 추가학습 대조군](docs/CONTACT_CONTINUATION_V21.md)**:
+  같은 예산으로 무비용군 하나를 학습하고, 기존 즉시/점진 모델과 새 두 지도
+  2,960회 비교했습니다. 무비용 대 부모의16초6타일169→164/300·이탈0→5,
+  64초6타일12→8/20으로 **부모 대비 전체 개선 실패, 기본정책 유지**입니다.
+  점진 대 무비용의 주요 합산 이득164→165는 지도별로 일관되지 않습니다.
+  [전체12비교 판정](artifacts/terrain_demo/contact_continuation_v21/summary.md),
+  [독립 원시 감사](artifacts/terrain_demo/contact_continuation_v21/independent_raw_audit.json).
+  한 seed·과거 학습군 재사용의 한계가 있어 회귀를 벌점만의 인과효과로 단정하지 않습니다.
+
+- **[v20 접촉 비용의 점진 도입](docs/CONTACT_CURRICULUM_V20.md)**:
+  Aractingi2023의벌점커리큘럼을참고해즉시/점진모델을각250회짝학습하고,
+  새두지도2,220회평가했습니다. 16초점진대즉시6타일158→164/300·낙상26→21이나
+  이탈1→6으로FAIL이며기존부모178/300에도못미쳤습니다. 64초단독은6타일7→5/20,
+  history이탈은1→9/20으로악화했습니다. **두평가의여섯합산gate모두FAIL, 기본정책유지**.
+  [전체판정](artifacts/terrain_demo/contact_curriculum_v20/summary.md),
+  [독립감사](artifacts/terrain_demo/contact_curriculum_v20/independent_raw_audit.json).
+  한학습seed의제한적논문변형이며,계수도입시점과총노출량이함께달라집니다.
+
+- **[v19 공통 신규 지도 재평가](docs/REBASELINE_V19.md)**: 새 학습 없이 고정 정책4개를
+  같은 새 지도3개에서 총2,220회 비교했습니다. 16초 험지6타일은 v5→v16 control
+  **209→265/450**, 낙상49→31/450; history도225→265/450으로 합산 기준PASS입니다.
+  그러나 지도별 회귀가 있고, 별도64초 돌다리 단독은 이탈0→4/30으로FAIL입니다.
+  History의64초 합산13→14/30은 지도별 gate가 모두FAIL이라 보편적 개선을 뜻하지
+  않습니다. **기본 모델 유지**, [전체 판정](artifacts/terrain_demo/rebaseline_v19/summary.md),
+  [논문 원문과 구현 차이](docs/REBASELINE_V19_REFERENCES.md)를 함께 기록했습니다.
+
+- 최신 **[v18 깊이 조건부 v5 교사 prior](docs/TERRAIN_STYLE_V18.md)**:
+  [CaT의 지형 조건부 스타일 원리](https://arxiv.org/html/2403.18765v1)를 기존
+  frozen-v5 교사 손실에 제한 적용했습니다. 동일 예산 두 군·새 지도2개에서
+  16초 험지 6타일은 단독162→154/300, 히스토리163→156/300으로 악화했고
+  레인 이탈도 각각1→9/300, 1→3/300으로 늘었습니다. **승격 FAIL**로 기본
+  모델/전환을 유지합니다. [24개 원시 결과·판정](artifacts/terrain_demo/terrain_style_v18/summary.md).
+  학습 전용 깊이 마스크이지 actor에 전체 스캔을 추가한 실험은 아닙니다.
+
+- 최신 **[v17 학습 진도 기반 지형 커리큘럼](docs/LEARNING_PROGRESS_V17.md)**:
+  [Li·Li·Hutter(2026)](https://arxiv.org/html/2601.17428v1)의 지형별
+  학습 진도 아이디어를 같은 reset 재샘플링 대조군과 비교했습니다. 두 군을
+  각3,276만 전이 학습하고 새 지도2,220회 평가했습니다. 16초 험지 6타일은
+  단독163→159/300, 히스토리166→162/300으로 **주평가 FAIL**입니다.
+  별도64초 돌다리 단독3→7/20 개선은 16초 실패를 뒤집지 않습니다.
+  [원시 결과·판정](artifacts/terrain_demo/learning_progress_v17/summary.md).
+  기본 권장 모델/전환은 유지하며 로컬 실험으로 보존했습니다.
+
+- 최신 **[v16 지면 접촉 기반 발 미끄러짐 비용](docs/CONTACT_SLIP_V16.md)**:
+  네 발의 실제 지면 필터 접촉 신호로 발끝 수평속도 비용을 조건화했습니다.
+  센서를 똑같이 켠 대조군/비용군을 각3,276만 transition 학습하고 새 지도
+  2,220회 평가했습니다. 16초 험지 6타일은 단독176→163/300,
+  히스토리 하이브리드179→172/300으로 **악화**했고, 별도64초 돌다리도
+  전체 개선 기준을 통과하지 못했습니다. 기본 권장 v5/전환 설정은 유지합니다.
+  [원시 결과·판정](artifacts/terrain_demo/contact_slip_v16/summary.md).
+  로컬 실험이며 commit/push는 하지 않았습니다.
+
+- 최신 **[v15 논문 기반 방향 안정화 보상](docs/DIRECTIONAL_STABILITY_V15.md)**:
+  기존91D 깊이·높이 관측을 유지하고 측면속도/yaw 추종 비용을 추가했습니다.
+  같은 v14에서 대조군/새 보상군을 각3,276만스텝 학습하고 새 지도2,220회 평가했습니다.
+  16초 단독 낙상30→21/300은 줄었지만6타일160→158/300·이탈2→3/300으로 FAIL,
+  64초 돌다리도 단독6타일9→8/20, hybrid11→6/20으로 FAIL입니다.
+  **지속 험지 개선이 검증되지 않아 기본 설정은 유지합니다.**
+  [전체 결과](artifacts/terrain_demo/directional_stability_v15/summary.md). 로컬 검증이며 원격 push 없음.
+
+- 최신 **[v14 논문 기반 자세 명령·피드백 관측](docs/COMMAND_CONDITIONING_V14.md)**:
+  Walk These Ways의 명시적 명령 입력 아이디어로88D→91D 관측을 추가했습니다.
+  동일 보상 아래 입력을 가린 모델/받는 모델을 각각3,276만스텝 학습하고2,220회 평가했습니다.
+  16초 험지는 낙상44→30/300으로 줄었으나6타일144→135/300·이탈1→8/300으로
+  주기준FAIL입니다. 별도64초 돌다리 단독은6타일5→9/20·낙상9→6/20으로 개선됐지만
+  hybrid는6타일5→2/20으로 악화했습니다. 기본설정 교체 없이 결과를 보존했습니다.
+  [전체 결과](artifacts/terrain_demo/command_conditioning_v14/summary.md).
+  v14는 로컬 검증 완료이며 원격 push는 하지 않았습니다.
+
+- 최신 **[v13 깊이 기반 몸체·발 높이 보상](docs/ADAPTIVE_POSTURE_V13.md)**:
+  같은 v10에서 기존 보상 유지(control)/새 자세 보상 추가(adaptive) 모델을
+  각각3,276만스텝 학습하고,
+  새지도2개에서7개제어기·2,590회 비교했습니다. 단독모델은평지몸체46.1→45.4cm,
+  속도10.58→10.87m/s였지만 혼합험지낙상37→39/300으로주기준FAIL입니다.
+  별도64초최고난도돌다리는6타일5→10/20·낙상11→6/20으로개선됐으나,
+  hybrid는이탈이늘어기본모델을교체하지않았습니다.
+  [전체16초/64초결과](artifacts/terrain_demo/adaptive_posture_v13/summary.md).
+- 최신 수정 **[v12 깊이 히스토리 전환](docs/HISTORY_V12.md)**:
+  최근1초 깊이 특징을 기억해 지속적 험지에서 v10, 지속적 평지에서 v5로 전환합니다.
+  지형 캐시를 통일한 동일 초기조건1480회 비교와353개 CPU 테스트를 완료했습니다.
+  기존 하이브리드 대비16초 전환 빈도는23.6% 감소했지만, 6타일 통과49.3%→48.7%,
+  낙상9.3%→9.3%로 전체 개선 기준은 실패했습니다. 별도64초 고난도 돌다리는
+  통과25%→25%, 낙상50%→45%(제어기별20회)였습니다. 모든 맵 우월성을 뜻하지 않습니다.
+  [전체 비교 결과](artifacts/terrain_demo/history_v12/attempt02/summary.md).
+  최초 초기관측 불일치350회는 보존·제외했고, 모델·전환 조건은 변경하지 않았습니다.
+- **[전체 진행 과정·결과·실패 사례 (v0~v24)](docs/EXPERIMENT_HISTORY.md)**
+- 현재 **험지 데모 권장 모델**은 **v5 portal-rehearsal round4**입니다. 최초 과제 모델이 아니라,
+  험지 복구 학습을 거친 60D 기준선입니다. v6~v24는 별도 센서/학습/전환 방법을 시험했지만
   사전 정의한 전체 교체 기준을 통과하지 못했습니다.
-- 최신 [v10 실험 방법·16초/64초 결과](docs/PRIOR_V10.md) ·
+- 최신 **[v11 깊이 기반 v5/v10 전환](docs/HYBRID_V11.md)**:
+  16초 6타일 통과율 44.3%(v5) → 50.1%(hybrid), 낙상률 7.7% → 9.0%.
+  별도 64초 최고 난도 돌다리는 6타일 5.0% → 23.3%, 낙상은 둘 다 35.0%였습니다.
+  일부 이점은 있지만 전체 교체는 보류했습니다.
+  [수치/독립 감사](artifacts/terrain_demo/hybrid_v11/attempt02/summary.md) ·
+  [돌다리 영상·수치](artifacts/terrain_demo/hybrid_v11/index.html) ·
+  **[다른 험지 5종 영상 비교](artifacts/terrain_demo/hybrid_v11/other_terrains/index.html)**.
+  추가 영상은 난이도 1.0의 계단·장애물·요철·경사·파도형 지형에서 같은 초기 조건의
+  v5/v10/hybrid를 나란히 보여주며, 정량 집계에는 포함하지 않습니다.
+  초기 관측 검증 실패분을 보존·제외하고 동일 조건 전체 배치를 한 번 재실행했습니다.
+  v11 추가 작업은 로컬 상태이며 아직 원격에 push하지 않았습니다.
+- 이전 [v10 실험 방법·16초/64초 결과](docs/PRIOR_V10.md) ·
   [16초 집계](artifacts/terrain_demo/prior_v10/summary.md) ·
   [64초 고난도 진단](artifacts/terrain_demo/prior_v10/horizon_summary.md) ·
   [영상 비교 페이지](artifacts/terrain_demo/prior_v10/index.html)
@@ -468,8 +623,9 @@ population 표준편차를 terminal과 JSON에 출력합니다.
 | robust_seed43 | `e770d3282a447c88794f2f6bb147dd208965cce73a4b3dd9fe369b9ba54de187` |
 | robust_seed44 | `f9c84451e14e8d26757c88664aaf524841cc02fefc7d74bc924c03d15cb91e94` |
 
-각 [`artifacts/runs`](artifacts/runs) 하위 폴더에는 checkpoint, TensorBoard event,
-Hydra/RSL-RL params와 machine-readable manifest가 함께 있습니다.
+각 [`artifacts/runs`](artifacts/runs) 하위 폴더에는 checkpoint,
+Hydra/RSL-RL params와 machine-readable manifest가 있습니다. 원시 TensorBoard event는
+로컬 보관 자료이며 manifest의 event 경로가 공개 배포를 뜻하지는 않습니다.
 
 ## 영상과 발표자료
 
@@ -488,7 +644,7 @@ Hydra/RSL-RL params와 machine-readable manifest가 함께 있습니다.
 src/week03_ant/          custom task, environment and evaluation utilities
 scripts/                 train, play_one_episode, analysis and report commands
 configs/                 fair-budget experiment matrix
-artifacts/runs/          checkpoints, params, TensorBoard logs and manifests
+artifacts/runs/          checkpoints, params and manifests (raw TensorBoard kept local)
 artifacts/evaluations/   per-checkpoint 100-env JSON and aggregate tables
 artifacts/terrain_demo/  multi-terrain checkpoint, evaluations and reproduction notes
 artifacts/plots/         learning and evaluation figures

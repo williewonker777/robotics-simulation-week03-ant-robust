@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "created_utc": "2026-09-28T04:09:14.490499+00:00",
+  "raw_files": 24,
+  "first_episodes": 2220,
+  "scored_commands": 24,
+  "training": {
+    "immediate": {
+      "coefficient_step_mass": 8000,
+      "realized_penalty_sum": 64750.662216160374
+    },
+    "ramped": {
+      "coefficient_step_mass": 6000,
+      "realized_penalty_sum": 49263.11250755136
+    }
+  },
+  "summary_sha256": "b42a331238647b0be304562ecc40bc083c15149b0945ac82b07ffa3dd84fb7fa",
+  "experiment_freeze_sha256": "9956dd4caa808ade80ffcdca24ff6a67720bbbba87e623e8c7703a5bfddb89cb",
+  "verifier_sha256": "38731c25bb89b944bfd89436f73317ad0a1a1a73f832e3e61dbabfcb26d7d3ff",
+  "verifier_scope": "Post-experiment verification code, not part of frozen experimental definitions.",
+  "verified": "Independent strict counts, all six descriptive gates/paired outcomes at pooled/map/family/level, provenance, clocks and reward accounting.",
+  "limitations": "Stdlib verifier hashes checkpoint/TensorBoard bytes and validates recorded tensor/scalar proofs; it does not deserialize tensors or independently decode TensorBoard scalars, nor independently recompute contact/posture geometry telemetry."
+}

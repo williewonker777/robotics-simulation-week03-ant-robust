@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-09-28T07:16:14.266106+00:00",
+  "reviewer": "independent code-reviewer native agent",
+  "source": "Previously executed read-only CPU verification and implementation reviews in this session; current evidence hash links rechecked at preservation.",
+  "source_sha256": {
+    "src/week03_ant/seed_study_v22.py": "187f11598f4c75c2f33d93adf798b411137e35e5873da16dbfd619824ab874b4",
+    "src/week03_ant/tasks/seed_continuation_v22.py": "0a99d800b1086a68a1e5a4bccdac4b3dc45f8e5f2da9302a3bad307127204ca0",
+    "src/week03_ant/tasks/seed_continuation_v22_cfg.py": "39011389d0056aa0052a21f397a80d6c4c835ceaccad22c8375fa394c2382e32",
+    "scripts/seed_continuation_v22.py": "cad2dbc8c25298d66b4262fddc6e8bb21c4c2cd6cfd4c880c5690d2c41159cbc",
+    "scripts/run_seed_training_v22.py": "295899c192c1d6f81937de10e3d5dce34bfe172baa4e6b7773c879b259538eef",
+    "tests/test_seed_training_v22.py": "bea381924d23a2fc899338147c386e7c3c8d263c06ab9e60db8641004e684345",
+    "tests/test_seed_harness_v22.py": "ef7a6ec459c1370031bfbcc71220c03b7c9573d47b4636f37e7ea01575f9d5a8",
+    "docs/experiment_plans/seed_continuation_v22.md": "b96dad8f2dacacf39e4c410b3b26485046b0dda89de7e48dff5347e50ec9de59",
+    "scripts/evaluate_seed_v22.py": "88fbd24cd86775cd260d0ac81e58c29c7b1c9d82c48cea6d1106083bd416907f",
+    "scripts/run_seed_eval_v22.py": "58608a0777f602b0de34b985a18a0abec36c25f5e649c88cd96d1b316da2f035",
+    "scripts/summarize_seed_v22.py": "3c19fc38170130a27e73fc9d7c6e19be45d5c9387fbfa66a67c6cf940ceff584",
+    "tests/test_seed_eval_v22.py": "d17b7d9536d9b1997e66f448271a5d5c1c1e28f5fd448d83c74f2b99c195d73c"
+  },
+  "training_freeze_sha256": "026e30f7e25f93b67914cf1ba801093e24c62c71d04253747c31db26639a485b",
+  "recommendation": "APPROVE",
+  "outstanding_issues": 0,
+  "reviewed_files_sha256": {
+    "scripts/audit_seed_v22_raw.py": "9d24e151a100fd49faa917d2762145149c313eef1b14b90b53bb751487c4b3ef",
+    "tests/test_seed_raw_audit_v22.py": "56cecbfd1263f2b78d5e8bd9480b6c236b6234e6c2deb1be024f9e89ba4bf38c"
+  },
+  "outside_frozen_experimental_definitions": true,
+  "diagnostics": {
+    "independent_targeted_tests_passed": 68,
+    "pyflakes": "PASS",
+    "bounded_mypy": "PASS; follow-imports=skip and ignore-missing-imports"
+  },
+  "checks": [
+    "Stdlib only; no production scoring/study/audit imports.",
+    "Independent strict first-episode arithmetic, twelve directional gates and paired outcomes, pooled/map/family/level counts.",
+    "Three-seed ranges and parent deltas without parent pseudoreplication.",
+    "Same-seed max_iterations projection, initial and actual horizon matching.",
+    "Fixed complete35field development parity contract.",
+    "Fresh source checkpoint paths/distinctness and53successful-command accounting.",
+    "Historical/full replay raw evidence/hash linkage with truthful tensor and TensorBoard decoding limits."
+  ],
+  "resolved_findings": [
+    {
+      "severity": "MEDIUM",
+      "location": "scripts/audit_seed_v22_raw.py:seed51_checkpoint_binding",
+      "issue": "Verifier initially imposed serialized old/new checkpoint byte equality beyond the preregistered semantic replay contract.",
+      "resolution": "Fresh and historical endpoints separately bound to their proofs; exact semantic replay proof retained; serialized equality informational only. Equal/different-container and binding mutation tests pass."
+    }
+  ],
+  "limits": [
+    "Stdlib auditor does not deserialize checkpoint tensors or decode TensorBoard scalars; separate independent CPU verification is required.",
+    "Contact/posture physical geometry is not independently recomputed.",
+    "Completed32file/2960episode actual artifact audit remains pending."
+  ]
+}

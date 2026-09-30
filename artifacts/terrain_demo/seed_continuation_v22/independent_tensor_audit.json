@@ -1,0 +1,431 @@
+{
+  "created_utc": "2026-09-28T07:47:50.092771+00:00",
+  "passed": true,
+  "reviewer": "independent code-reviewer native agent",
+  "method": {
+    "cpu_only": true,
+    "cuda_visible_devices": "",
+    "torch_threads": 1,
+    "production_validator_imports": false,
+    "tensor_checks": "Direct torch CPU deserialization; dtype/shape/value exact teacher/full-replay comparison and finite checks.",
+    "scalar_checks": "Direct TensorBoard EventAccumulator decode and text-log iteration/transition sequences."
+  },
+  "evidence_sha256": {
+    "artifacts/terrain_demo/seed_continuation_v22/trained_models.json": "30edde72837a9ab60ce6233fbff9d74b473c81fa0ac68a4c2f0dcad5cd8c6540",
+    "artifacts/terrain_demo/seed_continuation_v22/training_validation.json": "fe5ffe66053fd5d03772615f8b5db6040dd2ebae50da91ae6bee32c3a1b6ce19",
+    "artifacts/terrain_demo/seed_continuation_v22/training_frozen.json": "026e30f7e25f93b67914cf1ba801093e24c62c71d04253747c31db26639a485b",
+    "artifacts/terrain_demo/seed_continuation_v22/capacity.json": "44f93d347b7384713d9e0d6e1df8d1f0f487f1ba28f7ac54f66c328326d16cf7",
+    "artifacts/terrain_demo/seed_continuation_v22/full_replay.json": "cfffec5668b8215243e9dae408cbfe47623524c4874f3fdebb8e284b25f09df8",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_full_replay_audit.json": "24f48d8acd645f4ebebce0a29338975b62693b37b22dff69682b5bd8090bbc88",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_replay_audit.json": "cf63630b1495b08f70b5a0fa7b3f63ca3e976962c543f22b4862e065426479cc"
+  },
+  "source_sha256": {
+    "src/week03_ant/seed_study_v22.py": "187f11598f4c75c2f33d93adf798b411137e35e5873da16dbfd619824ab874b4",
+    "src/week03_ant/tasks/seed_continuation_v22.py": "0a99d800b1086a68a1e5a4bccdac4b3dc45f8e5f2da9302a3bad307127204ca0",
+    "src/week03_ant/tasks/seed_continuation_v22_cfg.py": "39011389d0056aa0052a21f397a80d6c4c835ceaccad22c8375fa394c2382e32",
+    "scripts/seed_continuation_v22.py": "cad2dbc8c25298d66b4262fddc6e8bb21c4c2cd6cfd4c880c5690d2c41159cbc",
+    "scripts/run_seed_training_v22.py": "295899c192c1d6f81937de10e3d5dce34bfe172baa4e6b7773c879b259538eef",
+    "tests/test_seed_training_v22.py": "bea381924d23a2fc899338147c386e7c3c8d263c06ab9e60db8641004e684345",
+    "tests/test_seed_harness_v22.py": "ef7a6ec459c1370031bfbcc71220c03b7c9573d47b4636f37e7ea01575f9d5a8",
+    "docs/experiment_plans/seed_continuation_v22.md": "b96dad8f2dacacf39e4c410b3b26485046b0dda89de7e48dff5347e50ec9de59",
+    "scripts/evaluate_seed_v22.py": "88fbd24cd86775cd260d0ac81e58c29c7b1c9d82c48cea6d1106083bd416907f",
+    "scripts/run_seed_eval_v22.py": "58608a0777f602b0de34b985a18a0abec36c25f5e649c88cd96d1b316da2f035",
+    "scripts/summarize_seed_v22.py": "3c19fc38170130a27e73fc9d7c6e19be45d5c9387fbfa66a67c6cf940ceff584",
+    "tests/test_seed_eval_v22.py": "d17b7d9536d9b1997e66f448271a5d5c1c1e28f5fd448d83c74f2b99c195d73c"
+  },
+  "models": {
+    "seed51": {
+      "training_seed": 51,
+      "checkpoint": "artifacts/terrain_demo/seed_continuation_v22/runs/seed51/model_249.pt",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-14-11_v22_main_seed51/model_249.pt",
+      "sha256": "298f96135dad68c5d45b081187cad57d932e56d6967c84e24a099f79f2460aee",
+      "fresh_source_copy_bytes_equal": true,
+      "policy_tensors": 33,
+      "policy_values": 400631,
+      "policy_finite": true,
+      "std_min": 0.17228485643863678,
+      "std_max": 0.22027036547660828,
+      "teacher_tensors_exact_original_v5": 8,
+      "actor_tensors_changed_from_parent": [
+        "actor.0.weight",
+        "actor.0.bias",
+        "actor.0.command_weight",
+        "actor.2.weight",
+        "actor.2.bias",
+        "actor.4.weight",
+        "actor.4.bias",
+        "actor.6.weight",
+        "actor.6.bias"
+      ],
+      "adam_state_parameters": 19,
+      "adam_tensors": 57,
+      "adam_values": 550253,
+      "adam_finite": true,
+      "adam_steps": 5000,
+      "iteration": 249,
+      "actual_seed": {
+        "requested": 51,
+        "saved_agent": 51,
+        "saved_environment": 51,
+        "live_environment": 51
+      },
+      "same_seed_initial_capacity_exact": true,
+      "capacity_projection_only": "agent.max_iterations2to250",
+      "actual_horizon": {
+        "matches_raw_environment": true,
+        "assigned_sha256": "a3188ddd990cb8e5d582853dc38049a1df3cf44164c8069af60fd811834237d2",
+        "actual_sha256": "a3188ddd990cb8e5d582853dc38049a1df3cf44164c8069af60fd811834237d2",
+        "minimum": 0,
+        "maximum": 959,
+        "nonzero": 4093
+      },
+      "iterations_logged": 250,
+      "transitions": 32768000,
+      "reward_calls": 8000,
+      "valid_reward_rows": 32768000,
+      "raw_cost_nonzero_calls": 8000,
+      "coefficient_mass": 0,
+      "applied_penalty": 0,
+      "raw_reward_dt_arithmetic_checked": true,
+      "scalar_tags": 38,
+      "scalar_values": 9500,
+      "scalars_finite": true,
+      "initial_created_utc": "2026-09-28T07:14:18.645154+00:00",
+      "raw_evidence": {
+        "initial": {
+          "path": "artifacts/terrain_demo/seed_continuation_v22/training/seed51_initial.json",
+          "sha256": "eabde459c6ba166dec211aae3c64a55a2ae299cbf36b12e92db59737941bb671"
+        },
+        "schedule": {
+          "path": "artifacts/terrain_demo/seed_continuation_v22/training/seed51_schedule.json",
+          "sha256": "37c306a97105fb2ebdd703e86c6f502ebb9632a7a2fe9c09ba239690db639140"
+        },
+        "rollout": {
+          "path": "artifacts/terrain_demo/seed_continuation_v22/training/seed51_initial_contact_rollout.json",
+          "sha256": "401e8767e098e2291d632f4321f200d94a913e506e6a117cb935dcf146394e57"
+        }
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/seed_continuation_v22_20260928/train_seed51.log",
+        "text_log_sha256": "0f3aefa54c766c97cd0f97a314c30b79d96d40a8c08ca5ae161d92f9b293da21",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-14-11_v22_main_seed51/events.out.tfevents.1790579658.wonker-System-Product-Name.987730.0": "5d0b112cf0d3347e46023811343b45f481cfb141ab911e144e1db465c0e3b2ae"
+        }
+      }
+    },
+    "seed52": {
+      "training_seed": 52,
+      "checkpoint": "artifacts/terrain_demo/seed_continuation_v22/runs/seed52/model_249.pt",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-24-29_v22_main_seed52/model_249.pt",
+      "sha256": "7a7ec701a6477b88cfd368f38b0d20087daacfb0981d3e88d21e176a290c3e97",
+      "fresh_source_copy_bytes_equal": true,
+      "policy_tensors": 33,
+      "policy_values": 400631,
+      "policy_finite": true,
+      "std_min": 0.18091586232185364,
+      "std_max": 0.2166832983493805,
+      "teacher_tensors_exact_original_v5": 8,
+      "actor_tensors_changed_from_parent": [
+        "actor.0.weight",
+        "actor.0.bias",
+        "actor.0.command_weight",
+        "actor.2.weight",
+        "actor.2.bias",
+        "actor.4.weight",
+        "actor.4.bias",
+        "actor.6.weight",
+        "actor.6.bias"
+      ],
+      "adam_state_parameters": 19,
+      "adam_tensors": 57,
+      "adam_values": 550253,
+      "adam_finite": true,
+      "adam_steps": 5000,
+      "iteration": 249,
+      "actual_seed": {
+        "requested": 52,
+        "saved_agent": 52,
+        "saved_environment": 52,
+        "live_environment": 52
+      },
+      "same_seed_initial_capacity_exact": true,
+      "capacity_projection_only": "agent.max_iterations2to250",
+      "actual_horizon": {
+        "matches_raw_environment": true,
+        "assigned_sha256": "ab4cc99951184fbf4fb3757c1cee1044387a812547fd7c4b4a2199ace18261d0",
+        "actual_sha256": "ab4cc99951184fbf4fb3757c1cee1044387a812547fd7c4b4a2199ace18261d0",
+        "minimum": 0,
+        "maximum": 959,
+        "nonzero": 4095
+      },
+      "iterations_logged": 250,
+      "transitions": 32768000,
+      "reward_calls": 8000,
+      "valid_reward_rows": 32768000,
+      "raw_cost_nonzero_calls": 8000,
+      "coefficient_mass": 0,
+      "applied_penalty": 0,
+      "raw_reward_dt_arithmetic_checked": true,
+      "scalar_tags": 38,
+      "scalar_values": 9500,
+      "scalars_finite": true,
+      "initial_created_utc": "2026-09-28T07:24:36.574529+00:00",
+      "raw_evidence": {
+        "initial": {
+          "path": "artifacts/terrain_demo/seed_continuation_v22/training/seed52_initial.json",
+          "sha256": "96ad78c2b855950bf9f28d79957b7e9be8bbeb08ba78f4aa80bac02f16a11aa4"
+        },
+        "schedule": {
+          "path": "artifacts/terrain_demo/seed_continuation_v22/training/seed52_schedule.json",
+          "sha256": "b6ede3c74c71f7708def96c40cc38e2f8ea47368bbdda40e769efa16e0010fd4"
+        },
+        "rollout": {
+          "path": "artifacts/terrain_demo/seed_continuation_v22/training/seed52_initial_contact_rollout.json",
+          "sha256": "de01801e4ddb1089c926c2294fb6dcfc0c6cf9650355a286a43ab0d66fefc14f"
+        }
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/seed_continuation_v22_20260928/train_seed52.log",
+        "text_log_sha256": "9fc808f958647c0b9d82add0360e3592cd6d103a7392d6c6a3a552ad35abebbc",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-24-29_v22_main_seed52/events.out.tfevents.1790580276.wonker-System-Product-Name.1011276.0": "f37e7bbcb4ac563e5b962a2551de0e0358e6f7def854337525cbebc1a003aaa2"
+        }
+      }
+    },
+    "seed53": {
+      "training_seed": 53,
+      "checkpoint": "artifacts/terrain_demo/seed_continuation_v22/runs/seed53/model_249.pt",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-34-46_v22_main_seed53/model_249.pt",
+      "sha256": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+      "fresh_source_copy_bytes_equal": true,
+      "policy_tensors": 33,
+      "policy_values": 400631,
+      "policy_finite": true,
+      "std_min": 0.1756688803434372,
+      "std_max": 0.21529066562652588,
+      "teacher_tensors_exact_original_v5": 8,
+      "actor_tensors_changed_from_parent": [
+        "actor.0.weight",
+        "actor.0.bias",
+        "actor.0.command_weight",
+        "actor.2.weight",
+        "actor.2.bias",
+        "actor.4.weight",
+        "actor.4.bias",
+        "actor.6.weight",
+        "actor.6.bias"
+      ],
+      "adam_state_parameters": 19,
+      "adam_tensors": 57,
+      "adam_values": 550253,
+      "adam_finite": true,
+      "adam_steps": 5000,
+      "iteration": 249,
+      "actual_seed": {
+        "requested": 53,
+        "saved_agent": 53,
+        "saved_environment": 53,
+        "live_environment": 53
+      },
+      "same_seed_initial_capacity_exact": true,
+      "capacity_projection_only": "agent.max_iterations2to250",
+      "actual_horizon": {
+        "matches_raw_environment": true,
+        "assigned_sha256": "e71471a6138d6d089e169b2e1e440b294b5c0cfee3c0a6a836e4d0da44985912",
+        "actual_sha256": "e71471a6138d6d089e169b2e1e440b294b5c0cfee3c0a6a836e4d0da44985912",
+        "minimum": 0,
+        "maximum": 959,
+        "nonzero": 4093
+      },
+      "iterations_logged": 250,
+      "transitions": 32768000,
+      "reward_calls": 8000,
+      "valid_reward_rows": 32768000,
+      "raw_cost_nonzero_calls": 8000,
+      "coefficient_mass": 0,
+      "applied_penalty": 0,
+      "raw_reward_dt_arithmetic_checked": true,
+      "scalar_tags": 38,
+      "scalar_values": 9500,
+      "scalars_finite": true,
+      "initial_created_utc": "2026-09-28T07:34:53.590965+00:00",
+      "raw_evidence": {
+        "initial": {
+          "path": "artifacts/terrain_demo/seed_continuation_v22/training/seed53_initial.json",
+          "sha256": "be2a50c59e2f0d352301181aedcdf1f45794accee23313c84a097da007d0268c"
+        },
+        "schedule": {
+          "path": "artifacts/terrain_demo/seed_continuation_v22/training/seed53_schedule.json",
+          "sha256": "0618a1bb4a5f1d4cf72d1c0c6d300ab4f9d3733714e8f032ba40e020bb8756a3"
+        },
+        "rollout": {
+          "path": "artifacts/terrain_demo/seed_continuation_v22/training/seed53_initial_contact_rollout.json",
+          "sha256": "caf6728fe467277ccfd1f4476ef2d2cedcde60ef1a922d93bae23082cae1e199"
+        }
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/seed_continuation_v22_20260928/train_seed53.log",
+        "text_log_sha256": "53bbae3bd7e319194e1d5910af5366d94608ac6d51e8c3dc26d067290bdce69d",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-34-46_v22_main_seed53/events.out.tfevents.1790580893.wonker-System-Product-Name.1034457.0": "aa0568664cee973821bd93ea3814b824cb0afff32c099c13c4044278f7f6c7be"
+        }
+      }
+    }
+  },
+  "totals": {
+    "main_training_transitions": 98304000,
+    "development_training_transitions": 835584,
+    "total_new_training_environment_transitions": 99139584,
+    "main_reward_calls": 24000,
+    "main_valid_reward_rows": 98304000,
+    "main_scalar_values": 28500
+  },
+  "gate_order": {
+    "full_replay_created_utc": "2026-09-28T07:24:21.877446+00:00",
+    "initial_times": [
+      "2026-09-28T07:14:18.645154+00:00",
+      "2026-09-28T07:24:36.574529+00:00",
+      "2026-09-28T07:34:53.590965+00:00"
+    ],
+    "full_seed51_gate_before_seed52_and_seed53": true,
+    "fresh_sources_distinct": 3,
+    "distinct_initial_cuda_rng_hashes": 3,
+    "distinct_actual_horizon_hashes": 3
+  },
+  "limits": [
+    "Initial simulator states/RNG/horizons compared through instrumented hashes; no independent live simulator recapture.",
+    "No equality of physical initialization across different seeds is claimed.",
+    "Exact seed51 replay covers final checkpoint and recorded evidence, not unrecorded simulator trajectory or arbitrary-platform determinism.",
+    "Finite tensors and real updates do not prove behavioral improvement, statistical significance, or robot safety.",
+    "No evolving evaluation data were accessed; completed evaluation/scoring audit remains separate."
+  ]
+}

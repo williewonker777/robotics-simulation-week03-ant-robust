@@ -1,0 +1,107 @@
+{
+  "schema": "week03-ant-publication-verification-v2",
+  "checked_at": "2026-09-30T03:40:23.383227+00:00",
+  "status": "pass_with_explicit_validation_limits",
+  "publication_base_commit": "49ba30c",
+  "scope": "Preserved v0-v24 evidence with assignment-facing final guide; publication readiness, not remote push proof.",
+  "cpu_tests": {
+    "command": "../run-python -m pytest -o addopts='' -q --junitxml=outputs/publication_20260930/checks/pytest_final.xml",
+    "tests": 2056,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 33.71,
+    "fresh_before_and_after_metadata_export": true
+  },
+  "source_models_videos_plans_preserved": {
+    "files": 415,
+    "by_extension": {
+      ".pt": 83,
+      ".mp4": 48,
+      ".md": 20,
+      ".py": 264
+    },
+    "changed": 0
+  },
+  "metadata_string_only_byte_transform_checks": 39,
+  "json_jsonl_recursive_transformation_checks": 18,
+  "python_ast_files": 264,
+  "shell_scripts_syntax_checked": 6,
+  "readme_final_guide_bash_blocks": 20,
+  "heuristic_secret_scan": {
+    "text_files": 1652,
+    "credential_signature_hits": 0,
+    "completeness_guarantee": false
+  },
+  "fresh_checkpoint_inference": {
+    "first_episodes": 400,
+    "scenario_count": 4,
+    "num_envs_per_scenario": 100,
+    "observation_dimensions": 60,
+    "all_four_return_length_arrays_match_historical_exactly": true,
+    "manifest": "artifacts/submission_validation_20260930/manifest.json",
+    "shutdown_warnings": "Simulator emitted shutdown/driver-info warnings after successful scoring; no claim of warning-free logs."
+  },
+  "independent_review": {
+    "role": "code-reviewer",
+    "scope": "Final guide, README selection/commands, supporting evidence and bounded publication inventory",
+    "decision": "APPROVE",
+    "issues": 0,
+    "not_full_implementation_review": true,
+    "portability_issue": {
+      "initial_decision": "REQUEST CHANGES",
+      "issue": "Public full-suite command understated original-local evidence dependencies.",
+      "repair": "Documented original-local 2056-test suite and positively scoped 147 portable unit tests; unsuccessful broad attempt retained.",
+      "repair_review_decision": "APPROVE",
+      "remaining_issues": 0
+    }
+  },
+  "not_run": [
+    "Ruff (not installed)",
+    "Mypy (not installed)",
+    "Pyright (not installed)",
+    "new GPU training",
+    "new GUI/video rendering",
+    "private grading evaluation",
+    "real RGB-D or hardware validation"
+  ],
+  "scientific_decision": "Original assignment checkpoint robust_seed42 selected by best observed equal-weight ID/OOD aggregate; 3-seed generalization conclusion kept separate. v5 rough-terrain demo recommendation unchanged.",
+  "unsuccessful_public_full_suite_attempt": {
+    "tests": 2050,
+    "failures": 193,
+    "errors": 26,
+    "skipped": 0,
+    "reason": "Ignored original PLAN/development/training/checkpoint/log/event evidence absent; excluding only 6 log cases is insufficient. No full public-suite pass claim.",
+    "retained_local_log": "outputs/publication_20260930/checks/pytest_public_checkout.log",
+    "deselected_historical_log_cases": 6
+  },
+  "public_portable_unit_tests": {
+    "tests": 147,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 1.188,
+    "scope": [
+      "tests/test_evaluation.py",
+      "tests/test_command_math.py",
+      "tests/test_contact_math.py",
+      "tests/test_direction_math.py",
+      "tests/test_posture_math.py",
+      "tests/test_history_gate.py",
+      "tests/test_hybrid_gate.py"
+    ],
+    "isolated_staged_checkout_without_logs_outputs_or_runtime": true,
+    "not_complete_test_suite": true
+  },
+  "public_relative_markdown_links": 463,
+  "index_file_count": 1796,
+  "largest_included_file": {
+    "bytes": 50687552,
+    "path": "artifacts/terrain_demo/lr_continuation_v24/summary.json"
+  },
+  "git_diff_check": {
+    "status": "pass",
+    "working_tree_finalization_documents": "pass",
+    "staged_publication": "pass",
+    "source_bytes_not_formatted_or_changed": true
+  }
+}

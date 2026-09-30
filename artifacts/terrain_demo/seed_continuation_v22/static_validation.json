@@ -1,0 +1,111 @@
+{
+  "created_utc": "2026-09-28T07:15:33.079567+00:00",
+  "records": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "pyflakes",
+        "src/week03_ant/seed_study_v22.py",
+        "src/week03_ant/tasks/seed_continuation_v22.py",
+        "src/week03_ant/tasks/seed_continuation_v22_cfg.py",
+        "scripts/seed_continuation_v22.py",
+        "scripts/run_seed_training_v22.py",
+        "tests/test_seed_training_v22.py",
+        "tests/test_seed_harness_v22.py",
+        "scripts/evaluate_seed_v22.py",
+        "scripts/run_seed_eval_v22.py",
+        "scripts/summarize_seed_v22.py",
+        "tests/test_seed_eval_v22.py",
+        "scripts/audit_seed_v22_raw.py",
+        "tests/test_seed_raw_audit_v22.py"
+      ],
+      "returncode": 0,
+      "path": "outputs/seed_continuation_v22_20260928/final_static_0.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "mypy",
+        "--follow-imports=skip",
+        "--ignore-missing-imports",
+        "src/week03_ant/seed_study_v22.py",
+        "src/week03_ant/tasks/seed_continuation_v22.py",
+        "src/week03_ant/tasks/seed_continuation_v22_cfg.py",
+        "scripts/seed_continuation_v22.py",
+        "scripts/run_seed_training_v22.py",
+        "tests/test_seed_training_v22.py",
+        "tests/test_seed_harness_v22.py",
+        "scripts/evaluate_seed_v22.py",
+        "scripts/run_seed_eval_v22.py",
+        "scripts/summarize_seed_v22.py",
+        "tests/test_seed_eval_v22.py",
+        "scripts/audit_seed_v22_raw.py",
+        "tests/test_seed_raw_audit_v22.py"
+      ],
+      "returncode": 0,
+      "path": "outputs/seed_continuation_v22_20260928/final_static_1.log",
+      "sha256": "8f3f4c0ebcb835e848682f2c6610a1bf32c86a993bdb626d9ff36e3a49408398"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "compileall",
+        "-q",
+        "src/week03_ant/seed_study_v22.py",
+        "src/week03_ant/tasks/seed_continuation_v22.py",
+        "src/week03_ant/tasks/seed_continuation_v22_cfg.py",
+        "scripts/seed_continuation_v22.py",
+        "scripts/run_seed_training_v22.py",
+        "tests/test_seed_training_v22.py",
+        "tests/test_seed_harness_v22.py",
+        "scripts/evaluate_seed_v22.py",
+        "scripts/run_seed_eval_v22.py",
+        "scripts/summarize_seed_v22.py",
+        "tests/test_seed_eval_v22.py",
+        "scripts/audit_seed_v22_raw.py",
+        "tests/test_seed_raw_audit_v22.py"
+      ],
+      "returncode": 0,
+      "path": "outputs/seed_continuation_v22_20260928/final_static_2.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "path": "outputs/seed_continuation_v22_20260928/final_static_3.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "ast_and_new_file_whitespace": 13,
+  "experiment_source_sha256": {
+    "src/week03_ant/seed_study_v22.py": "187f11598f4c75c2f33d93adf798b411137e35e5873da16dbfd619824ab874b4",
+    "src/week03_ant/tasks/seed_continuation_v22.py": "0a99d800b1086a68a1e5a4bccdac4b3dc45f8e5f2da9302a3bad307127204ca0",
+    "src/week03_ant/tasks/seed_continuation_v22_cfg.py": "39011389d0056aa0052a21f397a80d6c4c835ceaccad22c8375fa394c2382e32",
+    "scripts/seed_continuation_v22.py": "cad2dbc8c25298d66b4262fddc6e8bb21c4c2cd6cfd4c880c5690d2c41159cbc",
+    "scripts/run_seed_training_v22.py": "295899c192c1d6f81937de10e3d5dce34bfe172baa4e6b7773c879b259538eef",
+    "tests/test_seed_training_v22.py": "bea381924d23a2fc899338147c386e7c3c8d263c06ab9e60db8641004e684345",
+    "tests/test_seed_harness_v22.py": "ef7a6ec459c1370031bfbcc71220c03b7c9573d47b4636f37e7ea01575f9d5a8",
+    "docs/experiment_plans/seed_continuation_v22.md": "b96dad8f2dacacf39e4c410b3b26485046b0dda89de7e48dff5347e50ec9de59",
+    "scripts/evaluate_seed_v22.py": "88fbd24cd86775cd260d0ac81e58c29c7b1c9d82c48cea6d1106083bd416907f",
+    "scripts/run_seed_eval_v22.py": "58608a0777f602b0de34b985a18a0abec36c25f5e649c88cd96d1b316da2f035",
+    "scripts/summarize_seed_v22.py": "3c19fc38170130a27e73fc9d7c6e19be45d5c9387fbfa66a67c6cf940ceff584",
+    "tests/test_seed_eval_v22.py": "d17b7d9536d9b1997e66f448271a5d5c1c1e28f5fd448d83c74f2b99c195d73c"
+  },
+  "post_experiment_verifier_sha256": {
+    "scripts/audit_seed_v22_raw.py": "9d24e151a100fd49faa917d2762145149c313eef1b14b90b53bb751487c4b3ef",
+    "tests/test_seed_raw_audit_v22.py": "56cecbfd1263f2b78d5e8bd9480b6c236b6234e6c2deb1be024f9e89ba4bf38c"
+  },
+  "legacy_sources_verified": 213,
+  "legacy_models_verified": 19,
+  "limits": "Bounded mypy follow-imports=skip/ignore-missing-imports, not a complete Isaac type proof. Independent auditor is outside frozen experimental definitions.",
+  "ruff_available": false,
+  "pyright_available": false
+}

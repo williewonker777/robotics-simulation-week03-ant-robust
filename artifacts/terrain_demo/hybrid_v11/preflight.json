@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-09-22T08:53:46.339571+00:00",
+  "status": "PASS",
+  "tests": {
+    "passed": 269,
+    "log": "outputs/hybrid_v11_20260922/preflight_tests.log"
+  },
+  "compile": "PASS",
+  "new_file_trailing_whitespace": "PASS",
+  "source_files": 63,
+  "frozen_v5_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "frozen_v10_checkpoints": {
+    "42": {
+      "checkpoint": "artifacts/terrain_demo/prior_v10/runs/v10_anchored_seed42/model_749.pt",
+      "sha256": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1"
+    },
+    "43": {
+      "checkpoint": "artifacts/terrain_demo/prior_v10/runs/v10_anchored_seed43/model_749.pt",
+      "sha256": "13110dadd92645a6f16eefddb634d469bed390dfe0114776c8931526c330559c"
+    },
+    "44": {
+      "checkpoint": "artifacts/terrain_demo/prior_v10/runs/v10_anchored_seed44/model_749.pt",
+      "sha256": "30128cf360ab8a39cae3ede2c8d30b83fcfc868fd4b0f12646dba3c09cedad00"
+    }
+  },
+  "scan_probe_checks": {
+    "flat_never_triggered": true,
+    "flat_coverage_known": true,
+    "some_stones_detected": true,
+    "rough_anticipated_before_boundary": true,
+    "stone_scan_changes_after_teleport": true,
+    "some_history_entries": true,
+    "all_entered_return_to_v5": true,
+    "final_target_and_alpha_v5": true
+  },
+  "smoke": {
+    "n": 30,
+    "flat_n": 5,
+    "flat_falls": 0,
+    "flat_world": 0,
+    "one": 27,
+    "six": 13,
+    "falls": 3,
+    "lane": 0,
+    "world": 0,
+    "survival": 27,
+    "switches": 37,
+    "near_switch_fall": 0,
+    "mean_final_distance": 47.01337531407674,
+    "mean_v10_duty": 0.5805804538924741,
+    "mean_max_action_jump": 1.8383209577538346,
+    "mean_action_disagreement": 0.14390020941167142,
+    "uncertain_steps": 10,
+    "flat_mean_v10_duty": 0.0
+  },
+  "smoke_limit": "35-env development smoke, not baseline comparison or holdout.",
+  "repair_before_development": "Initial GPU smoke failed on inference-tensor reset context; fixed gate inference boundary, added regression, repeated smoke successfully. Failed log retained.",
+  "review": "Gate/telemetry and evaluator/summary reviewed; flat-world gate omission repaired and regression passed before development.",
+  "note": "Preflight metadata wrapper retried after case-sensitive PASS/pass assertion; no production code or data changed."
+}

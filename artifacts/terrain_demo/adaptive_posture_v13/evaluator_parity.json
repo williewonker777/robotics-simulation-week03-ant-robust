@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-09-22T13:04:07.919306+00:00",
+  "reference": "artifacts/terrain_demo/history_v12/preflight_smoke_process_boundary.json",
+  "reference_sha256": "92c8acf8cb078df8d40e58a53ad13e52dfa0334748c4603443c3d43deb1d3216",
+  "new": "outputs/adaptive_posture_v13_20260922/eval_history_original_final_smoke.json",
+  "new_sha256": "10a09366f289ababb99552c4fb8146768833ee26790d1c44b65fc282758439c7",
+  "adaptive_smoke": "outputs/adaptive_posture_v13_20260922/eval_adaptive_final_smoke.json",
+  "adaptive_smoke_sha256": "0679a0ccdf8b6e1148ff3f186f21489e824de05530942afb481f39af9c094ca4",
+  "exact_equal_fields": [
+    "initial_state_sha256",
+    "forward_distance",
+    "episode_lengths",
+    "episode_terminated",
+    "episode_out_of_lane",
+    "episode_world_exit",
+    "episode_strict_one_tile_success",
+    "episode_strict_all_tiles_success",
+    "episode_full_horizon_survival",
+    "episode_alpha_sum",
+    "episode_v10_target_steps",
+    "episode_switch_steps",
+    "episode_switch_to_v10",
+    "history_switch_events",
+    "episode_returns"
+  ],
+  "new_smoke_initial_paired": true,
+  "posture_audits_passed": true,
+  "development_only": true
+}

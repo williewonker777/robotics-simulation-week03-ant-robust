@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-09-28T13:09:02.003538+00:00",
+  "verdict": "APPROVE",
+  "reported_by": "native code-reviewer /root/v24_auditor_review",
+  "recorded_by": "leader from actual completed specialist review",
+  "source_sha256": {
+    "scripts/audit_lr_v24_raw.py": "f4acc6d2ef7ce10e2d7e409cbb9284f1d12b0c0be367b80f5f61ba44c764d57b",
+    "tests/test_lr_raw_audit_v24.py": "49026ca57e2fb9241a825f0c5b4a85504c24eaea917e9e15f54765b55a8e9436",
+    "scripts/audit_lr_v24_training.py": "addda99e2288b60c1b6fb9bbce1596f5ec1fc7bafc21500d66f0afd77f4d7f5c",
+    "tests/test_lr_tensor_audit_v24.py": "5bf937cb92146b153bdcf9f83f9843f40f01f80dfde1d8ae6e96b48ea0ba60ef"
+  },
+  "issues_unresolved": 0,
+  "high_findings_resolved": 2,
+  "tests_passed": 215,
+  "resolved": [
+    "ExactoneoccurrenceeachLRprovenanceASTkey prevents hidden executable changes",
+    "Independent entireactualsavedYAML env+agent normalization rejects physics/reward/policy changes even withupdatedfileSHA"
+  ],
+  "scope": "Postexperimentverifiercode only; actualv24artifactverificationpending"
+}

@@ -1,0 +1,130 @@
+{
+  "schema": "week03_ant_history_predeclared_v1",
+  "created_utc": "2026-09-22T11:14:04.858960+00:00",
+  "purpose": "User-requested causal depth-feature history for sustained rough/flat policy switching; frozen v5/v10, no retraining.",
+  "history_config": {
+    "spatial": {
+      "span_enter": 0.12,
+      "edge_enter": 0.08,
+      "exit_ratio": 0.6,
+      "min_coverage": 0.9,
+      "enter_steps": 2,
+      "min_dwell_seconds": 0.5,
+      "clear_seconds": 0.3,
+      "blend_seconds": 0.15
+    },
+    "history_seconds": 1.0,
+    "enter_window_seconds": 0.3,
+    "enter_min_seconds": 0.2,
+    "enter_fraction": 0.8,
+    "enter_confirm_seconds": 0.1,
+    "exit_window_seconds": 0.8,
+    "exit_min_seconds": 0.6,
+    "exit_fraction": 0.9,
+    "exit_confirm_seconds": 0.3,
+    "min_dwell_seconds": 0.5,
+    "blend_seconds": 0.15,
+    "unknown_reset_seconds": 0.25
+  },
+  "instant_config": {
+    "span_enter": 0.12,
+    "edge_enter": 0.08,
+    "exit_ratio": 0.6,
+    "min_coverage": 0.9,
+    "enter_steps": 2,
+    "min_dwell_seconds": 0.5,
+    "clear_seconds": 0.3,
+    "blend_seconds": 0.15
+  },
+  "history_semantics": {
+    "stored_features": [
+      "enter_span",
+      "enter_edge",
+      "enter_coverage",
+      "enter_edge_coverage",
+      "retain_span",
+      "retain_edge",
+      "retain_coverage",
+      "retain_edge_coverage"
+    ],
+    "capacity_seconds": 1.0,
+    "causal_only": true,
+    "terrain_labels_or_future_inputs": false,
+    "step_rounding": "ceil(seconds/dt - 1e-9), support/confirmation in sampled control intervals",
+    "denominator": "Recorded samples only, capped to the applicable window. Recorded unknowns count in denominator; unfilled slots do not.",
+    "60hz_startup_rough_min_samples": 12,
+    "60hz_full_enter_window_samples": 18,
+    "60hz_full_enter_rough_votes": 15,
+    "60hz_full_exit_window_samples": 48,
+    "60hz_full_exit_clear_votes": 44,
+    "60hz_consecutive_rough_samples": 6,
+    "60hz_consecutive_clear_samples": 18,
+    "unknown": "Hold target; invalid samples never mean flat. Clear consecutive evidence; after15 unknown samples expire prior history. Existing fade can finish.",
+    "reset": "Only episode-done environments lose state; portal wraps do not reset history.",
+    "unchanged": "Spatial thresholds/ROI/coverage and dwell.5s/fade.15s match v11. Temporal windows and confirmations differ."
+  },
+  "controllers": [
+    "v5",
+    "v10",
+    "instant",
+    "history"
+  ],
+  "policy_seed": 42,
+  "holdouts": [
+    [
+      72,
+      46
+    ],
+    [
+      73,
+      47
+    ]
+  ],
+  "primary": {
+    "folder": "evaluations",
+    "scenario": "mixed",
+    "seconds": 16,
+    "num_envs": 175,
+    "files": 8,
+    "episodes": 1400
+  },
+  "secondary": {
+    "folder": "horizon",
+    "scenario": "stones",
+    "seconds": 64,
+    "num_envs": 10,
+    "files": 8,
+    "episodes": 80
+  },
+  "smoke": {
+    "geometry": 51,
+    "reset": 24,
+    "num_envs": 35,
+    "seconds": 16,
+    "controller": "history",
+    "excluded_from_results": true
+  },
+  "integrity_rules": [
+    "63 old frozen sources and4models unchanged",
+    "New sources pinned after CPU and GPU smoke, before holdout",
+    "Exact initial root/joint/observation hashes across all4controllers for each map/scenario",
+    "Stop on mismatch, preserve evidence, no automatic retry or tolerance relaxation",
+    "All first episodes retained; no post-reset rewards/successes",
+    "No tuning or second candidate after holdout outcomes"
+  ],
+  "improvement_vs_instant": [
+    "Lower terrain switches per100 first-episode active seconds",
+    "one/six tile rates no lower",
+    "falls/lane rates no higher",
+    "world exits zero including flat",
+    "Primary flat fall rate no higher"
+  ],
+  "limits": [
+    "One frozen policy training seed42, two maps: diagnostic, not universal best-policy claim",
+    "16s and64s results kept separate",
+    "Memory+confirmation mechanism, not proof of isolated memory causal benefit",
+    "Ideal height-raycast, not actual RGB-D",
+    "Depth-feature history is not a trained RNN/LSTM policy or world map"
+  ],
+  "new_training_transitions": 0
+}

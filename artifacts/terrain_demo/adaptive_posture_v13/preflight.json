@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-09-22T13:07:03.567192+00:00",
+  "passed": true,
+  "cpu_suite": "463 passed in 9.15s",
+  "cpu_log": "outputs/adaptive_posture_v13_20260922/cpu_training_freeze.log",
+  "cpu_log_sha256": "ba016c12f1262435d94be0fc6f7e1769340b26db672061b9245173548a86018e",
+  "compileall": true,
+  "diff_check": true,
+  "capacity_sha256": "84452697b533af90f8d65864ffb02d33bf1c114c292fac234b8a19c518466fb6",
+  "evaluator_parity_sha256": "e1922d2576361eb404a90783a260d4de8c66dd07eaf797a062ef5d23d49688b8",
+  "smoke_audits_sha256": "2efc7bc008234648bcce7ec00655a2e5d217613ecf6c63e9078cb44a6b78dc2c",
+  "legacy_source_count": 72,
+  "legacy_model_count": 4,
+  "review": "Independent code reviewer approved training+4096env integration after initialtensor/Adam guard repair. Eval-cache-manifest medium gap repaired with exclusive evaluation_inputs digest + failing-tamper regression before freeze. Evaluation summary review still separately required before holdouts.",
+  "static_analysis_gap": "Ruff/mypy/pyflakes unavailable; no new dependencies installed."
+}

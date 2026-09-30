@@ -1,0 +1,46 @@
+{
+  "arm": "ramped",
+  "created_utc": "2026-09-28T03:41:03.010117+00:00",
+  "source_initial_audit": "artifacts/terrain_demo/contact_curriculum_v20/training/ramped_initial.json",
+  "rollout": {
+    "samples": 8000,
+    "sampled_rows": 32721151,
+    "valid_rows": 32721151,
+    "invalid_rows": 0,
+    "invalid_fraction": 0.0,
+    "excluded_done_rows": 38026,
+    "excluded_wrap_rows": 17507,
+    "reward": -0.11955220419642182,
+    "bounded_cost": 0.11955220419642182,
+    "contact_fraction": 0.15218286081785581,
+    "no_contact_fraction": 0.5915978141125343,
+    "contacted_tip_speed": 1.2045643133405421,
+    "terrain_contact_fraction": 0.1329145587906031,
+    "flat_contact_fraction": 0.019268301872108342,
+    "per_foot_contact_fraction": [
+      0.1606288889192799,
+      0.16317629344534892,
+      0.21445688689685805,
+      0.07046937480473978
+    ],
+    "per_target_per_foot_contact_fraction": [
+      [
+        0.1368130083446287,
+        0.023815880452676776
+      ],
+      [
+        0.14705369356902287,
+        0.016122599501423487
+      ],
+      [
+        0.19199859934964741,
+        0.022458287558044885
+      ],
+      [
+        0.055792934831924,
+        0.014676440075400764
+      ]
+    ]
+  },
+  "passive_post_action": true
+}

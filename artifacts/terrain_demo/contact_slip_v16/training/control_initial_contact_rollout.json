@@ -1,0 +1,46 @@
+{
+  "arm": "control",
+  "created_utc": "2026-09-23T02:39:12.859375+00:00",
+  "source_initial_audit": "artifacts/terrain_demo/contact_slip_v16/training/control_initial.json",
+  "rollout": {
+    "samples": 8000,
+    "sampled_rows": 32721705,
+    "valid_rows": 32721705,
+    "invalid_rows": 0,
+    "invalid_fraction": 0.0,
+    "excluded_done_rows": 36627,
+    "excluded_wrap_rows": 19296,
+    "reward": -0.11785943456184376,
+    "bounded_cost": 0.11785943456184376,
+    "contact_fraction": 0.15065870901757986,
+    "no_contact_fraction": 0.5945128875344575,
+    "contacted_tip_speed": 1.1996474254439071,
+    "terrain_contact_fraction": 0.1317802765287782,
+    "flat_contact_fraction": 0.018878432910080314,
+    "per_foot_contact_fraction": [
+      0.15661806440646292,
+      0.15960216953424392,
+      0.2171111865931859,
+      0.0693034194235042
+    ],
+    "per_target_per_foot_contact_fraction": [
+      [
+        0.13380513291136553,
+        0.022812931644850275
+      ],
+      [
+        0.14407718326879956,
+        0.015524986026902249
+      ],
+      [
+        0.1949222750845288,
+        0.022188911472453214
+      ],
+      [
+        0.054316517101294176,
+        0.014986902771824078
+      ]
+    ]
+  },
+  "passive_post_action": true
+}

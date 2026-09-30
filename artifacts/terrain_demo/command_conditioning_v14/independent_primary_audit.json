@@ -1,0 +1,114 @@
+{
+  "verdict": "CLEAR",
+  "scope": "independent CPU/raw audit of all 12 primary 16s mixed holdout files only; 64s horizon intentionally excluded",
+  "files": {
+    "conditioned__geometry86_reset58.json": "e1d6a996a02c45d85e1922e80fffa8d5f81d1681a54f640b551b713cc4b85b33",
+    "conditioned__geometry87_reset59.json": "98a9d52a2d31d36c38764b8d7c4b99f4a049a2675e59f9198f00965995d26ebc",
+    "history_conditioned__geometry86_reset58.json": "8adf050d9d3ab68d5fa630f052296603665bcc1d67887a5ce484a15c5122580d",
+    "history_conditioned__geometry87_reset59.json": "dc288d51458514c0fd96f47e4713672c1e4f0b4f66d33c0e9aa5be076d6df126",
+    "history_masked__geometry86_reset58.json": "245debb01cd18e8d1498190e28dd6c45cbea0043a048a6df7770c3a52bae8bbe",
+    "history_masked__geometry87_reset59.json": "be14d56f69eb463b49e44cae7e777e9d36050e6100b4fb85d7b47eae5eca11dc",
+    "history_original__geometry86_reset58.json": "fc2e14be214d0b94a33f6db000558072404daacc58728d1c19e5a026dd16de8c",
+    "history_original__geometry87_reset59.json": "ee47e563db13f3fe993137d9575eaedd46635dc51760cba71640019b52f460f3",
+    "masked__geometry86_reset58.json": "0f8a9de67fe6b4dd4932c6f2b110214acff0535325de2b93531006ae3eff4bad",
+    "masked__geometry87_reset59.json": "ed6367f836cb94ba17ea736dbd32db1125e096115efda8119355764883e00d64",
+    "v13__geometry86_reset58.json": "8069580c1ae5914cc2643ee274d32ef15f1f7c403dc3ae670eee5c204582d767",
+    "v13__geometry87_reset59.json": "c572e5c3166f255ef6dc9d0460ca90fd2a8faf04598edaebf7e760850234cf53"
+  },
+  "provenance": {
+    "new_sources": 17,
+    "reference_sources": 89,
+    "reference_models": 6,
+    "new_final_models": 2,
+    "ledger_prefix_lines": 17,
+    "ledger_prefix_sha256": "3855a90cd48a2c56b33217433adb8e6f7e61438417e7e7588f6f3f39b6a2d580",
+    "terrain_cache_manifest_sha256": "f9dbe9d60e1ddf48292d30f698a9f9d983aed27accd80347005ba8a88d431cdd",
+    "command_log_records_checked": 31
+  },
+  "pairing": {
+    "pairs_checked": 2,
+    "controllers_per_pair": 6,
+    "initial_state_prefix_rng_identical": true
+  },
+  "raw_checks": {
+    "strict_counts_recomputed": true,
+    "35_family_level_groups_per_file": true,
+    "temporal_events_alpha_duty_checked": true,
+    "hybrid_flat_raw_identity_all_three": true
+  },
+  "totals": {
+    "v13": {
+      "terrain_n": 300,
+      "flat_n": 50,
+      "one": 267,
+      "six": 143,
+      "falls": 30,
+      "lane": 2,
+      "world": 0,
+      "flat_falls": 1,
+      "flat_world": 0,
+      "flat_mean_speed": 11.084127689003944
+    },
+    "masked": {
+      "terrain_n": 300,
+      "flat_n": 50,
+      "one": 251,
+      "six": 144,
+      "falls": 44,
+      "lane": 1,
+      "world": 0,
+      "flat_falls": 1,
+      "flat_world": 0,
+      "flat_mean_speed": 11.14497274500983
+    },
+    "conditioned": {
+      "terrain_n": 300,
+      "flat_n": 50,
+      "one": 261,
+      "six": 135,
+      "falls": 30,
+      "lane": 8,
+      "world": 0,
+      "flat_falls": 1,
+      "flat_world": 0,
+      "flat_mean_speed": 11.279529272147588
+    },
+    "history_original": {
+      "terrain_n": 300,
+      "flat_n": 50,
+      "one": 272,
+      "six": 146,
+      "falls": 25,
+      "lane": 2,
+      "world": 0,
+      "flat_falls": 3,
+      "flat_world": 0,
+      "flat_mean_speed": 9.410369592062075
+    },
+    "history_masked": {
+      "terrain_n": 300,
+      "flat_n": 50,
+      "one": 263,
+      "six": 145,
+      "falls": 31,
+      "lane": 3,
+      "world": 0,
+      "flat_falls": 3,
+      "flat_world": 0,
+      "flat_mean_speed": 9.410369592062075
+    },
+    "history_conditioned": {
+      "terrain_n": 300,
+      "flat_n": 50,
+      "one": 273,
+      "six": 135,
+      "falls": 24,
+      "lane": 3,
+      "world": 0,
+      "flat_falls": 3,
+      "flat_world": 0,
+      "flat_mean_speed": 9.410369592062075
+    }
+  },
+  "criteria_note": "Counts are raw evidence only; this audit makes no performance-promotion conclusion."
+}

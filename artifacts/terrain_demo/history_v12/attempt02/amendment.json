@@ -1,0 +1,89 @@
+{
+  "schema": "week03_ant_history_test_resumption_v1",
+  "declared_utc": "2026-09-22T11:54:10.175322+00:00",
+  "authorization": "User explicitly requested testing again: \ud14c\uc2a4\ud2b8 \ud574\ubd10. One new fail-closed batch after initial-only diagnostic preparation; this is not a silent retry of the original failed batch.",
+  "original_frozen_sha256": "16ed0c83c3db1c22c383024bc00b74f04326ccab3f2098acbf00b7b81b9ba4e3",
+  "original_predeclared_sha256": "17383c3ca3195c63c28eb5447241941fa711d17050a68e0d2624b4b9ca88628f",
+  "excluded_evidence_sha256": {
+    "artifacts/terrain_demo/history_v12/FAILED.json": "d7756e9dba75756b76da381452cde4eceb9302b53bd16cc682d1a366e0b7b21d",
+    "artifacts/terrain_demo/history_v12/completion.json": "d98e12a451772cbc676b83c84b66901f397fe51505b842e2e42b423706046b23",
+    "artifacts/terrain_demo/history_v12/commands.jsonl": "aa2290800210977cb6a91e4b9f0e3250d1f2317960b20e01a7d8ec0736a78f99",
+    "artifacts/terrain_demo/history_v12/evaluations/v10__geometry72_reset46.json": "b4a277e87d5c53f58b62eda4451111b440a3357cdd431e1820c2582e24f3a59f",
+    "artifacts/terrain_demo/history_v12/evaluations/v5__geometry72_reset46.json": "744124d61f15f86bb0f7475201f1ddea3f467ace6042a14119e6fe83fb992a93"
+  },
+  "excluded_files": 2,
+  "excluded_first_episodes": 350,
+  "initial_diagnosis_sha256": "5d4a9389d2d874ecd53f80b2ef65e74ccfeae922349bddac1517f1dc3d1c74f6",
+  "terrain_cache_sha256": "25290f92848273c02aeeae0ae76a9b4244f96cfb14cbd487d91370c870bcde3e",
+  "additive_harness_sha256": {
+    "outputs/history_v12_20260922/run_cache_paired.py": "830793206e6bd95797be5272e8d9f974a88048cd270f2d2eb2917a884c83bb6e",
+    "outputs/history_v12_20260922/cache_inventory.py": "49a9635dc4089171930f5ff976b048ab37db88cd96ca84b8a8adfe29bb87c560",
+    "outputs/history_v12_20260922/test_cache_inventory.py": "09c5a121fec0484d5683c400b0569f6b0d5738c014bbf86ae048e78d247cbb5c",
+    "outputs/history_v12_20260922/initial_diagnostics/capture.py": "af943dc5e84835d26129864ec55dffdafe0115172a72e85e00d8d65a9a5408d0"
+  },
+  "cached_initial_hashes": {
+    "72": {
+      "root_state": "6ff777532c154a89f0cf49049a6e309b8c39b7988a769273a19c5c47b0625d79",
+      "joint_pos": "774d3ed9022db12253fddcf4c4c0eccefb0ff841198482b36ca1953985772585",
+      "joint_vel": "5540c6dbdc7d09b303f5ad90ed2e87b2da0dd2684c45f8705e3c0e8085df3508",
+      "observations": "ee23ec3dda7a9d44cebda7cdda38004f5d0b04f3229e2f8b39211644b568ab30"
+    },
+    "73": {
+      "root_state": "64f111b4b55d95782d7c65d31b1dc03a802539bcb5d9cf46b4c7701fb26abacd",
+      "joint_pos": "f550948a01fe2104d044e1dfbbe9d6cb9e42050a178c02dd13ff1f2664602fe7",
+      "joint_vel": "1e154cc236ab7e6cd00b32c282ed8be6f85e3f717db711560fd4bd5c63acf67a",
+      "observations": "bf217a3123f5e62fb3d684a66a78ef09c9e89a072ed44ded0a2d1de4ee8af099"
+    }
+  },
+  "controllers": [
+    "v5",
+    "v10",
+    "instant",
+    "history"
+  ],
+  "holdouts": [
+    [
+      72,
+      46
+    ],
+    [
+      73,
+      47
+    ]
+  ],
+  "primary": {
+    "seconds": 16,
+    "scenario": "mixed",
+    "num_envs": 175,
+    "files": 8,
+    "first_episodes": 1400
+  },
+  "secondary": {
+    "seconds": 64,
+    "scenario": "stones",
+    "num_envs": 10,
+    "files": 8,
+    "first_episodes": 80
+  },
+  "setup_change": "Pre-materialize terrain cache before ANY scored run; pin all 480 expected tile inputs (1440 files) and check before/after every scored process. All four controllers use the SAME existing evaluator and cache configuration.",
+  "unchanged": [
+    "69 frozen source files",
+    "4 model files",
+    "policy observation values and dimensions",
+    "selector thresholds/time windows",
+    "environment parameters/reward/termination/terrain recipe",
+    "first-episode-only scoring and strict initial observation pairing",
+    "separate 16s and 64s reporting",
+    "original improvement-vs-instant criteria"
+  ],
+  "no_tuning_after_outcomes": true,
+  "automatic_retry_permitted": false,
+  "failure_rule": "Stop immediately, preserve partial results and exclude incomplete paired cohorts; never loosen hashes.",
+  "limits": [
+    "One training seed42, two geometry/reset pairs, not universal best performance",
+    "Cache canonicalization changes the terrain numerical representation relative to first uncached runs; do not pool old failed outputs",
+    "History is selector memory, not recurrent actor training",
+    "Shared cache input identity is guarded; unobserved concurrent mutation is not ruled out solely by before/after hashes. One project GPU job at a time under the same lock."
+  ],
+  "new_training_transitions": 0
+}

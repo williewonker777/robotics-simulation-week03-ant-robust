@@ -152,8 +152,8 @@ std `1.54`), episode length `690.5/960` (seed-mean std `32.3`), 완주 `40.6/100
 징검다리에서 오래 버티는 대신 return이 낮은 것은 gap/height를 넘나들며 진행 보상과
 에너지·행동 패널티가 함께 작용하기 때문이다. 따라서 이 결과는 v1의 동일한 네
 지형보다 더 넓은 분포에서 생존성이 개선됐다는 증거이지, 관측하지 않은 극한 지형에
-대한 보편적 보장은 아니다. 원시 JSON과 console log는 [`evaluations/`](evaluations)
-및 [`../console/`](../console)에 보관했다.
+대한 보편적 보장은 아니다. 원시 JSON은 [`evaluations/`](evaluations)에 보관했다.
+console log는 Git-ignored `artifacts/console/`의 로컬 자료이며 공개 파일이 아니다.
 
 ## 극한 지형 확장 (v3)
 
@@ -426,8 +426,8 @@ deep-stairs `57.4 / 705.9` (5), flat `55.0 / 459.2` (0), gap
 `26.7 / 643.1` (5), obstacles `63.6 / 756.3` (6), pit `11.1 / 302.0` (3),
 rough `6.6 / 528.8` (0), steep-slope `59.5 / 632.2` (1), stepping-stones
 `23.3 / 810.7` (8), and waves `-20.8 / 609.1` (2).  The per-seed JSON files
-are in [`evaluations/`](evaluations), and the corresponding raw console logs
-are in [`../console/`](../console).  These are measured results on the listed
+are in [`evaluations/`](evaluations); the corresponding raw console logs
+remain local in Git-ignored `artifacts/console/`. These are measured results on the listed
 procedural distribution, not a guarantee for arbitrary unseen geometry.
 
 Minimal v4 recovery-stage reproduction:

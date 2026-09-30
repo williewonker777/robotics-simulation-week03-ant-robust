@@ -1,0 +1,47 @@
+{
+  "schema": "week03_ant_seed_continuation_v22_reference_check_v1",
+  "created_utc": "2026-09-28T07:15:36.668318+00:00",
+  "verification_date": "2026-09-28",
+  "scope": "Bounded read-only primary-source verification; two original conference PDFs were opened and relevant passages checked through web retrieval in this research thread. This artifact preserves that completed check, not a new hypothesis or experiment change.",
+  "sources": [
+    {
+      "authors": "Henderson et al.",
+      "title": "Deep Reinforcement Learning that Matters",
+      "venue": "AAAI 2018",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/download/11694/11553",
+      "sections_checked": [
+        "Random Seeds and Trials",
+        "Figure 5",
+        "Discussion of multiple trials and significance testing"
+      ],
+      "evidence": "Different training seeds with otherwise identical hyperparameters can produce markedly different performance. Figure 5 compares two groups of five runs. The paper cautions against favorable-trial selection and too few trials, and does not prescribe a universally sufficient seed count.",
+      "relevance": "Motivates checking whether the v21 continuation outcome persists across different continuation seeds while holding other settings fixed.",
+      "limits": "Not evidence that exactly three seeds are sufficient, and not a replication of this Isaac/PPO Ant experiment."
+    },
+    {
+      "authors": "Agarwal et al.",
+      "title": "Deep Reinforcement Learning at the Edge of the Statistical Precipice",
+      "venue": "NeurIPS 2021",
+      "url": "https://papers.nips.cc/paper/2021/file/f514cec81cb148559cf475e7426eed5e-Paper.pdf",
+      "sections_checked": [
+        "Section 2: Formalism",
+        "Section 3: Atari 100k study",
+        "Section 4: Recommendations and Tools for Reliable Evaluation",
+        "Footnote 3"
+      ],
+      "evidence": "The formalism distinguishes independent training runs from tasks. In the Atari 100k study, 100 evaluation episodes are averaged into one run score. The paper advocates uncertainty-aware few-run reporting. Footnote 3 notes that a fixed seed may not control framework/GPU nondeterminism.",
+      "relevance": "Supports keeping training-run replication distinct from evaluation episode counts and reporting uncertainty rather than treating point estimates alone as conclusive.",
+      "limits": "The benchmark-wide statistical methodology is not a guarantee for three continuation seeds on one fixed-parent, fixed-terrain Ant setup."
+    }
+  ],
+  "design_inferences_not_paper_prescriptions": [
+    "Three continuation seeds with a fixed parent checkpoint and fixed training terrain provide a descriptive sensitivity check conditional on that parent and terrain, not full initialization or training-distribution robustness.",
+    "Evaluation episodes, maps, and history-controller variants are not additional independent training replicates; 2960 evaluation episodes must not be reported as 2960 training replicates.",
+    "Exact seed-51 replay is an engineering compatibility gate, not a guarantee made by either paper. If exact, the historical seed-51 run and its replay are not an extra independent seed realization.",
+    "Report every prespecified seed and its paired differences against the common parent, without selecting the best seed. Three seeds alone do not establish broad significance or a causal mechanism for regression."
+  ],
+  "verification_limits": [
+    "This is a literature provenance artifact, not verification of local experiment execution, results, or source code.",
+    "Original PDF URLs and relevant sections were verified; PDF file bytes were not saved or cryptographically pinned."
+  ]
+}

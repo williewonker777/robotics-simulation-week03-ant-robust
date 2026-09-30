@@ -1,0 +1,103 @@
+{
+  "created_utc": "2026-09-28T03:48:48.827659+00:00",
+  "records": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "pyflakes",
+        "src/week03_ant/contact_curriculum_v20.py",
+        "src/week03_ant/curriculum_study_v20.py",
+        "src/week03_ant/tasks/contact_curriculum_v20.py",
+        "src/week03_ant/tasks/contact_curriculum_v20_cfg.py",
+        "scripts/contact_curriculum_v20.py",
+        "scripts/run_curriculum_training_v20.py",
+        "tests/test_contact_curriculum_v20.py",
+        "tests/test_curriculum_training_v20.py",
+        "tests/test_curriculum_harness_v20.py",
+        "scripts/evaluate_curriculum_v20.py",
+        "scripts/run_curriculum_eval_v20.py",
+        "scripts/summarize_curriculum_v20.py",
+        "tests/test_curriculum_eval_v20.py",
+        "scripts/audit_curriculum_v20_raw.py",
+        "tests/test_curriculum_raw_audit_v20.py"
+      ],
+      "returncode": 0,
+      "path": "outputs/contact_curriculum_v20_20260928/final_static_attempt02_0.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "mypy",
+        "--follow-imports=skip",
+        "--ignore-missing-imports",
+        "src/week03_ant/contact_curriculum_v20.py",
+        "src/week03_ant/curriculum_study_v20.py",
+        "scripts/contact_curriculum_v20.py",
+        "scripts/run_curriculum_training_v20.py",
+        "scripts/run_curriculum_eval_v20.py",
+        "scripts/summarize_curriculum_v20.py",
+        "tests/test_curriculum_training_v20.py",
+        "tests/test_curriculum_harness_v20.py",
+        "tests/test_curriculum_eval_v20.py",
+        "scripts/audit_curriculum_v20_raw.py",
+        "tests/test_curriculum_raw_audit_v20.py"
+      ],
+      "returncode": 0,
+      "path": "outputs/contact_curriculum_v20_20260928/final_static_attempt02_1.log",
+      "sha256": "049f51b850512be193c74d3fbb731e25fbc6374a66560d8ec0d6569d79c88ea6"
+    },
+    {
+      "command": [
+        "../run-python",
+        "-m",
+        "compileall",
+        "-q",
+        "src/week03_ant",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "path": "outputs/contact_curriculum_v20_20260928/final_static_attempt02_2.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "path": "outputs/contact_curriculum_v20_20260928/final_static_attempt02_3.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "ast_and_new_file_whitespace": 15,
+  "experiment_source_sha256": {
+    "src/week03_ant/contact_curriculum_v20.py": "55bb8ac7fbb5315b15b3d8112e5b65f362358f9a4585113f2a823c8bb2a85c58",
+    "src/week03_ant/curriculum_study_v20.py": "26b7d444cbd6bc627e38c725bdcdadeab4454d801a227d92abb839e412f30129",
+    "src/week03_ant/tasks/contact_curriculum_v20.py": "7ee3329d5be7c59200dba738e49343581c11a16d35c622a8d35abec5f7e81dab",
+    "src/week03_ant/tasks/contact_curriculum_v20_cfg.py": "b43ec3eccc9e58df3ea5320c991c0cd1052cf1f288bf178407a1dffc80d380e5",
+    "scripts/contact_curriculum_v20.py": "ed96b5c8771e4f8a729e8bfd18f6bfa749b952368e131da3f9cd06eca3db9bc8",
+    "scripts/run_curriculum_training_v20.py": "5cd0952250ba031da62da72fbacdb55f27c668bf199a45e79ba0acbcf7548365",
+    "tests/test_contact_curriculum_v20.py": "7b849822bb24ae0b8f1bd3ed176dc16f9f47a5eacd3133116674d7456ae1827b",
+    "tests/test_curriculum_training_v20.py": "acc1bd4d5a6a2b0e32a7337439e0f2f935ce84e1e9358aab0e6030358a3a5079",
+    "tests/test_curriculum_harness_v20.py": "fac6ff092e9eea80117673b9316c0cfde4337832564103571dd5e2c6304d6050",
+    "docs/experiment_plans/contact_curriculum_v20.md": "fd905b119773883dad1cca93969b5938ac50cbdd20b2664016792c05f4613e70",
+    "scripts/evaluate_curriculum_v20.py": "203dbd8261e012c4eee42fbb9bbfe3f7019a4ec9f4cb2c3092b64075e6303197",
+    "scripts/run_curriculum_eval_v20.py": "ed8a377203a13b694871c88b24532edfa96162484e916bac300bb400b486c94f",
+    "scripts/summarize_curriculum_v20.py": "88ac0529cd3a077eb6947b70293727cf6f02e73da503865e4ccee18a9cbb4524",
+    "tests/test_curriculum_eval_v20.py": "0537ead7700f65eb5146343a0e8776dd86af246fbc890736f6cbbd104f62d2fe"
+  },
+  "post_experiment_verifier_sha256": {
+    "scripts/audit_curriculum_v20_raw.py": "38731c25bb89b944bfd89436f73317ad0a1a1a73f832e3e61dbabfcb26d7d3ff",
+    "tests/test_curriculum_raw_audit_v20.py": "470020ef65ceb0609618626712abd3fe6a11eac23d6dc758a607026275c6f2c7"
+  },
+  "preserved_setup_failure": {
+    "path": "outputs/contact_curriculum_v20_20260928/final_static_0.log",
+    "sha256": "b09a78c787707f8ab70a8dbbfe2fb7ec76a89df0dc4c093a79526c3c44caf594",
+    "reason": "Course env python lacks system pyflakes; rerun exact same checks with absolute /usr/bin/python3. No source or criterion change."
+  }
+}

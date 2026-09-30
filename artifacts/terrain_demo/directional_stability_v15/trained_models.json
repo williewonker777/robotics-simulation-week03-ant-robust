@@ -1,0 +1,24 @@
+{
+  "completed_utc": "2026-09-22T16:24:17.545937+00:00",
+  "models": {
+    "control": {
+      "checkpoint": "artifacts/terrain_demo/directional_stability_v15/runs/control/model_249.pt",
+      "sha256": "4aa169eba098e7ab69e82958485879db2f34910c6cb4a6d0367f33efef3bc3ec",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_direction_v15/2026-09-23_01-03-59_v15_paired_control/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "7f789e0f355c07a2eaed006885ebd6f9b1c76da0cfa5fe89c14fdb5673d7d223"
+    },
+    "stable": {
+      "checkpoint": "artifacts/terrain_demo/directional_stability_v15/runs/stable/model_249.pt",
+      "sha256": "a282516fcc090d47652d2260e7c547883cd33d5b1e7d07cc262f2d87c60382c3",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_direction_v15/2026-09-23_01-14-09_v15_paired_stable/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "ec6cff1b410bdd52683d73baee5c15defd14027684441eda548721fd673204cb"
+    }
+  },
+  "training_validation_sha256": "b86c2e181a7ea621e6b54fe7a5bd7fad747d4afda8b723bc120ec0b17ba3a8bf",
+  "total_training_transitions": 65536000,
+  "training_freeze_sha256": "96ab8ca0f63f092e312223dc5392a431cd991157a158fbb1b73244041e094362"
+}

@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-09-28T10:53:39.393354+00:00",
+  "verdict": "APPROVE for implementation",
+  "reported_by": "native code-reviewer /root/rebaseline_code_review",
+  "recorded_by": "leader from completed specialist review",
+  "plan_sha256": "9cad43bfb5cdac74c841d84580a41c830c37d75589e304d909b9be36cd64dd4e",
+  "issues": 0,
+  "scope": "Plan plus frozen HorizonEpisodeTracker, v22 step loop, HybridTelemetry,35-field contract; not implementation/GPU validation.",
+  "budgets": {
+    "gpu_commands": 29,
+    "holdout_first_episodes": 2800,
+    "dependent_window_observations": 5600,
+    "development_window_observations": 630
+  },
+  "required_checks": [
+    "Virtual-only done uses current evidence as last_*; real done collision retains true last_*.",
+    "Virtual cutoff never reaches physical env or gate.reset.",
+    "Snapshot JSON lists/events before continued mutation.",
+    "Compare old16s outcomes, not post-timeout physical state/RNG with new continuing trajectory.",
+    "Use same-run before/after passivity and unchanged-loop source review; uninstrumented new-loop control alone does not independently prove shared implementation correct."
+  ],
+  "remaining": "Implementation, CPU tests, runtime development and final holdout audits pending."
+}

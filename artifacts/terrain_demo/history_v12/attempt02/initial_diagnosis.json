@@ -1,0 +1,642 @@
+{
+  "schema": "week03_ant_initial_cache_diagnosis_v1",
+  "created_utc": "2026-09-22T11:54:10.167593+00:00",
+  "probes_are_initial_only": true,
+  "scored_episodes": 0,
+  "capture_source_sha256": "af943dc5e84835d26129864ec55dffdafe0115172a72e85e00d8d65a9a5408d0",
+  "capture_sha256": {
+    "outputs/history_v12_20260922/initial_diagnostics/geometry72_a.pt": "3ed83836c5df15d870889b7b0462902d18942a26a0c7af78b2d6b6734cce3f01",
+    "outputs/history_v12_20260922/initial_diagnostics/geometry74_a.pt": "6a7473fbe815c67f1db5a5e17ef1fe09885769704f1c72c7ed7e25ccb9b7f84b",
+    "outputs/history_v12_20260922/initial_diagnostics/geometry74_b.pt": "4a1fc0c6fbb0909f04c182f39e64e354525ea7ced29b2c3af5900c39c4c2939e",
+    "outputs/history_v12_20260922/initial_diagnostics/geometry74_c.pt": "afb1677d09675d07c977fe12ed08b2e9fc853df5db259dffb65d4a4ad2801e96",
+    "outputs/history_v12_20260922/initial_diagnostics/geometry73_a.pt": "40c309db04bbae330d1149715aaa8643e63e617b505816f75fd970f0537b722f",
+    "outputs/history_v12_20260922/initial_diagnostics/geometry73_b.pt": "2e6cb609f4fb429b4c0c610c8af75615a7ca0eacca8ac2ff1767ce7b85b10cc6",
+    "outputs/history_v12_20260922/initial_diagnostics/geometry73_c.pt": "64908fae81a5a949c06d64b0cd44e1b9bcddcd5285ee884f0676dbda0c3a88b5"
+  },
+  "comparisons": {
+    "geometry74_a__geometry74_b": {
+      "initial_hashes_equal": false,
+      "tensors": {
+        "observations": {
+          "bit_identical": false,
+          "finite_differences": 15,
+          "finite_abs_max": 1.6689300537109375e-06,
+          "nonfinite_pattern_equal": true
+        },
+        "root_state_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "joint_pos": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "joint_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_link_pos_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_link_quat_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_vel_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_incoming_joint_wrench_b": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_ray_hits_w": {
+          "bit_identical": false,
+          "finite_differences": 2504,
+          "finite_abs_max": 4.76837158203125e-07,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_pos_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_quat_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "recomputed_observations": {
+          "bit_identical": false,
+          "finite_differences": 15,
+          "finite_abs_max": 1.6689300537109375e-06,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_height": {
+          "bit_identical": false,
+          "finite_differences": 10,
+          "finite_abs_max": 1.6689300537109375e-06,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_lin_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_ang_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_yaw_roll": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_angle_to_target": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_up_proj": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_heading_proj": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_joint_pos_norm": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_joint_vel_rel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_feet_body_forces": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_actions": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_foot_positions": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_foothold_hints": {
+          "bit_identical": false,
+          "finite_differences": 5,
+          "finite_abs_max": 2.384185791015625e-07,
+          "nonfinite_pattern_equal": true
+        }
+      }
+    },
+    "geometry74_b__geometry74_c": {
+      "initial_hashes_equal": true,
+      "tensors": {
+        "observations": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "root_state_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "joint_pos": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "joint_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_link_pos_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_link_quat_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_vel_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_incoming_joint_wrench_b": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_ray_hits_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_pos_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_quat_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "recomputed_observations": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_height": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_lin_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_ang_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_yaw_roll": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_angle_to_target": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_up_proj": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_heading_proj": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_joint_pos_norm": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_joint_vel_rel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_feet_body_forces": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_actions": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_foot_positions": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_foothold_hints": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        }
+      }
+    },
+    "geometry73_a__geometry73_b": {
+      "initial_hashes_equal": false,
+      "tensors": {
+        "observations": {
+          "bit_identical": false,
+          "finite_differences": 15,
+          "finite_abs_max": 1.0728836059570312e-06,
+          "nonfinite_pattern_equal": true
+        },
+        "root_state_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "joint_pos": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "joint_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_link_pos_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_link_quat_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_vel_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_incoming_joint_wrench_b": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_ray_hits_w": {
+          "bit_identical": false,
+          "finite_differences": 3181,
+          "finite_abs_max": 4.76837158203125e-07,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_pos_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_quat_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "recomputed_observations": {
+          "bit_identical": false,
+          "finite_differences": 15,
+          "finite_abs_max": 1.0728836059570312e-06,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_height": {
+          "bit_identical": false,
+          "finite_differences": 11,
+          "finite_abs_max": 1.0728836059570312e-06,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_lin_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_ang_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_yaw_roll": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_angle_to_target": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_up_proj": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_heading_proj": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_joint_pos_norm": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_joint_vel_rel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_feet_body_forces": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_actions": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_foot_positions": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_foothold_hints": {
+          "bit_identical": false,
+          "finite_differences": 4,
+          "finite_abs_max": 2.384185791015625e-07,
+          "nonfinite_pattern_equal": true
+        }
+      }
+    },
+    "geometry73_b__geometry73_c": {
+      "initial_hashes_equal": true,
+      "tensors": {
+        "observations": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "root_state_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "joint_pos": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "joint_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_link_pos_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_link_quat_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_vel_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "body_incoming_joint_wrench_b": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_ray_hits_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_pos_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "sensor_quat_w": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "recomputed_observations": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_height": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_lin_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_ang_vel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_yaw_roll": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_angle_to_target": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_up_proj": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_base_heading_proj": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_joint_pos_norm": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_joint_vel_rel": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_feet_body_forces": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_actions": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_foot_positions": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        },
+        "term_foothold_hints": {
+          "bit_identical": true,
+          "finite_differences": 0,
+          "finite_abs_max": 0.0,
+          "nonfinite_pattern_equal": true
+        }
+      }
+    }
+  },
+  "geometry72_cached_probe_matches_excluded_v10_initial_hashes": true,
+  "finding": "Fresh-generation and subsequent cache-loaded runs differ only in terrain-derived policy terms (base height and foothold hints). Two independently repeated cache-loaded pairs are bit-identical for every captured tensor. This supports generation-vs-OBJ-cache roundtrip as the cause; no observation rounding or zeroing applied.",
+  "mechanism": "Isaac Lab returns in-memory mesh on cache miss and loads mesh.obj on hit; trimesh OBJ export defaults to 8 decimal digits.",
+  "limits": "The cache is a shared local directory. Manifest equality is enforced before and after every process; it does not alone prove imported scene identity. Exact full initial state AND 88D observation hashes remain mandatory. Geometry74 is diagnostic only."
+}

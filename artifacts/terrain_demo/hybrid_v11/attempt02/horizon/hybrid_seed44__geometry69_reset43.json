@@ -1,0 +1,580 @@
+{
+  "schema": "week03_ant_depth_switch_v11_v1",
+  "task": "Week03-Ant-Prior-Lanes-Eval-v10",
+  "mode": "hybrid",
+  "preset": "cautious",
+  "gate_config": {
+    "span_enter": 0.12,
+    "edge_enter": 0.08,
+    "exit_ratio": 0.6,
+    "min_coverage": 0.9,
+    "enter_steps": 2,
+    "min_dwell_seconds": 0.5,
+    "clear_seconds": 0.3,
+    "blend_seconds": 0.15
+  },
+  "policy_seed": 44,
+  "checkpoint": "artifacts/terrain_demo/prior_v10/runs/v10_anchored_seed44/model_749.pt",
+  "checkpoint_sha256": "30128cf360ab8a39cae3ede2c8d30b83fcfc868fd4b0f12646dba3c09cedad00",
+  "v5_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "teacher_tensor_identity_verified": true,
+  "phase": "holdout",
+  "scenario": "stones",
+  "geometry_seed": 69,
+  "reset_seed": 43,
+  "num_envs": 10,
+  "initial_state_sha256": {
+    "root_state": "beb8753afdf740a7b742e59d0214835a9640070db60d7a9d315c3205069dec56",
+    "joint_pos": "03ad80f3bb5a86da40c3826da29d14f0846455267b51f3330cccb4c0064bef9e",
+    "joint_vel": "90d240de03391451c9d5f147f02b9939bfd1d8f98e11faaac398be8d029e6d1e",
+    "observations": "5604b028bb7617015036d1348f789752cd15a62ed5b98f211800a3efcb84a7f4"
+  },
+  "condition": {
+    "seconds": 64,
+    "max_steps": 3840,
+    "dt": 0.016666666666666666,
+    "snapshot_seconds": 16.0,
+    "one_threshold": 13.1,
+    "six_threshold": 53.1,
+    "footprint_margin": 1.1,
+    "observations": 88,
+    "v5_observations": 60,
+    "actions": 8
+  },
+  "family_names": [
+    "rough",
+    "slope",
+    "stairs",
+    "waves",
+    "obstacles",
+    "stepping_stones",
+    "flat"
+  ],
+  "difficulties": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "family_indices": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "level_indices": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "routing_inputs": "Only current ideal825-ray heights/validity; no terrain labels, maps or future state.",
+  "unknown_handling": "Hold requested policy, clear confirmation counters; an existing fade may continue. Not a safety guarantee.",
+  "switch_fall_interpretation": "Temporal association within0.5s, not proof of causation.",
+  "record": null,
+  "started_utc": "2026-09-22T09:33:30.717774+00:00",
+  "finished_utc": "2026-09-22T09:34:22.940008+00:00",
+  "wall_seconds": 52.22223432699684,
+  "forward_distance": [
+    16.592247009277344,
+    51.41827392578125,
+    47.649147033691406,
+    64.94622802734375,
+    68.3938980102539,
+    9.40760612487793,
+    27.10087013244629,
+    41.31602096557617,
+    69.01048278808594,
+    8.878480911254883
+  ],
+  "episode_terminated": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    false,
+    false,
+    true
+  ],
+  "episode_lengths": [
+    3840,
+    3840,
+    3840,
+    3840,
+    3840,
+    464,
+    1818,
+    3840,
+    3840,
+    359
+  ],
+  "episode_out_of_lane": [
+    false,
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    true,
+    false,
+    false
+  ],
+  "episode_world_exit": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "first_hit_one_seconds": [
+    10.216666666666667,
+    14.116666666666667,
+    15.333333333333334,
+    11.85,
+    8.15,
+    null,
+    9.3,
+    10.0,
+    7.3,
+    null
+  ],
+  "first_hit_six_seconds": [
+    null,
+    null,
+    null,
+    59.96666666666667,
+    56.699999999999996,
+    null,
+    null,
+    null,
+    47.583333333333336,
+    null
+  ],
+  "maximum_distance_m": [
+    16.65996742248535,
+    51.42096710205078,
+    47.649147033691406,
+    64.95132446289062,
+    68.3938980102539,
+    9.40760612487793,
+    27.103561401367188,
+    41.39328384399414,
+    69.29349517822266,
+    8.878480911254883
+  ],
+  "episode_return": [
+    26.45896339416504,
+    26.86161994934082,
+    26.220659255981445,
+    47.502437591552734,
+    48.393367767333984,
+    4.701281547546387,
+    18.230484008789062,
+    36.436492919921875,
+    50.512596130371094,
+    5.8808817863464355
+  ],
+  "episode_steps": [
+    3840,
+    3840,
+    3840,
+    3840,
+    3840,
+    464,
+    1818,
+    3840,
+    3840,
+    359
+  ],
+  "episode_strict_one_tile_success": [
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    true,
+    false
+  ],
+  "episode_strict_all_tiles_success": [
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    true,
+    false
+  ],
+  "aggregates": {
+    "episodes": 10,
+    "posture_terminations": 3,
+    "out_of_lane_exits": 2,
+    "world_exits": 0,
+    "distance_only_one_tile_hits": 8,
+    "distance_only_all_tiles_hits": 3,
+    "strict_one_tile_successes": 5,
+    "strict_all_tiles_successes": 2,
+    "strict_one_tile_success_rate": 0.5,
+    "strict_all_tiles_success_rate": 0.20000000298023224,
+    "final_forward_distance_mean_m": 40.4713249206543,
+    "maximum_forward_distance_mean_m": 40.51517105102539,
+    "full_horizon_survivals": 7
+  },
+  "distance_at_snapshot_m": [
+    16.591617584228516,
+    15.37963581085205,
+    13.559810638427734,
+    15.321675300598145,
+    17.69965362548828,
+    null,
+    17.997203826904297,
+    20.45754051208496,
+    21.823890686035156,
+    null
+  ],
+  "episode_full_horizon_survival": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    true,
+    true,
+    false
+  ],
+  "episode_active_steps": [
+    3840,
+    3840,
+    3840,
+    3840,
+    3840,
+    464,
+    1818,
+    3840,
+    3840,
+    359
+  ],
+  "episode_alpha_sum": [
+    3764.0000000819564,
+    3766.0000000819564,
+    3761.0000000819564,
+    3693.0000004395843,
+    3699.0000004395843,
+    399.0000000819564,
+    1757.0000000819564,
+    3777.0000000819564,
+    3711.0000004395843,
+    301.0000000819564
+  ],
+  "episode_v10_duty": [
+    0.9802083333546762,
+    0.9807291666880095,
+    0.9794270833546761,
+    0.961718750114475,
+    0.9632812501144751,
+    0.8599137932800784,
+    0.966446644709547,
+    0.9835937500213429,
+    0.9664062501144751,
+    0.8384401116489035
+  ],
+  "episode_v10_target_steps": [
+    3768,
+    3770,
+    3765,
+    3697,
+    3703,
+    403,
+    1761,
+    3781,
+    3715,
+    305
+  ],
+  "episode_uncertain_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "episode_switch_count": [
+    1,
+    1,
+    1,
+    3,
+    3,
+    1,
+    1,
+    1,
+    3,
+    1
+  ],
+  "episode_switch_steps": [
+    [
+      73
+    ],
+    [
+      71
+    ],
+    [
+      76
+    ],
+    [
+      74,
+      3609,
+      3679
+    ],
+    [
+      76,
+      3411,
+      3473
+    ],
+    [
+      62
+    ],
+    [
+      58
+    ],
+    [
+      60
+    ],
+    [
+      71,
+      2867,
+      2922
+    ],
+    [
+      55
+    ]
+  ],
+  "episode_switch_to_v10": [
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true
+    ],
+    [
+      true,
+      false,
+      true
+    ],
+    [
+      true
+    ]
+  ],
+  "episode_switch_seconds": [
+    [
+      1.2
+    ],
+    [
+      1.1666666666666667
+    ],
+    [
+      1.25
+    ],
+    [
+      1.2166666666666666,
+      60.13333333333333,
+      61.3
+    ],
+    [
+      1.25,
+      56.833333333333336,
+      57.86666666666667
+    ],
+    [
+      1.0166666666666666
+    ],
+    [
+      0.95
+    ],
+    [
+      0.9833333333333333
+    ],
+    [
+      1.1666666666666667,
+      47.766666666666666,
+      48.68333333333333
+    ],
+    [
+      0.9
+    ]
+  ],
+  "episode_first_switch_seconds": [
+    1.2,
+    1.1666666666666667,
+    1.25,
+    1.2166666666666666,
+    1.25,
+    1.0166666666666666,
+    0.95,
+    0.9833333333333333,
+    1.1666666666666667,
+    0.9
+  ],
+  "episode_last_switch_seconds": [
+    1.2,
+    1.1666666666666667,
+    1.25,
+    61.3,
+    57.86666666666667,
+    1.0166666666666666,
+    0.95,
+    0.9833333333333333,
+    48.68333333333333,
+    0.9
+  ],
+  "episode_fall_within_switch_window": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "episode_mean_action_disagreement_rms": [
+    0.12863085665764842,
+    0.19683006796119779,
+    0.19714356643684294,
+    0.187477432611085,
+    0.1964129137068705,
+    0.19840849456188667,
+    0.19485588777747873,
+    0.14876443940612713,
+    0.19071798358448183,
+    0.19766078692455652
+  ],
+  "episode_max_action_jump_rms": [
+    1.8830416958162859,
+    2.910343550790689,
+    3.1123830900245353,
+    2.9220772274877604,
+    3.259935551908215,
+    2.3552268587937832,
+    2.5814216990085677,
+    2.354519023009637,
+    3.0414442684101566,
+    2.646844162310215
+  ],
+  "episode_min_coverage": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "episode_max_enter_span": [
+    0.3400004208087921,
+    0.345000296831131,
+    0.345000296831131,
+    0.345000296831131,
+    0.345000296831131,
+    0.3400001525878906,
+    0.345000296831131,
+    0.345000296831131,
+    0.345000296831131,
+    0.3450000286102295
+  ],
+  "episode_max_enter_edge": [
+    0.33499956130981445,
+    0.3450000286102295,
+    0.3450000286102295,
+    0.3449998199939728,
+    0.34000012278556824,
+    0.33499979972839355,
+    0.3399999141693115,
+    0.3399999439716339,
+    0.3450000286102295,
+    0.33999964594841003
+  ],
+  "episode_max_retain_span": [
+    0.340000182390213,
+    0.345000296831131,
+    0.345000296831131,
+    0.3400004208087921,
+    0.345000296831131,
+    0.3399999141693115,
+    0.3450002670288086,
+    0.34000059962272644,
+    0.345000296831131,
+    0.3399999439716339
+  ],
+  "episode_max_retain_edge": [
+    0.33499979972839355,
+    0.3399997055530548,
+    0.3400001525878906,
+    0.3399999141693115,
+    0.33500030636787415,
+    0.33000022172927856,
+    0.3299999535083771,
+    0.33500006794929504,
+    0.3399999439716339,
+    0.3300001919269562
+  ]
+}

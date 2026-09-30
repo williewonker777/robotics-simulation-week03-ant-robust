@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-09-22T14:30:40.402705+00:00",
+  "reference": "outputs/adaptive_posture_v13_20260922/eval_history_original_final_smoke.json",
+  "reference_sha256": "10a09366f289ababb99552c4fb8146768833ee26790d1c44b65fc282758439c7",
+  "new": "outputs/command_conditioning_v14_20260922/legacy_prefix_parity.json",
+  "new_sha256": "65b1f354f8f11d94953ab73d4128661d4294ce472df952fecdb303de59a7aedd",
+  "equal_fields": [
+    "forward_distance",
+    "episode_lengths",
+    "episode_terminated",
+    "episode_out_of_lane",
+    "episode_world_exit",
+    "episode_strict_one_tile_success",
+    "episode_strict_all_tiles_success",
+    "episode_full_horizon_survival",
+    "episode_alpha_sum",
+    "episode_v10_target_steps",
+    "episode_switch_steps",
+    "episode_switch_to_v10",
+    "history_switch_events",
+    "episode_return"
+  ],
+  "exact_initial_state_prefix": true,
+  "development_only": true,
+  "passive_velocity_telemetry_differences": {
+    "all_valid/forward_speed_sum": {
+      "differing_episodes": 35,
+      "max_absolute_sum_difference": 3.6005377769470215
+    },
+    "all_valid/flat_speed_bonus_sum": {
+      "differing_episodes": 2,
+      "max_absolute_sum_difference": 0.15142416954040527
+    },
+    "all_valid/reward_sum": {
+      "differing_episodes": 2,
+      "max_absolute_sum_difference": 0.07571208477020264
+    },
+    "all_valid/low_speed_steps": {
+      "differing_episodes": 1,
+      "max_absolute_sum_difference": 1
+    },
+    "clear/forward_speed_sum": {
+      "differing_episodes": 35,
+      "max_absolute_sum_difference": 3.6005377769470215
+    },
+    "clear/flat_speed_bonus_sum": {
+      "differing_episodes": 2,
+      "max_absolute_sum_difference": 0.15142416954040527
+    },
+    "clear/reward_sum": {
+      "differing_episodes": 2,
+      "max_absolute_sum_difference": 0.07571208477020264
+    },
+    "clear/low_speed_steps": {
+      "differing_episodes": 1,
+      "max_absolute_sum_difference": 1
+    },
+    "total_low_speed_count_difference": -1
+  },
+  "interpretation": "Outcomes/returns/routing and height/foot geometry match exactly. Extra observation-time geometry reads change lazy root-link velocity cache timing around reset; passive speed sums are not byte-identical. New91D arms share the same ordering; flat performance speed uses distance/time, not this cached velocity. No rounding or scored process rerun."
+}

@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-09-22T16:00:42.937387+00:00",
+  "role": "code-reviewer",
+  "agent": "/root/review_v15_implementation",
+  "verdict": "CLEAR",
+  "unresolved_issues": 0,
+  "targeted_tests": "180 passed in 11.64s",
+  "python_syntax_files": 15,
+  "files_reviewed": 17,
+  "legacy_sources": 106,
+  "legacy_models": 8,
+  "source_sha256": {
+    "src/week03_ant/direction_math.py": "27889b8256fe5ea9c576114ae48255cb823591973a1f0fd3a2c9f82bb5b2eb3e",
+    "src/week03_ant/direction_study.py": "8014c286fb4ed5191c2429b1e36850b0b4c492068f4aab5a3b03cbdad075546d",
+    "src/week03_ant/tasks/direction_v15.py": "31e70405cea136583727ad8450f173dec898ad4e4957ff0b176f3e4acdbc0fee",
+    "src/week03_ant/tasks/direction_v15_cfg.py": "7ecbd2a728311e9a780c88b74b5e6ce50526b2fe57118f2b8c7e3edd8ebc9368",
+    "scripts/direction_v15.py": "89ee7f952f18575168bfafe08f832fd5dc25b4160f727685cb92054b790701ac",
+    "scripts/run_direction_study.py": "2a2c681406e3ea2c8146aab00ad99730cb2054d82f14d6b3dc97eb5a809128b4",
+    "tests/test_direction_math.py": "403d8f9c26b46f6f17ef3f948ebea9081704620097bc24f226e37d5d72e1c868",
+    "tests/test_direction_adapter.py": "3020f7bf00d79b7fb616f29b9bf5a5a9de7e1d63ff34d58d1ee5f41c61bef3d1",
+    "tests/test_direction_training.py": "58947d3fc5513e354580e5a5e91254b52d3015cdd2f7d5e442724a7d68a248f3",
+    "tests/test_direction_harness.py": "5d97d6f931557022a1fee56c655a337b712fd8c1d13bc0764b616192f5e5a4e3",
+    "docs/experiment_plans/directional_stability_v15.md": "119d4ee40a933c2f07c3664e8670dd5ddd637c73120844e241c532da5ed909bc",
+    "outputs/directional_stability_v15_20260923/PLAN.md": "119d4ee40a933c2f07c3664e8670dd5ddd637c73120844e241c532da5ed909bc",
+    "src/week03_ant/direction_telemetry.py": "407adc94550a74748cfefe78b2429f2a0057b635e2ada98c06e7b67ca8132dba",
+    "scripts/evaluate_direction_v15.py": "3218bd703aa4d1133db9b921e3a29a81f294b3d234b618644fcbe04335dcb899",
+    "scripts/summarize_direction_v15.py": "388db0453d56b1ec7d6fe85c57a3bf7b9b3bf97e9e95b9e5ede6d0f79edd3b1f",
+    "tests/test_direction_telemetry.py": "26eb2026c0eaa45ffe2b7dc063b80592e132264eccdbd4ed419a8f704218cdf6",
+    "tests/test_direction_summary.py": "28deadb4005fc20263bb0cccf6af50707db6fa1b6324d76564a763d176ba3730"
+  },
+  "repairs": [
+    "append-only preholdout ledger prefix and exact file identity",
+    "final-smoke provenance validation"
+  ],
+  "remaining_execution_gates": [
+    "4096-env capacity pairing",
+    "full CPU suite",
+    "final model smokes",
+    "independent raw holdout audit"
+  ],
+  "performance_unproven": true
+}

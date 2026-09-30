@@ -1,0 +1,871 @@
+{
+  "audit": "independent_cpu_tensor_and_legacy_v1",
+  "checkpoint_links": {
+    "original_v10": {
+      "actual": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1",
+      "expected": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1",
+      "matches": true
+    },
+    "v16_control": {
+      "actual": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+      "expected": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+      "matches": true
+    },
+    "v5": {
+      "actual": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "expected": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "matches": true
+    }
+  },
+  "checkpoints": {
+    "original_v10": {
+      "actor_keys": [
+        "actor.0.bias",
+        "actor.0.weight",
+        "actor.2.bias",
+        "actor.2.weight",
+        "actor.4.bias",
+        "actor.4.weight",
+        "actor.6.bias",
+        "actor.6.weight"
+      ],
+      "all_cpu": true,
+      "all_finite": true,
+      "all_values_tensors": true,
+      "iteration": 749,
+      "sha256": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1",
+      "state_key_count": 29,
+      "teacher_keys": [
+        "teacher.0.bias",
+        "teacher.0.weight",
+        "teacher.2.bias",
+        "teacher.2.weight",
+        "teacher.4.bias",
+        "teacher.4.weight",
+        "teacher.6.bias",
+        "teacher.6.weight"
+      ],
+      "tensor_info": {
+        "actor.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400
+          ]
+        },
+        "actor.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            88
+          ]
+        },
+        "actor.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200
+          ]
+        },
+        "actor.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200,
+            400
+          ]
+        },
+        "actor.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100
+          ]
+        },
+        "actor.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100,
+            200
+          ]
+        },
+        "actor.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8
+          ]
+        },
+        "actor.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8,
+            100
+          ]
+        },
+        "critic.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400
+          ]
+        },
+        "critic.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            88
+          ]
+        },
+        "critic.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200
+          ]
+        },
+        "critic.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200,
+            400
+          ]
+        },
+        "critic.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100
+          ]
+        },
+        "critic.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100,
+            200
+          ]
+        },
+        "critic.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            1
+          ]
+        },
+        "critic.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            1,
+            100
+          ]
+        },
+        "input_mode_code": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "prior_mode_code": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "prior_reference_std": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "prior_teacher_coef": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "std": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8
+          ]
+        },
+        "teacher.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400
+          ]
+        },
+        "teacher.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            60
+          ]
+        },
+        "teacher.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200
+          ]
+        },
+        "teacher.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200,
+            400
+          ]
+        },
+        "teacher.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100
+          ]
+        },
+        "teacher.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100,
+            200
+          ]
+        },
+        "teacher.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8
+          ]
+        },
+        "teacher.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8,
+            100
+          ]
+        }
+      }
+    },
+    "v16_control": {
+      "actor_keys": [
+        "actor.0.bias",
+        "actor.0.command_weight",
+        "actor.0.weight",
+        "actor.2.bias",
+        "actor.2.weight",
+        "actor.4.bias",
+        "actor.4.weight",
+        "actor.6.bias",
+        "actor.6.weight"
+      ],
+      "all_cpu": true,
+      "all_finite": true,
+      "all_values_tensors": true,
+      "iteration": 249,
+      "sha256": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+      "state_key_count": 33,
+      "teacher_keys": [
+        "teacher.0.bias",
+        "teacher.0.weight",
+        "teacher.2.bias",
+        "teacher.2.weight",
+        "teacher.4.bias",
+        "teacher.4.weight",
+        "teacher.6.bias",
+        "teacher.6.weight"
+      ],
+      "tensor_info": {
+        "actor.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400
+          ]
+        },
+        "actor.0.command_weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            3
+          ]
+        },
+        "actor.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            88
+          ]
+        },
+        "actor.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200
+          ]
+        },
+        "actor.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200,
+            400
+          ]
+        },
+        "actor.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100
+          ]
+        },
+        "actor.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100,
+            200
+          ]
+        },
+        "actor.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8
+          ]
+        },
+        "actor.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8,
+            100
+          ]
+        },
+        "command_mode_code": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "command_schema_code": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "critic.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400
+          ]
+        },
+        "critic.0.command_weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            3
+          ]
+        },
+        "critic.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            88
+          ]
+        },
+        "critic.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200
+          ]
+        },
+        "critic.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200,
+            400
+          ]
+        },
+        "critic.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100
+          ]
+        },
+        "critic.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100,
+            200
+          ]
+        },
+        "critic.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            1
+          ]
+        },
+        "critic.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            1,
+            100
+          ]
+        },
+        "input_mode_code": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "prior_mode_code": {
+          "device": "cpu",
+          "dtype": "torch.int64",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "prior_reference_std": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "prior_teacher_coef": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": []
+        },
+        "std": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8
+          ]
+        },
+        "teacher.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400
+          ]
+        },
+        "teacher.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            60
+          ]
+        },
+        "teacher.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200
+          ]
+        },
+        "teacher.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200,
+            400
+          ]
+        },
+        "teacher.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100
+          ]
+        },
+        "teacher.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100,
+            200
+          ]
+        },
+        "teacher.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8
+          ]
+        },
+        "teacher.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8,
+            100
+          ]
+        }
+      }
+    },
+    "v5": {
+      "actor_keys": [
+        "actor.0.bias",
+        "actor.0.weight",
+        "actor.2.bias",
+        "actor.2.weight",
+        "actor.4.bias",
+        "actor.4.weight",
+        "actor.6.bias",
+        "actor.6.weight"
+      ],
+      "all_cpu": true,
+      "all_finite": true,
+      "all_values_tensors": true,
+      "iteration": 0,
+      "sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+      "state_key_count": 17,
+      "teacher_keys": [],
+      "tensor_info": {
+        "actor.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400
+          ]
+        },
+        "actor.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            60
+          ]
+        },
+        "actor.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200
+          ]
+        },
+        "actor.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200,
+            400
+          ]
+        },
+        "actor.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100
+          ]
+        },
+        "actor.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100,
+            200
+          ]
+        },
+        "actor.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8
+          ]
+        },
+        "actor.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8,
+            100
+          ]
+        },
+        "critic.0.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400
+          ]
+        },
+        "critic.0.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            400,
+            60
+          ]
+        },
+        "critic.2.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200
+          ]
+        },
+        "critic.2.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            200,
+            400
+          ]
+        },
+        "critic.4.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100
+          ]
+        },
+        "critic.4.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            100,
+            200
+          ]
+        },
+        "critic.6.bias": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            1
+          ]
+        },
+        "critic.6.weight": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            1,
+            100
+          ]
+        },
+        "std": {
+          "device": "cpu",
+          "dtype": "torch.float32",
+          "finite": true,
+          "is_tensor": true,
+          "shape": [
+            8
+          ]
+        }
+      }
+    }
+  },
+  "execution": {
+    "command_contract": "CUDA_VISIBLE_DEVICES='' ../run-python; torch.load(map_location=cpu)",
+    "cuda_available": false,
+    "cuda_device_count": 0,
+    "cuda_visible_devices": "",
+    "torch_version": "2.7.0+cu128"
+  },
+  "legacy_inventory": {
+    "models": {
+      "checked_count": 16,
+      "expected_count": 16,
+      "matches": true,
+      "mismatches": []
+    },
+    "sources": {
+      "checked_count": 173,
+      "expected_count": 173,
+      "matches": true,
+      "mismatches": []
+    }
+  },
+  "limitations": [
+    "This verifies checkpoint tensor equality and current filesystem hash inventory, not rollout behavior or GPU simulator determinism.",
+    "The legacy inventory is a current-byte verification against frozen.json; it does not independently reconstruct earlier experimental provenance."
+  ],
+  "teacher_comparisons": {
+    "original_v10_teacher_equals_v5_actor": {
+      "actual_teacher_tensor_count": 8,
+      "all_shapes_dtypes_values_exact": true,
+      "expected_v5_actor_tensor_count": 8,
+      "key_sets_exact": true,
+      "mismatches": []
+    },
+    "v16_control_teacher_equals_v5_actor": {
+      "actual_teacher_tensor_count": 8,
+      "all_shapes_dtypes_values_exact": true,
+      "expected_v5_actor_tensor_count": 8,
+      "key_sets_exact": true,
+      "mismatches": []
+    }
+  },
+  "verdict": "PASS"
+}

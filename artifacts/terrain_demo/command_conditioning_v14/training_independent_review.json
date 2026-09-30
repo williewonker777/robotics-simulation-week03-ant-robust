@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-09-22T14:57:22.098857+00:00",
+  "status": "CLEAR",
+  "reviewer": "independent code-reviewer",
+  "old_source_count": 89,
+  "old_model_count": 6,
+  "frozen_training_source_count": 14,
+  "iterations_per_arm": 250,
+  "transitions_per_arm": 32768000,
+  "scalar_tags_per_arm": 37,
+  "scalar_values_per_tag": 250,
+  "initial_physical_91D_prefix_rng_network_config_exact_pairing": true,
+  "all_final_model_and_Adam_tensors_finite": true,
+  "frozen_teacher_identity": true,
+  "masked_command_weight_norms": [
+    0.0,
+    0.0
+  ],
+  "conditioned_actor_critic_command_weight_norms": [
+    0.4060788,
+    2.2617276
+  ],
+  "independently_audited_final_smoke_episodes": 105,
+  "cpu_focused_tests": 96,
+  "training_validation_sha256": "50fecda725bea8f9fbe6f924826bce8253fd7636b25311a68f8977051819f01e",
+  "trained_models_sha256": "435f02725c090dce5dfdb0731c7e74f9b7145dae710a7796112667e7c66c4e10",
+  "final_model_smokes_sha256": "96ca315e96b3810631fb5c31d345445a4d2c9b4cdabbb7ac7d05ac8a9719d6bc",
+  "claim": "Holdout readiness only; no performance inference."
+}

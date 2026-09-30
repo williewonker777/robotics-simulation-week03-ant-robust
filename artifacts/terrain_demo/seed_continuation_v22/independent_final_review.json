@@ -1,0 +1,140 @@
+{
+  "created_utc": "2026-09-28T08:30:35.133880+00:00",
+  "reviewer": "independent code-reviewer native agent",
+  "recommendation": "APPROVE",
+  "passed": true,
+  "outstanding_issues": [],
+  "scope": "Completed v22 evidence and four final documents; no GPU execution or experiment/document modifications.",
+  "document_sha256": {
+    "docs/SEED_CONTINUATION_V22.md": "1d7e4a983ce015b80a7d17118d05e03d8f72d44100209b412c0a95e2b5e17fbe",
+    "README.md": "03e0fa2bd5f867fc732a94f04a214b2be4854a2870af49828aaa0e1fea28e08b",
+    "docs/EXPERIMENT_HISTORY.md": "6e6f5a21df0bf8d7e26f9c214f91e541d4a75ff0d7fc7f97232d29aac3b2b9ca",
+    "docs/PUBLICATION.md": "f2ee3bae2b4cae63ab0b0971cd4b4ddb8188eeae8dc88f56352a12d8c213a416"
+  },
+  "artifact_sha256": {
+    "artifacts/terrain_demo/seed_continuation_v22/summary.json": "9a077b6ca36635973a5b062375b2d2a9a8f01c753120af9754899e8e198ec588",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_raw_audit.json": "914f023369b54c9d8a46c2fa4a69263374a79c0dc2aa2263fd18718276f68a3c",
+    "artifacts/terrain_demo/seed_continuation_v22/frozen.json": "2c86bdcc401432a78d7752b72fd9b756c0e73c01bced14df96c869c697784d61",
+    "artifacts/terrain_demo/seed_continuation_v22/training_frozen.json": "026e30f7e25f93b67914cf1ba801093e24c62c71d04253747c31db26639a485b",
+    "artifacts/terrain_demo/seed_continuation_v22/trained_models.json": "30edde72837a9ab60ce6233fbff9d74b473c81fa0ac68a4c2f0dcad5cd8c6540",
+    "artifacts/terrain_demo/seed_continuation_v22/training_validation.json": "fe5ffe66053fd5d03772615f8b5db6040dd2ebae50da91ae6bee32c3a1b6ce19",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_tensor_audit.json": "d0647f850b17a64993d7473c7e070d7d9ce257cee82a44f4da497e101807b415",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_full_replay_audit.json": "24f48d8acd645f4ebebce0a29338975b62693b37b22dff69682b5bd8090bbc88",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_replay_audit.json": "cf63630b1495b08f70b5a0fa7b3f63ca3e976962c543f22b4862e065426479cc",
+    "artifacts/terrain_demo/seed_continuation_v22/implementation_review.json": "318049c5e8b0ae03b9f5121d035f716703a2e9a1b302f4f5089175d47dc3352c",
+    "artifacts/terrain_demo/seed_continuation_v22/independent_verifier_review.json": "c7dec19cb7aa8e41d0e40054d66a590f096053c70613804b9276c2e6819d4b4d",
+    "artifacts/terrain_demo/seed_continuation_v22/final_cpu_validation.json": "5e5ef5e9b8d84af851fd5bf7895c576732c6cb1dec0abc8998cf066437b82ab0",
+    "artifacts/terrain_demo/seed_continuation_v22/reference_check.json": "77f4e08dec55a41aed8cede3bdb19b50fc04e3c2fa0b87e7a9d4a6e9eb7d8585"
+  },
+  "verifier_sha256": "9d24e151a100fd49faa917d2762145149c313eef1b14b90b53bb751487c4b3ef",
+  "methods": [
+    "Read-only recomputation using reviewed standalone stdlib auditor, with exact saved-report agreement except created_utc.",
+    "Additional separate inline raw-array mask/sum route independently recomputed pooled strict1/6tile counts,falls/lane/world,flat speed,all12directional gates and paired-six tables for both horizons; did not use verifier count/gate helpers.",
+    "Full standalone audit recomputed map/family/level counts,gates,paired outcomes and seed min/max/ranges/parent deltas.",
+    "Manual full detailed-document and version-specific README/history/publication review; programmatic eight-controller primary and secondary table comparison.",
+    "Rehashed final CPU log/XML and confirmed1501tests,zero failures/errors/skips."
+  ],
+  "verified": {
+    "raw_files": 32,
+    "first_episodes": 2960,
+    "primary_first_episodes": 2800,
+    "secondary_first_episodes": 160,
+    "evaluation_development_first_episodes": 280,
+    "scored_commands": 32,
+    "total_successful_gpu_commands": 53,
+    "scored_retries": 0,
+    "main_training_transitions": 98304000,
+    "development_training_transitions": 835584,
+    "total_new_training_environment_transitions": 99139584,
+    "parent_counted_once_per_condition": true,
+    "source_model_cache_ledger_links": true,
+    "initial_state_rng_pairing": true,
+    "history_flat_identity": true,
+    "new_frozen_definitions": 12,
+    "legacy_sources": 213,
+    "legacy_models": 19,
+    "cpu_tests_passed": 1501
+  },
+  "results": {
+    "primary_pooled_passes": [],
+    "primary_parent_comparisons_fail_on_both_maps": true,
+    "primary_per_map_passes": {
+      "geometry115_reset75": [
+        "history_seed53_vs_history_seed51",
+        "history_seed53_vs_history_seed52"
+      ],
+      "geometry116_reset76": []
+    },
+    "primary_six": {
+      "parent": 178,
+      "seed51": 165,
+      "seed52": 164,
+      "seed53": 171,
+      "history_parent": 177,
+      "history_seed51": 172,
+      "history_seed52": 168,
+      "history_seed53": 169
+    },
+    "secondary_six": {
+      "parent": 7,
+      "seed51": 8,
+      "seed52": 17,
+      "seed53": 9,
+      "history_parent": 7,
+      "history_seed51": 8,
+      "history_seed52": 4,
+      "history_seed53": 12
+    },
+    "secondary_pooled_passes": [
+      "seed52_vs_parent",
+      "seed53_vs_parent",
+      "history_seed53_vs_history_parent",
+      "seed52_vs_seed51",
+      "history_seed53_vs_history_seed51",
+      "history_seed53_vs_history_seed52"
+    ],
+    "secondary_pooled_passes_on_both_maps": [
+      "seed52_vs_parent",
+      "history_seed53_vs_history_parent",
+      "seed52_vs_seed51",
+      "history_seed53_vs_history_seed51",
+      "history_seed53_vs_history_seed52"
+    ],
+    "secondary_per_map_passes": {
+      "geometry115_reset75": [
+        "seed51_vs_parent",
+        "seed52_vs_parent",
+        "seed53_vs_parent",
+        "history_seed51_vs_history_parent",
+        "history_seed53_vs_history_parent",
+        "seed52_vs_seed51",
+        "history_seed53_vs_history_seed51",
+        "history_seed53_vs_history_seed52"
+      ],
+      "geometry116_reset76": [
+        "seed52_vs_parent",
+        "history_seed53_vs_history_parent",
+        "seed52_vs_seed51",
+        "history_seed53_vs_history_seed51",
+        "history_seed53_vs_history_seed52"
+      ]
+    }
+  },
+  "document_conclusions": [
+    "Primary12pooled gates all fail; all6matching-parent gates fail on both maps; individual falls/one-tile benefits are not hidden.",
+    "Secondary6pooled passes,5also pass on both maps; seed53vsparent is the map116exception.",
+    "Seed52 standalone17/20 six-tile successes do not imply history improvement: history_seed52 is4/20.",
+    "Conditional three-seed/fixed-parent/fixed-training-terrain result; descriptive ranges and paired episodes are not statistical significance or general robustness.",
+    "Historical seed51 and exact fresh replay are not an independent fourth training realization.",
+    "No default promotion or result-driven seed/checkpoint/map selection; secondary does not override primary.",
+    "Serialization-byte equality is correctly reported as observed,not an extra semantic-replay acceptance criterion.",
+    "Literature boundaries distinguish paper motivation from engineering choices; reference-check artifact reviewed,not an additional independent PDF verification in this final pass."
+  ],
+  "remaining_risks": [
+    "Only three continuation seeds,one fixed parent and training terrain,two evaluation maps; no broad statistical,causal or hardware-safety inference.",
+    "Instrumented state/RNG/horizon hashes were checked; simulator states were not independently recaptured.",
+    "Checkpoint/scalar CPU verification complements stdlib hashing; contact/posture physical geometry was not independently recomputed.",
+    "Replay establishes final checkpoint and recorded evidence,not every unrecorded simulator state or future-platform determinism.",
+    "Completion applies to this bounded v22 experiment,not unrelated TASK298 demo/publication work."
+  ]
+}

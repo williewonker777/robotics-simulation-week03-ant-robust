@@ -1,0 +1,46 @@
+{
+  "arm": "immediate",
+  "created_utc": "2026-09-28T03:30:47.467696+00:00",
+  "source_initial_audit": "artifacts/terrain_demo/contact_curriculum_v20/training/immediate_initial.json",
+  "rollout": {
+    "samples": 8000,
+    "sampled_rows": 32720781,
+    "valid_rows": 32720781,
+    "invalid_rows": 0,
+    "invalid_fraction": 0.0,
+    "excluded_done_rows": 38260,
+    "excluded_wrap_rows": 17805,
+    "reward": -0.11857582275958221,
+    "bounded_cost": 0.11857582275958221,
+    "contact_fraction": 0.14953589795084155,
+    "no_contact_fraction": 0.594637408759117,
+    "contacted_tip_speed": 1.2310437649390935,
+    "terrain_contact_fraction": 0.13030806289952468,
+    "flat_contact_fraction": 0.019227834607619794,
+    "per_foot_contact_fraction": [
+      0.1565114268624125,
+      0.15409238299502437,
+      0.21253004864530284,
+      0.07500973339861507
+    ],
+    "per_target_per_foot_contact_fraction": [
+      [
+        0.1336612381286118,
+        0.022850188674381145
+      ],
+      [
+        0.13874763897256776,
+        0.015344744133510566
+      ],
+      [
+        0.1897097188168235,
+        0.022820329972206496
+      ],
+      [
+        0.059113657642503134,
+        0.01589607572813264
+      ]
+    ]
+  },
+  "passive_post_action": true
+}

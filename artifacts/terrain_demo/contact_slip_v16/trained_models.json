@@ -1,0 +1,32 @@
+{
+  "completed_utc": "2026-09-23T02:50:33.691473+00:00",
+  "models": {
+    "control": {
+      "checkpoint": "artifacts/terrain_demo/contact_slip_v16/runs/control/model_249.pt",
+      "sha256": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_contact_v16/2026-09-23_11-28-37_v16_paired_control/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "8d39acdb516aaae088bcc931b60af9aaac970dfd13aa49f120dd59672eee4c21",
+      "initial_pairing_verified": true,
+      "contact_rollout": "artifacts/terrain_demo/contact_slip_v16/training/control_initial_contact_rollout.json",
+      "contact_rollout_sha256": "35aacd0253644c66d1add32e423fb52e23d7a3ddef586c818064bb34c75c38e7",
+      "contact_rollout_invalid_fraction": 0.0
+    },
+    "slip": {
+      "checkpoint": "artifacts/terrain_demo/contact_slip_v16/runs/slip/model_249.pt",
+      "sha256": "0617a563b39953fddfeb57a7cbf521bb2a4ad5901a3bef2816a2758012d9a263",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_contact_v16/2026-09-23_11-39-23_v16_paired_slip/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "2d1a9765bb2f89bb3be3625b1af55b86f3b169c171b6bb0b2edadf206a43d724",
+      "initial_pairing_verified": true,
+      "contact_rollout": "artifacts/terrain_demo/contact_slip_v16/training/slip_initial_contact_rollout.json",
+      "contact_rollout_sha256": "f2240f8d8f6f80fafd4c369aa72f214063303e63ffd78986d6f226f6ade45601",
+      "contact_rollout_invalid_fraction": 0.0
+    }
+  },
+  "total_training_transitions": 65536000,
+  "training_freeze_sha256": "a398fa0d9ba5c735b715a70b8bd4f4ac7a65038da5002dcc96ff679e85822885",
+  "training_validation_sha256": "36cd802a3ae37e7552fe18468a83b636ff791bf15b86ddf67453c6367efee8f1"
+}

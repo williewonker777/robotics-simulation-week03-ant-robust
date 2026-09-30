@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-09-28T11:01:28.339092+00:00",
+  "passed": true,
+  "method": "Independent CPU torch.load; unchanged checkpoint SHA from frozen v22; every policy tensor finite; all8 teacher tensors exactly equal frozen v5. No optimizer step, new training or tensor mutation.",
+  "script_sha256": "6db0504f1adce75965a039475453396be710d99c398a92eddd1b901de1c6b7c8",
+  "v22_frozen_sha256": "2c86bdcc401432a78d7752b72fd9b756c0e73c01bced14df96c869c697784d61",
+  "teacher_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "models": {
+    "parent": {
+      "checkpoint": "artifacts/terrain_demo/contact_slip_v16/runs/control/model_249.pt",
+      "sha256": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+      "policy_tensors": 33,
+      "policy_values": 400631,
+      "teacher_tensors_identical": 8,
+      "saved_iteration": 249
+    },
+    "seed51": {
+      "checkpoint": "artifacts/terrain_demo/seed_continuation_v22/runs/seed51/model_249.pt",
+      "sha256": "298f96135dad68c5d45b081187cad57d932e56d6967c84e24a099f79f2460aee",
+      "policy_tensors": 33,
+      "policy_values": 400631,
+      "teacher_tensors_identical": 8,
+      "saved_iteration": 249
+    },
+    "seed52": {
+      "checkpoint": "artifacts/terrain_demo/seed_continuation_v22/runs/seed52/model_249.pt",
+      "sha256": "7a7ec701a6477b88cfd368f38b0d20087daacfb0981d3e88d21e176a290c3e97",
+      "policy_tensors": 33,
+      "policy_values": 400631,
+      "teacher_tensors_identical": 8,
+      "saved_iteration": 249
+    },
+    "seed53": {
+      "checkpoint": "artifacts/terrain_demo/seed_continuation_v22/runs/seed53/model_249.pt",
+      "sha256": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+      "policy_tensors": 33,
+      "policy_values": 400631,
+      "teacher_tensors_identical": 8,
+      "saved_iteration": 249
+    }
+  }
+}

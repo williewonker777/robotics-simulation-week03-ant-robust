@@ -1,0 +1,26 @@
+{
+  "verified_utc": "2026-09-22T11:25:46.986369+00:00",
+  "cpu_tests_passed": 343,
+  "targeted_history_tests_independently_passed": 70,
+  "review_verdict": "APPROVE after mixed-context reset, parent/worker publication, and alpha/duty audit repairs",
+  "smoke": {
+    "path": "artifacts/terrain_demo/history_v12/preflight_smoke_process_boundary.json",
+    "sha256": "92c8acf8cb078df8d40e58a53ad13e52dfa0334748c4603443c3d43deb1d3216",
+    "first_episodes_audited": 35,
+    "versioned_final_written": true,
+    "backend_and_event_digests_verified": true
+  },
+  "original_smoke_failure": {
+    "reason": "SimulationApp.close terminated worker process with exit0 before adapter finalization; original backend/log preserved, not counted as accepted output. Repaired parent/worker boundary before holdout. No threshold change.",
+    "log": "outputs/history_v12_20260922/preflight_smoke.log",
+    "backend": "outputs/history_v12_20260922/backend/preflight_smoke_b04f6d9ce57044b7846b0195f020ad39.json"
+  },
+  "old_frozen_sources_unchanged": 63,
+  "models_unchanged": 4,
+  "new_training_transitions": 0,
+  "unavailable_tools": [
+    "ruff",
+    "mypy",
+    "pyright"
+  ]
+}

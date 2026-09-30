@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-09-28T03:44:32.441507+00:00",
+  "verdict": "PASS",
+  "evidence_origin": "Leader transcription of independent code-reviewer read-only CPU verification; no GPU or experiment edits",
+  "torch_threads": 1,
+  "initial": {
+    "iteration": 0,
+    "non_std_tensors_equal_parent": 32,
+    "std_exact": 0.2,
+    "adam_state_empty": true
+  },
+  "teacher": {
+    "tensors": 8,
+    "exact_v5_identity_in": [
+      "parent",
+      "init",
+      "immediate",
+      "ramped"
+    ]
+  },
+  "each_final": {
+    "iteration": 249,
+    "finite_policy_tensors": 33,
+    "positive_std": true,
+    "finite_adam_tensors": 57,
+    "adam_parameter_states": 19,
+    "optimizer_steps": 5000,
+    "changed_actor_tensors_vs_parent": 9,
+    "source_copy_sha_equal": true
+  },
+  "sha256": {
+    "init": "10d8485d6d18f1dd6c01724ff69fc6a2ced3bbcd3d7b0db1285b7097cb5c21bd",
+    "immediate": "f3a72e6fc41b8c3f86ec2462e134e7632218bd2ef88de3bdf2eefc2f39d4700e",
+    "ramped": "4e766667f920f70489f0c1d5e26d0812b0a788173490e4269a6277ce16249378"
+  },
+  "limits": [
+    "Learned parameter changes do not establish behavioral improvement",
+    "Runtime routing and evaluation outcomes require separate proofs"
+  ]
+}

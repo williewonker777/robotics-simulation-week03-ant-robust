@@ -1,0 +1,47 @@
+{
+  "audit_surface": "Independent verifier read-only raw-artifact inspection; leader transcription of verdict, not a physics rerun",
+  "integrity_verdict": "PASS",
+  "performance_promotion": "FAIL",
+  "scored_files": 24,
+  "first_episodes": 2220,
+  "primary_rough_per_controller": 300,
+  "primary_flat_per_controller": 50,
+  "secondary_stones_per_controller": 20,
+  "primary": {
+    "control": {"one": 279, "six": 176, "falls": 20, "lane": 1, "world": 0, "flat_falls": 3, "flat_mean_episode_speed": 10.807176},
+    "slip": {"one": 275, "six": 163, "falls": 19, "lane": 7, "world": 0, "flat_falls": 3, "flat_mean_episode_speed": 10.707260},
+    "history_control": {"one": 280, "six": 179, "falls": 17, "lane": 2, "world": 0, "flat_falls": 5, "flat_mean_episode_speed": 9.141304},
+    "history_slip": {"one": 280, "six": 172, "falls": 17, "lane": 2, "world": 0, "flat_falls": 5, "flat_mean_episode_speed": 9.141304},
+    "actor_promotion": false,
+    "hybrid_promotion": false
+  },
+  "secondary": {
+    "control": {"one": 10, "six": 8, "falls": 7, "lane": 3, "world": 0},
+    "slip": {"one": 9, "six": 8, "falls": 8, "lane": 4, "world": 0},
+    "history_control": {"one": 8, "six": 7, "falls": 11, "lane": 1, "world": 0},
+    "history_slip": {"one": 6, "six": 6, "falls": 9, "lane": 4, "world": 0},
+    "actor_promotion": false,
+    "hybrid_promotion": false
+  },
+  "checks": {
+    "recomputed_directly_from_per_environment_first_episode_arrays": true,
+    "summary_not_used_as_audit_input": true,
+    "exact_initial_state_prefix_cpu_cuda_rng_hash_pairing": true,
+    "exact_history_flat_per_environment_raw_and_routing_identity": true,
+    "all_world_exits_zero": true,
+    "source_and_model_sha256_match": true,
+    "holdout_cache_480_tiles_match": true,
+    "preholdout_command_ledger_14_line_prefix_match": true,
+    "holdout_commands_24_exit_zero": true,
+    "fresh_independent_physics_rerun": false
+  },
+  "contact_telemetry_valid_coverage_range": {
+    "primary": [0.9984, 0.9985],
+    "secondary": [0.9994, 0.9996]
+  },
+  "limitations": [
+    "One training seed and two fresh holdout maps",
+    "Static raw-artifact audit, no independent simulation replay",
+    "Filtered foot-contact absence does not establish whole-body airborne state"
+  ]
+}

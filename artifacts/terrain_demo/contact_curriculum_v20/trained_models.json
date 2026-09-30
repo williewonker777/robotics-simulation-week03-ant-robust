@@ -1,0 +1,26 @@
+{
+  "completed_utc": "2026-09-28T03:41:04.395700+00:00",
+  "models": {
+    "immediate": {
+      "checkpoint": "artifacts/terrain_demo/contact_curriculum_v20/runs/immediate/model_249.pt",
+      "sha256": "f3a72e6fc41b8c3f86ec2462e134e7632218bd2ef88de3bdf2eefc2f39d4700e",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_contact_curriculum_v20/2026-09-28_12-20-40_v20_paired_immediate/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "6554f4a854692d93476b65bc9fa3b6475be9a6194fb3852f64604cd047fe1f10",
+      "schedule_sha256": "576589f056458ed06ce57d64729ffb544783c0d800c1ff40cc0843013bf75ac3"
+    },
+    "ramped": {
+      "checkpoint": "artifacts/terrain_demo/contact_curriculum_v20/runs/ramped/model_249.pt",
+      "sha256": "4e766667f920f70489f0c1d5e26d0812b0a788173490e4269a6277ce16249378",
+      "source_checkpoint": "logs/rsl_rl/week03_ant_contact_curriculum_v20/2026-09-28_12-30-54_v20_paired_ramped/model_249.pt",
+      "iteration": 249,
+      "transitions": 32768000,
+      "initial_audit_sha256": "19ed8769d395d290651af269e37b145216ab9949b7e4455841d78e7fd4214589",
+      "schedule_sha256": "2979dd63f7c31e2388f1e1d5d4c104a7ed342b52bdd3a8223270739a5b8e5ebc"
+    }
+  },
+  "total_training_transitions": 65536000,
+  "training_freeze_sha256": "8c96ea982c908554a783e0b667e7150b4444f16c0a163525d212d210da6fa81c",
+  "training_validation_sha256": "ff864324b9b7393d3b4878567d1e15e7721dcaf35aa01be9d7d07641adc68859"
+}

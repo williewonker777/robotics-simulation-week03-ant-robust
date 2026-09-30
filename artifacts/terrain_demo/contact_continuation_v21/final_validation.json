@@ -1,0 +1,112 @@
+{
+  "completed_utc": "2026-09-28T05:42:40.909423+00:00",
+  "status": "complete",
+  "experiment": "v21 matched no-contact-cost continuation control",
+  "outcome": "No continuation controller passes matching-parent pooled gates; retain existing default. Primary2/12 and secondary1/12 other pooled gates pass, none consistently on both maps.",
+  "pooled_passes": {
+    "evaluations": [
+      "ramped_vs_no_cost",
+      "history_ramped_vs_history_immediate"
+    ],
+    "horizon": [
+      "history_ramped_vs_history_immediate"
+    ]
+  },
+  "new_main_training_transitions": 32768000,
+  "new_development_training_transitions": 557056,
+  "new_total_environment_training_transitions": 33325056,
+  "reused_main_training_transitions": 65536000,
+  "development_evaluation_episodes": 280,
+  "holdout_first_episodes": 2960,
+  "holdout_raw_files": 32,
+  "gpu_commands": 49,
+  "gpu_failures": 0,
+  "scored_retries": 0,
+  "cpu_tests": {
+    "created_utc": "2026-09-28T05:03:58.170787+00:00",
+    "tests": 1303,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 29.103,
+    "log": "outputs/contact_continuation_v21_20260928/cpu_final_attempt02.log",
+    "log_sha256": "ce24ccdac7b4f004247fd68df40c9628819ad5452f6304c9045c6cfc98ed929b",
+    "xml": "outputs/contact_continuation_v21_20260928/cpu_final_attempt02.xml",
+    "xml_sha256": "0b140bf9c439e640e56d8313b20cc6d2b07a1aa4a60e0d681b3c13848d4b9c0b",
+    "static_validation_sha256": "27cfbb9808544e8fcf258a42b04781d27511d5f86616c39edeede68397083402",
+    "earlier_verifier_test_run": "cpu_final.log",
+    "reason": "Added15 corruption regressions for independent-auditor parity inventory; full experiment sources unchanged."
+  },
+  "experimental_definition_sha256": {
+    "src/week03_ant/contact_continuation_v21.py": "1e2e42821d8934c20bf8b8639e593a77175e7bb0f93e32dc1417aa481664a642",
+    "src/week03_ant/continuation_study_v21.py": "29c621bbac45fd79cb9452179ef59d91aed44233a6fe7fec4a1bc99886f18982",
+    "src/week03_ant/tasks/contact_continuation_v21.py": "1aef5b062e6f09ee0c9da7a703bd883e8aea8ea190df7a169033dee532186de2",
+    "src/week03_ant/tasks/contact_continuation_v21_cfg.py": "12ea8108aa2dd412bd779de7c7ae4441d02830434de1a8c7a6b4065daecc0c58",
+    "scripts/contact_continuation_v21.py": "872b18f7e99674c8e9825524a5e20f8c36de0828ce4600c397850e96918faec5",
+    "scripts/run_continuation_training_v21.py": "f45aaafedb61587aeb7a42cad70b90b3c3588df20a764e30d8122b93d2dce584",
+    "tests/test_contact_continuation_v21.py": "7399174bfd1a5db08a654dd9bbd3ef513822d8391f4244f2afdf0edc22434178",
+    "tests/test_continuation_training_v21.py": "5f5d43975416861351cebe2a8316af811e1b5bb22c1ce3c3a54234a3895b3c6e",
+    "tests/test_continuation_harness_v21.py": "bf810b202a91fea9befad61e6eb7132aff5adbdf5ad184be0c679c9fb8149a98",
+    "docs/experiment_plans/contact_continuation_v21.md": "74267286be016645d255bec00ea7ba048a8892573e375c4c4000066293d8f312",
+    "scripts/evaluate_continuation_v21.py": "c34034f186e347ce7d9b0263944cf89005ddce9c2e3cddca6d3616bdda6a0344",
+    "scripts/run_continuation_eval_v21.py": "d2db6d1ef229ec4dbbec4c6345bb9d0c02636d14273a3b3156a66d5c9a23e8d3",
+    "scripts/summarize_continuation_v21.py": "f68fd9c982583f0ca700ecc133acb247e992ceddd55082b9b409eba2eda36a95",
+    "tests/test_continuation_eval_v21.py": "c3cb15620bdcd62ff4e0bf688bce55c2bdc00a590954c5ba1b5f8102d3632c05"
+  },
+  "post_experiment_verifier_sha256": {
+    "scripts/audit_continuation_v21_raw.py": "41aa4a02dec12677b8c69de9d36125ddcc5fef128c16bf8f754557e24f124142",
+    "tests/test_continuation_raw_audit_v21.py": "3790b70eb5ac3aa0414fed5f1d79c98f9a564331eaa970347ce4ea26a0d3b1bd"
+  },
+  "legacy_sources_verified": 197,
+  "legacy_models_verified": 18,
+  "evidence_sha256": {
+    "artifacts/terrain_demo/contact_continuation_v21/summary.json": "b5d98e1cb4cda3342c8e73818718e234ecbd0c347b82ec7c2d93ae6edfbf1d67",
+    "artifacts/terrain_demo/contact_continuation_v21/summary.md": "578b7f2349271d2866f757c8cb21c0c2e6e4017ee5e8fb56e0b1b9b3079098b7",
+    "artifacts/terrain_demo/contact_continuation_v21/frozen.json": "c39b93b1e40b2fd482987efed01f4075efc96f3c51e0a6098a3d2db7af8fe49d",
+    "artifacts/terrain_demo/contact_continuation_v21/training_frozen.json": "11869d7371940da69d4d9da4397373bd6c8de6dff15860f36f6b032fd24cd7cb",
+    "artifacts/terrain_demo/contact_continuation_v21/training_validation.json": "0a3a387e67b0941a64914c9d55c8f3563787c559e50a932b371081c30c8df578",
+    "artifacts/terrain_demo/contact_continuation_v21/trained_models.json": "e946ecb4b26e3ae707073d8b17ea9ebe9c6701378920196805a2ded6e314ba0e",
+    "artifacts/terrain_demo/contact_continuation_v21/historical_references.json": "d7a566bb202b9107d3c4698acd54849ade261758c76bc9b368dcf3a18de5440f",
+    "artifacts/terrain_demo/contact_continuation_v21/initial_shared.json": "573745d27fbe4ee75a28b6b06c92cbe78a6c7339ff65cf8c8450d25d6b9879f4",
+    "artifacts/terrain_demo/contact_continuation_v21/preflight.json": "f60d09e05ab409adf65ac66df658529a08ba1febcfc555b8e71be678cafeb112",
+    "artifacts/terrain_demo/contact_continuation_v21/capacity.json": "1fc83db8406daccb2529c1b2db164bc6486ab2a30415c6439af49581ca89be66",
+    "artifacts/terrain_demo/contact_continuation_v21/development.json": "e1604cb4e2e7cfedbd46290cfe9621cbca5c19deccaa324bb4bb638b69889953",
+    "artifacts/terrain_demo/contact_continuation_v21/terrain_cache.json": "5a0e1f799f9d70467e421499c5e8605ab846e8f3fcbeb49dc32ff10b4b9362ee",
+    "artifacts/terrain_demo/contact_continuation_v21/evaluation_inputs.json": "71ee38ecc2e0992d3b1e32f627ab337e2ffd143c1d56679c06e7957bbb3505c4",
+    "artifacts/terrain_demo/contact_continuation_v21/preholdout_ledger.json": "70618af56e364ae7b9b5f3dc868b885083f5e81ec638d757147ed7b8ea3ac5cb",
+    "artifacts/terrain_demo/contact_continuation_v21/commands.jsonl": "9e9078565ce50829b70bad3c6ccb9db0b030118e5405d22b15782a1a4dc48200",
+    "artifacts/terrain_demo/contact_continuation_v21/implementation_review.json": "d1c0137f10b9169876a960d9f682c9af65d04ed1c998bfb9aca8edb79851fd1f",
+    "artifacts/terrain_demo/contact_continuation_v21/independent_replay_audit.json": "d74093cecd258e506a32d7e8b8ac46202f5692ec6cbb7587fb55eda90c2e96a9",
+    "artifacts/terrain_demo/contact_continuation_v21/independent_tensor_audit.json": "66b34f233469ed63f7f5d442ce456eb1fae85cb4b363e09937e67562d627456b",
+    "artifacts/terrain_demo/contact_continuation_v21/independent_verifier_review.json": "0809fe391b851719fd94a4092a9cfa2de6b25e8cf2f5e8062006ca44ad514646",
+    "artifacts/terrain_demo/contact_continuation_v21/independent_raw_audit.json": "b65572df322f424cde9c3b6b9aae964e2da8d849843cd0cff945fd68bd9e711c",
+    "artifacts/terrain_demo/contact_continuation_v21/independent_final_review.json": "a742445f8dc79b46149e11b95cdb535949f731e58d9d32bafadd3aa7cf909a4c",
+    "artifacts/terrain_demo/contact_continuation_v21/cpu_validation.json": "ec95100c46de754bba77678939924c35dd04ca4bfa6740bc5fa9e768fe133188",
+    "artifacts/terrain_demo/contact_continuation_v21/static_validation.json": "27cfbb9808544e8fcf258a42b04781d27511d5f86616c39edeede68397083402",
+    "artifacts/terrain_demo/contact_continuation_v21/static_validation_attempt01.json": "1eccb72a2d62e77bf142e2e05b7928a42203fd5ff0095fc935d4eae389a50944",
+    "artifacts/terrain_demo/contact_continuation_v21/document_validation.json": "c2d6f0d529113143375448c8b04c9e35975830c0d616cbf612664dad348a626b",
+    "artifacts/terrain_demo/contact_continuation_v21/reference_check.json": "6a5eebde7f986ff9f2bba34ca18f98a1a7403506d2f3a96aaf178afd520517d8"
+  },
+  "document_sha256": {
+    "README.md": "9ad14e4073672ff7a3cc9f9dd75d13214c100de8b13f2e19a2aedfca9a2943ff",
+    "docs/CONTACT_CONTINUATION_V21.md": "8a3def6acfbd0afbd27e9b4cd33c50627cbf611c82989224e6a7515104cd5e1e",
+    "docs/EXPERIMENT_HISTORY.md": "346c8224b3fd8192cd76c34249500f98e0b23f78d6782536e6792a270ac06140",
+    "docs/PUBLICATION.md": "9c03d18540a64f7ef735cadd2e8317b1fed992afe3cf2d390616478bfa9871cc",
+    "docs/experiment_plans/manifest.json": "2234576c2abaa66c401d4efbaeffedad1bb33ed445ec038d57338b7ce56a9f78"
+  },
+  "local_document_links_checked": 195,
+  "plan_copies_exact": 17,
+  "workflow_doctor": "PASS",
+  "default_changed": false,
+  "new_dependencies": false,
+  "commits": false,
+  "remote_git_github_operations": false,
+  "gpu_experiment_jobs_finished": true,
+  "stop_condition": "One new fixed-budget control and the preregistered32-file matrix complete, independent validation and reporting finished; no tuning or outcome-driven retry",
+  "remaining_risks": [
+    "one training seed and two holdout maps",
+    "historical cost-arm cohort reused; short exact replay is not full historical-run reproduction",
+    "no hardware/generalization/causal safety guarantee",
+    "separate older demo/publication scope remains under activeTASK298"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "created_at": "2026-09-22T09:42:17.754427+00:00",
+  "media": {
+    "v5": {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "16.000000",
+      "nb_read_frames": "480"
+    },
+    "v10": {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "16.000000",
+      "nb_read_frames": "480"
+    },
+    "hybrid": {
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "16.000000",
+      "nb_read_frames": "480"
+    }
+  },
+  "all_full_decode_passed": true,
+  "inspected_frames": "one fixed15s frame for each predeclared mode; observed caption time15.03s",
+  "observations": {
+    "v5": {
+      "alpha": 0.0,
+      "resets": 1,
+      "current_episode_distance_caption_m": 8.9
+    },
+    "v10": {
+      "alpha": 1.0,
+      "resets": 0,
+      "current_episode_distance_caption_m": 20.5
+    },
+    "hybrid": {
+      "alpha": 1.0,
+      "resets": 0,
+      "current_episode_distance_caption_m": 17.3
+    }
+  },
+  "notes": [
+    "Ants and hard-stone terrain visibly rendered; no black/empty frames at inspected times.",
+    "10 environments are visible; camera follows env0, not a single isolated Ant.",
+    "Current-episode caption can be after reset; not first-episode success evidence.",
+    "Only qualitative video, excluded from numerical benchmark and selection."
+  ]
+}

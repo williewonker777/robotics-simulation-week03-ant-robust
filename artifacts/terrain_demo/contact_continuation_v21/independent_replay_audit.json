@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-09-28T04:51:03.089941+00:00",
+  "verdict": "PASS",
+  "reviewer": "independent native code-reviewer",
+  "method": "CPU inline script with CUDA hidden and torch threads=1, without production audit/helper imports",
+  "historical_reference_files": 27,
+  "frozen_training_sources": 10,
+  "legacy_sources": 197,
+  "legacy_models": 18,
+  "init": {
+    "sha256": "10d8485d6d18f1dd6c01724ff69fc6a2ced3bbcd3d7b0db1285b7097cb5c21bd",
+    "byte_identical_v20": true,
+    "policy_tensors": 33,
+    "parent_equal_nonstd_tensors": 32,
+    "std": 0.2,
+    "iteration": 0,
+    "optimizer_empty": true,
+    "learning_rate": 0.0001,
+    "v5_teacher_equal_tensors": 8
+  },
+  "positive_controls": {
+    "preflight": {
+      "entire_checkpoint_exact": true,
+      "serialized_sha256": "6e336bf1b2b6304f95a72e874262b14bc214e6a13352e454d3360c5a9760acdc",
+      "tensors": 90,
+      "tensor_values": 950884,
+      "exact_non_timing_scalar_tags": 33,
+      "timing_exclusions": 5,
+      "all_38_tags_finite_complete": true,
+      "full_schedule_and_passive_rollout_exact": true,
+      "initial_and_actual_horizon_pairing": true
+    },
+    "capacity": {
+      "entire_checkpoint_exact": true,
+      "serialized_sha256": "8009aed402162855a3849ee0b62342fd9e8da5a3d0a9d94ffaab707d097c5476",
+      "tensors": 90,
+      "tensor_values": 950884,
+      "exact_non_timing_scalar_tags": 33,
+      "timing_exclusions": 5,
+      "all_38_tags_finite_complete": true,
+      "full_schedule_and_passive_rollout_exact": true,
+      "initial_and_actual_horizon_pairing": true
+    }
+  },
+  "no_cost_development": {
+    "reward_calls_per_run": 64,
+    "nonzero_raw_reward": true,
+    "all_coefficients_scaled_rewards_penalty_zero": true,
+    "all_rows_valid": true
+  },
+  "training_freeze_sha256": "11869d7371940da69d4d9da4397373bd6c8de6dff15860f36f6b032fd24cd7cb",
+  "historical_references_sha256": "d7a566bb202b9107d3c4698acd54849ade261758c76bc9b368dcf3a18de5440f",
+  "limitation": "Initial state and actual horizon equality checked through instrumented hashes, not live tensor recapture; full main final model not yet available."
+}

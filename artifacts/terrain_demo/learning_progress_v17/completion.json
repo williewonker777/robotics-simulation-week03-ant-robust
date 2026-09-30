@@ -1,0 +1,45 @@
+{
+  "completed_utc": "2026-09-23T10:19:07.573014+00:00",
+  "request_status": "one_paper_inspired_v17_method_tested_and_reported",
+  "integrity_verdict": "PASS",
+  "performance_promotion": "FAIL",
+  "primary_actor_passed": false,
+  "primary_hybrid_passed": false,
+  "secondary_actor_passed": true,
+  "secondary_hybrid_passed": false,
+  "training_transitions": 65536000,
+  "scored_files": 24,
+  "first_episodes": 2220,
+  "cpu_test_count": 954,
+  "checked_local_doc_links": 140,
+  "reference": "Li, Li & Hutter 2026 arXiv:2601.17428v1; Ant adaptation, not replication",
+  "artifact_sha256": {
+    "summary.json": "65820b7ff6930ee176eea4f7a4e3a45936b7e648a392a691e92f94e562323f33",
+    "summary.md": "621e1eb9b5778ba1aa6af5d517e7f2685a6bd4809b202510f8c31f9eb4b9a4a8",
+    "training_validation.json": "f7c87c190b736f56bda99221913945120f88483d6a2028da70c151dc0de401e5",
+    "independent_final_audit.md": "46d04d7240920d2055e616d783dc3a28985a0ae954d2c3ca7d4ab735094d8efb",
+    "final_validation.json": "83dda16ec705a4bea65b082abc924f17ca88d40c9e8b0fe3cad00f4221cab99c",
+    "frozen.json": "3a334084aaf5da04a27626b55b6575246ce6382e617b3c5acb554bcf4623cd1e",
+    "evaluation_inputs.json": "6e6e88607ebc93e868cc88faadada09e995470d38ba61a1b96660c64b4c94f6c",
+    "preholdout_ledger.json": "52ba869a970ebd74d6fe7571a87006ee7335dcf69cf8937d277db76c1cabe891"
+  },
+  "document_sha256": {
+    "README.md": "907b17542b59262b9bc99ef20ed13bdf355f4fd826a64d8f938e48fc614b3c6e",
+    "docs/LEARNING_PROGRESS_V17.md": "e50264564383c9c0ace0d5082b56480f04fa6c8d9d3f9f7699da67aefb1bcee0",
+    "docs/EXPERIMENT_HISTORY.md": "306be2342c76e3f456ccc59954616cb550f3f73b158a538e81fe06fbe8ac0839",
+    "docs/PUBLICATION.md": "0448174348e4d9e25fc186735a71f3c8fe1bf381131fafbd8e35fdeee6b940e4",
+    "docs/experiment_plans/learning_progress_v17.md": "370ffb065df0453a6117b69ece1ccf4e2e874ebba70f46e88efe602cf87c3c4a",
+    "docs/experiment_plans/manifest.json": "36ccc65a29e760e4d36052435578ef6d3045a065ff1d412a45b785dd766eb153"
+  },
+  "default_controller_changed": false,
+  "prior_sources_and_models_preserved": true,
+  "dependencies_added": false,
+  "remote_operations_performed": false,
+  "local_commit_performed": false,
+  "limitations": [
+    "one training seed and two fresh maps",
+    "ideal simulator ray depth is not camera depth",
+    "raw audit did not rerun physics",
+    "secondary 64s actor gain cannot override primary failure"
+  ]
+}
