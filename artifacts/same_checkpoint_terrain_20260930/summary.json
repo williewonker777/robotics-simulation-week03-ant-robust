@@ -1,0 +1,598 @@
+{
+  "base_commit": "a9de087fbe2d7cabaa73e2f3f53233887473336d",
+  "evaluated_at": "2026-09-30T09:55:21.974742+00:00",
+  "models": {
+    "provided_baseline_seed42": {
+      "checkpoint": "artifacts/runs/baseline_seed42/model_999.pt",
+      "extra_terrain_training": false,
+      "low_friction_checkpoint_sha256": "f4a88747c8d56905c4889b0fb0708d4e924a81dc676d92561d2921e8b2bdf83b",
+      "low_friction_evaluation": "artifacts/provided_baseline_comparison_20260930/evaluations/provided_baseline_seed42__low_friction.json",
+      "same_checkpoint_across_conditions": true,
+      "sha256": "f4a88747c8d56905c4889b0fb0708d4e924a81dc676d92561d2921e8b2bdf83b",
+      "training_seed": 42,
+      "training_transitions": 131072000
+    },
+    "robust_seed42": {
+      "checkpoint": "artifacts/runs/robust_seed42/model_999.pt",
+      "extra_terrain_training": false,
+      "low_friction_checkpoint_sha256": "58dc882b6fa38f95ea2bd2d4d5f874836e5e043e0b5ae5c62290180122b57864",
+      "low_friction_evaluation": "artifacts/provided_baseline_comparison_20260930/evaluations/robust_seed42__low_friction.json",
+      "same_checkpoint_across_conditions": true,
+      "sha256": "58dc882b6fa38f95ea2bd2d4d5f874836e5e043e0b5ae5c62290180122b57864",
+      "training_seed": 42,
+      "training_transitions": 131072000
+    }
+  },
+  "paired_evaluation_checks": [
+    {
+      "episodes_per_model": 175,
+      "flat_per_model": 25,
+      "geometry_seed": 51,
+      "matched_fields": [
+        "task",
+        "seed",
+        "num_envs",
+        "max_steps",
+        "step_dt_seconds",
+        "policy_observation_dimensions",
+        "terrain_generator_seed",
+        "lane_family_names",
+        "lane_difficulties",
+        "lane_family_indices",
+        "lane_level_indices",
+        "traversal_geometry",
+        "episode_terrain_crossing_applicable",
+        "terrain_crossing_definition",
+        "boundary_evidence_available"
+      ],
+      "reset_seed": 28,
+      "terrain_per_model": 150
+    },
+    {
+      "episodes_per_model": 175,
+      "flat_per_model": 25,
+      "geometry_seed": 51,
+      "matched_fields": [
+        "task",
+        "seed",
+        "num_envs",
+        "max_steps",
+        "step_dt_seconds",
+        "policy_observation_dimensions",
+        "terrain_generator_seed",
+        "lane_family_names",
+        "lane_difficulties",
+        "lane_family_indices",
+        "lane_level_indices",
+        "traversal_geometry",
+        "episode_terrain_crossing_applicable",
+        "terrain_crossing_definition",
+        "boundary_evidence_available"
+      ],
+      "reset_seed": 29,
+      "terrain_per_model": 150
+    },
+    {
+      "episodes_per_model": 175,
+      "flat_per_model": 25,
+      "geometry_seed": 54,
+      "matched_fields": [
+        "task",
+        "seed",
+        "num_envs",
+        "max_steps",
+        "step_dt_seconds",
+        "policy_observation_dimensions",
+        "terrain_generator_seed",
+        "lane_family_names",
+        "lane_difficulties",
+        "lane_family_indices",
+        "lane_level_indices",
+        "traversal_geometry",
+        "episode_terrain_crossing_applicable",
+        "terrain_crossing_definition",
+        "boundary_evidence_available"
+      ],
+      "reset_seed": 30,
+      "terrain_per_model": 150
+    },
+    {
+      "episodes_per_model": 175,
+      "flat_per_model": 25,
+      "geometry_seed": 55,
+      "matched_fields": [
+        "task",
+        "seed",
+        "num_envs",
+        "max_steps",
+        "step_dt_seconds",
+        "policy_observation_dimensions",
+        "terrain_generator_seed",
+        "lane_family_names",
+        "lane_difficulties",
+        "lane_family_indices",
+        "lane_level_indices",
+        "traversal_geometry",
+        "episode_terrain_crossing_applicable",
+        "terrain_crossing_definition",
+        "boundary_evidence_available"
+      ],
+      "reset_seed": 30,
+      "terrain_per_model": 150
+    }
+  ],
+  "raw_evaluation_files": [
+    "artifacts/same_checkpoint_terrain_20260930/evaluations/provided_baseline_seed42__terrain_geom51_seed28.json",
+    "artifacts/same_checkpoint_terrain_20260930/evaluations/provided_baseline_seed42__terrain_geom51_seed29.json",
+    "artifacts/same_checkpoint_terrain_20260930/evaluations/provided_baseline_seed42__terrain_geom54_seed30.json",
+    "artifacts/same_checkpoint_terrain_20260930/evaluations/provided_baseline_seed42__terrain_geom55_seed30.json",
+    "artifacts/same_checkpoint_terrain_20260930/evaluations/robust_seed42__terrain_geom51_seed28.json",
+    "artifacts/same_checkpoint_terrain_20260930/evaluations/robust_seed42__terrain_geom51_seed29.json",
+    "artifacts/same_checkpoint_terrain_20260930/evaluations/robust_seed42__terrain_geom54_seed30.json",
+    "artifacts/same_checkpoint_terrain_20260930/evaluations/robust_seed42__terrain_geom55_seed30.json"
+  ],
+  "runtime_caveat": "Both one-environment recordings logged Failed to clone in Fabric; source env0 ran to completion with exit0. Cause not isolated; no simulator changes.",
+  "schema": "week03-same-checkpoint-terrain-v1",
+  "seed_definition": "Training seed42 is the shared RNG seed, not checkpoint identity. Baseline and Robust have different training configurations and different weights. Each policy is frozen across low-friction and terrain.",
+  "superseded_representative_terrain_comparison": "artifacts/provided_baseline_comparison_20260930/terrain_results.csv",
+  "task_version_definition": "v5 identifies the unchanged terrain environment version, NOT an extra-trained v5 policy.",
+  "terrain_transfer": {
+    "caveat": "Equal original training budget, no added terrain training; terrain task changes height/target/heading observation semantics, reward and termination versus stock Isaac-Ant-v0. Separate transfer benchmark, not the original assignment reward.",
+    "models": {
+      "provided_baseline_seed42": {
+        "families": {
+          "flat": {
+            "episodes": 100,
+            "falls": 8,
+            "lane_exits": 0,
+            "return_mean": 129.89539693359285,
+            "return_std": 39.080728725267136,
+            "speed_mean_mps": 8.508335428796578,
+            "strict_one_tile": null,
+            "strict_six_tiles": null,
+            "terminal_reason_counts": {
+              "overturn": 8,
+              "time_out": 92
+            },
+            "world_exits": 0
+          },
+          "obstacles": {
+            "episodes": 100,
+            "falls": 46,
+            "lane_exits": 5,
+            "return_mean": 13.830268447753042,
+            "return_std": 9.83784231781911,
+            "speed_mean_mps": 1.4155977460829827,
+            "strict_one_tile": 23,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 22,
+              "time_out": 54,
+              "torso_height": 24
+            },
+            "world_exits": 0
+          },
+          "rough": {
+            "episodes": 100,
+            "falls": 29,
+            "lane_exits": 14,
+            "return_mean": 21.55938479080796,
+            "return_std": 13.65942797506765,
+            "speed_mean_mps": 1.7251092270868984,
+            "strict_one_tile": 42,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 24,
+              "time_out": 71,
+              "torso_height": 5
+            },
+            "world_exits": 0
+          },
+          "slope": {
+            "episodes": 100,
+            "falls": 63,
+            "lane_exits": 20,
+            "return_mean": 17.97383924461901,
+            "return_std": 14.591844291304797,
+            "speed_mean_mps": 2.0303946250149116,
+            "strict_one_tile": 21,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 33,
+              "time_out": 37,
+              "torso_height": 30
+            },
+            "world_exits": 0
+          },
+          "stairs": {
+            "episodes": 100,
+            "falls": 43,
+            "lane_exits": 8,
+            "return_mean": 14.353472239375115,
+            "return_std": 10.17905027575519,
+            "speed_mean_mps": 1.1841963821223382,
+            "strict_one_tile": 19,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 19,
+              "time_out": 57,
+              "torso_height": 24
+            },
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "episodes": 100,
+            "falls": 19,
+            "lane_exits": 0,
+            "return_mean": 10.87086526002735,
+            "return_std": 4.292362962144645,
+            "speed_mean_mps": 0.6087474954446015,
+            "strict_one_tile": 2,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 5,
+              "time_out": 81,
+              "torso_height": 14
+            },
+            "world_exits": 0
+          },
+          "waves": {
+            "episodes": 100,
+            "falls": 90,
+            "lane_exits": 3,
+            "return_mean": 10.607184516489506,
+            "return_std": 7.862710009811432,
+            "speed_mean_mps": 1.90961762010182,
+            "strict_one_tile": 5,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 25,
+              "time_out": 10,
+              "torso_height": 65
+            },
+            "world_exits": 0
+          }
+        },
+        "flat": {
+          "episodes": 100,
+          "falls": 8,
+          "lane_exits": 0,
+          "return_mean": 129.89539693359285,
+          "return_std": 39.080728725267136,
+          "speed_mean_mps": 8.508335428796578,
+          "strict_one_tile": null,
+          "strict_six_tiles": null,
+          "terminal_reason_counts": {
+            "overturn": 8,
+            "time_out": 92
+          },
+          "world_exits": 0
+        },
+        "stone_difficulties": {
+          "0.2": {
+            "episodes": 20,
+            "falls": 5,
+            "lane_exits": 0,
+            "return_mean": 11.653370839357375,
+            "return_std": 4.774539322051201,
+            "speed_mean_mps": 0.862063451387376,
+            "strict_one_tile": 1,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 2,
+              "time_out": 15,
+              "torso_height": 3
+            },
+            "world_exits": 0
+          },
+          "0.4": {
+            "episodes": 20,
+            "falls": 6,
+            "lane_exits": 0,
+            "return_mean": 11.18019073009491,
+            "return_std": 4.056817686870101,
+            "speed_mean_mps": 0.7282735004049704,
+            "strict_one_tile": 1,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "time_out": 14,
+              "torso_height": 6
+            },
+            "world_exits": 0
+          },
+          "0.6": {
+            "episodes": 20,
+            "falls": 2,
+            "lane_exits": 0,
+            "return_mean": 10.523084127902985,
+            "return_std": 3.2185685844373095,
+            "speed_mean_mps": 0.4045866747080169,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "time_out": 18,
+              "torso_height": 2
+            },
+            "world_exits": 0
+          },
+          "0.8": {
+            "episodes": 20,
+            "falls": 5,
+            "lane_exits": 0,
+            "return_mean": 9.200540838949383,
+            "return_std": 5.509674288557709,
+            "speed_mean_mps": 0.6543467470673231,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 3,
+              "time_out": 15,
+              "torso_height": 2
+            },
+            "world_exits": 0
+          },
+          "1.0": {
+            "episodes": 20,
+            "falls": 1,
+            "lane_exits": 0,
+            "return_mean": 11.797139763832092,
+            "return_std": 2.7704317246405505,
+            "speed_mean_mps": 0.3944671036553209,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "time_out": 19,
+              "torso_height": 1
+            },
+            "world_exits": 0
+          }
+        },
+        "terrain": {
+          "episodes": 600,
+          "falls": 290,
+          "lane_exits": 50,
+          "return_mean": 14.865835749845331,
+          "return_std": 11.328715629943451,
+          "speed_mean_mps": 1.4789438493089255,
+          "strict_one_tile": 112,
+          "strict_six_tiles": 0,
+          "terminal_reason_counts": {
+            "overturn": 128,
+            "time_out": 310,
+            "torso_height": 162
+          },
+          "world_exits": 0
+        }
+      },
+      "robust_seed42": {
+        "families": {
+          "flat": {
+            "episodes": 100,
+            "falls": 9,
+            "lane_exits": 0,
+            "return_mean": 141.2084927625209,
+            "return_std": 41.433465068104404,
+            "speed_mean_mps": 9.90459228203538,
+            "strict_one_tile": null,
+            "strict_six_tiles": null,
+            "terminal_reason_counts": {
+              "overturn": 9,
+              "time_out": 91
+            },
+            "world_exits": 0
+          },
+          "obstacles": {
+            "episodes": 100,
+            "falls": 26,
+            "lane_exits": 9,
+            "return_mean": 10.11111122302711,
+            "return_std": 4.737194261674724,
+            "speed_mean_mps": 0.6845976869032874,
+            "strict_one_tile": 7,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 6,
+              "time_out": 74,
+              "torso_height": 20
+            },
+            "world_exits": 0
+          },
+          "rough": {
+            "episodes": 100,
+            "falls": 11,
+            "lane_exits": 20,
+            "return_mean": 14.890643550157547,
+            "return_std": 8.31245427892365,
+            "speed_mean_mps": 0.9250404243516422,
+            "strict_one_tile": 16,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 2,
+              "time_out": 89,
+              "torso_height": 9
+            },
+            "world_exits": 0
+          },
+          "slope": {
+            "episodes": 100,
+            "falls": 53,
+            "lane_exits": 22,
+            "return_mean": 10.24847529143095,
+            "return_std": 6.898860465183549,
+            "speed_mean_mps": 1.3291598237733024,
+            "strict_one_tile": 5,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 5,
+              "time_out": 47,
+              "torso_height": 48
+            },
+            "world_exits": 0
+          },
+          "stairs": {
+            "episodes": 100,
+            "falls": 19,
+            "lane_exits": 10,
+            "return_mean": 11.731373471170663,
+            "return_std": 4.713132066184699,
+            "speed_mean_mps": 0.6168030379268691,
+            "strict_one_tile": 11,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 4,
+              "time_out": 81,
+              "torso_height": 15
+            },
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "episodes": 100,
+            "falls": 17,
+            "lane_exits": 2,
+            "return_mean": 10.834512950181962,
+            "return_std": 3.114652980930555,
+            "speed_mean_mps": 0.4861948517634917,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 2,
+              "time_out": 83,
+              "torso_height": 15
+            },
+            "world_exits": 0
+          },
+          "waves": {
+            "episodes": 100,
+            "falls": 69,
+            "lane_exits": 1,
+            "return_mean": 8.257811397314072,
+            "return_std": 6.558076829303332,
+            "speed_mean_mps": 1.4830844686869082,
+            "strict_one_tile": 9,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 8,
+              "time_out": 31,
+              "torso_height": 61
+            },
+            "world_exits": 0
+          }
+        },
+        "flat": {
+          "episodes": 100,
+          "falls": 9,
+          "lane_exits": 0,
+          "return_mean": 141.2084927625209,
+          "return_std": 41.433465068104404,
+          "speed_mean_mps": 9.90459228203538,
+          "strict_one_tile": null,
+          "strict_six_tiles": null,
+          "terminal_reason_counts": {
+            "overturn": 9,
+            "time_out": 91
+          },
+          "world_exits": 0
+        },
+        "stone_difficulties": {
+          "0.2": {
+            "episodes": 20,
+            "falls": 5,
+            "lane_exits": 0,
+            "return_mean": 10.934124732017517,
+            "return_std": 2.4138970258449275,
+            "speed_mean_mps": 0.5886656486597879,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "time_out": 15,
+              "torso_height": 5
+            },
+            "world_exits": 0
+          },
+          "0.4": {
+            "episodes": 20,
+            "falls": 4,
+            "lane_exits": 0,
+            "return_mean": 12.157206487655639,
+            "return_std": 2.385471020520917,
+            "speed_mean_mps": 0.4560589429189472,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "time_out": 16,
+              "torso_height": 4
+            },
+            "world_exits": 0
+          },
+          "0.6": {
+            "episodes": 20,
+            "falls": 3,
+            "lane_exits": 0,
+            "return_mean": 10.535441303253174,
+            "return_std": 3.177596738666029,
+            "speed_mean_mps": 0.49986011703945343,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "time_out": 17,
+              "torso_height": 3
+            },
+            "world_exits": 0
+          },
+          "0.8": {
+            "episodes": 20,
+            "falls": 4,
+            "lane_exits": 1,
+            "return_mean": 9.762985640764237,
+            "return_std": 4.09113621060843,
+            "speed_mean_mps": 0.47469951297931773,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "overturn": 2,
+              "time_out": 16,
+              "torso_height": 2
+            },
+            "world_exits": 0
+          },
+          "1.0": {
+            "episodes": 20,
+            "falls": 1,
+            "lane_exits": 1,
+            "return_mean": 10.782806587219238,
+            "return_std": 2.6746401095636747,
+            "speed_mean_mps": 0.41169003721995234,
+            "strict_one_tile": 0,
+            "strict_six_tiles": 0,
+            "terminal_reason_counts": {
+              "time_out": 19,
+              "torso_height": 1
+            },
+            "world_exits": 0
+          }
+        },
+        "terrain": {
+          "episodes": 600,
+          "falls": 195,
+          "lane_exits": 64,
+          "return_mean": 11.012321313880385,
+          "return_std": 6.306454769201584,
+          "speed_mean_mps": 0.9208133822342501,
+          "strict_one_tile": 48,
+          "strict_six_tiles": 0,
+          "terminal_reason_counts": {
+            "overturn": 27,
+            "time_out": 405,
+            "torso_height": 168
+          },
+          "world_exits": 0
+        }
+      }
+    },
+    "pairing_limit": "Same seeds/configuration and family/level assignments verified. Initial-state and mesh bytes were not dumped, so byte-identical simulation states are not established.",
+    "selection_limit": "Conditions reused from existing research; not an independent holdout or multi-training-seed inference.",
+    "success_definition": "First-episode forward distance >=13.1m/53.1m with no terminal fall/overturn, no footprint lane exit, no world exit; flat excluded."
+  },
+  "total_completed_first_episodes": 1400,
+  "unchanged_course_results": "artifacts/provided_baseline_comparison_20260930/course_results.csv"
+}

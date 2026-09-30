@@ -1,0 +1,91 @@
+{
+  "schema": "week03-same-checkpoint-terrain-media-v1",
+  "paired_stones": {
+    "task": "Week03-Ant-Rough-Lanes-Demo-v5",
+    "geometry_seed": 51,
+    "reset_seed": 7,
+    "family": "stepping_stones",
+    "difficulty": 0.8,
+    "level_index": 3,
+    "num_envs": 1,
+    "seconds": 16,
+    "fps": 30,
+    "note": "Both original policies unchanged from low-friction. v5 is task version only. Qualitative transfer demo, resets are NOT fall counts."
+  },
+  "videos_and_previews": [
+    {
+      "file": "artifacts/same_checkpoint_terrain_20260930/videos/provided_baseline_stones08.mp4",
+      "sha256": "06dbeabc315b269765925c141c6a423ed1af7e0c942a15530b71a7a731dfae25",
+      "bytes": 2652979,
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "decoded_frames": 480,
+      "full_decode_passed": true,
+      "model": "provided_baseline_seed42",
+      "checkpoint": "artifacts/runs/baseline_seed42/model_999.pt",
+      "checkpoint_sha256": "f4a88747c8d56905c4889b0fb0708d4e924a81dc676d92561d2921e8b2bdf83b"
+    },
+    {
+      "file": "artifacts/same_checkpoint_terrain_20260930/videos/robust_seed42_stones08.mp4",
+      "sha256": "49612305e7d8986ebf4156b79bb787795b425ad304839a24bf0db819547834d7",
+      "bytes": 2741103,
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "decoded_frames": 480,
+      "full_decode_passed": true,
+      "model": "robust_seed42",
+      "checkpoint": "artifacts/runs/robust_seed42/model_999.pt",
+      "checkpoint_sha256": "58dc882b6fa38f95ea2bd2d4d5f874836e5e043e0b5ae5c62290180122b57864"
+    },
+    {
+      "file": "artifacts/same_checkpoint_terrain_20260930/videos/provided_baseline_vs_robust_seed42_stones08.mp4",
+      "sha256": "409fa0fe84d41f95da0e1963d9688890274aee23724786fa53f06ff3adf5e902",
+      "bytes": 687304,
+      "codec": "h264",
+      "width": 1280,
+      "height": 452,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "decoded_frames": 480,
+      "full_decode_passed": true,
+      "source_files": [
+        "artifacts/same_checkpoint_terrain_20260930/videos/provided_baseline_stones08.mp4",
+        "artifacts/same_checkpoint_terrain_20260930/videos/robust_seed42_stones08.mp4"
+      ],
+      "source_sha256": [
+        "06dbeabc315b269765925c141c6a423ed1af7e0c942a15530b71a7a731dfae25",
+        "49612305e7d8986ebf4156b79bb787795b425ad304839a24bf0db819547834d7"
+      ],
+      "checkpoint_sha256": [
+        "f4a88747c8d56905c4889b0fb0708d4e924a81dc676d92561d2921e8b2bdf83b",
+        "58dc882b6fa38f95ea2bd2d4d5f874836e5e043e0b5ae5c62290180122b57864"
+      ],
+      "selection": "Predeclared original models/conditions, one recording per model; full16seconds including resets.",
+      "operation": "Side-by-side640x360 with model/SHA labels. No cuts or speed change.",
+      "time_scale": 1.0
+    },
+    {
+      "file": "artifacts/same_checkpoint_terrain_20260930/stones08_preview.gif",
+      "sha256": "0ef9d0c55c7aae1b1f4679f54916f93b2bf8bc829941d7eace4b4c193882b4b6",
+      "bytes": 2453058,
+      "decoded_frames": 96,
+      "width": 640,
+      "height": 226,
+      "duration_seconds": 16.0,
+      "source_file": "artifacts/same_checkpoint_terrain_20260930/videos/provided_baseline_vs_robust_seed42_stones08.mp4",
+      "time_scale": 1.0
+    }
+  ],
+  "reused_low_friction_video": {
+    "file": "artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_robust_low_friction.mp4",
+    "sha256": "e9ceecd9741f5ef92b25374748944c93d7114d2810537f974eebe31e1cdd02c9",
+    "attachment_url": "https://github.com/user-attachments/assets/8ded3f05-2d7b-4f9c-8737-58ea6ae81ed1",
+    "unchanged_reused_not_reuploaded": true
+  }
+}

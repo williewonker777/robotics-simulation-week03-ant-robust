@@ -1,11 +1,11 @@
 # Robust Ant PPO · Robotics Simulation Week 03
 
 **기본 제공 코드로 학습한 Baseline과 최종 모델을 같은 조건에서 비교합니다.**
-과제 제출 모델은 **Robust seed42**, 별도 험지 데모는 **v5 복구 모델**입니다.
-아래 성능표와 두 비교 영상의 기준은 모두 **제공 코드 Baseline seed42**입니다.
+과제 제출 모델은 **Robust seed42**입니다. 저마찰·험지 모두 **이 동일 checkpoint**를 사용합니다.
+두 비교의 왼쪽도 동일한 **제공 코드 Baseline seed42**입니다. 추가 험지 학습은 하지 않았습니다.
 
 [성능](#과제-성능--제공-코드-baseline-대비) · [비교 영상](#비교-영상) ·
-[실행](#빠른-실행) · [비교 기준·재현](docs/PROVIDED_BASELINE_COMPARISON.md) ·
+[실행](#빠른-실행) · [동일 모델·험지 재현](docs/SAME_CHECKPOINT_COMPARISON.md) ·
 [전체 실험 기록](docs/EXPERIMENT_HISTORY.md)
 
 ## 비교 기준·최종 모델
@@ -16,8 +16,11 @@
 - **과제 제출:** [`robust_seed42/model_999.pt`](artifacts/runs/robust_seed42/model_999.pt)
   — Baseline과 동일한 PPO·예산·60D 관측/8D 행동에 물성 랜덤화를 추가했습니다.
   기존 동일-budget 7run 중 ID+3종 OOD 동등가중 종합 return으로 선택했으며, 모든 조건의 1위는 아닙니다.
-- **험지 데모:** [v5 portal-rehearsal round4](artifacts/terrain_demo/runs/rough_v5_portal_rehearsal4_seed43/model_round_4.pt)
-  — **추가 험지 학습** 모델입니다. 원래 과제용 Robust를 대신하지 않습니다.
+
+**둘 다 `training seed42`인 이유:** 비교를 위해 학습 난수 seed를 맞춘 것입니다.
+Baseline은 기본 설정, Robust는 랜덤화 추가 설정으로 **각각 학습한 다른 가중치**입니다.
+seed는 모델 ID가 아닙니다. 환경을 바꿀 때 각 모델 파일의 SHA는 그대로 유지했습니다.
+이전 추가 학습 v5 비교는 [별도 연구 이력](docs/PROVIDED_BASELINE_COMPARISON.md#험지-전이-비교)으로 보존합니다.
 
 ## 과제 성능 — 제공 코드 Baseline 대비
 
@@ -63,34 +66,37 @@ OOD 동등가중 평균 개선은 **+10.8%**였으며, 위 새 seed42 비교와 
 
 </details>
 
-## 험지 전이 성능 — 같은 Baseline 대비
+## 험지 전이 성능 — 동일 제출 모델 그대로
 
-**원래 과제와 별도입니다.** 두 모델을 같은 v5 평가 레인에 넣었습니다.
-v5는 관측의 높이·목표·방향 의미와 보상·종료 조건이 바뀌며 추가 학습도 있으므로,
-**동일 학습 예산의 인과 비교나 과제 점수가 아닌 전이 성능**입니다.
+**저마찰과 동일한 Baseline42·Robust42 파일을 그대로 넣었습니다.**
+두 모델의 원래 학습 예산은 같고 추가 험지 학습은 없습니다.
+task 이름의 `v5`는 **평가 환경 버전이지 모델 이름이 아닙니다.**
+높이·목표·방향 관측의 의미와 보상·종료 조건은 원래 Ant와 달라 **별도 전이 성능**입니다.
 
-| 험지 600episode/모델 | 제공 코드 Baseline42 | 추가 학습 v5 |
+| 험지 600episode/모델 | 제공 코드 Baseline42 | 제출 Robust42 |
 |---|---:|---:|
-| 엄격한 1타일 통과 | 114/600 · 19.0% | **516/600 · 86.0%** |
-| 엄격한 6타일 통과 | 0/600 · 0.0% | **279/600 · 46.5%** |
-| 낙상·전복 종료 | 281/600 · 46.8% | **62/600 · 10.3%** |
-| footprint 레인 이탈 | 51/600 | 2/600 |
+| 엄격한 1타일 통과 | 112/600 · 18.7% | 48/600 · 8.0% |
+| 엄격한 6타일 통과 | 0/600 · 0.0% | 0/600 · 0.0% |
+| 낙상·전복 종료 | 290/600 · 48.3% | 195/600 · 32.5% |
+| footprint 레인 이탈 | 50/600 | 64/600 |
 
 통과는 **거리 기준 + episode 무낙상 + 발 범위 레인 유지 + 월드 유지**를 모두 만족해야 합니다.
 같은 geometry/reset **51/28·51/29·54/30·55/30**, 조합당175환경의 첫 episode입니다.
-평탄 레인100회는 위 분모에서 제외하며 낙상은 **8 → 12**로 늘었습니다.
-징검다리 6타일은 여전히 **3/100**입니다. **모든 험지를 해결한 결과는 아닙니다.**
+평탄 레인100회는 위 분모에서 제외하며 낙상은 **8 → 9**입니다.
+**Robust는 낙상이 줄었지만 통과율·속도는 낮아지고 레인 이탈은 늘었습니다.**
+험지 평균 속도는 **1.48 → 0.92m/s**, 징검다리 6타일은 둘 다 **0/100**입니다.
+과제의 물성 변화 개선을 험지 보행 개선으로 해석하지 않습니다.
 
-![제공 코드 Baseline의 험지 전이와 추가 학습 v5 비교](artifacts/provided_baseline_comparison_20260930/terrain_transfer.png)
+![동일 Baseline42와 제출 Robust42의 험지 전이·한계](artifacts/same_checkpoint_terrain_20260930/terrain_transfer.png)
 
-[새 험지 CSV](artifacts/provided_baseline_comparison_20260930/terrain_results.csv) ·
-[판정·한계·재현](docs/PROVIDED_BASELINE_COMPARISON.md#험지-전이-비교) ·
+[새 험지 CSV](artifacts/same_checkpoint_terrain_20260930/terrain_results.csv) ·
+[판정·한계·재현](docs/SAME_CHECKPOINT_COMPARISON.md) ·
 [기존 v5끼리의 비교 이력](docs/ROUGH_RECOVERY.md)
 
 ## 비교 영상
 
-**아래 재생 버튼으로 README 안에서 볼 수 있습니다.**
-**두 영상 모두 왼쪽은 제공 코드 Baseline seed42입니다.**
+저마찰은 아래 재생 버튼으로, 교정한 험지는 GIF 미리보기·MP4 링크로 볼 수 있습니다.
+**두 영상 모두 왼쪽은 Baseline42, 오른쪽은 동일한 제출 Robust42입니다.**
 새로 녹화한 전체 **16초**를 같은 재생 속도로 나란히 배치했습니다.
 영상은 정성 데모이며, 위100/600episode 결과를 대신하지 않습니다.
 
@@ -109,24 +115,22 @@ https://github.com/user-attachments/assets/8ded3f05-2d7b-4f9c-8737-58ea6ae81ed1
 
 </details>
 
-### 징검다리 · 제공 코드 Baseline vs 추가 학습 v5
+### 징검다리 · 제공 코드 Baseline vs 동일 제출 Robust
 
 난이도 **0.8**, geometry **51**, reset **7**, 1환경의 별도 전이 데모입니다.
+저마찰과 모델 SHA가 같습니다: Baseline `f4a88747…`, Robust `58dc882b…`.
 영상의 `resets`는 낙상 수가 아니며 마지막에는16초 자동 reset이 포함됩니다.
 
 <!-- NATIVE_VIDEO_STONES08 -->
-https://github.com/user-attachments/assets/7411e0a8-c948-463c-88c9-77b626ea608d
+[동일 Robust42로 다시 녹화한 전체 비교 MP4](artifacts/same_checkpoint_terrain_20260930/videos/provided_baseline_vs_robust_seed42_stones08.mp4)
 
-<details>
-<summary>자동재생 GIF 미리보기 · 6 fps</summary>
+새 GitHub 재생 첨부는 게시 전입니다. 이전 추가 학습 v5 영상과 혼동하지 않도록 교체했습니다.
 
-[![제공 코드 Baseline과 v5의 징검다리 비교](artifacts/provided_baseline_comparison_20260930/stones08_preview.gif)](artifacts/provided_baseline_comparison_20260930/videos/provided_baseline_vs_v5_stones08.mp4)
+[![동일 Baseline42와 제출 Robust42의 징검다리 비교 · 6fps](artifacts/same_checkpoint_terrain_20260930/stones08_preview.gif)](artifacts/same_checkpoint_terrain_20260930/videos/provided_baseline_vs_robust_seed42_stones08.mp4)
 
-</details>
-
-[비교·개별 원본 MP4](artifacts/provided_baseline_comparison_20260930/videos/) ·
-[영상 조건·해시·전체 decode](artifacts/provided_baseline_comparison_20260930/media_manifest.json) ·
-[첨부·표시 검증](artifacts/provided_baseline_comparison_20260930/native_video_verification.json)
+[교정한 험지·개별 원본 MP4](artifacts/same_checkpoint_terrain_20260930/videos/) ·
+[험지 영상 조건·SHA·전체 decode](artifacts/same_checkpoint_terrain_20260930/media_manifest.json) ·
+[기존 저마찰 첨부 검증](artifacts/provided_baseline_comparison_20260930/native_video_verification.json)
 
 ## 빠른 실행
 
@@ -160,7 +164,7 @@ CHECKPOINT=artifacts/runs/robust_seed42/model_999.pt
   --kit_args=--/renderer/multiGpu/enabled=false
 ```
 
-험지 두 모델의 같은 조건 데모·평가는 [험지 재현 명령](docs/PROVIDED_BASELINE_COMPARISON.md#험지-비교-재현),
+험지 두 모델의 같은 조건 데모·평가는 [동일 모델 재현 명령](docs/SAME_CHECKPOINT_COMPARISON.md#험지-평가녹화-재현),
 전체 설치·과제 제출 항목은 [최종 제출 가이드](docs/FINAL_SUBMISSION.md)에 있습니다.
 
 ## 학습 재현
@@ -182,7 +186,8 @@ CHECKPOINT=artifacts/runs/robust_seed42/model_999.pt
 
 | 자료 | 내용 |
 |---|---|
-| [이번 기본 제공 코드 비교](docs/PROVIDED_BASELINE_COMPARISON.md) | 정의·새 수치·영상·SHA·한계·재현 |
+| [동일 checkpoint 험지 비교](docs/SAME_CHECKPOINT_COMPARISON.md) | 저마찰·험지 모델 일치·수치·영상·재현 |
+| [기본 제공 코드 비교 기록](docs/PROVIDED_BASELINE_COMPARISON.md) | 현재 과제 수치·이전 추가 학습 v5 기록 |
 | [최종 제출 가이드](docs/FINAL_SUBMISSION.md) | 모델 선택·설치·평가·GUI·검증 |
 | [전체 실험 기록 · v0–v24](docs/EXPERIMENT_HISTORY.md) | 성공·실패·부분 개선·최종 판단 |
 | [기존 험지 복구 연구](docs/ROUGH_RECOVERY.md) | v5끼리의 비교와 후속 학습 이력 |
