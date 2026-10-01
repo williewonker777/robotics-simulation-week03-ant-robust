@@ -2,9 +2,10 @@
 
 **기본 제공 코드로 학습한 Baseline과 최종 모델을 같은 조건에서 비교합니다.**
 과제 제출 모델은 **Robust seed42**입니다. 저마찰·험지 모두 **이 동일 checkpoint**를 사용합니다.
-두 비교의 왼쪽도 동일한 **제공 코드 Baseline seed42**입니다. 추가 험지 학습은 하지 않았습니다.
+두 비교의 왼쪽도 동일한 **제공 코드 Baseline seed42**입니다. 이 제출 모델 비교에는 추가 험지 학습이 없습니다.
+아래 **v5/v16/high53은 별도로 추가 학습한 험지 연구 모델**이며 제출 Robust42와 구분합니다.
 
-[성능](#과제-성능--제공-코드-baseline-대비) · [비교 영상](#비교-영상) · [미사용 지형](#학습-미사용-지형-평가) ·
+[변경점·개선 근거](#기본-코드와-무엇이-달라졌나) · [성능](#과제-성능--제공-코드-baseline-대비) · [비교 영상](#비교-영상) · [미사용 지형](#학습-미사용-지형-평가) ·
 [실행](#빠른-실행) · [동일 모델·험지 재현](docs/SAME_CHECKPOINT_COMPARISON.md) ·
 [전체 실험 기록](docs/EXPERIMENT_HISTORY.md)
 
@@ -14,13 +15,75 @@
   — 무수정 `Isaac-Ant-v0` 환경·`AntPPORunnerCfg`로 **직접 학습**한 모델입니다.
   제공받은 pretrained weight가 아닙니다. 프로젝트의 `Baseline-v0`는 제공 환경의 빈 subclass입니다.
 - **과제 제출:** [`robust_seed42/model_999.pt`](artifacts/runs/robust_seed42/model_999.pt)
-  — Baseline과 동일한 PPO·예산·60D 관측/8D 행동에 물성 랜덤화를 추가했습니다.
+  — Baseline과 동일한 PPO·예산·60D 관측/8D 행동에 물성·초기상태·외란·관측 랜덤화를 추가했습니다.
   기존 동일-budget 7run 중 ID+3종 OOD 동등가중 종합 return으로 선택했으며, 모든 조건의 1위는 아닙니다.
 
 **둘 다 `training seed42`인 이유:** 비교를 위해 학습 난수 seed를 맞춘 것입니다.
 Baseline은 기본 설정, Robust는 랜덤화 추가 설정으로 **각각 학습한 다른 가중치**입니다.
 seed는 모델 ID가 아닙니다. 환경을 바꿀 때 각 모델 파일의 SHA는 그대로 유지했습니다.
 이전 추가 학습 v5 비교는 [별도 연구 이력](docs/PROVIDED_BASELINE_COMPARISON.md#험지-전이-비교)으로 보존합니다.
+
+## 기본 코드와 무엇이 달라졌나
+
+**제출 Robust42의 물성 강건성 개선**과 **추가 학습한 험지 후보의 타일 통과 개선**은 다른 경로입니다.
+아래 표는 코드에서 확인한 변경이며, 각 항목 하나가 전체 성능 향상을 만들었다는 뜻은 아닙니다.
+
+### 1. 제출 Robust42 — PPO보다 학습 분포를 변경
+
+| 항목 | 기본 제공 코드 Baseline42 | 제출 Robust42의 변경 |
+|---|---|---|
+| 표면 물성 | 제공 환경의 기본 재질 | 시작 시 정지마찰 **0.45–1.35**, 동마찰 **0.35–1.15**, 반발계수 **0–0.05** 랜덤화 |
+| 몸체 물성 | 기본 torso 질량·질량중심 | 시작 시 질량 **×0.80–1.20**, COM x/y **±0.025m**, z **±0.01m** 랜덤화 |
+| 초기 상태·외란 | 제공 환경의 원래 reset | reset 자세·속도 교란 추가, **4–8초마다 x/y 속도 ±0.35m/s** push |
+| 관측 | 기본 60D 관측 | 차원은 그대로, 높이·속도·각도·관절·발 힘·직전 행동 관측에 항목별 bounded uniform noise 추가 |
+| 알고리즘·예산 | 기본 Ant PPO | **변경 없음:** actor/critic MLP `[400,200,100]` ELU, 60D/8D, effort scale7.5, 기본 보상·종료, **4,096×32×1,000 전이** |
+
+마찰·질량·COM은 환경 시작 시, 자세·속도는 reset 시, push는 interval로 바뀝니다.
+관측의 직전 행동에 넣는 noise는 **모터 출력에 가산하는 action noise가 아닙니다.**
+[이벤트·관측 코드](src/week03_ant/tasks/ant_cfg.py) · [동일 PPO 설정](src/week03_ant/tasks/agents/rsl_rl_ppo_cfg.py) ·
+[실제 저장된 Baseline 설정](artifacts/runs/baseline_seed42/params/agent.yaml) / [Robust 설정](artifacts/runs/robust_seed42/params/agent.yaml)
+
+**확인된 결과:** 같은 학습 예산·평가 조건에서 ID return **+6.5%**, 저마찰 **+21.6%**,
+세 물성 OOD 조건의 동등가중 return **+14.3%**였습니다([아래 성능표](#과제-성능--제공-코드-baseline-대비)).
+**기전 해석은 추정:** 한 가지 nominal 물성에 맞춘 보행보다 다양한 마찰·하중·외란·노이즈 상태에 적응하도록 학습한 것으로 해석할 수 있습니다.
+하지만 이 묶음 비교로 마찰·질량·COM·push·noise 각각의 기여율을 분리하지 않았고, 모든 조건·지표가 개선된 것도 아닙니다.
+같은 제출 모델의 험지 6타일은 **0/600**이므로 물성 랜덤화만으로 장애물 보행까지 해결했다고 쓰지 않습니다.
+
+### 2. 험지 v5/v16/high53 — 지형 학습·추가 정보·교사 prior·정책 혼합
+
+| 항목 | 기본 제공 Ant | 성능 좋은 험지 후보에 실제 적용된 차이 |
+|---|---|---|
+| 훈련 지형 | 평지 과제 | 요철·경사·계단·파도·장애물·징검다리와 평지를 직접 학습, 돌다리 회복·평지 rehearsal 추가 |
+| 관측 정보 | 몸체·관절·발 힘 등 60D, 전방 지형 입력 없음 | v5는 60D 유지. v16/high53은 **60 + 발끝 FK12 + 발디딤 목표 XYZ/유효성16 + 목표/실제 몸체 높이·유효성3 = 91D** |
+| 지형 정보의 출처 | 기본 자기상태 관측 | **33×25=825개의 이상적 height ray**로 목표·높이 정보를 계산. 825값 전체를 actor에 넣거나 실제 RGB-D 영상을 쓰는 방식은 아님 |
+| 정책 학습 | 기본 PPO actor | v5에서 시작해 이어 학습한 student에 **학습 때만 고정 v5 행동 평균 prior(계수0.02)** 추가. hidden MLP는400/200/100 유지; 모든 student actor 층은 학습 가능 |
+| 훈련 보상 | 기본 Ant 전진·자세·에너지 목표 | 험지 전진·중앙 유지·정체/낙상 벌점, 돌다리 몸체/발 여유와 지형 적응 자세 보상으로 확장 |
+| 추가 학습 | 과제의1,000iteration | 여러 단계 continuation. **high53은 v16 control에서 이어 학습한 v22 seed53 final249**이며 그 단계만32,768,000전이 추가; 기본 모델과 동일 총예산 비교는 아님 |
+| 선택적 실행 구조 | 단일 actor | 깊이 이력 **1초**, 최소 유지 **0.5초**, crossfade **0.15초**의 고정 gate가 v5와 expert 행동을 혼합. 지형 이름별로 별도 모델을 지정하는 방식은 아님 |
+
+[험지·회복 훈련](docs/ROUGH_RECOVERY.md) · [발디딤 입력](src/week03_ant/tasks/foothold_v9_cfg.py) ·
+[몸체 높이 명령](docs/COMMAND_CONDITIONING_V14.md) · [teacher/student 구현](src/week03_ant/prior_policy.py) ·
+[PPO prior loss](src/week03_ant/prior_ppo.py) · [seed53 추가학습](docs/SEED_CONTINUATION_V22.md) ·
+[이력 gate](src/week03_ant/history_gate.py)
+
+prior는 student가 좋은 기존 보행에서 과도하게 벗어나지 않도록 학습 손실을 더하는 방식입니다.
+**단독 expert의 추론은 student actor 하나**이며 frozen 교사 출력에 residual을 더하는 구조나 안전 보장 장치가 아닙니다.
+history 설정을 선택했을 때만 별도로 `a = (1−α)·a_v5 + α·a_expert`를 계산합니다.
+v5도 평지·험지 혼합 학습 모델이므로 **순수 평지/험지 전문가 분리**로 부르지 않습니다.
+**v16 control과 high53은 추가 접촉 미끄러짐 비용의 적용 계수가0**입니다.
+[추가 접촉 센서](src/week03_ant/tasks/contact_v16_cfg.py)는 보상·진단용이며 actor에 새 접촉 관측을 추가한 것도 아닙니다. 이 비용을 성공 원인으로 쓰지 않습니다.
+high53을 v24의 단기 capacity-probe checkpoint와 혼동하지 않습니다.
+
+### 개선을 어디까지 확인했나
+
+- **교사 prior의 조건부 효과:** 같은 v10 설정·예산의 free/anchored 비교에서 6타일 **422→454/900**, 낙상 **96→73**, 레인 이탈 **61→15**였습니다. 다만 frozen v5보다 이탈이 많아 전체 승격 기준은 FAIL입니다([대조 실험](docs/PRIOR_V10.md)).
+- **현재 미사용 배치의 관측 결과:** 16초에서 v5 **135/300**보다 v16 단독 **177/300**이 높았습니다. 여기서 v5는 기본 제공 코드가 아닌 **이미 학습한 험지 참고 모델**이며, 여러 변경·추가 학습의 개별 효과는 분리되지 않았습니다.
+- **전환 조합의 직접 대조:** 같은 high53 checkpoint의64초 혼합험지는 단독 **223/300 → history 조합236/300**, 레인 이탈 **24→7**이었습니다. 하지만 낙상 **52→58**, 평지 속도 **12.170→10.043m/s**로 악화했고 장애물만 보면 단독 **38/50 > 조합32/50**입니다([동일조건 평가](docs/UNSEEN_OBSTACLE_DEMO.md)).
+
+전방 지형·발디딤 정보가 선제적인 보행을 돕고 prior·이력 혼합이 기존 행동을 보존한다는 것은 **가능한 기전**입니다.
+현재 최고 점수를 센서·보상·추가 학습량·seed·gate 중 하나의 인과 효과로 확정하지 않습니다.
+기본 코드의 과거 지도 **0/600**과 새 지도·시간의 **236/300**을 직접적인 개선율로 계산하지 않으며,
+명령 관측·미끄러짐 비용 등의 대조 실험에서 [회귀·실패도 확인](docs/EXPERIMENT_HISTORY.md)했습니다.
 
 ## 과제 성능 — 제공 코드 Baseline 대비
 
@@ -234,6 +297,6 @@ CHECKPOINT=artifacts/runs/robust_seed42/model_999.pt
 | [공개 범위·검증](docs/PUBLICATION.md) | 배포 파일·재현 제약 |
 
 기존 소스·체크포인트·과거 결과/영상은 보존합니다. v6–v24 확장 관측 모델은 원래60D 평가기에 넣지 않습니다.
-실물·비공개 평가·실제 RGB-D는 미검증입니다. 공개 CPU subset **147개**, 전체2,056개 suite는 로컬 원문이 필요합니다.
+실물·비공개 평가·실제 RGB-D는 미검증입니다. 기존 공개 CPU subset **147개**, 현재 로컬 전체 **2,094개** suite는 원문 증거가 필요합니다.
 무결성: `sha256sum -c artifacts/PUBLICATION_SHA256SUMS`.
 [BSD-3-Clause](LICENSE) · [원 라이선스 고지](THIRD_PARTY_NOTICES.md)
