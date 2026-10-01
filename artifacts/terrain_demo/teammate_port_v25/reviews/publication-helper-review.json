@@ -1,0 +1,53 @@
+{
+  "role": "code-reviewer",
+  "created_utc": "2026-10-01T04:05:05.595644+00:00",
+  "recommendation": "REQUEST CHANGES",
+  "scope": "Two new presentation-only files; no frozen science edits",
+  "files_reviewed": [
+    "scripts/verify_teammate_publication_v25.py",
+    "tests/test_teammate_publication_v25.py"
+  ],
+  "reviewed_sha256": {
+    "scripts/verify_teammate_publication_v25.py": "3268de122aa1577007ee26ab0f66dab6093c60e7400c0cb45886f5c84a21e3a3",
+    "tests/test_teammate_publication_v25.py": "e35f8bacda3f81a53f8c63aa49da039d28ec00dda3499b1c8b53caca37cc86c1"
+  },
+  "issues": [
+    {
+      "severity": "HIGH",
+      "file": "scripts/verify_teammate_publication_v25.py",
+      "line": "160-162",
+      "issue": "summary.get('evidence_sha256', {}) plus conditional lookup silently skips missing, undeclared or unsafe historical evidence references",
+      "impact": "Helper can report PASS without required historical-to-public byte-domain links; confirmed missing-required-proof.json and ../../outside.json both pass when placed in summary.evidence_sha256.",
+      "fix": "Require a nonempty evidence mapping, mandatory coverage of freeze plus all 46 enriched and 46 raw records, validate every reference path/digest and require every reference in public inventory with matching original_sha256. Publish additional cache structured JSON rather than adding implicit exceptions. Add negative tests for missing/empty key, traversal, missing reference, omitted mandatory entry and historical-hash mismatch."
+    },
+    {
+      "severity": "MEDIUM",
+      "file": "scripts/verify_teammate_publication_v25.py",
+      "line": "141-154",
+      "issue": "Record identity is not explicitly bound to its controller/geometry/reset filename tuple",
+      "impact": "Swapping complete same-controller map file pairs leaves a full valid record-key matrix for the auditor but mislabels the public artifact links.",
+      "fix": "Before aggregation require (bundle.controller, bundle.geometry_seed, bundle.reset_seed)==(controller,geometry,reset) for each expected filename; test swapped-map files with corresponding public checksums updated."
+    }
+  ],
+  "validation": {
+    "focused_stdlib_tests": 8,
+    "focused_failures": 0,
+    "ast_files": 2,
+    "science20_unchanged": true,
+    "independent_real_frozen_auditor_synthetic_integration": {
+      "command": "/usr/bin/python3 -S scripts/verify_teammate_publication_v25.py --root <temporary synthetic checkout>",
+      "returncode": 0,
+      "public_files_verified": 123,
+      "evaluation_records": 46,
+      "physical_first_episodes": 8050,
+      "dependent_window_observations": 16100,
+      "note": "Plumbing evidence only: synthetic arrays, real frozen auditor/science20/base6 bytes and existing checkpoint bytes; not current training/holdout evidence."
+    },
+    "reproduced_missing_reference_pass": true,
+    "reproduced_traversal_reference_pass": true
+  },
+  "nonblocking_trust_boundary": "The verifier imports auditor Python from --root. Use a trusted reviewed checkout/commit. A self-supplied manifest is an integrity inventory, not an authenticity/signature trust anchor.",
+  "root_coordination": "Root accepted mandatory public mapping of all summary structured JSON references, preserving all original scientific SHA values; fix not yet present in reviewed bytes.",
+  "remaining_validation": "Re-review owner fixes and rerun stdlib tests before publication-helper approval. Actual nine-run main and actual 8050 holdout remain unverified by this review.",
+  "no_gpu_remote_git_or_source_edits": true
+}

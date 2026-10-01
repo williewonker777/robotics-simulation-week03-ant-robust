@@ -1,0 +1,39 @@
+{
+  "schema": "week03_ant_v25_publication_arithmetic_review_v1",
+  "created_utc": "2026-10-01T07:06:09.166066+00:00",
+  "reviewer": "/root/port_code_review",
+  "recommendation": "APPROVE",
+  "scope": "Presentation-only historical arithmetic adapter implementation; full canonical cross-version proof remains root-owned and pending",
+  "files": {
+    "scripts/verify_teammate_publication_v25.py": "881bb026cd29e7cb52b7fa7ca8678d12fe72da28409887d70e0101c10aca34b2",
+    "tests/test_teammate_publication_v25.py": "b5464188ac21a5e7bcf008fa39e5fb2a4a88101cd4d9893e1bfbf2dd94860533"
+  },
+  "issues": [],
+  "review_checks": [
+    "Read complete test file and helper context; compared exact diff against WORK/public_helper_before_arithmetic original bytes",
+    "historical_sum starts integer zero, preserves iterator order, accepts exact built-in bool/int/float only, rejects nonfinite float inputs",
+    "Explicit audit.sum binding occurs after immutable auditor hash verification/import, on fresh module only; builtins and frozen source untouched",
+    "Always selects documented arithmetic policy, no catch/retry fallback or approximate comparison",
+    "No raw array, summary value, threshold, gate, or frozen source edits introduced",
+    "Output includes explicit arithmetic policy and Python version",
+    "Synthetic fixture checks adapter use; actual public v5 vector regression executed, not skipped"
+  ],
+  "diagnostics": {
+    "cpython_3_12_3_stdlib_unittest": "12 PASS, 0 skipped, 0.330s",
+    "cpython_3_11_16_stdlib_unittest": "12 PASS, 0 skipped, 0.253s",
+    "ast_compile_both_modified_files": "PASS",
+    "frozen_source20_and_base6_current_sha256": "26/26 PASS"
+  },
+  "pending_acceptance": [
+    "Root-owned complete actual canonical comparison: CPython3.11 unmodified auditor versus adapted 3.11 and 3.12, preserving exact scalar types and IEEE754 float bits",
+    "Exact compare_summary PASS with 46 records, 8050 physical episodes, 16100 dependent windows; identical gates and decision outcomes",
+    "Explicit post-freeze presentation code revision manifest/attestation, preserving historical scientific hash domains and original presentation bytes",
+    "Actual public helper execution after manifest update, plus final privacy/protected-checksum review"
+  ],
+  "limitations": [
+    "Focused fixture CLI uses a stub auditor; not full scientific evidence",
+    "Actual vector regression covers v5 speed sums only, not every canonical field",
+    "No full canonical proof duplicated; root currently owns it",
+    "No GPU, remote/Git, science/artifact/manifest edits performed by reviewer"
+  ]
+}

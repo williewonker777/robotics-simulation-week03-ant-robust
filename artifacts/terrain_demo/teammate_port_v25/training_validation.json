@@ -1,0 +1,615 @@
+{
+  "created_utc": "2026-10-01T05:47:16.566118+00:00",
+  "records": {
+    "control61": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/control61_initial.json",
+        "sha256": "c3af4af69056cef0d660d6e3787d5d00084af2764fa2788aa797d92db2bf9876"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/control61_schedule.json",
+        "sha256": "eccf94c312059db3c7c7cc30b9898e000a24e6670fb45b18c74aa77a7c26757e"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/control61_initial_contact_rollout.json",
+        "sha256": "d0806a447d55e17c3dab7bb6296a2488b6b7fbdce07ab17ad82c60eb63ef185f"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Reward/teammate_recovery": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/main_control61.log",
+        "text_log_sha256": "c1f2edadf227d00566ce6860b6552434d208c92a98bab41d8575d584a82141dd",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-48-55_v25_main_control61/events.out.tfevents.1790826543.<local-host>.517631.0": "16b64d549561c06996bf762260078aefed0cead5076dd6e9fe0c74abf9d85e1a"
+        }
+      }
+    },
+    "recovery61": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/recovery61_initial.json",
+        "sha256": "11ef6d0d5c7bc3ecea40b3bede65db5768cd155cf2746649ae5c938c20f70cf2"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/recovery61_schedule.json",
+        "sha256": "ad4932ad3fcdb992e45616ff7248a780f58527f5b6ac8ed088bb0c383a64c90e"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/recovery61_initial_contact_rollout.json",
+        "sha256": "7f6db3b13f3338b70876c4d09cf414ceead0a7093f176832f66fde599ebd596c"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Reward/teammate_recovery": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/main_recovery61.log",
+        "text_log_sha256": "f059f9975f335e531d9eca87a11aedebbc9d342e0f6b88f71eeaf835903d8ca5",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_13-01-27_v25_main_recovery61/events.out.tfevents.1790827294.<local-host>.550283.0": "f760b58e65a6b2531f3d06f6edf0fd7bea98ee62dddf5830311d3aa5bee6e216"
+        }
+      }
+    },
+    "combined61": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/combined61_initial.json",
+        "sha256": "10cad0b35dfc1ee9cee389fcc3e4d454289e0c5eb2e5912d8fd8cdec1249ad70"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/combined61_schedule.json",
+        "sha256": "f379c4783cb7ae38ef65cf5f108f28110444cae4f30a10e3c10a2a6afee7d5aa"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/combined61_initial_contact_rollout.json",
+        "sha256": "ac225a3e93948540a845bba1d4820e16447d372923f15311fd5f3d2f15f0b2a4"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Reward/teammate_recovery": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/main_combined61.log",
+        "text_log_sha256": "5ee2cf5eadc4c92d15134b67c67c76bdeb220c68c724dfaa7821808637478152",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_13-14-09_v25_main_combined61/events.out.tfevents.1790828056.<local-host>.585784.0": "c4e0ce4647799cc7bbd802c1490796f4a1cecf65dc9a9291849c195730798855"
+        }
+      }
+    },
+    "control62": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/control62_initial.json",
+        "sha256": "baa52cc01723c824513e74947e19a3e629383b91a2b17f53620c4f46f2721e20"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/control62_schedule.json",
+        "sha256": "dc42bfb333249205ee0277d7853d4684fa64f8422ca44b8c6b33de7e1180f60f"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/control62_initial_contact_rollout.json",
+        "sha256": "f74dc15935a4cea43bd19354099ee4c8d4963f1fc534db7ac4581a2f537d909f"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Reward/teammate_recovery": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/main_control62.log",
+        "text_log_sha256": "46c7d573f23d00638eb6b7c031591140da293f62e04860b4cc372e25f557637f",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_13-27-12_v25_main_control62/events.out.tfevents.1790828841.<local-host>.622797.0": "5abc0772b4f2c1dfede14a710d67fd08ecca95d86d6c067dbcf4be78717b5c14"
+        }
+      }
+    },
+    "recovery62": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/recovery62_initial.json",
+        "sha256": "50ddc74cf6fafb5a820fdc1e482e446172d3bce2a0a2432ee1e9b53bc62f94cb"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/recovery62_schedule.json",
+        "sha256": "23af68fd66328a43b118fa82a881e49bba5050208bea8e71f5fc500eb27138d3"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/recovery62_initial_contact_rollout.json",
+        "sha256": "579a74bee32190c975a5fbba956574dbff68b5fc3deb85f4fc3fe0c20a9b298d"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Reward/teammate_recovery": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/main_recovery62.log",
+        "text_log_sha256": "472c332ec75ad8967037d205220f1623e67ccd9406d430295dbc003d9dd3bf0a",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_13-40-36_v25_main_recovery62/events.out.tfevents.1790829645.<local-host>.658577.0": "cc290d16bcd2bf47dfc24ba664c802247b0c20e4e90ea4893c24c7123587ffca"
+        }
+      }
+    },
+    "combined62": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/combined62_initial.json",
+        "sha256": "fbcaf3f1602852c6c97281f7a6cc60221fc5be412b9cefc61c961e0a3f1f0728"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/combined62_schedule.json",
+        "sha256": "46a0de1e6ab860a278d99e54edd8a0df8bce89d0919d38a0a66a16d7be4e0388"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/combined62_initial_contact_rollout.json",
+        "sha256": "fa6a624fcf91778629299f06703ed618f4017bd8a5e300f5e75ec5b9b654e3de"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Reward/teammate_recovery": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/main_combined62.log",
+        "text_log_sha256": "cb7999b1df7abd0279d6409abbd0405a10fcf7271403f2907498d730f470a532",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_13-54-02_v25_main_combined62/events.out.tfevents.1790830451.<local-host>.698130.0": "f0663a57380dc678231815e6aabca72153ce5bd66912e8b190d8a4bcb5b709b9"
+        }
+      }
+    },
+    "control63": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/control63_initial.json",
+        "sha256": "5e563ebbfa2051347649e6197671a4c6d36d0a3791e04bbf0d0963623559af7f"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/control63_schedule.json",
+        "sha256": "ecbd284ffd307acb25589984b40e57d0600dbf0c08ffcf6d09e96cd64d1d48dd"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/control63_initial_contact_rollout.json",
+        "sha256": "d2ba4230229ef5896971526735ac3e87ab3736f6b9ec5b35f49370ea12eac0f5"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Reward/teammate_recovery": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/main_control63.log",
+        "text_log_sha256": "80be25e1166beb344926e5f5f8d3679b9cbfaec0f0fb0b0cbbeeadd56d5668ca",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_14-07-24_v25_main_control63/events.out.tfevents.1790831253.<local-host>.732288.0": "fd5ebcdd4fb1b2d70d60b93d1b99d9c0093bd39f312e6fdb539c2ed7314769c9"
+        }
+      }
+    },
+    "recovery63": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/recovery63_initial.json",
+        "sha256": "f0d670f1e8f87c7f468397c40bb234abe4aa82388720c55b9be9dd7486e59343"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/recovery63_schedule.json",
+        "sha256": "e096fd303c46f08df51555824811c071f9a98319941dd02a46b896a4ae547405"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/recovery63_initial_contact_rollout.json",
+        "sha256": "37778fd00ae8a7ae046c6a7be91c25dedc4c0b205d60f6115ace524551c578c6"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Reward/teammate_recovery": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/main_recovery63.log",
+        "text_log_sha256": "dacde1492e248c51696481546228295a4592a0d352948013216fbd4d992002b1",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_14-20-44_v25_main_recovery63/events.out.tfevents.1790832053.<local-host>.763514.0": "3ff2bf7f82a33cd2fb4b998b510f1eb66c1fe1843412a65335b18781712b64e3"
+        }
+      }
+    },
+    "combined63": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/combined63_initial.json",
+        "sha256": "654fd6040006df55a2bbe97038c4d54275a5cf6f19de6d9c623539966d82b8ef"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/combined63_schedule.json",
+        "sha256": "03fa13a4005c2fab883b7086ae31fac7cc65a632d32a805b0db7706279ced25c"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/training/combined63_initial_contact_rollout.json",
+        "sha256": "9fae8c897814e244d3d17b25bbc5c3c07b5d8e7b7435d356947f444cf64c44c5"
+      },
+      "learning_log": {
+        "iterations_logged": 250,
+        "transitions_logged": 32768000,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 250,
+          "Episode_Reward/alive": 250,
+          "Episode_Reward/upright": 250,
+          "Episode_Reward/move_to_target": 250,
+          "Episode_Reward/action_l2": 250,
+          "Episode_Reward/energy": 250,
+          "Episode_Reward/joint_pos_limits": 250,
+          "Episode_Reward/fall": 250,
+          "Episode_Reward/centering": 250,
+          "Episode_Reward/stall": 250,
+          "Episode_Reward/stone_body_height": 250,
+          "Episode_Reward/stone_swing_clearance": 250,
+          "Episode_Reward/foothold_support": 250,
+          "Episode_Reward/adaptive_posture": 250,
+          "Episode_Reward/contact_slip": 250,
+          "Episode_Reward/teammate_recovery": 250,
+          "Episode_Termination/time_out": 250,
+          "Episode_Termination/torso_height": 250,
+          "Episode_Termination/overturn": 250,
+          "Episode_Termination/lane_departure": 250,
+          "Loss/value_function": 250,
+          "Loss/surrogate": 250,
+          "Loss/entropy": 250,
+          "Loss/prior_loss": 250,
+          "Loss/prior_mse": 250,
+          "Loss/weighted_prior": 250,
+          "Loss/action_mean_abs_gt1_fraction": 250,
+          "Loss/student_action_mean_rms": 250,
+          "Loss/teacher_action_mean_rms": 250,
+          "Loss/prior_action_difference_rms": 250,
+          "Loss/learning_rate": 250,
+          "Policy/mean_noise_std": 250,
+          "Perf/total_fps": 250,
+          "Perf/collection time": 250,
+          "Perf/learning_time": 250,
+          "Train/mean_reward": 250,
+          "Train/mean_episode_length": 250,
+          "Train/mean_reward/time": 250,
+          "Train/mean_episode_length/time": 250
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/main_combined63.log",
+        "text_log_sha256": "d0992a903be36cb70761c25e56b0c9f56bad26014ef1152b463086015ced1a2e",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_14-34-04_v25_main_combined63/events.out.tfevents.1790832852.<local-host>.794707.0": "6e01469d84955c73f09708253c7df0237f8b74d1fe6c870bc2abd32653b35542"
+        }
+      }
+    }
+  },
+  "passed": true,
+  "training_freeze_sha256": "af2d613ac97af833bd5c5c03357f657705e520de33c733c546876fb82d515408",
+  "seeds": [
+    61,
+    62,
+    63
+  ],
+  "runs": [
+    "control61",
+    "recovery61",
+    "combined61",
+    "control62",
+    "recovery62",
+    "combined62",
+    "control63",
+    "recovery63",
+    "combined63"
+  ],
+  "geometry": 130,
+  "envs": 4096,
+  "iterations": 250,
+  "steps": 32,
+  "transitions_per_run": 32768000,
+  "total_training_transitions": 294912000,
+  "development_training_transitions": 2408448
+}

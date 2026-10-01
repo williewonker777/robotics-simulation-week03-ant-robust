@@ -1,0 +1,453 @@
+{
+  "created_utc": "2026-10-01T05:47:34.450598+00:00",
+  "v5_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "phase": "holdout",
+  "models": {
+    "v5": {
+      "checkpoint": "artifacts/terrain_demo/prior_v10/runs/v10_anchored_seed42/model_749.pt",
+      "sha256": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1",
+      "mode": "v5",
+      "command_mode": null
+    },
+    "v16_control": {
+      "checkpoint": "artifacts/terrain_demo/contact_slip_v16/runs/control/model_249.pt",
+      "sha256": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "history_control": {
+      "checkpoint": "artifacts/terrain_demo/contact_slip_v16/runs/control/model_249.pt",
+      "sha256": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "high53": {
+      "checkpoint": "artifacts/terrain_demo/seed_continuation_v22/runs/seed53/model_249.pt",
+      "sha256": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "history_high53": {
+      "checkpoint": "artifacts/terrain_demo/seed_continuation_v22/runs/seed53/model_249.pt",
+      "sha256": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "control61": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/control61/model_249.pt",
+      "sha256": "c38c72b2e21a975126de2bd16e6c0a6aa0478ddd32b63faeb83b5528308806bf",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "recovery61": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/recovery61/model_249.pt",
+      "sha256": "b26dc5bb603dff4a4de5abcb66dca5ac57af7c3fc85f68f358b215190cf07731",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "combined61": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/combined61/model_249.pt",
+      "sha256": "a8cf08901dc5c16dc3c12d44d76bb536dcc7bd2d1b3cdb2671960a35fda2ba6f",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "control62": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/control62/model_249.pt",
+      "sha256": "56cfe2bcbfe7224f90ee31fabb98983efe1d3b86fa265acdbade8c928f505dc9",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "recovery62": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/recovery62/model_249.pt",
+      "sha256": "768b9eefe828effe818eea5ad474f43cae675094e4d1e940afa619841392a86b",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "combined62": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/combined62/model_249.pt",
+      "sha256": "57ffbf4886683dfd3166b14fcb5f7d95c61d33852935e9193083fdd421783b98",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "control63": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/control63/model_249.pt",
+      "sha256": "b9d89cc7a731e8a6b95d43303f2ff6b51ed594d3261ea255f065090de0df5074",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "recovery63": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/recovery63/model_249.pt",
+      "sha256": "95d4ecdf8fd0baf4f04b6ca02575ad9433837d50764cbb86ea718da2bbaa8b1a",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "combined63": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/combined63/model_249.pt",
+      "sha256": "e29d7eddc08ae443e25191b2d57bd2f0cafb77f1868cc64a0b4ed428afd9772a",
+      "mode": "v10",
+      "command_mode": "conditioned"
+    },
+    "history_control61": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/control61/model_249.pt",
+      "sha256": "c38c72b2e21a975126de2bd16e6c0a6aa0478ddd32b63faeb83b5528308806bf",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "history_recovery61": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/recovery61/model_249.pt",
+      "sha256": "b26dc5bb603dff4a4de5abcb66dca5ac57af7c3fc85f68f358b215190cf07731",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "history_combined61": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/combined61/model_249.pt",
+      "sha256": "a8cf08901dc5c16dc3c12d44d76bb536dcc7bd2d1b3cdb2671960a35fda2ba6f",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "history_control62": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/control62/model_249.pt",
+      "sha256": "56cfe2bcbfe7224f90ee31fabb98983efe1d3b86fa265acdbade8c928f505dc9",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "history_recovery62": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/recovery62/model_249.pt",
+      "sha256": "768b9eefe828effe818eea5ad474f43cae675094e4d1e940afa619841392a86b",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "history_combined62": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/combined62/model_249.pt",
+      "sha256": "57ffbf4886683dfd3166b14fcb5f7d95c61d33852935e9193083fdd421783b98",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "history_control63": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/control63/model_249.pt",
+      "sha256": "b9d89cc7a731e8a6b95d43303f2ff6b51ed594d3261ea255f065090de0df5074",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "history_recovery63": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/recovery63/model_249.pt",
+      "sha256": "95d4ecdf8fd0baf4f04b6ca02575ad9433837d50764cbb86ea718da2bbaa8b1a",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    },
+    "history_combined63": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/combined63/model_249.pt",
+      "sha256": "e29d7eddc08ae443e25191b2d57bd2f0cafb77f1868cc64a0b4ed428afd9772a",
+      "mode": "hybrid",
+      "command_mode": "conditioned"
+    }
+  },
+  "source_sha256": {
+    "src/week03_ant/teammate_recovery_v25.py": "c5729f30c0a4fd7db433f7ad5c425590acf9dbeab9d00c52a0e28a9a33793da6",
+    "src/week03_ant/teammate_study_v25.py": "894c8547efd3ffcf2e6e95d728e3293306dc264539f1c31b374978ba689987e3",
+    "src/week03_ant/tasks/teammate_v25_cfg.py": "3e3bf91b6fba1a8d03382ac712787f5a79e7aaa93a426ee6a86892025bbad9ab",
+    "src/week03_ant/tasks/teammate_v25.py": "2bfaad741c0ee1d8c33046b63180290c7f6e293d04fdaaff7e4739375dd774d8",
+    "scripts/teammate_v25.py": "c7c995900935a6156729f2fb4cc70f898cd6f601cef398ff593f6f445ea196a2",
+    "scripts/run_teammate_training_v25.py": "074cf266bf41a0e0f4fd37254f91f0f45718d331386849211b4818095c71cb0d",
+    "tests/test_teammate_math_v25.py": "e5fce64c1bf5c67cb54e2ddd8bcf56a06de6deb82416f67aeaf4fd4d48384082",
+    "tests/test_teammate_training_v25.py": "0b49c4f162db055587db07d41d260bfef51712265559788afc521038ae06118b",
+    "tests/test_teammate_harness_v25.py": "8e0e802fb4115ed360c8ee31534f05d09206dbc8808f4b6b394f692fe2324a4d",
+    "docs/experiment_plans/teammate_port_v25.md": "160aeab578ad0bb2de2e58dea1eeef4f01b521c6f806b9afe20c6ea25e525216",
+    "scripts/evaluate_teammate_v25.py": "e3ae28a38113ec267014f2be1e98976bee211bdee0099335e70a288614e854dd",
+    "scripts/run_teammate_eval_v25.py": "a10a4c79efe53184af39ab72769bcb50569fb36a16c74fb8534c7d542e6e48f6",
+    "scripts/summarize_teammate_v25.py": "b349389e4bf35d5079d2f1a6f938158f49457072035bc18be5b74f402c1c4439",
+    "tests/test_teammate_eval_v25.py": "0ac4da72fffb12df08a08f98ce7f7eb4faca33cb6aabb9f949c1ca151887e38a",
+    "tests/test_teammate_summary_v25.py": "9bc3d9acc2e0d69f7b9675e683a09ba0539b3a6c14e395fa0889c55178ef9820",
+    "scripts/audit_teammate_v25_raw.py": "bc01939f201064ffcbdb10ca11528f901c12521f39f74064fd679314273aa6ea",
+    "tests/test_teammate_audit_v25.py": "78a74d2fbf98bc8135aed87cbf316b7a5264f488ef053ba0c6241ffd72274dd9",
+    "artifacts/terrain_demo/teammate_port_v25/research.md": "04d03f685008617aa6f7de37c740071540cc01f39950439deeaf58ab03b14a4b",
+    "artifacts/terrain_demo/teammate_port_v25/research_provenance.json": "fedd95c65def74b7e3ba082988830ad280c1c113bd69cc066daa0afb35abf256",
+    "licenses/teammate_ant_BSD-3-Clause.txt": "df351ebfa8af317bf5a9ad83df63a8b68e4f5c04b71f30767cdb27aa434eac62"
+  },
+  "base_source_sha256": {
+    "scripts/evaluate_unseen_terrain.py": "cf512d2833d5d3a1d808735cf40a1b91cbbbc6d80db2928acc22982450bcd422",
+    "src/week03_ant/tasks/contact_v16_cfg.py": "99905971a99eac05822b9ae54e8917776d85c74bb68ab16cec60ee2d323e1a7f",
+    "src/week03_ant/tasks/rough_v5_cfg.py": "dbbf7ef32e34fd3faef74845427e03ea289395851ddf7618023a39d030db5668",
+    "src/week03_ant/tasks/lanes.py": "584df4e7b7fec69d0537ce32eda1e9f66a403b35d31cd5ba544e37cdeddd1b51",
+    "src/week03_ant/history_gate.py": "24cab76be1fa9fc872c7641c1fe715159b89ff913dd24c317aff86cd18f53140",
+    "src/week03_ant/paired_horizon_v23.py": "f1db92018b0032cc7de39ab155514dfc3358959c768740d9fa0f128cb424ce2b"
+  },
+  "matrix": [
+    [
+      "v5",
+      131,
+      111,
+      175
+    ],
+    [
+      "v16_control",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_control",
+      131,
+      111,
+      175
+    ],
+    [
+      "high53",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_high53",
+      131,
+      111,
+      175
+    ],
+    [
+      "control61",
+      131,
+      111,
+      175
+    ],
+    [
+      "recovery61",
+      131,
+      111,
+      175
+    ],
+    [
+      "combined61",
+      131,
+      111,
+      175
+    ],
+    [
+      "control62",
+      131,
+      111,
+      175
+    ],
+    [
+      "recovery62",
+      131,
+      111,
+      175
+    ],
+    [
+      "combined62",
+      131,
+      111,
+      175
+    ],
+    [
+      "control63",
+      131,
+      111,
+      175
+    ],
+    [
+      "recovery63",
+      131,
+      111,
+      175
+    ],
+    [
+      "combined63",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_control61",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_recovery61",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_combined61",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_control62",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_recovery62",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_combined62",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_control63",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_recovery63",
+      131,
+      111,
+      175
+    ],
+    [
+      "history_combined63",
+      131,
+      111,
+      175
+    ],
+    [
+      "v5",
+      132,
+      112,
+      175
+    ],
+    [
+      "v16_control",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_control",
+      132,
+      112,
+      175
+    ],
+    [
+      "high53",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_high53",
+      132,
+      112,
+      175
+    ],
+    [
+      "control61",
+      132,
+      112,
+      175
+    ],
+    [
+      "recovery61",
+      132,
+      112,
+      175
+    ],
+    [
+      "combined61",
+      132,
+      112,
+      175
+    ],
+    [
+      "control62",
+      132,
+      112,
+      175
+    ],
+    [
+      "recovery62",
+      132,
+      112,
+      175
+    ],
+    [
+      "combined62",
+      132,
+      112,
+      175
+    ],
+    [
+      "control63",
+      132,
+      112,
+      175
+    ],
+    [
+      "recovery63",
+      132,
+      112,
+      175
+    ],
+    [
+      "combined63",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_control61",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_recovery61",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_combined61",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_control62",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_recovery62",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_combined62",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_control63",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_recovery63",
+      132,
+      112,
+      175
+    ],
+    [
+      "history_combined63",
+      132,
+      112,
+      175
+    ]
+  ]
+}

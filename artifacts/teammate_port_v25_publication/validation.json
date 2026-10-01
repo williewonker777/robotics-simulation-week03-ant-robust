@@ -1,0 +1,176 @@
+{
+  "schema": "week03_ant_v25_final_publication_validation_v1",
+  "created_utc": "2026-10-01T07:09:30.536987+00:00",
+  "verdict": "PASS_PUBLIC_RECORDED_DATA_AND_CPU__NO_MODEL_PROMOTION",
+  "evaluation_reward_unchanged": true,
+  "main_runs": 9,
+  "main_training_transitions": 294912000,
+  "actual_development_transitions": 4816896,
+  "actual_total_training_transitions": 299728896,
+  "physical_first_episodes": 8050,
+  "dependent_window_observations": 16100,
+  "paired_initial_conditions": 350,
+  "main_gate": "All six16s contrasts FAIL,0/3seed; no64sarm-level PASS; defaults/submission unchanged",
+  "publication_manifest_sha256": "d3e245e380d09423be626c4936e57c0768e5952d6e449e37816a763b7562e395",
+  "public_replay_cpython311": {
+    "arithmetic_policy": "historical_numeric_left_fold_v1",
+    "controllers": 23,
+    "dependent_window_observations": 16100,
+    "evaluation_records": 46,
+    "limitation": "Training/runtime/cache evidence is a local verification record, not replayed here. Original-to-published metadata equivalence is publisher attestation when originals are private.",
+    "physical_first_episodes": 8050,
+    "public_files_verified": 484,
+    "python_version": "3.11.16",
+    "scope": "Published bytes and recorded raw-array/summary consistency; no simulation or model unpickling.",
+    "summary_verified": true,
+    "verdict": "PASS"
+  },
+  "public_replay_cpython312": {
+    "arithmetic_policy": "historical_numeric_left_fold_v1",
+    "controllers": 23,
+    "dependent_window_observations": 16100,
+    "evaluation_records": 46,
+    "limitation": "Training/runtime/cache evidence is a local verification record, not replayed here. Original-to-published metadata equivalence is publisher attestation when originals are private.",
+    "physical_first_episodes": 8050,
+    "public_files_verified": 484,
+    "python_version": "3.12.3",
+    "scope": "Published bytes and recorded raw-array/summary consistency; no simulation or model unpickling.",
+    "summary_verified": true,
+    "verdict": "PASS"
+  },
+  "post_projection_cpu": {
+    "tests": 2288,
+    "subtests": 37,
+    "junit_testcases_including_subtests": 2325,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "original_private_console_sha256": "92a258b1f7612f13e3aa64b1c2122a9bcd273500c1a3c3f9f893efbffb6ebdf9",
+    "original_private_junit_sha256": "53495932d55d3141b2149270055d0c425e3fb1318e940d1fb89e190c77475cee"
+  },
+  "full_arithmetic_parity": {
+    "schema": "week03_ant_v25_full_canonical_arithmetic_parity_v1",
+    "created_utc": "2026-10-01T07:07:17.831091+00:00",
+    "unmodified_frozen_auditor_python311": {
+      "python": "3.11.16",
+      "mode": "baseline",
+      "canonical_sha256": "cfb575048331a406f36e921d3a25b45d08f78f52cbfcf4e58bd58d57d9b6766e",
+      "physical_episodes": 8050,
+      "dependent_windows": 16100,
+      "summary_verified": true
+    },
+    "adapted311": [
+      {
+        "nodes": 385488,
+        "ieee_floats": 56974
+      },
+      {
+        "python": "3.11.16",
+        "mode": "adapted",
+        "canonical_sha256": "cfb575048331a406f36e921d3a25b45d08f78f52cbfcf4e58bd58d57d9b6766e",
+        "physical_episodes": 8050,
+        "dependent_windows": 16100,
+        "summary_verified": true
+      }
+    ],
+    "adapted312": [
+      {
+        "nodes": 385488,
+        "ieee_floats": 56974
+      },
+      {
+        "python": "3.12.3",
+        "mode": "adapted",
+        "canonical_sha256": "cfb575048331a406f36e921d3a25b45d08f78f52cbfcf4e58bd58d57d9b6766e",
+        "physical_episodes": 8050,
+        "dependent_windows": 16100,
+        "summary_verified": true
+      }
+    ],
+    "comparison": "full sorted canonical JSON byte equality AND recursively exact type/value/list order/IEEE754 float-bit equality",
+    "scope": "Every canonical aggregate, cell, episode-row, paired statistic and gate from all46actualrecords; no simulation rerun or original-array change",
+    "reason": "CPython3.12 compensated sum differs at last bit from original3.11 sequential float addition",
+    "no_scientific_source_array_summary_threshold_or_tolerance_changes": true,
+    "helper_sha256": "881bb026cd29e7cb52b7fa7ca8678d12fe72da28409887d70e0101c10aca34b2",
+    "auditor_sha256": "bc01939f201064ffcbdb10ca11528f901c12521f39f74064fd679314273aa6ea"
+  },
+  "post_projection_nonstrings_identity": {
+    "schema": "week03_ant_v25_post_projection_nonstrings_v1",
+    "verdict": "PASS",
+    "scope": "Independently compares every published ART JSON non-string type/value/list order/dict child order/float bits to retained original bytes. String semantics use separately reviewed publisher; private originals not independently available to public readers. Immutable binaries/CSV byte identity checked.",
+    "json_files": 399,
+    "scalar_nodes": 4730578,
+    "ieee_floats": 1805161,
+    "immutable_binary_files": 22
+  },
+  "static_scope_checks": {
+    "schema": "week03_ant_v25_static_publication_checks_v1",
+    "created_utc": "2026-10-01T07:11:08.508909+00:00",
+    "baseline_inventory_files": 1909,
+    "unchanged_baseline_files": 1905,
+    "allowed_modified_baseline_files": [
+      "README.md",
+      "THIRD_PARTY_NOTICES.md",
+      "docs/EXPERIMENT_HISTORY.md",
+      "docs/PUBLICATION.md"
+    ],
+    "immutable_scientific_sources": 26,
+    "science_sha_pass": true,
+    "training_anchor_unchanged": true,
+    "artifact_files_scanned": 454,
+    "all_under_github_100MB": true,
+    "no_private_machine_paths_secrets_console_runtime": true,
+    "old_readme_gifs_unchanged": 4,
+    "local_document_links_valid": 267
+  },
+  "python_static_checks": {
+    "schema": "week03_ant_v25_python_static_v1",
+    "created_utc": "2026-10-01T07:08:25.747160+00:00",
+    "verdict": "PASS",
+    "new_python_files": 20,
+    "sha256": {
+      "scripts/audit_teammate_v25_raw.py": "bc01939f201064ffcbdb10ca11528f901c12521f39f74064fd679314273aa6ea",
+      "scripts/evaluate_teammate_v25.py": "e3ae28a38113ec267014f2be1e98976bee211bdee0099335e70a288614e854dd",
+      "scripts/plot_teammate_v25.py": "1beebdc4872a67647a9904d9eb23151cef6bb977d04a1d19897f60f75aa17d01",
+      "scripts/record_teammate_demo_v25.py": "8027f4b957ce044505bc68aaf6226f642bb1ac738d3dc61ce5bd5900da47e4cd",
+      "scripts/run_teammate_eval_v25.py": "a10a4c79efe53184af39ab72769bcb50569fb36a16c74fb8534c7d542e6e48f6",
+      "scripts/run_teammate_training_v25.py": "074cf266bf41a0e0f4fd37254f91f0f45718d331386849211b4818095c71cb0d",
+      "scripts/summarize_teammate_v25.py": "b349389e4bf35d5079d2f1a6f938158f49457072035bc18be5b74f402c1c4439",
+      "scripts/teammate_v25.py": "c7c995900935a6156729f2fb4cc70f898cd6f601cef398ff593f6f445ea196a2",
+      "scripts/verify_teammate_publication_v25.py": "881bb026cd29e7cb52b7fa7ca8678d12fe72da28409887d70e0101c10aca34b2",
+      "src/week03_ant/tasks/teammate_v25.py": "2bfaad741c0ee1d8c33046b63180290c7f6e293d04fdaaff7e4739375dd774d8",
+      "src/week03_ant/tasks/teammate_v25_cfg.py": "3e3bf91b6fba1a8d03382ac712787f5a79e7aaa93a426ee6a86892025bbad9ab",
+      "src/week03_ant/teammate_recovery_v25.py": "c5729f30c0a4fd7db433f7ad5c425590acf9dbeab9d00c52a0e28a9a33793da6",
+      "src/week03_ant/teammate_study_v25.py": "894c8547efd3ffcf2e6e95d728e3293306dc264539f1c31b374978ba689987e3",
+      "tests/test_teammate_audit_v25.py": "78a74d2fbf98bc8135aed87cbf316b7a5264f488ef053ba0c6241ffd72274dd9",
+      "tests/test_teammate_eval_v25.py": "0ac4da72fffb12df08a08f98ce7f7eb4faca33cb6aabb9f949c1ca151887e38a",
+      "tests/test_teammate_harness_v25.py": "8e0e802fb4115ed360c8ee31534f05d09206dbc8808f4b6b394f692fe2324a4d",
+      "tests/test_teammate_math_v25.py": "e5fce64c1bf5c67cb54e2ddd8bcf56a06de6deb82416f67aeaf4fd4d48384082",
+      "tests/test_teammate_publication_v25.py": "b5464188ac21a5e7bcf008fa39e5fb2a4a88101cd4d9893e1bfbf2dd94860533",
+      "tests/test_teammate_summary_v25.py": "9bc3d9acc2e0d69f7b9675e683a09ba0539b3a6c14e395fa0889c55178ef9820",
+      "tests/test_teammate_training_v25.py": "0b49c4f162db055587db07d41d260bfef51712265559788afc521038ae06118b"
+    },
+    "checks": [
+      "AST parse20newPythonfiles",
+      "in-memory compile20newPythonfiles",
+      "git diff --cached --check -- README.md THIRD_PARTY_NOTICES.md docs scripts src tests licenses: PASS"
+    ],
+    "lint_typecheck_limit": "No configured/installed ruff/flake8/mypy/pyright; no package/dependency installation. CPU regression and public raw-array verifier used."
+  },
+  "media": "two original480frame16s MP4 and160frame16s GIF previews, predeclared combined61 vsparent; n1qualitative pair, not benchmark denominator",
+  "remote_publication_scope": "Local pre-commit validation, not remote push evidence. Verify actual commit/remoteHEAD separately. Root checksum file covers public files but excludes itself.",
+  "limitations": [
+    "No renewed physical simulation in public replay.",
+    "Private original-to-public equivalence is local evidence, not independently provable without private bytes.",
+    "No configured/installed dedicated linter/typechecker; AST/in-memory compile, diff-whitespace, CPU tests and recorded-array audits used.",
+    "No universal improvement, model promotion, pureflat/rough experts, terrain-family OOD or real-robot claim."
+  ],
+  "artifact_whitespace_note": "Default whole staged diff --check flags original CSV CRLF and preserved prior-review Markdown two-space hardbreaks. Intentional valid CSV/Markdown bytes retained, not normalized. Source/code/docs scoped check passes.",
+  "final_documentation_review": {
+    "verdict": "PASS",
+    "checks_total": 132,
+    "record": "artifacts/teammate_port_v25_publication/final-documentation-review.json",
+    "sha256": "f416fe61484a070cc70fe9c8f054f5b778d55bf455ece9a39b9d4d596eb8bd27",
+    "scope": "Recorded claim, link and reproduction-command verification; not outcome/promotion endorsement or remote push evidence."
+  }
+}

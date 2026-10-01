@@ -1,0 +1,91 @@
+{
+  "schema": "week03_ant_v25_media_v1",
+  "created_utc": "2026-10-01T06:54:06.924259+00:00",
+  "predeclared_combined_seed61_vs_parent": true,
+  "not_best_seed_selection": true,
+  "qualitative_not_benchmark_denominator": true,
+  "originals_not_reencoded_or_trimmed": true,
+  "gif_previews": "10fps low-resolution whole16s timeline; palette quantization, no omitted resets/failures",
+  "frozen_sha256": "f7d5e77d3ee1a1dc1478912fed01ed18cce51d85b7b7cdd03832b16334b62340",
+  "files": {
+    "v16_control": {
+      "original_mp4": "artifacts/terrain_demo/teammate_port_v25/media/v16_control.mp4",
+      "original_mp4_sha256": "7762b917857f3c97718b268760c13d6894e918aa40b43c495665fb1d4b661db3",
+      "raw_metadata": "artifacts/terrain_demo/teammate_port_v25/media/v16_control.json",
+      "raw_metadata_sha256": "171363a4cffd87524ee4d3f19c337cc713be8a43b10cb76cb592358be4cb7562",
+      "frames": 480,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "resets_preserved": 1,
+      "preview_gif": "artifacts/terrain_demo/teammate_port_v25/media/v16_control.gif",
+      "preview_sha256": "f39c53046a416148fbea78e16ded05edefcd9fd2b1818dfd633c48c883326370",
+      "preview_frames": 160,
+      "preview_duration_ms": 16000,
+      "preview_dimensions": [
+        560,
+        315
+      ]
+    },
+    "combined61": {
+      "original_mp4": "artifacts/terrain_demo/teammate_port_v25/media/combined61.mp4",
+      "original_mp4_sha256": "37ba11154e287d7e32995ba7ae8ffa4431131fb9ac25411fb1da83cd798d0c29",
+      "raw_metadata": "artifacts/terrain_demo/teammate_port_v25/media/combined61.json",
+      "raw_metadata_sha256": "a692967e9cc231cb988f0fb0cae893882c445bcd4102d8103240e950c850df2f",
+      "frames": 480,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "resets_preserved": 1,
+      "preview_gif": "artifacts/terrain_demo/teammate_port_v25/media/combined61.gif",
+      "preview_sha256": "dfacfd8806384b0bfdcbddfffe742840df3492ab398c51d999fec5ab149a2b08",
+      "preview_frames": 160,
+      "preview_duration_ms": 16000,
+      "preview_dimensions": [
+        560,
+        315
+      ]
+    }
+  },
+  "commands": [
+    [
+      "<course-environment>/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+      "-hide_banner",
+      "-loglevel",
+      "warning",
+      "-n",
+      "-i",
+      "artifacts/terrain_demo/teammate_port_v25/media/v16_control.mp4",
+      "-filter_complex",
+      "[0:v]fps=10,scale=560:-1:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer",
+      "-filter_complex_threads",
+      "2",
+      "-loop",
+      "0",
+      "artifacts/terrain_demo/teammate_port_v25/media/v16_control.gif"
+    ],
+    [
+      "<course-environment>/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+      "-hide_banner",
+      "-loglevel",
+      "warning",
+      "-n",
+      "-i",
+      "artifacts/terrain_demo/teammate_port_v25/media/combined61.mp4",
+      "-filter_complex",
+      "[0:v]fps=10,scale=560:-1:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer",
+      "-filter_complex_threads",
+      "2",
+      "-loop",
+      "0",
+      "artifacts/terrain_demo/teammate_port_v25/media/combined61.gif"
+    ]
+  ],
+  "exact_initial_pairing_verified": true
+}

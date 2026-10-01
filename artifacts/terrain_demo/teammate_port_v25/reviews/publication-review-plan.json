@@ -1,0 +1,67 @@
+{
+  "role": "code-reviewer",
+  "review_kind": "read-only publication plan contract review; not implementation approval",
+  "created_utc": "2026-10-01T03:55:58.481658+00:00",
+  "recommendation": "COMMENT",
+  "findings": [
+    {
+      "severity": "HIGH",
+      "status": "confirmed consequence if proposed in-place sanitation is applied while active",
+      "location": "scripts/run_teammate_training_v25.py:300-322",
+      "issue": "Each subsequent main run validates exact frozen artifact and expected-initial bytes, runtime source keys, saved configs and development/cache links. Even path-only edits to initial_shared or expected_main break the primary run contract.",
+      "fix": "Do not mutate live ART/WORK/source/model/config inputs. Complete all GPU jobs and original audits first; prepare a separate presentation projection and preserve the complete original evidence graph."
+    },
+    {
+      "severity": "HIGH",
+      "status": "confirmed provenance boundary, not an existing tampering finding",
+      "location": "scripts/summarize_teammate_v25.py:158-175",
+      "issue": "Published metadata projections no longer hash to original_raw_sha256/evidence_sha256/freeze_sha256. Rewriting those historical fields would falsely re-freeze sanitized bytes at the original experiment time.",
+      "fix": "Keep all scientific hash values and original freeze bytes unchanged. Add a new explicitly post-experiment original-to-published provenance manifest; verify each hash in its own byte domain."
+    },
+    {
+      "severity": "HIGH",
+      "status": "confirmed nonportable CLI prerequisites",
+      "location": "scripts/audit_teammate_v25_raw.py:857-868",
+      "issue": "The full audit CLI requires the live /tmp terrain cache and original raw hashes. Training audit additionally requires ignored logs, TensorBoard events, original YAML and installed runtime paths; it is not a public-checkout evaluation replay command.",
+      "fix": "Document separate stdlib-only public-byte verification plus audit_evaluation_records/compare_summary. Never weaken frozen full-audit checks or silently skip missing dependencies."
+    },
+    {
+      "severity": "MEDIUM",
+      "status": "confirmed metadata classification constraint",
+      "location": "artifacts/terrain_demo/teammate_port_v25/initial_shared.json:142-145",
+      "issue": "Installed package paths occur as dictionary keys; /tmp defaults are configuration values, and the Python/run-python executable is outside the repository. Blindly stripping root prefixes can create nonexistent purported repo files or key collisions.",
+      "fix": "Use a typed per-field transformation allowlist, collision checks and explicit external-runtime logical identifiers. If every identifier must refer to a real repo file, keep these runtime-only metadata originals private and publish a separately labelled projection rather than inventing locations."
+    }
+  ],
+  "contract": {
+    "operational_boundary": "No publication rewrites until all nine mains, all evaluation/demos and full original-byte audits have completed and no process can re-read operational metadata.",
+    "immutable": "All frozen 20 scientific source/provenance files, original scientific files, model bytes, numeric/boolean/null values, array shapes/order, dates, seeds, controller identities, gates and every original scientific SHA value remain unchanged.",
+    "preferred_layout": "Separate publication-view copies, never the active canonical evidence graph. If final publication places projections at original ART paths, do so only after immutable backup + original audit and explicitly classify those paths as projections no longer accepted by historical full-audit CLI.",
+    "backup": "Exclusive, complete byte copy under ignored WORK/publication_raw_backup with private inventory and original relative path hierarchy; include all linked raw/enriched/evaluation/training artifacts and log/config evidence needed for provenance. Do not copy live partially written command ledger.",
+    "manifest": "New post-experiment publication_provenance.json: schema, publication timestamp, original training/eval freeze hashes, immutable scientific source hashes, and entries with logical artifact id, original repo-relative logical path, original_sha256, published_path, published_sha256, kind, transform_version, allowed JSON pointers and local semantic verification status. No absolute original replacement strings, secrets or old home prefixes in public manifest.",
+    "hash_domains": "Historical *_sha256 values remain historical. Current PUBLICATION_SHA256SUMS and new publication manifest authenticate published bytes. Original->published relation is a publisher attestation unless original bytes are also public; say so.",
+    "json_transform": "No generic textual replace. Change only declared path-string values or explicitly allowlisted absolute runtime-path keys; reject unknown path forms, collisions and arbitrary key deletion. Preserve exact JSON types; compare float64 bits including -0.0; numbers and arrays are untouched. Never alter hash-valued strings.",
+    "raw_relation": "For every pair, locally verify original enriched minus v25 equals original raw, published enriched minus v25 equals published raw, and windows/assignments/pairing hashes are identical across original and published. Keep v25.original_raw_sha256 equal to ORIGINAL raw digest; map to PUBLISHED raw digest in publication manifest.",
+    "cpu_replay": "Use Python stdlib only: verify published manifest paths/hashes and unchanged scientific source/model byte hashes; load exact 46 holdout records+freeze+summary; audit_evaluation_records(records,freeze); compare_summary(summary,canonical). Do not invoke simulator runners, full audit CLI, model unpickling or summarizer CLI.",
+    "what_cpu_proves": "Published raw-array protocol, full fixed matrix, paired metadata consistency, final-distance/F32 success masks, all counts/cells/gates/legacy contrasts and agreement with published summary; integrity of listed public file bytes.",
+    "what_cpu_does_not_prove": "No fresh GPU execution, training replay, private original-byte availability, original cache mesh integrity, tensor contents through unpickling, external runtime code identity, or cryptographic proof of original-to-projection equivalence without public originals.",
+    "secrets": "Do not publish credentials/tokens/cookies, signed auth URLs, env dumps, plugin/session databases, .omx, fleet telemetry, home paths, raw console stdout/stderr, unreviewed JSONL commands or raw WORK/logs wholesale. Publish only explicitly selected sanitized commands and bounded structured evidence. Scan strings AND keys; do not use this review as a completed secrets audit."
+  },
+  "observed_validation": {
+    "frozen_scientific_source_count": 20,
+    "frozen_scientific_source_sha256_verified": true,
+    "current_training_freeze_sha256": "af2d613ac97af833bd5c5c03357f657705e520de33c733c546876fb82d515408",
+    "stdlib_only_actual_development_records": 8,
+    "actual_development_audit": {
+      "phase": "development",
+      "physical_first_episodes": 280,
+      "dependent_window_observations": 560,
+      "exact_per_environment_parity": true
+    },
+    "in_memory_path_only_projection_audit_identical": true,
+    "torch_imported": false,
+    "isaaclab_imported": false,
+    "holdout_replay": "not run; no heldout data yet",
+    "no_gpu_remote_git_or_repository_source_edits": true
+  }
+}

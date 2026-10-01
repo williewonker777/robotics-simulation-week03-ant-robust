@@ -1,0 +1,32 @@
+{
+  "command": [
+    "<course-environment>/bin/python",
+    "scripts/evaluate_teammate_v25.py",
+    "--phase",
+    "development",
+    "--controller",
+    "v16_control",
+    "--geometry",
+    "51",
+    "--seed",
+    "24",
+    "--num-envs",
+    "35",
+    "--seconds",
+    "64",
+    "--headless",
+    "--device",
+    "cuda:1",
+    "--output",
+    "artifacts/terrain_demo/teammate_port_v25/development_cache_preparation/v16_control_g51_r24.json",
+    "--prepare"
+  ],
+  "cwd": ".",
+  "phase": "development",
+  "prepare": true,
+  "freeze_path": "artifacts/terrain_demo/teammate_port_v25/development_cache_preparation/frozen.json",
+  "freeze_sha256": "a78939468dc6d114640dfe8731503573b55bee3455828eb4ffa430e0008fc985",
+  "started_utc": "2026-10-01T03:30:05.726948+00:00",
+  "stdout": "outputs/teammate_port_v25_20261001/eval_development_prepare/_execution/v16_control_g51_r24.stdout.log",
+  "stderr": "outputs/teammate_port_v25_20261001/eval_development_prepare/_execution/v16_control_g51_r24.stderr.log"
+}

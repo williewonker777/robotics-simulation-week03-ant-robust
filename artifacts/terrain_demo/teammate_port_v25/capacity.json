@@ -1,0 +1,614 @@
+{
+  "created_utc": "2026-10-01T03:34:57.479101+00:00",
+  "phase": "capacity",
+  "passed": true,
+  "source_sha256": {
+    "src/week03_ant/teammate_recovery_v25.py": "c5729f30c0a4fd7db433f7ad5c425590acf9dbeab9d00c52a0e28a9a33793da6",
+    "src/week03_ant/teammate_study_v25.py": "894c8547efd3ffcf2e6e95d728e3293306dc264539f1c31b374978ba689987e3",
+    "src/week03_ant/tasks/teammate_v25_cfg.py": "3e3bf91b6fba1a8d03382ac712787f5a79e7aaa93a426ee6a86892025bbad9ab",
+    "src/week03_ant/tasks/teammate_v25.py": "2bfaad741c0ee1d8c33046b63180290c7f6e293d04fdaaff7e4739375dd774d8",
+    "scripts/teammate_v25.py": "c7c995900935a6156729f2fb4cc70f898cd6f601cef398ff593f6f445ea196a2",
+    "scripts/run_teammate_training_v25.py": "074cf266bf41a0e0f4fd37254f91f0f45718d331386849211b4818095c71cb0d",
+    "tests/test_teammate_math_v25.py": "e5fce64c1bf5c67cb54e2ddd8bcf56a06de6deb82416f67aeaf4fd4d48384082",
+    "tests/test_teammate_training_v25.py": "0b49c4f162db055587db07d41d260bfef51712265559788afc521038ae06118b",
+    "tests/test_teammate_harness_v25.py": "8e0e802fb4115ed360c8ee31534f05d09206dbc8808f4b6b394f692fe2324a4d",
+    "docs/experiment_plans/teammate_port_v25.md": "160aeab578ad0bb2de2e58dea1eeef4f01b521c6f806b9afe20c6ea25e525216",
+    "scripts/evaluate_teammate_v25.py": "e3ae28a38113ec267014f2be1e98976bee211bdee0099335e70a288614e854dd",
+    "scripts/run_teammate_eval_v25.py": "a10a4c79efe53184af39ab72769bcb50569fb36a16c74fb8534c7d542e6e48f6",
+    "scripts/summarize_teammate_v25.py": "b349389e4bf35d5079d2f1a6f938158f49457072035bc18be5b74f402c1c4439",
+    "tests/test_teammate_eval_v25.py": "0ac4da72fffb12df08a08f98ce7f7eb4faca33cb6aabb9f949c1ca151887e38a",
+    "tests/test_teammate_summary_v25.py": "9bc3d9acc2e0d69f7b9675e683a09ba0539b3a6c14e395fa0889c55178ef9820",
+    "scripts/audit_teammate_v25_raw.py": "bc01939f201064ffcbdb10ca11528f901c12521f39f74064fd679314273aa6ea",
+    "tests/test_teammate_audit_v25.py": "78a74d2fbf98bc8135aed87cbf316b7a5264f488ef053ba0c6241ffd72274dd9",
+    "artifacts/terrain_demo/teammate_port_v25/research.md": "04d03f685008617aa6f7de37c740071540cc01f39950439deeaf58ab03b14a4b",
+    "artifacts/terrain_demo/teammate_port_v25/research_provenance.json": "fedd95c65def74b7e3ba082988830ad280c1c113bd69cc066daa0afb35abf256",
+    "licenses/teammate_ant_BSD-3-Clause.txt": "df351ebfa8af317bf5a9ad83df63a8b68e4f5c04b71f30767cdb27aa434eac62"
+  },
+  "records": {
+    "control61": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_control61_initial.json",
+        "sha256": "998be67e193524ea6f09d5ef5cf8d055a9129c53b60a82dd00733a0e79be929e"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_control61_schedule.json",
+        "sha256": "fb003d063cff23b51c80dc356e33df2dedb92066e1d01cbf414aeacf6f2c149e"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_control61_initial_contact_rollout.json",
+        "sha256": "1d7b694f0a61df09c800b89bd6c0f1bfbcf142fb78d6313516378b4e5c38b8a4"
+      },
+      "learning_log": {
+        "iterations_logged": 2,
+        "transitions_logged": 262144,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 2,
+          "Episode_Reward/alive": 2,
+          "Episode_Reward/upright": 2,
+          "Episode_Reward/move_to_target": 2,
+          "Episode_Reward/action_l2": 2,
+          "Episode_Reward/energy": 2,
+          "Episode_Reward/joint_pos_limits": 2,
+          "Episode_Reward/fall": 2,
+          "Episode_Reward/centering": 2,
+          "Episode_Reward/stall": 2,
+          "Episode_Reward/stone_body_height": 2,
+          "Episode_Reward/stone_swing_clearance": 2,
+          "Episode_Reward/foothold_support": 2,
+          "Episode_Reward/adaptive_posture": 2,
+          "Episode_Reward/contact_slip": 2,
+          "Episode_Reward/teammate_recovery": 2,
+          "Episode_Termination/time_out": 2,
+          "Episode_Termination/torso_height": 2,
+          "Episode_Termination/overturn": 2,
+          "Episode_Termination/lane_departure": 2,
+          "Loss/value_function": 2,
+          "Loss/surrogate": 2,
+          "Loss/entropy": 2,
+          "Loss/prior_loss": 2,
+          "Loss/prior_mse": 2,
+          "Loss/weighted_prior": 2,
+          "Loss/action_mean_abs_gt1_fraction": 2,
+          "Loss/student_action_mean_rms": 2,
+          "Loss/teacher_action_mean_rms": 2,
+          "Loss/prior_action_difference_rms": 2,
+          "Loss/learning_rate": 2,
+          "Policy/mean_noise_std": 2,
+          "Perf/total_fps": 2,
+          "Perf/collection time": 2,
+          "Perf/learning_time": 2,
+          "Train/mean_reward": 2,
+          "Train/mean_episode_length": 2,
+          "Train/mean_reward/time": 2,
+          "Train/mean_episode_length/time": 2
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/capacity_control61.log",
+        "text_log_sha256": "453a500803350a62b35cb5e2f32b7c33140784c40f4a10ef9cc6a7f2a53fa9b4",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-32-10_v25_capacity_control61/events.out.tfevents.1790825537.<local-host>.472476.0": "2c0ccb69f2b82212984e1abc22c9e4ed3025eb7ac8a99bc17ba3c5aad0a24bb0"
+        }
+      }
+    },
+    "recovery61": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_recovery61_initial.json",
+        "sha256": "ae293a34646610113e13c961af4b120c3d5de33dbb8f86d1944832d8dc1c7e14"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_recovery61_schedule.json",
+        "sha256": "d7b9da40c0acd346c9ba646fb5a000a1ad941bef638c7f036edbb2a7335e2796"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_recovery61_initial_contact_rollout.json",
+        "sha256": "190950d324b301feeb798232c83f69ad8ec403ff444401259b7fac0b17d819bf"
+      },
+      "learning_log": {
+        "iterations_logged": 2,
+        "transitions_logged": 262144,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 2,
+          "Episode_Reward/alive": 2,
+          "Episode_Reward/upright": 2,
+          "Episode_Reward/move_to_target": 2,
+          "Episode_Reward/action_l2": 2,
+          "Episode_Reward/energy": 2,
+          "Episode_Reward/joint_pos_limits": 2,
+          "Episode_Reward/fall": 2,
+          "Episode_Reward/centering": 2,
+          "Episode_Reward/stall": 2,
+          "Episode_Reward/stone_body_height": 2,
+          "Episode_Reward/stone_swing_clearance": 2,
+          "Episode_Reward/foothold_support": 2,
+          "Episode_Reward/adaptive_posture": 2,
+          "Episode_Reward/contact_slip": 2,
+          "Episode_Reward/teammate_recovery": 2,
+          "Episode_Termination/time_out": 2,
+          "Episode_Termination/torso_height": 2,
+          "Episode_Termination/overturn": 2,
+          "Episode_Termination/lane_departure": 2,
+          "Loss/value_function": 2,
+          "Loss/surrogate": 2,
+          "Loss/entropy": 2,
+          "Loss/prior_loss": 2,
+          "Loss/prior_mse": 2,
+          "Loss/weighted_prior": 2,
+          "Loss/action_mean_abs_gt1_fraction": 2,
+          "Loss/student_action_mean_rms": 2,
+          "Loss/teacher_action_mean_rms": 2,
+          "Loss/prior_action_difference_rms": 2,
+          "Loss/learning_rate": 2,
+          "Policy/mean_noise_std": 2,
+          "Perf/total_fps": 2,
+          "Perf/collection time": 2,
+          "Perf/learning_time": 2,
+          "Train/mean_reward": 2,
+          "Train/mean_episode_length": 2,
+          "Train/mean_reward/time": 2,
+          "Train/mean_episode_length/time": 2
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/capacity_recovery61.log",
+        "text_log_sha256": "9568c0048561b2d2df11b5e7558812ea5283f4f68fd719939df665f91278dfbf",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-32-29_v25_capacity_recovery61/events.out.tfevents.1790825557.<local-host>.473471.0": "a2c0ef1b35d190fa7a79d71cfe2299d36b9506654ce2d915799c07810e2d2b93"
+        }
+      }
+    },
+    "combined61": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_combined61_initial.json",
+        "sha256": "9c520e586117f7b3dc3480d88e8f723493ad5073e9e946ae00a548c6a78f8012"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_combined61_schedule.json",
+        "sha256": "7eee31c112cd8c42035507ef08d4b6740f4b985c15f243018944b4a346b3ff63"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_combined61_initial_contact_rollout.json",
+        "sha256": "689e35746e8750a07f912b587a98fdcd3123426e7f7f31f1574851e479929f9d"
+      },
+      "learning_log": {
+        "iterations_logged": 2,
+        "transitions_logged": 262144,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 2,
+          "Episode_Reward/alive": 2,
+          "Episode_Reward/upright": 2,
+          "Episode_Reward/move_to_target": 2,
+          "Episode_Reward/action_l2": 2,
+          "Episode_Reward/energy": 2,
+          "Episode_Reward/joint_pos_limits": 2,
+          "Episode_Reward/fall": 2,
+          "Episode_Reward/centering": 2,
+          "Episode_Reward/stall": 2,
+          "Episode_Reward/stone_body_height": 2,
+          "Episode_Reward/stone_swing_clearance": 2,
+          "Episode_Reward/foothold_support": 2,
+          "Episode_Reward/adaptive_posture": 2,
+          "Episode_Reward/contact_slip": 2,
+          "Episode_Reward/teammate_recovery": 2,
+          "Episode_Termination/time_out": 2,
+          "Episode_Termination/torso_height": 2,
+          "Episode_Termination/overturn": 2,
+          "Episode_Termination/lane_departure": 2,
+          "Loss/value_function": 2,
+          "Loss/surrogate": 2,
+          "Loss/entropy": 2,
+          "Loss/prior_loss": 2,
+          "Loss/prior_mse": 2,
+          "Loss/weighted_prior": 2,
+          "Loss/action_mean_abs_gt1_fraction": 2,
+          "Loss/student_action_mean_rms": 2,
+          "Loss/teacher_action_mean_rms": 2,
+          "Loss/prior_action_difference_rms": 2,
+          "Loss/learning_rate": 2,
+          "Policy/mean_noise_std": 2,
+          "Perf/total_fps": 2,
+          "Perf/collection time": 2,
+          "Perf/learning_time": 2,
+          "Train/mean_reward": 2,
+          "Train/mean_episode_length": 2,
+          "Train/mean_reward/time": 2,
+          "Train/mean_episode_length/time": 2
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/capacity_combined61.log",
+        "text_log_sha256": "f2704520cd6c93bb3fb288b8613b2848d709126fb7eaa55481e362d2a40f38a1",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-32-48_v25_capacity_combined61/events.out.tfevents.1790825576.<local-host>.474546.0": "324c50620659750beb1e1ac08d39cf76f90499eef151153385d3ea7910831f40"
+        }
+      }
+    },
+    "control62": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_control62_initial.json",
+        "sha256": "47a59f3a39071ce110d1dda3d81fea556b9217d1908d3ce8273b699edfd2376d"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_control62_schedule.json",
+        "sha256": "1c2648b6ffa383189e66d31634ded2da4e22b9257c888399fedcd617ecbbc804"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_control62_initial_contact_rollout.json",
+        "sha256": "f427fc023120edd783759a9f8946c16c34c8b3a5b13724f9bbc965c477ec53bf"
+      },
+      "learning_log": {
+        "iterations_logged": 2,
+        "transitions_logged": 262144,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 2,
+          "Episode_Reward/alive": 2,
+          "Episode_Reward/upright": 2,
+          "Episode_Reward/move_to_target": 2,
+          "Episode_Reward/action_l2": 2,
+          "Episode_Reward/energy": 2,
+          "Episode_Reward/joint_pos_limits": 2,
+          "Episode_Reward/fall": 2,
+          "Episode_Reward/centering": 2,
+          "Episode_Reward/stall": 2,
+          "Episode_Reward/stone_body_height": 2,
+          "Episode_Reward/stone_swing_clearance": 2,
+          "Episode_Reward/foothold_support": 2,
+          "Episode_Reward/adaptive_posture": 2,
+          "Episode_Reward/contact_slip": 2,
+          "Episode_Reward/teammate_recovery": 2,
+          "Episode_Termination/time_out": 2,
+          "Episode_Termination/torso_height": 2,
+          "Episode_Termination/overturn": 2,
+          "Episode_Termination/lane_departure": 2,
+          "Loss/value_function": 2,
+          "Loss/surrogate": 2,
+          "Loss/entropy": 2,
+          "Loss/prior_loss": 2,
+          "Loss/prior_mse": 2,
+          "Loss/weighted_prior": 2,
+          "Loss/action_mean_abs_gt1_fraction": 2,
+          "Loss/student_action_mean_rms": 2,
+          "Loss/teacher_action_mean_rms": 2,
+          "Loss/prior_action_difference_rms": 2,
+          "Loss/learning_rate": 2,
+          "Policy/mean_noise_std": 2,
+          "Perf/total_fps": 2,
+          "Perf/collection time": 2,
+          "Perf/learning_time": 2,
+          "Train/mean_reward": 2,
+          "Train/mean_episode_length": 2,
+          "Train/mean_reward/time": 2,
+          "Train/mean_episode_length/time": 2
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/capacity_control62.log",
+        "text_log_sha256": "987536dbbb75cc1689698d413db1024a92afe42075d96041ca6fbced7d335e60",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-33-08_v25_capacity_control62/events.out.tfevents.1790825595.<local-host>.475672.0": "c7d00f7263f545010a03d44ab8bf4269a28a4bf5466af77da4634bd490edb1a3"
+        }
+      }
+    },
+    "recovery62": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_recovery62_initial.json",
+        "sha256": "dd779c2b47e73b39964fb6367f3e42dbd98b9490fd81a72c524f56c0ee7ffd41"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_recovery62_schedule.json",
+        "sha256": "ac4c80990fe45a62844aa99bd52dcf026ed08aed5f330c0d680e84f08fbb83c6"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_recovery62_initial_contact_rollout.json",
+        "sha256": "ade5015979a0f41f3002a5244db7425efbd584b1d34f83735f566217422488d5"
+      },
+      "learning_log": {
+        "iterations_logged": 2,
+        "transitions_logged": 262144,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 2,
+          "Episode_Reward/alive": 2,
+          "Episode_Reward/upright": 2,
+          "Episode_Reward/move_to_target": 2,
+          "Episode_Reward/action_l2": 2,
+          "Episode_Reward/energy": 2,
+          "Episode_Reward/joint_pos_limits": 2,
+          "Episode_Reward/fall": 2,
+          "Episode_Reward/centering": 2,
+          "Episode_Reward/stall": 2,
+          "Episode_Reward/stone_body_height": 2,
+          "Episode_Reward/stone_swing_clearance": 2,
+          "Episode_Reward/foothold_support": 2,
+          "Episode_Reward/adaptive_posture": 2,
+          "Episode_Reward/contact_slip": 2,
+          "Episode_Reward/teammate_recovery": 2,
+          "Episode_Termination/time_out": 2,
+          "Episode_Termination/torso_height": 2,
+          "Episode_Termination/overturn": 2,
+          "Episode_Termination/lane_departure": 2,
+          "Loss/value_function": 2,
+          "Loss/surrogate": 2,
+          "Loss/entropy": 2,
+          "Loss/prior_loss": 2,
+          "Loss/prior_mse": 2,
+          "Loss/weighted_prior": 2,
+          "Loss/action_mean_abs_gt1_fraction": 2,
+          "Loss/student_action_mean_rms": 2,
+          "Loss/teacher_action_mean_rms": 2,
+          "Loss/prior_action_difference_rms": 2,
+          "Loss/learning_rate": 2,
+          "Policy/mean_noise_std": 2,
+          "Perf/total_fps": 2,
+          "Perf/collection time": 2,
+          "Perf/learning_time": 2,
+          "Train/mean_reward": 2,
+          "Train/mean_episode_length": 2,
+          "Train/mean_reward/time": 2,
+          "Train/mean_episode_length/time": 2
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/capacity_recovery62.log",
+        "text_log_sha256": "9dad3e43ac5949e4b5978b4d0b4bdac8fac183765144b76c10a98c7cf2be7ce3",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-33-27_v25_capacity_recovery62/events.out.tfevents.1790825614.<local-host>.476626.0": "0acd1dd66c41489aef68e298fbbccc9c2eac780657e9c2b87a0a43111cbe38d8"
+        }
+      }
+    },
+    "combined62": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_combined62_initial.json",
+        "sha256": "75fd8e0a2a111034d5dec16613cece07ed98f9003c5700f255cc4a3defd83b8d"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_combined62_schedule.json",
+        "sha256": "c9043156a091c9cb2008f28abecf7e3faf5c90281f0631efa861c486aa19ded0"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_combined62_initial_contact_rollout.json",
+        "sha256": "95c45ce6ccf19b5783a35c59274de58846510e079ac81ef319fa2324c9be5ef7"
+      },
+      "learning_log": {
+        "iterations_logged": 2,
+        "transitions_logged": 262144,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 2,
+          "Episode_Reward/alive": 2,
+          "Episode_Reward/upright": 2,
+          "Episode_Reward/move_to_target": 2,
+          "Episode_Reward/action_l2": 2,
+          "Episode_Reward/energy": 2,
+          "Episode_Reward/joint_pos_limits": 2,
+          "Episode_Reward/fall": 2,
+          "Episode_Reward/centering": 2,
+          "Episode_Reward/stall": 2,
+          "Episode_Reward/stone_body_height": 2,
+          "Episode_Reward/stone_swing_clearance": 2,
+          "Episode_Reward/foothold_support": 2,
+          "Episode_Reward/adaptive_posture": 2,
+          "Episode_Reward/contact_slip": 2,
+          "Episode_Reward/teammate_recovery": 2,
+          "Episode_Termination/time_out": 2,
+          "Episode_Termination/torso_height": 2,
+          "Episode_Termination/overturn": 2,
+          "Episode_Termination/lane_departure": 2,
+          "Loss/value_function": 2,
+          "Loss/surrogate": 2,
+          "Loss/entropy": 2,
+          "Loss/prior_loss": 2,
+          "Loss/prior_mse": 2,
+          "Loss/weighted_prior": 2,
+          "Loss/action_mean_abs_gt1_fraction": 2,
+          "Loss/student_action_mean_rms": 2,
+          "Loss/teacher_action_mean_rms": 2,
+          "Loss/prior_action_difference_rms": 2,
+          "Loss/learning_rate": 2,
+          "Policy/mean_noise_std": 2,
+          "Perf/total_fps": 2,
+          "Perf/collection time": 2,
+          "Perf/learning_time": 2,
+          "Train/mean_reward": 2,
+          "Train/mean_episode_length": 2,
+          "Train/mean_reward/time": 2,
+          "Train/mean_episode_length/time": 2
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/capacity_combined62.log",
+        "text_log_sha256": "c253790e1ff3e5ba4c0ab80580bd0f391bd83a3fba8f1dd5429ec7ce2b78d882",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-33-46_v25_capacity_combined62/events.out.tfevents.1790825633.<local-host>.477671.0": "facec946738430875a0bb0bd6b4dfc5c821a749cb882ee781eb887382b18c4a1"
+        }
+      }
+    },
+    "control63": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_control63_initial.json",
+        "sha256": "289d82cacd72b9d0f4d782bb2628cbc051a113c429159d4e6f7da2fae30c3c9b"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_control63_schedule.json",
+        "sha256": "c4154ce07c02fa9f84371ff0168781c8ec9325661f1274fb49db20a315750d6c"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_control63_initial_contact_rollout.json",
+        "sha256": "dc1dcf22086c98e3c88ddde2fec2ad9f6602ebd56443d90ec4e9dfe14dc12477"
+      },
+      "learning_log": {
+        "iterations_logged": 2,
+        "transitions_logged": 262144,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 2,
+          "Episode_Reward/alive": 2,
+          "Episode_Reward/upright": 2,
+          "Episode_Reward/move_to_target": 2,
+          "Episode_Reward/action_l2": 2,
+          "Episode_Reward/energy": 2,
+          "Episode_Reward/joint_pos_limits": 2,
+          "Episode_Reward/fall": 2,
+          "Episode_Reward/centering": 2,
+          "Episode_Reward/stall": 2,
+          "Episode_Reward/stone_body_height": 2,
+          "Episode_Reward/stone_swing_clearance": 2,
+          "Episode_Reward/foothold_support": 2,
+          "Episode_Reward/adaptive_posture": 2,
+          "Episode_Reward/contact_slip": 2,
+          "Episode_Reward/teammate_recovery": 2,
+          "Episode_Termination/time_out": 2,
+          "Episode_Termination/torso_height": 2,
+          "Episode_Termination/overturn": 2,
+          "Episode_Termination/lane_departure": 2,
+          "Loss/value_function": 2,
+          "Loss/surrogate": 2,
+          "Loss/entropy": 2,
+          "Loss/prior_loss": 2,
+          "Loss/prior_mse": 2,
+          "Loss/weighted_prior": 2,
+          "Loss/action_mean_abs_gt1_fraction": 2,
+          "Loss/student_action_mean_rms": 2,
+          "Loss/teacher_action_mean_rms": 2,
+          "Loss/prior_action_difference_rms": 2,
+          "Loss/learning_rate": 2,
+          "Policy/mean_noise_std": 2,
+          "Perf/total_fps": 2,
+          "Perf/collection time": 2,
+          "Perf/learning_time": 2,
+          "Train/mean_reward": 2,
+          "Train/mean_episode_length": 2,
+          "Train/mean_reward/time": 2,
+          "Train/mean_episode_length/time": 2
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/capacity_control63.log",
+        "text_log_sha256": "4fba5dcb373e1d54733d9d0022dfbc4d2105ba9cb5b953fed74e1110a32ed868",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-34-05_v25_capacity_control63/events.out.tfevents.1790825653.<local-host>.478704.0": "f59fa89b86442929800c0ef9f90ff43337747521d867528ba5eed940680fcfe6"
+        }
+      }
+    },
+    "recovery63": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_recovery63_initial.json",
+        "sha256": "1d4f0c4a31338fbd919d194b808138164fe9e26929963089206dd3950b3ecb62"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_recovery63_schedule.json",
+        "sha256": "8919951f46ba41de1e89fd5830becd0560dc080c09bd4a23bbeba7b7cb8b7fa4"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_recovery63_initial_contact_rollout.json",
+        "sha256": "e5eea2d98f4dd83e0a99423df0ba2e386a3e975cd12457f80b143cac403ca613"
+      },
+      "learning_log": {
+        "iterations_logged": 2,
+        "transitions_logged": 262144,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 2,
+          "Episode_Reward/alive": 2,
+          "Episode_Reward/upright": 2,
+          "Episode_Reward/move_to_target": 2,
+          "Episode_Reward/action_l2": 2,
+          "Episode_Reward/energy": 2,
+          "Episode_Reward/joint_pos_limits": 2,
+          "Episode_Reward/fall": 2,
+          "Episode_Reward/centering": 2,
+          "Episode_Reward/stall": 2,
+          "Episode_Reward/stone_body_height": 2,
+          "Episode_Reward/stone_swing_clearance": 2,
+          "Episode_Reward/foothold_support": 2,
+          "Episode_Reward/adaptive_posture": 2,
+          "Episode_Reward/contact_slip": 2,
+          "Episode_Reward/teammate_recovery": 2,
+          "Episode_Termination/time_out": 2,
+          "Episode_Termination/torso_height": 2,
+          "Episode_Termination/overturn": 2,
+          "Episode_Termination/lane_departure": 2,
+          "Loss/value_function": 2,
+          "Loss/surrogate": 2,
+          "Loss/entropy": 2,
+          "Loss/prior_loss": 2,
+          "Loss/prior_mse": 2,
+          "Loss/weighted_prior": 2,
+          "Loss/action_mean_abs_gt1_fraction": 2,
+          "Loss/student_action_mean_rms": 2,
+          "Loss/teacher_action_mean_rms": 2,
+          "Loss/prior_action_difference_rms": 2,
+          "Loss/learning_rate": 2,
+          "Policy/mean_noise_std": 2,
+          "Perf/total_fps": 2,
+          "Perf/collection time": 2,
+          "Perf/learning_time": 2,
+          "Train/mean_reward": 2,
+          "Train/mean_episode_length": 2,
+          "Train/mean_reward/time": 2,
+          "Train/mean_episode_length/time": 2
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/capacity_recovery63.log",
+        "text_log_sha256": "18acc8812eb1550cfa31f2175f6645485dc840488bfae487262634a7e4d6742d",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-34-24_v25_capacity_recovery63/events.out.tfevents.1790825672.<local-host>.479774.0": "4032f3a3147e93e64c6be6c0ad82be076ae8243542df4ce9ccd90f3cf193b5c6"
+        }
+      }
+    },
+    "combined63": {
+      "initial": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_combined63_initial.json",
+        "sha256": "532084138083701a481b03cbddce3ed6cba27f97e393be147358b317a78b2af1"
+      },
+      "schedule": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_combined63_schedule.json",
+        "sha256": "4df1c1bdf2d5a161a74cbb61c51f550e7cd3d5afe1db4470acc51752097a184d"
+      },
+      "rollout": {
+        "path": "artifacts/terrain_demo/teammate_port_v25/development_training/capacity/capacity_combined63_initial_contact_rollout.json",
+        "sha256": "76a24f3e9c30db504273bc95b240b9c1373c5e7004c02c270d1950b5cff4f954"
+      },
+      "learning_log": {
+        "iterations_logged": 2,
+        "transitions_logged": 262144,
+        "all_scalars_finite": true,
+        "scalar_counts": {
+          "Episode_Reward/progress": 2,
+          "Episode_Reward/alive": 2,
+          "Episode_Reward/upright": 2,
+          "Episode_Reward/move_to_target": 2,
+          "Episode_Reward/action_l2": 2,
+          "Episode_Reward/energy": 2,
+          "Episode_Reward/joint_pos_limits": 2,
+          "Episode_Reward/fall": 2,
+          "Episode_Reward/centering": 2,
+          "Episode_Reward/stall": 2,
+          "Episode_Reward/stone_body_height": 2,
+          "Episode_Reward/stone_swing_clearance": 2,
+          "Episode_Reward/foothold_support": 2,
+          "Episode_Reward/adaptive_posture": 2,
+          "Episode_Reward/contact_slip": 2,
+          "Episode_Reward/teammate_recovery": 2,
+          "Episode_Termination/time_out": 2,
+          "Episode_Termination/torso_height": 2,
+          "Episode_Termination/overturn": 2,
+          "Episode_Termination/lane_departure": 2,
+          "Loss/value_function": 2,
+          "Loss/surrogate": 2,
+          "Loss/entropy": 2,
+          "Loss/prior_loss": 2,
+          "Loss/prior_mse": 2,
+          "Loss/weighted_prior": 2,
+          "Loss/action_mean_abs_gt1_fraction": 2,
+          "Loss/student_action_mean_rms": 2,
+          "Loss/teacher_action_mean_rms": 2,
+          "Loss/prior_action_difference_rms": 2,
+          "Loss/learning_rate": 2,
+          "Policy/mean_noise_std": 2,
+          "Perf/total_fps": 2,
+          "Perf/collection time": 2,
+          "Perf/learning_time": 2,
+          "Train/mean_reward": 2,
+          "Train/mean_episode_length": 2,
+          "Train/mean_reward/time": 2,
+          "Train/mean_episode_length/time": 2
+        },
+        "text_log": "outputs/teammate_port_v25_20261001/capacity_combined63.log",
+        "text_log_sha256": "bc5434fc99bdefaa92be9868e4cd0f74c94c3a398ed1f7ac26be3bd625dc00aa",
+        "event_files_sha256": {
+          "logs/rsl_rl/week03_ant_teammate_port_v25/2026-10-01_12-34-44_v25_capacity_combined63/events.out.tfevents.1790825691.<local-host>.480677.0": "994b94369a8d94f21cb44d815c1e431e23f42e55d2a10defd51fac9e13c4c75e"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "week03_ant_v25_publisher_preapply_review_v1",
+  "created_utc": "2026-10-01T06:36:35.921825+00:00",
+  "reviewer": "/root/port_code_review",
+  "mode": "independent read-only implementation review",
+  "recommendation": "APPROVE",
+  "approval_scope": "Conditional approval of publisher implementation only, not actual publication or holdout performance",
+  "file": "outputs/teammate_port_v25_20261001/prepare_publication.py",
+  "sha256": "bde6c6f29de3d3cbb8feab1d45e9cedd523d5793fa09523f2d2565db3ae82798",
+  "open_issues": [],
+  "resolved_findings": [
+    {
+      "severity": "HIGH",
+      "issue": "Missing original inventory silently accepted via current SHA fallback",
+      "resolution_lines": "102,117-118",
+      "resolution": "Closed-world candidate equality and mandatory original hash lookup/check"
+    },
+    {
+      "severity": "HIGH",
+      "issue": "Durable origin journal only written after destructive projection/deletion; retained copies not verified",
+      "resolution_lines": "32,103-113",
+      "resolution": "All retained origin hashes verified; exclusive pre-projection journal including relocation and immutable witnesses precedes rewriting/deletion"
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "Unbounded prefix replacement altered sibling directory identities",
+      "resolution_lines": "70-81",
+      "resolution": "Explicit left/right and slash boundaries; unknown local absolute paths rejected"
+    },
+    {
+      "severity": "HIGH",
+      "issue": "Relocating initializer paths inside training_frozen would break model_entry byte binding",
+      "resolution_lines": "114-123,161",
+      "resolution": "training_frozen.json and trained_models.json preserved byte-for-byte, before/after binding guards"
+    }
+  ],
+  "diagnostics": {
+    "syntax_ast_compile": "PASS; compile in memory, no pycache",
+    "publisher_main_executed": false,
+    "pure_function_extraction": "exact/portable/project only; no publisher main, writes, or deletions",
+    "prefix_positive_negative": "PASS exact/slash/backtick, sibling ROOT-other/env-old rejection, unknown /tmp rejection, development freeze relocation",
+    "corpus_projection": {
+      "json": 337,
+      "yaml": 18,
+      "markdown": 9,
+      "failures": 0,
+      "json_contract": "Exact Python scalar types, dict key order, list order, IEEE754 float bits after JSON roundtrip of projected expected object",
+      "yaml_contract": "BaseLoader(project(original)) equals BaseLoader(projected text)"
+    },
+    "training_freeze_sha256": "af2d613ac97af833bd5c5c03357f657705e520de33c733c546876fb82d515408"
+  },
+  "conditions_before_apply": [
+    "All 46 scored records, summary, independent audit, media and other writers completed; do not modify live ART",
+    "Execute without Python optimization because operational guards use assert",
+    "Retain private original backup plus exclusive pre-projection journal; any partial failure requires controlled recovery from originals, not blind rerun",
+    "Preserve scientific source20/base6/model bytes and historical hash values; training binding anchors remain literal original bytes"
+  ],
+  "required_post_apply_verification": [
+    "Run reviewed public verifier against actual full published manifest, resolving every summary evidence path/digest including relocated preparation proofs",
+    "Require actual 46 records/8050 physical episodes/16100 dependent windows, raw/enriched identity, source/model/freeze original-domain hashes, and compare_summary parity",
+    "Confirm original protected-file checksums and allowed documentation change boundaries; inspect public inventory for private console/cache/secret leakage"
+  ],
+  "limitations": [
+    "Corpus snapshot taken during ongoing holdout; not final closed public inventory",
+    "No --apply, GPU, simulator, remote or Git operation performed",
+    "No completed actual holdout/performance/publication approval",
+    "Historical full runtime CLI needs private execution graph; public replay is scoped stdlib byte/array/summary verification",
+    "Memoization proposed after this source pin is not included in reviewed bytes"
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "schema": "week03_ant_v25_training_diagnostics_v1",
+  "created_utc": "2026-10-01T05:51:56.552918+00:00",
+  "descriptive_training_exposure_not_causal_mediation": true,
+  "no_model_selection": true,
+  "runs": {
+    "control61": {
+      "training_seed": 61,
+      "entropy_coef": 0.002,
+      "recovery_enabled": false,
+      "measured_environment_steps": 32768000,
+      "means_per_env_policy_step": {
+        "raw_sum": -0.2928254284492277,
+        "applied_sum": 0.0,
+        "clearance_risk": 0.06493263334149249,
+        "tilt_risk": 0.006327061189503017,
+        "action_delta_squared_sum": 4.497309501305952,
+        "angular_xy_squared_sum": 4.213317744598331
+      },
+      "clearance_abstention_fraction": 0.00046527099609375,
+      "final_mean_noise_std": 0.19475911557674408,
+      "final_mean_training_reward": 24.84465789794922,
+      "reward_rate_dt": 0.016666666666666666
+    },
+    "recovery61": {
+      "training_seed": 61,
+      "entropy_coef": 0.002,
+      "recovery_enabled": true,
+      "measured_environment_steps": 32768000,
+      "means_per_env_policy_step": {
+        "raw_sum": -0.28254110925060144,
+        "applied_sum": -0.28254110925060144,
+        "clearance_risk": 0.06001277244343747,
+        "tilt_risk": 0.006562193832390674,
+        "action_delta_squared_sum": 4.350704436582844,
+        "angular_xy_squared_sum": 4.235365261328806
+      },
+      "clearance_abstention_fraction": 0.000467010498046875,
+      "final_mean_noise_std": 0.19289958477020264,
+      "final_mean_training_reward": 22.152055740356445,
+      "reward_rate_dt": 0.016666666666666666
+    },
+    "combined61": {
+      "training_seed": 61,
+      "entropy_coef": 0.005,
+      "recovery_enabled": true,
+      "measured_environment_steps": 32768000,
+      "means_per_env_policy_step": {
+        "raw_sum": -0.2904369205311805,
+        "applied_sum": -0.2904369205311805,
+        "clearance_risk": 0.05728188910391083,
+        "tilt_risk": 0.007001936220779027,
+        "action_delta_squared_sum": 5.105164539340717,
+        "angular_xy_squared_sum": 4.43270495033395
+      },
+      "clearance_abstention_fraction": 0.000486236572265625,
+      "final_mean_noise_std": 0.3067329525947571,
+      "final_mean_training_reward": 33.886016845703125,
+      "reward_rate_dt": 0.016666666666666666
+    },
+    "control62": {
+      "training_seed": 62,
+      "entropy_coef": 0.002,
+      "recovery_enabled": false,
+      "measured_environment_steps": 32768000,
+      "means_per_env_policy_step": {
+        "raw_sum": -0.2870054286613356,
+        "applied_sum": 0.0,
+        "clearance_risk": 0.06090721093806465,
+        "tilt_risk": 0.006571779524373315,
+        "action_delta_squared_sum": 4.50865072373938,
+        "angular_xy_squared_sum": 4.278437588352229
+      },
+      "clearance_abstention_fraction": 0.000511993408203125,
+      "final_mean_noise_std": 0.19455505907535553,
+      "final_mean_training_reward": 40.72980880737305,
+      "reward_rate_dt": 0.016666666666666666
+    },
+    "recovery62": {
+      "training_seed": 62,
+      "entropy_coef": 0.002,
+      "recovery_enabled": true,
+      "measured_environment_steps": 32768000,
+      "means_per_env_policy_step": {
+        "raw_sum": -0.28097187586861216,
+        "applied_sum": -0.28097187586861216,
+        "clearance_risk": 0.05879127395273062,
+        "tilt_risk": 0.006758561946029564,
+        "action_delta_squared_sum": 4.38410194867861,
+        "angular_xy_squared_sum": 4.241247351357698
+      },
+      "clearance_abstention_fraction": 0.000505157470703125,
+      "final_mean_noise_std": 0.19029009342193604,
+      "final_mean_training_reward": 22.647220611572266,
+      "reward_rate_dt": 0.016666666666666666
+    },
+    "combined62": {
+      "training_seed": 62,
+      "entropy_coef": 0.005,
+      "recovery_enabled": true,
+      "measured_environment_steps": 32768000,
+      "means_per_env_policy_step": {
+        "raw_sum": -0.2898778069616411,
+        "applied_sum": -0.2898778069616411,
+        "clearance_risk": 0.05707170031610147,
+        "tilt_risk": 0.006805322930853903,
+        "action_delta_squared_sum": 5.127930896155918,
+        "angular_xy_squared_sum": 4.433778031279498
+      },
+      "clearance_abstention_fraction": 0.000483734130859375,
+      "final_mean_noise_std": 0.3026294410228729,
+      "final_mean_training_reward": 31.284488677978516,
+      "reward_rate_dt": 0.016666666666666666
+    },
+    "control63": {
+      "training_seed": 63,
+      "entropy_coef": 0.002,
+      "recovery_enabled": false,
+      "measured_environment_steps": 32768000,
+      "means_per_env_policy_step": {
+        "raw_sum": -0.29050810762685314,
+        "applied_sum": 0.0,
+        "clearance_risk": 0.06333623246115966,
+        "tilt_risk": 0.006252719704620215,
+        "action_delta_squared_sum": 4.546274558631781,
+        "angular_xy_squared_sum": 4.234698278188857
+      },
+      "clearance_abstention_fraction": 0.000441925048828125,
+      "final_mean_noise_std": 0.1989077627658844,
+      "final_mean_training_reward": 41.242733001708984,
+      "reward_rate_dt": 0.016666666666666666
+    },
+    "recovery63": {
+      "training_seed": 63,
+      "entropy_coef": 0.002,
+      "recovery_enabled": true,
+      "measured_environment_steps": 32768000,
+      "means_per_env_policy_step": {
+        "raw_sum": -0.28404738547812614,
+        "applied_sum": -0.28404738547812614,
+        "clearance_risk": 0.060236396004109044,
+        "tilt_risk": 0.006439215804329856,
+        "action_delta_squared_sum": 4.456294020042717,
+        "angular_xy_squared_sum": 4.245328835004531
+      },
+      "clearance_abstention_fraction": 0.000503814697265625,
+      "final_mean_noise_std": 0.18966734409332275,
+      "final_mean_training_reward": 36.355674743652344,
+      "reward_rate_dt": 0.016666666666666666
+    },
+    "combined63": {
+      "training_seed": 63,
+      "entropy_coef": 0.005,
+      "recovery_enabled": true,
+      "measured_environment_steps": 32768000,
+      "means_per_env_policy_step": {
+        "raw_sum": -0.2958456570613449,
+        "applied_sum": -0.2958456570613449,
+        "clearance_risk": 0.06115560173848574,
+        "tilt_risk": 0.006684053212666163,
+        "action_delta_squared_sum": 5.0657265518011,
+        "angular_xy_squared_sum": 4.380363237234906
+      },
+      "clearance_abstention_fraction": 0.000480224609375,
+      "final_mean_noise_std": 0.29732054471969604,
+      "final_mean_training_reward": 24.019527435302734,
+      "reward_rate_dt": 0.016666666666666666
+    }
+  },
+  "evidence_sha256": {
+    "artifacts/terrain_demo/teammate_port_v25/training/control61_schedule.json": "eccf94c312059db3c7c7cc30b9898e000a24e6670fb45b18c74aa77a7c26757e",
+    "artifacts/terrain_demo/teammate_port_v25/training/recovery61_schedule.json": "ad4932ad3fcdb992e45616ff7248a780f58527f5b6ac8ed088bb0c383a64c90e",
+    "artifacts/terrain_demo/teammate_port_v25/training/combined61_schedule.json": "f379c4783cb7ae38ef65cf5f108f28110444cae4f30a10e3c10a2a6afee7d5aa",
+    "artifacts/terrain_demo/teammate_port_v25/training/control62_schedule.json": "dc42bfb333249205ee0277d7853d4684fa64f8422ca44b8c6b33de7e1180f60f",
+    "artifacts/terrain_demo/teammate_port_v25/training/recovery62_schedule.json": "23af68fd66328a43b118fa82a881e49bba5050208bea8e71f5fc500eb27138d3",
+    "artifacts/terrain_demo/teammate_port_v25/training/combined62_schedule.json": "46a0de1e6ab860a278d99e54edd8a0df8bce89d0919d38a0a66a16d7be4e0388",
+    "artifacts/terrain_demo/teammate_port_v25/training/control63_schedule.json": "ecbd284ffd307acb25589984b40e57d0600dbf0c08ffcf6d09e96cd64d1d48dd",
+    "artifacts/terrain_demo/teammate_port_v25/training/recovery63_schedule.json": "e096fd303c46f08df51555824811c071f9a98319941dd02a46b896a4ae547405",
+    "artifacts/terrain_demo/teammate_port_v25/training/combined63_schedule.json": "03fa13a4005c2fab883b7086ae31fac7cc65a632d32a805b0db7706279ced25c"
+  }
+}

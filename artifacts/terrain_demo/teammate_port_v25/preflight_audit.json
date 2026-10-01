@@ -1,0 +1,78 @@
+{
+  "auditor_sha256": "bc01939f201064ffcbdb10ca11528f901c12521f39f74064fd679314273aa6ea",
+  "synthetic_checks_are_not_live_evidence": true,
+  "training": {
+    "phase": "preflight",
+    "runs": {
+      "control61": {
+        "actual": {
+          "policy_steps": 64,
+          "ppo_updates": 2,
+          "adam_steps": 40,
+          "transitions": 16384,
+          "recovery_rows": 64
+        },
+        "model": {
+          "tensors": 33,
+          "teacher_and_command_buffers_unchanged": true,
+          "adam_parameter_states": 19,
+          "adam_steps": 40,
+          "final_iteration": 1
+        },
+        "logs": {
+          "scalar_tags": 39,
+          "finite_scalar_values": 78,
+          "transitions": 16384
+        },
+        "checkpoint_sha256": "35f6053cc645a89dd1249aef61ab517d3cdc1c49e8896eb8957084e952021ec2"
+      },
+      "recovery61": {
+        "actual": {
+          "policy_steps": 64,
+          "ppo_updates": 2,
+          "adam_steps": 40,
+          "transitions": 16384,
+          "recovery_rows": 64
+        },
+        "model": {
+          "tensors": 33,
+          "teacher_and_command_buffers_unchanged": true,
+          "adam_parameter_states": 19,
+          "adam_steps": 40,
+          "final_iteration": 1
+        },
+        "logs": {
+          "scalar_tags": 39,
+          "finite_scalar_values": 78,
+          "transitions": 16384
+        },
+        "checkpoint_sha256": "8f89c68fdd9cd52049d5e6b862050042882814f77ea42c8f676d1fedbaffd08d"
+      },
+      "combined61": {
+        "actual": {
+          "policy_steps": 64,
+          "ppo_updates": 2,
+          "adam_steps": 40,
+          "transitions": 16384,
+          "recovery_rows": 64
+        },
+        "model": {
+          "tensors": 33,
+          "teacher_and_command_buffers_unchanged": true,
+          "adam_parameter_states": 19,
+          "adam_steps": 40,
+          "final_iteration": 1
+        },
+        "logs": {
+          "scalar_tags": 39,
+          "finite_scalar_values": 78,
+          "transitions": 16384
+        },
+        "checkpoint_sha256": "889e64949f37cb0a7266c943684cf3c6f7c1f13c32639d2f5fcb43029b951948"
+      }
+    },
+    "total_training_transitions": 49152,
+    "original_files_unchanged": 1909,
+    "live_gpu_execution_inferred_only_from_recorded_evidence": true
+  }
+}

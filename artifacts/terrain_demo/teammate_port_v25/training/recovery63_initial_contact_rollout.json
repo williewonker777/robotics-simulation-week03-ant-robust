@@ -1,0 +1,44 @@
+{
+  "arm": "recovery",
+  "passive_post_action": true,
+  "rollout": {
+    "samples": 8000,
+    "sampled_rows": 32721134,
+    "valid_rows": 32721134,
+    "invalid_rows": 0,
+    "invalid_fraction": 0.0,
+    "excluded_done_rows": 38317,
+    "excluded_wrap_rows": 16976,
+    "reward": -0.1194966780473841,
+    "bounded_cost": 0.1194966780473841,
+    "contact_fraction": 0.15187683787141124,
+    "no_contact_fraction": 0.5897736121244174,
+    "contacted_tip_speed": 1.2153375777850473,
+    "terrain_contact_fraction": 0.13274731230071993,
+    "flat_contact_fraction": 0.019129525423711373,
+    "per_foot_contact_fraction": [
+      0.1584383696415984,
+      0.16084070094724529,
+      0.2162546132560678,
+      0.07197366863144503
+    ],
+    "per_target_per_foot_contact_fraction": [
+      [
+        0.1357259837551606,
+        0.022712385792966156
+      ],
+      [
+        0.1450499885169034,
+        0.01579071227947163
+      ],
+      [
+        0.19367755282912574,
+        0.0225770603994944
+      ],
+      [
+        0.056535725360636856,
+        0.01543794331623433
+      ]
+    ]
+  }
+}

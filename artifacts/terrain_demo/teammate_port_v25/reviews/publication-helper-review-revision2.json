@@ -1,0 +1,58 @@
+{
+  "role": "code-reviewer",
+  "revision": 2,
+  "created_utc": "2026-10-01T04:27:25.770206+00:00",
+  "recommendation": "APPROVE",
+  "scope": "Two post-experiment presentation helper files only; not an approval of completed training or real heldout/publication artifacts",
+  "files_reviewed": [
+    "scripts/verify_teammate_publication_v25.py",
+    "tests/test_teammate_publication_v25.py"
+  ],
+  "reviewed_sha256": {
+    "scripts/verify_teammate_publication_v25.py": "c0b6cd24670fccda04d88ff04b7e9e0a84fa1bd66a307cb8099ab41351e78ae7",
+    "tests/test_teammate_publication_v25.py": "b3aba38e828d5b2499fe7bc159e07b6f7aa89d5311793ff22e6de9657356b12c"
+  },
+  "open_issues": [],
+  "resolved_findings": [
+    {
+      "severity": "HIGH",
+      "location": "scripts/verify_teammate_publication_v25.py:168-173",
+      "resolution": "Nonempty explicit evidence mapping, required freeze+46enriched+46raw coverage, and unconditional path/digest/original-domain inventory verification remove the fail-open default and skip. Missing private metadata cannot silently pass; all additional structured JSON must be published and mapped."
+    },
+    {
+      "severity": "MEDIUM",
+      "location": "scripts/verify_teammate_publication_v25.py:152-155",
+      "resolution": "Every expected filename is bound to its controller/geometry/reset record tuple; geometry and reset require exact int type. Swapped maps and identity/type substitutions fail."
+    }
+  ],
+  "validation": {
+    "stdlib_focused_tests": 10,
+    "failures": 0,
+    "seconds": 0.357,
+    "command": "python3 -S -m unittest discover -s tests -p test_teammate_publication_v25.py -v",
+    "ast_files": 2,
+    "ast": "PASS",
+    "science20_hashes": "PASS unchanged",
+    "real_frozen_auditor_synthetic_integration": {
+      "command": "/usr/bin/python3 -S scripts/verify_teammate_publication_v25.py --root <temporary synthetic checkout>",
+      "returncode": 0,
+      "public_files_verified": 123,
+      "controllers": 23,
+      "evaluation_records": 46,
+      "physical_first_episodes": 8050,
+      "dependent_window_observations": 16100,
+      "summary_verified": true,
+      "verdict": "PASS",
+      "classification": "Synthetic full-array presentation plumbing, real frozen auditor/source20/base6 and existing model bytes. NOT actual experiment or completion evidence."
+    },
+    "root_cause_guard": "PASS: strict primary reference validation restored, no fallback/exemption or frozen scientific code change"
+  },
+  "remaining_conditions": [
+    "Run this exact helper against the complete actual publication manifest/files after original run/audit completion and metadata sanitation.",
+    "Actual nine trained models and actual 8050 heldout episodes remain unverified by this review.",
+    "Manifest/source integrity checks assume a trusted reviewed checkout; the docstring now explicitly states the authenticity boundary.",
+    "Preserve all scientific SHA values and original-to-published attestation limitation."
+  ],
+  "prior_review_preserved": true,
+  "no_gpu_remote_git_or_frozen_source_edits": true
+}

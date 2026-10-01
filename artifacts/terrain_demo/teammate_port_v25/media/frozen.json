@@ -1,0 +1,58 @@
+{
+  "schema": "week03_ant_v25_qualitative_freeze_v1",
+  "created_utc": "2026-10-01T06:50:13.476499+00:00",
+  "predeclared_in_plan": true,
+  "not_selected_best_seed": true,
+  "geometry": 131,
+  "reset_seed": 111,
+  "scenario": "obstacles",
+  "level": 4,
+  "num_envs": 1,
+  "seconds": 16,
+  "fps": 30,
+  "planned_frames": 480,
+  "benchmark_episode_denominator_increment": 0,
+  "controllers": {
+    "v16_control": {
+      "checkpoint": "artifacts/terrain_demo/contact_slip_v16/runs/control/model_249.pt",
+      "sha256": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc"
+    },
+    "combined61": {
+      "checkpoint": "artifacts/terrain_demo/teammate_port_v25/runs/combined61/model_249.pt",
+      "sha256": "a8cf08901dc5c16dc3c12d44d76bb536dcc7bd2d1b3cdb2671960a35fda2ba6f",
+      "iteration": 249,
+      "training_seed": 61,
+      "arm": "combined",
+      "transitions": 32768000,
+      "initial_audit_sha256": "10cad0b35dfc1ee9cee389fcc3e4d454289e0c5eb2e5912d8fd8cdec1249ad70",
+      "schedule_sha256": "f379c4783cb7ae38ef65cf5f108f28110444cae4f30a10e3c10a2a6afee7d5aa"
+    }
+  },
+  "source_sha256": {
+    "scripts/record_teammate_demo_v25.py": "8027f4b957ce044505bc68aaf6226f642bb1ac738d3dc61ce5bd5900da47e4cd",
+    "scripts/evaluate_unseen_terrain.py": "cf512d2833d5d3a1d808735cf40a1b91cbbbc6d80db2928acc22982450bcd422"
+  },
+  "frozen_scientific_sources": {
+    "src/week03_ant/teammate_recovery_v25.py": "c5729f30c0a4fd7db433f7ad5c425590acf9dbeab9d00c52a0e28a9a33793da6",
+    "src/week03_ant/teammate_study_v25.py": "894c8547efd3ffcf2e6e95d728e3293306dc264539f1c31b374978ba689987e3",
+    "src/week03_ant/tasks/teammate_v25_cfg.py": "3e3bf91b6fba1a8d03382ac712787f5a79e7aaa93a426ee6a86892025bbad9ab",
+    "src/week03_ant/tasks/teammate_v25.py": "2bfaad741c0ee1d8c33046b63180290c7f6e293d04fdaaff7e4739375dd774d8",
+    "scripts/teammate_v25.py": "c7c995900935a6156729f2fb4cc70f898cd6f601cef398ff593f6f445ea196a2",
+    "scripts/run_teammate_training_v25.py": "074cf266bf41a0e0f4fd37254f91f0f45718d331386849211b4818095c71cb0d",
+    "tests/test_teammate_math_v25.py": "e5fce64c1bf5c67cb54e2ddd8bcf56a06de6deb82416f67aeaf4fd4d48384082",
+    "tests/test_teammate_training_v25.py": "0b49c4f162db055587db07d41d260bfef51712265559788afc521038ae06118b",
+    "tests/test_teammate_harness_v25.py": "8e0e802fb4115ed360c8ee31534f05d09206dbc8808f4b6b394f692fe2324a4d",
+    "docs/experiment_plans/teammate_port_v25.md": "160aeab578ad0bb2de2e58dea1eeef4f01b521c6f806b9afe20c6ea25e525216",
+    "scripts/evaluate_teammate_v25.py": "e3ae28a38113ec267014f2be1e98976bee211bdee0099335e70a288614e854dd",
+    "scripts/run_teammate_eval_v25.py": "a10a4c79efe53184af39ab72769bcb50569fb36a16c74fb8534c7d542e6e48f6",
+    "scripts/summarize_teammate_v25.py": "b349389e4bf35d5079d2f1a6f938158f49457072035bc18be5b74f402c1c4439",
+    "tests/test_teammate_eval_v25.py": "0ac4da72fffb12df08a08f98ce7f7eb4faca33cb6aabb9f949c1ca151887e38a",
+    "tests/test_teammate_summary_v25.py": "9bc3d9acc2e0d69f7b9675e683a09ba0539b3a6c14e395fa0889c55178ef9820",
+    "scripts/audit_teammate_v25_raw.py": "bc01939f201064ffcbdb10ca11528f901c12521f39f74064fd679314273aa6ea",
+    "tests/test_teammate_audit_v25.py": "78a74d2fbf98bc8135aed87cbf316b7a5264f488ef053ba0c6241ffd72274dd9",
+    "artifacts/terrain_demo/teammate_port_v25/research.md": "04d03f685008617aa6f7de37c740071540cc01f39950439deeaf58ab03b14a4b",
+    "artifacts/terrain_demo/teammate_port_v25/research_provenance.json": "fedd95c65def74b7e3ba082988830ad280c1c113bd69cc066daa0afb35abf256",
+    "licenses/teammate_ant_BSD-3-Clause.txt": "df351ebfa8af317bf5a9ad83df63a8b68e4f5c04b71f30767cdb27aa434eac62"
+  },
+  "independent_original_audit_sha256": "e68caa444c2bb254dc6c498c1fdbdffb6fc1cc910f2da8994d31619026bd32e5"
+}

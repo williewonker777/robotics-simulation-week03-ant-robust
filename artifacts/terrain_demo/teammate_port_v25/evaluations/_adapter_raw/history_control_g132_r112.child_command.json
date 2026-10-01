@@ -1,0 +1,25 @@
+{
+  "command": [
+    "<course-environment>/bin/python",
+    "scripts/evaluate_teammate_v25.py",
+    "--numerical-child",
+    "--phase",
+    "holdout",
+    "--controller",
+    "history_control",
+    "--geometry",
+    "132",
+    "--seed",
+    "112",
+    "--num-envs",
+    "175",
+    "--seconds",
+    "64",
+    "--headless",
+    "--device",
+    "cuda:1",
+    "--output",
+    "artifacts/terrain_demo/teammate_port_v25/evaluations/_adapter_raw/history_control_g132_r112.json"
+  ],
+  "cwd": "."
+}

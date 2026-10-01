@@ -1,0 +1,25 @@
+{
+  "command": [
+    "<course-environment>/bin/python",
+    "scripts/evaluate_teammate_v25.py",
+    "--numerical-child",
+    "--phase",
+    "development",
+    "--controller",
+    "recovery61",
+    "--geometry",
+    "51",
+    "--seed",
+    "24",
+    "--num-envs",
+    "35",
+    "--seconds",
+    "64",
+    "--headless",
+    "--device",
+    "cuda:1",
+    "--output",
+    "artifacts/terrain_demo/teammate_port_v25/development_evaluations/_adapter_raw/recovery61_g51_r24.json"
+  ],
+  "cwd": "."
+}

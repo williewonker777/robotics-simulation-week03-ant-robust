@@ -7,7 +7,7 @@
 
 [변경점·개선 근거](#기본-코드와-무엇이-달라졌나) · [성능](#과제-성능--제공-코드-baseline-대비) · [비교 영상](#비교-영상) · [미사용 지형](#학습-미사용-지형-평가) ·
 [실행](#빠른-실행) · [동일 모델·험지 재현](docs/SAME_CHECKPOINT_COMPARISON.md) ·
-[전체 실험 기록](docs/EXPERIMENT_HISTORY.md)
+[팀원 요소 포팅·실제 학습 비교](#팀원-요소-포팅--v25-실제-학습과-비교) · [전체 실험 기록](docs/EXPERIMENT_HISTORY.md)
 
 ## 비교 기준·최종 모델
 
@@ -231,6 +231,64 @@ GIF는 전체 시간축을6fps로 낮춘 미리보기입니다. 클릭하면 원
 [전체 수치·지형/난도별 집계](artifacts/unseen_obstacles_20261001/summary/summary.json) ·
 [조건·SHA·재현·한계](docs/UNSEEN_OBSTACLE_DEMO.md) ·
 [영상 전체decode·preview 검증](artifacts/unseen_obstacles_20261001/media_manifest.json)
+
+## 팀원 요소 포팅 — v25 실제 학습과 비교
+
+**평가 보상은 원본 그대로 유지했습니다.** Stick의 recovery 묶음 중 몸체 여유·upright·행동 변화·
+각속도 벌점 일부를 **학습에만** 적용하고, Lim의 탐색 가설을 기존 entropy **.002→.005**로 옮겼습니다.
+전체 팀원 recipe의 재현이나 팀 간 return 순위 비교가 아닙니다.
+
+같은 v16 부모에서 **control/recovery/combined × seed61/62/63**, 각4,096×32×250으로
+**9개·294,912,000전이**를 실제 추가학습했습니다. 기존5참고선과 새9단독+9history를
+훈련에 사용하지 않은 **새 배치131/132**에서 비교했습니다(같은 지형 family, 새로운 종류 OOD는 아님).
+23controller·8,050 first episodes·16,100 의존 window이며,16/64초는 같은 주행입니다.
+
+| 단독 arm · 3seed 서술적 합산 | 16초 6타일 / 낙상 / 레인 | 64초 6타일 / 낙상 / 레인 |
+|---|---:|---:|
+| 동일 예산 control | 460 / 63 / 18 | 672 / 162 / 72 |
+| recovery · 학습 회복 비용 | 485 / 58 / 15 | 667 / 156 / 82 |
+| combined · 회복 비용+entropy.005 | 489 / 62 / 20 | 650 / 159 / 94 |
+
+각 열의 험지 분모900은3개 모델이 **동일300시작조건**을 재사용한 합산이지900개 독립 지도가 아닙니다.
+결합군의 단기6타일 **460→489(+3.22percentage points)**에도 레인은 늘고 장기6타일은 회귀했습니다.
+**모든16초 비교가 사전 승격 FAIL(0/3seed),64초도 arm-level PASS 없음: 기본·제출 모델을 교체하지 않습니다.**
+회복 비용만 적용한 군도 평지 낙상·속도 trade-off가 남았습니다.
+
+이번 지도에서 기존 v16 단독16초6타일은 **169/300**, 모든 새 단독 최종의 최대는166/300입니다.
+history 포함 기록상16초177/300·64초238/300의 최대는 **포팅 없는 추가학습control61+기존 gate**였습니다.
+이는 사후 조건별 최대값일 뿐 seed 승격이 아니며, history는 지형 이름별 교체나 순수 평지/험지 전문가 분리가 아닙니다.
+
+![실제 새 지도16초 비교 — 모든 seed와 참고선](artifacts/terrain_demo/teammate_port_v25/plots/comparison_16s.png)
+
+[방법·전체23controller·모든 seed/지도 판정·해석](docs/TEAMMATE_PORT_V25.md) ·
+[실제 학습 곡선](artifacts/terrain_demo/teammate_port_v25/plots/learning_diagnostics.png) ·
+[고정 평가 return 포함 CSV](artifacts/terrain_demo/teammate_port_v25/controller_results.csv) ·
+[9개 최종 모델·설정](artifacts/terrain_demo/teammate_port_v25/runs/) ·
+[원시 배열](artifacts/terrain_demo/teammate_port_v25/evaluations/) ·
+[공개 검증·SHA 경계](docs/TEAMMATE_PORT_V25.md#재현-및-무결성)
+
+<details>
+<summary>사전 지정 장애물 데모 · 부모와 combined61 · 전체16초</summary>
+
+geometry131/reset111, 최고 난도 장애물의 같은 초기 상태를 재주행했습니다.
+combined61은 사전에 지정한 seed이며 최고 seed를 고른 영상이 아닙니다.
+이 한 예시의 부모 낙상/combined 통과가 전체 FAIL 판정을 뒤집지는 않습니다.
+
+**v16 부모:**
+
+![v16 부모 정성 데모](artifacts/terrain_demo/teammate_port_v25/media/v16_control.gif)
+
+**combined seed61:**
+
+![사전 지정 combined61 정성 데모](artifacts/terrain_demo/teammate_port_v25/media/combined61.gif)
+
+[부모 원본 MP4](artifacts/terrain_demo/teammate_port_v25/media/v16_control.mp4) ·
+[combined61 원본 MP4](artifacts/terrain_demo/teammate_port_v25/media/combined61.mp4) ·
+[모델·프레임·영상 SHA](artifacts/terrain_demo/teammate_port_v25/media/manifest.json).
+원본480frame/30fps/16초, GIF는전체16초/10fps 축소판이며 실패·reset을 자르지 않았습니다.
+이 정성2주행은8,050 benchmark 분모에 추가하지 않습니다.
+
+</details>
 
 ## 빠른 실행
 

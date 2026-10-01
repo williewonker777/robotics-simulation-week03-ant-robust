@@ -1,0 +1,32 @@
+{
+  "reviewer": "/root/port_plan_critic",
+  "role": "critic",
+  "verdict": "APPROVE",
+  "plan": "docs/experiment_plans/teammate_port_v25.md",
+  "sha256": "160aeab578ad0bb2de2e58dea1eeef4f01b521c6f806b9afe20c6ea25e525216",
+  "reviewed_utc": "2026-10-01T03:05:22.747264+00:00",
+  "scope": "Ordinary independent local design review only; not implementation validation, empirical improvement, permission to bypass preflight, or host/Ralplan authority.",
+  "must_fix": [],
+  "primary_source_manifest_checks": {
+    "stick": 34,
+    "lim": 165
+  },
+  "parent_sha256_verified": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+  "arithmetic_verified": {
+    "main_transitions": 294912000,
+    "development_transitions": 2408448,
+    "main_physical_episodes": 8050,
+    "dependent_window_observations": 16100
+  },
+  "remaining_before_main": [
+    "Independent implementation review and CPU/static tests",
+    "Actual seed/config/initial-state/RNG/teacher/Adam/std/horizon and geometry/cache proofs",
+    "Scientific freeze and exact expected capacity-to-main initializer projection"
+  ],
+  "implementation_watchpoints": [
+    "Do not reuse v22 orchestration by relabeling; its seed/task/geometry guards are deliberately incompatible.",
+    "Construct legacy 88D versus new 91D policies without perturbing the required paired RNG state; prove rather than normalize away differences.",
+    "Use posture valid mask alongside its substituted clearance/target values; reject nonfinite physical inputs separately.",
+    "Preserve flat-v5 identity as a checked result, not a family-label routing shortcut."
+  ]
+}

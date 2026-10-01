@@ -1,0 +1,28 @@
+{
+  "schema": "week03_ant_v25_prepublication_validation_v1",
+  "created_utc": "2026-10-01T06:57:42.203091+00:00",
+  "science_pipeline": "PASS, no arm promotion",
+  "main_runs": 9,
+  "main_training_transitions": 294912000,
+  "actual_development_transitions": 4816896,
+  "actual_total_training_transitions": 299728896,
+  "physical_first_episodes": 8050,
+  "dependent_windows": 16100,
+  "paired_initial_conditions": 350,
+  "evaluation_reward_unchanged": true,
+  "cpu_tests": 2286,
+  "cpu_failures": 0,
+  "code_review_scope": "scienceimplementation, publicationhelper, publisher; not outcome endorsement",
+  "outcome_checks": 737,
+  "outcome_failures": 0,
+  "media": "two exact-paired480frame16s originals, full160frame16s previews; two qualitative episodes not included in benchmark",
+  "visual_qa": "root viewed actual contact sheet first/middle/end including original black start; no trimming/failure removal",
+  "evidence_original_sha256": {
+    "artifacts/terrain_demo/teammate_port_v25/independent_audit.json": "e68caa444c2bb254dc6c498c1fdbdffb6fc1cc910f2da8994d31619026bd32e5",
+    "artifacts/terrain_demo/teammate_port_v25/cpu_validation_final.json": "b3aa274ea429723aae0a9d295b60c95e23d99b0805ed0ff8cf12b4bfdc3874cc",
+    "artifacts/terrain_demo/teammate_port_v25/reviews/post-main-outcome-verification.json": "9b54aed029f7fb24b94f19333e253124c70ec6831173d3bef6b61738360fefbb",
+    "artifacts/terrain_demo/teammate_port_v25/media/manifest.json": "e98415e952611000ccf2d9cc736c3d459678be63fd8e387c11fd7e4505de5603"
+  },
+  "local_publisher_sha256": "f3476bad7b6eac7d2db96cf3c25a57a8e695f605f1adff5824a337892023605f",
+  "scope_limit": "No original-to-published equivalence proof for public readers without private originals; full runtime graph private. Final public replay/README/push still pending."
+}

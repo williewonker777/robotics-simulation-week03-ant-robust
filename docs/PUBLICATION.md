@@ -1,5 +1,33 @@
 # 공개 범위와 검증 — 최종 정리 2026-10-01
 
+## v25 팀원 요소 포팅 — 학습·고정 평가·영상 공개
+
+[전체 방법·수치·실패 조건·재현](TEAMMATE_PORT_V25.md)과
+[새 artifact](../artifacts/terrain_demo/teammate_port_v25/)를 추가했다.
+9개 실제 학습294,912,000전이, 실제개발4,816,896전이(재검증 반복 포함)를 구분한다.
+23controller×2새배치의8,050 firstepisodes/16,100의존window를 완료했다.
+**평가 보상·종료·strict 성공 기준 및 고정20소스는 원본 그대로 유지했다.**
+
+- 모든16초arm gate FAIL(0/3seed),64초도arm-level PASS 없음. 결합군 단기6타일460→489/900에 레인18→20,
+  장기6타일672→650/900·레인72→94가 함께 나타났다. 모든 결과·모델을 남기고 기존기본·제출정책 유지.
+- 실제 본학습 tensor/optimizer/schedule/teacher·원본raw/cache 감사 및737/737결과 검증PASS.
+  학습/평가 후 전체CPU2,286 PASS는 경로투영 전 기록이며, 공개본의 실제 표준라이브러리
+  raw-array/summary replay는 별도 검증한다. 두 검증의 범위를 혼동하지 않는다.
+- 원문을 ignored 로컬에 보존한 뒤 명시적 경로/hostname 문자열만 공개용으로 투영했다.
+  수치·배열·자료형·순서·고정 source/model byte는 유지하고 모든 원문/공개 SHA domain을
+  [publication_metadata.json](../artifacts/terrain_demo/teammate_port_v25/publication_metadata.json)에 기록했다.
+  원래full-runtime audit/cache/log/TensorBoard는 공개 checkout만으로 재실행할 수 없다.
+  private 원문과 공개본의 동등성은 로컬 기록이며 공개 독자에게 독립증명 가능한 것으로 과장하지 않는다.
+- 사전 지정 combined61/v16부모의 원본 MP42개는480frame/30fps/16초 그대로,
+  GIF2개는 전체16초/10fps 미리보기다. 물리/관측/RNG 초기 hash를 짝 확인했다.
+  startup·실패·reset을 삭제하지 않았고 정성 영상으로 전체 FAIL을 감추지 않았다.
+  [영상 manifest](../artifacts/terrain_demo/teammate_port_v25/media/manifest.json).
+- Stick/Lim의 pinned source 및 BSD 귀속을 보존했으며 팀원checkpoint·framework patch·새 의존성은 가져오지 않았다.
+  원래출판source/모델/평가/영상은 그대로, README/이력/공개범위/notice/checksum만 갱신한다.
+- 현재 공개 파일의 checksum은 [PUBLICATION_SHA256SUMS](../artifacts/PUBLICATION_SHA256SUMS)이다.
+  이전 절의 “당시 미게시”는 그 작업 시점의 기록이며, 현재 Git 파일 존재/commit/원격 SHA로 게시 여부를 확인한다.
+
+
 ## 학습 미사용 지형 평가·원본 영상 — 추가 공개
 
 사용자 요청에 따라 학습 미사용 geometry901/902의5제어기 비교와16초 원본 MP45개를 추가했습니다.

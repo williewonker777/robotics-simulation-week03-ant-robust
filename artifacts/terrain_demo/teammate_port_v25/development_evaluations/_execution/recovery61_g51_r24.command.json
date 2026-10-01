@@ -1,0 +1,31 @@
+{
+  "command": [
+    "<course-environment>/bin/python",
+    "scripts/evaluate_teammate_v25.py",
+    "--phase",
+    "development",
+    "--controller",
+    "recovery61",
+    "--geometry",
+    "51",
+    "--seed",
+    "24",
+    "--num-envs",
+    "35",
+    "--seconds",
+    "64",
+    "--headless",
+    "--device",
+    "cuda:1",
+    "--output",
+    "artifacts/terrain_demo/teammate_port_v25/development_evaluations/recovery61_g51_r24.json"
+  ],
+  "cwd": ".",
+  "phase": "development",
+  "prepare": false,
+  "freeze_path": "artifacts/terrain_demo/teammate_port_v25/development_frozen.json",
+  "freeze_sha256": "64d684fa94922c8c94918dd08225fe75c980ccd7300df2d85a794ac5853ae2c3",
+  "started_utc": "2026-10-01T03:39:14.966208+00:00",
+  "stdout": "outputs/teammate_port_v25_20261001/eval_development/_execution/recovery61_g51_r24.stdout.log",
+  "stderr": "outputs/teammate_port_v25_20261001/eval_development/_execution/recovery61_g51_r24.stderr.log"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "week03_ant_v25_publisher_preapply_review_v2",
+  "created_utc": "2026-10-01T06:38:21.670570+00:00",
+  "reviewer": "/root/port_code_review",
+  "recommendation": "APPROVE",
+  "scope": "Pure portable-string memoization only; prior preapply conditions remain mandatory",
+  "files_reviewed": 1,
+  "sha256": "f3476bad7b6eac7d2db96cf3c25a57a8e695f605f1adff5824a337892023605f",
+  "baseline_sha256": "bde6c6f29de3d3cbb8feab1d45e9cedd523d5793fa09523f2d2565db3ae82798",
+  "diff": "Only stdlib functools import and @functools.lru_cache(maxsize=None) on nested pure portable(s)",
+  "open_issues": [],
+  "review_reasoning": [
+    "mapping/prefixes fully constructed before first portable call and not subsequently mutated",
+    "Cache recreated for each main invocation; results depend only on immutable string argument and fixed closure values",
+    "Exceptions remain propagated, not converted to cached fallback values",
+    "Project pointer tracking and key collision checks remain outside memoized function, preserving per-location evidence",
+    "Unbounded cache is acceptable for this bounded one-shot publication corpus, not a long-running untrusted service"
+  ],
+  "diagnostics": {
+    "in_memory_ast_compile": "PASS",
+    "publisher_main_executed": false,
+    "cached_unwrapped_parity": "PASS exact/root/slash/quoted/external prefixes and all planned relocation keys",
+    "negative_paths": "PASS sibling ROOT-other/env-old and unknown /tmp reject both cached and uncached",
+    "cache_hit": "PASS",
+    "repeated_pointer_tracking": "PASS two identical relocated values produce two distinct changed-field pointers",
+    "corpus": {
+      "json": 362,
+      "yaml": 18,
+      "markdown": 9,
+      "failures": 0
+    },
+    "cache_info": {
+      "hits": 994994,
+      "misses": 7880,
+      "maxsize": null,
+      "currsize": 7877
+    }
+  },
+  "limitations": [
+    "No publisher apply or ART mutation; only pure AST-extracted functions evaluated",
+    "No GPU/remote/Git actions",
+    "Final actual 46-record/8050-episode public verifier and privacy/original-checksum checks remain required",
+    "Approval does not cover holdout performance or successful publication"
+  ]
+}

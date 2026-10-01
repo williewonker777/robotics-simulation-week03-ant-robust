@@ -1,0 +1,31 @@
+{
+  "command": [
+    "<course-environment>/bin/python",
+    "scripts/evaluate_teammate_v25.py",
+    "--phase",
+    "holdout",
+    "--controller",
+    "combined61",
+    "--geometry",
+    "131",
+    "--seed",
+    "111",
+    "--num-envs",
+    "175",
+    "--seconds",
+    "64",
+    "--headless",
+    "--device",
+    "cuda:1",
+    "--output",
+    "artifacts/terrain_demo/teammate_port_v25/evaluations/combined61_g131_r111.json"
+  ],
+  "cwd": ".",
+  "phase": "holdout",
+  "prepare": false,
+  "freeze_path": "artifacts/terrain_demo/teammate_port_v25/frozen.json",
+  "freeze_sha256": "8239cba4f01f908e5af87f0259ceba7b9be30cafca509bfcf4bc466195c67765",
+  "started_utc": "2026-10-01T05:57:14.642762+00:00",
+  "stdout": "artifacts/terrain_demo/teammate_port_v25/evaluations/_execution/combined61_g131_r111.stdout.log",
+  "stderr": "artifacts/terrain_demo/teammate_port_v25/evaluations/_execution/combined61_g131_r111.stderr.log"
+}

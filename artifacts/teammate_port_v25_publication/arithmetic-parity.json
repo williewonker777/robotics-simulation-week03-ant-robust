@@ -1,0 +1,46 @@
+{
+  "schema": "week03_ant_v25_full_canonical_arithmetic_parity_v1",
+  "created_utc": "2026-10-01T07:07:17.831091+00:00",
+  "unmodified_frozen_auditor_python311": {
+    "python": "3.11.16",
+    "mode": "baseline",
+    "canonical_sha256": "cfb575048331a406f36e921d3a25b45d08f78f52cbfcf4e58bd58d57d9b6766e",
+    "physical_episodes": 8050,
+    "dependent_windows": 16100,
+    "summary_verified": true
+  },
+  "adapted311": [
+    {
+      "nodes": 385488,
+      "ieee_floats": 56974
+    },
+    {
+      "python": "3.11.16",
+      "mode": "adapted",
+      "canonical_sha256": "cfb575048331a406f36e921d3a25b45d08f78f52cbfcf4e58bd58d57d9b6766e",
+      "physical_episodes": 8050,
+      "dependent_windows": 16100,
+      "summary_verified": true
+    }
+  ],
+  "adapted312": [
+    {
+      "nodes": 385488,
+      "ieee_floats": 56974
+    },
+    {
+      "python": "3.12.3",
+      "mode": "adapted",
+      "canonical_sha256": "cfb575048331a406f36e921d3a25b45d08f78f52cbfcf4e58bd58d57d9b6766e",
+      "physical_episodes": 8050,
+      "dependent_windows": 16100,
+      "summary_verified": true
+    }
+  ],
+  "comparison": "full sorted canonical JSON byte equality AND recursively exact type/value/list order/IEEE754 float-bit equality",
+  "scope": "Every canonical aggregate, cell, episode-row, paired statistic and gate from all46actualrecords; no simulation rerun or original-array change",
+  "reason": "CPython3.12 compensated sum differs at last bit from original3.11 sequential float addition",
+  "no_scientific_source_array_summary_threshold_or_tolerance_changes": true,
+  "helper_sha256": "881bb026cd29e7cb52b7fa7ca8678d12fe72da28409887d70e0101c10aca34b2",
+  "auditor_sha256": "bc01939f201064ffcbdb10ca11528f901c12521f39f74064fd679314273aa6ea"
+}
