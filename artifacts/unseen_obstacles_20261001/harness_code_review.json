@@ -1,0 +1,27 @@
+{
+  "reviewer_role": "code-reviewer",
+  "reviewed": [
+    "scripts/evaluate_unseen_terrain.py",
+    "tests/test_unseen_terrain.py"
+  ],
+  "harness_sha256": "cf512d2833d5d3a1d808735cf40a1b91cbbbc6d80db2928acc22982450bcd422",
+  "decision": "APPROVE scoped code-review lane",
+  "confirmed_issues": 0,
+  "cpu_subset_passed": 66,
+  "checks": [
+    "pyflakes",
+    "bounded mypy",
+    "immutable first-episode windows",
+    "pinned v22 seed53 final249",
+    "original91D scene and initialization",
+    "full-duration uncut replay",
+    "explicit overwrite checks"
+  ],
+  "runtime_gaps": [
+    "Exact state/RNG pairing across actual scored bundles",
+    "Available training-config provenance for new geometry",
+    "Full MP4 decode",
+    "Full old-file preservation manifest"
+  ],
+  "time_utc": "2026-10-01T00:55:39.644975+00:00"
+}

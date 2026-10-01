@@ -1,0 +1,22 @@
+{
+  "full_cpu_suite": {
+    "tests": 2094,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit": "full_cpu.xml"
+  },
+  "static_checks": [
+    "pyflakes4newfilesclean",
+    "boundedmypy4newfilesclean",
+    "ast4newfilespass",
+    "gitdiffcheckpass"
+  ],
+  "sources": {
+    "scripts/evaluate_unseen_terrain.py": "cf512d2833d5d3a1d808735cf40a1b91cbbbc6d80db2928acc22982450bcd422",
+    "scripts/summarize_unseen_terrain.py": "e5bc6ef72f15934e28281e5e03ad22d89d046217a671f2718de28be4355fe097",
+    "tests/test_unseen_terrain.py": "63b3b61bf5444a5df6d6264fd539f22428cd6eedcc0549add427b0234b95a2c8",
+    "tests/test_unseen_summary.py": "3e7e3652ff410cc750a20e623172326b4ab62db3f19ae0a3d2249e6d928ac7e2"
+  },
+  "scope_note": "No whole external IsaacLab type-check or hardware tests; no new dependencies."
+}

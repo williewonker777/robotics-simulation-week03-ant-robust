@@ -1,0 +1,112 @@
+{
+  "schema": "week03-ant-unseen-publication-verification-v1",
+  "verdict": "PASS",
+  "raw_numerical_structure_preserved": true,
+  "all_summary_statistics_exact_original": true,
+  "metadata_rows_verified": 34,
+  "fresh_canonical_cpu": {
+    "tests": 2094,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 36.596,
+    "scope": "Full canonical suite; some original local-only fixtures are not part of public clone."
+  },
+  "source_test_hashes": {
+    "scripts/evaluate_unseen_terrain.py": "cf512d2833d5d3a1d808735cf40a1b91cbbbc6d80db2928acc22982450bcd422",
+    "scripts/summarize_unseen_terrain.py": "e5bc6ef72f15934e28281e5e03ad22d89d046217a671f2718de28be4355fe097",
+    "tests/test_unseen_terrain.py": "63b3b61bf5444a5df6d6264fd539f22428cd6eedcc0549add427b0234b95a2c8",
+    "tests/test_unseen_summary.py": "3e7e3652ff410cc750a20e623172326b4ab62db3f19ae0a3d2249e6d928ac7e2"
+  },
+  "public_original_mp4s_verified": [
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_high53__obstacles_g901_r101.mp4",
+      "sha256": "872b0054930a6bc0b2b95e5e72ce9c00439c4bfc175de9233f0410496248b348",
+      "frames": 480,
+      "blank_frames": 1,
+      "blank_frame_definition": "meanRGB < 1.0",
+      "changed_transitions": 479,
+      "full_decode_pass": true
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_history_high53__obstacles_g901_r101.mp4",
+      "sha256": "1b335d8a7d3f29b44f190cd5daf52daed5fb4c903605dac13aa47ea7b6e38080",
+      "frames": 480,
+      "blank_frames": 1,
+      "blank_frame_definition": "meanRGB < 1.0",
+      "changed_transitions": 479,
+      "full_decode_pass": true
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_history_high53__stones_g901_r101.mp4",
+      "sha256": "6de138ac30db3ea9f5abb4fba0e88752b01093da89debc8c4f3978718affc57b",
+      "frames": 480,
+      "blank_frames": 1,
+      "blank_frame_definition": "meanRGB < 1.0",
+      "changed_transitions": 479,
+      "full_decode_pass": true
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_v16_control__obstacles_g901_r101.mp4",
+      "sha256": "5b24cef19f0486b5b717356b531483df68057079d8aa01d8133391880b7bf916",
+      "frames": 480,
+      "blank_frames": 1,
+      "blank_frame_definition": "meanRGB < 1.0",
+      "changed_transitions": 479,
+      "full_decode_pass": true
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_v16_control__stones_g901_r101.mp4",
+      "sha256": "c534eeeae5c77411c5ab72e928d42bf54acdd4f0ff88c2f5430b9a0eb8fe5cd9",
+      "frames": 480,
+      "blank_frames": 1,
+      "blank_frame_definition": "meanRGB < 1.0",
+      "changed_transitions": 479,
+      "full_decode_pass": true
+    }
+  ],
+  "public_previews_verified": [
+    {
+      "file": "artifacts/unseen_obstacles_20261001/GUI_high53__obstacles_g901_r101_preview.gif",
+      "source_file": "artifacts/unseen_obstacles_20261001/videos/GUI_high53__obstacles_g901_r101.mp4",
+      "sha256": "2940bf698cfe4870d3d5baf900bbdfbd496e0a3941dc6af9ea245b3e0d9c263b",
+      "bytes": 3600338,
+      "frames": 96,
+      "width": 480,
+      "height": 270,
+      "duration_seconds": 16.0,
+      "sample_fps": 6,
+      "time_scale": 1.0,
+      "full_timeline_no_cuts": true,
+      "operation": "Lower-resolution GIF preview only; original MP4 unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/GUI_history_high53__stones_g901_r101_preview.gif",
+      "source_file": "artifacts/unseen_obstacles_20261001/videos/GUI_history_high53__stones_g901_r101.mp4",
+      "sha256": "b491c8b95dbf5f21d04ec7e1bb86be89fb3107a3e5e7e6b135c322557d710c87",
+      "bytes": 3936468,
+      "frames": 96,
+      "width": 480,
+      "height": 270,
+      "duration_seconds": 16.0,
+      "sample_fps": 6,
+      "time_scale": 1.0,
+      "full_timeline_no_cuts": true,
+      "operation": "Lower-resolution GIF preview only; original MP4 unchanged"
+    }
+  ],
+  "source_model_old_artifacts_preserved": true,
+  "baseline_files_checked": 1865,
+  "allowed_prior_file_changes": [
+    "README.md",
+    "docs/PUBLICATION.md",
+    "artifacts/PUBLICATION_SHA256SUMS"
+  ],
+  "linked_targets_checked": 125,
+  "text_files_checked": 35,
+  "secret_path_scan": "No matched high-confidence secrets or host absolute paths in new bundle; heuristic, not universal secrecy guarantee.",
+  "private_raw_desktop_telemetry_excluded": true,
+  "maximum_new_file_bytes": 3936468,
+  "publication_does_not_retrain_or_resimulate": true,
+  "public_remote_verification": "Not asserted here: normal push and live remote SHA/media checks occur after local commit; raw operational records stay local."
+}

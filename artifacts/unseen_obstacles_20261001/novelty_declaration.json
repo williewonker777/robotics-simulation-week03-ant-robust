@@ -1,0 +1,837 @@
+{
+  "schema": "unseen_layout_declaration_v1",
+  "training_environment_configs": [
+    {
+      "run": "logs/rsl_rl/week03_ant_lp_v17/2026-09-23_18-13-49_v17_preflight_lp/params/env.yaml",
+      "training_geometry": 101,
+      "env_config_sha256": "ae8273e778eb50007c78869ce57c201d57100068f03721f33cc39302f8a4379d"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lp_v17/2026-09-23_18-07-43_v17_preflight_fixed/params/env.yaml",
+      "training_geometry": 101,
+      "env_config_sha256": "e719eb935d7e5e6ac284798aa22c7f97c84476d13e5c2adec4322490047a87b6"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lp_v17/2026-09-23_18-18-56_v17_paired_fixed/params/env.yaml",
+      "training_geometry": 101,
+      "env_config_sha256": "66366f2c2fd67c233d715ba6c6d69b109abacd61404e5cf5ef07b11e3cb986c8"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lp_v17/2026-09-23_18-10-32_v17_preflight_fixed/params/env.yaml",
+      "training_geometry": 101,
+      "env_config_sha256": "7dd007aad5354d238555f1c913dd94adb102e3dad17534b797a7309bb74d5575"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lp_v17/2026-09-23_18-17-16_v17_capacity_fixed/params/env.yaml",
+      "training_geometry": 101,
+      "env_config_sha256": "cd78ae45702e7446e9f572eaea21948d1b4405f37318c6eb97d20e81aeb3a701"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lp_v17/2026-09-23_18-17-36_v17_capacity_lp/params/env.yaml",
+      "training_geometry": 101,
+      "env_config_sha256": "5c92717fd38f6f0e8d388c0951104e643857236d13283690df26fe69179955be"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lp_v17/2026-09-23_18-29-29_v17_paired_lp/params/env.yaml",
+      "training_geometry": 101,
+      "env_config_sha256": "5f9cab1509c0bb1b5263b5b4d6d88e993089e575c79a7789c8b24afa1bf6090f"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-29-44_safe_c2999_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "d824d31af294e0359ed7b9f3350fc25067faa142f0970f55ad1b6efe2b3455ea"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-19-29_recovery_trap_smoke/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "34c9950fd445ccae69a9a23cbadf1690e517dade47a78ae9fb497fb9a83d2b32"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_18-40-59_recovery_smoke/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "f5988529ebdb8e00c330865e4ed3b408c4883aac59e397e044d3d729838c2c13"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-39-24_traverse_smoke_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "0d45318b1aea384eb0c72b17904d3cb221f6e0704ca1f01699038e5c400c8b90"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-56-12_stones_focus_smoke_retry_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "0168405f7c26330a621286afb30b4d6a1238849d1e377c4e45bb6bc86adc67fb"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-41-31_rehearsal_seed43/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "d10b514ad227d8cf0a94920da190bd6d462b8e554648fde40d0335db6d83b1bc"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-21-13_recovery_stabilize_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "3ab241ef81290dce83662b1d8877cb7b14befa5327fc0f8e988987dd0351a598"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-56-24_stones_focus_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "77dd13f56740c6c09715d94623587a2fd9a6ad26e1baf1381fb7207d04d492bd"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-39-57_traverse_safe500_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "d6dc96575f9f61972767465920052852972d13b7e2de2f797ce395ee3f178d6b"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-18_12-10-30_rough_v5_plane_from_flat_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "9f6bca596878abf44b1ed8f23abb849055bd3a864cfa277b2c4b4765f30df445"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-18_11-58-58_rough_v5_from_flat_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "1a86d19911c0b3c1bebfe693f3698b171a08fb2f6c58342c5da31b7ffd4146dc"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_17-29-02_safe_smoke_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "2f6b54d293a180ab8919930ec640e63525e3f11aa98461c663146c54c42a7b24"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-48-13_portal_rehearsal_seed43/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "adae44c3c19bddfc1f73018e745496fa4d5927b9f666d1f0fb122b0e16eb70bb"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-18_12-10-31_rough_v5_plane_from_a1000_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "169a4ddefdda5a5d117204c653286058f5a38c553e7f21ce49d33e47dc9472fe"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_18-42-01_recovery_shallow_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "14c0e55031d94a99246527204db16e8725e0528f7dbec058e2fd19a8541b9d8d"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-18_11-59-00_rough_v5_from_v2_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "c0886b1da644e6e4934e42f22875a4be748c3a62b3d3c522249df5f8ad524937"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_18-50-47_recovery_medium_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "2d1ef56b0aeeb6e576fd676d6fe8ca48717f92c2e93e7a1845d7ccd50b727712"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_rough_v5/2026-09-21_19-01-40_recovery_deep_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "1997c0fd45fcc437f4b39aaf9a8e2f99878c4b1fc88ef2063cbca3404053e40a"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-09-40_v24_capacity_high51/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "98cae761822908ff8e41d7ff236e8ced7436e39d0163c5d0f3f8d742232b5bef"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-12-01_v24_main_high51/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "c27f4201fc5b0414bc23e7b273ae141a8660aa49e245a075472b199ab4fa2312"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-09-59_v24_capacity_low51/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "38ad941fdcb7e211b90b8ebed4f123b5cceadf0954058012475330f9eb27b39d"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-10-17_v24_capacity_high52/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "e01801bb7fdeda667788e4720be9a545ff34bec9836c8b8a02cac667e0cee965"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-09-08_v24_preflight_high51/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "4999d53886f4dd17a1879f29b306bc210461dd36c0bd41f4e3e50a984ee2d2d7"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-11-13_v24_capacity_low53/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "5da3010e1cd4859c1e08c8742ad317c08f21df6fd82e00283c0ce5965822cef5"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-22-19_v24_main_low51/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "9f626b3c2e5318c44bb39aa98880a581c3a7e86ec751e87ce9ea8488993432cf"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-42-55_v24_main_low53/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "fa28f1725a46e794c1a7f4a5eecb4015069637dc3f62065751e2d79bc1a27cdb"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-10-35_v24_capacity_low52/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "0d6d6e5d6f9a7a3355782d263a0ba9a7bcfec6448147d2b24eeec6fa81dab5f4"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-10-54_v24_capacity_high53/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "cdc97fef1d4698e85a882609ca49f2647c9b81126b56f46236f9cc0a7920e5b5"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-09-24_v24_preflight_low51/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "32c0137f482790a86bb293045f58a2ab4314e376e1c8c9135a33d559a1c42e25"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_lr_continuation_v24/2026-09-28_22-32-37_v24_main_low52/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "fe2c20a428f777a732041d4a1fd49d36cacc7c45b477ab9676fbaef0e75ad0a5"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_style_v18/2026-09-23_19-59-09_v18_capacity_always/params/env.yaml",
+      "training_geometry": 104,
+      "env_config_sha256": "0e88813530df3394e09305b5ad3d1fe9254c6171e122e23c725e8e613f00a4e0"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_style_v18/2026-09-23_19-57-27_v18_preflight_always/params/env.yaml",
+      "training_geometry": 104,
+      "env_config_sha256": "3f08905ed1058ee16b7f7e0be5b321f50731e4e43e79b18b0c49952fa68b430d"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_style_v18/2026-09-23_19-58-04_v18_preflight_always/params/env.yaml",
+      "training_geometry": 104,
+      "env_config_sha256": "2f304ebb4a5d0b6d8e16741dbe7aa7d6f0cf75d7f2496816d0db79a434ef6789"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_style_v18/2026-09-23_20-01-42_v18_paired_always/params/env.yaml",
+      "training_geometry": 104,
+      "env_config_sha256": "91c2b824e9596ad4ca0d8e1f786d52d3dc170ebb5b86e1e99525fa0bb143a8e2"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_style_v18/2026-09-23_20-00-20_v18_capacity_gated/params/env.yaml",
+      "training_geometry": 104,
+      "env_config_sha256": "11f20717d2122aac7ebdf6dde3d374a65d27daf4cefbca281b81ba15d7a52c5c"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_style_v18/2026-09-23_20-13-56_v18_paired_gated/params/env.yaml",
+      "training_geometry": 104,
+      "env_config_sha256": "6b300e03f91061a148e6c42fdb4d6d80b2413205ce090f2f8f6197d48a6ad8f6"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_style_v18/2026-09-23_19-58-29_v18_preflight_gated/params/env.yaml",
+      "training_geometry": 104,
+      "env_config_sha256": "699f49fda2e45ffd1bf426f7542f0f6c411b3c5955b977645aa4e84358483226"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_direction_v15/2026-09-23_01-03-59_v15_paired_control/params/env.yaml",
+      "training_geometry": 95,
+      "env_config_sha256": "6eb0bd0fceaac80fdfac4fca0f9dc08f917f65df1cc72ca63ed0368582bd484b"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_direction_v15/2026-09-23_01-00-09_v15_capacity_control/params/env.yaml",
+      "training_geometry": 95,
+      "env_config_sha256": "101c0149ed865622e7b39f9516c5d652bafd9d9698c9120e2acd34d8cbf8c8a0"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_direction_v15/2026-09-23_00-58-49_v15_smoke_control/params/env.yaml",
+      "training_geometry": 95,
+      "env_config_sha256": "4ef34b54cfc5cacbb7a943dc5ea8efd95f529b4a5f3d6fdc0ee1c51b927e5a28"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_direction_v15/2026-09-23_01-14-09_v15_paired_stable/params/env.yaml",
+      "training_geometry": 95,
+      "env_config_sha256": "82af6cbddbe5bc1a7b8a8de6d2cebd4e7ad0f3558ba46b117607ed9cdfda144a"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_direction_v15/2026-09-23_00-59-07_v15_smoke_stable/params/env.yaml",
+      "training_geometry": 95,
+      "env_config_sha256": "e11eac6d28182fb2d1df79260cf62929775d3e4118d5d069bf00964511692762"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_direction_v15/2026-09-23_01-00-29_v15_capacity_stable/params/env.yaml",
+      "training_geometry": 95,
+      "env_config_sha256": "d267531ffe37327116733ab6ddf5cc2d431a446cbf5b12dd334b9252d543f2b1"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_prior_v10/2026-09-22_15-11-46_v10_anchored_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "c193baa7917690e11c2c556dde76802c569a9d1f9a13a773f562efe5e6d384e5"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_prior_v10/2026-09-22_14-18-29_v10_free_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "2df6432feede90095546fd554e16d6b44eaa5f5cdbd7acc118ee43e826c0d38a"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_prior_v10/2026-09-22_15-29-13_v10_free_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "99fbd7ace1519caac4dbde48be41ead75d2819f3899bde0a2081b980c2530ee9"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_prior_v10/2026-09-22_15-46-33_v10_anchored_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "6d33178cdfca37968ee2aef5acb4b6c3d726f0dde7f8003d6449605af658e776"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_prior_v10/2026-09-22_14-36-21_v10_anchored_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "30e6b35fa349706a33c7ffb5bf11893a50c12ecdd318dca6d4757171ca3e67a1"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_prior_v10/2026-09-22_14-04-57_v10_smoke64/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "d06b00940fca64040a1c180c197cdb36d363353084585891345f1ce0e769a33c"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_prior_v10/2026-09-22_14-54-16_v10_free_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "8c37991f0a557232ad448ccaf9808472bd00f51ae1a30177aefd91c10e95f508"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_prior_v10/2026-09-22_14-07-02_v10_capacity4096/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "b03cfbca1882f1b878e0c06640f7e2f3889924232cb6c2fb516b714fd2ec63ca"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_curriculum_v20/2026-09-28_12-17-53_v20_preflight_immediate/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "026dc3ae39e306f230ffea7fbf47d1f56d3f7427c2b8f671bd6772d7660d1d65"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_curriculum_v20/2026-09-28_12-30-54_v20_paired_ramped/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "e47984ac13b023d51c5cb5ebdc50d28ef9953694c7a726654b7b48fc1c3d1855"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_curriculum_v20/2026-09-28_12-18-51_v20_capacity_immediate/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "a17c154dacf25b3fdde0b75acfbc2d176f171281c6ce2b04fb187b7d0f805780"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_curriculum_v20/2026-09-28_12-20-40_v20_paired_immediate/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "9798cd87a1203e4be9cc731d17896d0949f055fcee5c5de09fc3264411bd752c"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_curriculum_v20/2026-09-28_12-19-09_v20_capacity_ramped/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "dd3e0149a15125d1cd8b557c495303aced80975b7624f05fc8ef9146195bde0d"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_curriculum_v20/2026-09-28_12-18-12_v20_preflight_ramped/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "64813fd0d151c3aab1f03dd9d9e13c0d293d7b64e610d4d35d4a1de34d1cb167"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_19-46-32_terrain_extreme_approach_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "dc9c21d3d1d8507cca24e5a1166cc745a8011b2712832a71e21724e30efc04e7"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_20-00-19_terrain_extreme_scanner_smoke2/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "f07101f823b0ec525490c2d360b704459fb0e464e24a45fed8c6c928c0355c8c"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_20-33-05_terrain_extreme_ramp_from7150_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "d969d6ef0ac671bcfb7e2906b48356b54b56ad6db104106c13b8a4b0719d656a"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_15-26-34_terrain_mild_seed42/params/env.yaml",
+      "training_geometry": 44,
+      "env_config_sha256": "89fedb7749fa3253cffaf4606ae5b3d56c271a29950f513c2b008ea29b7aff21"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_20-03-11_terrain_extreme_scanner_approach_fresh_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "bb4eb612695f2a820645904e9b9175aefd10b3b0cddeee3f7c7d00b086642069"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_15-11-15_terrain_smoke/params/env.yaml",
+      "training_geometry": 42,
+      "env_config_sha256": "a93a2e6d931b7623aae1b0584f7d00ab49f28155ba42238cdaef5f599e3b3f75"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_19-21-40_terrain_extreme_mild_seed42/params/env.yaml",
+      "training_geometry": 48,
+      "env_config_sha256": "21a51b56217500bce45a27ceb4a79a563a9fe9d4ec9e1f5aa80a71890feda3a8"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_19-44-31_terrain_extreme_full_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "62edbaf004f9b06d0cbec8c83c23c108e55cd881e80f867d3074b296ea8617e5"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_16-39-25_terrain_posture_full_seed42/params/env.yaml",
+      "training_geometry": 42,
+      "env_config_sha256": "5e21eda016046c544ab5962a32e5132bfcc8ef4d97b56cbe83c9a9fb05c9ff98"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_20-02-45_terrain_extreme_scanner_smoke_fresh/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "41da014d20903a7e335c8ac3a34893187447b6e32677f1bc06dda9cca5c84aa6"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_16-39-25_terrain_posture_mild_seed42/params/env.yaml",
+      "training_geometry": 44,
+      "env_config_sha256": "97b213fbe823c6ee9d11a7195fce920b33678ac3541c8183880fc51e075a5e67"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_20-01-01_terrain_extreme_scanner_approach_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "5926e3acd0a38b25d7f5a7bc2fd79f3923de0e8cef1a9a6976f88d9c7ef53921"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_15-13-16_terrain_finetune_seed42/params/env.yaml",
+      "training_geometry": 42,
+      "env_config_sha256": "c4252ca4181056590fbc2d1aec3408e4404e009cfff7e3af89d4b1622519d488"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_19-29-18_terrain_extreme_mild_curriculum_seed42/params/env.yaml",
+      "training_geometry": 48,
+      "env_config_sha256": "f06b45b4eac180c970a0e389774f6861c787a6332120592004d9b7da8a223ed0"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_20-18-09_terrain_extreme_scanner_full_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "2ceb4996d4c9a3a8e0514dd48a4435b19031969f82cff9554a74b98b7d70d4d5"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_15-15-11_terrain_scratch_seed42/params/env.yaml",
+      "training_geometry": 42,
+      "env_config_sha256": "08ca5543f08ad3547e9cc4785457b7a20684b2009b32b362c716c69d5c89f219"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_18-04-44_terrain_complex_mild_seed42/params/env.yaml",
+      "training_geometry": 46,
+      "env_config_sha256": "42925a84c3aff154946da41517f56adab159493c2fd67c4649da89d39222be0b"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant/2026-09-17_18-14-01_terrain_complex_full_seed42/params/env.yaml",
+      "training_geometry": 45,
+      "env_config_sha256": "5947716b17dd6a5782485c0d94c2c529a9cefbdb06729cc08446e2d5993b334f"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_22-17-27_footmap_smoke/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "8503f88c5e49547d62297fc15f6d03c69d6bd6decfcd9d23f72d212fc7b532c9"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_23-22-07_v7_height_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "ae2f07520cdfe7ded641e3e6964f2e10348e68bb301a6bfc542fc8d07ea4e291"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_23-35-52_v7_footmap_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "50256d406e618a75b6212097457ee47af509cc7a1ebf1d455e17495a0a288d78"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_22-22-49_footmap_throughput_gpu1/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "606318170acb11b6356d19ea79fc0ab52578a2ff6f2a09b680bf769ef7541878"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_22-39-23_v7_height_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "a0a0782feb31b0fc2fbddeda89df50ff795ab25e8af0b59ddeaa6c2fb946d8b5"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_22-26-13_v7_blind_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "d98cb556eccaf2d7108bdcce96ecb83de13b9d8cdb05db5991a25cef8ef8a7b9"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_23-09-03_v7_blind_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "38654ba01540a756680863361d92728aa4aba6b9c7c8523cbec1a5c9343221a9"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_22-19-30_footmap_throughput_probe/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "4ca13bf96b9c11161c92e2e73e3b1f864e769cbc85e42302331ee46ad4fc346e"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_23-51-57_v7_blind_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "90589aa93452637ac557fab2ec322de84530481f2c5d573276316e6b5efdb85c"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-22_00-18-54_v7_footmap_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "a3c1cb993898271d00f7ac3b15056bf98d035146399be29b88af61f97d337189"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-21_22-53-17_v7_footmap_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "e56efe53da196d85daecdbb7d4030f3f6ad4a89367608530f2d5d20e9da4b3c1"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_footmap_v7/2026-09-22_00-05-08_v7_height_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "af167a8cfe2e7021d93a9fe3307248dbcae5bce8cc40753888e5ff3b2c25673b"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_v16/2026-09-23_11-39-23_v16_paired_slip/params/env.yaml",
+      "training_geometry": 98,
+      "env_config_sha256": "a17c2465a096f339c674953bc20e50e7cdec781f60ae5b42ddb3ee44d1e95c47"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_v16/2026-09-23_11-22-39_v16_capacity_control/params/env.yaml",
+      "training_geometry": 98,
+      "env_config_sha256": "b436efb8a6e82112d36cf25b366534b3aeb88f8ce2e475fb0c3ce65a3bca09c9"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_v16/2026-09-23_11-28-37_v16_paired_control/params/env.yaml",
+      "training_geometry": 98,
+      "env_config_sha256": "f352e52d7e0ca1b43a2ec43fa14c96415ce502dbfa23a002a22795e40c32ce14"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_v16/2026-09-23_11-22-09_v16_capacity_slip/params/env.yaml",
+      "training_geometry": 98,
+      "env_config_sha256": "ce5028d9ed2dbf5cf912fea1f0a0fc1cfbaefb861b5a2332916f8284009b21a2"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_v16/2026-09-23_11-23-00_v16_capacity_slip/params/env.yaml",
+      "training_geometry": 98,
+      "env_config_sha256": "32761c13f7a2750611c576053357b6dee2618e3798eea32d34baea9ce757f7c4"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_v16/2026-09-23_11-21-54_v16_capacity_control/params/env.yaml",
+      "training_geometry": 98,
+      "env_config_sha256": "1d8e8f38fd6d10d8cd2211fd771dc2ace2a9133c96cd83fe11b34ce7cba2a55d"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-11-04_v22_preflight_seed51/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "d336d6538ccb921bbfbc509d367c66425c89ec24b92dfa67e61fccecdfa4909a"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-24-29_v22_main_seed52/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "30fcac163d0f0db06ba921611cb4fb17229f6abf69fa05850eb050dd1848dead"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-11-20_v22_preflight_seed52/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "d30deb65a28dcc1b0cd21b76570a8b72324c0cef6d919c48c79ca2e49091b664"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-34-46_v22_main_seed53/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "3d9d7c9ed7de23aa29a0203994ab9752c298a508bb17bdb7dccb5c58f5494de3"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-11-50_v22_capacity_seed51/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "e25e482ff2da6e3ab790962183f7bf90f471a5b93c6753361a353d5981af0561"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-14-11_v22_main_seed51/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "c89be1fe16e7ded3796875e58cbd93ea7dd9a241ee541630d3529d7b6fe17575"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-11-34_v22_preflight_seed53/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "2ce263606c5a123567b235f6f5b4323d1205cd89d7241353ea0ce191726ea338"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-12-28_v22_capacity_seed53/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "d4db8b12ffd266ea593ea41815874860ef01466562bf42f1df6ada74d8baf886"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_seed_continuation_v22/2026-09-28_16-12-09_v22_capacity_seed52/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "d3d481986728976cb641df35e3b275a5f7ae75481adf91c2283e3647e47aa78d"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_12-44-31_v9_targets_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "9db20791b0e987d3e53501628b536adcc298e543e604a251670a06aa4cfe1496"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_12-04-01_v9_guided_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "730df19d7feecf86ca54fd364b33f69ffd5bf82ce61369ba09edc217bd6e1eb9"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_10-53-17_v9_targets_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "02d518cca5dc3fbcd9e7b8dd9bf0d419794857704f00f9e89600b6e8834af3b4"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_13-00-12_v9_guided_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "1370cfd69027b8963f4f5a15ef4ba37d2554fe9e6c0f9b0bd03e495cd3e11057"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_11-09-00_v9_guided_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "e612406ea617453d4795bce9e0fd2ef19d06909123a67dc7730f9c7f933d2b65"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_10-38-13_v9_feet_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "966b2aafbe218ec4475754f183c9e9eb365dd21c4677496047fba1a466e0a4b7"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_11-31-53_v9_feet_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "5c4503f292dec0c4f22618872056402598a4a0bdf1aaa9d6e28e71b19c184b31"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_12-28-03_v9_feet_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "8b351fe1ed07435526cb8229353131ccf85a29a93bb0e0e216930e1a8d88d03e"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_10-31-46_v9_capacity_guided/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "7d62ef982832d9cfb06a12282e1f1b87a56d5ff6b06b56f0c005be57b5aa967b"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_10-29-13_v9_profile_guided/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "f87ba8ced1ff6c626519927dcb7e0631a2f9f312fcc33a9e59ad8a934be2f84c"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_10-27-34_v9_smoke_guided/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "0900c6aded1daa9ad7dbb90371000e45fe531b84859fe415cc84913c009e9ff8"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_foothold_v9/2026-09-22_11-47-03_v9_targets_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "c5d0c6f278156962115d75017088f1e1468002aa8ec059498b85c1eade79effb"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-46-43_v21_preflight_no_cost/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "aaf8767cc1a1491c220ee50fb2aceb8a8aa4ad10ce727df8c60687a97db379f2"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-46-28_v21_preflight_immediate/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "deba28357b65d7069156b62bf270b87d15c2a265d2eb7902ef5920858ea59780"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-48-22_v21_paired_no_cost/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "2441b491c431596068aa30407cd9918f14e65212eba04166971c7f0527fd2dae"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-47-17_v21_capacity_no_cost/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "d1d79e29e3041d4a47e0af844e38f8c6f04042b367d17979c01553952745f3eb"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_contact_continuation_v21/2026-09-28_13-46-59_v21_capacity_immediate/params/env.yaml",
+      "training_geometry": 110,
+      "env_config_sha256": "f2b999c3210fa128bf6225a812159c0598ab0d2b2331e28e0fa4cdd9d4a28fec"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_01-10-37_v8_blind_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "487f53c2dd1a4e7abdaaa1178c1291f048c30dbdfadd752ea73629d433866c9f"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_01-52-05_v8_footmap_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "5c3b6f9cdaa92729bea9a2cb50f656cf052316ae9f0c895a65d8f2675f2ad468"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_01-02-35_v8_smoke/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "b98c61ad3184dfeaa3912938a76d9e855147c1440df0ff3fc0de0ad16112ea6a"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_02-07-51_v8_blind_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "e38b8c8f88d25bfc7ca253fb0c98afdfd067a00845f284f24931ae1011a774b3"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_01-39-12_v8_blind_seed43/params/env.yaml",
+      "training_geometry": 58,
+      "env_config_sha256": "0217f896de9617e0b74c4c5b9711f2bbaa1d3f479f9d86221764e79e335d6f98"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_02-20-43_v8_footmap_seed44/params/env.yaml",
+      "training_geometry": 59,
+      "env_config_sha256": "262fe1f32610cc59e87340a7902cafe4a34020da1305f9c0fe881a16c69c76a2"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_residual_v8/2026-09-22_01-23-27_v8_footmap_seed42/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "448b6f7918489818bf7c81c18bfdd4d56f8357b44b2e9990b1d0ded947674cbe"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_adaptive_posture_v13/2026-09-22_22-01-33_v13_capacity_adaptive/params/env.yaml",
+      "training_geometry": 75,
+      "env_config_sha256": "acf18c856fd4ae943a5801c70f7a32c4ca08462a3834841d6b9f9ea266faa21b"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_adaptive_posture_v13/2026-09-22_21-49-59_v13_smoke_control/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "df5f6b855788f7dba42d96bc28aae1ce0bf94d173596f48c06a94343d4457de2"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_adaptive_posture_v13/2026-09-22_22-12-43_v13_paired_adaptive/params/env.yaml",
+      "training_geometry": 75,
+      "env_config_sha256": "bd139c43967a01471230da62a0feaf03b12f29c1f07de1e727dc61e930429c6c"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_adaptive_posture_v13/2026-09-22_21-53-08_v13_smoke_adaptive/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "ceaa76878b4958b37862288ace92e0023f7c163eeb2569dda49c00e80e0da519"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_adaptive_posture_v13/2026-09-22_22-07-11_v13_paired_control/params/env.yaml",
+      "training_geometry": 75,
+      "env_config_sha256": "89623988fa3a0745f9a576c0a28b3dd645e0666d3fdc9979ef3f01161bfb2f38"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_adaptive_posture_v13/2026-09-22_22-01-11_v13_capacity_control/params/env.yaml",
+      "training_geometry": 75,
+      "env_config_sha256": "2c070b101908d5c77dde645d4196b7a65187cfd8fbfd76fc52e8cc123fdad282"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_22-14-12_recovery_ramp_v4_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "4ce999617c77a6e62d2d3139a1739b8b17b6104fd3c8741a61e4642326880e57"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_23-10-41_recovery_pit_focus_v4_seed42/params/env.yaml",
+      "training_geometry": 49,
+      "env_config_sha256": "f53e3cc51cd514a1f1195bf4c54d2fffa7707e14a9e6aa7d69e1261fb175a192"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_23-16-50_recovery_balanced_final_v4_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "2bb4ddd280d73b310e2eb5475bbefcbab6a689927badab308cdf092e9d0f0b9e"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_22-25-35_recovery_robust_v4_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "49a0c5beebe83913b91e6e3b55ffe0bd8bdf349c83f032835cd03d2ed1f22cde"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_23-00-32_recovery_balanced_v4_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "c0aa9b3f1902b0b1a66805db740d07d624bb6f8b2726ff2be1ddb05596918f69"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_22-52-09_recovery_focus_v4_seed42/params/env.yaml",
+      "training_geometry": 49,
+      "env_config_sha256": "6bfe223fc66927737de0596493f42d1650432bee83d9528a01a70686697b2575"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_23-07-31_smoke_pit_focus/params/env.yaml",
+      "training_geometry": 49,
+      "env_config_sha256": "dbb040489b1202e4a69bfc39c3750ce3669cee3b59ba1f45188ccc090fcc3f5f"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_21-52-31_recovery_mild_seed42/params/env.yaml",
+      "training_geometry": 48,
+      "env_config_sha256": "fe8dbc5606a946e0a955b5fc7345e4af8af7243b52c6d76bd546409a81bfd1e4"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_22-04-33_recovery_approach_v4_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "dc18e706da691d3aa49fd910f05f67918521860a87ef9f19041b390bd43a05fa"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_21-51-58_smoke_v4/params/env.yaml",
+      "training_geometry": 48,
+      "env_config_sha256": "8386fe2580fe5666ac807c0e6e8c7e854f5219124391651fe66be08ceb4bc305"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_22-39-54_recovery_robust2_v4_seed42/params/env.yaml",
+      "training_geometry": 47,
+      "env_config_sha256": "8d91dc4a8c2c3ca5b04d91d8af67f8459ed6d0a76166939bd309702b2199a08a"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_recovery/2026-09-17_21-58-35_recovery_mild_v4_seed42/params/env.yaml",
+      "training_geometry": 48,
+      "env_config_sha256": "c3f3ef7c253dc9d11ae7593d5c478df6ea5ae9feb46d9a2072a4c557face14e1"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_command_v14/2026-09-22_23-26-35_v14_capacity_masked/params/env.yaml",
+      "training_geometry": 85,
+      "env_config_sha256": "932f435682e619e85f91abeb9bde08fb9834ab33b5b75ba33dfd29423f2e30bc"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_command_v14/2026-09-22_23-27-00_v14_capacity_conditioned/params/env.yaml",
+      "training_geometry": 85,
+      "env_config_sha256": "86ec2c4d91b0adb59b5f33c6bdccc986c4cb603b6900b2fc70e1a493c4771fe8"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_command_v14/2026-09-22_23-44-28_v14_paired_conditioned/params/env.yaml",
+      "training_geometry": 85,
+      "env_config_sha256": "bcd3dcd3a24da693f8bb40459b90740df1c8740d05b17a02a146b56fcb255744"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_command_v14/2026-09-22_23-24-50_v14_smoke_masked/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "9131caabe4a9fd9cb30482b90d55b2feac975884c6d593935e166517125b0057"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_command_v14/2026-09-22_23-25-05_v14_smoke_conditioned/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "cd1dc0ee6a31731f115a21347ec9a34525bafa19c08e83e6f3c5155fd9b8896a"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_command_v14/2026-09-22_23-34-16_v14_paired_masked/params/env.yaml",
+      "training_geometry": 85,
+      "env_config_sha256": "a845de8bc0f5b31064e97fa1f35a22923eeb7130a0e6a49374dcffa72d2784f1"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_depth_v6/2026-09-21_20-18-26_depth_smoke_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "a577cc12d8caa2c80204113e5c998370713c2556b583313d748ea320250cde1d"
+    },
+    {
+      "run": "logs/rsl_rl/week03_ant_depth_v6/2026-09-21_20-26-11_depth143_recovery_20260921/params/env.yaml",
+      "training_geometry": 51,
+      "env_config_sha256": "cbef18ee3a32ac8318ad199144062fd8ec6dfbf7c32eae540ab6da3f5d7994eb"
+    }
+  ],
+  "known_training_geometry_seeds": [
+    42,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    51,
+    58,
+    59,
+    75,
+    85,
+    95,
+    98,
+    101,
+    104,
+    110
+  ],
+  "predeclared_geometry_reset_pairs": [
+    [
+      901,
+      101
+    ],
+    [
+      902,
+      102
+    ]
+  ],
+  "novelty": "Unseen randomized layouts of trained terrain families. Not a novel obstacle family or out-of-generator-distribution test.",
+  "tile_seed_rule": "base_seed*10007 + col*131 + row",
+  "new_geometry_absent_from_training_configs": true,
+  "new_geometry_absent_from_recorded_docs_frozen_manifests": true,
+  "limitation": "Available saved run configs only; upstream training ancestry geometry51/98 and continuation110 are also documented in frozen manifests.",
+  "per_tile_rng_seed_collision_count": 0,
+  "new_map_tile_seeds_per_map": 240,
+  "geometry_family_contract": "Original six rough generator families plus infinite plane; original .2/.4/.6/.8/1 difficulties"
+}

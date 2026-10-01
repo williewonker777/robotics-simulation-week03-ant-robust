@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ant · 학습 미사용 장애물 배치 데모</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #10151d; color: #e5edf5; }
+    body { max-width: 1100px; margin: auto; padding: 28px 20px 48px; line-height: 1.6; }
+    h1 { line-height: 1.25; margin-bottom: 12px; }
+    h2 { font-size: 1.2rem; margin: 0 0 8px; }
+    a { color: #8fd6ff; }
+    .note { color: #b6c4d3; }
+    .result { border-left: 4px solid #62c6ad; padding: 12px 18px; background: #18242b; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 20px; }
+    article { background: #1b2430; border: 1px solid #344353; border-radius: 12px; padding: 16px; margin: 20px 0; }
+    .grid article { margin: 0; }
+    video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 7px; }
+    p { margin: 10px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { text-align: left; padding: 9px; border-bottom: 1px solid #344353; }
+    @media (prefers-reduced-motion: reduce) { video { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="note">Week03 Ant · 2026-10-01 · 재학습 없이 기존 checkpoint 실행</p>
+    <h1>학습 미사용 장애물 배치 데모</h1>
+    <p>아래는 geometry <strong>901</strong>, reset seed <strong>101</strong>, 최고 난도 <strong>1.0</strong>의 16초 무편집 원본입니다. 기존 지형 종류의 새 배치이며, 새로운 종류의 OOD 지형을 검증한 것은 아닙니다.</p>
+    <p class="result"><strong>결론:</strong> 64초 혼합험지는 v5 ↔ high53 history 교체가 최고였지만, 장애물만 보면 high53 단독이 더 좋았습니다. 지형마다 최고 설정이 달라 “평지/험지 분리가 항상 최고”는 아닙니다.</p>
+  </header>
+
+  <article>
+    <h2>장애물 최고 후보 · high53 단독</h2>
+    <video controls autoplay muted loop playsinline preload="metadata" aria-label="high53 단독 장애물 16초 데모">
+      <source src="videos/GUI_high53__obstacles_g901_r101.mp4" type="video/mp4">
+      <a href="videos/GUI_high53__obstacles_g901_r101.mp4">원본 MP4 열기</a>
+    </video>
+    <p>이 사례의 첫 episode: 낙상 종료 없음 · 전진 45.62 m. <a href="videos/GUI_high53__obstacles_g901_r101.mp4">원본 다운로드/열기</a></p>
+  </article>
+
+  <section aria-label="동일 배치 모델 비교">
+    <h2>동일 배치 비교 영상</h2>
+    <div class="grid">
+      <article>
+        <h2>history high53 · 장애물</h2>
+        <video controls muted loop playsinline preload="metadata" aria-label="history high53 장애물 16초 데모">
+          <source src="videos/GUI_history_high53__obstacles_g901_r101.mp4" type="video/mp4">
+          <a href="videos/GUI_history_high53__obstacles_g901_r101.mp4">원본 MP4 열기</a>
+        </video>
+        <p>v5 ↔ high53 교체 · 첫 episode 낙상 종료 없음 · 38.40 m</p>
+      </article>
+      <article>
+        <h2>history high53 · 징검다리</h2>
+        <video controls muted loop playsinline preload="metadata" aria-label="history high53 징검다리 16초 데모">
+          <source src="videos/GUI_history_high53__stones_g901_r101.mp4" type="video/mp4">
+          <a href="videos/GUI_history_high53__stones_g901_r101.mp4">원본 MP4 열기</a>
+        </video>
+        <p>v5 ↔ high53 교체 · 첫 episode 낙상 종료 없음 · 23.35 m</p>
+      </article>
+      <article>
+        <h2>v16 control 단독 · 장애물</h2>
+        <video controls muted loop playsinline preload="metadata" aria-label="v16 control 장애물 16초 데모">
+          <source src="videos/GUI_v16_control__obstacles_g901_r101.mp4" type="video/mp4">
+          <a href="videos/GUI_v16_control__obstacles_g901_r101.mp4">원본 MP4 열기</a>
+        </video>
+        <p>첫 episode 낙상 종료 없음 · 33.80 m</p>
+      </article>
+      <article>
+        <h2>v16 control 단독 · 징검다리</h2>
+        <video controls muted loop playsinline preload="metadata" aria-label="v16 control 징검다리 16초 데모">
+          <source src="videos/GUI_v16_control__stones_g901_r101.mp4" type="video/mp4">
+          <a href="videos/GUI_v16_control__stones_g901_r101.mp4">원본 MP4 열기</a>
+        </video>
+        <p>첫 episode 낙상 종료 없음 · 19.89 m</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-label="수치 평가 요약">
+    <h2>별도의 수치 평가 · 미사용 배치 901 / 902</h2>
+    <table>
+      <thead><tr><th>범위</th><th>최고 후보</th><th>엄격한 6타일 성공</th></tr></thead>
+      <tbody>
+        <tr><td>16초 혼합험지</td><td>v16 control 단독</td><td>177 / 300 (59.0%)</td></tr>
+        <tr><td>64초 혼합험지</td><td>history high53</td><td>236 / 300 (78.7%)</td></tr>
+        <tr><td>64초 장애물만</td><td>high53 단독</td><td>38 / 50 (76.0%)</td></tr>
+      </tbody>
+    </table>
+    <p class="note">정성 영상의 거리는 위 반복 평가와 합산하지 않습니다. 각 원본은 480프레임/30fps/1280×720이고, 시간 제한 reset 및 초기 검은 1프레임도 제거하지 않았습니다. 전체 디코딩과 실제 GUI viewport를 확인했습니다.</p>
+    <p class="note">전환기는 지형 이름별 전용 모델 배정이 아니라 높이 ray 이력에 따른 두 정책 혼합입니다. v5는 이미 평지·험지 혼합 학습 모델이며, 순수 평지 모델과 순수 험지 모델의 분리 실험은 아닙니다. 평지 속도/낙상 등 모든 지표가 교체로 개선되지는 않았습니다.</p>
+  </section>
+  <footer>
+    <a href="../../docs/UNSEEN_OBSTACLE_DEMO.md">결과·재현·한계 문서</a> ·
+    <a href="summary/summary.ko.md">전체 한국어 수치표</a> ·
+    <a href="media_manifest.json">영상 검증</a> ·
+    <a href="independent_data_audit.json">독립 원시 수치 감사</a>
+  </footer>
+</body>
+</html>

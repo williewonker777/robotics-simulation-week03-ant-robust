@@ -1,0 +1,2784 @@
+{
+  "claims": {
+    "checkpoint_and_teacher_identity": {
+      "expected_high53_v22_seed53_model249": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+      "expected_v16_control_model249": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+      "issues": [],
+      "pass": true,
+      "per_bundle": {
+        "high53__g901_r101": {
+          "checkpoint_sha256_actual": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+          "checkpoint_sha256_in_result": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        },
+        "high53__g902_r102": {
+          "checkpoint_sha256_actual": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+          "checkpoint_sha256_in_result": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        },
+        "history_control__g901_r101": {
+          "checkpoint_sha256_actual": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+          "checkpoint_sha256_in_result": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        },
+        "history_control__g902_r102": {
+          "checkpoint_sha256_actual": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+          "checkpoint_sha256_in_result": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        },
+        "history_high53__g901_r101": {
+          "checkpoint_sha256_actual": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+          "checkpoint_sha256_in_result": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        },
+        "history_high53__g902_r102": {
+          "checkpoint_sha256_actual": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+          "checkpoint_sha256_in_result": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        },
+        "v16_control__g901_r101": {
+          "checkpoint_sha256_actual": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+          "checkpoint_sha256_in_result": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        },
+        "v16_control__g902_r102": {
+          "checkpoint_sha256_actual": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+          "checkpoint_sha256_in_result": "1a937bfa9b33449b6a088471b6202ab4db9d8231131e9f12509f6fe40db737fc",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        },
+        "v5__g901_r101": {
+          "checkpoint_sha256_actual": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1",
+          "checkpoint_sha256_in_result": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        },
+        "v5__g902_r102": {
+          "checkpoint_sha256_actual": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1",
+          "checkpoint_sha256_in_result": "fa1ec87ef2b89b698f250d91452685cef0a7f76e340e790650116138aee875c1",
+          "match": true,
+          "teacher_tensor_identity_verified": true
+        }
+      }
+    },
+    "complete_raw_set": {
+      "actual_files": 10,
+      "expected_files": 10,
+      "issues": [],
+      "pass": true
+    },
+    "execution_source_freeze": {
+      "canonical_harness_actual_sha256": "cf512d2833d5d3a1d808735cf40a1b91cbbbc6d80db2928acc22982450bcd422",
+      "execution_freeze_harness_sha256": "cf512d2833d5d3a1d808735cf40a1b91cbbbc6d80db2928acc22982450bcd422",
+      "issues": [],
+      "pass": true,
+      "raw_embedded_five_dependency_hashes_stable": true
+    },
+    "family_counts": {
+      "counts": {
+        "high53@16": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        },
+        "high53@64": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        },
+        "history_control@16": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        },
+        "history_control@64": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        },
+        "history_high53@16": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        },
+        "history_high53@64": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        },
+        "v16_control@16": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        },
+        "v16_control@64": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        },
+        "v5@16": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        },
+        "v5@64": {
+          "families": {
+            "flat": 50,
+            "obstacles": 50,
+            "rough": 50,
+            "slope": 50,
+            "stairs": 50,
+            "stepping_stones": 50,
+            "waves": 50
+          },
+          "flat_total": 50,
+          "rough_total": 300
+        }
+      },
+      "pass": true
+    },
+    "flat_v5_equivalence": {
+      "comparison": {
+        "history_control_g901_16": {
+          "all_core_fields_exact": true,
+          "duty0": true,
+          "field_equality": {
+            "episode_lengths": true,
+            "episode_out_of_lane": true,
+            "episode_steps": true,
+            "episode_strict_all_tiles_success": true,
+            "episode_strict_one_tile_success": true,
+            "episode_terminated": true,
+            "episode_world_exit": true,
+            "forward_distance": true
+          },
+          "flat_episodes": 25
+        },
+        "history_control_g901_64": {
+          "all_core_fields_exact": true,
+          "duty0": true,
+          "field_equality": {
+            "episode_lengths": true,
+            "episode_out_of_lane": true,
+            "episode_steps": true,
+            "episode_strict_all_tiles_success": true,
+            "episode_strict_one_tile_success": true,
+            "episode_terminated": true,
+            "episode_world_exit": true,
+            "forward_distance": true
+          },
+          "flat_episodes": 25
+        },
+        "history_control_g902_16": {
+          "all_core_fields_exact": true,
+          "duty0": true,
+          "field_equality": {
+            "episode_lengths": true,
+            "episode_out_of_lane": true,
+            "episode_steps": true,
+            "episode_strict_all_tiles_success": true,
+            "episode_strict_one_tile_success": true,
+            "episode_terminated": true,
+            "episode_world_exit": true,
+            "forward_distance": true
+          },
+          "flat_episodes": 25
+        },
+        "history_control_g902_64": {
+          "all_core_fields_exact": true,
+          "duty0": true,
+          "field_equality": {
+            "episode_lengths": true,
+            "episode_out_of_lane": true,
+            "episode_steps": true,
+            "episode_strict_all_tiles_success": true,
+            "episode_strict_one_tile_success": true,
+            "episode_terminated": true,
+            "episode_world_exit": true,
+            "forward_distance": true
+          },
+          "flat_episodes": 25
+        },
+        "history_high53_g901_16": {
+          "all_core_fields_exact": true,
+          "duty0": true,
+          "field_equality": {
+            "episode_lengths": true,
+            "episode_out_of_lane": true,
+            "episode_steps": true,
+            "episode_strict_all_tiles_success": true,
+            "episode_strict_one_tile_success": true,
+            "episode_terminated": true,
+            "episode_world_exit": true,
+            "forward_distance": true
+          },
+          "flat_episodes": 25
+        },
+        "history_high53_g901_64": {
+          "all_core_fields_exact": true,
+          "duty0": true,
+          "field_equality": {
+            "episode_lengths": true,
+            "episode_out_of_lane": true,
+            "episode_steps": true,
+            "episode_strict_all_tiles_success": true,
+            "episode_strict_one_tile_success": true,
+            "episode_terminated": true,
+            "episode_world_exit": true,
+            "forward_distance": true
+          },
+          "flat_episodes": 25
+        },
+        "history_high53_g902_16": {
+          "all_core_fields_exact": true,
+          "duty0": true,
+          "field_equality": {
+            "episode_lengths": true,
+            "episode_out_of_lane": true,
+            "episode_steps": true,
+            "episode_strict_all_tiles_success": true,
+            "episode_strict_one_tile_success": true,
+            "episode_terminated": true,
+            "episode_world_exit": true,
+            "forward_distance": true
+          },
+          "flat_episodes": 25
+        },
+        "history_high53_g902_64": {
+          "all_core_fields_exact": true,
+          "duty0": true,
+          "field_equality": {
+            "episode_lengths": true,
+            "episode_out_of_lane": true,
+            "episode_steps": true,
+            "episode_strict_all_tiles_success": true,
+            "episode_strict_one_tile_success": true,
+            "episode_terminated": true,
+            "episode_world_exit": true,
+            "forward_distance": true
+          },
+          "flat_episodes": 25
+        }
+      },
+      "issues": [],
+      "pass": true
+    },
+    "generated_summary_compare_after_raw_audit": {
+      "caveat": "This comparison follows independent raw computation; raw values remain authoritative.",
+      "comparison": {
+        "all_10_pooled_strict_six_values_appear_in_summary_serialization": true,
+        "exact_group_metric_mismatches": [],
+        "exact_group_metrics_equal": true,
+        "note": "Summary read only after independent raw computation. Exact structured comparison left bounded to published top-level keys below.",
+        "summary_sha256": "581a7a1398abde0890de366b93bc4a4ad22ac4bb81c5f2b580d73a46686f2c94",
+        "top_level_keys": [
+          "schema",
+          "physical_first_episodes",
+          "dependent_window_observations",
+          "paired_initial_conditions",
+          "statistical_independence_claim",
+          "interpretation",
+          "speed_definition",
+          "success_definition",
+          "survival_definition",
+          "windows",
+          "input_sha256",
+          "plan_sha256"
+        ]
+      },
+      "pass": true
+    },
+    "historical_selection_claims_from_historical_raw": {
+      "check": "v24 counts independently recomputed as history 234/300 vs solo 204/300; v19 strict-six 265/450 each with 39 vs 31 falls.",
+      "pass": true,
+      "values": {
+        "v19_history_control_rough_short16": {
+          "falls": 39,
+          "lane": 2,
+          "n": 450,
+          "strict_six": 265,
+          "world": 0
+        },
+        "v19_v16_solo_rough_short16": {
+          "falls": 31,
+          "lane": 4,
+          "n": 450,
+          "strict_six": 265,
+          "world": 0
+        },
+        "v24_history_seed53_rough64": {
+          "falls": 62,
+          "lane": 4,
+          "n": 300,
+          "strict_six": 234,
+          "world": 0
+        },
+        "v24_seed53_solo_rough64": {
+          "falls": 68,
+          "lane": 31,
+          "n": 300,
+          "strict_six": 204,
+          "world": 0
+        }
+      }
+    },
+    "novelty_declaration": {
+      "family_contract": "Original six rough generator families plus infinite plane; original .2/.4/.6/.8/1 difficulties",
+      "known_training_geometry_seed_count": 17,
+      "limitation": "Available saved run configs only; upstream training ancestry geometry51/98 and continuation110 are also documented in frozen manifests.",
+      "new_geometry_absent": true,
+      "pass": true,
+      "predeclared_pairs": [
+        [
+          901,
+          101
+        ],
+        [
+          902,
+          102
+        ]
+      ],
+      "saved_training_configs": 159
+    },
+    "paired_initial_conditions_and_physical_config": {
+      "issues": [],
+      "pairs": {
+        "g901_r101": {
+          "all_initial_root_joints_full91D_observation_prefix88D_rng_equal": true,
+          "controllers": [
+            "v5",
+            "v16_control",
+            "history_control",
+            "high53",
+            "history_high53"
+          ],
+          "field_equality": {
+            "difficulties": true,
+            "dt": true,
+            "family_indices": true,
+            "family_names": true,
+            "initial_prefix_sha256": true,
+            "initial_rng_sha256": true,
+            "initial_state_sha256": true,
+            "level_indices": true,
+            "num_envs": true,
+            "physics_steps": true,
+            "seconds": true,
+            "success_thresholds_m": true,
+            "terrain_config_sha256": true
+          },
+          "initial_hashes": {
+            "joint_pos": "7de8602c28546528456da5cf0b2cec1d339491112294e79613675e09d577877b",
+            "joint_vel": "b92d2557b38be2d3806fb573ad691bdaaebfd8fe4e9a3385676cd9f4e55ae477",
+            "observations": "014de4d726e67c18bc53f3a5ab2cc93f8e43595bcf05b5891907217c11ba588f",
+            "prefix88D": "988e89c7f18d8c62c1073bf38062560aeedbf54e7f3d10c4d2edf31216ba47ff",
+            "rng": {
+              "cpu": "00cc3bcfd3b7ff919f3cf2f284a390b8b66a6d2fb9d7fbde8105e16ba9e6a2ff",
+              "cuda": "ce2fba7beef69bb51ec112c0963544fccf2f8cf5e82b1e5f24da429790e3fc50"
+            },
+            "root_state": "f00a45c80d4fd38c29b0c0dd6de0a4ef4f758cef05cbe5967af37d8d87d2b0b0"
+          },
+          "terrain_config_and_family_assignment_equal": true,
+          "terrain_config_sha256": "acbca079cf1096467f316e483fa7d293abe3ef696f4c3d7d4756fdf09febca32"
+        },
+        "g902_r102": {
+          "all_initial_root_joints_full91D_observation_prefix88D_rng_equal": true,
+          "controllers": [
+            "v5",
+            "v16_control",
+            "history_control",
+            "high53",
+            "history_high53"
+          ],
+          "field_equality": {
+            "difficulties": true,
+            "dt": true,
+            "family_indices": true,
+            "family_names": true,
+            "initial_prefix_sha256": true,
+            "initial_rng_sha256": true,
+            "initial_state_sha256": true,
+            "level_indices": true,
+            "num_envs": true,
+            "physics_steps": true,
+            "seconds": true,
+            "success_thresholds_m": true,
+            "terrain_config_sha256": true
+          },
+          "initial_hashes": {
+            "joint_pos": "22b98b8206dd916c5b0815ba7150b574558bf46abc714692112741d32fec16ef",
+            "joint_vel": "87ab9584bca5f27a6d726bb20f7f2b08ecb1cacfab549ec151d7586a35d2fb5d",
+            "observations": "46ebb74c32b8f6fdf4565b6ca2b69c175743b81c3bd989c731bbf562aa162ac7",
+            "prefix88D": "80f3103d55666de4b0b8bea3f45de37aa7982d317cffe2c9fae0bf42a4fbf688",
+            "rng": {
+              "cpu": "de2e82411bd31072c454adce1ff65e39e51d2732580c42281e5e7ef975f909a4",
+              "cuda": "a5c80987e4e6dbe6b92f64662c070412fcbdba3fcdabfd73f4c7f5b408672487"
+            },
+            "root_state": "55860a6257710dd6467d4217036949fa9ea8ae6c5ea8f072d4aa75bb301edd24"
+          },
+          "terrain_config_and_family_assignment_equal": true,
+          "terrain_config_sha256": "2caf68430fc3a137f056e15fa62e8c5ee83e0411de0ba4d4dfc8676e3f86773f"
+        }
+      },
+      "pass": true
+    },
+    "preexisting_file_freeze": {
+      "changed_count": 0,
+      "changed_samples": [],
+      "manifested_files": 1865,
+      "missing_count": 0,
+      "missing_samples": [],
+      "pass": true
+    },
+    "single_rollout_window_integrity_no_reset_at_960": {
+      "issues": [],
+      "pass": true,
+      "per_bundle": {
+        "high53__g901_r101": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 16,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        },
+        "high53__g902_r102": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 8,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        },
+        "history_control__g901_r101": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 17,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        },
+        "history_control__g902_r102": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 12,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        },
+        "history_high53__g901_r101": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 13,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        },
+        "history_high53__g902_r102": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 12,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        },
+        "v16_control__g901_r101": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 16,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        },
+        "v16_control__g902_r102": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 14,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        },
+        "v5__g901_r101": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 18,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        },
+        "v5__g902_r102": {
+          "captured_steps": [
+            960,
+            3840
+          ],
+          "early_terminal_count_before_16s": 13,
+          "early_terminal_metrics_exact_between_windows": true,
+          "note": "A 16s snapshot is censored at 960 steps; only terminals before 960 are expected to equal 64s outcomes.",
+          "pass": true,
+          "physics_steps": 3840
+        }
+      }
+    },
+    "strict_rule_recomputed": {
+      "mismatch_count": 0,
+      "mismatches": [],
+      "pass": true,
+      "rule": "struct-pack IEEE754 float32(final_forward_distance) >= float32(13.1 or 53.1), and no posture termination/out-of-lane/world exit"
+    }
+  },
+  "conclusion": {
+    "best_16s_rough_strict_six": "v16_control",
+    "best_64s_rough_strict_six": "history_high53",
+    "interpretation": "On two new layouts of known rough families, v16_control is top at 16s (177/300 strict six-tile) and history_high53 is top at 64s (236/300). Family leaders vary by terrain family/window, so evidence does not support a blanket global model-switching conclusion. This is unseen layout of known generator families, with correlated episodes within 2 maps and paired policies; it is not 1750 independent statistical examples nor evidence for novel-family transfer.",
+    "media_scope": "Four GUI demos are outside this numeric audit and require separate media verification."
+  },
+  "generated_utc": "2026-10-01T01:10:40.872601+00:00",
+  "raw_evaluation_files": {
+    "high53__g901_r101": "7a60329f4bdc8e563f3f9b26b74860d1bfb490ee0cbec67b836c91330ee54622",
+    "high53__g902_r102": "e5b77d14e32195af51ec3136049e02d9612eab0b04019e2b694ab08e480c81b4",
+    "history_control__g901_r101": "76f148ebe28cbb57c1e04d0b88ce469b77b880513576f44c9b229a935249f6f6",
+    "history_control__g902_r102": "ec08100de295212fc1419deb82e6a876763354129335a998109e3de53c122e17",
+    "history_high53__g901_r101": "76d490de4e9f66447f74ccc386a012a9678186aebc3cba464ef6eb2e5728c758",
+    "history_high53__g902_r102": "1d840c250a4671da4153f245fa15c9be6d11ba2c81ade8b12dec3fad3557950e",
+    "v16_control__g901_r101": "94ca0f83c4c6a3fbc453856d2c6a969f9457faf2006ad002200e2bc948a5b37b",
+    "v16_control__g902_r102": "100ca6c31ae363cdf75adea1fcd891a33eaa547849050e5d7cb99d6904950af6",
+    "v5__g901_r101": "9ab392ede286f987ee0d8df0ddb5f8997e4d374789faaed24547b8f13f00c98b",
+    "v5__g902_r102": "a8fb994db4059358f5b6e46664173ae5127c7d9a37b51efffe6c436c6d27c003"
+  },
+  "results": {
+    "by_family": {
+      "16": {
+        "high53": {
+          "flat": {
+            "falls": 2,
+            "lane_exits": 0,
+            "mean_final_distance_m": 168.982206,
+            "n": 50,
+            "strict_one": 48,
+            "strict_six": 48,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 2,
+            "lane_exits": 1,
+            "mean_final_distance_m": 55.55089,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 28,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 2,
+            "lane_exits": 3,
+            "mean_final_distance_m": 63.110333,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 39,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 2,
+            "lane_exits": 0,
+            "mean_final_distance_m": 54.566642,
+            "n": 50,
+            "strict_one": 48,
+            "strict_six": 27,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 2,
+            "lane_exits": 1,
+            "mean_final_distance_m": 51.31286,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 20,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 6,
+            "lane_exits": 3,
+            "mean_final_distance_m": 32.411233,
+            "n": 50,
+            "strict_one": 41,
+            "strict_six": 10,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 8,
+            "lane_exits": 1,
+            "mean_final_distance_m": 57.089791,
+            "n": 50,
+            "strict_one": 41,
+            "strict_six": 38,
+            "world_exits": 0
+          }
+        },
+        "history_control": {
+          "flat": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 139.949631,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 3,
+            "lane_exits": 2,
+            "mean_final_distance_m": 56.11886,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 31,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 3,
+            "lane_exits": 0,
+            "mean_final_distance_m": 60.210433,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 42,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 3,
+            "lane_exits": 0,
+            "mean_final_distance_m": 55.104037,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 28,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 2,
+            "lane_exits": 0,
+            "mean_final_distance_m": 50.119522,
+            "n": 50,
+            "strict_one": 48,
+            "strict_six": 20,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 6,
+            "lane_exits": 1,
+            "mean_final_distance_m": 32.74494,
+            "n": 50,
+            "strict_one": 42,
+            "strict_six": 8,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 7,
+            "lane_exits": 0,
+            "mean_final_distance_m": 56.718212,
+            "n": 50,
+            "strict_one": 43,
+            "strict_six": 38,
+            "world_exits": 0
+          }
+        },
+        "history_high53": {
+          "flat": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 139.949631,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 5,
+            "lane_exits": 1,
+            "mean_final_distance_m": 53.253238,
+            "n": 50,
+            "strict_one": 44,
+            "strict_six": 29,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 1,
+            "lane_exits": 0,
+            "mean_final_distance_m": 62.094892,
+            "n": 50,
+            "strict_one": 49,
+            "strict_six": 44,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 2,
+            "lane_exits": 0,
+            "mean_final_distance_m": 53.842927,
+            "n": 50,
+            "strict_one": 48,
+            "strict_six": 27,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 1,
+            "lane_exits": 0,
+            "mean_final_distance_m": 50.634901,
+            "n": 50,
+            "strict_one": 49,
+            "strict_six": 20,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 6,
+            "lane_exits": 1,
+            "mean_final_distance_m": 32.064577,
+            "n": 50,
+            "strict_one": 43,
+            "strict_six": 7,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 58.14364,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 39,
+            "world_exits": 0
+          }
+        },
+        "v16_control": {
+          "flat": {
+            "falls": 2,
+            "lane_exits": 0,
+            "mean_final_distance_m": 173.700029,
+            "n": 50,
+            "strict_one": 48,
+            "strict_six": 48,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 7,
+            "lane_exits": 0,
+            "mean_final_distance_m": 54.571025,
+            "n": 50,
+            "strict_one": 43,
+            "strict_six": 33,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 1,
+            "lane_exits": 0,
+            "mean_final_distance_m": 64.486181,
+            "n": 50,
+            "strict_one": 49,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 4,
+            "lane_exits": 0,
+            "mean_final_distance_m": 55.073603,
+            "n": 50,
+            "strict_one": 46,
+            "strict_six": 29,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 4,
+            "lane_exits": 0,
+            "mean_final_distance_m": 48.79294,
+            "n": 50,
+            "strict_one": 46,
+            "strict_six": 21,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 7,
+            "lane_exits": 3,
+            "mean_final_distance_m": 31.428404,
+            "n": 50,
+            "strict_one": 40,
+            "strict_six": 7,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 59.358576,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 42,
+            "world_exits": 0
+          }
+        },
+        "v5": {
+          "flat": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 139.949631,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 4,
+            "lane_exits": 2,
+            "mean_final_distance_m": 51.021837,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 27,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 1,
+            "lane_exits": 0,
+            "mean_final_distance_m": 60.419499,
+            "n": 50,
+            "strict_one": 49,
+            "strict_six": 38,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 3,
+            "lane_exits": 0,
+            "mean_final_distance_m": 51.833233,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 21,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 1,
+            "lane_exits": 0,
+            "mean_final_distance_m": 46.234433,
+            "n": 50,
+            "strict_one": 49,
+            "strict_six": 17,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 7,
+            "lane_exits": 1,
+            "mean_final_distance_m": 25.506282,
+            "n": 50,
+            "strict_one": 33,
+            "strict_six": 2,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 10,
+            "lane_exits": 0,
+            "mean_final_distance_m": 50.469723,
+            "n": 50,
+            "strict_one": 40,
+            "strict_six": 30,
+            "world_exits": 0
+          }
+        }
+      },
+      "64": {
+        "high53": {
+          "flat": {
+            "falls": 3,
+            "lane_exits": 0,
+            "mean_final_distance_m": 768.238005,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 47,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 8,
+            "lane_exits": 4,
+            "mean_final_distance_m": 212.505255,
+            "n": 50,
+            "strict_one": 38,
+            "strict_six": 38,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 3,
+            "lane_exits": 8,
+            "mean_final_distance_m": 255.694783,
+            "n": 50,
+            "strict_one": 39,
+            "strict_six": 39,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 11,
+            "lane_exits": 0,
+            "mean_final_distance_m": 209.324961,
+            "n": 50,
+            "strict_one": 39,
+            "strict_six": 39,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 5,
+            "lane_exits": 4,
+            "mean_final_distance_m": 200.497312,
+            "n": 50,
+            "strict_one": 41,
+            "strict_six": 41,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 14,
+            "lane_exits": 7,
+            "mean_final_distance_m": 114.320987,
+            "n": 50,
+            "strict_one": 30,
+            "strict_six": 28,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 11,
+            "lane_exits": 1,
+            "mean_final_distance_m": 224.607893,
+            "n": 50,
+            "strict_one": 38,
+            "strict_six": 38,
+            "world_exits": 0
+          }
+        },
+        "history_control": {
+          "flat": {
+            "falls": 7,
+            "lane_exits": 0,
+            "mean_final_distance_m": 622.927514,
+            "n": 50,
+            "strict_one": 43,
+            "strict_six": 43,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 15,
+            "lane_exits": 4,
+            "mean_final_distance_m": 205.929525,
+            "n": 50,
+            "strict_one": 33,
+            "strict_six": 33,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 6,
+            "lane_exits": 0,
+            "mean_final_distance_m": 239.775125,
+            "n": 50,
+            "strict_one": 44,
+            "strict_six": 44,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 10,
+            "lane_exits": 0,
+            "mean_final_distance_m": 218.763434,
+            "n": 50,
+            "strict_one": 40,
+            "strict_six": 40,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 8,
+            "lane_exits": 1,
+            "mean_final_distance_m": 198.223625,
+            "n": 50,
+            "strict_one": 41,
+            "strict_six": 41,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 15,
+            "lane_exits": 4,
+            "mean_final_distance_m": 108.529708,
+            "n": 50,
+            "strict_one": 31,
+            "strict_six": 28,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 10,
+            "lane_exits": 1,
+            "mean_final_distance_m": 217.887075,
+            "n": 50,
+            "strict_one": 39,
+            "strict_six": 39,
+            "world_exits": 0
+          }
+        },
+        "history_high53": {
+          "flat": {
+            "falls": 7,
+            "lane_exits": 0,
+            "mean_final_distance_m": 622.927514,
+            "n": 50,
+            "strict_one": 43,
+            "strict_six": 43,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 18,
+            "lane_exits": 2,
+            "mean_final_distance_m": 187.898937,
+            "n": 50,
+            "strict_one": 32,
+            "strict_six": 32,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 243.85926,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 216.558419,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 203.493837,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 16,
+            "lane_exits": 5,
+            "mean_final_distance_m": 115.189961,
+            "n": 50,
+            "strict_one": 30,
+            "strict_six": 28,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 9,
+            "lane_exits": 0,
+            "mean_final_distance_m": 224.222753,
+            "n": 50,
+            "strict_one": 41,
+            "strict_six": 41,
+            "world_exits": 0
+          }
+        },
+        "v16_control": {
+          "flat": {
+            "falls": 3,
+            "lane_exits": 0,
+            "mean_final_distance_m": 803.673202,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 47,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 14,
+            "lane_exits": 2,
+            "mean_final_distance_m": 198.37057,
+            "n": 50,
+            "strict_one": 34,
+            "strict_six": 34,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 7,
+            "lane_exits": 2,
+            "mean_final_distance_m": 256.271781,
+            "n": 50,
+            "strict_one": 41,
+            "strict_six": 41,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 8,
+            "lane_exits": 0,
+            "mean_final_distance_m": 215.803965,
+            "n": 50,
+            "strict_one": 42,
+            "strict_six": 42,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 8,
+            "lane_exits": 1,
+            "mean_final_distance_m": 194.785384,
+            "n": 50,
+            "strict_one": 41,
+            "strict_six": 41,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 15,
+            "lane_exits": 7,
+            "mean_final_distance_m": 111.017897,
+            "n": 50,
+            "strict_one": 28,
+            "strict_six": 27,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 11,
+            "lane_exits": 0,
+            "mean_final_distance_m": 227.113351,
+            "n": 50,
+            "strict_one": 39,
+            "strict_six": 39,
+            "world_exits": 0
+          }
+        },
+        "v5": {
+          "flat": {
+            "falls": 7,
+            "lane_exits": 0,
+            "mean_final_distance_m": 622.927514,
+            "n": 50,
+            "strict_one": 43,
+            "strict_six": 43,
+            "world_exits": 0
+          },
+          "obstacles": {
+            "falls": 11,
+            "lane_exits": 6,
+            "mean_final_distance_m": 189.582503,
+            "n": 50,
+            "strict_one": 34,
+            "strict_six": 33,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 3,
+            "lane_exits": 0,
+            "mean_final_distance_m": 241.024742,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 47,
+            "world_exits": 0
+          },
+          "slope": {
+            "falls": 8,
+            "lane_exits": 0,
+            "mean_final_distance_m": 201.184691,
+            "n": 50,
+            "strict_one": 42,
+            "strict_six": 41,
+            "world_exits": 0
+          },
+          "stairs": {
+            "falls": 4,
+            "lane_exits": 1,
+            "mean_final_distance_m": 185.898385,
+            "n": 50,
+            "strict_one": 46,
+            "strict_six": 46,
+            "world_exits": 0
+          },
+          "stepping_stones": {
+            "falls": 10,
+            "lane_exits": 4,
+            "mean_final_distance_m": 86.870779,
+            "n": 50,
+            "strict_one": 34,
+            "strict_six": 18,
+            "world_exits": 0
+          },
+          "waves": {
+            "falls": 21,
+            "lane_exits": 0,
+            "mean_final_distance_m": 177.115762,
+            "n": 50,
+            "strict_one": 29,
+            "strict_six": 29,
+            "world_exits": 0
+          }
+        }
+      }
+    },
+    "historical_raw_recompute": {
+      "v19_history_control_rough_short16": {
+        "falls": 39,
+        "lane": 2,
+        "n": 450,
+        "strict_six": 265,
+        "world": 0
+      },
+      "v19_v16_solo_rough_short16": {
+        "falls": 31,
+        "lane": 4,
+        "n": 450,
+        "strict_six": 265,
+        "world": 0
+      },
+      "v24_history_seed53_rough64": {
+        "falls": 62,
+        "lane": 4,
+        "n": 300,
+        "strict_six": 234,
+        "world": 0
+      },
+      "v24_seed53_solo_rough64": {
+        "falls": 68,
+        "lane": 31,
+        "n": 300,
+        "strict_six": 204,
+        "world": 0
+      }
+    },
+    "paired_strict_six": {
+      "high53_history_minus_solo": {
+        "16": {
+          "all": {
+            "both_success": 186,
+            "history_successes": 211,
+            "n": 350,
+            "neither_success": 115,
+            "net_success_difference": 1,
+            "paired_gains": 25,
+            "paired_regressions": 24,
+            "solo_successes": 210
+          },
+          "flat": {
+            "both_success": 45,
+            "history_successes": 45,
+            "n": 50,
+            "neither_success": 2,
+            "net_success_difference": -3,
+            "paired_gains": 0,
+            "paired_regressions": 3,
+            "solo_successes": 48
+          },
+          "rough": {
+            "both_success": 141,
+            "history_successes": 166,
+            "n": 300,
+            "neither_success": 113,
+            "net_success_difference": 4,
+            "paired_gains": 25,
+            "paired_regressions": 21,
+            "solo_successes": 162
+          }
+        },
+        "64": {
+          "all": {
+            "both_success": 229,
+            "history_successes": 279,
+            "n": 350,
+            "neither_success": 30,
+            "net_success_difference": 9,
+            "paired_gains": 50,
+            "paired_regressions": 41,
+            "solo_successes": 270
+          },
+          "flat": {
+            "both_success": 42,
+            "history_successes": 43,
+            "n": 50,
+            "neither_success": 2,
+            "net_success_difference": -4,
+            "paired_gains": 1,
+            "paired_regressions": 5,
+            "solo_successes": 47
+          },
+          "rough": {
+            "both_success": 187,
+            "history_successes": 236,
+            "n": 300,
+            "neither_success": 28,
+            "net_success_difference": 13,
+            "paired_gains": 49,
+            "paired_regressions": 36,
+            "solo_successes": 223
+          }
+        }
+      },
+      "v16_history_minus_solo": {
+        "16": {
+          "all": {
+            "both_success": 200,
+            "history_successes": 212,
+            "n": 350,
+            "neither_success": 113,
+            "net_success_difference": -13,
+            "paired_gains": 12,
+            "paired_regressions": 25,
+            "solo_successes": 225
+          },
+          "flat": {
+            "both_success": 45,
+            "history_successes": 45,
+            "n": 50,
+            "neither_success": 2,
+            "net_success_difference": -3,
+            "paired_gains": 0,
+            "paired_regressions": 3,
+            "solo_successes": 48
+          },
+          "rough": {
+            "both_success": 155,
+            "history_successes": 167,
+            "n": 300,
+            "neither_success": 111,
+            "net_success_difference": -10,
+            "paired_gains": 12,
+            "paired_regressions": 22,
+            "solo_successes": 177
+          }
+        },
+        "64": {
+          "all": {
+            "both_success": 225,
+            "history_successes": 268,
+            "n": 350,
+            "neither_success": 36,
+            "net_success_difference": -3,
+            "paired_gains": 43,
+            "paired_regressions": 46,
+            "solo_successes": 271
+          },
+          "flat": {
+            "both_success": 42,
+            "history_successes": 43,
+            "n": 50,
+            "neither_success": 2,
+            "net_success_difference": -4,
+            "paired_gains": 1,
+            "paired_regressions": 5,
+            "solo_successes": 47
+          },
+          "rough": {
+            "both_success": 183,
+            "history_successes": 225,
+            "n": 300,
+            "neither_success": 34,
+            "net_success_difference": 1,
+            "paired_gains": 42,
+            "paired_regressions": 41,
+            "solo_successes": 224
+          }
+        }
+      }
+    },
+    "pooled": {
+      "16": {
+        "high53": {
+          "falls": 24,
+          "lane_exits": 9,
+          "mean_final_distance_m": 69.003422,
+          "n": 350,
+          "strict_one": 317,
+          "strict_six": 210,
+          "world_exits": 0
+        },
+        "history_control": {
+          "falls": 29,
+          "lane_exits": 3,
+          "mean_final_distance_m": 64.423662,
+          "n": 350,
+          "strict_one": 317,
+          "strict_six": 212,
+          "world_exits": 0
+        },
+        "history_high53": {
+          "falls": 25,
+          "lane_exits": 2,
+          "mean_final_distance_m": 64.283401,
+          "n": 350,
+          "strict_one": 323,
+          "strict_six": 211,
+          "world_exits": 0
+        },
+        "v16_control": {
+          "falls": 30,
+          "lane_exits": 3,
+          "mean_final_distance_m": 69.630108,
+          "n": 350,
+          "strict_one": 317,
+          "strict_six": 225,
+          "world_exits": 0
+        },
+        "v5": {
+          "falls": 31,
+          "lane_exits": 3,
+          "mean_final_distance_m": 60.776377,
+          "n": 350,
+          "strict_one": 308,
+          "strict_six": 180,
+          "world_exits": 0
+        }
+      },
+      "64": {
+        "high53": {
+          "falls": 55,
+          "lane_exits": 24,
+          "mean_final_distance_m": 283.598457,
+          "n": 350,
+          "strict_one": 272,
+          "strict_six": 270,
+          "world_exits": 0
+        },
+        "history_control": {
+          "falls": 71,
+          "lane_exits": 10,
+          "mean_final_distance_m": 258.862287,
+          "n": 350,
+          "strict_one": 271,
+          "strict_six": 268,
+          "world_exits": 0
+        },
+        "history_high53": {
+          "falls": 65,
+          "lane_exits": 7,
+          "mean_final_distance_m": 259.164383,
+          "n": 350,
+          "strict_one": 281,
+          "strict_six": 279,
+          "world_exits": 0
+        },
+        "v16_control": {
+          "falls": 66,
+          "lane_exits": 12,
+          "mean_final_distance_m": 286.71945,
+          "n": 350,
+          "strict_one": 272,
+          "strict_six": 271,
+          "world_exits": 0
+        },
+        "v5": {
+          "falls": 64,
+          "lane_exits": 11,
+          "mean_final_distance_m": 243.514911,
+          "n": 350,
+          "strict_one": 275,
+          "strict_six": 257,
+          "world_exits": 0
+        }
+      }
+    },
+    "ranking": {
+      "16": {
+        "by_family": {
+          "flat": [
+            [
+              "v16_control",
+              {
+                "falls": 2,
+                "lane_exits": 0,
+                "mean_final_distance_m": 173.700029,
+                "n": 50,
+                "strict_one": 48,
+                "strict_six": 48,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 2,
+                "lane_exits": 0,
+                "mean_final_distance_m": 168.982206,
+                "n": 50,
+                "strict_one": 48,
+                "strict_six": 48,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 5,
+                "lane_exits": 0,
+                "mean_final_distance_m": 139.949631,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 45,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 5,
+                "lane_exits": 0,
+                "mean_final_distance_m": 139.949631,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 45,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 5,
+                "lane_exits": 0,
+                "mean_final_distance_m": 139.949631,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 45,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "obstacles": [
+            [
+              "v16_control",
+              {
+                "falls": 7,
+                "lane_exits": 0,
+                "mean_final_distance_m": 54.571025,
+                "n": 50,
+                "strict_one": 43,
+                "strict_six": 33,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 3,
+                "lane_exits": 2,
+                "mean_final_distance_m": 56.11886,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 31,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 5,
+                "lane_exits": 1,
+                "mean_final_distance_m": 53.253238,
+                "n": 50,
+                "strict_one": 44,
+                "strict_six": 29,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 2,
+                "lane_exits": 1,
+                "mean_final_distance_m": 55.55089,
+                "n": 50,
+                "strict_one": 47,
+                "strict_six": 28,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 4,
+                "lane_exits": 2,
+                "mean_final_distance_m": 51.021837,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 27,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "rough": [
+            [
+              "v16_control",
+              {
+                "falls": 1,
+                "lane_exits": 0,
+                "mean_final_distance_m": 64.486181,
+                "n": 50,
+                "strict_one": 49,
+                "strict_six": 45,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 1,
+                "lane_exits": 0,
+                "mean_final_distance_m": 62.094892,
+                "n": 50,
+                "strict_one": 49,
+                "strict_six": 44,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 3,
+                "lane_exits": 0,
+                "mean_final_distance_m": 60.210433,
+                "n": 50,
+                "strict_one": 47,
+                "strict_six": 42,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 2,
+                "lane_exits": 3,
+                "mean_final_distance_m": 63.110333,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 39,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 1,
+                "lane_exits": 0,
+                "mean_final_distance_m": 60.419499,
+                "n": 50,
+                "strict_one": 49,
+                "strict_six": 38,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "slope": [
+            [
+              "v16_control",
+              {
+                "falls": 4,
+                "lane_exits": 0,
+                "mean_final_distance_m": 55.073603,
+                "n": 50,
+                "strict_one": 46,
+                "strict_six": 29,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 3,
+                "lane_exits": 0,
+                "mean_final_distance_m": 55.104037,
+                "n": 50,
+                "strict_one": 47,
+                "strict_six": 28,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 2,
+                "lane_exits": 0,
+                "mean_final_distance_m": 54.566642,
+                "n": 50,
+                "strict_one": 48,
+                "strict_six": 27,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 2,
+                "lane_exits": 0,
+                "mean_final_distance_m": 53.842927,
+                "n": 50,
+                "strict_one": 48,
+                "strict_six": 27,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 3,
+                "lane_exits": 0,
+                "mean_final_distance_m": 51.833233,
+                "n": 50,
+                "strict_one": 47,
+                "strict_six": 21,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "stairs": [
+            [
+              "v16_control",
+              {
+                "falls": 4,
+                "lane_exits": 0,
+                "mean_final_distance_m": 48.79294,
+                "n": 50,
+                "strict_one": 46,
+                "strict_six": 21,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 1,
+                "lane_exits": 0,
+                "mean_final_distance_m": 50.634901,
+                "n": 50,
+                "strict_one": 49,
+                "strict_six": 20,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 2,
+                "lane_exits": 0,
+                "mean_final_distance_m": 50.119522,
+                "n": 50,
+                "strict_one": 48,
+                "strict_six": 20,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 2,
+                "lane_exits": 1,
+                "mean_final_distance_m": 51.31286,
+                "n": 50,
+                "strict_one": 47,
+                "strict_six": 20,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 1,
+                "lane_exits": 0,
+                "mean_final_distance_m": 46.234433,
+                "n": 50,
+                "strict_one": 49,
+                "strict_six": 17,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "stepping_stones": [
+            [
+              "high53",
+              {
+                "falls": 6,
+                "lane_exits": 3,
+                "mean_final_distance_m": 32.411233,
+                "n": 50,
+                "strict_one": 41,
+                "strict_six": 10,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 6,
+                "lane_exits": 1,
+                "mean_final_distance_m": 32.74494,
+                "n": 50,
+                "strict_one": 42,
+                "strict_six": 8,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 6,
+                "lane_exits": 1,
+                "mean_final_distance_m": 32.064577,
+                "n": 50,
+                "strict_one": 43,
+                "strict_six": 7,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v16_control",
+              {
+                "falls": 7,
+                "lane_exits": 3,
+                "mean_final_distance_m": 31.428404,
+                "n": 50,
+                "strict_one": 40,
+                "strict_six": 7,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 7,
+                "lane_exits": 1,
+                "mean_final_distance_m": 25.506282,
+                "n": 50,
+                "strict_one": 33,
+                "strict_six": 2,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "waves": [
+            [
+              "v16_control",
+              {
+                "falls": 5,
+                "lane_exits": 0,
+                "mean_final_distance_m": 59.358576,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 42,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 5,
+                "lane_exits": 0,
+                "mean_final_distance_m": 58.14364,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 39,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 7,
+                "lane_exits": 0,
+                "mean_final_distance_m": 56.718212,
+                "n": 50,
+                "strict_one": 43,
+                "strict_six": 38,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 8,
+                "lane_exits": 1,
+                "mean_final_distance_m": 57.089791,
+                "n": 50,
+                "strict_one": 41,
+                "strict_six": 38,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 10,
+                "lane_exits": 0,
+                "mean_final_distance_m": 50.469723,
+                "n": 50,
+                "strict_one": 40,
+                "strict_six": 30,
+                "world_exits": 0
+              }
+            ]
+          ]
+        },
+        "criterion": "rank by strict six-tile successes, then strict one-tile successes, then fewer falls",
+        "pooled": [
+          [
+            "v16_control",
+            {
+              "falls": 30,
+              "lane_exits": 3,
+              "mean_final_distance_m": 69.630108,
+              "n": 350,
+              "strict_one": 317,
+              "strict_six": 225,
+              "world_exits": 0
+            }
+          ],
+          [
+            "history_control",
+            {
+              "falls": 29,
+              "lane_exits": 3,
+              "mean_final_distance_m": 64.423662,
+              "n": 350,
+              "strict_one": 317,
+              "strict_six": 212,
+              "world_exits": 0
+            }
+          ],
+          [
+            "history_high53",
+            {
+              "falls": 25,
+              "lane_exits": 2,
+              "mean_final_distance_m": 64.283401,
+              "n": 350,
+              "strict_one": 323,
+              "strict_six": 211,
+              "world_exits": 0
+            }
+          ],
+          [
+            "high53",
+            {
+              "falls": 24,
+              "lane_exits": 9,
+              "mean_final_distance_m": 69.003422,
+              "n": 350,
+              "strict_one": 317,
+              "strict_six": 210,
+              "world_exits": 0
+            }
+          ],
+          [
+            "v5",
+            {
+              "falls": 31,
+              "lane_exits": 3,
+              "mean_final_distance_m": 60.776377,
+              "n": 350,
+              "strict_one": 308,
+              "strict_six": 180,
+              "world_exits": 0
+            }
+          ]
+        ]
+      },
+      "64": {
+        "by_family": {
+          "flat": [
+            [
+              "v16_control",
+              {
+                "falls": 3,
+                "lane_exits": 0,
+                "mean_final_distance_m": 803.673202,
+                "n": 50,
+                "strict_one": 47,
+                "strict_six": 47,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 3,
+                "lane_exits": 0,
+                "mean_final_distance_m": 768.238005,
+                "n": 50,
+                "strict_one": 47,
+                "strict_six": 47,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 7,
+                "lane_exits": 0,
+                "mean_final_distance_m": 622.927514,
+                "n": 50,
+                "strict_one": 43,
+                "strict_six": 43,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 7,
+                "lane_exits": 0,
+                "mean_final_distance_m": 622.927514,
+                "n": 50,
+                "strict_one": 43,
+                "strict_six": 43,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 7,
+                "lane_exits": 0,
+                "mean_final_distance_m": 622.927514,
+                "n": 50,
+                "strict_one": 43,
+                "strict_six": 43,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "obstacles": [
+            [
+              "high53",
+              {
+                "falls": 8,
+                "lane_exits": 4,
+                "mean_final_distance_m": 212.505255,
+                "n": 50,
+                "strict_one": 38,
+                "strict_six": 38,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v16_control",
+              {
+                "falls": 14,
+                "lane_exits": 2,
+                "mean_final_distance_m": 198.37057,
+                "n": 50,
+                "strict_one": 34,
+                "strict_six": 34,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 11,
+                "lane_exits": 6,
+                "mean_final_distance_m": 189.582503,
+                "n": 50,
+                "strict_one": 34,
+                "strict_six": 33,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 15,
+                "lane_exits": 4,
+                "mean_final_distance_m": 205.929525,
+                "n": 50,
+                "strict_one": 33,
+                "strict_six": 33,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 18,
+                "lane_exits": 2,
+                "mean_final_distance_m": 187.898937,
+                "n": 50,
+                "strict_one": 32,
+                "strict_six": 32,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "rough": [
+            [
+              "v5",
+              {
+                "falls": 3,
+                "lane_exits": 0,
+                "mean_final_distance_m": 241.024742,
+                "n": 50,
+                "strict_one": 47,
+                "strict_six": 47,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 5,
+                "lane_exits": 0,
+                "mean_final_distance_m": 243.85926,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 45,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 6,
+                "lane_exits": 0,
+                "mean_final_distance_m": 239.775125,
+                "n": 50,
+                "strict_one": 44,
+                "strict_six": 44,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v16_control",
+              {
+                "falls": 7,
+                "lane_exits": 2,
+                "mean_final_distance_m": 256.271781,
+                "n": 50,
+                "strict_one": 41,
+                "strict_six": 41,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 3,
+                "lane_exits": 8,
+                "mean_final_distance_m": 255.694783,
+                "n": 50,
+                "strict_one": 39,
+                "strict_six": 39,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "slope": [
+            [
+              "history_high53",
+              {
+                "falls": 5,
+                "lane_exits": 0,
+                "mean_final_distance_m": 216.558419,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 45,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v16_control",
+              {
+                "falls": 8,
+                "lane_exits": 0,
+                "mean_final_distance_m": 215.803965,
+                "n": 50,
+                "strict_one": 42,
+                "strict_six": 42,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 8,
+                "lane_exits": 0,
+                "mean_final_distance_m": 201.184691,
+                "n": 50,
+                "strict_one": 42,
+                "strict_six": 41,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 10,
+                "lane_exits": 0,
+                "mean_final_distance_m": 218.763434,
+                "n": 50,
+                "strict_one": 40,
+                "strict_six": 40,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 11,
+                "lane_exits": 0,
+                "mean_final_distance_m": 209.324961,
+                "n": 50,
+                "strict_one": 39,
+                "strict_six": 39,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "stairs": [
+            [
+              "v5",
+              {
+                "falls": 4,
+                "lane_exits": 1,
+                "mean_final_distance_m": 185.898385,
+                "n": 50,
+                "strict_one": 46,
+                "strict_six": 46,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 5,
+                "lane_exits": 0,
+                "mean_final_distance_m": 203.493837,
+                "n": 50,
+                "strict_one": 45,
+                "strict_six": 45,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 5,
+                "lane_exits": 4,
+                "mean_final_distance_m": 200.497312,
+                "n": 50,
+                "strict_one": 41,
+                "strict_six": 41,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v16_control",
+              {
+                "falls": 8,
+                "lane_exits": 1,
+                "mean_final_distance_m": 194.785384,
+                "n": 50,
+                "strict_one": 41,
+                "strict_six": 41,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 8,
+                "lane_exits": 1,
+                "mean_final_distance_m": 198.223625,
+                "n": 50,
+                "strict_one": 41,
+                "strict_six": 41,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "stepping_stones": [
+            [
+              "history_control",
+              {
+                "falls": 15,
+                "lane_exits": 4,
+                "mean_final_distance_m": 108.529708,
+                "n": 50,
+                "strict_one": 31,
+                "strict_six": 28,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 14,
+                "lane_exits": 7,
+                "mean_final_distance_m": 114.320987,
+                "n": 50,
+                "strict_one": 30,
+                "strict_six": 28,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_high53",
+              {
+                "falls": 16,
+                "lane_exits": 5,
+                "mean_final_distance_m": 115.189961,
+                "n": 50,
+                "strict_one": 30,
+                "strict_six": 28,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v16_control",
+              {
+                "falls": 15,
+                "lane_exits": 7,
+                "mean_final_distance_m": 111.017897,
+                "n": 50,
+                "strict_one": 28,
+                "strict_six": 27,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 10,
+                "lane_exits": 4,
+                "mean_final_distance_m": 86.870779,
+                "n": 50,
+                "strict_one": 34,
+                "strict_six": 18,
+                "world_exits": 0
+              }
+            ]
+          ],
+          "waves": [
+            [
+              "history_high53",
+              {
+                "falls": 9,
+                "lane_exits": 0,
+                "mean_final_distance_m": 224.222753,
+                "n": 50,
+                "strict_one": 41,
+                "strict_six": 41,
+                "world_exits": 0
+              }
+            ],
+            [
+              "history_control",
+              {
+                "falls": 10,
+                "lane_exits": 1,
+                "mean_final_distance_m": 217.887075,
+                "n": 50,
+                "strict_one": 39,
+                "strict_six": 39,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v16_control",
+              {
+                "falls": 11,
+                "lane_exits": 0,
+                "mean_final_distance_m": 227.113351,
+                "n": 50,
+                "strict_one": 39,
+                "strict_six": 39,
+                "world_exits": 0
+              }
+            ],
+            [
+              "high53",
+              {
+                "falls": 11,
+                "lane_exits": 1,
+                "mean_final_distance_m": 224.607893,
+                "n": 50,
+                "strict_one": 38,
+                "strict_six": 38,
+                "world_exits": 0
+              }
+            ],
+            [
+              "v5",
+              {
+                "falls": 21,
+                "lane_exits": 0,
+                "mean_final_distance_m": 177.115762,
+                "n": 50,
+                "strict_one": 29,
+                "strict_six": 29,
+                "world_exits": 0
+              }
+            ]
+          ]
+        },
+        "criterion": "rank by strict six-tile successes, then strict one-tile successes, then fewer falls",
+        "pooled": [
+          [
+            "history_high53",
+            {
+              "falls": 65,
+              "lane_exits": 7,
+              "mean_final_distance_m": 259.164383,
+              "n": 350,
+              "strict_one": 281,
+              "strict_six": 279,
+              "world_exits": 0
+            }
+          ],
+          [
+            "v16_control",
+            {
+              "falls": 66,
+              "lane_exits": 12,
+              "mean_final_distance_m": 286.71945,
+              "n": 350,
+              "strict_one": 272,
+              "strict_six": 271,
+              "world_exits": 0
+            }
+          ],
+          [
+            "high53",
+            {
+              "falls": 55,
+              "lane_exits": 24,
+              "mean_final_distance_m": 283.598457,
+              "n": 350,
+              "strict_one": 272,
+              "strict_six": 270,
+              "world_exits": 0
+            }
+          ],
+          [
+            "history_control",
+            {
+              "falls": 71,
+              "lane_exits": 10,
+              "mean_final_distance_m": 258.862287,
+              "n": 350,
+              "strict_one": 271,
+              "strict_six": 268,
+              "world_exits": 0
+            }
+          ],
+          [
+            "v5",
+            {
+              "falls": 64,
+              "lane_exits": 11,
+              "mean_final_distance_m": 243.514911,
+              "n": 350,
+              "strict_one": 275,
+              "strict_six": 257,
+              "world_exits": 0
+            }
+          ]
+        ]
+      }
+    },
+    "terrain_group": {
+      "16": {
+        "high53": {
+          "flat": {
+            "falls": 2,
+            "lane_exits": 0,
+            "mean_final_distance_m": 168.982206,
+            "n": 50,
+            "strict_one": 48,
+            "strict_six": 48,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 22,
+            "lane_exits": 9,
+            "mean_final_distance_m": 52.340291,
+            "n": 300,
+            "strict_one": 269,
+            "strict_six": 162,
+            "world_exits": 0
+          }
+        },
+        "history_control": {
+          "flat": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 139.949631,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 24,
+            "lane_exits": 3,
+            "mean_final_distance_m": 51.836001,
+            "n": 300,
+            "strict_one": 272,
+            "strict_six": 167,
+            "world_exits": 0
+          }
+        },
+        "history_high53": {
+          "flat": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 139.949631,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 20,
+            "lane_exits": 2,
+            "mean_final_distance_m": 51.672362,
+            "n": 300,
+            "strict_one": 278,
+            "strict_six": 166,
+            "world_exits": 0
+          }
+        },
+        "v16_control": {
+          "flat": {
+            "falls": 2,
+            "lane_exits": 0,
+            "mean_final_distance_m": 173.700029,
+            "n": 50,
+            "strict_one": 48,
+            "strict_six": 48,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 28,
+            "lane_exits": 3,
+            "mean_final_distance_m": 52.285122,
+            "n": 300,
+            "strict_one": 269,
+            "strict_six": 177,
+            "world_exits": 0
+          }
+        },
+        "v5": {
+          "flat": {
+            "falls": 5,
+            "lane_exits": 0,
+            "mean_final_distance_m": 139.949631,
+            "n": 50,
+            "strict_one": 45,
+            "strict_six": 45,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 26,
+            "lane_exits": 3,
+            "mean_final_distance_m": 47.580835,
+            "n": 300,
+            "strict_one": 263,
+            "strict_six": 135,
+            "world_exits": 0
+          }
+        }
+      },
+      "64": {
+        "high53": {
+          "flat": {
+            "falls": 3,
+            "lane_exits": 0,
+            "mean_final_distance_m": 768.238005,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 47,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 52,
+            "lane_exits": 24,
+            "mean_final_distance_m": 202.825199,
+            "n": 300,
+            "strict_one": 225,
+            "strict_six": 223,
+            "world_exits": 0
+          }
+        },
+        "history_control": {
+          "flat": {
+            "falls": 7,
+            "lane_exits": 0,
+            "mean_final_distance_m": 622.927514,
+            "n": 50,
+            "strict_one": 43,
+            "strict_six": 43,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 64,
+            "lane_exits": 10,
+            "mean_final_distance_m": 198.184749,
+            "n": 300,
+            "strict_one": 228,
+            "strict_six": 225,
+            "world_exits": 0
+          }
+        },
+        "history_high53": {
+          "flat": {
+            "falls": 7,
+            "lane_exits": 0,
+            "mean_final_distance_m": 622.927514,
+            "n": 50,
+            "strict_one": 43,
+            "strict_six": 43,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 58,
+            "lane_exits": 7,
+            "mean_final_distance_m": 198.537194,
+            "n": 300,
+            "strict_one": 238,
+            "strict_six": 236,
+            "world_exits": 0
+          }
+        },
+        "v16_control": {
+          "flat": {
+            "falls": 3,
+            "lane_exits": 0,
+            "mean_final_distance_m": 803.673202,
+            "n": 50,
+            "strict_one": 47,
+            "strict_six": 47,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 63,
+            "lane_exits": 12,
+            "mean_final_distance_m": 200.560491,
+            "n": 300,
+            "strict_one": 225,
+            "strict_six": 224,
+            "world_exits": 0
+          }
+        },
+        "v5": {
+          "flat": {
+            "falls": 7,
+            "lane_exits": 0,
+            "mean_final_distance_m": 622.927514,
+            "n": 50,
+            "strict_one": 43,
+            "strict_six": 43,
+            "world_exits": 0
+          },
+          "rough": {
+            "falls": 57,
+            "lane_exits": 11,
+            "mean_final_distance_m": 180.279477,
+            "n": 300,
+            "strict_one": 232,
+            "strict_six": 214,
+            "world_exits": 0
+          }
+        }
+      }
+    }
+  },
+  "schema": "independent_unseen_ant_data_audit_v1",
+  "scope": "Independent stdlib raw-JSON recomputation; no simulator/GPU run and no use of generated summary to derive values."
+}

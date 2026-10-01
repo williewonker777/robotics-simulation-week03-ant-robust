@@ -1,0 +1,4242 @@
+{
+  "schema": "week03_ant_unseen_summary_v1",
+  "physical_first_episodes": 1750,
+  "dependent_window_observations": 3500,
+  "paired_initial_conditions": 350,
+  "statistical_independence_claim": false,
+  "interpretation": "Known terrain families with new randomized layouts, not novel OOD families. 16s/64s are dependent windows of the same first physical episode. No tuning or seed reselection.",
+  "speed_definition": "Mean per-first-episode final distance / (steps * dt); visited-episode proxy, not stock flat ID return.",
+  "success_definition": "Float32 final distance >=13.1/53.1m AND no fall/lane/world flag; not maximum distance.",
+  "survival_definition": "Horizon reached without fall; safe_survival additionally excludes lane/world flags.",
+  "windows": {
+    "16": {
+      "controllers": {
+        "v5": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 263,
+              "six": 135,
+              "fall": 26,
+              "lane": 3,
+              "world": 0,
+              "survival": 274,
+              "safe_survival": 272,
+              "switches": 0,
+              "mean_speed_m_s": 3.0457684204716666,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 45,
+              "six": 45,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 0,
+              "mean_speed_m_s": 8.774717389084813,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 131,
+                "six": 67,
+                "fall": 15,
+                "lane": 2,
+                "world": 0,
+                "survival": 135,
+                "safe_survival": 134,
+                "switches": 0,
+                "mean_speed_m_s": 3.0427325404031347,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 22,
+                "six": 22,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 22,
+                "safe_survival": 22,
+                "switches": 0,
+                "mean_speed_m_s": 8.549783019386368,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 132,
+                "six": 68,
+                "fall": 11,
+                "lane": 1,
+                "world": 0,
+                "survival": 139,
+                "safe_survival": 138,
+                "switches": 0,
+                "mean_speed_m_s": 3.048804300540199,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 23,
+                "six": 23,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 23,
+                "safe_survival": 23,
+                "switches": 0,
+                "mean_speed_m_s": 8.999651758783259,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 45,
+              "six": 45,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 0,
+              "mean_speed_m_s": 8.774717389084813,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 45,
+              "six": 27,
+              "fall": 4,
+              "lane": 2,
+              "world": 0,
+              "survival": 46,
+              "safe_survival": 45,
+              "switches": 0,
+              "mean_speed_m_s": 3.2411438462366102,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 49,
+              "six": 38,
+              "fall": 1,
+              "lane": 0,
+              "world": 0,
+              "survival": 49,
+              "safe_survival": 49,
+              "switches": 0,
+              "mean_speed_m_s": 3.7773386240005493,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 47,
+              "six": 21,
+              "fall": 3,
+              "lane": 0,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 47,
+              "switches": 0,
+              "mean_speed_m_s": 3.2655336152667793,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 49,
+              "six": 17,
+              "fall": 1,
+              "lane": 0,
+              "world": 0,
+              "survival": 49,
+              "safe_survival": 49,
+              "switches": 0,
+              "mean_speed_m_s": 2.924444536170321,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 33,
+              "six": 2,
+              "fall": 7,
+              "lane": 1,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 42,
+              "switches": 0,
+              "mean_speed_m_s": 1.7183625450417832,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 40,
+              "six": 30,
+              "fall": 10,
+              "lane": 0,
+              "world": 0,
+              "survival": 40,
+              "safe_survival": 40,
+              "switches": 0,
+              "mean_speed_m_s": 3.347787356113958,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 57,
+                "six": 49,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 57,
+                "safe_survival": 57,
+                "switches": 0,
+                "mean_speed_m_s": 3.9148104728132056,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 8.481962444754718,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 57,
+                "six": 45,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 57,
+                "safe_survival": 57,
+                "switches": 0,
+                "mean_speed_m_s": 3.636605468944267,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 9.076814153417946,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 55,
+                "six": 30,
+                "fall": 2,
+                "lane": 1,
+                "world": 0,
+                "survival": 58,
+                "safe_survival": 57,
+                "switches": 0,
+                "mean_speed_m_s": 3.007462702464787,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 9.518498516082763,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 48,
+                "six": 10,
+                "fall": 8,
+                "lane": 1,
+                "world": 0,
+                "survival": 52,
+                "safe_survival": 52,
+                "switches": 0,
+                "mean_speed_m_s": 2.4364504778532647,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 8.44280887444814,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 46,
+                "six": 1,
+                "fall": 10,
+                "lane": 1,
+                "world": 0,
+                "survival": 50,
+                "safe_survival": 49,
+                "switches": 0,
+                "mean_speed_m_s": 2.2335129802828098,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 8.353502956720499,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          }
+        },
+        "v16_control": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 269,
+              "six": 177,
+              "fall": 28,
+              "lane": 3,
+              "world": 0,
+              "survival": 272,
+              "safe_survival": 269,
+              "switches": 0,
+              "mean_speed_m_s": 3.349785278519718,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 48,
+              "six": 48,
+              "fall": 2,
+              "lane": 0,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 48,
+              "switches": 0,
+              "mean_speed_m_s": 10.872262701010918,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 135,
+                "six": 91,
+                "fall": 14,
+                "lane": 1,
+                "world": 0,
+                "survival": 136,
+                "safe_survival": 135,
+                "switches": 0,
+                "mean_speed_m_s": 3.3297619662396336,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 23,
+                "six": 23,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 23,
+                "safe_survival": 23,
+                "switches": 0,
+                "mean_speed_m_s": 10.508416316938831,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 134,
+                "six": 86,
+                "fall": 14,
+                "lane": 2,
+                "world": 0,
+                "survival": 136,
+                "safe_survival": 134,
+                "switches": 0,
+                "mean_speed_m_s": 3.3698085907998037,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 25,
+                "six": 25,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 25,
+                "safe_survival": 25,
+                "switches": 0,
+                "mean_speed_m_s": 11.236109085083008,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 48,
+              "six": 48,
+              "fall": 2,
+              "lane": 0,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 48,
+              "switches": 0,
+              "mean_speed_m_s": 10.872262701010918,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 43,
+              "six": 33,
+              "fall": 7,
+              "lane": 0,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 43,
+              "switches": 0,
+              "mean_speed_m_s": 3.554421094447235,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 49,
+              "six": 45,
+              "fall": 1,
+              "lane": 0,
+              "world": 0,
+              "survival": 49,
+              "safe_survival": 49,
+              "switches": 0,
+              "mean_speed_m_s": 4.033292951583863,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 46,
+              "six": 29,
+              "fall": 4,
+              "lane": 0,
+              "world": 0,
+              "survival": 46,
+              "safe_survival": 46,
+              "switches": 0,
+              "mean_speed_m_s": 3.5011146714699426,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 46,
+              "six": 21,
+              "fall": 4,
+              "lane": 0,
+              "world": 0,
+              "survival": 46,
+              "safe_survival": 46,
+              "switches": 0,
+              "mean_speed_m_s": 3.1320771302814285,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 40,
+              "six": 7,
+              "fall": 7,
+              "lane": 3,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 40,
+              "switches": 0,
+              "mean_speed_m_s": 2.0972379276631545,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 45,
+              "six": 42,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 0,
+              "mean_speed_m_s": 3.780567895672688,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 55,
+                "six": 50,
+                "fall": 4,
+                "lane": 1,
+                "world": 0,
+                "survival": 56,
+                "safe_survival": 55,
+                "switches": 0,
+                "mean_speed_m_s": 4.071446562245602,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 10.25571595736452,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 57,
+                "six": 51,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 57,
+                "safe_survival": 57,
+                "switches": 0,
+                "mean_speed_m_s": 3.8510917451334215,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 11.193407344818116,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 55,
+                "six": 41,
+                "fall": 4,
+                "lane": 1,
+                "world": 0,
+                "survival": 56,
+                "safe_survival": 55,
+                "switches": 0,
+                "mean_speed_m_s": 3.394970045371223,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 11.44922571182251,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 54,
+                "six": 24,
+                "fall": 6,
+                "lane": 0,
+                "world": 0,
+                "survival": 54,
+                "safe_survival": 54,
+                "switches": 0,
+                "mean_speed_m_s": 2.8653375818323865,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 11.021460819244385,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 48,
+                "six": 11,
+                "fall": 11,
+                "lane": 1,
+                "world": 0,
+                "survival": 49,
+                "safe_survival": 48,
+                "switches": 0,
+                "mean_speed_m_s": 2.5660804580159597,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 10.441503671805064,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            }
+          }
+        },
+        "history_control": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 272,
+              "six": 167,
+              "fall": 24,
+              "lane": 3,
+              "world": 0,
+              "survival": 276,
+              "safe_survival": 273,
+              "switches": 509,
+              "mean_speed_m_s": 3.2935761597986613,
+              "mean_duty": 0.694849428994617,
+              "all_duty_zero": false
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 45,
+              "six": 45,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 0,
+              "mean_speed_m_s": 8.774717389084813,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 134,
+                "six": 83,
+                "fall": 14,
+                "lane": 2,
+                "world": 0,
+                "survival": 136,
+                "safe_survival": 134,
+                "switches": 264,
+                "mean_speed_m_s": 3.2907947174294363,
+                "mean_duty": 0.6859026669637189,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 22,
+                "six": 22,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 22,
+                "safe_survival": 22,
+                "switches": 0,
+                "mean_speed_m_s": 8.549783019386368,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 138,
+                "six": 84,
+                "fall": 10,
+                "lane": 1,
+                "world": 0,
+                "survival": 140,
+                "safe_survival": 139,
+                "switches": 245,
+                "mean_speed_m_s": 3.296357602167886,
+                "mean_duty": 0.703796191025515,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 23,
+                "six": 23,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 23,
+                "safe_survival": 23,
+                "switches": 0,
+                "mean_speed_m_s": 8.999651758783259,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 45,
+              "six": 45,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 0,
+              "mean_speed_m_s": 8.774717389084813,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 45,
+              "six": 31,
+              "fall": 3,
+              "lane": 2,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 45,
+              "switches": 146,
+              "mean_speed_m_s": 3.5128149737243772,
+              "mean_duty": 0.661443984888136,
+              "all_duty_zero": false
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 47,
+              "six": 42,
+              "fall": 3,
+              "lane": 0,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 47,
+              "switches": 33,
+              "mean_speed_m_s": 3.8210660589294907,
+              "mean_duty": 0.27535699041330103,
+              "all_duty_zero": false
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 47,
+              "six": 28,
+              "fall": 3,
+              "lane": 0,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 47,
+              "switches": 97,
+              "mean_speed_m_s": 3.5082627221148313,
+              "mean_duty": 0.8302727703091015,
+              "all_duty_zero": false
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 48,
+              "six": 20,
+              "fall": 2,
+              "lane": 0,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 48,
+              "switches": 87,
+              "mean_speed_m_s": 3.1910941807956448,
+              "mean_duty": 0.8682939396708086,
+              "all_duty_zero": false
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 42,
+              "six": 8,
+              "fall": 6,
+              "lane": 1,
+              "world": 0,
+              "survival": 44,
+              "safe_survival": 43,
+              "switches": 59,
+              "mean_speed_m_s": 2.136934316221578,
+              "mean_duty": 0.8866466409068381,
+              "all_duty_zero": false
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 43,
+              "six": 38,
+              "fall": 7,
+              "lane": 0,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 43,
+              "switches": 87,
+              "mean_speed_m_s": 3.591284707006047,
+              "mean_duty": 0.6470822477795164,
+              "all_duty_zero": false
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 56,
+                "six": 54,
+                "fall": 4,
+                "lane": 0,
+                "world": 0,
+                "survival": 56,
+                "safe_survival": 56,
+                "switches": 105,
+                "mean_speed_m_s": 4.07447049172275,
+                "mean_duty": 0.4733935463530222,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 8.481962444754718,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 57,
+                "six": 49,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 57,
+                "safe_survival": 57,
+                "switches": 131,
+                "mean_speed_m_s": 3.8461831978999586,
+                "mean_duty": 0.635554000237303,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 9.076814153417946,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 55,
+                "six": 35,
+                "fall": 2,
+                "lane": 2,
+                "world": 0,
+                "survival": 58,
+                "safe_survival": 56,
+                "switches": 112,
+                "mean_speed_m_s": 3.25292937709735,
+                "mean_duty": 0.7116675572684651,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 9.518498516082763,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 51,
+                "six": 20,
+                "fall": 8,
+                "lane": 1,
+                "world": 0,
+                "survival": 52,
+                "safe_survival": 51,
+                "switches": 87,
+                "mean_speed_m_s": 2.764020203109246,
+                "mean_duty": 0.7781398876537271,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 8.44280887444814,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 53,
+                "six": 9,
+                "fall": 7,
+                "lane": 0,
+                "world": 0,
+                "survival": 53,
+                "safe_survival": 53,
+                "switches": 74,
+                "mean_speed_m_s": 2.5302775291640027,
+                "mean_duty": 0.8754921534605676,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 8.353502956720499,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          }
+        },
+        "high53": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 269,
+              "six": 162,
+              "fall": 22,
+              "lane": 9,
+              "world": 0,
+              "survival": 278,
+              "safe_survival": 269,
+              "switches": 0,
+              "mean_speed_m_s": 3.321275463260669,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 48,
+              "six": 48,
+              "fall": 2,
+              "lane": 0,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 48,
+              "switches": 0,
+              "mean_speed_m_s": 10.577340985936686,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 131,
+                "six": 81,
+                "fall": 14,
+                "lane": 5,
+                "world": 0,
+                "survival": 136,
+                "safe_survival": 131,
+                "switches": 0,
+                "mean_speed_m_s": 3.2965778954462333,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 23,
+                "six": 23,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 23,
+                "safe_survival": 23,
+                "switches": 0,
+                "mean_speed_m_s": 10.073515742625327,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 138,
+                "six": 81,
+                "fall": 8,
+                "lane": 4,
+                "world": 0,
+                "survival": 142,
+                "safe_survival": 138,
+                "switches": 0,
+                "mean_speed_m_s": 3.3459730310751046,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 25,
+                "six": 25,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 25,
+                "safe_survival": 25,
+                "switches": 0,
+                "mean_speed_m_s": 11.081166229248048,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 48,
+              "six": 48,
+              "fall": 2,
+              "lane": 0,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 48,
+              "switches": 0,
+              "mean_speed_m_s": 10.577340985936686,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 47,
+              "six": 28,
+              "fall": 2,
+              "lane": 1,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 47,
+              "switches": 0,
+              "mean_speed_m_s": 3.5249278227899334,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 45,
+              "six": 39,
+              "fall": 2,
+              "lane": 3,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 45,
+              "switches": 0,
+              "mean_speed_m_s": 3.948442978158472,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 48,
+              "six": 27,
+              "fall": 2,
+              "lane": 0,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 48,
+              "switches": 0,
+              "mean_speed_m_s": 3.4186434119088305,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 47,
+              "six": 20,
+              "fall": 2,
+              "lane": 1,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 47,
+              "switches": 0,
+              "mean_speed_m_s": 3.239816565546533,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 41,
+              "six": 10,
+              "fall": 6,
+              "lane": 3,
+              "world": 0,
+              "survival": 44,
+              "safe_survival": 41,
+              "switches": 0,
+              "mean_speed_m_s": 2.135128510349224,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 41,
+              "six": 38,
+              "fall": 8,
+              "lane": 1,
+              "world": 0,
+              "survival": 42,
+              "safe_survival": 41,
+              "switches": 0,
+              "mean_speed_m_s": 3.6606934908110214,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 53,
+                "six": 49,
+                "fall": 3,
+                "lane": 4,
+                "world": 0,
+                "survival": 57,
+                "safe_survival": 53,
+                "switches": 0,
+                "mean_speed_m_s": 4.03440604883655,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 9.920890262159142,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 54,
+                "six": 52,
+                "fall": 3,
+                "lane": 3,
+                "world": 0,
+                "survival": 57,
+                "safe_survival": 54,
+                "switches": 0,
+                "mean_speed_m_s": 3.877526952773324,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 11.060641098022462,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 58,
+                "six": 36,
+                "fall": 1,
+                "lane": 1,
+                "world": 0,
+                "survival": 59,
+                "safe_survival": 58,
+                "switches": 0,
+                "mean_speed_m_s": 3.3135514388838225,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 11.089761924743652,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 52,
+                "six": 18,
+                "fall": 7,
+                "lane": 1,
+                "world": 0,
+                "survival": 53,
+                "safe_survival": 52,
+                "switches": 0,
+                "mean_speed_m_s": 2.864034247084446,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 10.902231597900391,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 52,
+                "six": 7,
+                "fall": 8,
+                "lane": 0,
+                "world": 0,
+                "survival": 52,
+                "safe_survival": 52,
+                "switches": 0,
+                "mean_speed_m_s": 2.5168586287252035,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 9.91318004685779,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            }
+          }
+        },
+        "history_high53": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 278,
+              "six": 166,
+              "fall": 20,
+              "lane": 2,
+              "world": 0,
+              "survival": 280,
+              "safe_survival": 278,
+              "switches": 505,
+              "mean_speed_m_s": 3.265542928133606,
+              "mean_duty": 0.6926430511473826,
+              "all_duty_zero": false
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 45,
+              "six": 45,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 0,
+              "mean_speed_m_s": 8.774717389084813,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 139,
+                "six": 84,
+                "fall": 10,
+                "lane": 1,
+                "world": 0,
+                "survival": 140,
+                "safe_survival": 139,
+                "switches": 265,
+                "mean_speed_m_s": 3.2479230299883683,
+                "mean_duty": 0.6887199365613113,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 22,
+                "six": 22,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 22,
+                "safe_survival": 22,
+                "switches": 0,
+                "mean_speed_m_s": 8.549783019386368,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 139,
+                "six": 82,
+                "fall": 10,
+                "lane": 1,
+                "world": 0,
+                "survival": 140,
+                "safe_survival": 139,
+                "switches": 240,
+                "mean_speed_m_s": 3.283162826278844,
+                "mean_duty": 0.696566165733454,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 23,
+                "six": 23,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 23,
+                "safe_survival": 23,
+                "switches": 0,
+                "mean_speed_m_s": 8.999651758783259,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 45,
+              "six": 45,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 0,
+              "mean_speed_m_s": 8.774717389084813,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 44,
+              "six": 29,
+              "fall": 5,
+              "lane": 1,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 44,
+              "switches": 151,
+              "mean_speed_m_s": 3.397909646856279,
+              "mean_duty": 0.6340611973019609,
+              "all_duty_zero": false
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 49,
+              "six": 44,
+              "fall": 1,
+              "lane": 0,
+              "world": 0,
+              "survival": 49,
+              "safe_survival": 49,
+              "switches": 31,
+              "mean_speed_m_s": 3.882050642967224,
+              "mean_duty": 0.27756944454212984,
+              "all_duty_zero": false
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 48,
+              "six": 27,
+              "fall": 2,
+              "lane": 0,
+              "world": 0,
+              "survival": 48,
+              "safe_survival": 48,
+              "switches": 91,
+              "mean_speed_m_s": 3.3737701433423966,
+              "mean_duty": 0.8368935187663883,
+              "all_duty_zero": false
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 49,
+              "six": 20,
+              "fall": 1,
+              "lane": 0,
+              "world": 0,
+              "survival": 49,
+              "safe_survival": 49,
+              "switches": 87,
+              "mean_speed_m_s": 3.1965944022197657,
+              "mean_duty": 0.8682350500628501,
+              "all_duty_zero": false
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 43,
+              "six": 7,
+              "fall": 6,
+              "lane": 1,
+              "world": 0,
+              "survival": 44,
+              "safe_survival": 43,
+              "switches": 55,
+              "mean_speed_m_s": 2.118178421559372,
+              "mean_duty": 0.8890720214028722,
+              "all_duty_zero": false
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 45,
+              "six": 39,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 90,
+              "mean_speed_m_s": 3.6247543118565995,
+              "mean_duty": 0.6500270748080943,
+              "all_duty_zero": false
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 57,
+                "six": 50,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 57,
+                "safe_survival": 57,
+                "switches": 97,
+                "mean_speed_m_s": 3.970858929641005,
+                "mean_duty": 0.45579668234412873,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 8.481962444754718,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 58,
+                "six": 52,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 58,
+                "safe_survival": 58,
+                "switches": 140,
+                "mean_speed_m_s": 3.8381767639407403,
+                "mean_duty": 0.63197337999526,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 9.076814153417946,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 57,
+                "six": 35,
+                "fall": 2,
+                "lane": 1,
+                "world": 0,
+                "survival": 58,
+                "safe_survival": 57,
+                "switches": 119,
+                "mean_speed_m_s": 3.2742324633440067,
+                "mean_duty": 0.7169803690955519,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 9.518498516082763,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 53,
+                "six": 20,
+                "fall": 7,
+                "lane": 0,
+                "world": 0,
+                "survival": 53,
+                "safe_survival": 53,
+                "switches": 83,
+                "mean_speed_m_s": 2.7368364561418574,
+                "mean_duty": 0.788716835868909,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 8.44280887444814,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 53,
+                "six": 9,
+                "fall": 6,
+                "lane": 1,
+                "world": 0,
+                "survival": 54,
+                "safe_survival": 53,
+                "switches": 66,
+                "mean_speed_m_s": 2.5076100276004216,
+                "mean_duty": 0.8697479884330637,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 8.353502956720499,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          }
+        }
+      },
+      "paired_comparisons": {
+        "history_control_vs_v16_control": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 18,
+              "true_to_false": 15
+            },
+            "six": {
+              "false_to_true": 12,
+              "true_to_false": 22
+            },
+            "fall": {
+              "false_to_true": 14,
+              "true_to_false": 18
+            },
+            "lane": {
+              "false_to_true": 3,
+              "true_to_false": 3
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 18,
+              "true_to_false": 14
+            },
+            "six_improved": 12,
+            "six_regressed": 22,
+            "speed_delta_mean_m_s": -0.05620911872105708
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 0,
+              "true_to_false": 3
+            },
+            "six": {
+              "false_to_true": 0,
+              "true_to_false": 3
+            },
+            "fall": {
+              "false_to_true": 3,
+              "true_to_false": 0
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 0,
+              "true_to_false": 3
+            },
+            "six_improved": 0,
+            "six_regressed": 3,
+            "speed_delta_mean_m_s": -2.0975453119261056
+          }
+        },
+        "history_high53_vs_high53": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 24,
+              "true_to_false": 15
+            },
+            "six": {
+              "false_to_true": 25,
+              "true_to_false": 21
+            },
+            "fall": {
+              "false_to_true": 13,
+              "true_to_false": 15
+            },
+            "lane": {
+              "false_to_true": 2,
+              "true_to_false": 9
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 15,
+              "true_to_false": 13
+            },
+            "six_improved": 25,
+            "six_regressed": 21,
+            "speed_delta_mean_m_s": -0.05573253512706297
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 0,
+              "true_to_false": 3
+            },
+            "six": {
+              "false_to_true": 0,
+              "true_to_false": 3
+            },
+            "fall": {
+              "false_to_true": 3,
+              "true_to_false": 0
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 0,
+              "true_to_false": 3
+            },
+            "six_improved": 0,
+            "six_regressed": 3,
+            "speed_delta_mean_m_s": -1.8026235968518736
+          }
+        },
+        "v16_control_vs_v5": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 24,
+              "true_to_false": 18
+            },
+            "six": {
+              "false_to_true": 45,
+              "true_to_false": 3
+            },
+            "fall": {
+              "false_to_true": 18,
+              "true_to_false": 16
+            },
+            "lane": {
+              "false_to_true": 2,
+              "true_to_false": 2
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 16,
+              "true_to_false": 18
+            },
+            "six_improved": 45,
+            "six_regressed": 3,
+            "speed_delta_mean_m_s": 0.3040168580480517
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 3,
+              "true_to_false": 0
+            },
+            "six": {
+              "false_to_true": 3,
+              "true_to_false": 0
+            },
+            "fall": {
+              "false_to_true": 0,
+              "true_to_false": 3
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 3,
+              "true_to_false": 0
+            },
+            "six_improved": 3,
+            "six_regressed": 0,
+            "speed_delta_mean_m_s": 2.0975453119261056
+          }
+        },
+        "history_control_vs_v5": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 23,
+              "true_to_false": 14
+            },
+            "six": {
+              "false_to_true": 37,
+              "true_to_false": 5
+            },
+            "fall": {
+              "false_to_true": 14,
+              "true_to_false": 16
+            },
+            "lane": {
+              "false_to_true": 2,
+              "true_to_false": 2
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 16,
+              "true_to_false": 14
+            },
+            "six_improved": 37,
+            "six_regressed": 5,
+            "speed_delta_mean_m_s": 0.2478077393269946
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "six": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "fall": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "six_improved": 0,
+            "six_regressed": 0,
+            "speed_delta_mean_m_s": 0.0
+          }
+        },
+        "high53_vs_v5": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 24,
+              "true_to_false": 18
+            },
+            "six": {
+              "false_to_true": 37,
+              "true_to_false": 10
+            },
+            "fall": {
+              "false_to_true": 13,
+              "true_to_false": 17
+            },
+            "lane": {
+              "false_to_true": 9,
+              "true_to_false": 3
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 17,
+              "true_to_false": 13
+            },
+            "six_improved": 37,
+            "six_regressed": 10,
+            "speed_delta_mean_m_s": 0.27550704278900234
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 3,
+              "true_to_false": 0
+            },
+            "six": {
+              "false_to_true": 3,
+              "true_to_false": 0
+            },
+            "fall": {
+              "false_to_true": 0,
+              "true_to_false": 3
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 3,
+              "true_to_false": 0
+            },
+            "six_improved": 3,
+            "six_regressed": 0,
+            "speed_delta_mean_m_s": 1.8026235968518736
+          }
+        },
+        "history_high53_vs_v5": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 25,
+              "true_to_false": 10
+            },
+            "six": {
+              "false_to_true": 36,
+              "true_to_false": 5
+            },
+            "fall": {
+              "false_to_true": 10,
+              "true_to_false": 16
+            },
+            "lane": {
+              "false_to_true": 2,
+              "true_to_false": 3
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 16,
+              "true_to_false": 10
+            },
+            "six_improved": 36,
+            "six_regressed": 5,
+            "speed_delta_mean_m_s": 0.21977450766193934
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "six": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "fall": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "six_improved": 0,
+            "six_regressed": 0,
+            "speed_delta_mean_m_s": 0.0
+          }
+        }
+      }
+    },
+    "64": {
+      "controllers": {
+        "v5": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 232,
+              "six": 214,
+              "fall": 57,
+              "lane": 11,
+              "world": 0,
+              "survival": 243,
+              "safe_survival": 234,
+              "switches": 0,
+              "mean_speed_m_s": 3.0574490864967214,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 43,
+              "six": 43,
+              "fall": 7,
+              "lane": 0,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 43,
+              "switches": 0,
+              "mean_speed_m_s": 10.042651236669073,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 113,
+                "six": 104,
+                "fall": 32,
+                "lane": 6,
+                "world": 0,
+                "survival": 118,
+                "safe_survival": 114,
+                "switches": 0,
+                "mean_speed_m_s": 3.0701988582598663,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 21,
+                "six": 21,
+                "fall": 4,
+                "lane": 0,
+                "world": 0,
+                "survival": 21,
+                "safe_survival": 21,
+                "switches": 0,
+                "mean_speed_m_s": 9.704628122157892,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 119,
+                "six": 110,
+                "fall": 25,
+                "lane": 5,
+                "world": 0,
+                "survival": 125,
+                "safe_survival": 120,
+                "switches": 0,
+                "mean_speed_m_s": 3.044699314733576,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 22,
+                "six": 22,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 22,
+                "safe_survival": 22,
+                "switches": 0,
+                "mean_speed_m_s": 10.380674351180254,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 43,
+              "six": 43,
+              "fall": 7,
+              "lane": 0,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 43,
+              "switches": 0,
+              "mean_speed_m_s": 10.042651236669073,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 34,
+              "six": 33,
+              "fall": 11,
+              "lane": 6,
+              "world": 0,
+              "survival": 39,
+              "safe_survival": 34,
+              "switches": 0,
+              "mean_speed_m_s": 3.201617497353013,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 47,
+              "six": 47,
+              "fall": 3,
+              "lane": 0,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 47,
+              "switches": 0,
+              "mean_speed_m_s": 3.849731941980848,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 42,
+              "six": 41,
+              "fall": 8,
+              "lane": 0,
+              "world": 0,
+              "survival": 42,
+              "safe_survival": 42,
+              "switches": 0,
+              "mean_speed_m_s": 3.326482953501873,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 46,
+              "six": 46,
+              "fall": 4,
+              "lane": 1,
+              "world": 0,
+              "survival": 46,
+              "safe_survival": 46,
+              "switches": 0,
+              "mean_speed_m_s": 2.985147708503988,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 34,
+              "six": 18,
+              "fall": 10,
+              "lane": 4,
+              "world": 0,
+              "survival": 40,
+              "safe_survival": 36,
+              "switches": 0,
+              "mean_speed_m_s": 1.560344290151765,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 29,
+              "six": 29,
+              "fall": 21,
+              "lane": 0,
+              "world": 0,
+              "survival": 29,
+              "safe_survival": 29,
+              "switches": 0,
+              "mean_speed_m_s": 3.4213701274888404,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 55,
+                "six": 55,
+                "fall": 4,
+                "lane": 1,
+                "world": 0,
+                "survival": 56,
+                "safe_survival": 55,
+                "switches": 0,
+                "mean_speed_m_s": 4.010241219209896,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 9.808866455527424,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 55,
+                "six": 55,
+                "fall": 5,
+                "lane": 0,
+                "world": 0,
+                "survival": 55,
+                "safe_survival": 55,
+                "switches": 0,
+                "mean_speed_m_s": 3.714409626772336,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 10.010791294429357,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 50,
+                "six": 44,
+                "fall": 8,
+                "lane": 2,
+                "world": 0,
+                "survival": 52,
+                "safe_survival": 50,
+                "switches": 0,
+                "mean_speed_m_s": 3.01320793250564,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 11.125445652008057,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 40,
+                "six": 34,
+                "fall": 15,
+                "lane": 5,
+                "world": 0,
+                "survival": 45,
+                "safe_survival": 41,
+                "switches": 0,
+                "mean_speed_m_s": 2.3733507538515846,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 9.477900795500489,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 32,
+                "six": 26,
+                "fall": 25,
+                "lane": 3,
+                "world": 0,
+                "survival": 35,
+                "safe_survival": 33,
+                "switches": 0,
+                "mean_speed_m_s": 2.1760359001441496,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 9.790251985880044,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          }
+        },
+        "v16_control": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 225,
+              "six": 224,
+              "fall": 63,
+              "lane": 12,
+              "world": 0,
+              "survival": 237,
+              "safe_survival": 225,
+              "switches": 0,
+              "mean_speed_m_s": 3.4304699635813676,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 47,
+              "six": 47,
+              "fall": 3,
+              "lane": 0,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 47,
+              "switches": 0,
+              "mean_speed_m_s": 12.63908985625962,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 115,
+                "six": 114,
+                "fall": 30,
+                "lane": 5,
+                "world": 0,
+                "survival": 120,
+                "safe_survival": 115,
+                "switches": 0,
+                "mean_speed_m_s": 3.4012737954473815,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 23,
+                "six": 23,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 23,
+                "safe_survival": 23,
+                "switches": 0,
+                "mean_speed_m_s": 12.251981800032093,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 110,
+                "six": 110,
+                "fall": 33,
+                "lane": 7,
+                "world": 0,
+                "survival": 117,
+                "safe_survival": 110,
+                "switches": 0,
+                "mean_speed_m_s": 3.459666131715353,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 24,
+                "six": 24,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 24,
+                "safe_survival": 24,
+                "switches": 0,
+                "mean_speed_m_s": 13.026197912487145,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 47,
+              "six": 47,
+              "fall": 3,
+              "lane": 0,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 47,
+              "switches": 0,
+              "mean_speed_m_s": 12.63908985625962,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 34,
+              "six": 34,
+              "fall": 14,
+              "lane": 2,
+              "world": 0,
+              "survival": 36,
+              "safe_survival": 34,
+              "switches": 0,
+              "mean_speed_m_s": 3.6353511015282898,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 41,
+              "six": 41,
+              "fall": 7,
+              "lane": 2,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 41,
+              "switches": 0,
+              "mean_speed_m_s": 4.1411013814298485,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 42,
+              "six": 42,
+              "fall": 8,
+              "lane": 0,
+              "world": 0,
+              "survival": 42,
+              "safe_survival": 42,
+              "switches": 0,
+              "mean_speed_m_s": 3.596525611221083,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 41,
+              "six": 41,
+              "fall": 8,
+              "lane": 1,
+              "world": 0,
+              "survival": 42,
+              "safe_survival": 41,
+              "switches": 0,
+              "mean_speed_m_s": 3.288460361995013,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 28,
+              "six": 27,
+              "fall": 15,
+              "lane": 7,
+              "world": 0,
+              "survival": 35,
+              "safe_survival": 28,
+              "switches": 0,
+              "mean_speed_m_s": 2.0728719504419617,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 39,
+              "six": 39,
+              "fall": 11,
+              "lane": 0,
+              "world": 0,
+              "survival": 39,
+              "safe_survival": 39,
+              "switches": 0,
+              "mean_speed_m_s": 3.8485093748720085,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 50,
+                "six": 50,
+                "fall": 7,
+                "lane": 3,
+                "world": 0,
+                "survival": 53,
+                "safe_survival": 50,
+                "switches": 0,
+                "mean_speed_m_s": 4.22691317896856,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 11.642285171231709,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 50,
+                "six": 50,
+                "fall": 8,
+                "lane": 2,
+                "world": 0,
+                "survival": 52,
+                "safe_survival": 50,
+                "switches": 0,
+                "mean_speed_m_s": 3.9753412343760925,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 13.273254829130465,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 50,
+                "six": 50,
+                "fall": 7,
+                "lane": 3,
+                "world": 0,
+                "survival": 53,
+                "safe_survival": 50,
+                "switches": 0,
+                "mean_speed_m_s": 3.428773556343808,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 13.073407173156738,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 42,
+                "six": 41,
+                "fall": 16,
+                "lane": 2,
+                "world": 0,
+                "survival": 44,
+                "safe_survival": 42,
+                "switches": 0,
+                "mean_speed_m_s": 2.9007389771344125,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 13.198552989959717,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 33,
+                "six": 33,
+                "fall": 25,
+                "lane": 2,
+                "world": 0,
+                "survival": 35,
+                "safe_survival": 33,
+                "switches": 0,
+                "mean_speed_m_s": 2.6205828710839634,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 12.007949117819468,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            }
+          }
+        },
+        "history_control": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 228,
+              "six": 225,
+              "fall": 64,
+              "lane": 10,
+              "world": 0,
+              "survival": 236,
+              "safe_survival": 229,
+              "switches": 2053,
+              "mean_speed_m_s": 3.3594397727533045,
+              "mean_duty": 0.7314343633967207,
+              "all_duty_zero": false
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 43,
+              "six": 43,
+              "fall": 7,
+              "lane": 0,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 43,
+              "switches": 0,
+              "mean_speed_m_s": 10.042651236669073,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 110,
+                "six": 109,
+                "fall": 36,
+                "lane": 5,
+                "world": 0,
+                "survival": 114,
+                "safe_survival": 110,
+                "switches": 1037,
+                "mean_speed_m_s": 3.365146423048606,
+                "mean_duty": 0.7217585109262551,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 21,
+                "six": 21,
+                "fall": 4,
+                "lane": 0,
+                "world": 0,
+                "survival": 21,
+                "safe_survival": 21,
+                "switches": 0,
+                "mean_speed_m_s": 9.704628122157892,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 118,
+                "six": 116,
+                "fall": 28,
+                "lane": 5,
+                "world": 0,
+                "survival": 122,
+                "safe_survival": 119,
+                "switches": 1016,
+                "mean_speed_m_s": 3.353733122458003,
+                "mean_duty": 0.7411102158671864,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 22,
+                "six": 22,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 22,
+                "safe_survival": 22,
+                "switches": 0,
+                "mean_speed_m_s": 10.380674351180254,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 43,
+              "six": 43,
+              "fall": 7,
+              "lane": 0,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 43,
+              "switches": 0,
+              "mean_speed_m_s": 10.042651236669073,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 33,
+              "six": 33,
+              "fall": 15,
+              "lane": 4,
+              "world": 0,
+              "survival": 35,
+              "safe_survival": 33,
+              "switches": 662,
+              "mean_speed_m_s": 3.5555284802700533,
+              "mean_duty": 0.6939367495426562,
+              "all_duty_zero": false
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 44,
+              "six": 44,
+              "fall": 6,
+              "lane": 0,
+              "world": 0,
+              "survival": 44,
+              "safe_survival": 44,
+              "switches": 140,
+              "mean_speed_m_s": 3.934693482974739,
+              "mean_duty": 0.29459380297137094,
+              "all_duty_zero": false
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 40,
+              "six": 40,
+              "fall": 10,
+              "lane": 0,
+              "world": 0,
+              "survival": 40,
+              "safe_survival": 40,
+              "switches": 386,
+              "mean_speed_m_s": 3.6397339786324467,
+              "mean_duty": 0.8780478811837971,
+              "all_duty_zero": false
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 41,
+              "six": 41,
+              "fall": 8,
+              "lane": 1,
+              "world": 0,
+              "survival": 42,
+              "safe_survival": 41,
+              "switches": 354,
+              "mean_speed_m_s": 3.310451002253848,
+              "mean_duty": 0.9131873817169938,
+              "all_duty_zero": false
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 31,
+              "six": 28,
+              "fall": 15,
+              "lane": 4,
+              "world": 0,
+              "survival": 35,
+              "safe_survival": 32,
+              "switches": 201,
+              "mean_speed_m_s": 2.0398204432602007,
+              "mean_duty": 0.9249942231779994,
+              "all_duty_zero": false
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 39,
+              "six": 39,
+              "fall": 10,
+              "lane": 1,
+              "world": 0,
+              "survival": 40,
+              "safe_survival": 39,
+              "switches": 310,
+              "mean_speed_m_s": 3.6764112491285386,
+              "mean_duty": 0.6838461417875068,
+              "all_duty_zero": false
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 52,
+                "six": 52,
+                "fall": 8,
+                "lane": 0,
+                "world": 0,
+                "survival": 52,
+                "safe_survival": 52,
+                "switches": 399,
+                "mean_speed_m_s": 4.180985691906466,
+                "mean_duty": 0.5095385350919243,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 9.808866455527424,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 52,
+                "six": 52,
+                "fall": 6,
+                "lane": 2,
+                "world": 0,
+                "survival": 54,
+                "safe_survival": 52,
+                "switches": 528,
+                "mean_speed_m_s": 3.9288952484827377,
+                "mean_duty": 0.6803785208768857,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 10.010791294429357,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 47,
+                "six": 47,
+                "fall": 11,
+                "lane": 2,
+                "world": 0,
+                "survival": 49,
+                "safe_survival": 48,
+                "switches": 449,
+                "mean_speed_m_s": 3.2917348046319,
+                "mean_duty": 0.7453758569857758,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 11.125445652008057,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 42,
+                "six": 41,
+                "fall": 16,
+                "lane": 3,
+                "world": 0,
+                "survival": 44,
+                "safe_survival": 42,
+                "switches": 371,
+                "mean_speed_m_s": 2.8353519877586364,
+                "mean_duty": 0.8160366126396703,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 9.477900795500489,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 35,
+                "six": 33,
+                "fall": 23,
+                "lane": 3,
+                "world": 0,
+                "survival": 37,
+                "safe_survival": 35,
+                "switches": 306,
+                "mean_speed_m_s": 2.560231130986782,
+                "mean_duty": 0.9058422913893477,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 9.790251985880044,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          }
+        },
+        "high53": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 225,
+              "six": 223,
+              "fall": 52,
+              "lane": 24,
+              "world": 0,
+              "survival": 248,
+              "safe_survival": 225,
+              "switches": 0,
+              "mean_speed_m_s": 3.406893526474902,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 47,
+              "six": 47,
+              "fall": 3,
+              "lane": 0,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 47,
+              "switches": 0,
+              "mean_speed_m_s": 12.170210351805306,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 110,
+                "six": 109,
+                "fall": 27,
+                "lane": 14,
+                "world": 0,
+                "survival": 123,
+                "safe_survival": 110,
+                "switches": 0,
+                "mean_speed_m_s": 3.3748497122482126,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 23,
+                "six": 23,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 23,
+                "safe_survival": 23,
+                "switches": 0,
+                "mean_speed_m_s": 11.735791133250327,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 115,
+                "six": 114,
+                "fall": 25,
+                "lane": 10,
+                "world": 0,
+                "survival": 125,
+                "safe_survival": 115,
+                "switches": 0,
+                "mean_speed_m_s": 3.438937340701592,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 24,
+                "six": 24,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 24,
+                "safe_survival": 24,
+                "switches": 0,
+                "mean_speed_m_s": 12.604629570360284,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 47,
+              "six": 47,
+              "fall": 3,
+              "lane": 0,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 47,
+              "switches": 0,
+              "mean_speed_m_s": 12.170210351805306,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 38,
+              "six": 38,
+              "fall": 8,
+              "lane": 4,
+              "world": 0,
+              "survival": 42,
+              "safe_survival": 38,
+              "switches": 0,
+              "mean_speed_m_s": 3.6269975772763168,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 39,
+              "six": 39,
+              "fall": 3,
+              "lane": 8,
+              "world": 0,
+              "survival": 47,
+              "safe_survival": 39,
+              "switches": 0,
+              "mean_speed_m_s": 4.077241973442443,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 39,
+              "six": 39,
+              "fall": 11,
+              "lane": 0,
+              "world": 0,
+              "survival": 39,
+              "safe_survival": 39,
+              "switches": 0,
+              "mean_speed_m_s": 3.4832133131960914,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 41,
+              "six": 41,
+              "fall": 5,
+              "lane": 4,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 41,
+              "switches": 0,
+              "mean_speed_m_s": 3.3276495226350407,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 30,
+              "six": 28,
+              "fall": 14,
+              "lane": 7,
+              "world": 0,
+              "survival": 36,
+              "safe_survival": 30,
+              "switches": 0,
+              "mean_speed_m_s": 2.098960887996693,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 38,
+              "six": 38,
+              "fall": 11,
+              "lane": 1,
+              "world": 0,
+              "survival": 39,
+              "safe_survival": 38,
+              "switches": 0,
+              "mean_speed_m_s": 3.827297884302828,
+              "mean_duty": 1.0,
+              "all_duty_zero": false
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 42,
+                "six": 42,
+                "fall": 8,
+                "lane": 10,
+                "world": 0,
+                "survival": 52,
+                "safe_survival": 42,
+                "switches": 0,
+                "mean_speed_m_s": 4.182080703454021,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 11.548563315900598,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 48,
+                "six": 48,
+                "fall": 5,
+                "lane": 7,
+                "world": 0,
+                "survival": 55,
+                "safe_survival": 48,
+                "switches": 0,
+                "mean_speed_m_s": 3.9771582524602165,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 12.619067478179932,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 51,
+                "six": 51,
+                "fall": 5,
+                "lane": 4,
+                "world": 0,
+                "survival": 55,
+                "safe_survival": 51,
+                "switches": 0,
+                "mean_speed_m_s": 3.3728111301109416,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 12.751536560058593,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 47,
+                "six": 45,
+                "fall": 12,
+                "lane": 1,
+                "world": 0,
+                "survival": 48,
+                "safe_survival": 47,
+                "switches": 0,
+                "mean_speed_m_s": 2.885828396619779,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 12.491740551877276,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 37,
+                "six": 37,
+                "fall": 22,
+                "lane": 2,
+                "world": 0,
+                "survival": 38,
+                "safe_survival": 37,
+                "switches": 0,
+                "mean_speed_m_s": 2.6165891497295517,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 11.440143853010133,
+                "mean_duty": 1.0,
+                "all_duty_zero": false
+              }
+            }
+          }
+        },
+        "history_high53": {
+          "total": {
+            "rough": {
+              "episodes": 300,
+              "one": 238,
+              "six": 236,
+              "fall": 58,
+              "lane": 7,
+              "world": 0,
+              "survival": 242,
+              "safe_survival": 238,
+              "switches": 2004,
+              "mean_speed_m_s": 3.3338492298142093,
+              "mean_duty": 0.7290540487028121,
+              "all_duty_zero": false
+            },
+            "flat": {
+              "episodes": 50,
+              "one": 43,
+              "six": 43,
+              "fall": 7,
+              "lane": 0,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 43,
+              "switches": 0,
+              "mean_speed_m_s": 10.042651236669073,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            }
+          },
+          "by_map": {
+            "901": {
+              "rough": {
+                "episodes": 150,
+                "one": 116,
+                "six": 115,
+                "fall": 32,
+                "lane": 3,
+                "world": 0,
+                "survival": 118,
+                "safe_survival": 116,
+                "switches": 1031,
+                "mean_speed_m_s": 3.309216676097519,
+                "mean_duty": 0.72385884024373,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 21,
+                "six": 21,
+                "fall": 4,
+                "lane": 0,
+                "world": 0,
+                "survival": 21,
+                "safe_survival": 21,
+                "switches": 0,
+                "mean_speed_m_s": 9.704628122157892,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "902": {
+              "rough": {
+                "episodes": 150,
+                "one": 122,
+                "six": 121,
+                "fall": 26,
+                "lane": 4,
+                "world": 0,
+                "survival": 124,
+                "safe_survival": 122,
+                "switches": 973,
+                "mean_speed_m_s": 3.358481783530899,
+                "mean_duty": 0.734249257161894,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 25,
+                "one": 22,
+                "six": 22,
+                "fall": 3,
+                "lane": 0,
+                "world": 0,
+                "survival": 22,
+                "safe_survival": 22,
+                "switches": 0,
+                "mean_speed_m_s": 10.380674351180254,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          },
+          "by_family": {
+            "flat": {
+              "episodes": 50,
+              "one": 43,
+              "six": 43,
+              "fall": 7,
+              "lane": 0,
+              "world": 0,
+              "survival": 43,
+              "safe_survival": 43,
+              "switches": 0,
+              "mean_speed_m_s": 10.042651236669073,
+              "mean_duty": 0.0,
+              "all_duty_zero": true
+            },
+            "obstacles": {
+              "episodes": 50,
+              "one": 32,
+              "six": 32,
+              "fall": 18,
+              "lane": 2,
+              "world": 0,
+              "survival": 32,
+              "safe_survival": 32,
+              "switches": 586,
+              "mean_speed_m_s": 3.46699538322913,
+              "mean_duty": 0.6740909462046174,
+              "all_duty_zero": false
+            },
+            "rough": {
+              "episodes": 50,
+              "one": 45,
+              "six": 45,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 148,
+              "mean_speed_m_s": 3.9710193702312337,
+              "mean_duty": 0.30017234072609794,
+              "all_duty_zero": false
+            },
+            "slope": {
+              "episodes": 50,
+              "one": 45,
+              "six": 45,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 381,
+              "mean_speed_m_s": 3.5039092202838695,
+              "mean_duty": 0.8783959054585216,
+              "all_duty_zero": false
+            },
+            "stairs": {
+              "episodes": 50,
+              "one": 45,
+              "six": 45,
+              "fall": 5,
+              "lane": 0,
+              "world": 0,
+              "survival": 45,
+              "safe_survival": 45,
+              "switches": 365,
+              "mean_speed_m_s": 3.2958890084752785,
+              "mean_duty": 0.9098423607415852,
+              "all_duty_zero": false
+            },
+            "stepping_stones": {
+              "episodes": 50,
+              "one": 30,
+              "six": 28,
+              "fall": 16,
+              "lane": 5,
+              "world": 0,
+              "survival": 34,
+              "safe_survival": 30,
+              "switches": 206,
+              "mean_speed_m_s": 2.077309296496443,
+              "mean_duty": 0.923963712063373,
+              "all_duty_zero": false
+            },
+            "waves": {
+              "episodes": 50,
+              "one": 41,
+              "six": 41,
+              "fall": 9,
+              "lane": 0,
+              "world": 0,
+              "survival": 41,
+              "safe_survival": 41,
+              "switches": 318,
+              "mean_speed_m_s": 3.6879731001693,
+              "mean_duty": 0.6878590270226772,
+              "all_duty_zero": false
+            }
+          },
+          "by_level": {
+            "0": {
+              "rough": {
+                "episodes": 60,
+                "one": 56,
+                "six": 56,
+                "fall": 4,
+                "lane": 0,
+                "world": 0,
+                "survival": 56,
+                "safe_survival": 56,
+                "switches": 414,
+                "mean_speed_m_s": 4.112561534941718,
+                "mean_duty": 0.5000561433048573,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 9.808866455527424,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "1": {
+              "rough": {
+                "episodes": 60,
+                "one": 54,
+                "six": 54,
+                "fall": 5,
+                "lane": 1,
+                "world": 0,
+                "survival": 55,
+                "safe_survival": 54,
+                "switches": 523,
+                "mean_speed_m_s": 3.9188616317456986,
+                "mean_duty": 0.675765007168217,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 10.010791294429357,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "2": {
+              "rough": {
+                "episodes": 60,
+                "one": 48,
+                "six": 48,
+                "fall": 9,
+                "lane": 4,
+                "world": 0,
+                "survival": 51,
+                "safe_survival": 48,
+                "switches": 415,
+                "mean_speed_m_s": 3.2958637544215366,
+                "mean_duty": 0.7495466145837916,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 10,
+                "six": 10,
+                "fall": 0,
+                "lane": 0,
+                "world": 0,
+                "survival": 10,
+                "safe_survival": 10,
+                "switches": 0,
+                "mean_speed_m_s": 11.125445652008057,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "3": {
+              "rough": {
+                "episodes": 60,
+                "one": 43,
+                "six": 42,
+                "fall": 17,
+                "lane": 0,
+                "world": 0,
+                "survival": 43,
+                "safe_survival": 43,
+                "switches": 370,
+                "mean_speed_m_s": 2.776122374601051,
+                "mean_duty": 0.8257692890375786,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 8,
+                "six": 8,
+                "fall": 2,
+                "lane": 0,
+                "world": 0,
+                "survival": 8,
+                "safe_survival": 8,
+                "switches": 0,
+                "mean_speed_m_s": 9.477900795500489,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            },
+            "4": {
+              "rough": {
+                "episodes": 60,
+                "one": 37,
+                "six": 36,
+                "fall": 23,
+                "lane": 2,
+                "world": 0,
+                "survival": 37,
+                "safe_survival": 37,
+                "switches": 282,
+                "mean_speed_m_s": 2.5658368533610414,
+                "mean_duty": 0.8941331894196158,
+                "all_duty_zero": false
+              },
+              "flat": {
+                "episodes": 10,
+                "one": 9,
+                "six": 9,
+                "fall": 1,
+                "lane": 0,
+                "world": 0,
+                "survival": 9,
+                "safe_survival": 9,
+                "switches": 0,
+                "mean_speed_m_s": 9.790251985880044,
+                "mean_duty": 0.0,
+                "all_duty_zero": true
+              }
+            }
+          }
+        }
+      },
+      "paired_comparisons": {
+        "history_control_vs_v16_control": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 44,
+              "true_to_false": 41
+            },
+            "six": {
+              "false_to_true": 42,
+              "true_to_false": 41
+            },
+            "fall": {
+              "false_to_true": 37,
+              "true_to_false": 36
+            },
+            "lane": {
+              "false_to_true": 10,
+              "true_to_false": 12
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 36,
+              "true_to_false": 37
+            },
+            "six_improved": 42,
+            "six_regressed": 41,
+            "speed_delta_mean_m_s": -0.07103019082806294
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 1,
+              "true_to_false": 5
+            },
+            "six": {
+              "false_to_true": 1,
+              "true_to_false": 5
+            },
+            "fall": {
+              "false_to_true": 5,
+              "true_to_false": 1
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 1,
+              "true_to_false": 5
+            },
+            "six_improved": 1,
+            "six_regressed": 5,
+            "speed_delta_mean_m_s": -2.5964386195905456
+          }
+        },
+        "history_high53_vs_high53": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 51,
+              "true_to_false": 38
+            },
+            "six": {
+              "false_to_true": 49,
+              "true_to_false": 36
+            },
+            "fall": {
+              "false_to_true": 37,
+              "true_to_false": 31
+            },
+            "lane": {
+              "false_to_true": 7,
+              "true_to_false": 24
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 31,
+              "true_to_false": 37
+            },
+            "six_improved": 49,
+            "six_regressed": 36,
+            "speed_delta_mean_m_s": -0.07304429666069291
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 1,
+              "true_to_false": 5
+            },
+            "six": {
+              "false_to_true": 1,
+              "true_to_false": 5
+            },
+            "fall": {
+              "false_to_true": 5,
+              "true_to_false": 1
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 1,
+              "true_to_false": 5
+            },
+            "six_improved": 1,
+            "six_regressed": 5,
+            "speed_delta_mean_m_s": -2.1275591151362327
+          }
+        },
+        "v16_control_vs_v5": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 42,
+              "true_to_false": 49
+            },
+            "six": {
+              "false_to_true": 46,
+              "true_to_false": 36
+            },
+            "fall": {
+              "false_to_true": 43,
+              "true_to_false": 37
+            },
+            "lane": {
+              "false_to_true": 11,
+              "true_to_false": 10
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 37,
+              "true_to_false": 43
+            },
+            "six_improved": 46,
+            "six_regressed": 36,
+            "speed_delta_mean_m_s": 0.373020877084646
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 5,
+              "true_to_false": 1
+            },
+            "six": {
+              "false_to_true": 5,
+              "true_to_false": 1
+            },
+            "fall": {
+              "false_to_true": 1,
+              "true_to_false": 5
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 5,
+              "true_to_false": 1
+            },
+            "six_improved": 5,
+            "six_regressed": 1,
+            "speed_delta_mean_m_s": 2.5964386195905456
+          }
+        },
+        "history_control_vs_v5": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 37,
+              "true_to_false": 41
+            },
+            "six": {
+              "false_to_true": 45,
+              "true_to_false": 34
+            },
+            "fall": {
+              "false_to_true": 39,
+              "true_to_false": 32
+            },
+            "lane": {
+              "false_to_true": 8,
+              "true_to_false": 9
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 32,
+              "true_to_false": 39
+            },
+            "six_improved": 45,
+            "six_regressed": 34,
+            "speed_delta_mean_m_s": 0.30199068625658304
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "six": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "fall": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "six_improved": 0,
+            "six_regressed": 0,
+            "speed_delta_mean_m_s": 0.0
+          }
+        },
+        "high53_vs_v5": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 44,
+              "true_to_false": 51
+            },
+            "six": {
+              "false_to_true": 52,
+              "true_to_false": 43
+            },
+            "fall": {
+              "false_to_true": 33,
+              "true_to_false": 38
+            },
+            "lane": {
+              "false_to_true": 24,
+              "true_to_false": 11
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 38,
+              "true_to_false": 33
+            },
+            "six_improved": 52,
+            "six_regressed": 43,
+            "speed_delta_mean_m_s": 0.3494444399781808
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 5,
+              "true_to_false": 1
+            },
+            "six": {
+              "false_to_true": 5,
+              "true_to_false": 1
+            },
+            "fall": {
+              "false_to_true": 1,
+              "true_to_false": 5
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 5,
+              "true_to_false": 1
+            },
+            "six_improved": 5,
+            "six_regressed": 1,
+            "speed_delta_mean_m_s": 2.1275591151362327
+          }
+        },
+        "history_high53_vs_v5": {
+          "rough": {
+            "episodes": 300,
+            "one": {
+              "false_to_true": 40,
+              "true_to_false": 34
+            },
+            "six": {
+              "false_to_true": 45,
+              "true_to_false": 23
+            },
+            "fall": {
+              "false_to_true": 36,
+              "true_to_false": 35
+            },
+            "lane": {
+              "false_to_true": 7,
+              "true_to_false": 11
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 35,
+              "true_to_false": 36
+            },
+            "six_improved": 45,
+            "six_regressed": 23,
+            "speed_delta_mean_m_s": 0.27640014331748786
+          },
+          "flat": {
+            "episodes": 50,
+            "one": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "six": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "fall": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "lane": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "world": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "survival": {
+              "false_to_true": 0,
+              "true_to_false": 0
+            },
+            "six_improved": 0,
+            "six_regressed": 0,
+            "speed_delta_mean_m_s": 0.0
+          }
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "high53__g901_r101.json": "ec90add086b8d2ec3e44eb81c48174a84219340de01a80572b1e1c8ac3e6a9b3",
+    "high53__g902_r102.json": "0f5d9bfa6f00faa174dc22509590999d4eaf364e69256f0093f7da8c69b0dc83",
+    "history_control__g901_r101.json": "d982e55440fd8ff245c8d65be40633d668d2c92ef41df41d0919e9fa147cd1c1",
+    "history_control__g902_r102.json": "fdb3301e1248a6921d50418445109124f1c904355c8098f34b6fbb639b3473e6",
+    "history_high53__g901_r101.json": "417fc2d71f9327e820a57eb294ffdcefbc10eb4c92ad7dfd2f40280623e4ab5f",
+    "history_high53__g902_r102.json": "b37a045a03d36dfbe00a5282c5f6adc368402619b04d1a27eb121f4c2fa67a29",
+    "v16_control__g901_r101.json": "a0c4beecceff06f71169ac29f4d9a1c8ce640cdd7f4ef2c0afe953ecb2624290",
+    "v16_control__g902_r102.json": "32e442a00402b70a8d8f5d1dbd8048f9ec74b7fbfddbc29cd5127094f8b2f4f2",
+    "v5__g901_r101.json": "97b0caca1db1bc1da44d323fb6574d0c6c243dceafc4eeb8b687b8df32bac81c",
+    "v5__g902_r102.json": "752d1daaa2167ef17c65d1ca6494f0672fd365857f611c9dc219adb073be2748"
+  },
+  "plan_sha256": "83060b48b912e0fc50f0a3090f8fd0ffdc0a7e4b20ec49457a1d64dbd83e2b72"
+}

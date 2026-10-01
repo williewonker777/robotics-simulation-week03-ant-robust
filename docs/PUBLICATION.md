@@ -1,6 +1,21 @@
-# 공개 범위와 검증 — 최종 정리 2026-09-30
+# 공개 범위와 검증 — 최종 정리 2026-10-01
 
-## 동일 제출 checkpoint 험지 교정 — 현재 로컬 준비
+## 학습 미사용 지형 평가·원본 영상 — 추가 공개
+
+사용자 요청에 따라 학습 미사용 geometry901/902의5제어기 비교와16초 원본 MP45개를 추가했습니다.
+[결론·고정 모델·재현·한계](UNSEEN_OBSTACLE_DEMO.md)와
+[공개 artifact](../artifacts/unseen_obstacles_20261001/)를 제공합니다.
+장기 혼합험지는 history high53 236/300, 단기 혼합험지는 v16 단독177/300,
+장애물만 보면 high53 단독38/50이 최고였습니다. 순수 평지/험지 전문가 분리·보편적인 교체 우월성·새 지형 종류 OOD는 검증하지 않았습니다.
+
+- 두 지도×5제어기,1,750물리 firstepisodes/3,500종속 scoringwindows. 공개 JSON에서 재집계해 원래 모든 통계가 일치합니다.
+-5원본 MP4는 bytes 동일하고 전체480프레임/16초/30fps를 확인했습니다. 대표2개 GIF는 전체16초/6fps 미리보기이며 원본을 대신하지 않습니다.
+- host 절대경로만 portable 치환; 수치·배열·seed·모델/소스 SHA 유지. [원문/공개 SHA 대응](../artifacts/unseen_obstacles_20261001/publication_metadata.json)을 구분합니다. 과거 audit SHA는 원문 기준입니다.
+- native GUI 확인은 로컬 원문 evidence에 있고, 공개 [media manifest](../artifacts/unseen_obstacles_20261001/media_manifest.json)는 영상별 기록만 투영했습니다. 인증정보·콘솔·데스크톱/장치/프로세스 telemetry·세션DB·캐시를 공개하지 않습니다.
+- 평가 단계 CPU2,094개 및 새4파일 static checks/독립 raw audit PASS. 새 학습·재시뮬레이션·의존성 설치·모델 변경 없이 공개본만 준비했습니다.
+- GitHub 파일 화면은 README GIF/원본 MP4 링크로 보며, `index.html`은 clone 후 로컬에서 엽니다. native user-attachment URL을 새로 만들었다고 주장하지 않습니다.
+
+## 동일 제출 checkpoint 험지 교정 — 함께 반영
 
 대표 험지 비교를 **저마찰과 정확히 같은 Baseline42·Robust42 파일**로 다시 평가·녹화했습니다.
 task의v5는 평가 환경 버전이며 추가 학습 v5 checkpoint를 사용하지 않습니다.

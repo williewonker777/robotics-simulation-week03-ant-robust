@@ -1,0 +1,256 @@
+{
+  "schema": "week03-ant-unseen-publication-v1",
+  "original_evaluation": "2026-10-01, fixed layouts901/902; no retraining or resimulation for publication",
+  "note": "Historical audit/source SHA fields refer to original evidence bytes, not portable copies. This manifest maps original to published bytes. MP4, model and source SHA are unchanged. Public summary input SHA fields are recomputed from public JSON. Desktop/raw consoles/telemetry/caches/credentials are excluded.",
+  "permitted_string_replacements": [
+    "absolute canonical repository -> repository-relative",
+    "original run-output paths -> public artifact paths",
+    "course run-python path -> ../run-python"
+  ],
+  "files": [
+    {
+      "file": "artifacts/unseen_obstacles_20261001/plan.json",
+      "source": "outputs/unseen_obstacles_20261001/plan.json",
+      "original_sha256": "83060b48b912e0fc50f0a3090f8fd0ffdc0a7e4b20ec49457a1d64dbd83e2b72",
+      "published_sha256": "83060b48b912e0fc50f0a3090f8fd0ffdc0a7e4b20ec49457a1d64dbd83e2b72",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/execution_freeze.json",
+      "source": "outputs/unseen_obstacles_20261001/execution_freeze.json",
+      "original_sha256": "60951bc1da414deeea1058afe0c3031e77e243765bd7b7dbce8d1ff9120947c4",
+      "published_sha256": "60951bc1da414deeea1058afe0c3031e77e243765bd7b7dbce8d1ff9120947c4",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/novelty_declaration.json",
+      "source": "outputs/unseen_obstacles_20261001/novelty_declaration.json",
+      "original_sha256": "df5d4969f58f7af141756422c88254340c8d55997794be20ce50af5113c70466",
+      "published_sha256": "df5d4969f58f7af141756422c88254340c8d55997794be20ce50af5113c70466",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/checkpoint_cpu_audit.json",
+      "source": "outputs/unseen_obstacles_20261001/checkpoint_cpu_audit.json",
+      "original_sha256": "2d14353f7fcf545b14939ed89860dfb1a5602764af8fb418b417394098b2e536",
+      "published_sha256": "2d14353f7fcf545b14939ed89860dfb1a5602764af8fb418b417394098b2e536",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/existing_files_before.json",
+      "source": "outputs/unseen_obstacles_20261001/existing_files_before.json",
+      "original_sha256": "deccc6ebf14c114158b1d6179a81fe71cb512403ac5d98e5edf1314d4261861a",
+      "published_sha256": "deccc6ebf14c114158b1d6179a81fe71cb512403ac5d98e5edf1314d4261861a",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/independent_data_audit.json",
+      "source": "outputs/unseen_obstacles_20261001/independent_data_audit.json",
+      "original_sha256": "292f4fa4a661aa03d8e85b14a6fad4e46049ff7fcab64b0cf7e36759672a3d00",
+      "published_sha256": "292f4fa4a661aa03d8e85b14a6fad4e46049ff7fcab64b0cf7e36759672a3d00",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/independent_data_audit.md",
+      "source": "outputs/unseen_obstacles_20261001/independent_data_audit.md",
+      "original_sha256": "67da269bb4fd6451396200e89a43b9047c08e35a58db1a1de9ad3aac35f47810",
+      "published_sha256": "67da269bb4fd6451396200e89a43b9047c08e35a58db1a1de9ad3aac35f47810",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/harness_code_review.json",
+      "source": "outputs/unseen_obstacles_20261001/harness_code_review.json",
+      "original_sha256": "9ce3adaf52db3e903857cfaa57569a50efabf20ad4a0f457fa42798cbfd39517",
+      "published_sha256": "9ce3adaf52db3e903857cfaa57569a50efabf20ad4a0f457fa42798cbfd39517",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/cpu_static_verification.json",
+      "source": "outputs/unseen_obstacles_20261001/cpu_static_verification.json",
+      "original_sha256": "6f5e29d4d7f5ef6f7392634296e5c9726eda97bcac9c58846ca7b13a5f9ef1a8",
+      "published_sha256": "6f5e29d4d7f5ef6f7392634296e5c9726eda97bcac9c58846ca7b13a5f9ef1a8",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/commands.jsonl",
+      "source": "outputs/unseen_obstacles_20261001/commands.jsonl",
+      "original_sha256": "626e04ca0e482ce44f7b23b8c180935a8affd1367661d742e4555b995fb99cce",
+      "published_sha256": "1d20db0bff281776bf4a01940792ef4d5e97f59e280540c1051293bd046799c4",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/high53__g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/high53__g901_r101.json",
+      "original_sha256": "7a60329f4bdc8e563f3f9b26b74860d1bfb490ee0cbec67b836c91330ee54622",
+      "published_sha256": "ec90add086b8d2ec3e44eb81c48174a84219340de01a80572b1e1c8ac3e6a9b3",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/high53__g902_r102.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/high53__g902_r102.json",
+      "original_sha256": "e5b77d14e32195af51ec3136049e02d9612eab0b04019e2b694ab08e480c81b4",
+      "published_sha256": "0f5d9bfa6f00faa174dc22509590999d4eaf364e69256f0093f7da8c69b0dc83",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/history_control__g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/history_control__g901_r101.json",
+      "original_sha256": "76f148ebe28cbb57c1e04d0b88ce469b77b880513576f44c9b229a935249f6f6",
+      "published_sha256": "d982e55440fd8ff245c8d65be40633d668d2c92ef41df41d0919e9fa147cd1c1",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/history_control__g902_r102.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/history_control__g902_r102.json",
+      "original_sha256": "ec08100de295212fc1419deb82e6a876763354129335a998109e3de53c122e17",
+      "published_sha256": "fdb3301e1248a6921d50418445109124f1c904355c8098f34b6fbb639b3473e6",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/history_high53__g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/history_high53__g901_r101.json",
+      "original_sha256": "76d490de4e9f66447f74ccc386a012a9678186aebc3cba464ef6eb2e5728c758",
+      "published_sha256": "417fc2d71f9327e820a57eb294ffdcefbc10eb4c92ad7dfd2f40280623e4ab5f",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/history_high53__g902_r102.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/history_high53__g902_r102.json",
+      "original_sha256": "1d840c250a4671da4153f245fa15c9be6d11ba2c81ade8b12dec3fad3557950e",
+      "published_sha256": "b37a045a03d36dfbe00a5282c5f6adc368402619b04d1a27eb121f4c2fa67a29",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/v16_control__g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/v16_control__g901_r101.json",
+      "original_sha256": "94ca0f83c4c6a3fbc453856d2c6a969f9457faf2006ad002200e2bc948a5b37b",
+      "published_sha256": "a0c4beecceff06f71169ac29f4d9a1c8ce640cdd7f4ef2c0afe953ecb2624290",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/v16_control__g902_r102.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/v16_control__g902_r102.json",
+      "original_sha256": "100ca6c31ae363cdf75adea1fcd891a33eaa547849050e5d7cb99d6904950af6",
+      "published_sha256": "32e442a00402b70a8d8f5d1dbd8048f9ec74b7fbfddbc29cd5127094f8b2f4f2",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/v5__g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/v5__g901_r101.json",
+      "original_sha256": "9ab392ede286f987ee0d8df0ddb5f8997e4d374789faaed24547b8f13f00c98b",
+      "published_sha256": "97b0caca1db1bc1da44d323fb6574d0c6c243dceafc4eeb8b687b8df32bac81c",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/evaluations/v5__g902_r102.json",
+      "source": "outputs/unseen_obstacles_20261001/evaluations/v5__g902_r102.json",
+      "original_sha256": "a8fb994db4059358f5b6e46664173ae5127c7d9a37b51efffe6c436c6d27c003",
+      "published_sha256": "752d1daaa2167ef17c65d1ca6494f0672fd365857f611c9dc219adb073be2748",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/prepare/prepare__g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/prepare/prepare__g901_r101.json",
+      "original_sha256": "8a900abb58347f8ef6993befa758f3823b2c1bab7be26028ef0aed430017044e",
+      "published_sha256": "95d3262126b4fe60434f6844f2c016a4c4c34c2ef329c4329e42b0300f8319c9",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/prepare/prepare__g902_r102.json",
+      "source": "outputs/unseen_obstacles_20261001/prepare/prepare__g902_r102.json",
+      "original_sha256": "3ccfd3e819360acd39274749b41edc28042c426facd24fa4b4390a0bc9422617",
+      "published_sha256": "60d9c2b00c4ceb6d8af8ebd6757c5b08d7929de942dea6ada2481597ea603490",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_high53__obstacles_g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_high53__obstacles_g901_r101.json",
+      "original_sha256": "4abbd1c66f8095144d54f025f07fa606ca01dcf6d841b65c58881148d86d98f5",
+      "published_sha256": "7871ac3d631e113cd336522621a8a299d889cd236289b5f28539192ced364704",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_high53__obstacles_g901_r101.mp4",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_high53__obstacles_g901_r101.mp4",
+      "original_sha256": "872b0054930a6bc0b2b95e5e72ce9c00439c4bfc175de9233f0410496248b348",
+      "published_sha256": "872b0054930a6bc0b2b95e5e72ce9c00439c4bfc175de9233f0410496248b348",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_history_high53__obstacles_g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_history_high53__obstacles_g901_r101.json",
+      "original_sha256": "8c256f0ed91f88078e598cf6eda8391a63d690c677e52fd0b217321d44f8781c",
+      "published_sha256": "5061a9cd1ebe7f72fc590d49a558ea971c0d8c52257c1f3850522ea481dffc26",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_history_high53__obstacles_g901_r101.mp4",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_history_high53__obstacles_g901_r101.mp4",
+      "original_sha256": "1b335d8a7d3f29b44f190cd5daf52daed5fb4c903605dac13aa47ea7b6e38080",
+      "published_sha256": "1b335d8a7d3f29b44f190cd5daf52daed5fb4c903605dac13aa47ea7b6e38080",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_history_high53__stones_g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_history_high53__stones_g901_r101.json",
+      "original_sha256": "814ce66200637543c485d1634580d31c1994f9e12c7d80ff9d6da12a8615f9a9",
+      "published_sha256": "236a45a29cea6b1b45276a4e7fe00fc2329a128e650b22e9df4c6d15572bec72",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_history_high53__stones_g901_r101.mp4",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_history_high53__stones_g901_r101.mp4",
+      "original_sha256": "6de138ac30db3ea9f5abb4fba0e88752b01093da89debc8c4f3978718affc57b",
+      "published_sha256": "6de138ac30db3ea9f5abb4fba0e88752b01093da89debc8c4f3978718affc57b",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_v16_control__obstacles_g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_v16_control__obstacles_g901_r101.json",
+      "original_sha256": "090e83c19a650b722f0a79c853968b04ebe49796c125e02d0cedd88f1ef33f26",
+      "published_sha256": "41a0b109f9575f4d6bafcb59e8cb3547f4677a75b2b17a37172230375a41436f",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_v16_control__obstacles_g901_r101.mp4",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_v16_control__obstacles_g901_r101.mp4",
+      "original_sha256": "5b24cef19f0486b5b717356b531483df68057079d8aa01d8133391880b7bf916",
+      "published_sha256": "5b24cef19f0486b5b717356b531483df68057079d8aa01d8133391880b7bf916",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_v16_control__stones_g901_r101.json",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_v16_control__stones_g901_r101.json",
+      "original_sha256": "1720dcbaa202e4a5e9aa0225e2527f18708c261d4c62b87de521ebc62899946d",
+      "published_sha256": "cadee94a2932a2414b57b8c986c3bc8a7a6186c2d1fe7235b26471133eb30efa",
+      "transformation": "portable path strings only; all numeric data and structure unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/videos/GUI_v16_control__stones_g901_r101.mp4",
+      "source": "outputs/unseen_obstacles_20261001/videos/GUI_v16_control__stones_g901_r101.mp4",
+      "original_sha256": "c534eeeae5c77411c5ab72e928d42bf54acdd4f0ff88c2f5430b9a0eb8fe5cd9",
+      "published_sha256": "c534eeeae5c77411c5ab72e928d42bf54acdd4f0ff88c2f5430b9a0eb8fe5cd9",
+      "transformation": "identical bytes"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/index.html",
+      "source": "outputs/unseen_obstacles_20261001/index.html",
+      "original_sha256": "2feb34f1f5b4efcda54b9238465a485927f26a55ee9968d2bf2c508d95ddb9d9",
+      "published_sha256": "a88d2f7a26608630bacee4ee5d3c69a83c406d1f9193bb180d85967c56c1a32a",
+      "transformation": "footer media link points to public video-only manifest; no label or result changed"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/summary/summary.json",
+      "source": "outputs/unseen_obstacles_20261001/summary/summary.json",
+      "original_sha256": "581a7a1398abde0890de366b93bc4a4ad22ac4bb81c5f2b580d73a46686f2c94",
+      "published_sha256": "7ffe5254e0a582275c632ab49a2013290fd7957af07faf4a94db4c8af0f9cceb",
+      "transformation": "all statistics and text identical; input_sha256/plan_sha256 bind portable public copies, recomputed using same system Python as original aggregation"
+    }
+  ],
+  "excluded_local_only": [
+    "final_claims_review.json/md (raw native GUI process/window/screenshot metadata)",
+    "desktop screenshots",
+    "raw console/GPU/process logs",
+    "session databases/credentials/caches"
+  ]
+}

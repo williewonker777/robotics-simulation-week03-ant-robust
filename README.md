@@ -4,7 +4,7 @@
 과제 제출 모델은 **Robust seed42**입니다. 저마찰·험지 모두 **이 동일 checkpoint**를 사용합니다.
 두 비교의 왼쪽도 동일한 **제공 코드 Baseline seed42**입니다. 추가 험지 학습은 하지 않았습니다.
 
-[성능](#과제-성능--제공-코드-baseline-대비) · [비교 영상](#비교-영상) ·
+[성능](#과제-성능--제공-코드-baseline-대비) · [비교 영상](#비교-영상) · [미사용 지형](#학습-미사용-지형-평가) ·
 [실행](#빠른-실행) · [동일 모델·험지 재현](docs/SAME_CHECKPOINT_COMPARISON.md) ·
 [전체 실험 기록](docs/EXPERIMENT_HISTORY.md)
 
@@ -132,6 +132,43 @@ https://github.com/user-attachments/assets/8ded3f05-2d7b-4f9c-8737-58ea6ae81ed1
 [험지 영상 조건·SHA·전체 decode](artifacts/same_checkpoint_terrain_20260930/media_manifest.json) ·
 [기존 저마찰 첨부 검증](artifacts/provided_baseline_comparison_20260930/native_video_verification.json)
 
+## 학습 미사용 지형 평가
+
+**추가 험지 학습 모델 v5/v16/high53의 별도 비교**이며 위 과제 제출 Robust42 전이 실험과 다릅니다.
+학습 설정159개/geometry seed17개와 겹치지 않는 **901/902 배치**에서5제어기를 같은 초기 상태·RNG로 평가했습니다.
+기존 지형 종류의 새로운 배치이지, 훈련 생성기 밖의 새 지형 종류 OOD 검증은 아닙니다.
+
+| 범위 | 최고 설정 | 엄격한6타일 성공 | 같은 조건 대조 |
+|---|---|---:|---|
+|16초 혼합험지|v16 control 단독|**177/300 · 59.0%**|history v16 167/300|
+|64초 혼합험지|v5 ↔ high53 history 교체|**236/300 · 78.7%**|high53 단독223/300|
+|64초 장애물만|high53 단독|**38/50 · 76.0%**|history high53 32/50|
+
+**장기 혼합험지에서는 교체가 좋았지만 모든 지형·지표에서 최고는 아닙니다.**
+history high53의64초 험지 낙상은 단독52→58, 평지 낙상3→7/50·속도12.170→10.043m/s였습니다.
+전환기는 지형 이름별 전용 모델 배정이 아니라 높이 ray 이력에 따른 두 정책 혼합입니다.
+v5도 이미 평지·험지를 함께 학습했으므로 순수 평지/험지 모델 분리 실험은 아닙니다.
+총1,750개 물리적 첫episode에서3,500개 **종속**16/64초 window를 채점했습니다.
+
+### 새 배치 · 최고 난도 장애물과 징검다리 데모
+
+geometry901/reset101, 난도1.0, 한 환경의 **16초 무편집 원본**입니다.
+GIF는 전체 시간축을6fps로 낮춘 미리보기입니다. 클릭하면 원본 MP4를 열거나 다운로드할 수 있습니다.
+이 정성 사례는 위 반복 평가의 성공률과 합산하지 않습니다.
+
+**장애물 최고 후보 high53 단독**
+
+[![high53 단독 · 학습 미사용 장애물 · 전체16초](artifacts/unseen_obstacles_20261001/GUI_high53__obstacles_g901_r101_preview.gif)](artifacts/unseen_obstacles_20261001/videos/GUI_high53__obstacles_g901_r101.mp4)
+
+**장기 혼합험지 최고 후보 history high53 · 징검다리**
+
+[![history high53 · 학습 미사용 징검다리 · 전체16초](artifacts/unseen_obstacles_20261001/GUI_history_high53__stones_g901_r101_preview.gif)](artifacts/unseen_obstacles_20261001/videos/GUI_history_high53__stones_g901_r101.mp4)
+
+[원본 영상5개·모델별 비교](artifacts/unseen_obstacles_20261001/videos/) ·
+[전체 수치·지형/난도별 집계](artifacts/unseen_obstacles_20261001/summary/summary.json) ·
+[조건·SHA·재현·한계](docs/UNSEEN_OBSTACLE_DEMO.md) ·
+[영상 전체decode·preview 검증](artifacts/unseen_obstacles_20261001/media_manifest.json)
+
 ## 빠른 실행
 
 기존 수업 환경이 필요합니다: Python3.11.16, Isaac Sim5.1.0, Isaac Lab2.3.0,
@@ -186,6 +223,7 @@ CHECKPOINT=artifacts/runs/robust_seed42/model_999.pt
 
 | 자료 | 내용 |
 |---|---|
+| [미사용 지형 평가·데모](docs/UNSEEN_OBSTACLE_DEMO.md) | 새2배치·5제어기·단기/장기/장애물 최고 설정·원본5영상 |
 | [동일 checkpoint 험지 비교](docs/SAME_CHECKPOINT_COMPARISON.md) | 저마찰·험지 모델 일치·수치·영상·재현 |
 | [기본 제공 코드 비교 기록](docs/PROVIDED_BASELINE_COMPARISON.md) | 현재 과제 수치·이전 추가 학습 v5 기록 |
 | [최종 제출 가이드](docs/FINAL_SUBMISSION.md) | 모델 선택·설치·평가·GUI·검증 |

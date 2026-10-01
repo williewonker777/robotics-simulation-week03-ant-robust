@@ -1,0 +1,165 @@
+{
+  "schema": "week03-ant-unseen-public-media-v1",
+  "condition": {
+    "geometry_seed": 901,
+    "reset_seed": 101,
+    "difficulty": 1.0,
+    "level_index": 4,
+    "num_envs": 1,
+    "seconds": 16
+  },
+  "videos": [
+    {
+      "video": "GUI_high53__obstacles_g901_r101.mp4",
+      "sha256": "872b0054930a6bc0b2b95e5e72ce9c00439c4bfc175de9233f0410496248b348",
+      "decoded_frames": 480,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "resolution": [
+        1280,
+        720
+      ],
+      "blank_frames": 1,
+      "changed_frame_transitions": 479,
+      "controller": "high53",
+      "scenario": "obstacles",
+      "resets": 1,
+      "first_episode": {
+        "terminated": false,
+        "distance_m": 45.618072509765625,
+        "steps": 960
+      },
+      "render_physics_unchanged": true,
+      "qualitative_not_in_benchmark": true
+    },
+    {
+      "video": "GUI_history_high53__obstacles_g901_r101.mp4",
+      "sha256": "1b335d8a7d3f29b44f190cd5daf52daed5fb4c903605dac13aa47ea7b6e38080",
+      "decoded_frames": 480,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "resolution": [
+        1280,
+        720
+      ],
+      "blank_frames": 1,
+      "changed_frame_transitions": 479,
+      "controller": "history_high53",
+      "scenario": "obstacles",
+      "resets": 1,
+      "first_episode": {
+        "terminated": false,
+        "distance_m": 38.40189743041992,
+        "steps": 960
+      },
+      "render_physics_unchanged": true,
+      "qualitative_not_in_benchmark": true
+    },
+    {
+      "video": "GUI_history_high53__stones_g901_r101.mp4",
+      "sha256": "6de138ac30db3ea9f5abb4fba0e88752b01093da89debc8c4f3978718affc57b",
+      "decoded_frames": 480,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "resolution": [
+        1280,
+        720
+      ],
+      "blank_frames": 1,
+      "changed_frame_transitions": 479,
+      "controller": "history_high53",
+      "scenario": "stones",
+      "resets": 1,
+      "first_episode": {
+        "terminated": false,
+        "distance_m": 23.35309600830078,
+        "steps": 960
+      },
+      "render_physics_unchanged": true,
+      "qualitative_not_in_benchmark": true
+    },
+    {
+      "video": "GUI_v16_control__obstacles_g901_r101.mp4",
+      "sha256": "5b24cef19f0486b5b717356b531483df68057079d8aa01d8133391880b7bf916",
+      "decoded_frames": 480,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "resolution": [
+        1280,
+        720
+      ],
+      "blank_frames": 1,
+      "changed_frame_transitions": 479,
+      "controller": "v16_control",
+      "scenario": "obstacles",
+      "resets": 1,
+      "first_episode": {
+        "terminated": false,
+        "distance_m": 33.8004150390625,
+        "steps": 960
+      },
+      "render_physics_unchanged": true,
+      "qualitative_not_in_benchmark": true
+    },
+    {
+      "video": "GUI_v16_control__stones_g901_r101.mp4",
+      "sha256": "c534eeeae5c77411c5ab72e928d42bf54acdd4f0ff88c2f5430b9a0eb8fe5cd9",
+      "decoded_frames": 480,
+      "fps": 30.0,
+      "duration_seconds": 16.0,
+      "resolution": [
+        1280,
+        720
+      ],
+      "blank_frames": 1,
+      "changed_frame_transitions": 479,
+      "controller": "v16_control",
+      "scenario": "stones",
+      "resets": 1,
+      "first_episode": {
+        "terminated": false,
+        "distance_m": 19.886585235595703,
+        "steps": 960
+      },
+      "render_physics_unchanged": true,
+      "qualitative_not_in_benchmark": true
+    }
+  ],
+  "all_uncut_16s_480frames_30fps": true,
+  "no_blank_video": true,
+  "native_gui_verified_on_original": true,
+  "harness_source_sha256": "cf512d2833d5d3a1d808735cf40a1b91cbbbc6d80db2928acc22982450bcd422",
+  "projection_note": "Video records are an unchanged subset of original media_verification.json. Raw desktop/GPU/process telemetry stays local. Each original has one initial black frame; no edits or favorable-case filtering.",
+  "original_verification_sha256": "169701bfeaaec0517935ad6db4410a16e69c8eb949a0dbe0b6c32a2dc4380325",
+  "previews": [
+    {
+      "file": "artifacts/unseen_obstacles_20261001/GUI_high53__obstacles_g901_r101_preview.gif",
+      "source_file": "artifacts/unseen_obstacles_20261001/videos/GUI_high53__obstacles_g901_r101.mp4",
+      "sha256": "2940bf698cfe4870d3d5baf900bbdfbd496e0a3941dc6af9ea245b3e0d9c263b",
+      "bytes": 3600338,
+      "frames": 96,
+      "width": 480,
+      "height": 270,
+      "duration_seconds": 16.0,
+      "sample_fps": 6,
+      "time_scale": 1.0,
+      "full_timeline_no_cuts": true,
+      "operation": "Lower-resolution GIF preview only; original MP4 unchanged"
+    },
+    {
+      "file": "artifacts/unseen_obstacles_20261001/GUI_history_high53__stones_g901_r101_preview.gif",
+      "source_file": "artifacts/unseen_obstacles_20261001/videos/GUI_history_high53__stones_g901_r101.mp4",
+      "sha256": "b491c8b95dbf5f21d04ec7e1bb86be89fb3107a3e5e7e6b135c322557d710c87",
+      "bytes": 3936468,
+      "frames": 96,
+      "width": 480,
+      "height": 270,
+      "duration_seconds": 16.0,
+      "sample_fps": 6,
+      "time_scale": 1.0,
+      "full_timeline_no_cuts": true,
+      "operation": "Lower-resolution GIF preview only; original MP4 unchanged"
+    }
+  ],
+  "blank_frame_definition": "near-black frame: meanRGB < 1.0 on decoded RGB24; a few bright overlay pixels may remain"
+}

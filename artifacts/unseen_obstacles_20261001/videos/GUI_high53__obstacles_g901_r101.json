@@ -1,0 +1,243 @@
+{
+  "schema": "week03_ant_unseen_layout_v1",
+  "task": "Week03-Ant-Contact-v16-Eval-v0",
+  "controller": "high53",
+  "mode": "v10",
+  "command_mode": "conditioned",
+  "checkpoint": "artifacts/terrain_demo/seed_continuation_v22/runs/seed53/model_249.pt",
+  "checkpoint_sha256": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+  "v5_sha256": "889836488fc220963b35acecbb59a1f9a5d371732cf8cfddf08dc700bbca605e",
+  "teacher_tensor_identity_verified": true,
+  "gate_config": {
+    "spatial": {
+      "span_enter": 0.12,
+      "edge_enter": 0.08,
+      "exit_ratio": 0.6,
+      "min_coverage": 0.9,
+      "enter_steps": 2,
+      "min_dwell_seconds": 0.5,
+      "clear_seconds": 0.3,
+      "blend_seconds": 0.15
+    },
+    "history_seconds": 1.0,
+    "enter_window_seconds": 0.3,
+    "enter_min_seconds": 0.2,
+    "enter_fraction": 0.8,
+    "enter_confirm_seconds": 0.1,
+    "exit_window_seconds": 0.8,
+    "exit_min_seconds": 0.6,
+    "exit_fraction": 0.9,
+    "exit_confirm_seconds": 0.3,
+    "min_dwell_seconds": 0.5,
+    "blend_seconds": 0.15,
+    "unknown_reset_seconds": 0.25
+  },
+  "geometry_seed": 901,
+  "reset_seed": 101,
+  "scenario": "obstacles",
+  "num_envs": 1,
+  "seconds": 16,
+  "dt": 0.016666666666666666,
+  "started_utc": "2026-10-01T01:13:39.081951+00:00",
+  "source_sha256": {
+    "src/week03_ant/tasks/contact_v16_cfg.py": "99905971a99eac05822b9ae54e8917776d85c74bb68ab16cec60ee2d323e1a7f",
+    "src/week03_ant/tasks/rough_v5_cfg.py": "dbbf7ef32e34fd3faef74845427e03ea289395851ddf7618023a39d030db5668",
+    "src/week03_ant/tasks/lanes.py": "584df4e7b7fec69d0537ce32eda1e9f66a403b35d31cd5ba544e37cdeddd1b51",
+    "src/week03_ant/history_gate.py": "24cab76be1fa9fc872c7641c1fe715159b89ff913dd24c317aff86cd18f53140",
+    "src/week03_ant/paired_horizon_v23.py": "f1db92018b0032cc7de39ab155514dfc3358959c768740d9fa0f128cb424ce2b"
+  },
+  "terrain_config_sha256": "acbca079cf1096467f316e483fa7d293abe3ef696f4c3d7d4756fdf09febca32",
+  "purpose": "New unseen layouts, not a historical frozen holdout; no seed reselection",
+  "routing_inputs": "Depth history only; no family labels",
+  "new_training_transitions": 0,
+  "family_names": [
+    "rough",
+    "slope",
+    "stairs",
+    "waves",
+    "obstacles",
+    "stepping_stones",
+    "flat"
+  ],
+  "difficulties": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "family_indices": [
+    4
+  ],
+  "level_indices": [
+    4
+  ],
+  "initial_state_sha256": {
+    "root_state": "f8fcaff2b9b763eced7014f54c0f1c2e6a34621ed68481627b33c350dfdd8461",
+    "joint_pos": "ecc647f1f4245ab71eeae67b41027cda2857c5e3959ecb653b032a0270d136f9",
+    "joint_vel": "73ba41f5631fb4b588955af4720b13bd22326b9c1dba56526773f982a505b777",
+    "observations": "db26fd837d3454ad7ad506ecee05193c990b54affe0868495c2924d998fa0f27"
+  },
+  "initial_prefix_sha256": "2ee34514f5206e113def7c3d9e270b452359abcf38367a67251fee0fadad136f",
+  "initial_rng_sha256": {
+    "cpu": "00cc3bcfd3b7ff919f3cf2f284a390b8b66a6d2fb9d7fbde8105e16ba9e6a2ff",
+    "cuda": "ce2fba7beef69bb51ec112c0963544fccf2f8cf5e82b1e5f24da429790e3fc50"
+  },
+  "success_thresholds_m": {
+    "one_tile": 13.1,
+    "all_tiles": 53.1
+  },
+  "source_sha256_after": {
+    "src/week03_ant/tasks/contact_v16_cfg.py": "99905971a99eac05822b9ae54e8917776d85c74bb68ab16cec60ee2d323e1a7f",
+    "src/week03_ant/tasks/rough_v5_cfg.py": "dbbf7ef32e34fd3faef74845427e03ea289395851ddf7618023a39d030db5668",
+    "src/week03_ant/tasks/lanes.py": "584df4e7b7fec69d0537ce32eda1e9f66a403b35d31cd5ba544e37cdeddd1b51",
+    "src/week03_ant/history_gate.py": "24cab76be1fa9fc872c7641c1fe715159b89ff913dd24c317aff86cd18f53140",
+    "src/week03_ant/paired_horizon_v23.py": "f1db92018b0032cc7de39ab155514dfc3358959c768740d9fa0f128cb424ce2b"
+  },
+  "checkpoint_sha256_after": "5c86a9b6efebf02bca4b37609acf688d69514d1887fb5b85cf28b79f5dc17c65",
+  "windows": {
+    "16": {
+      "forward_distance": [
+        45.618072509765625
+      ],
+      "episode_terminated": [
+        false
+      ],
+      "episode_lengths": [
+        960
+      ],
+      "episode_out_of_lane": [
+        false
+      ],
+      "episode_world_exit": [
+        false
+      ],
+      "first_hit_one_seconds": [
+        5.55
+      ],
+      "first_hit_six_seconds": [
+        null
+      ],
+      "maximum_distance_m": [
+        45.618072509765625
+      ],
+      "episode_return": [
+        44.569374084472656
+      ],
+      "episode_steps": [
+        960
+      ],
+      "episode_strict_one_tile_success": [
+        true
+      ],
+      "episode_strict_all_tiles_success": [
+        false
+      ],
+      "aggregates": {
+        "episodes": 1,
+        "posture_terminations": 0,
+        "out_of_lane_exits": 0,
+        "world_exits": 0,
+        "distance_only_one_tile_hits": 1,
+        "distance_only_all_tiles_hits": 0,
+        "strict_one_tile_successes": 1,
+        "strict_all_tiles_successes": 0,
+        "strict_one_tile_success_rate": 1.0,
+        "strict_all_tiles_success_rate": 0.0,
+        "final_forward_distance_mean_m": 45.618072509765625,
+        "maximum_forward_distance_mean_m": 45.618072509765625,
+        "full_horizon_survivals": 1
+      },
+      "distance_at_snapshot_m": [
+        19.329700469970703
+      ],
+      "episode_full_horizon_survival": [
+        true
+      ],
+      "window_seconds": 16,
+      "routing": {
+        "episode_active_steps": [
+          960
+        ],
+        "episode_alpha_sum": [
+          960.0
+        ],
+        "episode_v10_duty": [
+          1.0
+        ],
+        "episode_v10_target_steps": [
+          960
+        ],
+        "episode_uncertain_steps": [
+          0
+        ],
+        "episode_switch_count": [
+          0
+        ],
+        "episode_switch_steps": [
+          []
+        ],
+        "episode_switch_to_v10": [
+          []
+        ],
+        "episode_switch_seconds": [
+          []
+        ],
+        "episode_first_switch_seconds": [
+          null
+        ],
+        "episode_last_switch_seconds": [
+          null
+        ],
+        "episode_fall_within_switch_window": [
+          false
+        ],
+        "episode_mean_action_disagreement_rms": [
+          0.17379482261189994
+        ],
+        "episode_max_action_jump_rms": [
+          1.6328770702691924
+        ],
+        "episode_min_coverage": [
+          1.0
+        ],
+        "episode_max_enter_span": [
+          0.440000057220459
+        ],
+        "episode_max_enter_edge": [
+          0.2200000286102295
+        ],
+        "episode_max_retain_span": [
+          0.4400002956390381
+        ],
+        "episode_max_retain_edge": [
+          0.2200000286102295
+        ]
+      }
+    }
+  },
+  "scored_episodes": 1,
+  "physics_steps": 960,
+  "finished_utc": "2026-10-01T01:14:25.887912+00:00",
+  "wall_seconds": 46.80440847999944,
+  "demo": {
+    "uncut": true,
+    "env_index": 0,
+    "reset_events": [
+      {
+        "step": 960,
+        "terminated": false,
+        "distance_m": 45.618072509765625,
+        "out_of_lane": false,
+        "world_exit": false
+      }
+    ],
+    "resets": 1,
+    "frames": 480,
+    "fps": 30,
+    "duration_seconds": 16.0,
+    "record": "artifacts/unseen_obstacles_20261001/videos/GUI_high53__obstacles_g901_r101.mp4",
+    "sha256": "872b0054930a6bc0b2b95e5e72ce9c00439c4bfc175de9233f0410496248b348",
+    "render_physics_unchanged": true
+  }
+}

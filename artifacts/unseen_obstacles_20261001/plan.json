@@ -1,0 +1,62 @@
+{
+  "schema": "unseen_ant_plan_v1",
+  "created_utc": "2026-10-01T00:51:08.007973+00:00",
+  "selected_before_new_scores": true,
+  "controllers": [
+    "v5",
+    "v16_control",
+    "history_control",
+    "high53",
+    "history_high53"
+  ],
+  "pairs": [
+    [
+      901,
+      101
+    ],
+    [
+      902,
+      102
+    ]
+  ],
+  "envs_per_bundle": 175,
+  "physical_seconds": 64,
+  "dependent_windows": [
+    16,
+    64
+  ],
+  "first_episodes": 1750,
+  "window_observations": 3500,
+  "scenario": "mixed",
+  "routing_gate": "Unchanged existing HistoryDepthPolicyGate default",
+  "warmup": "Zero physical steps, fresh layout cache creation before scoring",
+  "initial_pairing": "Exact root, joints, full/prefix observations and CPU/CUDA RNG",
+  "selection_basis": "v19 same-map short16s v16control highest traversal; v24 same-map long64s historyhigh53 highest strict6tile count234/300; v5 conservative default",
+  "demos": [
+    {
+      "controller": "history_high53",
+      "scenario": "obstacles",
+      "geometry": 901,
+      "reset": 101,
+      "level": 4,
+      "seconds": 16,
+      "num_envs": 1
+    },
+    {
+      "controller": "history_high53",
+      "scenario": "stones",
+      "geometry": 901,
+      "reset": 101,
+      "level": 4,
+      "seconds": 16,
+      "num_envs": 1
+    }
+  ],
+  "limits": [
+    "One chosen existing training seed per candidate",
+    "Two randomized layouts; same trained terrain families",
+    "Ideal825-ray scan, no real camera or hardware",
+    "No performance-based retries or parameter adjustments",
+    "No retraining, dependency installs, remote git or auto-commit"
+  ]
+}
