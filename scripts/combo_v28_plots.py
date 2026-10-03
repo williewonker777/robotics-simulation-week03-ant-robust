@@ -82,16 +82,15 @@ def ranking(entries: dict, label, path: Path, title: str, winner: str | None = N
             ax.text(mean + std + 0.8 if len(entry.checkpoints) > 1 else mean + 0.8, row, text,
                     va="center", ha="left", fontsize=8.5, color=INK, zorder=4)
     ax.set_yticks(y)
-    ax.set_yticklabels([label(entry.recipe) + ("" if len(entry.checkpoints) > 1 or entry.recipe.startswith("ref_")
-                                                else " (1 seed)") for entry in ranked], fontsize=8.5)
-    ax.set_xlabel("데모 점수: 28개 지형·마찰 조건 평균 return (100 env 첫 episode, seed 24)")
+    ax.set_yticklabels([label(entry.recipe) for entry in ranked], fontsize=8.5)
+    ax.set_xlabel("28개 조건 평균 점수 (환경 100개, 첫 에피소드 보상 합)")
     ax.xaxis.grid(True, color=GRID, linewidth=0.8, zorder=0)
     ax.set_axisbelow(True)
     ax.set_xlim(0, max(entry.demo[0] + entry.demo[1] for entry in ranked) * 1.12)
     ax.tick_params(axis="y", length=0)
     ax.set_title(title, loc="left", fontsize=12, color=INK, pad=12)
-    handles = [Patch(color=ACCENT, label="선택된 최고 조합"), Patch(color=TEAMMATE, label="팀원 원본 체크포인트"),
-               Patch(color=MINE, label="제공 baseline · 내 Robust42"), Patch(color=OTHER, label="다른 v28 조합 (3 seed)")]
+    handles = [Patch(color=ACCENT, label="제출 조합"), Patch(color=TEAMMATE, label="팀원 모델"),
+               Patch(color=MINE, label="제공 baseline, 이전 제출 모델"), Patch(color=OTHER, label="다른 조합")]
     ax.legend(handles=handles, loc="lower right", frameon=False, fontsize=8.5)
     fig.tight_layout()
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -137,7 +136,7 @@ def heatmap(entries: dict, recipes: list[str], label, condition_label: dict, pat
 def factors(effects: dict, path: Path, terrain_label: dict) -> None:
     if not effects:
         return
-    panels = [("terrain", "학습 지형"), ("entropy", "PPO entropy (Lim)"), ("dr", "내 Robust42 랜덤화")]
+    panels = [("terrain", "학습 지형"), ("entropy", "PPO entropy"), ("dr", "랜덤화")]
     level_names = {"e0": "0 (원래)", "e5": "0.005", "d0": "끔", "d1": "켬"}
     widths = [len(effects.get(key, {})) or 1 for key, _ in panels]
     fig, axes = plt.subplots(1, 3, figsize=(12, 3.6), gridspec_kw={"width_ratios": widths})
@@ -158,7 +157,7 @@ def factors(effects: dict, path: Path, terrain_label: dict) -> None:
         ax.tick_params(axis="x", length=0)
         ax.set_ylim(0, max(values) * 1.18 if values else 1)
     axes[0].set_ylabel("평균 데모 점수")
-    fig.suptitle("요소별 평균 데모 점수 (1단계 24조합 × 3 seed, 다른 요소에 대해 평균)", x=0.01, ha="left",
+    fig.suptitle("요소별 평균 점수 (첫 비교 24조합, 다른 요소는 평균)", x=0.01, ha="left",
                  fontsize=12, color=INK)
     fig.tight_layout()
     fig.savefig(path, dpi=150)
@@ -170,8 +169,8 @@ def continuation(entries: dict, label, path: Path) -> None:
     if not parents:
         return
     fig, ax = plt.subplots(figsize=(10, 0.7 * len(parents) + 1.6))
-    marks = [("", "1000 it (부모)", OTHER), ("+stock", "+600 it 원래 보상", ACCENT),
-             ("+recovery", "+600 it Stick 회복 보상", TEAMMATE)]
+    marks = [("", "1,000번 학습", OTHER), ("+stock", "600번 추가 학습", ACCENT),
+             ("+recovery", "회복 보상으로 600번 추가 학습", TEAMMATE)]
     for row, parent in enumerate(parents[::-1]):
         points = []
         for suffix, _, color in marks:
@@ -187,12 +186,78 @@ def continuation(entries: dict, label, path: Path) -> None:
     ax.set_yticklabels([label(parent) for parent in parents[::-1]], fontsize=8.5)
     ax.xaxis.grid(True, color=GRID, linewidth=0.8, zorder=0)
     ax.set_axisbelow(True)
-    ax.set_xlabel("데모 점수 (3 seed 평균)")
+    ax.set_xlabel("28개 조건 평균 점수 (학습 seed 3개 평균)")
     ax.tick_params(axis="y", length=0)
     ax.set_ylim(-0.6, len(parents) - 0.2)
     ax.legend(handles=[Patch(color=color, label=name) for _, name, color in marks], frameon=False, fontsize=8.5,
               loc="lower right", bbox_to_anchor=(1.0, 1.0), ncol=3)
-    ax.set_title("2단계 이어 학습: 학습량(Lim) vs Stick 회복 보상", loc="left", fontsize=12, color=INK, pad=26)
+    ax.set_title("추가 학습 비교", loc="left", fontsize=12, color=INK, pad=26)
+    fig.tight_layout()
+    fig.savefig(path, dpi=150)
+    plt.close(fig)
+
+
+LADDER = [
+    ("flat_e0_d0", "제공 baseline\n(평지에서 학습)"),
+    ("sticklim_e0_d0", "1단계\n험지에서 학습"),
+    ("sticklim_e5_d0", "2단계\nentropy 0.005"),
+    ("sticklim_e5_d0+stock", "3단계\n600번 추가 학습"),
+]
+"""Stages from the provided baseline to the submission recipe; every stage is a trained, scored recipe."""
+
+DETOURS = [
+    ("sticklim_e5_d1", "sticklim_e5_d0", "2단계에 랜덤화 추가"),
+    ("sticklim_e5_d0+recovery", "sticklim_e5_d0+stock", "3단계를 회복 보상으로"),
+    ("mine_e5_d0", "sticklim_e5_d0", "1단계를 이전 험지 세트로"),
+]
+"""Alternatives measured at the same point of the ladder (seed-paired)."""
+
+
+def ladder(entries: dict, path: Path) -> None:
+    """Left: demo score of each ladder stage (3-seed mean, seed spread). Right: seed-paired change of the detours."""
+    if any(recipe not in entries for recipe, _ in LADDER):
+        return
+    fig, (ax, side) = plt.subplots(1, 2, figsize=(13, 4.6), gridspec_kw={"width_ratios": [1.45, 1]})
+    means = [entries[recipe].demo[0] for recipe, _ in LADDER]
+    stds = [entries[recipe].demo[1] for recipe, _ in LADDER]
+    colors = [MINE] + [OTHER] * (len(LADDER) - 2) + [ACCENT]
+    x = np.arange(len(LADDER))
+    ax.bar(x, means, width=0.58, color=colors, linewidth=0, zorder=2)
+    ax.errorbar(x, means, yerr=stds, fmt="none", ecolor=INK2, elinewidth=1, capsize=0, zorder=3)
+    for xi, (mean, std) in enumerate(zip(means, stds)):
+        ax.text(xi, mean + std + 1.5, f"{mean:.1f}", ha="center", va="bottom", fontsize=12, color=INK, weight="bold")
+    for xi in range(1, len(LADDER)):
+        step = A.paired_difference(entries[LADDER[xi][0]], entries[LADDER[xi - 1][0]])
+        sign = "+" if step["mean"] >= 0 else ""
+        ax.text(xi - 0.5, max(means[xi - 1], means[xi]) + 8, f"{sign}{step['mean']:.1f}",
+                ha="center", va="bottom", fontsize=11, color=INK)
+    ax.set_xticks(x)
+    ax.set_xticklabels([label for _, label in LADDER], fontsize=9.5)
+    ax.set_ylabel("28개 조건 평균 점수")
+    ax.set_ylim(0, max(means) * 1.32)
+    ax.yaxis.grid(True, color=GRID, linewidth=0.8, zorder=0)
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="x", length=0)
+    ax.set_title("단계별 점수 (학습 seed 3개 평균)", loc="left", fontsize=11.5, color=INK)
+
+    rows = []
+    for recipe, base, label in DETOURS:
+        if recipe in entries and base in entries:
+            diff = A.paired_difference(entries[recipe], entries[base])
+            rows.append((label, diff["mean"], diff["wins"], len(diff["seeds"])))
+    y = np.arange(len(rows))[::-1]
+    for yi, (label, mean, wins, count) in zip(y, rows):
+        side.barh(yi, mean, height=0.55, color=OTHER, linewidth=0, zorder=2)
+        side.text(mean - 0.6, yi, f"{mean:.1f}", ha="right", va="center", fontsize=10, color=INK)
+    side.axvline(0, color=AXIS, linewidth=1, zorder=1)
+    side.set_yticks(y)
+    side.set_yticklabels([label for label, *_ in rows], fontsize=9.5)
+    side.set_xlim(min(row[1] for row in rows) * 1.35, 2)
+    side.set_xlabel("같은 단계와 비교한 점수 차이")
+    side.xaxis.grid(True, color=GRID, linewidth=0.8, zorder=0)
+    side.set_axisbelow(True)
+    side.tick_params(axis="y", length=0)
+    side.set_title("효과가 없었던 방법", loc="left", fontsize=11.5, color=INK)
     fig.tight_layout()
     fig.savefig(path, dpi=150)
     plt.close(fig)
@@ -204,15 +269,16 @@ def render_all(selection: dict, confirmation: dict | None, out_dir: Path, label,
     v28 = [entry for entry in A.rank(entries) if not entry.recipe.startswith("ref_")]
     winner = v28[0].recipe if v28 else None
     ranking(entries, label, out_dir / "ranking_selection.png",
-            "조합별 데모 점수 — 선택용 지형(seed 2028)", winner)
+            "조합별 28개 조건 평균 점수", winner)
     top = [entry.recipe for entry in v28[:6]]
     refs = ["flat_e0_d0", "flat_e0_d1", "ref_stick_rough", "ref_stick_recovery", "ref_lim_e15", "ref_lim_f3a"]
     heatmap(entries, top + [recipe for recipe in refs if recipe not in top], label, condition_label,
-            out_dir / "conditions_selection.png", "지형·조건별 return (상위 조합과 기준선, 3 seed 평균)")
+            out_dir / "conditions_selection.png", "조건별 점수 (상위 조합과 비교 모델, 학습 seed 3개 평균)")
     terrain_label = {"flat": "평지", "stick": "Stick 험지", "lim": "Lim 박스", "sticklim": "Stick+Lim",
-                     "mine": "내 v5 지형", "all": "전체 혼합"}
+                     "mine": "이전 험지 세트", "all": "전체 혼합"}
     factors(A.main_effects(entries), out_dir / "factor_effects.png", terrain_label)
     continuation(entries, label, out_dir / "continuation.png")
+    ladder(entries, out_dir / "improvement_ladder.png")
     if confirmation and confirmation["entries"]:
         ranking(confirmation["entries"], label, out_dir / "ranking_confirmation.png",
-                "확인 평가 — 선택에 쓰지 않은 새 지형(seed 2029)", winner)
+                "새로 만든 지형에서 다시 평가한 점수", winner)

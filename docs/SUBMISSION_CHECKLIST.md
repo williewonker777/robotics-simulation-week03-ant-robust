@@ -23,4 +23,4 @@
 - [ ] Public GitHub URL copied into the LMS submission form
 - [x] v28: 팀원 요소 단독·조합 84개 정책 학습, 28조건 데모 평가, 사전 규칙으로 제출 조합 선택 (2026-10-03)
 - [x] v28: 공식 play_one_episode 사본과 평가기 수치 일치 확인(수정 후 설정, 박스 ±10 cm)
-- [ ] v28: 5분 발표 PPT를 새 제출 모델 기준으로 갱신
+- [x] v28: 새 제출 모델 기준 5분 발표 자료(웹 `report/web/index.html`, PDF `report/week03_ant_v28_slides.pdf`) 작성 (2026-10-03)

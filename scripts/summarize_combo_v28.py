@@ -24,17 +24,17 @@ ART = ROOT / "artifacts" / "combo_v28"
 
 TERRAIN_KO = {
     "flat": "평지", "stick": "Stick 험지", "lim": "Lim 박스", "sticklim": "Stick+Lim 지형",
-    "mine": "내 v5 지형", "all": "전체 혼합 지형",
+    "mine": "이전 험지 세트", "all": "전체 혼합 지형",
 }
 REFERENCE_KO = {
-    "ref_stick_flat": "Stick flat (원본)",
-    "ref_stick_rough": "Stick rough (원본)",
-    "ref_stick_control": "Stick control (원본)",
-    "ref_stick_recovery": "Stick recovery (원본)",
-    "ref_lim_e0": "Lim E0 (원본)",
-    "ref_lim_e4": "Lim E4 (원본)",
-    "ref_lim_e15": "Lim E15 (원본)",
-    "ref_lim_f3a": "Lim F3a (원본)",
+    "ref_stick_flat": "Stick 팀원 flat",
+    "ref_stick_rough": "Stick 팀원 rough",
+    "ref_stick_control": "Stick 팀원 control",
+    "ref_stick_recovery": "Stick 팀원 recovery",
+    "ref_lim_e0": "Lim 팀원 E0",
+    "ref_lim_e4": "Lim 팀원 E4",
+    "ref_lim_e15": "Lim 팀원 E15",
+    "ref_lim_f3a": "Lim 팀원 F3a",
 }
 CONDITION_KO = {
     "flat": "평지", "flat_mu05": "평지 μ0.5", "flat_mu01": "평지 μ0.1", "flat_mu02_mult": "평지 μ0.2×",
@@ -50,27 +50,26 @@ CONDITION_KO = {
 
 
 def recipe_label(recipe: str) -> str:
-    """Human label: ``lim_e5_d1+stock`` -> ``Lim 박스 + entropy + 내 랜덤화 · +600it 원래 보상``."""
+    """Plain label: ``lim_e5_d1+stock`` -> ``Lim 박스, entropy, 랜덤화, 추가 학습``."""
     if recipe in REFERENCE_KO:
         return REFERENCE_KO[recipe]
     base, _, arm = recipe.partition("+")
     terrain, entropy, dr = base.split("_")
     if base == "flat_e0_d0":
-        label = "제공 baseline"
+        parts = ["제공 baseline"]
     elif base == "flat_e0_d1":
-        label = "내 Robust42"
+        parts = ["이전 제출 모델 (Robust42)"]
     else:
         parts = [TERRAIN_KO[terrain]]
         if entropy == "e5":
             parts.append("entropy")
         if dr == "d1":
-            parts.append("내 랜덤화")
-        label = " + ".join(parts)
+            parts.append("랜덤화")
     if arm == "stock":
-        label += " · +600it"
+        parts.append("추가 학습")
     elif arm == "recovery":
-        label += " · +600it 회복보상"
-    return label
+        parts.append("회복 보상 추가 학습")
+    return ", ".join(parts)
 
 
 def load_results(folder: Path) -> list[dict]:

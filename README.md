@@ -1,29 +1,73 @@
-# Robust Ant PPO · 처음 보는 지형에서도 걷는 Ant — Robotics Simulation Week 03
+# Ant 험지 보행 강화학습 (Robotics Simulation 3주차 과제 1)
 
-**제출 모델:** Stick+Lim 지형 + PPO entropy 0.005 + 600 it 이어 학습, 학습 seed 43 —
-[`artifacts/combo_v28/submission/model_599.pt`](artifacts/combo_v28/submission/) (SHA-256 `3801761006031b34…`)
+평지에서 학습한 Ant는 처음 보는 울퉁불퉁한 지형에서 거의 걷지 못합니다. 이번 과제에서는 팀원들이 각자 찾은 방법과 이전에 제출했던 설정을
+같은 조건에서 하나씩, 또 섞어서 학습해 보고, 여러 지형에서 점수가 가장 높은 조합을 골랐습니다.
 
-팀원(Stick, Lim)과 내가 찾은 요소를 **같은 학습 예산**에서 하나씩·섞어서 학습하고(새 정책 84개, 조합마다 학습 seed 3개),
-과제 데모 평가 규칙(100 env, 각 env 첫 episode 누적 보상)으로 **28개 지형·마찰 조건**을 평가해 평균이 가장 높은 조합을 골랐습니다.
-평가 지형·점수·선택 규칙은 학습 결과를 보기 전에 [고정](docs/experiment_plans/combo_v28.md)했습니다.
+제출 모델은 [`artifacts/combo_v28/submission/model_599.pt`](artifacts/combo_v28/submission/)입니다.
+Stick 팀원의 험지와 Lim 팀원의 박스 지형을 섞어서 학습하고, PPO entropy 계수를 0.005로 두고, 1,000번 학습한 뒤 600번을 더 학습한 모델입니다(학습 seed 43).
 
-| 100 env 첫 episode 평균 return | 제공 baseline | 이전 제출 Robust42 | 팀원 Lim F3a | **제출 조합** |
+발표 자료는 [PDF](report/week03_ant_v28_slides.pdf)로 바로 볼 수 있습니다. 웹 버전은 저장소를 받은 뒤 [`report/web/index.html`](report/web/index.html)을
+브라우저로 열면 되고, 방향키로 넘기고 N 키로 발표 메모를 볼 수 있습니다.
+
+## 결과 요약
+
+수업 평가 방식대로 환경 100개에서 첫 에피소드 동안 받은 보상의 합을 평균했습니다. 같은 방식으로 28가지 지형과 마찰 조건에서 잰 값을 다시 평균해 비교했습니다.
+
+| | 제공 baseline | 이전 제출 모델 (Robust42) | Lim 팀원 모델 (F3a) | 제출 모델 |
 |---|---:|---:|---:|---:|
-| **28조건 평균** (선택용 지형 seed 2028) | 30.1 | 33.6 | 61.0 | **62.2** |
-| 28조건 평균 (새 지형 seed 2029, 선택에 안 씀) | 30.1 | 33.5 | 60.8 | **62.5** |
-| 박스 ±10 cm (강의 예시와 비슷한 지형) | 4.2 | 4.8 | 59.5 | **60.1** |
-| 평지 (학습 때 본 환경) | 138.4 | **146.6** | 84.9 | 93.1 |
+| 28개 조건 평균 | 30.1 | 33.6 | 61.0 | 62.2 |
+| 새로 만든 지형에서 다시 평가 | 30.1 | 33.5 | 60.8 | 62.5 |
+| 박스 지형 (블록 높이 위아래 최대 10 cm) | 4.2 | 4.8 | 59.5 | 60.1 |
+| 평지 | 138.4 | 146.6 | 84.9 | 93.1 |
 
-조합 값은 학습 seed 3개 평균(seed 표준편차 0.5–3.9)이고, F3a는 팀원이 고른 체크포인트 1개입니다.
-험지에서는 크게 좋아졌지만 **평지에서는 평지 전용 정책보다 느리게 걷습니다**(아래 [한계](#해석과-한계)).
+학습 seed를 세 번 바꿔 학습한 평균이고, F3a는 팀원이 고른 모델 하나의 값입니다.
+험지에서는 크게 좋아졌지만 평지에서는 평지만 학습한 모델보다 느리게 걷습니다.
 
-[![박스 ±10 cm: 제공 baseline(왼쪽)은 3.6초에 넘어지고 제출 모델(오른쪽)은 16초를 완주](artifacts/combo_v28/media/boxes_10_baseline_vs_submission.gif)](artifacts/combo_v28/media/boxes_10_baseline_vs_submission.mp4)
+[![박스 지형에서 제공 baseline과 제출 모델 비교](artifacts/combo_v28/media/boxes_10_baseline_vs_submission.gif)](artifacts/combo_v28/media/boxes_10_baseline_vs_submission.mp4)
 
-박스 ±10 cm — 왼쪽 제공 baseline(3.6초에 넘어짐), 오른쪽 제출 모델(16초 완주). 클릭하면 MP4.
+박스 지형에서 왼쪽은 제공 baseline, 오른쪽은 제출 모델입니다. baseline은 3.6초 만에 넘어지고 제출 모델은 16초를 끝까지 걷습니다. 그림을 누르면 MP4가 열립니다.
+
+## 개선 과정
+
+제공된 기본 코드에서 시작해 한 가지씩 바꾸면서 점수를 확인했습니다. 단계마다 학습 seed 세 개로 따로 학습해서 평가했고, 세 단계 모두 세 번 다 점수가 올랐습니다.
+
+| 단계 | 바꾼 것 | 28개 조건 평균 | 박스 지형 | 평지 | 넘어진 비율 |
+|---|---|---:|---:|---:|---:|
+| 시작 | 제공 baseline (평지에서 학습) | 30.1 | 4.2 | 138.4 | 48% |
+| 1 | 험지에서 학습 | 43.4 | 40.9 | 70.6 | 45% |
+| 2 | PPO entropy 계수 0.005 | 58.7 | 56.5 | 87.0 | 25% |
+| 3 | 600번 추가 학습 | 62.2 | 60.1 | 93.1 | 22% |
+
+![단계별 점수와 효과가 없었던 방법](artifacts/combo_v28/plots/improvement_ladder.png)
+
+**1단계, 험지에서 학습.** 평평한 바닥 대신 울퉁불퉁한 바닥에서 학습했습니다. Stick 팀원이 쓴 험지(작은 요철, 높이 5~15 cm 물결, 완만한 경사)와
+Lim 팀원이 쓴 박스 지형(0.45 m 크기 블록마다 높이가 위아래로 최대 10 cm씩 다른 바닥)을 반씩 섞었습니다.
+이때 몸통 높이도 바닥에서부터 재도록 바꿨습니다. 기본 Ant는 높이를 월드 좌표의 z값으로 받기 때문에 바닥이 울퉁불퉁하면 실제 높이와 맞지 않습니다.
+그래서 몸통 아래로 광선 하나를 쏴서 바닥까지 거리를 재고, 넘어짐 판정(몸통 높이 0.31 m 미만)도 같은 기준으로 했습니다. 평지에서는 두 값이 같습니다.
+이 단계에서 박스 지형 점수는 4.2에서 40.9로 올랐지만 평지에서는 느려졌습니다.
+
+**2단계, entropy 계수 0.005.** PPO의 entropy 보너스는 학습 중에 정책이 너무 빨리 한 가지 동작으로 굳지 않고 여러 동작을 계속 시도하게 하는 항입니다.
+Lim 팀원 설정대로 0에서 0.005로 올렸더니 점수가 가장 크게 올랐고 넘어지는 비율도 절반 가까이 줄었습니다. 나머지 PPO 설정은 원래 그대로입니다.
+
+**3단계, 추가 학습.** 1,000번 학습한 모델을 불러와 같은 조건으로 600번 더 학습했습니다(Lim 팀원 방식).
+여기서 학습 1번은 환경 4,096개에서 32 step씩 모은 경험으로 정책을 한 번 업데이트하는 것을 말합니다.
+
+### 효과가 없었던 방법
+
+같은 단계에서 다른 선택을 해 보았지만 점수가 떨어졌습니다.
+
+- 이전 제출 모델(Robust42)의 랜덤화를 2단계에 더하면 2.1점 낮아졌습니다. 이 랜덤화는 학습 중에 바닥 마찰, 몸통 질량, 무게중심, 시작 자세,
+  몇 초마다 미는 힘, 관측 노이즈를 무작위로 바꾸는 설정입니다. 평지와 미끄러운 바닥에서는 도움이 됐지만 험지에서는 효과가 없었습니다.
+- 3단계를 Stick 팀원의 회복 보상으로 학습하면 5.7점 낮았습니다. 회복 보상은 학습할 때 넘어지거나 몸이 기울면 감점하고 속도 보상에 상한을 두는 방식입니다.
+  넘어지는 비율은 22%에서 16%로 줄었지만 조심스럽게 걸어서 점수가 낮았습니다.
+- 1단계 지형 대신 이전에 쓰던 험지 세트(장애물, 계단, 급경사 등 9가지)로 학습하면 18.3점 낮았습니다.
+
+다른 조합에서도 결과는 같은 방향이었습니다. 다른 조건을 똑같이 두고 entropy만 바꾼 12쌍은 모두 점수가 올랐고(평균 8.1점),
+평지 대신 팀원 지형으로 바꾼 12쌍도 모두 올랐습니다(평균 16점). 랜덤화를 켠 경우는 12쌍 중 7쌍만 올랐습니다(평균 1.1점).
 
 ## 평가 명령어
 
-수업 환경(Python 3.11, Isaac Sim 5.1.0, Isaac Lab 2.3.0, RSL-RL 3.0.1)에서 저장소 루트 기준입니다.
+수업 환경(Python 3.11, Isaac Sim 5.1.0, Isaac Lab 2.3.0, RSL-RL 3.0.1)에서 저장소 루트를 기준으로 실행합니다.
 
 ```bash
 export ROBOTICS_SIM_CLASS_ROOT=/mnt/ssd970/robotics_simulation_class   # 각자 수업 환경 경로
@@ -33,101 +77,78 @@ python -m pip install --no-deps -e .
 python scripts/play_one_episode_official.py --task Week03-Ant-Combo-v28-Play \
   --num_envs 100 --seed 24 --headless \
   --checkpoint artifacts/combo_v28/submission/model_599.pt
-# [RESULT] Episode reward total: mean=61.985765, std=17.888110   (박스 ±10 cm, 두 번 실행해 같은 값)
+# [RESULT] Episode reward total: mean=61.985765, std=17.888110   (박스 지형, 두 번 실행해 같은 값)
 ```
 
-- [`play_one_episode_official.py`](scripts/play_one_episode_official.py)는 수업 저장소 `cailab-hy/IsaacLab_RS@e83a5d2`의
-  `play_one_episode.py`에 **v28 task 등록 import 한 줄만** 더한 사본입니다.
-- `Week03-Ant-Combo-v28-Play`는 원래 `Isaac-Ant-v0`과 보상 7항·종료·행동·60D 관측 구성이 같고, **높이 관측·넘어짐 판정만
-  발밑 지면 기준**(몸통에서 아래로 쏜 ray 1개)입니다. 평지에서는 원래와 값이 같습니다. 기본 지형은 무작위 박스 ±10 cm입니다.
-- **다른 지형으로 평가하려면** [`ComboV28PlayEnvCfg`](src/week03_ant/tasks/combo_v28_cfg.py)의 `scene.terrain`(prim 경로 `/World/ground`)만 바꾸면 됩니다.
-- 이 PC는 GPU가 2개라 `--device cuda:1 --kit_args="--/renderer/multiGpu/enabled=false"`를 붙였습니다.
+[`scripts/play_one_episode_official.py`](scripts/play_one_episode_official.py)는 수업 저장소(cailab-hy/IsaacLab_RS e83a5d2)의 `play_one_episode.py`에
+우리 task를 등록하는 import 한 줄만 추가한 파일입니다. `Week03-Ant-Combo-v28-Play`는 원래 `Isaac-Ant-v0`과 보상, 종료 조건, 행동, 관측 구성이 같고
+높이 관측과 넘어짐 판정만 바닥 기준으로 바꾼 평가용 task입니다. 기본 지형은 박스 지형입니다.
+다른 지형으로 평가하려면 [`combo_v28_cfg.py`](src/week03_ant/tasks/combo_v28_cfg.py)의 `ComboV28PlayEnvCfg`에서 `scene.terrain`만 바꾸면 됩니다.
+GPU가 두 개인 PC에서는 `--device cuda:1 --kit_args="--/renderer/multiGpu/enabled=false"`를 붙여 실행했습니다.
 
-## 무엇을 바꿨나
+## 실험 방법
 
-모든 정책은 과제 인터페이스를 그대로 씁니다: 60D 관측, 8D 관절 토크 행동, MLP `[400, 200, 100]`, 원래 PPO 설정,
-**4,096 env × 32 step × 1,000 iteration**. 평가 보상은 원래 7개 항이며, 학습에만 쓴 보상은 점수에 들어가지 않습니다.
-공통으로 높이 관측과 넘어짐 판정을 발밑 지면 기준으로 바꿨습니다(두 팀원 모두 험지에서 필요했다고 보고).
+- 모든 모델은 수업 기본 설정을 그대로 씁니다. 관측 60차원, 관절 토크 8개, 신경망 [400, 200, 100], 원래 PPO 설정, 학습량 4,096 환경 × 32 step × 1,000번입니다.
+  평가 보상도 원래 Ant 보상 7가지(전진, 살아 있음, 똑바로 서 있음, 목표 쪽 이동, 행동 크기, 에너지, 관절 한계) 그대로이고, 학습에만 쓴 보상은 점수에 넣지 않았습니다.
+- 첫 비교에서는 학습 지형 6가지(평지, Stick 험지, Lim 박스, 둘을 섞은 것, 이전 험지 세트, 전부 섞은 것), entropy 2가지, 랜덤화 유무 2가지를 조합한
+  24가지를 학습 seed 42, 43, 44로 학습했습니다.
+- 두 번째 비교에서는 상위 두 조합을 원래 보상과 회복 보상으로 600번씩 더 학습했고, 팀원 각자의 원래 방식도 같이 학습했습니다.
+  이쪽은 학습량이 1.6배라 첫 비교와 따로 봤습니다. 새로 학습한 모델은 모두 84개입니다.
+- 평가는 환경 100개, 평가 seed 24, 최대 16초로 각 환경의 첫 에피소드 보상 합을 구했습니다. 지형은 평지와 미끄러운 바닥 4가지, 박스 6가지,
+  요철과 물결 4가지, 경사와 계단 5가지, 장애물 6가지, 틈과 구덩이 3가지로 모두 28가지이고, 이 28개 값의 평균으로 순위를 매겼습니다.
+- 지형 종류, 점수 계산 방법, 모델 고르는 규칙은 학습 결과를 보기 전에 [정해 두었습니다](docs/experiment_plans/combo_v28.md).
+  모델을 고른 뒤에는 모양이 다른 새 지형을 만들어 다시 평가했습니다.
 
-| 요소 (가설: 처음 보는 지형 점수를 올린다) | 비교한 수준 | 출처 |
-|---|---|---|
-| 학습 지형 | 평지 / Stick 험지(요철·물결·완경사) / Lim 박스 ±10 cm / Stick+Lim / 내 v5 지형군 / 전체 혼합 | Stick, Lim, 내 v5 |
-| PPO entropy | 0(원래) / 0.005 | Lim |
-| 물성·외란·관측 랜덤화 | 끔 / 켬 | 내 Robust42 |
-| 이어 학습 +600 it | 원래 보상 / Stick 회복 보상(넘어짐·기울기 벌점) | Lim F3a / Stick |
+## 결과 자세히
 
-**제출 조합 = 공통 변경 + Stick+Lim 학습 지형 + entropy 0.005 + 원래 보상으로 600 it 이어 학습**(총 1,600 it, 랜덤화 없음).
-요소별 세부 설정은 [결과 문서](docs/COMBO_V28.md#1-무엇을-비교했나), 코드는 [`combo_v28_cfg.py`](src/week03_ant/tasks/combo_v28_cfg.py)에 있습니다.
+![조합별 28개 조건 평균 점수](artifacts/combo_v28/plots/ranking_selection.png)
 
-## 실험 설계
-
-- **1단계 (같은 예산):** 학습 지형 6 × entropy 2 × 랜덤화 2 = 24조합 × 학습 seed 42·43·44.
-  평지·entropy 0의 두 칸은 같은 예산·seed로 이미 학습한 제공 baseline과 Robust42입니다.
-- **2단계 (+600 it):** 1단계 상위 2조합 × {원래 보상, 회복 보상}, Stick 단독, Lim 단독 — 각 seed 3개. 학습량이 1.6배라 1단계와는 따로 비교합니다.
-- **평가:** 과제 규칙(100 env, 평가 seed 24, 첫 episode 누적 보상, 최대 16초)에서 **지형만 28조건**으로 바꿉니다
-  (평지·저마찰 4, 박스 6, 요철·물결 4, 경사·계단 5, 장애물 6, 틈·구덩이 3). **데모 점수 = 28조건 평균 return.**
-- **선택 규칙:** 3-seed 평균이 가장 높은 조합 → 그중 선택용 지형 점수가 가장 높은 seed를 제출. 이후 새 지형 seed 2029로 확인 평가.
-- **검증:** 공식 스크립트와 v28 평가기 값이 소수점 6자리까지 같고, 모든 체크포인트의 유한값·SHA-256(일반/O_DIRECT 읽기)을 확인했습니다.
-
-## 결과
-
-![조합별 데모 점수 — 선택용 지형](artifacts/combo_v28/plots/ranking_selection.png)
-
-| 순위 | 조합 (seed 3개) | 데모 점수 | 확인 평가 (새 지형) | 넘어짐률 |
+| 순위 | 조합 | 28개 조건 평균 | 새 지형에서 다시 평가 | 넘어진 비율 |
 |---:|---|---:|---:|---:|
-| 1 | **Stick+Lim 지형 + entropy + 600 it** | **62.2 ± 0.7** | **62.5 ± 0.5** | 22% |
-| 2 | Lim 박스 + entropy + 랜덤화 + 600 it | 61.2 ± 1.5 | 61.4 ± 1.5 | 15% |
-| – | Lim F3a (팀원 원본, 1,600 it) | 61.0 | 60.8 | 18% |
-| 3 | Lim 박스 + entropy + 600 it | 60.0 ± 1.8 | 60.5 ± 2.0 | 22% |
-| 4 | Lim 박스 + entropy + 랜덤화 + 600 it 회복 보상 | 58.9 ± 2.1 | 59.1 ± 2.2 | 8% |
-| 5 | Stick+Lim 지형 + entropy (1,000 it) | 58.7 ± 0.5 | 58.9 ± 0.6 | 25% |
-| – | 내 Robust42 / 제공 baseline (평지) | 33.6 / 30.1 | 33.5 / 30.1 | 39% / 48% |
+| 1 | Stick+Lim 지형, entropy, 추가 학습 (제출) | 62.2 | 62.5 | 22% |
+| 2 | Lim 박스, entropy, 랜덤화, 추가 학습 | 61.2 | 61.4 | 15% |
+| | Lim 팀원 모델 (F3a) | 61.0 | 60.8 | 18% |
+| 3 | Lim 박스, entropy, 추가 학습 | 60.0 | 60.5 | 22% |
+| 4 | Lim 박스, entropy, 랜덤화, 회복 보상으로 추가 학습 | 58.9 | 59.1 | 8% |
+| 5 | Stick+Lim 지형, entropy (추가 학습 전) | 58.7 | 58.9 | 25% |
+| | 이전 제출 모델 (Robust42) | 33.6 | 33.5 | 39% |
+| | 제공 baseline | 30.1 | 30.1 | 48% |
 
-**요소별 효과** (1단계에서 다른 요소·seed는 같고 한 요소만 바꾼 짝 비교)
-
-| 요소 | 데모 점수 변화 | 좋아진 조합 |
-|---|---:|---:|
-| entropy 0 → 0.005 | **+8.1** | 12/12 |
-| 학습 지형 평지 → Stick·Lim·Stick+Lim (세 지형끼리는 차이 없음) | **+16** | 12/12 |
-| 원래 보상으로 600 it 이어 학습 | **+3.5 ~ +3.9** | 3/3 |
-| 랜덤화 끔 → 켬 (평지·저마찰에서만 +4.5) | +1.2 | 7/12 |
-| 회복 보상으로 이어 학습 (넘어짐은 크게 줄어듦, 예: 15% → 8%) | 원래 보상보다 −2.3 ~ −5.7 | 0/2 |
-
-- **확인 평가:** 선택에 쓰지 않은 새 지형(seed 2029)에서도 순위가 같았습니다.
-- **공식 방식 점검:** 공식 스크립트처럼 체크포인트마다 새 프로세스로 다시 평가해도 순위는 같습니다(1위 62.1, 2위 61.2, F3a 60.9).
-  한 프로세스에서 여러 체크포인트를 평가하면 피라미드 계단 두 조건에서만 값이 조금 달라집니다([점검 결과](docs/COMBO_V28.md#5-공식-방식-점검--체크포인트마다-새-프로세스)).
-- 범주·조건별 표, 이어 학습·학습 곡선·조건별 그래프, 원시 결과는 **[v28 결과 문서](docs/COMBO_V28.md)**에 있습니다.
+새로 만든 지형에서 다시 평가해도 순위는 같았습니다. 1위 조합은 학습 seed에 따라 61.4점에서 62.8점 사이였습니다.
+수업 평가 스크립트처럼 모델마다 따로 실행해서 다시 재 봐도 순위는 같았습니다(1위 62.1, 2위 61.2, F3a 60.9).
+다만 계단이 있는 두 조건에서는 여러 모델을 한 번에 이어서 평가할 때 값이 조금 달랐습니다.
+조건별 점수와 원자료는 [상세 결과 문서](docs/COMBO_V28.md)에 정리했습니다.
 
 ## 영상
 
-[![제출 모델 — 계단·장애물·물결·경사·징검다리·저마찰](artifacts/combo_v28/media/submission_six_terrains.gif)](artifacts/combo_v28/media/submission_six_terrains.mp4)
+[![제출 모델이 여섯 가지 지형을 걷는 모습](artifacts/combo_v28/media/submission_six_terrains.gif)](artifacts/combo_v28/media/submission_six_terrains.mp4)
 
-제출 모델 — 계단 10 cm · 장애물 10 cm · 물결 15 cm · 경사 0.2 · 징검다리 · 저마찰 μ0.1 (16 env 배치의 env 0, 16초 무편집).
-다섯 지형은 완주했고 **경사 0.2는 1.9초에 넘어졌습니다**(이 조건의 100 env 넘어짐률 32%). [MP4·영상별 조건](artifacts/combo_v28/media/)
+제출 모델이 계단, 장애물, 물결, 경사, 징검다리, 미끄러운 평지를 걷는 16초 영상입니다(편집 없음).
+다섯 지형은 끝까지 걸었고 경사에서는 1.9초 만에 넘어졌습니다. 이 경사 조건에서는 환경 100개 중 32%가 넘어졌습니다.
 
-## 해석과 한계
+## 한계
 
-- 최종 조합은 **두 팀원의 요소를 합친 것**입니다. 내 랜덤화는 저마찰에서만 효과가 있어 최종 조합에서 빠졌습니다.
-- 1위와 Lim F3a의 차이(1.2)는 seed 표준편차(0.7)의 두 배 정도이고, 누구의 학습 지형도 아닌 25조건만 보면 0.5입니다.
-  "확실히 더 좋다"보다 "같은 수준이거나 조금 높다"가 정확합니다.
-- **평지에서는 느립니다:** 제출 체크포인트는 16초에 94 m(return 92.8), 제공 baseline은 145 m(140.1)입니다.
-  매우 미끄러운 지면(유효 마찰 0.2)에서도 Robust42·F3a보다 낮습니다.
-- 평가 지형 28조건은 우리가 고른 것이고 조교의 실제 평가 지형은 공개되지 않았습니다.
-- 제출 정책은 발밑 지면 높이를 관측하므로 `Week03-Ant-Combo-v28-Play` task로 평가해야 합니다(월드 z를 넣으면 험지에서 관측 의미가 달라짐).
-- 모든 결과는 시뮬레이션이며 학습 seed는 조합당 3개입니다.
+- 최종 조합은 두 팀원의 방법을 합친 것이고, 이전 제출 모델의 랜덤화는 평지와 미끄러운 바닥에서만 도움이 돼서 빠졌습니다.
+- Lim 팀원 모델(F3a)과의 차이는 1.2점으로 크지 않습니다. 누구도 학습에 쓰지 않은 지형만 보면 0.5점 차이라 비슷한 수준으로 보는 게 맞습니다.
+- 평지에서는 느립니다. 16초 동안 제출 모델은 94 m, 제공 baseline은 145 m를 갔습니다. 아주 미끄러운 바닥에서도 이전 제출 모델보다 점수가 낮습니다.
+- 평가에 쓴 28가지 지형은 우리가 정한 것이고, 조교 평가 지형은 공개되지 않았습니다.
+- 높이를 바닥 기준으로 관측하기 때문에 `Week03-Ant-Combo-v28-Play` task로 평가해야 합니다.
+- 모든 결과는 시뮬레이션 결과이고, 조합마다 학습 seed는 세 개입니다.
 
-## 재현
+## 학습 재현
 
 ```bash
-# 제출 조합 학습: 1단계 1,000 it → 같은 seed로 +600 it 이어 학습 (가중치만 불러오고 optimizer는 새로)
+# 1,000번 학습
 python scripts/train_combo_v28.py --task Week03-Ant-Combo-v28-Sticklim-D0-Stock --seed 43 \
   --num_envs 4096 --max_iterations 1000 --run_name v28s1_sticklim_e5_d0_s43 --headless \
   agent.algorithm.entropy_coef=0.005
+
+# 같은 seed로 600번 추가 학습 (가중치만 불러오고 optimizer는 새로 시작)
 python scripts/train_combo_v28.py --task Week03-Ant-Combo-v28-Sticklim-D0-Stock --seed 43 \
   --num_envs 4096 --max_iterations 600 --run_name v28s2_sticklim_e5_d0+stock_s43 --headless \
-  --init_checkpoint <1단계 model_999.pt> agent.algorithm.entropy_coef=0.005
+  --init_checkpoint <1,000번 학습한 model_999.pt> agent.algorithm.entropy_coef=0.005
 
-# 28조건 중 하나를 평가기로: 체크포인트 목록(JSON)과 지형 이름
+# 28개 조건 중 하나를 평가 (체크포인트 목록 JSON과 지형 이름)
 echo '[{"id": "submission", "path": "artifacts/combo_v28/submission/model_599.pt"}]' > my_checkpoints.json
 python scripts/evaluate_demo_v28.py --terrain stairs_10 --terrain_seed 2028 \
   --checkpoints my_checkpoints.json --output_dir outputs/my_eval --headless
@@ -135,22 +156,18 @@ python scripts/evaluate_demo_v28.py --terrain stairs_10 --terrain_seed 2028 \
 python -m pytest -q tests/test_combo_v28.py
 ```
 
-전체 실험 큐(1·2단계 학습, 평가, 확인 평가, 집계)는 [결과 문서의 재현 절](docs/COMBO_V28.md#재현)에 있습니다.
-같은 seed라도 GPU 물리 시뮬레이션 특성상 학습 결과가 비트 단위로 같게 재현되지는 않을 수 있습니다.
+전체 실험을 다시 돌리는 명령은 [상세 결과 문서](docs/COMBO_V28.md#재현)에 있습니다. 같은 seed라도 GPU 물리 시뮬레이션 특성상 학습 결과가 완전히 똑같이 나오지 않을 수 있습니다.
 
-## 자료
+## 관련 자료
 
-| 자료 | 내용 |
-|---|---|
-| [v28 결과 문서](docs/COMBO_V28.md) · [사전 계획](docs/experiment_plans/combo_v28.md) | 전체 순위·범주/조건별 결과·이어 학습·공식 방식 점검·해석 |
-| [v28 원자료](artifacts/combo_v28/) | 순위·조건별 CSV, 원시 평가(환경별 return), 그래프, 제출 조합 run 6개, 영상 |
-| [이전 README 전문](docs/PREVIOUS_README_20261001.md) | 이전 제출 Robust42 결과·영상, 험지 연구(v5/v16/high53), v25 팀원 요소 포팅 |
-| [전체 실험 기록 · v0–v28](docs/EXPERIMENT_HISTORY.md) | 성공·실패·부분 개선·최종 판단 |
-| [최종 제출 가이드](docs/FINAL_SUBMISSION.md) · [제출 체크리스트](docs/SUBMISSION_CHECKLIST.md) · [팀원 정보](TEAM.md) | 제출 모델·평가 명령·LMS 항목 |
-| [5분 발표 PPT](report/week03_ant_robust_report.pptx) · [대본](report/SPEAKER_NOTES.md) | 이전 Robust42 연구 발표(v28 이전) |
-| [공개 범위·검증](docs/PUBLICATION.md) | 배포 파일·재현 제약 |
+- [상세 결과 문서](docs/COMBO_V28.md)와 [실험 전에 정한 계획](docs/experiment_plans/combo_v28.md)
+- [결과 원자료](artifacts/combo_v28/): 순위와 조건별 CSV, 환경별 원시 평가, 그래프, 제출 조합 학습 기록, 영상
+- [이전 README](docs/PREVIOUS_README_20261001.md): 이전 제출 모델(Robust42) 결과와 영상, 험지 연구 기록
+- [전체 실험 기록](docs/EXPERIMENT_HISTORY.md), [최종 제출 가이드](docs/FINAL_SUBMISSION.md), [제출 체크리스트](docs/SUBMISSION_CHECKLIST.md), [팀원 정보](TEAM.md)
+- [이번 발표 자료 PDF](report/week03_ant_v28_slides.pdf)와 [웹 버전](report/web/index.html)
+- [이전 발표 자료](report/week03_ant_robust_report.pptx)와 [대본](report/SPEAKER_NOTES.md), [공개 범위와 검증](docs/PUBLICATION.md)
 
-팀원 저장소: [Stick-0/isaac-ant-rough-terrain@3cc718a](https://github.com/Stick-0/isaac-ant-rough-terrain/tree/3cc718a4214f336fd4db7db5841fa86033b99d35) ·
-[LimDaeKyung/IsaacLab_RS@8d9eed1](https://github.com/LimDaeKyung/IsaacLab_RS/tree/8d9eed1fe463f638d5a62528dbcc0a3656ddd52b) (BSD-3-Clause).
-팀원 체크포인트는 평가 기준선으로만 썼고 이 저장소에 다시 배포하지 않습니다.
-무결성: `sha256sum -c artifacts/PUBLICATION_SHA256SUMS` · [BSD-3-Clause](LICENSE) · [원 라이선스 고지](THIRD_PARTY_NOTICES.md)
+팀원 저장소: [Stick-0/isaac-ant-rough-terrain](https://github.com/Stick-0/isaac-ant-rough-terrain/tree/3cc718a4214f336fd4db7db5841fa86033b99d35),
+[LimDaeKyung/IsaacLab_RS](https://github.com/LimDaeKyung/IsaacLab_RS/tree/8d9eed1fe463f638d5a62528dbcc0a3656ddd52b) (BSD-3-Clause).
+팀원 모델은 비교용으로만 썼고 이 저장소에 다시 올리지 않았습니다.
+파일 무결성은 `sha256sum -c artifacts/PUBLICATION_SHA256SUMS`로 확인할 수 있습니다. [라이선스](LICENSE), [외부 코드 고지](THIRD_PARTY_NOTICES.md)
