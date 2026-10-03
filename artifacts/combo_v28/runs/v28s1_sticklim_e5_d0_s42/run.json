@@ -1,0 +1,38 @@
+{
+  "task": "Week03-Ant-Combo-v28-Sticklim-D0-Stock",
+  "seed": 42,
+  "run_name": "v28s1_sticklim_e5_d0_s42",
+  "run_dir": "logs/rsl_rl/week03_ant_combo_v28/2026-10-02_22-05-00_v28s1_sticklim_e5_d0_s42",
+  "num_envs": 4096,
+  "num_steps_per_env": 32,
+  "max_iterations": 1000,
+  "transitions": 131072000,
+  "entropy_coef": 0.005,
+  "learning_rate": 0.0005,
+  "schedule": "adaptive",
+  "init_checkpoint": null,
+  "train_seconds": 445.28948163986206,
+  "final_checkpoint": {
+    "path": "logs/rsl_rl/week03_ant_combo_v28/2026-10-02_22-05-00_v28s1_sticklim_e5_d0_s42/model_999.pt",
+    "sha256": "e53b88a832ebd00d329d1fc2d04bb9f7bad0d32d04b8524707628cab5cb9c760",
+    "bytes": 3024107,
+    "iter": 999,
+    "tensors": 17,
+    "nonfinite_tensors": [],
+    "action_std": [
+      0.27517035603523254,
+      0.3223431706428528,
+      0.2944644093513489,
+      0.35663411021232605,
+      0.2791314721107483,
+      0.38314396142959595,
+      0.38066962361335754,
+      0.6594071984291077
+    ]
+  },
+  "finished_utc": "2026-10-02T13:12:31.826578Z",
+  "direct_sha256": "e53b88a832ebd00d329d1fc2d04bb9f7bad0d32d04b8524707628cab5cb9c760",
+  "direct_sha256_match": true,
+  "attempt": 1,
+  "wall_seconds": 458.1409239768982
+}

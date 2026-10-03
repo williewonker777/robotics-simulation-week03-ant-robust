@@ -1,0 +1,156 @@
+{
+  "rule": "Week03-Ant-Combo-v28-Play, terrain seed 2028, evaluation seed 24, env 0 of 16, full 16 s at 30 fps; after the first episode ends the robot is reset automatically and the caption keeps the first-episode return",
+  "composed": [
+    {
+      "file": "boxes_10_baseline_vs_submission.gif",
+      "bytes": 6787919,
+      "sha256": "9c4d6cfab85a1193cf966f57c4eb3f2f54b54764947a2acb3f6a0f1d26eba427"
+    },
+    {
+      "file": "boxes_10_baseline_vs_submission.mp4",
+      "bytes": 4245624,
+      "sha256": "a023540a042fa2ed23f71953b3d0d78df275af7565e71bd2eb3fadfa2d3e38b9"
+    },
+    {
+      "file": "submission_six_terrains.gif",
+      "bytes": 6974460,
+      "sha256": "5aebb82b0105902df2e411ed0a073fb4aba602dc1094840776026df5b9f4d525"
+    },
+    {
+      "file": "submission_six_terrains.mp4",
+      "bytes": 5500892,
+      "sha256": "7fb607b3cd0f6511a0ef7151a30f44676f7e033b8171b8923044754c41b26a39"
+    }
+  ],
+  "clips": [
+    {
+      "terrain": "boxes_10",
+      "terrain_seed": 2028,
+      "checkpoint": "artifacts/runs/baseline_seed42/model_999.pt",
+      "checkpoint_sha256": "f4a88747c8d56905c4889b0fb0708d4e924a81dc676d92561d2921e8b2bdf83b",
+      "label": "제공 baseline (평지 학습) · 박스 ±10 cm",
+      "num_envs": 16,
+      "env_index": 0,
+      "frames": 480,
+      "fps": 30,
+      "episode_return_env0": 4.2742259472142905,
+      "first_episode_end_step": 216,
+      "fell": true,
+      "video": "outputs/combo_v28/media/clips/boxes_10_baseline42.mp4",
+      "video_sha256": "a04abbf98860fab5bdf9ec28ef72b388e4c646b9289e2d2ca34673ee4a0fa3c5"
+    },
+    {
+      "terrain": "boxes_10",
+      "terrain_seed": 2028,
+      "checkpoint": "logs/rsl_rl/week03_ant_combo_v28/2026-10-03_14-36-09_v28s2_sticklim_e5_d0+stock_s43/model_599.pt",
+      "checkpoint_sha256": "3801761006031b34a3a2591596557ff7d8c68e7c6ea4d87d785900b43eeb7338",
+      "label": "제출: Stick+Lim 지형 + entropy + 600 it (seed 43) · 박스 ±10 cm",
+      "num_envs": 16,
+      "env_index": 0,
+      "frames": 480,
+      "fps": 30,
+      "episode_return_env0": 61.34634188236669,
+      "first_episode_end_step": 960,
+      "fell": false,
+      "video": "outputs/combo_v28/media/clips/boxes_10_submission.mp4",
+      "video_sha256": "ede6d242814e136e441a94628ac71c5231e1a71482d98a5c174219ea23146da4"
+    },
+    {
+      "terrain": "flat_mu01",
+      "terrain_seed": 2028,
+      "checkpoint": "logs/rsl_rl/week03_ant_combo_v28/2026-10-03_14-36-09_v28s2_sticklim_e5_d0+stock_s43/model_599.pt",
+      "checkpoint_sha256": "3801761006031b34a3a2591596557ff7d8c68e7c6ea4d87d785900b43eeb7338",
+      "label": "제출: Stick+Lim 지형 + entropy + 600 it (seed 43)",
+      "num_envs": 16,
+      "env_index": 0,
+      "frames": 480,
+      "fps": 30,
+      "episode_return_env0": 105.98885830398649,
+      "first_episode_end_step": 960,
+      "fell": false,
+      "video": "outputs/combo_v28/media/clips/flat_mu01_submission.mp4",
+      "video_sha256": "019339bf7ab07bc4acd1da781b0c340a49ab326bf9d70bd997080a6176c13df8"
+    },
+    {
+      "terrain": "obstacles_10",
+      "terrain_seed": 2028,
+      "checkpoint": "logs/rsl_rl/week03_ant_combo_v28/2026-10-03_14-36-09_v28s2_sticklim_e5_d0+stock_s43/model_599.pt",
+      "checkpoint_sha256": "3801761006031b34a3a2591596557ff7d8c68e7c6ea4d87d785900b43eeb7338",
+      "label": "제출: Stick+Lim 지형 + entropy + 600 it (seed 43)",
+      "num_envs": 16,
+      "env_index": 0,
+      "frames": 480,
+      "fps": 30,
+      "episode_return_env0": 63.224122399580665,
+      "first_episode_end_step": 960,
+      "fell": false,
+      "video": "outputs/combo_v28/media/clips/obstacles_10_submission.mp4",
+      "video_sha256": "c2c551a314a3618616732b5255db358ccce475a89115bc27a97f8eeec515ad74"
+    },
+    {
+      "terrain": "slope_20",
+      "terrain_seed": 2028,
+      "checkpoint": "logs/rsl_rl/week03_ant_combo_v28/2026-10-03_14-36-09_v28s2_sticklim_e5_d0+stock_s43/model_599.pt",
+      "checkpoint_sha256": "3801761006031b34a3a2591596557ff7d8c68e7c6ea4d87d785900b43eeb7338",
+      "label": "제출: Stick+Lim 지형 + entropy + 600 it (seed 43)",
+      "num_envs": 16,
+      "env_index": 0,
+      "frames": 480,
+      "fps": 30,
+      "episode_return_env0": 4.651121596572921,
+      "first_episode_end_step": 113,
+      "fell": true,
+      "video": "outputs/combo_v28/media/clips/slope_20_submission.mp4",
+      "video_sha256": "65e04d8e2d43dea328feaa4a80af6e091c9a74af1be19cbaa9b09b87033a32dc"
+    },
+    {
+      "terrain": "stairs_10",
+      "terrain_seed": 2028,
+      "checkpoint": "logs/rsl_rl/week03_ant_combo_v28/2026-10-03_14-36-09_v28s2_sticklim_e5_d0+stock_s43/model_599.pt",
+      "checkpoint_sha256": "3801761006031b34a3a2591596557ff7d8c68e7c6ea4d87d785900b43eeb7338",
+      "label": "제출: Stick+Lim 지형 + entropy + 600 it (seed 43)",
+      "num_envs": 16,
+      "env_index": 0,
+      "frames": 480,
+      "fps": 30,
+      "episode_return_env0": 37.2282680804492,
+      "first_episode_end_step": 960,
+      "fell": false,
+      "video": "outputs/combo_v28/media/clips/stairs_10_submission.mp4",
+      "video_sha256": "e567d77ce36faeae1897d64234685812406b03b0f2223b6a5d500411c09afd0b"
+    },
+    {
+      "terrain": "stones",
+      "terrain_seed": 2028,
+      "checkpoint": "logs/rsl_rl/week03_ant_combo_v28/2026-10-03_14-36-09_v28s2_sticklim_e5_d0+stock_s43/model_599.pt",
+      "checkpoint_sha256": "3801761006031b34a3a2591596557ff7d8c68e7c6ea4d87d785900b43eeb7338",
+      "label": "제출: Stick+Lim 지형 + entropy + 600 it (seed 43)",
+      "num_envs": 16,
+      "env_index": 0,
+      "frames": 480,
+      "fps": 30,
+      "episode_return_env0": 62.4073152046185,
+      "first_episode_end_step": 960,
+      "fell": false,
+      "video": "outputs/combo_v28/media/clips/stones_submission.mp4",
+      "video_sha256": "90a9d4237abb67d720bc98a75b5504c6f284e59923f0e2e77119b766977dfa79"
+    },
+    {
+      "terrain": "wave_15",
+      "terrain_seed": 2028,
+      "checkpoint": "logs/rsl_rl/week03_ant_combo_v28/2026-10-03_14-36-09_v28s2_sticklim_e5_d0+stock_s43/model_599.pt",
+      "checkpoint_sha256": "3801761006031b34a3a2591596557ff7d8c68e7c6ea4d87d785900b43eeb7338",
+      "label": "제출: Stick+Lim 지형 + entropy + 600 it (seed 43)",
+      "num_envs": 16,
+      "env_index": 0,
+      "frames": 480,
+      "fps": 30,
+      "episode_return_env0": 58.18213479255792,
+      "first_episode_end_step": 960,
+      "fell": false,
+      "video": "outputs/combo_v28/media/clips/wave_15_submission.mp4",
+      "video_sha256": "702c01e921db400abab1db04cb58d69ccdfd72de94953a25dd70404e79b8e7e6"
+    }
+  ],
+  "note": "Qualitative demos; scores come from the 100-environment evaluation. Source clips (1280x720) stay local."
+}

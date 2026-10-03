@@ -1,0 +1,82 @@
+{
+  "schema": "week03_ant_combo_v28_official_parity_v1",
+  "rule": "Course play_one_episode.py (cailab-hy/IsaacLab_RS e83a5d2) + one v28 import, 100 envs, seed 24, Play task default terrain (boxes +-10 cm, terrain seed 2028) vs scripts/evaluate_demo_v28.py",
+  "pre_fix_2026_10_02": {
+    "note": "Before the 2026-10-02 20:26 terrain-generator fix (box heights then followed the environment seed). Historical; not used for ranking.",
+    "official": {
+      "baseline42": [
+        4.962261,
+        3.061813
+      ],
+      "lim_f3a": [
+        59.44266,
+        14.620291
+      ]
+    },
+    "evaluator": {
+      "baseline42": [
+        4.962260893023049,
+        3.0618131678193388
+      ],
+      "lim_f3a": [
+        59.442659708996075,
+        14.620290985988856
+      ]
+    }
+  },
+  "post_fix_2026_10_03": {
+    "official": {
+      "baseline42": [
+        4.267905,
+        3.614654
+      ],
+      "lim_f3a": [
+        59.476919,
+        14.229262
+      ],
+      "submission_seed43_run1": [
+        61.985765,
+        17.88811
+      ],
+      "submission_seed43_run2": [
+        61.985765,
+        17.88811
+      ]
+    },
+    "main_evaluation": {
+      "baseline42": [
+        4.267904569331149,
+        3.6146536375315725
+      ],
+      "lim_f3a": [
+        59.47691924352781,
+        14.229262285890725
+      ]
+    },
+    "main_evaluation_positions_in_process": {
+      "baseline42": 1,
+      "lim_f3a": 36
+    },
+    "evaluator_fresh_process": {
+      "submission_seed43": [
+        61.985765165968914,
+        17.888110361063116
+      ]
+    }
+  },
+  "within_process_order": {
+    "isaaclab_rough_lim_f3a": {
+      "alone_fresh_process": 25.860510195806274,
+      "position_2_validation": 25.851707306071766,
+      "position_10_repeat_after_8_others": 25.888942554428358,
+      "position_36_main_evaluation": 25.888942554428358
+    },
+    "boxes_10_lim_f3a": {
+      "first": 59.47691924352781,
+      "repeat_after_8_others": 59.47691924352781
+    },
+    "replay_of_main_isaaclab_rough_order_36": "36/36 checkpoints identical per-environment returns to the main evaluation",
+    "post_fix_validation_vs_main": "19 conditions validated after the fix: baseline42 (1st in both) 19/19 identical, Lim F3a (2nd vs 36th) 18/19 identical (isaaclab_rough differs)",
+    "fresh_process_check": "See fresh_process_check.json: 7 checkpoints re-scored one per fresh process on all 28 conditions match the main evaluation per environment on 26/28 conditions; only stairs_10 and isaaclab_rough (pyramid stairs) differ."
+  }
+}

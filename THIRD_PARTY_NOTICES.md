@@ -63,3 +63,22 @@ conditions, and disclaimer are retained verbatim in
 [licenses/teammate_ant_BSD-3-Clause.txt](licenses/teammate_ant_BSD-3-Clause.txt).
 See [v25 research and limitations](artifacts/terrain_demo/teammate_port_v25/research.md)
 for source-specific evidence and boundaries. Names are attribution, not endorsement.
+
+## v28 teammate-factor combination study
+
+`src/week03_ant/tasks/combo_v28_cfg.py` adapts, under the same BSD-3-Clause license
+([licenses/teammate_ant_BSD-3-Clause.txt](licenses/teammate_ant_BSD-3-Clause.txt)):
+
+- from [Stick-0/isaac-ant-rough-terrain@3cc718a](https://github.com/Stick-0/isaac-ant-rough-terrain/tree/3cc718a4214f336fd4db7db5841fa86033b99d35):
+  the rough/wave/slope training mix (`ant_env_cfg.py`) and the recovery reward terms
+  (`recovery_mdp.py`, `ant_recovery_env_cfg.py`), re-laid on 10 m terrain strips;
+- from [LimDaeKyung/IsaacLab_RS@8d9eed1](https://github.com/LimDaeKyung/IsaacLab_RS/tree/8d9eed1fe463f638d5a62528dbcc0a3656ddd52b):
+  the single-ray ground-relative height observation and fall termination
+  (`ant_rough_env_cfg.py`), the +-10 cm boxes-only training terrain (`ant_rough2_env_cfg.py`)
+  and the evaluation terrain presets (`ant_eval_env_cfg.py`).
+
+`scripts/play_one_episode_official.py` is the course scoring script from
+[cailab-hy/IsaacLab_RS@e83a5d2](https://github.com/cailab-hy/IsaacLab_RS/blob/e83a5d2f11ca1b5f03b690e1978479e620c500e2/scripts/reinforcement_learning/rsl_rl/play_one_episode.py)
+with one added import that registers this repository's v28 tasks; its BSD-3-Clause header is kept.
+Teammate checkpoints were evaluated as references from their public repositories and are not
+redistributed here. Names are attribution, not endorsement.
