@@ -54,6 +54,12 @@ p { font-size: 34px; line-height: 1.55; }
 .factor-table thead { font-size: 28px; color: var(--muted); }
 .factor-table th:first-child { width: 300px; }
 .factor-table td:last-child { width: 335px; }
+.baseline-diff-table { width: 100%; border-collapse: collapse; font-size: 30px; line-height: 1.45; table-layout: fixed; }
+.baseline-diff-table th, .baseline-diff-table td { text-align: left; vertical-align: top; padding: 18px 20px; border-bottom: 1px solid var(--line); font-weight: 400; }
+.baseline-diff-table thead { color: var(--muted); font-size: 28px; }
+.baseline-diff-table th:first-child { width: 285px; }
+.baseline-diff-table th:nth-child(2) { width: 530px; }
+.baseline-diff-slide .fine-print { margin-top: 24px; }
 .pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 24px 0 16px; }
 .pipeline article { border-top: 3px solid #858a81; padding: 16px 0; }
 .step { font-size: 28px; color: var(--muted); }
@@ -127,7 +133,7 @@ i.curve-line { height: 4px; background: #4b514b; }
 #learning-chart { height: 445px; margin-top: 20px; }
 .appendix .takeaway { margin-top: 10px; padding-top: 8px; padding-bottom: 8px; }
 .appendix .fine-print { margin-top: 10px; }
-#ladder-chart { height: 470px; margin-top: 20px; }
+#ladder-chart { height: 505px; margin-top: 20px; }
 .ladder-slide .lead { margin-bottom: 18px; }
 .ladder-slide .takeaway { margin-top: 18px; }
 .ladder-slide .fine-print { font-size: 28px; margin-top: 15px; }

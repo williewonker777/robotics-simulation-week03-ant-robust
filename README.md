@@ -6,8 +6,8 @@
 제출 모델은 [`artifacts/combo_v28/submission/model_599.pt`](artifacts/combo_v28/submission/)입니다.
 Stick 팀원의 험지와 Lim 팀원의 박스 지형을 섞어서 학습하고, PPO entropy 계수를 0.005로 두고, 1,000번 학습한 뒤 600번을 더 학습한 모델입니다(학습 seed 43).
 
-발표 자료는 [PDF](report/week03_ant_v28_slides.pdf)로 바로 볼 수 있습니다. 웹 버전은 저장소를 받은 뒤 [`report/web/index.html`](report/web/index.html)을
-브라우저로 열면 되고, 방향키로 넘기고 N 키로 발표 메모를 볼 수 있습니다.
+발표 자료는 [웹 슬라이드](https://williewonker777.github.io/robotics-simulation-week03-ant-robust/report/web/)에서 바로 볼 수 있습니다. 방향키로 넘기고 N 키로 발표 메모를 볼 수 있습니다.
+같은 내용의 [PDF](report/week03_ant_v28_slides.pdf)도 있고, 저장소를 받은 뒤 [`report/web/index.html`](report/web/index.html)을 브라우저로 열어도 됩니다.
 
 ## 결과 요약
 
@@ -27,16 +27,49 @@ Stick 팀원의 험지와 Lim 팀원의 박스 지형을 섞어서 학습하고,
 
 박스 지형에서 왼쪽은 제공 baseline, 오른쪽은 제출 모델입니다. baseline은 3.6초 만에 넘어지고 제출 모델은 16초를 끝까지 걷습니다. 그림을 누르면 MP4가 열립니다.
 
+## 기본 코드에서 바꾼 것
+
+수업에서 받은 기본 코드(IsaacLab_RS의 `Isaac-Ant-v0` 환경과 `AntPPORunnerCfg` 학습 설정)와 제출 모델의 설정을 비교하면 아래와 같습니다.
+바꾼 것은 다섯 가지이고, 나머지는 기본 코드 그대로입니다.
+
+| 항목 | 기본 코드 | 제출 모델 | 바꾼 코드 |
+|---|---|---|---|
+| 학습 지형 | 평평한 바닥 (`terrain_type="plane"`) | 지형 생성기로 만든 험지. 작은 요철, 물결, 완만한 경사(Stick 팀원)와 높이가 다른 블록(Lim 팀원)을 반씩 섞음 | [`combo_v28_cfg.py`](src/week03_ant/tasks/combo_v28_cfg.py)의 `stick_lim_terrains`, `apply_terrain` |
+| 몸통 높이 관측 | 몸통의 월드 z 좌표 (`base_pos_z`) | 몸통 아래 바닥까지의 거리. 몸통 위에서 아래로 광선 하나를 쏴서 잼 | 같은 파일의 `use_relative_height`, `base_height_above_ground` |
+| 넘어짐 판정 | 몸통 z가 0.31 m 미만 (`root_height_below_minimum`) | 바닥에서 몸통까지 거리가 0.31 m 미만 | `height_above_ground_below_minimum` |
+| PPO entropy 계수 | 0.0 | 0.005 | 학습 명령의 `agent.algorithm.entropy_coef=0.005` |
+| 학습량 | 1,000 iteration | 1,000 iteration 학습 후 그 가중치로 600 iteration 더 학습 | [`train_combo_v28.py`](scripts/train_combo_v28.py)의 `--init_checkpoint` |
+
+그대로 둔 것은 보상 7가지와 가중치, 행동(관절 토크 8개, scale 7.5), 나머지 관측(전체 60차원), 신경망 [400, 200, 100],
+다른 PPO 설정(learning rate 5e-4, clip 0.2, epoch 5 등), 환경 4,096개와 32 step, 에피소드 16초, 바닥 마찰 1.0입니다.
+
+높이 관측과 넘어짐 판정은 코드로 보면 이렇게 바뀌었습니다.
+
+```python
+# 기본 코드 (isaaclab_tasks/manager_based/classic/ant/ant_env_cfg.py)
+base_height = ObsTerm(func=mdp.base_pos_z)
+torso_height = DoneTerm(func=mdp.root_height_below_minimum, params={"minimum_height": 0.31})
+
+# 제출 모델 (src/week03_ant/tasks/combo_v28_cfg.py, use_relative_height)
+env_cfg.scene.height_ray = height_ray_cfg()   # 몸통 위 20 m에서 아래로 쏘는 광선 1개
+env_cfg.observations.policy.base_height = ObsTerm(func=base_height_above_ground, params={"sensor_cfg": SceneEntityCfg("height_ray")})
+env_cfg.terminations.torso_height = DoneTerm(func=height_above_ground_below_minimum,
+                                             params={"minimum_height": 0.31, "sensor_cfg": SceneEntityCfg("height_ray")})
+```
+
+파일과 task 이름에 붙은 `v28`은 이 저장소에서 진행한 실험 번호입니다(앞선 실험 기록은 [전체 실험 기록](docs/EXPERIMENT_HISTORY.md)에 있습니다).
+번호와 상관없이 제출 모델이 기본 코드와 다른 점은 위 다섯 가지입니다.
+
 ## 개선 과정
 
-제공된 기본 코드에서 시작해 한 가지씩 바꾸면서 점수를 확인했습니다. 단계마다 학습 seed 세 개로 따로 학습해서 평가했고, 세 단계 모두 세 번 다 점수가 올랐습니다.
+위 변경을 기본 코드에 하나씩 더하면서 점수를 확인했습니다. 단계마다 학습 seed 세 개로 따로 학습해서 평가했고, 세 단계 모두 세 번 다 점수가 올랐습니다.
 
 | 단계 | 바꾼 것 | 28개 조건 평균 | 박스 지형 | 평지 | 넘어진 비율 |
 |---|---|---:|---:|---:|---:|
 | 시작 | 제공 baseline (평지에서 학습) | 30.1 | 4.2 | 138.4 | 48% |
-| 1 | 험지에서 학습 | 43.4 | 40.9 | 70.6 | 45% |
-| 2 | PPO entropy 계수 0.005 | 58.7 | 56.5 | 87.0 | 25% |
-| 3 | 600번 추가 학습 | 62.2 | 60.1 | 93.1 | 22% |
+| 1 | 학습 지형을 험지로, 높이 관측과 넘어짐 판정은 바닥 기준으로 | 43.4 | 40.9 | 70.6 | 45% |
+| 2 | PPO entropy 계수 0.0에서 0.005로 | 58.7 | 56.5 | 87.0 | 25% |
+| 3 | 학습한 가중치로 600 iteration 더 학습 | 62.2 | 60.1 | 93.1 | 22% |
 
 ![단계별 점수와 효과가 없었던 방법](artifacts/combo_v28/plots/improvement_ladder.png)
 
@@ -164,7 +197,7 @@ python -m pytest -q tests/test_combo_v28.py
 - [결과 원자료](artifacts/combo_v28/): 순위와 조건별 CSV, 환경별 원시 평가, 그래프, 제출 조합 학습 기록, 영상
 - [이전 README](docs/PREVIOUS_README_20261001.md): 이전 제출 모델(Robust42) 결과와 영상, 험지 연구 기록
 - [전체 실험 기록](docs/EXPERIMENT_HISTORY.md), [최종 제출 가이드](docs/FINAL_SUBMISSION.md), [제출 체크리스트](docs/SUBMISSION_CHECKLIST.md), [팀원 정보](TEAM.md)
-- [이번 발표 자료 PDF](report/week03_ant_v28_slides.pdf)와 [웹 버전](report/web/index.html)
+- 이번 발표 자료: [웹 슬라이드](https://williewonker777.github.io/robotics-simulation-week03-ant-robust/report/web/), [PDF](report/week03_ant_v28_slides.pdf), [웹 슬라이드 소스](report/web/)
 - [이전 발표 자료](report/week03_ant_robust_report.pptx)와 [대본](report/SPEAKER_NOTES.md), [공개 범위와 검증](docs/PUBLICATION.md)
 
 팀원 저장소: [Stick-0/isaac-ant-rough-terrain](https://github.com/Stick-0/isaac-ant-rough-terrain/tree/3cc718a4214f336fd4db7db5841fa86033b99d35),

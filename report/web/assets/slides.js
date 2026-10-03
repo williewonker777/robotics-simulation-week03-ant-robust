@@ -59,14 +59,14 @@
   const alternativeLabels = [
     ["이전 모델의 랜덤화", "entropy 조합과 비교했습니다."],
     ["회복 보상으로 추가 학습", "원래 보상의 추가 학습과 비교했습니다."],
-    ["이전 v5 지형에서 학습", "Stick+Lim 지형 대신 썼습니다."],
+    ["장애물, 계단, 급경사 지형", "이전 험지 세트로 Stick+Lim을 바꿨습니다."],
   ];
   document.getElementById("alternatives-rows").innerHTML = data.alternatives.map((row, index) => `<tr><td>${alternativeLabels[index][0]}<small>${alternativeLabels[index][1]}</small></td><td>${fixed(row.mean)}</td><td>${signed(row.delta)}</td><td>${row.wins === 0 ? "모두 낮아졌습니다." : `${row.pairs}번 중 ${row.wins}번 올랐습니다.`}</td></tr>`).join("");
   const alternativeRecovery = data.alternatives[1];
   document.querySelector('[data-alternative="fall-change"]').textContent = `${fixed(alternativeRecovery.reference_fall_rate * 100, 0)}%에서 ${fixed(alternativeRecovery.fall_rate * 100, 0)}%`;
 
   function renderLadder() {
-    const labels = ["제공 모델", "험지 학습", "entropy", "추가 학습"];
+    const labels = ["제공 모델", "험지 학습", "entropy 0.005", "600 iteration 추가"];
     const centers = [265, 665, 1065, 1465], barWidth = 215, bottom = 378;
     const y = value => bottom - value / 70 * 315;
     let svg = line(105, bottom, 1670, bottom);
@@ -79,13 +79,14 @@
       svg += rect(left, y(row.mean), barWidth, bottom - y(row.mean), index === 0 ? colors.baseline : index === 3 ? colors.selected : colors.other);
       svg += text(centers[index], y(row.mean) - 18, fixed(row.mean), 'class="ladder-number" text-anchor="middle"');
       svg += text(centers[index], 428, labels[index], 'text-anchor="middle"');
+      if (index === 1) svg += text(centers[index], 471, "높이 관측도 바닥 기준", 'class="axis-label" text-anchor="middle"');
       if (index > 0) {
         const previous = data.ladder[index - 1];
         svg += line(centers[index - 1] + barWidth / 2 + 4, y(previous.mean), left - 4, y(previous.mean), 'stroke="#767c72" stroke-dasharray="6 5" stroke-width="2"');
         svg += text((centers[index - 1] + centers[index]) / 2, y(previous.mean) + 57, signed(row.delta), 'class="key-number" text-anchor="middle"');
       }
     });
-    chart("ladder-chart", 1728, 470, `개선 과정: ${data.ladder.map(row => fixed(row.mean)).join(", ")}.`, svg);
+    chart("ladder-chart", 1728, 505, `개선 과정: ${data.ladder.map(row => fixed(row.mean)).join(", ")}.`, svg);
   }
 
   function renderRanking() {

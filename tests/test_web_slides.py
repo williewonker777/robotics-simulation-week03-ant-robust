@@ -198,15 +198,15 @@ def test_html_and_css_resources_are_local_and_present():
             check_reference(value.strip(), css.parent)
     for script in (WEB / 'assets').glob('*.js'):
         assert not re.search(r'https?://|\bfetch\s*\(|XMLHttpRequest|WebSocket|import\s*\(', script.read_text())
-    assert len(parser.slides) == 17
+    assert len(parser.slides) == 18
     main_slides = [slide for slide in parser.slides if 'appendix' not in slide.get('class', '').split()]
-    assert len(main_slides) == 13
+    assert len(main_slides) == 14
     assert [slide['id'] for slide in parser.slides] == [f'slide-{i}' for i in range(1, len(parser.slides) + 1)]
     assert len(parser.slides) == parser.notes
     seconds = [int(slide['data-note-seconds']) for slide in parser.slides]
     assert all(20 <= value <= 35 for value in seconds)
-    assert sum(int(slide['data-note-seconds']) for slide in main_slides) == 260
-    assert sum(seconds) == 340
+    assert sum(int(slide['data-note-seconds']) for slide in main_slides) == 280
+    assert sum(seconds) == 360
     assert len(re.findall(r'<video\b', html)) == 2
     for video in re.findall(r'<video\b[^>]*>', html):
         assert all(re.search(rf'\b{name}(?:\s|=|>)', video) for name in ('muted', 'loop', 'playsinline', 'controls', 'poster'))
@@ -252,7 +252,7 @@ def test_main_presenter_notes_fit_character_budget():
     html = (WEB / 'index.html').read_text(encoding='utf-8')
     sections = re.findall(r'<section\b([^>]*)>(.*?)</section>', html, re.S)
     main = [body for attrs, body in sections if 'appendix' not in attrs]
-    assert len(main) == 13
+    assert len(main) == 14
     notes = []
     for section in main:
         matches = re.findall(r'<aside\b[^>]*class="speaker-notes"[^>]*>(.*?)</aside>', section, re.S)
@@ -314,8 +314,8 @@ const context = {window,document,history:{replaceState(){}},console};
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(input.data,'utf8'),context);
 vm.runInContext(fs.readFileSync(input.script,'utf8'),context);
-if(document.getElementById('position').textContent !== '1 / 17') throw Error('Initial slide position');
-window.location.hash = '#17'; events.hashchange();
+if(document.getElementById('position').textContent !== '1 / 18') throw Error('Initial slide position');
+window.location.hash = '#18'; events.hashchange();
 if(document.documentElement.dataset.ready !== 'true') throw Error('Deck not ready');
 process.stdout.write(JSON.stringify(elements.map(e=>({attrs:e.attrs,text:e.textContent,html:e.innerHTML}))));
 '''
@@ -324,9 +324,9 @@ process.stdout.write(JSON.stringify(elements.map(e=>({attrs:e.attrs,text:e.textC
         'script': str(WEB / 'assets/slides.js')}), text=True, capture_output=True, check=True)
     rendered = json.loads(result.stdout)
     by_id = {row['attrs']['id']: row for row in rendered if 'id' in row['attrs']}
-    assert by_id['position']['text'] == '17 / 17'
-    assert by_id['progress']['attrs']['aria-valuenow'] == 17
-    assert by_id['slide-17']['attrs']['aria-hidden'] == 'false'
+    assert by_id['position']['text'] == '18 / 18'
+    assert by_id['progress']['attrs']['aria-valuenow'] == 18
+    assert by_id['slide-18']['attrs']['aria-hidden'] == 'false'
     assert by_id['slide-1']['attrs']['aria-hidden'] == 'true'
     by_value = {row['attrs']['data-value']: row['text'] for row in rendered if 'data-value' in row['attrs']}
     assert by_value['baseline_problem.flat'] == '138.4'
@@ -341,7 +341,18 @@ process.stdout.write(JSON.stringify(elements.map(e=>({attrs:e.attrs,text:e.textC
                  'fresh-chart', 'heatmap-chart', 'learning-chart', 'alternatives-rows'):
         visible = plain_text(by_id[name]['html'])
         assert visible
-        assert not re.search(r'\d+\.\d{2,}', visible), (name, visible)
+        # Check numeric value text, not configuration labels such as entropy 0.005.
+        for text_markup in re.findall(r'<(?:text|td)\b[^>]*>(.*?)</(?:text|td)>', by_id[name]['html'], re.S):
+            value_text = plain_text(text_markup)
+            if re.fullmatch(r'[+−-]?\d+\.\d+', value_text):
+                assert re.fullmatch(r'[+−-]?\d+\.\d', value_text), (name, value_text)
+        assert not re.search(r'\bv(?:5|28)\b', visible, re.I), (name, visible)
+    ladder = plain_text(by_id['ladder-chart']['html'])
+    for phrase in ('험지 학습', '높이 관측도 바닥 기준', 'entropy 0.005', '600 iteration 추가',
+                   '30.1', '43.4', '58.7', '62.2', '+13.2', '+15.3', '+3.5'):
+        assert phrase in ladder
+    for row in rendered:
+        assert not re.search(r'\bv(?:5|28)\b', plain_text(row['html']) + row['text'], re.I)
     ranking = plain_text(by_id['ranking-chart']['html'])
     assert '62.2' in ranking and '61.2' in ranking and '61.0' in ranking
     assert '+600 it' in ranking or '추가 600 it' in ranking
@@ -355,18 +366,18 @@ def test_methods_and_glossary_keep_required_explanations():
     html = (WEB / 'index.html').read_text(encoding='utf-8')
     sections = {int(re.search(r'id="slide-(\d+)"', attrs).group(1)): body
                 for attrs, body in re.findall(r'<section\b([^>]*)>(.*?)</section>', html, re.S)}
-    methods = plain_text(sections[7])
+    methods = plain_text(sections[8])
     assert '적용한 방법' in methods
-    assert len(re.findall(r'<article\b', sections[7])) == 3
+    assert len(re.findall(r'<article\b', sections[8])) == 3
     for phrase in ('험지 학습', 'Stick', 'Lim', '반반', '0.45 m', 'ray 1개', '0.31 m',
                    '−5~5 cm, 50%', '5~15 cm, 30%', '각 10%', '−10~10 cm',
                    'PPO entropy 0.005', '0에서 0.005', '추가 학습 600 it',
                    '1,000 iteration', '600 iteration', 'optimizer', '4,096개', '32 step', '9종'):
         assert phrase in methods
-    assert '개선 과정' in plain_text(sections[8])
-    glossary = plain_text(sections[17])
+    assert '개선 과정' in plain_text(sections[9])
+    glossary = plain_text(sections[18])
     assert '용어 정리' in glossary
-    body = sections[17].split('<div class="glossary-columns">', 1)[1].split('<footer', 1)[0]
+    body = sections[18].split('<div class="glossary-columns">', 1)[1].split('<footer', 1)[0]
     assert len(re.findall(r'<p>', body)) == 8
     for phrase in ('첫 episode', '16초(960 step)', '7항', '100개', '28개', '0.31 m',
                    '42, 43, 44', 'seed 24', '2028', '2029', '짝 비교', '랜덤화(Robust42)',
@@ -376,7 +387,7 @@ def test_methods_and_glossary_keep_required_explanations():
     assert '2029는 선택에 쓰지 않은 새 지형' in glossary
     assert '발밑 지면 기준 몸통 높이가 0.31 m보다 낮아져' in glossary
     # No publication source footers or first-person analysis notes on stage.
-    assert all('<a ' not in footer for number, section in sections.items() if number != 13
+    assert all('<a ' not in footer for number, section in sections.items() if number != 14
                for footer in re.findall(r'<footer[^>]*>(.*?)</footer>', section, re.S))
     assert not re.search(r'(?:^|\s)(?:내|제)\s', plain_text(html))
     for internal in ('F3a 원자료', '표기 정밀도', '60.914705', '1.1475'):
@@ -397,3 +408,36 @@ def test_cover_date_and_glossary_present_tense():
     for phrase in ('7항을 썼습니다.', '관측 노이즈를 바꿨습니다.',
                    '밀기도 적용했습니다.', '원래 보상으로 계산했습니다.'):
         assert phrase in text
+
+
+def test_basic_code_comparison_and_version_free_visible_text():
+    html = (WEB / 'index.html').read_text(encoding='utf-8')
+    sections = {int(re.search(r'id="slide-(\d+)"', attrs).group(1)): body
+                for attrs, body in re.findall(r'<section\b([^>]*)>(.*?)</section>', html, re.S)}
+    comparison = sections[4]
+    assert '기본 코드와 다른 점' in plain_text(comparison)
+    body = re.search(r'<tbody>(.*?)</tbody>', comparison, re.S)
+    assert body is not None
+    rows = re.findall(r'<tr\b[^>]*>(.*?)</tr>', body.group(1), re.S)
+    assert len(rows) == 5
+    expectations = (
+        ('학습 지형', 'plane', 'Stick', 'Lim', '반씩'),
+        ('몸통 높이', '월드 z', 'base_pos_z', '광선 1개', '거리'),
+        ('넘어짐', '몸통 z 0.31 m 미만', '바닥에서 몸통까지 0.31 m 미만'),
+        ('PPO entropy', '0.0', '0.005'),
+        ('학습량', '1,000', '600'),
+    )
+    for row, phrases in zip(rows, expectations):
+        cells = re.findall(r'<t[hd]\b[^>]*>(.*?)</t[hd]>', row, re.S)
+        assert len(cells) == 3
+        text = plain_text(row)
+        for phrase in phrases:
+            assert phrase in text
+    comparison_text = plain_text(comparison)
+    for phrase in ('보상 7가지', '행동', '신경망', '다른 PPO', '환경 수', '에피소드 길이', '기본 코드'):
+        assert phrase in comparison_text
+    visible = plain_text(html).replace('Week03-Ant-Combo-v28-Play', '')
+    assert not re.search(r'\bv(?:5|28)\b', visible, re.I)
+    conclusion = plain_text(sections[14])
+    assert '$CHECKPOINT' in conclusion
+    assert '상세 실험 기록' in conclusion

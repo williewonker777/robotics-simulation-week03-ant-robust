@@ -12,7 +12,7 @@
   <script src="assets/slides.js" defer></script>
 </head>
 <body>
-  <noscript>이 발표는 로컬 JavaScript를 사용합니다. 인쇄용 PDF는 report/week03_ant_v28_slides.pdf에 있습니다.</noscript>
+  <noscript>이 발표는 로컬 JavaScript를 사용합니다. <a href="../week03_ant_v28_slides.pdf">인쇄용 PDF 보기</a></noscript>
   <main id="viewport" aria-label="Week03 Ant 실험 발표">
     <div id="deck">
       <section class="slide cover is-active" id="slide-1" data-note-seconds="20" aria-labelledby="title-1">
@@ -42,7 +42,7 @@
         <header><p class="eyebrow">비교 대상</p><h2 id="title-3">비교한 방법</h2></header>
         <p class="common-change">모든 실험에서 발밑 지면 기준으로 몸통 높이를 관측했습니다.</p>
         <table class="factor-table"><thead><tr><th>바꾼 요소</th><th>비교한 설정</th><th>참고한 방법</th></tr></thead><tbody>
-          <tr><th>학습 지형</th><td>평지, Stick, Lim, 둘의 혼합, v5, 전체 혼합</td><td>팀원 지형과 이전 실험</td></tr>
+          <tr><th>학습 지형</th><td>평지, Stick, Lim, 둘의 혼합,<br>이전 험지 세트(장애물, 계단, 급경사), 전체 혼합</td><td>팀원 지형과 이전 실험</td></tr>
           <tr><th>entropy</th><td>계수 0과 0.005를 비교했습니다.</td><td>Lim 팀원</td></tr>
           <tr><th>랜덤화</th><td>마찰, 질량, 자세, 외력 등을 바꿨습니다.</td><td>이전 제출 모델</td></tr>
           <tr><th>추가 학습</th><td>원래 보상과 회복 보상으로 더 학습했습니다.</td><td>Lim 팀원과 Stick 팀원</td></tr>
@@ -52,8 +52,22 @@
         <aside class="speaker-notes">학습 지형, entropy, 랜덤화, 추가 학습을 비교했습니다. 몸통 높이는 모두 발밑 지면 기준으로 바꿨습니다. 이 높이 관측만의 효과를 따로 나눈 실험은 아닙니다.</aside>
       </section>
 
-      <section class="slide" id="slide-4" data-note-seconds="20" aria-labelledby="title-4">
-        <header><p class="eyebrow">실험 설계</p><h2 id="title-4">실험 방법</h2></header>
+      <section class="slide baseline-diff-slide" id="slide-4" data-note-seconds="20" aria-labelledby="title-4">
+        <header><p class="eyebrow">제공 코드와 제출 모델 비교</p><h2 id="title-4">기본 코드와 다른 점</h2></header>
+        <table class="baseline-diff-table"><thead><tr><th>항목</th><th>기본 코드</th><th>제출 모델</th></tr></thead><tbody>
+          <tr><th>학습 지형</th><td>평평한 바닥<br><code>terrain_type="plane"</code></td><td>지형 생성기 험지: 작은 요철, 물결, 완만한 경사(Stick 팀원)와 높이가 다른 블록(Lim 팀원)을 반씩</td></tr>
+          <tr><th>몸통 높이 관측</th><td>몸통의 월드 z 좌표<br><code>base_pos_z</code></td><td>몸통 아래 바닥까지 거리<br>(아래로 쏜 광선 1개)</td></tr>
+          <tr><th>넘어짐 판정</th><td>몸통 z 0.31 m 미만</td><td>바닥에서 몸통까지 0.31 m 미만</td></tr>
+          <tr><th>PPO entropy 계수</th><td>0.0</td><td>0.005</td></tr>
+          <tr><th>학습량</th><td>1,000 iteration</td><td>1,000 iteration 후 같은 가중치로<br>600 iteration 더</td></tr>
+        </tbody></table>
+        <p class="fine-print">보상 7가지, 행동, 신경망, 다른 PPO 설정, 환경 수, 에피소드 길이는 기본 코드 그대로입니다.</p>
+        <footer class="slide-footer"><span class="page">04</span></footer>
+        <aside class="speaker-notes">기본 코드에서 지형과 몸통 높이 기준, entropy, 학습량을 바꿨습니다. 보상과 행동, 신경망 등은 그대로 뒀습니다.</aside>
+      </section>
+
+      <section class="slide" id="slide-5" data-note-seconds="20" aria-labelledby="title-5">
+        <header><p class="eyebrow">실험 설계</p><h2 id="title-5">실험 방법</h2></header>
         <p class="lead">비교할 요소를 빼고 나머지 PPO 설정과 학습량을 맞췄습니다.</p>
         <div class="pipeline">
           <article><p class="step">처음 학습</p><h3>24가지 조합을<br>각각 세 번 학습했습니다.</h3><p>환경 4,096개, 32 step<br>1,000 iteration</p><span class="pipeline-number" data-value="protocol.new_stage1_policies"></span><p>개를 새로 학습했습니다.</p></article>
@@ -63,100 +77,100 @@
         </div>
         <p class="takeaway">지형과 선택 규칙은 결과를 보기 전에 정했습니다.</p>
         <p class="fine-print">새 학습은 총 84개였습니다. 기존 두 조합의 학습 결과도 포함했고, 추가 학습은 학습량이 더 많았습니다.</p>
-        <footer class="slide-footer"><span class="page">04</span></footer>
+        <footer class="slide-footer"><span class="page">05</span></footer>
         <aside class="speaker-notes">처음에는 같은 학습량으로 비교했습니다. 기존 두 조합의 결과는 그대로 쓰고, 새 학습 66개와 추가 학습 18개를 진행했습니다. 평가 지형과 선택 규칙은 결과를 보기 전에 정했습니다.</aside>
       </section>
 
-      <section class="slide" id="slide-5" data-note-seconds="20" aria-labelledby="title-5">
-        <header><p class="eyebrow">평가 기준</p><h2 id="title-5">평가 방법</h2></header>
+      <section class="slide" id="slide-6" data-note-seconds="20" aria-labelledby="title-6">
+        <header><p class="eyebrow">평가 기준</p><h2 id="title-6">평가 방법</h2></header>
         <div class="protocol-strip"><span>환경 <span class="key-number">100</span>개</span><span>같은 시작 상태</span><span>첫 episode 누적 보상</span></div>
         <div id="category-cards" class="category-grid" aria-label="평가한 지형 범주와 조건 수"></div>
         <p class="formula">각 조건에서 환경 100개의 보상을 평균한 뒤, 28개 조건을 다시 평균했습니다.</p>
         <p class="fine-print">조건마다 같은 비중으로 계산했습니다. 수업에서 실제로 채점할 지형은 공개되지 않았습니다.</p>
-        <footer class="slide-footer"><span class="page">05</span></footer>
+        <footer class="slide-footer"><span class="page">06</span></footer>
         <aside class="speaker-notes">평지부터 장애물까지 28조건에서 환경 백 개의 첫 episode 보상을 구했습니다. 조건별 평균을 다시 평균해 점수로 썼습니다. 실제 채점 지형은 공개되지 않아 이 지형들로 먼저 확인했습니다.</aside>
       </section>
 
-      <section class="slide ranking-slide" id="slide-6" data-note-seconds="20" aria-labelledby="title-6">
-        <header><p class="eyebrow">처음 정한 지형에서 평가한 점수</p><h2 id="title-6">결과</h2></header>
+      <section class="slide ranking-slide" id="slide-7" data-note-seconds="20" aria-labelledby="title-7">
+        <header><p class="eyebrow">처음 정한 지형에서 평가한 점수</p><h2 id="title-7">결과</h2></header>
         <div class="legend"><span><i class="selected"></i>선택한 조합</span><span><i class="reference"></i>팀원 원본</span><span><i class="baseline"></i>기존 모델</span><span><i class="other"></i>다른 조합</span></div>
         <div id="ranking-chart" class="chart ranking-chart"></div>
         <p class="fine-print">새 조합 상위 8개와 기준 모델입니다. E는 entropy 0.005, D는 랜덤화입니다.</p>
-        <footer class="slide-footer"><span class="page">06</span></footer>
+        <footer class="slide-footer"><span class="page">07</span></footer>
         <aside class="speaker-notes">Stick과 Lim 지형에 entropy와 추가 학습을 쓴 조합이 62.2점으로 가장 높았습니다. F3a와는 같은 수준이거나 조금 높았습니다. F3a는 모델 하나만 비교했습니다.</aside>
       </section>
 
-      <section class="slide methods-slide" id="slide-7" data-note-seconds="20" aria-labelledby="title-7">
-        <header><p class="eyebrow">점수가 오른 세 가지 변경</p><h2 id="title-7">적용한 방법</h2></header>
+      <section class="slide methods-slide" id="slide-8" data-note-seconds="20" aria-labelledby="title-8">
+        <header><p class="eyebrow">점수가 오른 세 가지 변경</p><h2 id="title-8">적용한 방법</h2></header>
         <div class="method-list">
           <article><h3>험지 학습</h3><div><p>평지 대신 울퉁불퉁한 바닥에서 걷기를 연습시켰습니다.</p><p>Stick 험지와 Lim 박스를 반반 섞었습니다. Stick은 무작위 요철(−5~5 cm, 50%), 물결(5~15 cm, 30%), 완경사 오르막과 내리막(각 10%)이었습니다. Lim은 0.45 m 블록, 높이 −10~10 cm였습니다.</p><p>몸통 높이는 월드 z 대신 아래 방향 ray 1개로 잰 발밑 지면까지 거리로 관측했습니다. 넘어짐도 같은 기준 0.31 m로 판단했고, 평지에서는 두 높이가 같았습니다.</p></div></article>
           <article><h3>PPO entropy 0.005</h3><div><p>행동을 너무 일찍 한 가지로 굳히지 않도록 무작위성, 즉 탐색을 유지하는 보너스를 줬습니다.</p><p>Lim 팀원처럼 PPO 손실의 entropy 계수를 0에서 0.005로 바꿨고, 나머지 PPO 설정은 그대로 뒀습니다.</p></div></article>
           <article><h3>추가 학습 600 it</h3><div><p>배운 정책을 같은 조건에서 더 오래 연습시켰습니다. 1,000 iteration의 가중치를 불러와 원래 보상으로 600 iteration 더 학습했고, optimizer는 새로 시작했습니다.</p><p>1 iteration은 환경 4,096개에서 32 step의 경험을 모아 한 번 업데이트하는 단위였습니다.</p></div></article>
         </div>
-        <p class="method-caveat">랜덤화(마찰, 질량, 외력, 관측 노이즈), 회복 보상(넘어짐, 기울기 감점), v5 지형(장애물, 계단, 급경사 등 9종)은 이 조합의 점수를 높이지 못했습니다.</p>
-        <footer class="slide-footer"><span class="page">07</span></footer>
+        <p class="method-caveat">랜덤화(마찰, 질량, 외력, 관측 노이즈), 회복 보상(넘어짐, 기울기 감점), 이전 험지 세트(장애물, 계단, 급경사 등 9종)은 이 조합의 점수를 높이지 못했습니다.</p>
+        <footer class="slide-footer"><span class="page">08</span></footer>
         <aside class="speaker-notes">험지에서 연습하고, 행동을 일찍 굳히지 않게 하고, 같은 보상으로 더 학습했습니다. 각 변경의 점수 차이를 보겠습니다.</aside>
       </section>
 
-      <section class="slide ladder-slide" id="slide-8" data-note-seconds="20" aria-labelledby="title-8">
-        <header><p class="eyebrow">같은 학습 세 번의 평균</p><h2 id="title-8">개선 과정</h2></header>
+      <section class="slide ladder-slide" id="slide-9" data-note-seconds="20" aria-labelledby="title-9">
+        <header><p class="eyebrow">같은 학습 세 번의 평균</p><h2 id="title-9">개선 과정</h2></header>
         <div class="legend"><span><i class="baseline"></i>제공 모델</span><span><i class="other"></i>중간 조합</span><span><i class="selected"></i>선택한 조합</span></div>
         <div id="ladder-chart" class="chart"></div>
         <p class="takeaway" data-ladder="wins-summary"></p>
         <p class="fine-print">험지 학습에는 발밑 지면 기준의 높이 관측도 포함했습니다. entropy의 증가 폭이 <span data-ladder="entropy-delta"></span>점으로 가장 컸습니다.</p>
-        <footer class="slide-footer"><span class="page">08</span></footer>
+        <footer class="slide-footer"><span class="page">09</span></footer>
         <aside class="speaker-notes">험지 학습으로 13.2점, entropy로 15.3점, 원래 보상의 추가 학습으로 3.5점 올랐습니다. 같은 학습 난수값끼리 비교했고, 세 단계 모두 세 번의 학습에서 점수가 올랐습니다.</aside>
       </section>
 
-      <section class="slide alternatives-slide" id="slide-9" data-note-seconds="20" aria-labelledby="title-9">
-        <header><p class="eyebrow">같은 조건에서 한 가지씩 변경</p><h2 id="title-9">효과가 없었던 방법</h2></header>
+      <section class="slide alternatives-slide" id="slide-10" data-note-seconds="20" aria-labelledby="title-10">
+        <header><p class="eyebrow">같은 조건에서 한 가지씩 변경</p><h2 id="title-10">효과가 없었던 방법</h2></header>
         <p class="lead">같은 지점에서 다른 방법을 적용했지만 점수는 낮아졌습니다.</p>
         <table class="alternatives-table"><thead><tr><th>바꾼 방법과 비교 기준</th><th>점수</th><th>변화</th><th>학습 세 번의 결과</th></tr></thead><tbody id="alternatives-rows"></tbody></table>
         <p class="takeaway">회복 보상은 넘어짐률을 <span data-alternative="fall-change"></span>로 낮췄지만, 점수도 낮아졌습니다.</p>
-        <footer class="slide-footer"><span class="page">09</span></footer>
-        <aside class="speaker-notes">랜덤화와 v5 지형을 적용하면 점수가 낮아졌습니다. 회복 보상으로 추가 학습해도 세 번 모두 낮았습니다. 넘어짐률은 22퍼센트에서 16퍼센트로 줄었지만, 점수에는 도움이 되지 않았습니다.</aside>
+        <footer class="slide-footer"><span class="page">10</span></footer>
+        <aside class="speaker-notes">랜덤화를 추가하거나 장애물, 계단, 급경사 위주의 이전 험지 세트로 바꾸면 점수가 낮아졌습니다. 회복 보상으로 추가 학습해도 세 번 모두 낮았습니다. 넘어짐률은 22퍼센트에서 16퍼센트로 줄었지만, 점수에는 도움이 되지 않았습니다.</aside>
       </section>
 
-      <section class="slide" id="slide-10" data-note-seconds="20" aria-labelledby="title-10">
-        <header><p class="eyebrow">다른 지형과 실행 방법으로 재평가</p><h2 id="title-10">추가 확인</h2></header>
+      <section class="slide" id="slide-11" data-note-seconds="20" aria-labelledby="title-11">
+        <header><p class="eyebrow">다른 지형과 실행 방법으로 재평가</p><h2 id="title-11">추가 확인</h2></header>
         <div class="legend"><span><i class="selected"></i>선택한 조합</span><span><i class="other"></i>2위 조합</span><span><i class="reference"></i>Lim F3a</span></div>
         <div class="validation-grid"><div><h3>처음에 쓰지 않은 새 지형</h3><div id="confirmation-chart" class="chart"></div></div><div><h3>수업 스크립트처럼 모델마다 따로 실행</h3><div id="fresh-chart" class="chart"></div></div></div>
         <div class="official-result"><div><p>수업 스크립트 출력, 제출 모델의 박스 지형 평균</p><span class="official-number" data-value="official.mean" data-digits="6"></span></div><div><p>환경 100개의 표준편차</p><span class="official-number smaller" data-value="official.std" data-digits="6"></span><p class="muted">28조건 평균과는 다른 값입니다.</p></div></div>
         <p class="fine-print">순위는 같았습니다. 다만 피라미드 계단 2조건은 실행 방법에 따라 값이 달라졌고 원인은 확인하지 못했습니다.</p>
-        <footer class="slide-footer"><span class="page">10</span></footer>
+        <footer class="slide-footer"><span class="page">11</span></footer>
         <aside class="speaker-notes">처음에 쓰지 않은 새 지형과 모델마다 따로 실행한 평가에서도 순위는 같았습니다. 계단 두 조건은 실행 방법에 따라 값이 달랐습니다. 아래 긴 숫자는 제출 모델의 박스 한 조건 결과입니다.</aside>
       </section>
 
-      <section class="slide boxes-slide" id="slide-11" data-note-seconds="20" aria-labelledby="title-11">
-        <header><p class="eyebrow">높이 −10~10 cm 박스</p><h2 id="title-11">박스 지형 영상</h2></header>
+      <section class="slide boxes-slide" id="slide-12" data-note-seconds="20" aria-labelledby="title-12">
+        <header><p class="eyebrow">높이 −10~10 cm 박스</p><h2 id="title-12">박스 지형 영상</h2></header>
         <div class="video-comparison-label"><p>제공 모델 <span>3.6초, 보상 4.3</span></p><p>제출 모델 <span>16초, 보상 61.3</span></p></div>
         <figure class="video-frame boxes-video"><video muted loop playsinline controls preload="none" poster="assets/boxes-poster.jpg" src="../../artifacts/combo_v28/media/boxes_10_baseline_vs_submission.mp4" aria-label="박스 지형 제공 모델과 제출 모델의 16초 비교 영상"></video><img class="print-poster" src="assets/boxes-poster.jpg" alt="박스 비교 영상 1초 프레임"><figcaption>넘어지면 다시 시작했습니다. 화면 숫자는 첫 episode 결과를 유지했습니다.</figcaption></figure>
         <p class="takeaway">제공 모델은 넘어졌고, 제출 모델은 16초를 완주했습니다.</p>
-        <footer class="slide-footer"><span class="page">11</span></footer>
+        <footer class="slide-footer"><span class="page">12</span></footer>
         <aside class="speaker-notes">왼쪽 제공 모델은 3.6초에 넘어지고 오른쪽 제출 모델은 16초를 완주했습니다. 영상은 환경 16개 중 한 장면입니다. 앞에서 본 환경 백 개의 평균과는 시작 상태가 다릅니다.</aside>
       </section>
 
-      <section class="slide terrains-slide" id="slide-12" data-note-seconds="20" aria-labelledby="title-12">
-        <header><p class="eyebrow">다른 지형 영상</p><h2 id="title-12">한계</h2></header>
+      <section class="slide terrains-slide" id="slide-13" data-note-seconds="20" aria-labelledby="title-13">
+        <header><p class="eyebrow">다른 지형 영상</p><h2 id="title-13">한계</h2></header>
         <div class="terrain-demo-layout"><figure class="video-frame"><video muted loop playsinline controls preload="none" poster="assets/terrains-poster.jpg" src="../../artifacts/combo_v28/media/submission_six_terrains.mp4" aria-label="계단, 장애물, 물결, 경사, 징검다리, 저마찰 여섯 지형 영상"></video><img class="print-poster" src="assets/terrains-poster.jpg" alt="여섯 지형 영상 1초 프레임"><figcaption>계단, 장애물, 물결, 경사, 징검다리, 저마찰 지형입니다.</figcaption></figure><div class="tradeoffs"><div><h3>경사 0.2</h3><p class="tradeoff-number">1.9초에 넘어졌습니다.</p><p>이 조건에서 환경 100개의 넘어짐률은 32%였습니다.</p></div><div><h3>평지 16초 이동 거리</h3><p class="tradeoff-number">94 m, 145 m</p><p>제출 모델이 제공 모델보다 느렸습니다.</p></div><div><h3>매우 미끄러운 지면</h3><p>평지 전용 정책보다 약했습니다.</p></div></div></div>
         <p class="takeaway">험지 점수는 올랐지만, 모든 지형에서 좋아진 것은 아니었습니다.</p>
-        <footer class="slide-footer"><span class="page">12</span></footer>
+        <footer class="slide-footer"><span class="page">13</span></footer>
         <aside class="speaker-notes">경사에서는 1.9초에 넘어졌고, 환경 백 개의 넘어짐률도 32퍼센트였습니다. 평지 이동 거리는 94미터로 제공 모델의 145미터보다 느렸습니다. 매우 미끄러운 지면에도 약점이 남았습니다.</aside>
       </section>
 
-      <section class="slide" id="slide-13" data-note-seconds="20" aria-labelledby="title-13">
-        <header><p class="eyebrow">마무리</p><h2 id="title-13">정리</h2></header>
+      <section class="slide" id="slide-14" data-note-seconds="20" aria-labelledby="title-14">
+        <header><p class="eyebrow">마무리</p><h2 id="title-14">정리</h2></header>
         <div class="conclusion"><p>Stick과 Lim의 지형, entropy 0.005, 원래 보상으로 600 it 추가 학습을 선택했습니다.</p><p>점수는 <span class="key-number" data-value="selection.sticklim_e5_d0+stock.demo_mean" data-digits="1"></span>점이었고, F3a와 같은 수준이거나 조금 높았습니다.</p></div>
         <div class="conclusion-details"><p>같은 학습량으로 방법을 비교하고, 새 지형에서 다시 확인했습니다.</p><p>이전 제출 모델의 랜덤화는 평지와 저마찰에는 도움이 됐지만 최종 조합에서는 제외했습니다.</p><p>평지 속도, 미끄러운 지면, 경사에서의 넘어짐은 해결하지 못했습니다.</p></div>
-        <div class="reproduce"><p><a href="../../artifacts/combo_v28/submission/model_599.pt">제출 모델</a>의 학습 seed는 43이었습니다. 아래 명령은 수업 환경에서 실행했습니다. <a href="../week03_ant_v28_slides.pdf">PDF 보기</a></p><pre><code>python scripts/play_one_episode_official.py --task Week03-Ant-Combo-v28-Play \
+        <div class="reproduce"><p>학습 seed 43인 <a href="../../artifacts/combo_v28/submission/model_599.pt">제출 모델</a>을 썼습니다. CHECKPOINT에는 이 파일의 경로를 지정합니다. <a href="../week03_ant_v28_slides.pdf">PDF 보기</a></p><pre><code>python scripts/play_one_episode_official.py --task Week03-Ant-Combo-v28-Play \
   --num_envs 100 --seed 24 --headless \
-  --checkpoint artifacts/combo_v28/submission/model_599.pt</code></pre></div>
-        <footer class="slide-footer summary-source">자세한 수치와 원자료: <a href="../../README.md">저장소 README</a>, <a href="../../docs/COMBO_V28.md">docs/COMBO_V28.md</a><span class="page">13</span></footer>
+  --checkpoint "$CHECKPOINT"</code></pre></div>
+        <footer class="slide-footer summary-source">자세한 수치와 원자료: <a href="../../README.md">저장소 README</a>, <a href="../../docs/COMBO_V28.md">상세 실험 기록</a><span class="page">14</span></footer>
         <aside class="speaker-notes">험지 학습, entropy, 추가 학습을 함께 쓴 모델을 선택했습니다. 팀원 방법을 같은 조건에서 비교하고 새 지형에서도 확인했습니다. 남은 약점과 원자료는 저장소에 정리했습니다.</aside>
       </section>
 
-      <section class="slide appendix effects-slide" id="slide-14" data-note-seconds="20" aria-labelledby="title-14">
-        <header><p class="eyebrow">부록 A</p><h2 id="title-14">요소별 비교</h2></header>
+      <section class="slide appendix effects-slide" id="slide-15" data-note-seconds="20" aria-labelledby="title-15">
+        <header><p class="eyebrow">부록 A</p><h2 id="title-15">요소별 비교</h2></header>
         <div class="effects-layout">
           <div><h3>다른 조건을 고정하고 한 요소를 바꿨습니다.</h3><div class="legend"><span><i class="other"></i>28조건 평균 점수의 차이</span></div><div id="effects-chart" class="chart"></div><p class="fine-print">랜덤화는 평지와 저마찰에서 <span data-effect="randomization-flat"></span>점이었습니다.</p></div>
           <div class="continuation-summary"><h3>600 it을 더 학습했습니다.</h3><div class="finding"><p>원래 보상으로 추가 학습</p><span class="finding-number" data-effect="continuation-range"></span><p>세 조합 모두 점수가 올랐습니다.</p></div><div class="finding"><p>회복 보상과 원래 보상의 차이</p><span class="finding-number" data-effect="recovery-range"></span><p>넘어짐률은 <span data-effect="fall-change"></span>로 줄었습니다.</p></div></div>
@@ -166,8 +180,8 @@
         <aside class="speaker-notes">평지 대신 팀원 지형을 쓴 효과는 약 16점, entropy 효과는 약 8점으로 각각 열두 쌍 모두 좋아졌습니다. 랜덤화는 일곱 쌍만 좋아졌고 평지와 저마찰에서 도움이 컸습니다. 회복 보상은 덜 넘어지는 대신 점수가 낮았습니다.</aside>
       </section>
 
-      <section class="slide appendix" id="slide-15" data-note-seconds="20" aria-labelledby="title-15">
-        <header><p class="eyebrow">부록 B</p><h2 id="title-15">지형별 결과</h2></header>
+      <section class="slide appendix" id="slide-16" data-note-seconds="20" aria-labelledby="title-16">
+        <header><p class="eyebrow">부록 B</p><h2 id="title-16">지형별 결과</h2></header>
         <p class="lead">같은 범주에 속한 조건의 점수를 평균했습니다.</p>
         <div id="heatmap-chart" class="chart"></div>
         <p class="takeaway">선택한 조합은 험지에서 높았고, 평지와 저마찰에서는 기존 모델보다 낮았습니다.</p>
@@ -176,8 +190,8 @@
         <aside class="speaker-notes">모든 지형에서 가장 높은 모델은 없었습니다. 선택한 조합은 요철과 장애물에서 높았지만, 평지와 저마찰에서는 기존 평지 모델이 높았습니다. 그래서 전체 평균과 지형별 결과를 함께 확인했습니다.</aside>
       </section>
 
-      <section class="slide appendix" id="slide-16" data-note-seconds="20" aria-labelledby="title-16">
-        <header><p class="eyebrow">부록 C</p><h2 id="title-16">학습 과정</h2></header>
+      <section class="slide appendix" id="slide-17" data-note-seconds="20" aria-labelledby="title-17">
+        <header><p class="eyebrow">부록 C</p><h2 id="title-17">학습 과정</h2></header>
         <p class="lead">선택한 조합을 세 번 학습한 reward 기록입니다.</p>
         <div class="legend"><span><i class="curve-line"></i>세 번의 평균</span><span><i class="range"></i>최솟값부터 최댓값</span></div>
         <div id="learning-chart" class="chart"></div>
@@ -187,8 +201,8 @@
         <aside class="speaker-notes">실선은 세 번 학습한 평균이고, 띠는 최솟값부터 최댓값입니다. 천 iteration 뒤 부모 가중치를 가져와 더 학습했습니다. 새 run의 시작점은 통계가 초기화된 값이고, 앞에서 본 평가 점수와는 다른 기록입니다.</aside>
       </section>
 
-      <section class="slide appendix glossary-slide" id="slide-17" data-note-seconds="20" aria-labelledby="title-17">
-        <header><p class="eyebrow">부록 D</p><h2 id="title-17">용어 정리</h2></header>
+      <section class="slide appendix glossary-slide" id="slide-18" data-note-seconds="20" aria-labelledby="title-18">
+        <header><p class="eyebrow">부록 D</p><h2 id="title-18">용어 정리</h2></header>
         <div class="glossary-columns">
           <div>
             <p>첫 episode 누적 보상(return)은 처음 넘어지거나 16초(960 step)가 될 때까지 받은 보상의 합입니다. 전진, 생존, 직립, 목표 이동 보상과 행동 크기, 에너지, 관절 한계 감점의 7항을 썼습니다.</p>
@@ -210,12 +224,12 @@
   </main>
   <nav id="controls" aria-label="발표 이동">
     <button id="previous" type="button" aria-label="이전 슬라이드">이전</button>
-    <span id="position" aria-live="polite">1 / 17</span>
+    <span id="position" aria-live="polite">1 / 18</span>
     <button id="next" type="button" aria-label="다음 슬라이드">다음</button>
     <button id="notes-toggle" type="button" aria-pressed="false" aria-controls="notes-panel">N 노트</button>
     <span class="key-hint">Space 다음, Home 처음, End 부록</span>
   </nav>
-  <div id="progress" role="progressbar" aria-label="슬라이드 진행" aria-valuemin="1" aria-valuemax="17" aria-valuenow="1"><span></span></div>
+  <div id="progress" role="progressbar" aria-label="슬라이드 진행" aria-valuemin="1" aria-valuemax="18" aria-valuenow="1"><span></span></div>
   <aside id="notes-panel" hidden aria-label="발표자 노트"><span id="notes-heading"></span><p id="notes-text"></p></aside>
 </body>
 </html>
