@@ -114,7 +114,9 @@ python scripts/play_one_episode_official.py --task Week03-Ant-Combo-v28-Play \
 ```
 
 [`scripts/play_one_episode_official.py`](scripts/play_one_episode_official.py)는 수업 저장소(cailab-hy/IsaacLab_RS e83a5d2)의 `play_one_episode.py`에
-우리 task를 등록하는 import 한 줄만 추가한 파일입니다. `Week03-Ant-Combo-v28-Play`는 원래 `Isaac-Ant-v0`과 보상, 종료 조건, 행동, 관측 구성이 같고
+우리 task를 등록하는 import를 추가하고, 체크포인트가 현재 실행 장치로 재매핑되도록 `map_location`을 지정한 파일입니다.
+따라서 `cuda:1`에 저장된 모델도 단일 GPU에서 불러올 수 있으며, 평가 보상 계산은 바꾸지 않았습니다.
+`Week03-Ant-Combo-v28-Play`는 원래 `Isaac-Ant-v0`과 보상, 종료 조건, 행동, 관측 구성이 같고
 높이 관측과 넘어짐 판정만 바닥 기준으로 바꾼 평가용 task입니다. 기본 지형은 박스 지형입니다.
 다른 지형으로 평가하려면 [`combo_v28_cfg.py`](src/week03_ant/tasks/combo_v28_cfg.py)의 `ComboV28PlayEnvCfg`에서 `scene.terrain`만 바꾸면 됩니다.
 GPU가 두 개인 PC에서는 `--device cuda:1 --kit_args="--/renderer/multiGpu/enabled=false"`를 붙여 실행했습니다.

@@ -3,10 +3,11 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-"""Course play_one_episode.py (cailab-hy/IsaacLab_RS e83a5d2), unchanged except for one import.
+"""Course play_one_episode.py (cailab-hy/IsaacLab_RS e83a5d2) with task registration and device mapping.
 
 The added ``week03_ant.tasks.combo_v28`` import registers ``Week03-Ant-Combo-v28-Play`` so that the
 official scoring loop can load this repository's submission task.
+Checkpoint storages are mapped to the active environment device for portability across GPU configurations.
 """
 
 """Script to play one episode from a checkpoint if an RL agent from RSL-RL."""
@@ -159,7 +160,7 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
         runner = DistillationRunner(env, agent_cfg.to_dict(), log_dir=None, device=agent_cfg.device)
     else:
         raise ValueError(f"Unsupported runner class: {agent_cfg.class_name}")
-    runner.load(resume_path)
+    runner.load(resume_path, map_location=env.unwrapped.device)
 
     # obtain the trained policy for inference
     policy = runner.get_inference_policy(device=env.unwrapped.device)
